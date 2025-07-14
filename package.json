@@ -3,7 +3,7 @@
   "description": "New website",
   "author": "Ryan Laird",
   "license": "MIT",
-  "homepage": "https://greenorbitspace.github.io/web",
+  "homepage": "https://greenorbitspace.github.io",
   "repository": {
     "type": "git",
     "url": "https://github.com/greenorbitspace/web.git"
