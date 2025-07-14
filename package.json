@@ -1,12 +1,12 @@
 {
-  "name": "larry-xue/astro-sassify-template",
-  "description": "A template for creating a SaaS landing page with Astro and Tailwind CSS",
-  "author": "Larry Xue",
+  "name": "Green Orbit Digital",
+  "description": "New website",
+  "author": "Ryan Laird",
   "license": "MIT",
-  "homepage": "https://astro-sassify.larryxue.dev/",
+  "homepage": "https://greenorbitspace.github.io/web",
   "repository": {
     "type": "git",
-    "url": "https://github.com/larry-xue/astro-sassify-template.git"
+    "url": "https://github.com/greenorbitspace/web.git"
   },
   "type": "module",
   "version": "1.0.0",
@@ -15,7 +15,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro build && astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "deploy": "astro build && gh-pages -d dist"
   },
   "dependencies": {
     "@astrojs/alpinejs": "^0.4.8",
@@ -23,5 +24,8 @@
     "alpinejs": "^3.14.9",
     "astro": "^5.10.1",
     "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
