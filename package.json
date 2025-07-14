@@ -16,7 +16,7 @@
     "build": "astro build",
     "preview": "astro build && astro preview",
     "astro": "astro",
-    "deploy": "astro build && gh-pages -d dist"
+    "deploy": "astro build && touch dist/.nojekyll && gh-pages -d dist"
   },
   "dependencies": {
     "@astrojs/alpinejs": "^0.4.8",
