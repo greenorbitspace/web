@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  base: '/web/', // ✅ Set this to your GitHub repo name
+  base: '/', // ✅ Set this to your GitHub repo name
   integrations: [
     alpinejs()
   ],
