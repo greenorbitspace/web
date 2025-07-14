@@ -3,7 +3,7 @@
   "description": "New website",
   "author": "Ryan Laird",
   "license": "MIT",
-  "homepage": "https://greenorbitspace.github.io",
+  "homepage": "https://greenorbitspace.github.io/web",
   "repository": {
     "type": "git",
     "url": "https://github.com/greenorbitspace/web.git"
@@ -15,8 +15,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro build && astro preview",
-    "astro": "astro",
-    "deploy": "astro build && touch dist/.nojekyll && gh-pages -d dist"
+    "predeploy": "astro build && touch dist/.nojekyll",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@astrojs/alpinejs": "^0.4.8",

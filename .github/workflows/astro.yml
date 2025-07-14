@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  BUILD_PATH: "."
+  BUILD_PATH: "."  # root of repo, adjust if needed
 
 jobs:
   build:
@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Detect package manager
@@ -44,7 +44,7 @@ jobs:
             exit 1
           fi
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
@@ -55,17 +55,20 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
         working-directory: ${{ env.BUILD_PATH }}
 
-      - name: Build with Astro (set base /web)
+      - name: Build Astro site
         run: |
           ${{ steps.detect-package-manager.outputs.runner }} astro build \
             --site "https://greenorbitspace.github.io" \
             --base "/web/"
         working-directory: ${{ env.BUILD_PATH }}
 
-      - name: Add .nojekyll
+      - name: Add .nojekyll to prevent GitHub Pages Jekyll processing
         run: touch ${{ env.BUILD_PATH }}/dist/.nojekyll
 
-      - name: Upload artifact
+      - name: Verify dist directory contents
+        run: ls -la ${{ env.BUILD_PATH }}/dist
+
+      - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ${{ env.BUILD_PATH }}/dist
@@ -76,9 +79,11 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Output deployed site URL
+        run: echo "Site deployed at ${{ steps.deployment.outputs.page_url }}"
