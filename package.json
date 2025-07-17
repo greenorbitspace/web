@@ -23,9 +23,11 @@
     "@tailwindcss/vite": "^4.1.11",
     "alpinejs": "^3.14.9",
     "astro": "^5.10.1",
+    "stripe": "^18.3.0",
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
+    "dotenv": "^17.2.0",
     "gh-pages": "^6.3.0"
   }
 }

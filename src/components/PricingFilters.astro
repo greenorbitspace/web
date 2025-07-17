@@ -1,0 +1,24 @@
+---
+// src/components/PricingFilters.astro
+const { filters, setFilters } = Astro.props;
+---
+
+<form id="filter-form">
+  <label>
+    Industry:
+    <select name="industry">
+      <option value="">All</option>
+      <option value="space">Space Sector</option>
+      <option value="sustainability">Sustainability</option>
+    </select>
+  </label>
+  <label>
+    Service Level:
+    <select name="service_level">
+      <option value="">All</option>
+      <option value="basic">Basic</option>
+      <option value="professional">Professional</option>
+      <option value="enterprise">Enterprise</option>
+    </select>
+  </label>
+</form>

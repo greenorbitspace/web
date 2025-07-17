@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.astro';
+
+const priceId = Astro.url.searchParams.get('price_id');
+---
+
+<Layout title="Thank You – Checkout Complete">
+  <Header />
+
+  <main>
+    <div class="container">
+      <HeroSection 
+        title="Thank you for your purchase!" 
+        description="You're all set. We've emailed you a receipt and details of your plan."
+      />
+
+      <section class="thank-you-message">
+        <p class="text-lg">
+          We appreciate your support in advancing sustainable digital practices.
+        </p>
+
+        {priceId && (
+          <p class="text-sm mt-4">
+            <strong>Reference:</strong> <code>{priceId}</code>
+          </p>
+        )}
+
+        <div class="mt-6">
+          <a href="/dashboard" class="btn">Go to Dashboard</a>
+          <a href="/" class="btn-outline ml-4">Back to Homepage</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

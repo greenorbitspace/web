@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.astro';
+const priceId = Astro.url.searchParams.get('price_id');
+---
+
+<Layout title="Checkout">
+  <Header />
+
+  <main>
+    <div class="container">
+      <HeroSection 
+        title="Checkout" 
+        description="Choose a plan that fits your mission. All options include a 14-day free trial—no credit card required."
+      />
+
+   
+</Layout>
