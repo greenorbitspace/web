@@ -1,0 +1,196 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Features - Impressive Animations & Experiences">
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section
+      class="relative overflow-hidden bg-linear-to-b from-primary-100 to-white dark:from-primary-950 dark:to-secondary-950 pt-24 md:pt-32 pb-16 md:pb-20"
+    >
+      <div class="absolute inset-0 z-0 opacity-30">
+        <div class="absolute inset-0 bg-grid-pattern"></div>
+      </div>
+
+      <div class="container-custom relative z-10">
+        <div class="text-center max-w-3xl mx-auto px-4">
+          <h1
+            class="text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-6 text-gray-900 dark:text-white animate-slide-down"
+          >
+            Cutting-Edge <span class="text-accent-500">Features</span>
+          </h1>
+          <p
+            class="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6 md:mb-8 animate-slide-up"
+            style="animation-delay: 200ms"
+          >
+            Explore our innovative features with interactive demonstrations and stunning visual
+            effects.
+          </p>
+        </div>
+      </div>
+
+      <!-- Animated Shapes -->
+      <div class="absolute -bottom-16 left-0 right-0 flex justify-center">
+        <div
+          class="w-48 md:w-64 h-48 md:h-64 bg-accent-400 rounded-full filter blur-3xl opacity-20 animate-pulse"
+        ></div>
+      </div>
+    </section>
+
+    <!-- Services Overview with Cards -->
+    <section
+      class="section relative z-20 py-12 md:py-16 bg-white dark:bg-secondary-900"
+    >
+      <div class="container-custom text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          Sustainable Strategies, Stellar Results
+        </h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          At Green Orbit Digital, we craft planet-positive marketing strategies designed to help your
+          organisation thrive. Our approach blends creativity, digital precision, and sustainability
+          expertise to drive measurable, meaningful change.
+        </p>
+      </div>
+
+      <div
+        class="container-custom grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-16"
+      >
+        <!-- Card 1: Creative Services -->
+        <div class="feature-card relative z-30 group perspective min-h-[32rem]">
+          <div
+            class="relative h-full transform-gpu transition-all duration-700 preserve-3d hover:rotate-y-180 cursor-pointer touch-action-card"
+          >
+            <!-- Front -->
+            <div class="absolute inset-0 backface-hidden">
+              <div
+                class="card p-6 md:p-8 h-full flex flex-col items-center justify-center text-center bg-white dark:bg-secondary-800 rounded-xl shadow-lg"
+              >
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                  Creative Services
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                  From branding to campaign development and storytelling, we bring your mission to
+                  life through sustainable creativity.
+                </p>
+              </div>
+            </div>
+
+            <!-- Back -->
+            <div
+              class="absolute inset-0 backface-hidden rotate-y-180"
+            >
+              <div
+                class="card p-6 md:p-8 h-full bg-primary-600 dark:bg-primary-800 text-white rounded-xl flex flex-col items-center justify-center text-center"
+              >
+                <h4 class="text-lg font-semibold mb-3">What’s Included</h4>
+                <ul class="text-left space-y-2 text-sm">
+                  <li>• Sustainable branding & visual identity</li>
+                  <li>• ESG-focused campaign development</li>
+                  <li>• Purpose-driven copywriting</li>
+                </ul>
+                <a
+                  href="/services/creative"
+                  class="mt-4 inline-block text-sm underline text-white hover:text-accent-200"
+                  >Find out more</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Digital Marketing -->
+        <div class="feature-card relative z-30 group perspective min-h-[32rem]">
+          <div
+            class="relative h-full transform-gpu transition-all duration-700 preserve-3d hover:rotate-y-180 cursor-pointer touch-action-card"
+          >
+            <!-- Front -->
+            <div class="absolute inset-0 backface-hidden">
+              <div
+                class="card p-6 md:p-8 h-full flex flex-col items-center justify-center text-center bg-white dark:bg-secondary-800 rounded-xl shadow-lg"
+              >
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                  Digital Marketing
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                  We power your visibility through ethical SEO, CRM, content marketing, and social
+                  media strategies that scale sustainably.
+                </p>
+              </div>
+            </div>
+
+            <!-- Back -->
+            <div
+              class="absolute inset-0 backface-hidden rotate-y-180"
+            >
+              <div
+                class="card p-6 md:p-8 h-full bg-primary-600 dark:bg-primary-800 text-white rounded-xl flex flex-col items-center justify-center text-center"
+              >
+                <h4 class="text-lg font-semibold mb-3">What’s Included</h4>
+                <ul class="text-left space-y-2 text-sm">
+                  <li>• Ethical SEO & on-page optimisation</li>
+                  <li>• CRM & personalised journeys</li>
+                  <li>• Content & email marketing</li>
+                  <li>• Sustainable social media strategy</li>
+                </ul>
+                <a
+                  href="/services/digital"
+                  class="mt-4 inline-block text-sm underline text-white hover:text-accent-200"
+                  >Find out more</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Consulting & Strategy -->
+        <div class="feature-card relative z-30 group perspective min-h-[32rem]">
+          <div
+            class="relative h-full transform-gpu transition-all duration-700 preserve-3d hover:rotate-y-180 cursor-pointer touch-action-card"
+          >
+            <!-- Front -->
+            <div class="absolute inset-0 backface-hidden">
+              <div
+                class="card p-6 md:p-8 h-full flex flex-col items-center justify-center text-center bg-white dark:bg-secondary-800 rounded-xl shadow-lg"
+              >
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                  Consulting & Strategy
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                  We guide your strategic positioning, marketing sustainability, and ESG
+                  communications with clarity and credibility.
+                </p>
+              </div>
+            </div>
+
+            <!-- Back -->
+            <div
+              class="absolute inset-0 backface-hidden rotate-y-180"
+            >
+              <div
+                class="card p-6 md:p-8 h-full bg-primary-600 dark:bg-primary-800 text-white rounded-xl flex flex-col items-center justify-center text-center"
+              >
+                <h4 class="text-lg font-semibold mb-3">What’s Included</h4>
+                <ul class="text-left space-y-2 text-sm">
+                  <li>• Sustainable marketing strategy</li>
+                  <li>• ESG impact reporting & messaging</li>
+                  <li>• Market positioning & value proposition</li>
+                </ul>
+                <a
+                  href="/services/consulting"
+                  class="mt-4 inline-block text-sm underline text-white hover:text-accent-200"
+                  >Find out more</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
