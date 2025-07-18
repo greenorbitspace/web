@@ -2,8 +2,9 @@
 module.exports = {
   darkMode: 'class', // Use 'dark' class strategy for toggling dark mode
   content: [
-    './src/**/*.{astro,html,js,jsx,ts,tsx,vue,svelte}', // adjust to your file structure
-    './public/index.html', // if applicable
+    './src/**/*.{astro,html,js,jsx,ts,tsx,vue,svelte}',
+    './public/**/*.html',
+    './pages/**/*.astro', // Fixed extra comma here
   ],
   theme: {
     extend: {

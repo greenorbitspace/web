@@ -166,12 +166,9 @@
   }
 }
 
-/* Components layer */
 @layer components {
-  .btn {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-300 focus:outline-none;
-  }
   .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-300 focus:outline-none;
     background-color: var(--color-accent-500);
     color: white;
     box-shadow: 0 4px 6px rgb(15 192 131 / 0.5);
@@ -182,7 +179,9 @@
     background-color: var(--color-accent-600);
     box-shadow: 0 6px 10px rgb(15 192 131 / 0.7);
   }
+
   .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-300 focus:outline-none;
     background-color: var(--color-primary-600);
     color: white;
     box-shadow: 0 4px 6px rgb(12 77 83 / 0.5);
@@ -193,7 +192,9 @@
     background-color: var(--color-primary-700);
     box-shadow: 0 6px 10px rgb(12 77 83 / 0.7);
   }
+
   .btn-accent {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-300 focus:outline-none;
     background-color: var(--color-accent-500);
     color: white;
     box-shadow: 0 4px 6px rgb(15 192 131 / 0.5);
@@ -204,15 +205,19 @@
     background-color: var(--color-accent-600);
     box-shadow: 0 6px 10px rgb(15 192 131 / 0.7);
   }
+
   .btn-outline {
-    @apply btn border-2 border-secondary-300 dark:border-secondary-700 hover:bg-secondary-100 dark:hover:bg-secondary-800 text-secondary-900 dark:text-secondary-100;
+    @apply inline-flex items-center justify-center px-8 py-4 rounded-lg font-medium transition-all duration-300 focus:outline-none border-2 border-secondary-300 dark:border-secondary-700 hover:bg-secondary-100 dark:hover:bg-secondary-800 text-secondary-900 dark:text-secondary-100;
   }
+
   .container-custom {
     @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
   }
+
   .section {
     @apply py-16 md:py-24;
   }
+
   .card {
     @apply bg-white dark:bg-secondary-900 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-secondary-200 dark:border-secondary-800;
   }
