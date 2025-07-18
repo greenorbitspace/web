@@ -9,7 +9,7 @@ export default function PricingTableClient() {
   useEffect(() => {
     async function fetchPlans() {
       try {
-        const res = await fetch('../api/pricing');
+        const res = await fetch('/api/pricing');
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
         setPlans(data);
