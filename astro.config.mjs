@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import alpinejs from '@astrojs/alpinejs';
 import tailwindcss from '@tailwindcss/vite';
+import react from '@astrojs/react';      // <-- Import React integration
 import dotenv from 'dotenv';
 
 // Load .env file into import.meta.env
@@ -11,7 +12,10 @@ dotenv.config();
 export default defineConfig({
   site: 'https://greenorbitspace.github.io',
   base: process.env.NODE_ENV === 'production' ? '/web/' : '/',
-  integrations: [alpinejs()],
+  integrations: [
+    alpinejs(),
+    react(),              // <-- Add React integration here
+  ],
   vite: {
     plugins: [tailwindcss()],
     define: {

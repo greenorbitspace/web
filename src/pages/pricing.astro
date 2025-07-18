@@ -3,62 +3,24 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import HeroSection from '../components/HeroSection.astro';
-import PricingFilters from '../components/PricingFilters.astro';
+
+// Import your React pricing table client component
+import PricingTable from '../components/PricingTableClient.jsx';
 ---
 
-<Layout title="Transparent Pricing">
+<Layout title="Pricing">
   <Header />
 
   <main class="py-8">
     <HeroSection 
-      title="Transparent Pricing" 
+      title="Pricing" 
       description="Choose a plan that fits your mission. All options include a 14-day free trial—no credit card required."
     />
 
     <section class="container mx-auto px-4 pricing-page" id="pricing-section">
-      <div class="mb-6">
-        <PricingFilters client:load />
-      </div>
-
-      <div class="overflow-x-auto bg-white shadow-md rounded-lg">
-        <table class="w-full text-left border-collapse table-auto">
-          <thead class="bg-gray-100 text-sm text-gray-700 uppercase">
-            <tr>
-              <th class="p-4">Plan Name</th>
-              <th class="p-4">Description</th>
-              <th class="p-4">Price</th>
-              <th class="p-4">Billing Interval</th>
-              <th class="p-4">Features</th>
-              <th class="p-4">Select</th>
-            </tr>
-          </thead>
-          <tbody id="plans" class="text-sm text-gray-800">
-            <!-- Rows will be dynamically injected by /scripts/pricing.js -->
-          </tbody>
-        </table>
-      </div>
-
-      <div class="flex items-center justify-between mt-6">
-        <button 
-          id="prevPage" 
-          class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 disabled:opacity-50"
-          disabled
-        >
-          Previous
-        </button>
-        <span id="pagination-info" class="text-sm text-gray-600">Page 1</span>
-        <button 
-          id="nextPage" 
-          class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"
-        >
-          Next
-        </button>
-      </div>
+      <PricingTable client:load />
     </section>
   </main>
 
   <Footer />
-
-  <!-- Client-side pricing logic for Stripe integration -->
-  <script type="module" src="/scripts/pricing.js"></script>
 </Layout>
