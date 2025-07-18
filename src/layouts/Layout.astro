@@ -15,50 +15,62 @@ const {
 ---
 
 <!doctype html>
-<html lang="en" x-data="{ darkMode: localStorage.getItem('darkMode') === 'true' }" x-init="$watch('darkMode', val => localStorage.setItem('darkMode', val))" :class="{ 'dark': darkMode }">
+<html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <title>{title}</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <script>
+      // Immediately apply dark mode class before content renders to prevent flicker
+      (function() {
+        try {
+          var darkMode = localStorage.getItem('darkMode');
+          if(darkMode === null) {
+            darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'true' : 'false';
+            localStorage.setItem('darkMode', darkMode);
+          }
+          if(darkMode === 'true') document.documentElement.classList.add('dark');
+          else document.documentElement.classList.remove('dark');
+        } catch(e) {
+          // fail silently if any error
+        }
+      })();
+    </script>
+
     <ClientRouter />
   </head>
-  <body class="antialiased bg-white dark:bg-primary-500 text-secondary-900 dark:text-secondary-100 transition-colors duration-300">
+  <body
+    x-data="{ darkMode: localStorage.getItem('darkMode') === 'true' }"
+    x-init="
+      $watch('darkMode', val => {
+        localStorage.setItem('darkMode', val);
+        if(val) document.documentElement.classList.add('dark');
+        else document.documentElement.classList.remove('dark');
+      });
+    "
+    x-cloak
+    class="antialiased bg-white dark:bg-primary-500 text-secondary-900 dark:text-secondary-100 transition-colors duration-300"
+  >
     <div id="page-wrapper" class="page-transition-wrapper">
       <slot />
     </div>
-    <script>
-      // Check for user preference
-      if (localStorage.getItem('darkMode') === null) {
-        // Check system preference
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          localStorage.setItem('darkMode', 'true');
-          document.documentElement.classList.add('dark');
-        } else {
-          localStorage.setItem('darkMode', 'false');
-        }
-      }
 
-      // Handle page transitions
+    <script>
       document.addEventListener('astro:page-load', () => {
-        // This runs on initial page load and after each navigation
         const pageWrapper = document.getElementById('page-wrapper');
-        if (pageWrapper) {
-          pageWrapper.classList.add('page-loaded');
-        }
+        if (pageWrapper) pageWrapper.classList.add('page-loaded');
       });
 
       document.addEventListener('astro:before-swap', () => {
-        // This runs before the new page content is swapped in
         const pageWrapper = document.getElementById('page-wrapper');
-        if (pageWrapper) {
-          pageWrapper.classList.remove('page-loaded');
-        }
+        if (pageWrapper) pageWrapper.classList.remove('page-loaded');
       });
     </script>
     <script src="../scripts/transitions.js"></script>

@@ -2,9 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@custom-variant dark (&:is(.dark *));
-
-@theme {
+/* CSS variables moved to :root for light theme */
+:root {
   /* Primary - tealish */
   --color-primary-50:  #e6f3f4;
   --color-primary-100: #c0dcde;
@@ -44,6 +43,7 @@
   --color-accent-900: #044f2e;
   --color-accent-950: #022816;
 
+  /* Warning colors */
   --color-warning-50: #fefce8;
   --color-warning-100: #fef9c3;
   --color-warning-200: #fef08a;
@@ -56,51 +56,82 @@
   --color-warning-900: #713f12;
   --color-warning-950: #422006;
 
+  /* Fonts */
   --font-sans: Inter, system-ui, sans-serif;
   --font-display: Lexend, system-ui, sans-serif;
 
+  /* Animations */
   --animate-fade-in: fadeIn 0.5s ease-in-out;
   --animate-slide-up: slideUp 0.5s ease-in-out;
   --animate-slide-down: slideDown 0.5s ease-in-out;
-
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @keyframes slideUp {
-    0% {
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  @keyframes slideDown {
-    0% {
-      transform: translateY(-20px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
 }
 
-/*
-  The default border color has changed to `currentcolor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
+/* Dark mode overrides using the 'dark' class on root/html */
+.dark {
+  --color-primary-50:  #021116;
+  --color-primary-100: #041f25;
+  --color-primary-200: #06292f;
+  --color-primary-300: #08353a;
+  --color-primary-400: #0a4249;
+  --color-primary-500: #0c4d53;
+  --color-primary-600: #3e7a7c;
+  --color-primary-700: #679ea0;
+  --color-primary-800: #94c1c4;
+  --color-primary-900: #c0dcde;
+  --color-primary-950: #e6f3f4;
 
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
+  --color-secondary-50:  #031d1b;
+  --color-secondary-100: #073836;
+  --color-secondary-200: #094646;
+  --color-secondary-300: #0c575a;
+  --color-secondary-400: #106b6f;
+  --color-secondary-500: #127780;
+  --color-secondary-600: #358ea4;
+  --color-secondary-700: #5ea9bb;
+  --color-secondary-800: #8dc4d0;
+  --color-secondary-900: #b9dde3;
+  --color-secondary-950: #e3f2f4;
+
+  --color-accent-50:  #022816;
+  --color-accent-100: #044f2e;
+  --color-accent-200: #066b3e;
+  --color-accent-300: #088454;
+  --color-accent-400: #0ca973;
+  --color-accent-500: #0fc083;
+  --color-accent-600: #2bdc88;
+  --color-accent-700: #54e5a0;
+  --color-accent-800: #8aeebf;
+  --color-accent-900: #bdf3db;
+  --color-accent-950: #e5faf1;
+
+  --color-warning-50: #422006;
+  --color-warning-100: #713f12;
+  --color-warning-200: #854d0e;
+  --color-warning-300: #a16207;
+  --color-warning-400: #ca8a04;
+  --color-warning-500: #eab308;
+  --color-warning-600: #facc15;
+  --color-warning-700: #fde047;
+  --color-warning-800: #fef08a;
+  --color-warning-900: #fef9c3;
+  --color-warning-950: #fefce8;
+}
+
+/* Keyframes remain unchanged */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes slideUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+@keyframes slideDown {
+  0% { transform: translateY(-20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Base layer */
 @layer base {
   *,
   ::after,
@@ -109,63 +140,81 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
   }
-}
 
-@utility btn {
-  @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-300 focus:outline-hidden;
-}
-
-@utility btn-primary {
-  @apply btn bg-accent-500 hover:bg-accent-500 text-white shadow-md hover:shadow-lg;
-}
-
-@utility btn-secondary {
-  @apply btn bg-primary-600 hover:bg-primary-700 text-white shadow-md hover:shadow-lg;
-}
-
-@utility btn-accent {
-  @apply btn bg-accent-500 hover:bg-accent-600 text-white shadow-md hover:shadow-lg;
-}
-
-@utility btn-outline {
-  @apply btn border-2 border-secondary-300 dark:border-secondary-700 hover:bg-secondary-100 dark:hover:bg-secondary-800 text-secondary-900 dark:text-secondary-100;
-}
-
-@utility container-custom {
-  @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
-}
-
-@utility section {
-  @apply py-16 md:py-24;
-}
-
-@utility card {
-  @apply bg-white dark:bg-secondary-900 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-secondary-200 dark:border-secondary-800;
-}
-
-@layer base {
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display;
+    font-family: var(--font-display);
   }
-  
   h1 {
     @apply text-4xl md:text-5xl lg:text-6xl font-bold;
   }
-  
   h2 {
     @apply text-3xl md:text-4xl font-bold;
   }
-  
   h3 {
     @apply text-2xl md:text-3xl font-semibold;
   }
-  
   h4 {
     @apply text-xl md:text-2xl font-semibold;
   }
-  
   p {
     @apply text-base md:text-lg leading-relaxed;
+  }
+
+  /* Hide elements with x-cloak until Alpine initializes */
+  [x-cloak] {
+    display: none !important;
+  }
+}
+
+/* Components layer */
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-300 focus:outline-none;
+  }
+  .btn-primary {
+    background-color: var(--color-accent-500);
+    color: white;
+    box-shadow: 0 4px 6px rgb(15 192 131 / 0.5);
+    transition-property: background-color, box-shadow;
+    transition-duration: 300ms;
+  }
+  .btn-primary:hover {
+    background-color: var(--color-accent-600);
+    box-shadow: 0 6px 10px rgb(15 192 131 / 0.7);
+  }
+  .btn-secondary {
+    background-color: var(--color-primary-600);
+    color: white;
+    box-shadow: 0 4px 6px rgb(12 77 83 / 0.5);
+    transition-property: background-color, box-shadow;
+    transition-duration: 300ms;
+  }
+  .btn-secondary:hover {
+    background-color: var(--color-primary-700);
+    box-shadow: 0 6px 10px rgb(12 77 83 / 0.7);
+  }
+  .btn-accent {
+    background-color: var(--color-accent-500);
+    color: white;
+    box-shadow: 0 4px 6px rgb(15 192 131 / 0.5);
+    transition-property: background-color, box-shadow;
+    transition-duration: 300ms;
+  }
+  .btn-accent:hover {
+    background-color: var(--color-accent-600);
+    box-shadow: 0 6px 10px rgb(15 192 131 / 0.7);
+  }
+  .btn-outline {
+    @apply btn border-2 border-secondary-300 dark:border-secondary-700 hover:bg-secondary-100 dark:hover:bg-secondary-800 text-secondary-900 dark:text-secondary-100;
+  }
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+  .section {
+    @apply py-16 md:py-24;
+  }
+  .card {
+    @apply bg-white dark:bg-secondary-900 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-secondary-200 dark:border-secondary-800;
   }
 }
 
@@ -173,11 +222,9 @@
 .fade-in {
   @apply animate-fade-in;
 }
-
 .slide-up {
   @apply animate-slide-up;
 }
-
 .slide-down {
   @apply animate-slide-down;
 }
@@ -189,5 +236,5 @@
 
 /* Focus styles for keyboard navigation */
 :focus-visible {
-  @apply outline-hidden ring-2 ring-primary-500 dark:ring-primary-400;
+  @apply outline-none ring-2 ring-primary-500 dark:ring-primary-400;
 }
