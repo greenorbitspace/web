@@ -1,4 +1,4 @@
-import stripe from '../../../lib/stripeClient.js';
+import stripe from '../../lib/stripeClient.js';
 
 export async function GET() {
   try {

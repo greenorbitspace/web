@@ -1,6 +1,14 @@
-import stripe from '../../../lib/stripeClient.js';
+import stripe from '../../lib/stripeClient.js';
 
 export async function GET() {
+  if (!stripe) {
+    console.error('Stripe client not initialised. Check STRIPE_SECRET_KEY in .env');
+    return new Response(
+      JSON.stringify({ error: 'Stripe configuration error.' }),
+      { status: 500 }
+    );
+  }
+
   try {
     const [products, prices] = await Promise.all([
       stripe.products.list({ active: true }),
