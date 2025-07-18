@@ -45,6 +45,7 @@ const {
     </script>
 
     <ClientRouter />
+    {Astro.head}
   </head>
   <body
     x-data="{ darkMode: localStorage.getItem('darkMode') === 'true' }"
