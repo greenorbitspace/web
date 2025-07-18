@@ -10,7 +10,7 @@ dotenv.config();
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://greenorbitspace.github.io',
+  site: 'https://new.greenorbit.space',
   base: process.env.NODE_ENV === 'production' ? '/web/' : '/',
   integrations: [
     alpinejs(),
