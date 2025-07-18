@@ -1,26 +1,22 @@
-// @ts-check
+// astro.config.mjs
 import { defineConfig } from 'astro/config';
 import alpinejs from '@astrojs/alpinejs';
+import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
-import react from '@astrojs/react';      // <-- Import React integration
 import dotenv from 'dotenv';
 
-// Load .env file into import.meta.env
 dotenv.config();
 
-// https://astro.build/config
 export default defineConfig({
   site: 'https://new.greenorbit.space',
-  base: process.env.NODE_ENV === 'production' ? '/' : '/',
+  base: '/',
   integrations: [
     alpinejs(),
-    react(),              // <-- Add React integration here
+    react(),
   ],
   vite: {
     plugins: [tailwindcss()],
-    define: {
-      // Optional: Make env variables accessible in client (if needed)
-      'import.meta.env.STRIPE_SECRET_KEY': JSON.stringify(process.env.STRIPE_SECRET_KEY),
-    },
+    // Do NOT expose secret keys in client-side code
+    // Remove any define for STRIPE_SECRET_KEY here
   },
 });
