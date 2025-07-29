@@ -78,7 +78,7 @@ const {
       async
     ></script>
 
-    <!-- ClientRouter for transitions -->
+    <!-- Astro Transitions Router -->
     <ClientRouter />
     {Astro.head}
     <title>{title}</title>
@@ -99,9 +99,7 @@ const {
       <slot />
     </div>
 
-    <CookieBanner />
-
-    <!-- Load GA when consent is given -->
+    <!-- Google Analytics (init when CookieYes gives consent) -->
     <script type="module">
       import { initGA } from "/scripts/initGA.js";
 
@@ -112,7 +110,7 @@ const {
       });
     </script>
 
-    <!-- Page transitions -->
+    <!-- Page Transitions -->
     <script>
       document.addEventListener('astro:page-load', () => {
         document.getElementById('page-wrapper')?.classList.add('page-loaded');
