@@ -6,7 +6,7 @@
   "description": "Sustainable digital marketing site for the space sector by Green Orbit Digital",
   "author": "Ryan Laird",
   "license": "MIT",
-  "homepage": "https://new.greenorbit.space",
+  "homepage": "https://greenorbit.space",
   "repository": {
     "type": "git",
     "url": "https://github.com/greenorbitspace/web.git"
@@ -15,8 +15,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "predeploy": "astro build && touch dist/.nojekyll",
-    "deploy": "gh-pages -d dist"
+    "postbuild": "echo 'greenorbit.space' > dist/CNAME",
+    "deploy": "pnpm build && pnpm postbuild && gh-pages -d dist -b gh-pages"
   },
   "dependencies": {
     "@astrojs/alpinejs": "^0.4.8",
