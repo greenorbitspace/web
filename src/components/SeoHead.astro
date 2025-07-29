@@ -1,0 +1,37 @@
+---
+// components/SeoHead.astro
+const {
+  title,
+  description,
+  ogImage,
+  canonical,
+  twitter,
+  schema,
+} = Astro.props;
+---
+
+<Head>
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  {canonical && <link rel="canonical" href={canonical} />}
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  {ogImage && <meta property="og:image" content={ogImage} />}
+  {canonical && <meta property="og:url" content={canonical} />}
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={twitter?.title ?? title} />
+  <meta name="twitter:description" content={twitter?.description ?? description} />
+  {twitter?.image && <meta name="twitter:image" content={twitter.image} />}
+
+  <!-- Structured Data (Schema.org) -->
+  {schema && (
+    <script type="application/ld+json">
+      {JSON.stringify(schema)}
+    </script>
+  )}
+</Head>
