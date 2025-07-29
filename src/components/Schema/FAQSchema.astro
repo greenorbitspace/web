@@ -1,0 +1,21 @@
+---
+// src/components/Schema/FAQSchema.astro
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What services does Green Orbit offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We provide sustainable digital marketing solutions for the space sector..."
+      }
+    }
+    // Add more
+  ]
+}
+---
+<script type="application/ld+json">
+  {JSON.stringify(faqJsonLd)}
+</script>

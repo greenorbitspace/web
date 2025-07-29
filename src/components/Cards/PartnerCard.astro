@@ -1,0 +1,15 @@
+---
+// src/components/Cards/PartnerCard.astro
+export interface Props {
+  name: string
+  logo: string
+  url: string
+  description: string
+}
+const { name, logo, url, description } = Astro.props;
+---
+<a href={url} class="partner-card" itemScope itemType="https://schema.org/Organization">
+  <img src={logo} alt={name} itemProp="logo" />
+  <div itemProp="name">{name}</div>
+  <p itemProp="description">{description}</p>
+</a>

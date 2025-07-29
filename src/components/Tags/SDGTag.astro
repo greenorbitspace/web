@@ -1,0 +1,12 @@
+---
+// src/components/Tags/SDGTag.astro
+export interface Props {
+  sdgNumber: number
+  label?: string
+}
+const { sdgNumber, label } = Astro.props;
+---
+<div class="sdg-tag sdg-{@sdgNumber}">
+  <img src={`/icons/sdg/E_WEB_${sdgNumber}.png`} alt={`SDG ${sdgNumber}`} />
+  {label && <span>{label}</span>}
+</div>
