@@ -1,0 +1,12 @@
+/* TEAM */
+Ryan Laird — Director & Founder
+Website: https://greenorbit.space
+Email: contact@greenorbit.space
+
+/* SITE */
+Last update: 2025-07-29
+Technology: Astro, Tailwind CSS, GitHub Pages
+Sustainability focus: Space sector marketing & eco-conscious digital strategy
+
+/* THANKS */
+Thanks to the open-source community and contributors to sustainability in space.

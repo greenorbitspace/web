@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import { SDGs } from '../../data/sdg';
 
 export async function getStaticPaths() {
   return [
@@ -22,8 +23,10 @@ const posts = {
     date: 'May 22, 2025',
     author: 'Ryan Laird',
     authorRole: 'Director',
+    authorAvatar: 'https://gravatar.com/avatar/a2c75a0a732f6ea38a8ba1c7a80ffad5?size=256',
     category: 'News',
     image: 'https://greenorbit.space/wp-content/uploads/2025/05/smartcities.jpg',
+    sdgs: [11, 9, 13],
     content: `
       <p>We’re proud to announce our membership in <strong>SmartCitiesWorld</strong>, a leading platform for digital innovation in urban sustainability. Our contribution will include thought‑leadership content, smart city case studies, and insights on applying space‑derived data to urban challenges.</p>
 
@@ -42,8 +45,10 @@ const posts = {
     date: 'May 19, 2025',
     author: 'Ryan Laird',
     authorRole: 'Director',
+    authorAvatar: 'https://gravatar.com/avatar/a2c75a0a732f6ea38a8ba1c7a80ffad5?size=256',
     category: 'News',
     image: 'https://greenorbit.space/wp-content/uploads/2025/05/rfuk.jpg',
+    sdgs: [15, 13, 17],
     content: `
       <p>We’ve joined the <strong>Rainforest Foundation UK</strong> to support indigenous rights and climate leadership. This collaboration aligns with our mission to leverage space technology for environmental and social impact.</p>
 
@@ -62,8 +67,10 @@ const posts = {
     date: 'May 17, 2025',
     author: 'Ryan Laird',
     authorRole: 'Director',
+    authorAvatar: 'https://gravatar.com/avatar/a2c75a0a732f6ea38a8ba1c7a80ffad5?size=256',
     category: 'News',
     image: 'https://greenorbit.space/wp-content/uploads/2025/05/enterprise-nation.jpg',
+    sdgs: [8, 9, 17],
     content: `
       <p>We’re now part of <strong>Enterprise Nation</strong>—the UK’s leading support network for startups and SMEs. This partnership broadens access to sustainable marketing for space‑enabled businesses.</p>
 
@@ -77,7 +84,48 @@ const posts = {
       <p>A sustainable future needs sustainable voices—through Enterprise Nation, we're helping space‑tech entrepreneurs amplify theirs.</p>
     `
   },
-  // ... other posts like TNFD, NSSC 2025, SBA Café ...
+  'joins-tnfd-forum': {
+    title: 'Green Orbit Joins TNFD Forum',
+    date: 'May 10, 2025',
+    author: 'Ryan Laird',
+    authorRole: 'Director',
+    authorAvatar: 'https://gravatar.com/avatar/a2c75a0a732f6ea38a8ba1c7a80ffad5?size=256',
+    category: 'Sustainability',
+    image: 'https://greenorbit.space/wp-content/uploads/2025/05/tnfd.jpg',
+    sdgs: [13, 15, 16, 17],
+    content: `
+      <p>We’ve joined the Taskforce on Nature-related Financial Disclosures Forum to support sustainable finance practices.</p>
+      <!-- Additional content here -->
+    `
+  },
+  'champions-space-sustainability-nssc-2025': {
+    title: 'Championing Space Sustainability at NSSC',
+    date: 'March 11, 2025',
+    author: 'Ryan Laird',
+    authorRole: 'Director',
+    authorAvatar: 'https://gravatar.com/avatar/a2c75a0a732f6ea38a8ba1c7a80ffad5?size=256',
+    category: 'Events',
+    image: 'https://greenorbit.space/wp-content/uploads/2025/03/nssc.jpg',
+    sdgs: [9, 13, 17],
+    content: `
+      <p>Green Orbit presented at the National Student Space Conference, highlighting sustainable marketing for the sector.</p>
+      <!-- Additional content here -->
+    `
+  },
+  'speaks-at-sba-cafe': {
+    title: 'Sustainability in Space – SBA Café Talk',
+    date: 'February 15, 2025',
+    author: 'Ryan Laird',
+    authorRole: 'Director',
+    authorAvatar: 'https://gravatar.com/avatar/a2c75a0a732f6ea38a8ba1c7a80ffad5?size=256',
+    category: 'Talks',
+    image: 'https://greenorbit.space/wp-content/uploads/2025/02/sba.jpg',
+    sdgs: [13, 12, 17],
+    content: `
+      <p>We discussed space innovation, environmental impact, and purpose-led marketing at the Sustainable Business Alliance Café.</p>
+      <!-- Additional content here -->
+    `
+  }
 };
 
 // Fallback if no slug:
@@ -90,9 +138,42 @@ const post = posts[slug] || null;
   {post ? (
     <article class="prose prose-invert lg:prose-xl mx-auto py-16">
       <h1>{post.title}</h1>
-      <p class="text-sm text-gray-400">{post.date} • {post.category}</p>
-      <!-- Ideally, show author info with avatar -->
-      <img src={post.image} alt={post.title} class="w-full rounded-md my-8" />
+      
+      <div class="flex flex-wrap items-center gap-4 mb-4 text-sm text-gray-400 dark:text-gray-500">
+        <span>{post.date}</span>
+        <span aria-hidden="true">•</span>
+        <span>{post.category}</span>
+      </div>
+
+      {/* SDG tags */}
+      {post.sdgs && (
+        <div class="flex flex-wrap gap-2 mb-8">
+          {post.sdgs.map(id => {
+            const sdg = SDGs.find(s => s.id === id);
+            return sdg && (
+              <span class="text-xs bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-3 py-1 rounded" aria-label={sdg.name}>
+                {sdg.name}
+              </span>
+            );
+          })}
+        </div>
+      )}
+
+      <div class="flex items-center mb-8">
+        <img
+          src={post.authorAvatar}
+          alt={`Avatar of ${post.author}`}
+          class="w-12 h-12 rounded-full mr-4 object-cover"
+          loading="lazy"
+        />
+        <div>
+          <p class="font-semibold text-gray-900 dark:text-white">{post.author}</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400">{post.authorRole}</p>
+        </div>
+      </div>
+
+      <img src={post.image} alt={post.title} class="w-full rounded-md mb-12" />
+
       <div innerHTML={post.content} />
     </article>
   ) : (
