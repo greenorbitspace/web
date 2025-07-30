@@ -3,7 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import HeroSection from '../components/HeroSection.astro';
-import { Button } from '@/components/ui/button'; // Adjust this if your Button component is elsewhere
 ---
 
 <Layout title="Privacy Policy">
@@ -105,11 +104,14 @@ import { Button } from '@/components/ui/button'; // Adjust this if your Button c
             For any questions, concerns, or data access requests, please get in touch.
           </p>
 
-          <div class="mt-6">
-            <Button as="a" href="/contact" class="mt-4">
-              Contact Green Orbit Digital
-            </Button>
-          </div>
+    <div class="mt-16 text-center">
+      <a href="/services" class="btn-primary">
+        Contact Us
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="white">
+          <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+        </svg>
+      </a>
+    </div>
 
           <p class="mt-6 text-sm text-gray-600 dark:text-gray-400">
             Or contact the UK Information Commissioner’s Office directly:
