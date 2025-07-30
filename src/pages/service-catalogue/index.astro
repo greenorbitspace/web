@@ -1,0 +1,29 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+
+// Stripe-compatible React component
+import PricingTable from '../components/PricingTableClient.jsx';
+---
+
+<Layout title="Service Catalogue">
+  <Header />
+
+  <main class="py-12">
+    <HeroSection 
+      title="Service Catalogue" 
+      description="Choose a plan that fits your mission. All options include a 14-day free trial—no credit card required." 
+    />
+
+    <section 
+    <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+    <stripe-pricing-table pricing-table-id="prctbl_1RjhpfE9V0wpcpD5zlaTCoww"
+    publishable-key="pk_live_51RZOfOE9V0wpcpD5X5hZuiXbtRoCa2cMhcILadCbF63npB6O4NdpjKVTqsSBnqx9vrOTWHbgven6dUnGVoVDuhMT00TO8eklxX">
+    </stripe-pricing-table>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
