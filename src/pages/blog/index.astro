@@ -93,7 +93,7 @@ const categories = [...new Set(posts.map(post => post.category))];
           All Posts
         </a>
         {categories.map((category) => (
-          <a href={'#' + category.toLowerCase().replace(/\s+/g, '-')} class="px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-white font-medium text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+          <a href={'#' + category.toLowerCase().replace(/\s+/g, '-')} class="px-4 py-2 rounded-full bg-gray-100 dark:bg-accent-500 text-gray-700 dark:text-white font-medium text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
             {category}
           </a>
         ))}
@@ -101,7 +101,7 @@ const categories = [...new Set(posts.map(post => post.category))];
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {posts.map((post, index) => (
-          <div class="card border border-gray-200 dark:border-gray-700 overflow-hidden slide-up" style={'animation-delay: ' + (index * 100) + 'ms'}>
+          <div class="card border border-gray-200 dark:border-accent-500 overflow-hidden slide-up" style={'animation-delay: ' + (index * 100) + 'ms'}>
             <a href={'/blog/' + post.id} class="block">
               <img 
                 src={post.image} 
@@ -140,7 +140,7 @@ const categories = [...new Set(posts.map(post => post.category))];
       <div class="mt-12 flex justify-center">
         <a href="#" class="btn-outline">
           Load More Articles
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="accent-500">
             <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v10.586l3.293-3.293a1 1 0 011.414 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L9 14.586V4a1 1 0 011-1z" clip-rule="evenodd" />
           </svg>
         </a>

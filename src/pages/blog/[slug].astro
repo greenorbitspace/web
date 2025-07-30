@@ -151,7 +151,7 @@ const post = posts[slug] || null;
           {post.sdgs.map(id => {
             const sdg = SDGs.find(s => s.id === id);
             return sdg && (
-              <span class="text-xs bg-green-100 text-green-800 dark:bg-green-900 dark:text-white px-3 py-1 rounded" aria-label={sdg.name}>
+              <span class="text-xs bg-green-100 text-green-800 dark:bg-accent-500 dark:text-white px-3 py-1 rounded" aria-label={sdg.name}>
                 {sdg.name}
               </span>
             );
