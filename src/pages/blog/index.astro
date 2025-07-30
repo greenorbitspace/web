@@ -77,19 +77,19 @@ const posts = [
 const categories = [...new Set(posts.map(post => post.category))];
 ---
 
-<Layout title="Blog - Green Orbit Digital" description="Insights, updates, and partnerships from Green Orbit Digital's work at the intersection of sustainability and space.">
+<Layout title="Blog">
   <Header />
-  <main>
+
+  <main class="py-8">
     <HeroSection 
-      title="Updates from Orbit" 
-      highlightText="Blog"
-      description="Explore our latest news, sustainability commitments, and partnerships shaping the future of digital space marketing."
+      title="Blog" 
+      description="Insights, updates, and partnerships from Green Orbit Digital's work at the intersection of sustainability and space."
     />
     
     <!-- Category Filter -->
     <div class="container-custom py-8">
       <div class="flex flex-wrap gap-4 justify-center mb-12">
-        <a href="#" class="px-4 py-2 rounded-full bg-primary-600 text-white font-medium text-sm hover:bg-primary-700 transition-colors">
+        <a href="#" class="px-4 py-2 rounded-full bg-primary-500 text-white font-medium text-sm hover:bg-primary-700 transition-colors">
           All Posts
         </a>
         {categories.map((category) => (
@@ -101,7 +101,7 @@ const categories = [...new Set(posts.map(post => post.category))];
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {posts.map((post, index) => (
-          <div class="card border border-gray-200 dark:border-accent-500 overflow-hidden slide-up" style={'animation-delay: ' + (index * 100) + 'ms'}>
+          <div class="card border border-gray-200 dark:border-gray-700 overflow-hidden slide-up" style={'animation-delay: ' + (index * 100) + 'ms'}>
             <a href={'/blog/' + post.id} class="block">
               <img 
                 src={post.image} 
@@ -112,7 +112,7 @@ const categories = [...new Set(posts.map(post => post.category))];
             </a>
             <div class="p-6">
               <div class="flex items-center mb-4">
-                <span class="text-sm font-medium text-primary-600 dark:text-white">{post.category}</span>
+                <span class="text-sm font-medium text-primary-600 dark:text-accent-500">{post.category}</span>
                 <span class="mx-2 text-gray-300 dark:text-white">•</span>
                 <span class="text-sm text-gray-500 dark:text-white">{post.date}</span>
               </div>
