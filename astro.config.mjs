@@ -5,7 +5,7 @@ import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind'; // Correct Tailwind integration
 
 export default defineConfig({
-  site: 'https://new.greenorbit.space',
+  site: 'https://greenorbit.space',
   base: '/', // Change if you're deploying to a subdirectory
   integrations: [
     alpinejs(),
