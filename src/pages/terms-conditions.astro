@@ -5,61 +5,85 @@ import Footer from '../components/Footer.astro';
 import HeroSection from '../components/HeroSection.astro';
 ---
 
-<Layout title="Terms and Conditions">
+<Layout title="Terms of Use">
   <Header />
 
   <main class="py-8">
     <HeroSection 
       title="Terms of Use" 
-      description="Choose a plan that fits your mission. All options include a 14-day free trial—no credit card required."
+      description="Please read these terms carefully before using Green Orbit Digital's website."
     />
 
-  <section class="prose prose-lg mx-auto px-4 py-12">
-    <h1>Terms of Use</h1>
-    <p>Effective Date: 30 July 2025</p>
+    <section class="py-16 bg-white dark:bg-gray-800">
+      <div class="container-custom">
+        <article class="prose prose-lg dark:prose-invert max-w-4xl mx-auto">
 
-    <p>Welcome to Green Orbit Digital. By accessing or using our website (<a href="https://greenorbit.space">greenorbit.space</a>), you agree to comply with and be bound by the following Terms of Use. Please read them carefully.</p>
+          <h1>Terms of Use</h1>
+          <p class="mb-6">Effective Date: 30 July 2025</p>
 
-    <h2>1. Acceptance of Terms</h2>
-    <p>By using our site, you agree to these Terms of Use and all applicable laws and regulations. If you do not agree, please do not use our site.</p>
+          <p>
+            Welcome to Green Orbit Digital. By accessing or using our website (<a href="https://greenorbit.space" target="_blank" rel="noopener noreferrer">greenorbit.space</a>), you agree to comply with and be bound by the following Terms of Use. Please read them carefully.
+          </p>
 
-    <h2>2. Use of the Website</h2>
-    <p>You agree to use this site only for lawful purposes. You must not use it:</p>
-    <ul>
-      <li>In any way that breaches any applicable laws or regulations.</li>
-      <li>To transmit unsolicited or unauthorized advertising or promotional material.</li>
-      <li>To knowingly introduce viruses, trojans, worms, or other harmful material.</li>
-    </ul>
+          <h2>1. Acceptance of Terms</h2>
+          <p>
+            By using our site, you agree to these Terms of Use and all applicable laws and regulations. If you do not agree, please do not use our site.
+          </p>
 
-    <h2>3. Intellectual Property</h2>
-    <p>All content on this site, including but not limited to text, graphics, logos, and software, is the property of Green Orbit Digital or its content suppliers and is protected by copyright and intellectual property laws.</p>
+          <h2>2. Use of the Website</h2>
+          <p>You agree to use this site only for lawful purposes. You must not use it:</p>
+          <ul>
+            <li>In any way that breaches applicable laws or regulations.</li>
+            <li>To transmit unsolicited or unauthorized advertising or promotional material.</li>
+            <li>To knowingly introduce viruses, trojans, worms, or other harmful material.</li>
+          </ul>
 
-    <h2>4. Disclaimer</h2>
-    <p>All information on our site is provided “as is” and “as available.” We make no warranties, expressed or implied, and hereby disclaim and negate all other warranties.</p>
+          <h2>3. Intellectual Property</h2>
+          <p>
+            All content on this site, including but not limited to text, graphics, logos, and software, is the property of Green Orbit Digital or its content suppliers and is protected by copyright and intellectual property laws.
+          </p>
 
-    <h2>5. Limitation of Liability</h2>
-    <p>Green Orbit Digital shall not be liable for any damages arising from the use or inability to use the materials on our site, even if we have been notified orally or in writing of the possibility of such damage.</p>
+          <h2>4. Disclaimer</h2>
+          <p>
+            All information on our site is provided “as is” and “as available.” We make no warranties, expressed or implied, and hereby disclaim and negate all other warranties.
+          </p>
 
-    <h2>6. Third-Party Links</h2>
-    <p>Our website may contain links to third-party websites. These are provided for your convenience and do not signify endorsement. We are not responsible for the content of any linked site.</p>
+          <h2>5. Limitation of Liability</h2>
+          <p>
+            Green Orbit Digital shall not be liable for any damages arising from the use or inability to use the materials on our site, even if we have been notified orally or in writing of the possibility of such damage.
+          </p>
 
-    <h2>7. Changes to These Terms</h2>
-    <p>We reserve the right to modify these Terms of Use at any time. Your continued use of the site after changes are made constitutes your acceptance of the new terms.</p>
+          <h2>6. Third-Party Links</h2>
+          <p>
+            Our website may contain links to third-party websites. These are provided for your convenience and do not signify endorsement. We are not responsible for the content of any linked site.
+          </p>
 
-    <h2>8. Governing Law</h2>
-    <p>These Terms of Use are governed by and construed in accordance with the laws of England and Wales, and you irrevocably submit to the exclusive jurisdiction of the courts located there.</p>
+          <h2>7. Changes to These Terms</h2>
+          <p>
+            We reserve the right to modify these Terms of Use at any time. Your continued use of the site after changes are made constitutes your acceptance of the new terms.
+          </p>
 
-    <h2>9. Contact Us</h2>
-    <p>If you have any questions about these Terms, please contact us at:</p>
-        <div class="mt-16 text-center">
-      <a href="/services" class="btn-primary">
-        Contact Us
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="white">
-          <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-        </svg>
-      </a>
-    </div>
-  </section>
+          <h2>8. Governing Law</h2>
+          <p>
+            These Terms of Use are governed by and construed in accordance with the laws of England and Wales, and you irrevocably submit to the exclusive jurisdiction of the courts located there.
+          </p>
+
+          <h2>9. Contact Us</h2>
+          <p>If you have any questions about these Terms, please contact us:</p>
+
+          <div class="mt-12 text-center">
+            <a href="/contact" class="inline-flex items-center justify-center rounded-xl bg-blue-600 px-8 py-3 font-semibold text-white transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+              Contact Us
+              <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+
+        </article>
+      </div>
+    </section>
   </main>
+
   <Footer />
-</Layout> 
+</Layout>
