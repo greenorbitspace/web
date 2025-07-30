@@ -93,7 +93,7 @@ const categories = [...new Set(posts.map(post => post.category))];
           All Posts
         </a>
         {categories.map((category) => (
-          <a href={'#' + category.toLowerCase().replace(/\s+/g, '-')} class="px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-medium text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+          <a href={'#' + category.toLowerCase().replace(/\s+/g, '-')} class="px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-white font-medium text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
             {category}
           </a>
         ))}
@@ -112,14 +112,14 @@ const categories = [...new Set(posts.map(post => post.category))];
             </a>
             <div class="p-6">
               <div class="flex items-center mb-4">
-                <span class="text-sm font-medium text-primary-600 dark:text-primary-400">{post.category}</span>
-                <span class="mx-2 text-gray-300 dark:text-gray-600">•</span>
-                <span class="text-sm text-gray-500 dark:text-gray-400">{post.date}</span>
+                <span class="text-sm font-medium text-primary-600 dark:text-white">{post.category}</span>
+                <span class="mx-2 text-gray-300 dark:text-white">•</span>
+                <span class="text-sm text-gray-500 dark:text-white">{post.date}</span>
               </div>
               <a href={'/blog/' + post.id} class="block mb-3">
                 <h2 class="text-xl font-semibold text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{post.title}</h2>
               </a>
-              <p class="text-gray-600 dark:text-gray-300 mb-6">{post.excerpt}</p>
+              <p class="text-gray-600 dark:text-white mb-6">{post.excerpt}</p>
               <div class="flex items-center">
                 <img 
                   src={post.authorAvatar} 

@@ -139,7 +139,7 @@ const post = posts[slug] || null;
     <article class="prose prose-invert lg:prose-xl mx-auto py-16">
       <h1>{post.title}</h1>
       
-      <div class="flex flex-wrap items-center gap-4 mb-4 text-sm text-gray-400 dark:text-gray-500">
+      <div class="flex flex-wrap items-center gap-4 mb-4 text-sm text-gray-400 dark:text-white">
         <span>{post.date}</span>
         <span aria-hidden="true">•</span>
         <span>{post.category}</span>
@@ -151,7 +151,7 @@ const post = posts[slug] || null;
           {post.sdgs.map(id => {
             const sdg = SDGs.find(s => s.id === id);
             return sdg && (
-              <span class="text-xs bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-3 py-1 rounded" aria-label={sdg.name}>
+              <span class="text-xs bg-green-100 text-green-800 dark:bg-green-900 dark:text-white px-3 py-1 rounded" aria-label={sdg.name}>
                 {sdg.name}
               </span>
             );
