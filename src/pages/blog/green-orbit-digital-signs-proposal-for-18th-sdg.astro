@@ -1,0 +1,187 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SDGs } from '../../data/sdg.ts';
+
+export async function getStaticPaths() {
+  return [
+    { params: { slug: 'joins-smartcitiesworld' } },
+    { params: { slug: 'joins-rainforest-foundation-uk' } },
+    { params: { slug: 'joins-enterprise-nation' } },
+    { params: { slug: 'joins-tnfd-forum' } },
+    { params: { slug: 'champions-space-sustainability-nssc-2025' } },
+    { params: { slug: 'speaks-at-sba-cafe' } },
+  ];
+}
+
+const { slug } = Astro.params;
+
+const posts = {
+  'joins-smartcitiesworld': {
+    title: 'Green Orbit Digital Joins SmartCitiesWorld',
+    date: 'May 22, 2025',
+    author: 'Ryan Laird',
+    authorRole: 'Director',
+    authorAvatar: 'https://gravatar.com/avatar/a2c75a0a732f6ea38a8ba1c7a80ffad5?size=256',
+    category: 'News',
+    image: 'https://greenorbit.space/wp-content/uploads/2025/05/smartcities.jpg',
+    sdgs: [11, 9, 13],
+    content: `
+      <p>We’re proud to announce our membership in <strong>SmartCitiesWorld</strong>, a leading platform for digital innovation in urban sustainability. Our contribution will include thought‑leadership content, smart city case studies, and insights on applying space‑derived data to urban challenges.</p>
+
+      <h2 class="text-2xl font-semibold mt-8 mb-4">Why It Matters</h2>
+      <ul class="list-disc pl-6 space-y-2 mb-6">
+        <li>70% of the global population is expected to live in cities by 2050—placing pressure on governance, resource optimisation, and inclusion.</li>
+        <li>We’re leveraging satellite data and sustainable marketing to shape greener, smarter urban systems.</li>
+        <li>Our engagement complements existing SmartCitiesWorld pillars: Connectivity, Environment, Governance, Mobility, Urban Space.</li>
+      </ul>
+
+      <p>“We’re thrilled to help amplify efforts for smarter, net‑zero cities through space‑empowered marketing, digital innovation, and inclusive communications.” – Ryan Laird</p>
+    `
+  },
+  'joins-rainforest-foundation-uk': {
+    title: 'Green Orbit Digital Joins Rainforest Foundation UK Community',
+    date: 'May 19, 2025',
+    author: 'Ryan Laird',
+    authorRole: 'Director',
+    authorAvatar: 'https://gravatar.com/avatar/a2c75a0a732f6ea38a8ba1c7a80ffad5?size=256',
+    category: 'News',
+    image: 'https://greenorbit.space/wp-content/uploads/2025/05/rfuk.jpg',
+    sdgs: [15, 13, 17],
+    content: `
+      <p>We’ve joined the <strong>Rainforest Foundation UK</strong> to support indigenous rights and climate leadership. This collaboration aligns with our mission to leverage space technology for environmental and social impact.</p>
+
+      <h2 class="text-2xl font-semibold mt-8 mb-4">Partnership Goals</h2>
+      <ul class="list-disc pl-6 space-y-2 mb-6">
+        <li>Highlight the role of satellite monitoring in protecting forest ecosystems.</li>
+        <li>Support indigenous-led conservation narratives within digital campaigns.</li>
+        <li>Drive public awareness through storytelling grounded in data and ethics.</li>
+      </ul>
+
+      <p>Together with RFUK, we’re championing a movement that connects space observations to forest stewardship and community rights.</p>
+    `
+  },
+  'joins-enterprise-nation': {
+    title: 'Green Orbit Digital Joins Enterprise Nation',
+    date: 'May 17, 2025',
+    author: 'Ryan Laird',
+    authorRole: 'Director',
+    authorAvatar: 'https://gravatar.com/avatar/a2c75a0a732f6ea38a8ba1c7a80ffad5?size=256',
+    category: 'News',
+    image: 'https://greenorbit.space/wp-content/uploads/2025/05/enterprise-nation.jpg',
+    sdgs: [8, 9, 17],
+    content: `
+      <p>We’re now part of <strong>Enterprise Nation</strong>—the UK’s leading support network for startups and SMEs. This partnership broadens access to sustainable marketing for space‑enabled businesses.</p>
+
+      <h2 class="text-2xl font-semibold mt-8 mb-4">What This Unlocks</h2>
+      <ul class="list-disc pl-6 space-y-2 mb-6">
+        <li>Tailored mentoring for space startups integrating sustainability.</li>
+        <li>Workshops on climate‑aware digital campaigns and lead generation.</li>
+        <li>Networking with mission-aligned SMEs driving impact.</li>
+      </ul>
+
+      <p>A sustainable future needs sustainable voices—through Enterprise Nation, we're helping space‑tech entrepreneurs amplify theirs.</p>
+    `
+  },
+  'joins-tnfd-forum': {
+    title: 'Green Orbit Joins TNFD Forum',
+    date: 'May 10, 2025',
+    author: 'Ryan Laird',
+    authorRole: 'Director',
+    authorAvatar: 'https://gravatar.com/avatar/a2c75a0a732f6ea38a8ba1c7a80ffad5?size=256',
+    category: 'Sustainability',
+    image: 'https://greenorbit.space/wp-content/uploads/2025/05/tnfd.jpg',
+    sdgs: [13, 15, 16, 17],
+    content: `
+      <p>We’ve joined the Taskforce on Nature-related Financial Disclosures Forum to support sustainable finance practices.</p>
+      <!-- Additional content here -->
+    `
+  },
+  'champions-space-sustainability-nssc-2025': {
+    title: 'Championing Space Sustainability at NSSC',
+    date: 'March 11, 2025',
+    author: 'Ryan Laird',
+    authorRole: 'Director',
+    authorAvatar: 'https://gravatar.com/avatar/a2c75a0a732f6ea38a8ba1c7a80ffad5?size=256',
+    category: 'Events',
+    image: 'https://greenorbit.space/wp-content/uploads/2025/03/nssc.jpg',
+    sdgs: [9, 13, 17],
+    content: `
+      <p>Green Orbit presented at the National Student Space Conference, highlighting sustainable marketing for the sector.</p>
+      <!-- Additional content here -->
+    `
+  },
+  'speaks-at-sba-cafe': {
+    title: 'Sustainability in Space – SBA Café Talk',
+    date: 'February 15, 2025',
+    author: 'Ryan Laird',
+    authorRole: 'Director',
+    authorAvatar: 'https://gravatar.com/avatar/a2c75a0a732f6ea38a8ba1c7a80ffad5?size=256',
+    category: 'Talks',
+    image: 'https://greenorbit.space/wp-content/uploads/2025/02/sba.jpg',
+    sdgs: [13, 12, 17],
+    content: `
+      <p>We discussed space innovation, environmental impact, and purpose-led marketing at the Sustainable Business Alliance Café.</p>
+      <!-- Additional content here -->
+    `
+  }
+};
+
+// Fallback if no slug:
+const post = posts[slug] || null;
+---
+
+<Layout>
+  <Header />
+
+  {post ? (
+    <article class="prose prose-invert lg:prose-xl mx-auto py-16">
+      <h1>{post.title}</h1>
+      
+      <div class="flex flex-wrap items-center gap-4 mb-4 text-sm text-gray-400 dark:text-white">
+        <span>{post.date}</span>
+        <span aria-hidden="true">•</span>
+        <span>{post.category}</span>
+      </div>
+
+      {/* SDG tags */}
+      {post.sdgs && (
+        <div class="flex flex-wrap gap-2 mb-8">
+          {post.sdgs.map(id => {
+            const sdg = SDGs.find(s => s.id === id);
+            return sdg && (
+              <span class="text-xs bg-green-100 text-green-800 dark:bg-accent-500 dark:text-white px-3 py-1 rounded" aria-label={sdg.name}>
+                {sdg.name}
+              </span>
+            );
+          })}
+        </div>
+      )}
+
+      <div class="flex items-center mb-8">
+        <img
+          src={post.authorAvatar}
+          alt={`Avatar of ${post.author}`}
+          class="w-12 h-12 rounded-full mr-4 object-cover"
+          loading="lazy"
+        />
+        <div>
+          <p class="font-semibold text-gray-900 dark:text-white">{post.author}</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400">{post.authorRole}</p>
+        </div>
+      </div>
+
+      <img src={post.image} alt={post.title} class="w-full rounded-md mb-12" />
+
+      <div innerHTML={post.content} />
+    </article>
+  ) : (
+    <div class="mx-auto py-16 text-center">
+      <h1>Post not found</h1>
+      <p>We couldn’t find the article you’re looking for.</p>
+    </div>
+  )}
+
+  <Footer />
+</Layout>
