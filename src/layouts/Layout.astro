@@ -112,13 +112,12 @@ const clientKey = import.meta.env.PUBLIC_BREVO_CLIENT_KEY;
 
     <!-- Brevo -->
     <script src="https://cdn.brevo.com/js/sdk-loader.js" async></script>
-    <script>
+    <script is:inline>
       window.Brevo = window.Brevo || [];
       Brevo.push([
         "init",
         {
-          client_key: "{clientKey}",
-          // Other options if needed
+          client_key: ${JSON.stringify(clientKey)}
         }
       ]);
     </script>
