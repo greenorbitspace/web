@@ -23,7 +23,6 @@ const {
 } = Astro.props;
 
 const clientKey = import.meta.env.PUBLIC_BREVO_CLIENT_KEY;
-
 ---
 
 <!DOCTYPE html>
@@ -99,28 +98,30 @@ const clientKey = import.meta.env.PUBLIC_BREVO_CLIENT_KEY;
       <slot />
     </main>
 
-    <!-- Google Analytics -->
-    <script type="module">
-      import { initGA } from "/scripts/initGA.js";
-
-      window.addEventListener("cookieyes_consent_update", () => {
-        if (window.cookieyes?.consent?.performance) {
-          initGA();
+    <!-- Brevo client key injected safely -->
+    <script is:inline>
+      const brevoClientKey = "{clientKey}";
+    </script>
+    <script is:inline>
+      window.Brevo = window.Brevo || [];
+      Brevo.push([
+        "init",
+        {
+          client_key: brevoClientKey
         }
-      });
+      ]);
     </script>
 
-    <!-- Brevo -->
-    <script is:inline>
-      {`
-        window.Brevo = window.Brevo || [];
-        Brevo.push([
-          "init",
-          {
-            client_key: "${clientKey}"
+    <!-- Google Analytics -->
+    <script src="/scripts/initGA.js" defer></script>
+    <script>
+      window.addEventListener("cookieyes_consent_update", () => {
+        if (window.cookieyes?.consent?.performance) {
+          if (typeof initGA === "function") {
+            initGA();
           }
-        ]);
-      `}
+        }
+      });
     </script>
 
     <!-- Page Transitions -->
@@ -133,9 +134,6 @@ const clientKey = import.meta.env.PUBLIC_BREVO_CLIENT_KEY;
       });
     </script>
 
-    <script type="module">
-      import initTransitions from '../scripts/transitions.js';
-      initTransitions();
-    </script>
+    <script type="module" src="/scripts/transitions.js" defer></script>
   </body>
 </html>
