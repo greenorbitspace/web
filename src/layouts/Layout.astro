@@ -21,6 +21,9 @@ const {
   canonical = "https://greenorbit.space",
   twitter = {}
 } = Astro.props;
+
+const clientKey = import.meta.env.PUBLIC_BREVO_CLIENT_KEY;
+
 ---
 
 <!DOCTYPE html>
@@ -110,15 +113,14 @@ const {
     <!-- Brevo -->
     <script src="https://cdn.brevo.com/js/sdk-loader.js" async></script>
     <script>
-        // Version: 2.0
-        window.Brevo = window.Brevo || [];
-        Brevo.push([
-            "init",
-            {
-            client_key: "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",
-            // Optional: Add other initialization options, see documentation
-            }
-        ]);
+      window.Brevo = window.Brevo || [];
+      Brevo.push([
+        "init",
+        {
+          client_key: "{clientKey}",
+          // Other options if needed
+        }
+      ]);
     </script>
 
     <!-- Page Transitions -->
