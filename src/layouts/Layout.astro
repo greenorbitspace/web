@@ -1,7 +1,6 @@
 ---
 import '../styles/global.css';
 import '../styles/transitions.css';
-import { ClientRouter } from 'astro:transitions';
 
 export interface Props {
   title: string;
@@ -25,7 +24,7 @@ const {
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -56,7 +55,7 @@ const {
     <meta name="twitter:description" content={twitter.description ?? description} />
     <meta name="twitter:image" content={twitter.image ?? ogImage} />
 
-    <!-- Dark mode prevention flicker -->
+    <!-- Prevent dark mode flicker -->
     <script>
       (function () {
         try {
@@ -70,7 +69,7 @@ const {
       })();
     </script>
 
-    <!-- CookieYes Embed Script -->
+    <!-- CookieYes Embed -->
     <script
       id="cookieyes"
       type="text/javascript"
@@ -78,8 +77,6 @@ const {
       async
     ></script>
 
-    <!-- Astro Transitions Router -->
-    <ClientRouter />
     {Astro.head}
     <title>{title}</title>
   </head>
@@ -95,11 +92,11 @@ const {
     x-cloak
     class="antialiased bg-white dark:bg-primary-500 text-secondary-900 dark:text-secondary-100 transition-colors duration-300"
   >
-    <div id="page-wrapper" class="page-transition-wrapper">
+    <main id="page-wrapper" class="page-transition-wrapper" role="main">
       <slot />
-    </div>
+    </main>
 
-    <!-- Google Analytics (init when CookieYes gives consent) -->
+    <!-- Google Analytics -->
     <script type="module">
       import { initGA } from "/scripts/initGA.js";
 
@@ -108,6 +105,20 @@ const {
           initGA();
         }
       });
+    </script>
+
+    <!-- Brevo -->
+    <script src="https://cdn.brevo.com/js/sdk-loader.js" async></script>
+    <script>
+        // Version: 2.0
+        window.Brevo = window.Brevo || [];
+        Brevo.push([
+            "init",
+            {
+            client_key: "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",
+            // Optional: Add other initialization options, see documentation
+            }
+        ]);
     </script>
 
     <!-- Page Transitions -->

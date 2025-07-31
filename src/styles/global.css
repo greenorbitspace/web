@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* CSS variables moved to :root for light theme */
+/* ==========================
+   CSS Variables - Light Theme
+   ========================== */
 :root {
   /* Primary - tealish */
   --color-primary-50:  #e6f3f4;
@@ -56,17 +58,27 @@
   --color-warning-900: #713f12;
   --color-warning-950: #422006;
 
+  /* Border radius & shadows */
+  --radius-lg: 0.75rem;
+  --shadow-primary: rgba(15, 192, 131, 0.35);
+
   /* Fonts */
-  --font-sans: Inter, system-ui, sans-serif;
+  --font-sans: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   --font-display: Lexend, system-ui, sans-serif;
 
   /* Animations */
-  --animate-fade-in: fadeIn 0.5s ease-in-out;
-  --animate-slide-up: slideUp 0.5s ease-in-out;
-  --animate-slide-down: slideDown 0.5s ease-in-out;
+  --animate-fade-in: fadeIn 0.5s ease-in-out forwards;
+  --animate-slide-up: slideUp 0.5s ease-in-out forwards;
+  --animate-slide-down: slideDown 0.5s ease-in-out forwards;
+  --animate-float: float 6s ease-in-out infinite;
+
+  /* Transition easing */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Dark mode overrides using the 'dark' class on root/html */
+/* ====================
+   Dark Mode Overrides
+   ==================== */
 .dark {
   --color-primary-50:  #021116;
   --color-primary-100: #041f25;
@@ -117,7 +129,9 @@
   --color-warning-950: #fefce8;
 }
 
-/* Keyframes remain unchanged */
+/* ====================
+   Keyframe Animations
+   ==================== */
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
@@ -130,22 +144,34 @@
   0% { transform: translateY(-20px); opacity: 0; }
   100% { transform: translateY(0); opacity: 1; }
 }
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
 
-/* Base layer */
+/* ====================
+   Base Layer Styles
+   ==================== */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
+  }
+
+  html {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
+    margin-top: 0;
+    margin-bottom: 0.5em;
   }
+
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;
   }
   h2 {
     @apply text-3xl md:text-4xl font-bold;
@@ -158,83 +184,110 @@
   }
   p {
     @apply text-base md:text-lg leading-relaxed;
+    margin-bottom: 1em;
   }
 
   /* Hide elements with x-cloak until Alpine initializes */
   [x-cloak] {
     display: none !important;
   }
+
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }
 
+/* ====================
+   Components Layer Styles
+   ==================== */
 @layer components {
+  /* Buttons */
   .btn-primary {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-300 focus:outline-none;
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-colors duration-300 focus:outline-none;
     background-color: var(--color-accent-500);
     color: white;
-    box-shadow: 0 4px 6px rgb(15 192 131 / 0.5);
+    box-shadow: 0 4px 6px var(--shadow-primary);
     transition-property: background-color, box-shadow;
-    transition-duration: 300ms;
   }
-  .btn-primary:hover {
+  .btn-primary:hover,
+  .btn-primary:focus-visible {
     background-color: var(--color-accent-600);
-    box-shadow: 0 6px 10px rgb(15 192 131 / 0.7);
+    box-shadow: 0 6px 10px var(--shadow-primary);
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-300 focus:outline-none;
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-colors duration-300 focus:outline-none;
     background-color: var(--color-primary-600);
     color: white;
-    box-shadow: 0 4px 6px rgb(12 77 83 / 0.5);
-    transition-property: background-color, box-shadow;
-    transition-duration: 300ms;
+    box-shadow: 0 4px 6px rgba(12, 77, 83, 0.5);
   }
-  .btn-secondary:hover {
+  .btn-secondary:hover,
+  .btn-secondary:focus-visible {
     background-color: var(--color-primary-700);
-    box-shadow: 0 6px 10px rgb(12 77 83 / 0.7);
+    box-shadow: 0 6px 10px rgba(12, 77, 83, 0.7);
   }
 
   .btn-accent {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-300 focus:outline-none;
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-colors duration-300 focus:outline-none;
     background-color: var(--color-accent-500);
     color: white;
-    box-shadow: 0 4px 6px rgb(15 192 131 / 0.5);
-    transition-property: background-color, box-shadow;
-    transition-duration: 300ms;
+    box-shadow: 0 4px 6px var(--shadow-primary);
   }
-  .btn-accent:hover {
+  .btn-accent:hover,
+  .btn-accent:focus-visible {
     background-color: var(--color-accent-600);
-    box-shadow: 0 6px 10px rgb(15 192 131 / 0.7);
+    box-shadow: 0 6px 10px var(--shadow-primary);
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center px-8 py-4 rounded-lg font-medium transition-all duration-300 focus:outline-none border-2 border-secondary-300 dark:border-secondary-700 hover:bg-secondary-100 dark:hover:bg-secondary-800 text-secondary-900 dark:text-secondary-100;
+    @apply inline-flex items-center justify-center px-8 py-4 rounded-lg font-medium transition-colors duration-300 focus:outline-none border-2 border-secondary-300 dark:border-secondary-700 hover:bg-secondary-100 dark:hover:bg-secondary-800 text-secondary-900 dark:text-secondary-100;
   }
 
+  /* Container */
   .container-custom {
     @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+    max-width: 100%; /* fallback for very small screens */
   }
 
+  /* Section spacing */
   .section {
     @apply py-16 md:py-24;
   }
 
+  /* Cards */
   .card {
     @apply bg-white dark:bg-secondary-900 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-secondary-200 dark:border-secondary-800;
   }
 }
 
-/* Animations */
+/* ====================
+   Animations Utilities
+   ==================== */
 .fade-in {
   @apply animate-fade-in;
 }
+
 .slide-up {
   @apply animate-slide-up;
 }
+
 .slide-down {
   @apply animate-slide-down;
 }
 
-/* Accessibility */
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ====================
+   Accessibility Utilities
+   ==================== */
 .sr-only {
   @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
 }

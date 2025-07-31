@@ -133,25 +133,3 @@ const allPages = [
     </div>
   </div>
 </header>
-
-<style>
-  /* Add styles for dark mode SVG in the header */
-  @media (prefers-color-scheme: dark) {
-    .dark\:fill-slate-800 { fill: #1e293b; }
-    .dark\:fill-slate-600 { fill: #475569; }
-    .dark\:fill-slate-500 { fill: #64748b; }
-    .dark\:fill-slate-700 { fill: #334155; }
-    .dark\:stroke-slate-300 { stroke: #cbd5e1; }
-    .dark\:stroke-teal-500 { stroke: #14b8a6; }
-    .dark\:fill-white { fill: #ffffff; }
-  }
-  
-  /* Add hover animation to the logo */
-  header a:hover svg {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-  }
-  
-  /* Hide Alpine.js elements before Alpine loads */
-  [x-cloak] { display: none !important; }
-</style>
