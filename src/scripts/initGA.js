@@ -1,3 +1,4 @@
+// src/scripts/initGA.js
 export function initGA() {
   if (typeof window.gtag === 'function') return;
 

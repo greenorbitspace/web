@@ -22,7 +22,8 @@ const {
   twitter = {}
 } = Astro.props;
 
-const clientKey = import.meta.env.PUBLIC_BREVO_CLIENT_KEY;
+const clientKey = import.meta.env.PUBLIC_BREVO_CLIENT_KEY ?? '';
+const isLocal = Astro.site?.hostname?.includes('localhost') ?? import.meta.env.DEV;
 ---
 
 <!DOCTYPE html>
@@ -57,7 +58,7 @@ const clientKey = import.meta.env.PUBLIC_BREVO_CLIENT_KEY;
     <meta name="twitter:description" content={twitter.description ?? description} />
     <meta name="twitter:image" content={twitter.image ?? ogImage} />
 
-    <!-- Prevent dark mode flicker -->
+    <!-- Prevent dark mode flicker (pre-Alpine) -->
     <script>
       (function () {
         try {
@@ -67,24 +68,34 @@ const clientKey = import.meta.env.PUBLIC_BREVO_CLIENT_KEY;
             localStorage.setItem('darkMode', darkMode);
           }
           document.documentElement.classList.toggle('dark', darkMode === 'true');
-        } catch (e) {}
+        } catch (_) {}
       })();
     </script>
 
-    <!-- CookieYes Embed -->
-    <script
-      id="cookieyes"
-      type="text/javascript"
-      src="https://cdn-cookieyes.com/client_data/58366b5b83a0075b30699f8a/script.js"
-      async
-    ></script>
-
     {Astro.head}
     <title>{title}</title>
+
+    <!-- Alpine.js for reactive UI (defer to avoid blocking) -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+    <!-- Cookie Consent (only load in production) -->
+    {!isLocal && (
+      <script
+        id="cookieyes"
+        type="text/javascript"
+        src="https://cdn-cookieyes.com/client_data/58366b5b83a0075b30699f8a/script.js"
+        async
+      ></script>
+    )}
   </head>
 
   <body
-    x-data="{ darkMode: localStorage.getItem('darkMode') === 'true' }"
+    x-data="{
+      darkMode: localStorage.getItem('darkMode') === 'true',
+      toggleDarkMode() {
+        this.darkMode = !this.darkMode;
+      }
+    }"
     x-init="
       $watch('darkMode', val => {
         localStorage.setItem('darkMode', val);
@@ -94,37 +105,11 @@ const clientKey = import.meta.env.PUBLIC_BREVO_CLIENT_KEY;
     x-cloak
     class="antialiased bg-white dark:bg-primary-500 text-secondary-900 dark:text-secondary-100 transition-colors duration-300"
   >
-    <main id="page-wrapper" class="page-transition-wrapper" role="main">
+    <main id="page-wrapper" class="page-wrapper" role="main" tabindex="-1">
       <slot />
     </main>
 
-    <!-- Brevo client key injected safely -->
-    <script is:inline>
-      const brevoClientKey = "{clientKey}";
-    </script>
-    <script is:inline>
-      window.Brevo = window.Brevo || [];
-      Brevo.push([
-        "init",
-        {
-          client_key: brevoClientKey
-        }
-      ]);
-    </script>
-
-    <!-- Google Analytics -->
-    <script src="/scripts/initGA.js" defer></script>
-    <script>
-      window.addEventListener("cookieyes_consent_update", () => {
-        if (window.cookieyes?.consent?.performance) {
-          if (typeof initGA === "function") {
-            initGA();
-          }
-        }
-      });
-    </script>
-
-    <!-- Page Transitions -->
+    <!-- Native page transition events -->
     <script>
       document.addEventListener('astro:page-load', () => {
         document.getElementById('page-wrapper')?.classList.add('page-loaded');
@@ -134,6 +119,7 @@ const clientKey = import.meta.env.PUBLIC_BREVO_CLIENT_KEY;
       });
     </script>
 
-    <script type="module" src="/scripts/transitions.js" defer></script>
+    <!-- Page transition module -->
+    <script type="module" defer src="/scripts/transitions.js"></script>
   </body>
 </html>
