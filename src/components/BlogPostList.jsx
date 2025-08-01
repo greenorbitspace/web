@@ -4,12 +4,19 @@ const BlogPostList = ({ posts }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredPosts = useMemo(() => {
-    const term = searchTerm.toLowerCase();
-    return posts.filter(post =>
-      post.title.toLowerCase().includes(term) ||
-      post.excerpt?.toLowerCase().includes(term) ||
-      post.tags?.some(tag => tag.toLowerCase().includes(term))
-    );
+    const term = (searchTerm ?? '').toLowerCase();
+
+    return posts.filter(post => {
+      const title = (post.title ?? '').toLowerCase();
+      const excerpt = (post.excerpt ?? '').toLowerCase();
+      const tags = post.tags ?? [];
+
+      return (
+        title.includes(term) ||
+        excerpt.includes(term) ||
+        tags.some(tag => (tag ?? '').toLowerCase().includes(term))
+      );
+    });
   }, [searchTerm, posts]);
 
   return (

@@ -10,7 +10,6 @@ export default defineConfig({
     alpinejs(),
     react({
       fastRefresh: true,
-      // reactVersion auto-detected, so no need to specify explicitly
     }),
     tailwind({
       config: {
@@ -21,12 +20,12 @@ export default defineConfig({
   vite: {
     server: {
       fs: {
-        strict: false, // Required if serving files outside root (symlinks/monorepos)
+        strict: false,
       },
     },
     build: {
-      target: 'esnext',      // Modern browsers; can speed up build & output smaller code
-      minify: 'esbuild',     // Fast minifier, good default
+      target: 'esnext',
+      minify: 'esbuild',
     },
     resolve: {
       alias: {
@@ -38,11 +37,7 @@ export default defineConfig({
       },
     },
     optimizeDeps: {
-      include: [
-        'react',
-        'react-dom',
-        // Avoid '@astrojs/react/client' here due to known build issues
-      ],
+      include: ['react', 'react-dom'],
       esbuildOptions: {
         loader: {
           '.ts': 'ts',
