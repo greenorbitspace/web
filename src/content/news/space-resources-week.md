@@ -12,11 +12,8 @@ pubdate: '2024-02-26T14:57:00.000+00:00'
 categories:
 - news
 name: 'Space Resources Week: Shaping a Sustainable Future'
+exerpt: "As advocates for sustainability and innovation, Green Orbit Digital is thrilled to announce our participation in the 6th edition of Space Resources Week. This multidisciplinary event serves as a convergence point for space agencies, industry leaders, scientists, and visionaries, fostering discussions on the utilisation of space resources for a cleaner future in space."
 ---
-
-As advocates for sustainability and innovation, Green Orbit Digital is thrilled to announce our participation in the 6th edition of Space Resources Week. This multidisciplinary event serves as a convergence point for space agencies, industry leaders, scientists, and visionaries, fostering discussions on the utilisation of space resources for a cleaner future in space.
-
-# Space Resources Week: Shaping a Sustainable Future
 
 As advocates for sustainability and innovation, Green Orbit Digital is thrilled to announce our participation in the 6th edition of Space Resources Week. This multidisciplinary event serves as a convergence point for space agencies, industry leaders, scientists, and visionaries, fostering discussions on the utilisation of space resources for a cleaner future in space.
 

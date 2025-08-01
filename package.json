@@ -27,6 +27,7 @@
     "@astrojs/tailwind": "^6.0.2",
     "alpinejs": "^3.14.9",
     "astro": "^5.12.6",
+    "date-fns": "^4.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sharp": "^0.34.3",

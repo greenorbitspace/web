@@ -14,10 +14,6 @@ name: 'Tackling Climate Anxiety: Communicating Hope and Action in a Time of Urge
 
 In today’s world, it’s impossible to ignore the growing anxiety surrounding climate change. As we witness extreme weather events, rising temperatures, and an accelerating loss of biodiversity, the emotional toll on individuals is real. People are anxious, uncertain, and, at times, overwhelmed by the scale of the crisis. This phenomenon, often referred to as climate anxiety, is affecting communities globally—especially the younger generations, who will bear the brunt of the consequences.
 
-# Tackling Climate Anxiety: Communicating Hope and Action in a Time of Urgency
-
-In today’s world, it’s impossible to ignore the growing anxiety surrounding climate change. As we witness extreme weather events, rising temperatures, and an accelerating loss of biodiversity, the emotional toll on individuals is real. People are anxious, uncertain, and, at times, overwhelmed by the scale of the crisis. This phenomenon, often referred to as climate anxiety, is affecting communities globally—especially the younger generations, who will bear the brunt of the consequences.
-
 At Green Orbit Digital, we believe in the power of effective communication to transform this anxiety into a force for change. As a marketing agency at the intersection of space and sustainability, we’re driven by the need to stay true to the science and communicate solutions that offer hope, empowerment, and action. Here’s how we can approach climate anxiety, from a communications perspective, while remaining grounded in facts.
 
 ### 1. Promote a Clear, Honest Understanding of the Science

@@ -16,11 +16,8 @@ categories:
 - news
 name: 'Charting a Greener Digital Future: Green Orbit Digital Signs the Sustainable
   Web Manifesto'
+exerpt: "This manifesto, a public declaration of our shared commitment to creating a sustainable internet, underscores the vital importance of reducing the environmental impact of digital activities."
 ---
-
-This manifesto, a public declaration of our shared commitment to creating a sustainable internet, underscores the vital importance of reducing the environmental impact of digital activities.
-
-# Charting a Greener Digital Future: Green Orbit Digital Signs the Sustainable Web Manifesto
 
 Green Orbit Digital is thrilled to announce our dedication to sustainability by endorsing the Sustainable Web Manifesto. This manifesto, a public declaration of our shared commitment to creating a sustainable internet, underscores the vital importance of reducing the environmental impact of digital activities.
 

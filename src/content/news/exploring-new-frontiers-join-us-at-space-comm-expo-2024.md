@@ -13,11 +13,8 @@ pubdate: '2024-02-27T15:53:00.000+00:00'
 categories:
 - news
 name: 'Exploring New Frontiers: Join Us at Space-Comm Expo 2024'
+exerpt: "We’re thrilled to announce that Green Orbit Digital will be attending the upcoming Space-Comm Expo, the premier event that brings together the entire spectrum of space, aerospace, defence, and technology industries."
 ---
-
-We’re thrilled to announce that Green Orbit Digital will be attending the upcoming Space-Comm Expo, the premier event that brings together the entire spectrum of space, aerospace, defence, and technology industries.
-
-# Exploring New Frontiers: Join Us at Space-Comm Expo 2024
 
 We’re thrilled to announce that Green Orbit Digital will be attending the upcoming Space-Comm Expo, the premier event that brings together the entire spectrum of space, aerospace, defence, and technology industries. Scheduled for 6th and 7th March 2024, this expo promises two days of immersive experiences, knowledge-sharing, and unparalleled networking opportunities at the heart of the UK’s flourishing space sector.
 

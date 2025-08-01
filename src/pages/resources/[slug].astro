@@ -2,28 +2,43 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
 import { getCollection } from 'astro:content';
+import authors from '../../data/authors.js';
+import crypto from 'crypto';
+import { slug as slugify } from 'github-slugger';
 
-// Correct: define collectionName inside getStaticPaths
 export async function getStaticPaths() {
-  const collectionName = 'resources';  // <---- here, inside the function
-  const posts = await getCollection(collectionName);
+  const posts = await getCollection('resources');
   return posts.map(post => ({
-    params: { slug: post.slug ?? '' },
+    params: { slug: post.slug ?? post.id },
   }));
 }
 
-const collectionName = 'resources'; // You can also define it here for other usage
 const { slug } = Astro.params;
+const posts = await getCollection('resources');
+const postEntry = posts.find(p => p.slug === slug || p.id === slug);
 
-const posts = await getCollection(collectionName);
-const post = posts.find(p => p.slug === slug);
+if (!postEntry) throw new Error(`No resources post found for slug: "${slug}"`);
 
-if (!post) {
-  throw new Error(`No resources post found for slug: "${slug}"`);
+const { Content } = await postEntry.render();
+const data = postEntry.data;
+
+// Normalize frontmatter author name to slug for lookup
+const authorSlug = slugify(data.author || '').toLowerCase();
+
+// Find author by slug in authors array
+const authorInfo = authors.find(a => a.slug === authorSlug) || null;
+
+function getGravatarUrl(email, size = 80) {
+  if (!email) return null;
+  const hash = crypto.createHash('md5').update(email.trim().toLowerCase()).digest('hex');
+  return `https://www.gravatar.com/avatar/${hash}?s=${size}&d=identicon`;
 }
 
-const { data, Content } = post;
+const avatarUrl = authorInfo?.gravatar && authorInfo.email
+  ? getGravatarUrl(authorInfo.email)
+  : authorInfo?.avatar || '/images/default-author.png';
 
 const formattedDate = data.pubdate
   ? new Date(data.pubdate).toLocaleDateString('en-GB', {
@@ -33,8 +48,9 @@ const formattedDate = data.pubdate
     })
   : null;
 
-const pageTitle = data.seoTitle || data.title || 'resources Post';
-const pageDescription = data.seoDescription || data.description || data.title || 'resources post on Green Orbit Digital';
+// Meta info
+const pageTitle = data.seoTitle || data.title || 'resources';
+const pageDescription = data.seoDescription || data.description || data.title || 'Resources by Green Orbit Digital';
 const pageURL = `https://greenorbit.space/resources/${slug}`;
 const pageAuthor = data.author || 'Green Orbit Digital';
 const pageImage = data.featuredImage || '/default-og-image.jpg';
@@ -62,53 +78,48 @@ const jsonLd = {
 };
 ---
 
-<Layout 
-  title={pageTitle} 
-  description={pageDescription} 
-  url={pageURL} 
-  author={pageAuthor} 
-  image={pageImage} 
-  jsonLd={jsonLd}
->
+<Layout title={pageTitle}>
   <Header />
-  <main class="max-w-3xl mx-auto px-4 py-12" role="main" aria-label={pageTitle}>
-    <article>
-      <header class="mb-8">
-        <h1 class="text-4xl font-extrabold leading-tight mb-4">{data.title}</h1>
 
-        {formattedDate && (
-          <time dateTime={data.pubdate} class="block text-sm text-gray-500">
-            Published {formattedDate}
-          </time>
-        )}
+  <main class="py-12">
+    <HeroSection
+      title="resources"
+      description="Explore our latest resources posts."
+    />
 
-        {data.author && (
-          <p class="text-sm text-gray-600 mt-1">
-            By <span class="font-medium">{data.author}</span>
-          </p>
-        )}
+    <main class="prose dark:prose-invert max-w-4xl mx-auto px-4 py-12">
+      <article>
+        <header class="mb-8">
+          <h1 class="text-4xl font-bold text-accent-500 mb-2">{data.title}</h1>
 
-        {data.tags?.length && (
-          <ul class="flex flex-wrap gap-2 mt-4 text-sm" aria-label="Post tags">
-            {data.tags.map(tag => (
-              <li key={tag}>
-                <a
-                  href={`/resources/?tag=${encodeURIComponent(tag)}`}
-                  class="bg-blue-100 text-blue-800 px-2 py-1 rounded hover:bg-blue-200 transition"
-                  rel="tag noopener noreferrer"
-                >
-                  #{tag}
-                </a>
-              </li>
-            ))}
-          </ul>
-        )}
-      </header>
+            {authorInfo && (
+              <div class="flex items-center gap-2 mt-4 text-sm text-white">
+                <img src={avatarUrl} alt={authorInfo.name} class="w-6 h-6 rounded-full" />
+                <span>
+                  By <a href={`/authors/${authorInfo.slug}`} class="underline">{authorInfo.name}</a>
+                </span>
+                <span> · {formattedDate}</span>
+              </div>
+            )}
 
-      <section class="prose prose-lg max-w-none">
-        {Content ? <Content /> : <p>No content available.</p>}
-      </section>
-    </article>
-  </main>
+            {data.tags?.length && (
+              <div class="mt-2 flex flex-wrap gap-2">
+                {data.tags.map((tag) => (
+                  <a
+                    href={`/resources?tag=${encodeURIComponent(tag)}`}
+                    class="text-xs bg-accent-600 text-white px-2 py-1 rounded hover:bg-accent-700 transition"
+                  >
+                    #{tag}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+        </header>
+
+        <Content />
+      </article>
+    </main>
+
   <Footer />
 </Layout>

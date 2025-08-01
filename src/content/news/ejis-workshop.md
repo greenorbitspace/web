@@ -13,11 +13,8 @@ pubdate: '2024-04-23T15:56:00.000+00:00'
 categories:
 - news
 name: Green Orbit Digital to Present at Environmental Justice in Space Workshop
+exerpt: "We are excited to announce that we have been selected to present at the Environmental Justice in Space (EJiS) Workshop, hosted by the JustSpace Alliance."
 ---
-
-We are excited to announce that we have been selected to present at the Environmental Justice in Space (EJiS) Workshop, hosted by the JustSpace Alliance.
-
-# Green Orbit Digital to Present at Environmental Justice in Space Workshop
 
 We are excited to announce that Green Orbit Digital has been selected to present at the Environmental Justice in Space (EJiS) Workshop, hosted by the JustSpace Alliance. Our abstract, titled “Communicating Space Sustainability: PR, ESG, and the Space Debris Challenge,“ has been accepted for inclusion in this event. Our director, Ryan Laird, will also be participating in the Q&A: The Orbital Environment on 20 June 2024 at 11:00am-12:00pm EDT (4:00pm-5:00pm BST or 5:00pm-6:00pm CEST).
 

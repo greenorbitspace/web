@@ -17,12 +17,6 @@ categories:
 name: 'Unlocking Insights from Space: European State of the Climate 2023'
 ---
 
-In a world grappling with the relentless impacts of climate change, understanding the nuances of our changing environment becomes paramount. 
-
-Credit: The European Centre for Medium Range Weather Forecasts (ECMWF) on behalf of the European Commission: the Copernicus Climate Change Service (C3S) and the Copernicus Atmosphere Monitoring Service (CAMS).
-
-# Unlocking Insights from Space: European State of the Climate 2023
-
 In a world grappling with the relentless impacts of climate change, understanding the nuances of our changing environment becomes paramount. The European State of the Climate report for 2023, a collaborative effort by the Copernicus Climate Change Service (C3S) and the World Meteorological Organization (WMO), delivers crucial insights into Europe’s climate landscape, highlighting the urgent need for action and adaptation.
 
 ## Satellites: Eyes on the Climate 

@@ -1,67 +1,54 @@
 import React, { useState, useMemo } from 'react';
 import { slug as slugify } from 'github-slugger';
 
-const BlogPostList = ({ posts = [], filterByAuthor }) => {
-  // Dev warning if posts prop is missing or invalid
-  if (import.meta.env.DEV && !Array.isArray(posts)) {
-    console.warn('BlogPostList received invalid or missing `posts` prop:', posts);
-  }
-
+export default function InsightsList({ posts = [] }) {
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredPosts = useMemo(() => {
-    const term = (searchTerm ?? '').toLowerCase();
+    const term = searchTerm.toLowerCase();
 
-    return posts.filter(post => {
+    return posts.filter((post) => {
       const fm = post.data ?? {};
       const title = (fm.title ?? '').toLowerCase();
       const excerpt = (fm.excerpt ?? '').toLowerCase();
       const tags = fm.tags ?? [];
+      const categories = fm.categories ?? [];
       const authorSlug = slugify(fm.author ?? '');
 
-      // Match search term in title, excerpt, or tags
       const matchesSearch =
         title.includes(term) ||
         excerpt.includes(term) ||
-        tags.some(tag => (tag ?? '').toLowerCase().includes(term));
+        tags.some((tag) => tag.toLowerCase().includes(term)) ||
+        categories.some((cat) => cat.toLowerCase().includes(term));
 
-      // Compare author slug with filterByAuthor (if set)
-      const matchesAuthor = filterByAuthor
-        ? authorSlug === filterByAuthor.toLowerCase()
-        : true;
-
-      return matchesSearch && matchesAuthor;
+      return matchesSearch;
     });
-  }, [searchTerm, posts, filterByAuthor]);
+  }, [searchTerm, posts]);
 
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
-        <h2 className="text-2xl font-bold">Blog</h2>
+        <h2 className="text-2xl font-bold">Insights</h2>
         <input
           type="text"
-          aria-label="Search blog posts"
-          placeholder="Search blog posts..."
+          aria-label="Search insights"
+          placeholder="Search articles, resources, news..."
           value={searchTerm}
-          onChange={e => setSearchTerm(e.target.value)}
+          onChange={(e) => setSearchTerm(e.target.value)}
           className="border rounded px-3 py-2 w-full max-w-sm"
         />
       </div>
 
       <ul className="grid gap-6 md:grid-cols-2" role="list">
         {filteredPosts.length === 0 ? (
-          <li className="text-accent-500 italic">No posts found.</li>
+          <li className="text-accent-500 italic">No insights found.</li>
         ) : (
-          filteredPosts.map(post => (
+          filteredPosts.map((post) => (
             <li
               key={post.slug}
-              className="border border-white p-4 rounded hover:shadow-md transition"
+              className="border border-accent-500 p-4 rounded hover:shadow-md transition"
             >
-              <a
-                href={`/blog/${post.slug}`}
-                className="block group"
-                rel="noopener noreferrer"
-              >
+              <a href={`/${post.collection}/${post.slug}`} className="block group" rel="noopener noreferrer">
                 <h3 className="text-xl text-accent-500 font-semibold group-hover:text-white">
                   {post.data.title}
                 </h3>
@@ -74,17 +61,15 @@ const BlogPostList = ({ posts = [], filterByAuthor }) => {
                     })}
                   </p>
                 )}
-                {post.data.excerpt && (
-                  <p className="text-white">{post.data.excerpt}</p>
-                )}
-                {post.data.tags?.length > 0 && (
+                {post.data.excerpt && <p className="text-white">{post.data.excerpt}</p>}
+                {post.data.categories?.length > 0 && (
                   <div className="mt-2 space-x-2">
-                    {post.data.tags.map(tag => (
+                    {post.data.categories.map((cat) => (
                       <span
-                        key={tag}
+                        key={cat}
                         className="inline-block bg-accent-500 text-white text-xs px-2 py-1 rounded"
                       >
-                        #{tag}
+                        #{cat}
                       </span>
                     ))}
                   </div>
@@ -96,6 +81,4 @@ const BlogPostList = ({ posts = [], filterByAuthor }) => {
       </ul>
     </div>
   );
-};
-
-export default BlogPostList;
+}

@@ -13,11 +13,8 @@ pubdate: '2024-05-16T21:38:00.000+00:00'
 categories:
 - blog
 name: Celebrating the International Day of Light
+exerpt: "Today, as we mark the International Day of Light, we honour the significance of light in our lives and its profound impact on our planet. "
 ---
-
-Today, as we mark the International Day of Light, we honour the significance of light in our lives and its profound impact on our planet. 
-
-# Celebrating the International Day of Light
 
 Today, as we mark the International Day of Light, we honour the significance of light in our lives and its profound impact on our planet. This day, commemorating the first successful operation of the laser in 1960 by physicist and engineer Theodore Maiman, serves as a reminder of the crucial role light plays in various aspects of our existence.
 

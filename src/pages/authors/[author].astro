@@ -1,0 +1,70 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import BlogPostList from '../../components/BlogPostList.jsx';
+import { getCollection } from 'astro:content';
+import authors from '../../data/authors.js';
+import crypto from 'crypto';
+import { slug as slugify } from 'github-slugger';
+
+export async function getStaticPaths() {
+  return authors.map(author => ({
+    params: { author: author.slug }
+  }));
+}
+
+const { author } = Astro.params;
+
+const authorData = authors.find(a => a.slug.toLowerCase() === author.toLowerCase());
+if (!authorData) throw new Error(`Author not found: ${author}`);
+
+const allPosts = await getCollection('blog');
+
+const authorPosts = allPosts.filter(post => {
+  if (!post.data.author) return false;
+  return slugify(post.data.author) === author.toLowerCase();
+});
+
+function getGravatarUrl(email) {
+  if (!email) return null;
+  const hash = crypto.createHash('md5').update(email.trim().toLowerCase()).digest('hex');
+  return `https://www.gravatar.com/avatar/${hash}?s=80&d=identicon`;
+}
+
+const gravatarUrl = authorData.gravatar
+  ? getGravatarUrl(authorData.email)
+  : authorData.avatar || '/images/default-author.png';
+---
+
+<Layout title={`Articles by ${authorData.name}`} description={`Blog posts by ${authorData.name}`}>
+  <Header />
+
+  <main class="py-12 max-w-6xl mx-auto px-4">
+    <HeroSection 
+      title={`Articles by ${authorData.name}`} 
+      description="Explore our latest blog posts." 
+    />
+
+    <section class="flex items-center space-x-6 my-8">
+      <img
+        src={gravatarUrl}
+        alt={authorData.name}
+        class="w-20 h-20 rounded-full border border-gray-300"
+      />
+      <div>
+        <h1 class="text-3xl font-bold">{authorData.name}</h1>
+        {authorData.role && <p class="text-white">{authorData.role}</p>}
+        {authorData.bio && <p class="mt-2 max-w-xl">{authorData.bio}</p>}
+      </div>
+    </section>
+
+    <section>
+      <!-- BlogPostList is a React component that accepts posts and filterByAuthor -->
+      <BlogPostList posts={authorPosts} filterByAuthor={authorData.slug} />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

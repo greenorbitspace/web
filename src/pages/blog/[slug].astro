@@ -4,27 +4,41 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import HeroSection from '../../components/HeroSection.astro';
 import { getCollection } from 'astro:content';
+import authors from '../../data/authors.js';
+import crypto from 'crypto';
+import { slug as slugify } from 'github-slugger';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
-  return posts.map((post) => ({
+  return posts.map(post => ({
     params: { slug: post.slug ?? post.id },
   }));
 }
 
 const { slug } = Astro.params;
 const posts = await getCollection('blog');
+const postEntry = posts.find(p => p.slug === slug || p.id === slug);
 
-// Match post by slug or fallback to ID
-const postEntry = posts.find((p) => p.slug === slug || p.id === slug);
+if (!postEntry) throw new Error(`No blog post found for slug: "${slug}"`);
 
-if (!postEntry) {
-  throw new Error(`No blog post found for slug: "${slug}"`);
+const { Content } = await postEntry.render();
+const data = postEntry.data;
+
+// Normalize frontmatter author name to slug for lookup
+const authorSlug = slugify(data.author || '').toLowerCase();
+
+// Find author by slug in authors array
+const authorInfo = authors.find(a => a.slug === authorSlug) || null;
+
+function getGravatarUrl(email, size = 80) {
+  if (!email) return null;
+  const hash = crypto.createHash('md5').update(email.trim().toLowerCase()).digest('hex');
+  return `https://www.gravatar.com/avatar/${hash}?s=${size}&d=identicon`;
 }
 
-// ✅ Use .render() to get Content and headings
-const { Content, headings } = await postEntry.render();
-const data = postEntry.data;
+const avatarUrl = authorInfo?.gravatar && authorInfo.email
+  ? getGravatarUrl(authorInfo.email)
+  : authorInfo?.avatar || '/images/default-author.png';
 
 const formattedDate = data.pubdate
   ? new Date(data.pubdate).toLocaleDateString('en-GB', {
@@ -34,9 +48,9 @@ const formattedDate = data.pubdate
     })
   : null;
 
+// Meta info
 const pageTitle = data.seoTitle || data.title || 'Blog Post';
-const pageDescription =
-  data.seoDescription || data.description || data.title || 'Blog post on Green Orbit Digital';
+const pageDescription = data.seoDescription || data.description || data.title || 'Blog post on Green Orbit Digital';
 const pageURL = `https://greenorbit.space/blog/${slug}`;
 const pageAuthor = data.author || 'Green Orbit Digital';
 const pageImage = data.featuredImage || '/default-og-image.jpg';
@@ -68,40 +82,44 @@ const jsonLd = {
   <Header />
 
   <main class="py-12">
-    <HeroSection 
-      title="Blog" 
-      description="Explore our latest blog posts." 
+    <HeroSection
+      title="Blog"
+      description="Explore our latest blog posts."
     />
-  
-  <main class="prose dark:prose-invert max-w-4xl mx-auto px-4 py-12">
-    <article>
-      <!-- Post Header -->
-      <header class="mb-8">
-        <h1 class="text-4xl font-bold text-accent-500 mb-2">{data.title}</h1>
-        <div class="text-sm text-white/80 mb-2">
-          {formattedDate && (
-            <time dateTime={data.pubdate}>{formattedDate}</time>
-          )}
-          {data.author && <span> · By {data.author}</span>}
-        </div>
-        {data.tags?.length && (
-          <div class="mt-2 flex flex-wrap gap-2">
-            {data.tags.map((tag) => (
-              <a
-                href={`/blog?tag=${encodeURIComponent(tag)}`}
-                class="text-xs bg-accent-600 text-white px-2 py-1 rounded hover:bg-accent-700 transition"
-              >
-                #{tag}
-              </a>
-            ))}
-          </div>
-        )}
-      </header>
 
-      <!-- Main Content -->
-      <Content />
-    </article>
-  </main>
+    <main class="prose dark:prose-invert max-w-4xl mx-auto px-4 py-12">
+      <article>
+        <header class="mb-8">
+          <h1 class="text-4xl font-bold text-accent-500 mb-2">{data.title}</h1>
+
+            {authorInfo && (
+              <div class="flex items-center gap-2 mt-4 text-sm text-white">
+                <img src={avatarUrl} alt={authorInfo.name} class="w-6 h-6 rounded-full" />
+                <span>
+                  By <a href={`/authors/${authorInfo.slug}`} class="underline">{authorInfo.name}</a>
+                </span>
+                <span> · {formattedDate}</span>
+              </div>
+            )}
+
+            {data.tags?.length && (
+              <div class="mt-2 flex flex-wrap gap-2">
+                {data.tags.map((tag) => (
+                  <a
+                    href={`/blog?tag=${encodeURIComponent(tag)}`}
+                    class="text-xs bg-accent-600 text-white px-2 py-1 rounded hover:bg-accent-700 transition"
+                  >
+                    #{tag}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+        </header>
+
+        <Content />
+      </article>
+    </main>
 
   <Footer />
 </Layout>

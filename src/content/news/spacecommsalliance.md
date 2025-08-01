@@ -14,11 +14,8 @@ categories:
 - news
 name: Green Orbit Digital Enhances Service Offering by Joining Space Communications
   Alliance
+exerpt: "Green Orbit Digital, a pioneer in sustainable marketing solutions, proudly announces its membership in the Space Communications Alliance (SCA), an unprecedented move poised to revolutionise marketing strategies within the space sector. This collaboration not only underscores Green Orbit Digital’s commitment to sustainability but also unlocks a myriad of opportunities for the company and its clients."
 ---
-
-Green Orbit Digital, a pioneer in sustainable marketing solutions, proudly announces its membership in the Space Communications Alliance (SCA), an unprecedented move poised to revolutionise marketing strategies within the space sector. This collaboration not only underscores Green Orbit Digital’s commitment to sustainability but also unlocks a myriad of opportunities for the company and its clients.
-
-# Green Orbit Digital Enhances Service Offering by Joining Space Communications Alliance
 
 Green Orbit Digital, a pioneer in sustainable marketing solutions, proudly announces its membership in the Space Communications Alliance (SCA), an unprecedented move poised to revolutionise marketing strategies within the space sector. This collaboration not only underscores Green Orbit Digital’s commitment to sustainability but also unlocks a myriad of opportunities for the company and its clients.
 

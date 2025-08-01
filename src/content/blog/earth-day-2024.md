@@ -15,11 +15,8 @@ pubdate: '2024-04-22T09:00:00.000+00:00'
 categories:
 - blog
 name: 'Earth Day 2024: Championing the Planet vs. Plastics'
+exerpt: "Earth Day 2024: Championing the Planet vs. Plastics On 22 April 1970, millions of people across the United States united for the first Earth Day, marking the birth of the […]"
 ---
-
-Earth Day 2024: Championing the Planet vs. Plastics On 22 April 1970, millions of people across the United States united for the first Earth Day, marking the birth of the […]
-
-# Earth Day 2024: Championing the Planet vs. Plastics
 
 On 22 April 1970, millions of people across the United States united for the first Earth Day, marking the birth of the modern environmental movement. Since then, Earth Day has evolved into a global phenomenon, mobilising billions of individuals worldwide to protect our planet. This year, as we mark Earth Day 2024, the focus is on one of the most pressing environmental challenges of our time: plastic pollution in our oceans.
 

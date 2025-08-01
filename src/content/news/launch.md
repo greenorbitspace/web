@@ -10,11 +10,8 @@ pubdate: '2023-10-16T12:49:00.000+00:00'
 categories:
 - news
 name: 'Green Orbit Digital: Charting a Sustainable Future in Space'
+exerpt: "Welcome to a new era of sustainable marketing in the space industry! We’re here to redefine the future of space exploration by combining innovative marketing strategies with a deep commitment to our planet. At Green Orbit Digital, we believe that the stars are not the limit, but the beginning of a greener journey. Our mission is to propel space-related businesses toward eco-conscious practices and inspire a brighter, more sustainable future. "
 ---
-
-Welcome to a new era of sustainable marketing in the space industry! We’re here to redefine the future of space exploration by combining innovative marketing strategies with a deep commitment to our planet. At Green Orbit Digital, we believe that the stars are not the limit, but the beginning of a greener journey. Our mission is to propel space-related businesses toward eco-conscious practices and inspire a brighter, more sustainable future. 
-
-# Green Orbit Digital: Charting a Sustainable Future in Space
 
 Welcome to a new era of sustainable marketing in the space industry! We’re here to redefine the future of space exploration by combining innovative marketing strategies with a deep commitment to our planet. At Green Orbit Digital, we believe that the stars are not the limit, but the beginning of a greener journey. Our mission is to propel space-related businesses toward eco-conscious practices and inspire a brighter, more sustainable future. 
 

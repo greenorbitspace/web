@@ -14,11 +14,8 @@ categories:
 - news
 name: Green Orbit Digital Highlights Importance of Effective Communication at UN/Portugal
   Conference
+exerpt: "Green Orbit Digital Highlights Importance of Effective Communication at UN/Portugal Conference Green Orbit Digital proudly participated in the Management and Sustainability of Outer Space Activities Conference, held on 14-15 May."
 ---
-
-Green Orbit Digital Highlights Importance of Effective Communication at UN/Portugal Conference Green Orbit Digital proudly participated in the Management and Sustainability of Outer Space Activities Conference, held on 14-15 May […]
-
-# Green Orbit Digital Highlights Importance of Effective Communication at UN/Portugal Conference
 
 Green Orbit Digital proudly participated in the Management and Sustainability of Outer Space Activities Conference, held on 14-15 May 2024, in Lisbon. This event, co-organised by the Portuguese Space Agency and the United Nations Office for Outer Space Affairs (UNOOSA), gathered a diverse array of stakeholders, including Member States, civil and youth organisations, industry leaders, and academic experts, to address the pressing issues of outer space sustainability and governance. Our engagement in the conference underscored the pivotal role of marketing and communications in fostering a multi-stakeholder dialogue.
 

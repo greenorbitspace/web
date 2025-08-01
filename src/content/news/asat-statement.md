@@ -12,13 +12,10 @@ pubdate: '2024-03-15T12:06:00.000+00:00'
 categories:
 - news
 name: Green Orbit Digital Joins Global Effort to Safeguard Space Environment
----
-
-We are thrilled to announce that Green Orbit Digital has officially become a signatory to The Space Industry Statement in Support of International Commitments to Not Conduct Destructive Anti-Satellite Testing. This statement, championed by the Secure World Foundation, underscores the critical importance of preventing destructive direct-ascent anti-satellite (DA-ASAT) missile testing to ensure the safety and sustainability of space activities. 
+exerpt: "We are thrilled to announce that Green Orbit Digital has officially become a signatory to The Space Industry Statement in Support of International Commitments to Not Conduct Destructive Anti-Satellite Testing. This statement, championed by the Secure World Foundation, underscores the critical importance of preventing destructive direct-ascent anti-satellite (DA-ASAT) missile testing to ensure the safety and sustainability of space activities."
+--- 
 
 Image credit: Secure World Foundation
-
-# Green Orbit Digital Joins Global Effort to Safeguard Space Environment
 
 We are thrilled to announce that Green Orbit Digital has officially become a signatory to The Space Industry Statement in Support of International Commitments to Not Conduct Destructive Anti-Satellite Testing. This statement, championed by the Secure World Foundation, underscores the critical importance of preventing destructive direct-ascent anti-satellite (DA-ASAT) missile testing to ensure the safety and sustainability of space activities. 
 

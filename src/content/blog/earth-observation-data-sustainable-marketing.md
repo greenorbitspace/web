@@ -16,11 +16,8 @@ categories:
 - blog
 name: 'How Earth Observation Data is Revolutionising Sustainable Marketing and Consumer
   Behaviour: Key Insights from NEOC 2024'
+exerpt: "By leveraging real-time environmental insights, businesses can create impactful campaigns, enhance transparency, and drive meaningful consumer behaviour change. Learn how these strategies are shaping the future of eco-conscious marketing."
 ---
-
-By leveraging real-time environmental insights, businesses can create impactful campaigns, enhance transparency, and drive meaningful consumer behaviour change. Learn how these strategies are shaping the future of eco-conscious marketing.
-
-# How Earth Observation Data is Revolutionising Sustainable Marketing and Consumer Behaviour: Key Insights from NEOC 2024
 
 The National Earth Observation Conference (NEOC) 2024, held at the National STEM Centre in York, was a significant event for industry leaders, researchers, and policymakers. The conference focused on the transformative potential of Earth Observation (EO) data across various sectors. This year’s presentations highlighted how EO data can tackle pressing challenges, including climate change and resource management.
 

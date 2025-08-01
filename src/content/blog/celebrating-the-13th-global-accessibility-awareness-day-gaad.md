@@ -12,11 +12,8 @@ pubdate: '2024-05-16T18:50:00.000+00:00'
 categories:
 - blog
 name: Celebrating the 13th Global Accessibility Awareness Day (GAAD)
+exerpt: "Today marks the 13th annual Global Accessibility Awareness Day (GAAD), a pivotal event dedicated to promoting awareness and education about digital accessibility and inclusion for people with disabilities."
 ---
-
-Today marks the 13th annual Global Accessibility Awareness Day (GAAD), a pivotal event dedicated to promoting awareness and education about digital accessibility and inclusion for people with disabilities.
-
-# Celebrating the 13th Global Accessibility Awareness Day (GAAD)
 
 Today marks the 13th annual Global Accessibility Awareness Day (GAAD), a pivotal event dedicated to promoting awareness and education about digital accessibility and inclusion for people with disabilities. At Green Orbit Digital, we are passionate about ensuring that our digital platforms are accessible to all, aligning with our core values of sustainability, collaboration, work-life balance, innovation, responsibility, and commitment.
 

@@ -10,9 +10,8 @@ pubdate: '2025-02-28T11:40:00.000+00:00'
 categories:
 - news
 name: Green Orbit Digital Champions Space Sustainability at NSSC 2025
+exerpt: "Green Orbit Digital is proud to play a leading role at the 37th UKSEDS National Student Space Conference (NSSC 2025), held at the University of Leicester. With a strong focus on sustainability, this year’s conference brings together students, academics, and professionals to shape the future of the space sector."
 ---
-
-Green Orbit Digital is proud to play a leading role at the 37th UKSEDS National Student Space Conference (NSSC 2025), held at the University of Leicester. With a strong focus on sustainability, this year’s conference brings together students, academics, and professionals to shape the future of the space sector.
 
 Green Orbit Digital is proud to play a leading role at the 37th UKSEDS National Student Space Conference (NSSC 2025), held at the University of Leicester. With a strong focus on sustainability, this year’s conference brings together students, academics, and professionals to shape the future of the space sector.
 
@@ -20,13 +19,13 @@ Ryan Laird, Director of Green Orbit Digital and a former UKSEDS Executive and Tr
 
 Leicester, a key hub for the UK space sector, has seen remarkable developments since the last NSSC was held here in 2014. With the completion of Space Park Leicester, DOCK, and the establishment of numerous space-related companies, the city has cemented its place at the forefront of space innovation. As a Leicester-based business, Green Orbit Digital is thrilled to contribute to this thriving ecosystem.
 
-### “Impact-in-Action” Workshop – Empowering the Next Generation of Space Leaders
+## “Impact-in-Action” Workshop – Empowering the Next Generation of Space Leaders
 
 Following the panel, Green Orbit Digital will host “Impact-in-Action: Effective Communication & Strategy for Sustainable Space,” an interactive workshop designed to equip students with the tools to drive sustainability in the space sector.
 
 Participants will explore sustainability from, for, and in space—leveraging space technologies to address global challenges while advancing responsible space exploration. Through practical exercises, attendees will define their Sustainability Why, assess barriers using the PESTLE framework, and craft powerful sustainability messages with the 4Cs method. The session will be highly interactive, featuring digital collaboration tools, peer feedback, and strategies for embedding sustainability into their careers.
 
-### Green Orbit Academy – A Launchpad for Sustainable Success
+## Green Orbit Academy – A Launchpad for Sustainable Success
 
 This workshop is part of Green Orbit Academy, an initiative dedicated to equipping individuals and businesses with the knowledge and skills to drive sustainability. Through workshops, masterclasses, courses, and coaching, the academy provides resources for those looking to integrate sustainable practices into their work and advocacy. Membership offers access to a growing community focused on sustainable innovation in the space sector and beyond.
 

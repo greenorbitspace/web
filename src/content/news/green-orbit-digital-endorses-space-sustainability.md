@@ -10,11 +10,8 @@ pubdate: '2025-02-07T11:38:00.000+00:00'
 categories:
 - news
 name: Green Orbit Digital Endorses Space Safety Best Practices
+exerpt: "Green Orbit Digital is proud endorse the Space Safety Coalition’s (SSC) Best Practices for the Sustainability of Space Operations. Joining a network of 45 global leaders, we are committed to advancing space sustainability, mitigating the risks of orbital debris, and ensuring long-term safety for space operations. This underscores Green Orbit Digital’s support innovative and responsible solutions to the growing challenges of space sustainability."
 ---
-
-Green Orbit Digital is proud endorse the Space Safety Coalition’s (SSC) Best Practices for the Sustainability of Space Operations. Joining a network of 45 global leaders, we are committed to advancing space sustainability, mitigating the risks of orbital debris, and ensuring long-term safety for space operations. This underscores Green Orbit Digital’s support innovative and responsible solutions to the growing challenges of space sustainability.
-
-# Green Orbit Digital Endorses Space Safety Best Practices
 
 Green Orbit Digital is proud endorse the Space Safety Coalition’s (SSC) Best Practices for the Sustainability of Space Operations. Joining a network of 45 global leaders, we are committed to advancing space sustainability, mitigating the risks of orbital debris, and ensuring long-term safety for space operations. This underscores Green Orbit Digital’s support innovative and responsible solutions to the growing challenges of space sustainability.
 

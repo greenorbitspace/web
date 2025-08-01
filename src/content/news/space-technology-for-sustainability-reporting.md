@@ -12,11 +12,9 @@ categories:
 - news
 name: Green Orbit Digital Joins TNFD Forum, Expands Commitment to Nature-Positive
   Outcomes
+exerpt: "Green Orbit Digital has joined the Taskforce on Nature-related Financial Disclosures (TNFD) Forum to advocate for the use of space technology in sustainability reporting."
+
 ---
-
-Green Orbit Digital has joined the Taskforce on Nature-related Financial Disclosures (TNFD) Forum to advocate for the use of space technology in sustainability reporting. 
-
-# Leveraging Space Technology for Sustainability Reporting
 
 Green Orbit Digital has joined the Taskforce on Nature-related Financial Disclosures (TNFD) Forum to advocate for the use of space technology in sustainability reporting. This initiative focuses on enhancing nature-related financial disclosures through the integration of space-based data, helping organisations track and manage their environmental impact more effectively.
 

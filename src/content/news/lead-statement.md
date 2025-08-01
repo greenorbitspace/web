@@ -12,11 +12,8 @@ pubdate: '2024-05-29T16:50:00.000+00:00'
 categories:
 - news
 name: Green Orbit Digital Signs LEAD Statement to Accelerate Climate Policy Action
+exerpt: "Green Orbit Digital proudly announces its endorsement of the LEAD statement by ClimateVoice, a project of Tides Center, aimed at accelerating climate policy action."
 ---
-
-Green Orbit Digital proudly announces its endorsement of the LEAD statement by ClimateVoice, a project of Tides Center, aimed at accelerating climate policy action.
-
-# Green Orbit Digital Signs LEAD Statement to Accelerate Climate Policy Action
 
 Green Orbit Digital proudly announces its endorsement of the LEAD statement by ClimateVoice, a project of Tides Center, aimed at accelerating climate policy action.
 

@@ -12,10 +12,6 @@ categories:
 name: 'Small Business Saturday: Supporting Local Enterprises for a Sustainable Future'
 ---
 
-Green Orbit Digital encourages everyone to shop small, support local, and choose businesses that prioritise the planet.
-
-# Small Business Saturday: Supporting Local Enterprises for a Sustainable Future
-
 Small Business Saturday, celebrated annually on the Saturday after Thanksgiving, highlights the importance of supporting small, independent businesses in our communities. It’s a day to appreciate the contributions these businesses make to the local economy, while also embracing values like sustainability. Green Orbit Digital encourages everyone to shop small, support local, and choose businesses that prioritise the planet.
 
 ## The Importance of Supporting Small Businesses

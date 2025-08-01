@@ -2,10 +2,16 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
 import { getCollection } from 'astro:content';
 
 const collectionName = 'resources';
-const entries = await getCollection(collectionName);
+let entries = await getCollection(collectionName);
+
+// Sort by pubdate descending (newest first)
+entries = entries
+  .filter((entry) => entry.data.pubdate) // Only include entries with a date
+  .sort((a, b) => new Date(b.data.pubdate) - new Date(a.data.pubdate));
 
 const uniqueTags = [...new Set(entries.flatMap((entry) => entry.data.tags ?? []))];
 
@@ -17,26 +23,29 @@ const filteredEntries = activeTag
   : entries;
 ---
 
-<Layout title="Resources">
+<Layout title="resources">
   <Header />
+
   <main class="py-12 max-w-6xl mx-auto px-4">
-    <h1 class="text-4xl font-bold mb-4">Resources</h1>
-    <p class="text-gray-600 mb-6">Explore our latest resources.</p>
+      <HeroSection 
+      title="Resources" 
+      description="Explore our latest resources." 
+    />
 
     <!-- Optional: TagFilter component -->
     <!-- <TagFilter tags={uniqueTags} activeTag={activeTag} /> -->
 
     {filteredEntries.length === 0 ? (
-      <p class="text-gray-500 mt-6">No posts found for selected tag.</p>
+      <p class="text-white mt-6">No posts found for selected tag.</p>
     ) : (
       <ul class="space-y-4">
         {filteredEntries.map((entry) => (
           <li key={entry.slug}>
-            <a href={`/resources/${entry.slug}`} class="text-blue-600 hover:underline text-lg font-semibold">
+            <a href={`/resources/${entry.slug}`} class="text-accent-500 hover:underline text-lg font-semibold">
               {entry.data.title}
             </a>
             {entry.data.pubdate && (
-              <time class="block text-sm text-gray-500" dateTime={entry.data.pubdate}>
+              <time class="block text-sm text-white" dateTime={entry.data.pubdate}>
                 {new Date(entry.data.pubdate).toLocaleDateString('en-GB', {
                   year: 'numeric',
                   month: 'long',

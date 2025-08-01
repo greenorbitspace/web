@@ -12,11 +12,8 @@ pubdate: '2024-12-20T15:52:00.000+00:00'
 categories:
 - news
 name: 'Green Orbit Academy: Shaping the Future of Sustainable Space'
+excerpt: "With a mission to redefine space exploration through ethical and sustainable practices, the Academy empowers professionals and businesses to innovate in this dynamic sector while prioritising environmental stewardship."
 ---
-
-With a mission to redefine space exploration through ethical and sustainable practices, the Academy empowers professionals and businesses to innovate in this dynamic sector while prioritising environmental stewardship.
-
-# Green Orbit Academy: Shaping the Future of Sustainable Space
 
 Green Orbit Academy, a pioneering initiative at the forefront of sustainability education in the space industry, proudly announces its official launch. With a mission to redefine space exploration through ethical and sustainable practices, the Academy empowers professionals and businesses to innovate in this dynamic sector while prioritising environmental stewardship.
 
