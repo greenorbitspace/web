@@ -2,14 +2,10 @@
 import Logo from '../assets/greenorbit-long.svg'; // Ensure this path matches your project structure
 
 const allPages = [
-  { text: "Home", url: "/" },
-  { text: "Services", url: "/services" },
-  { text: "Events", url: "/events" },
   { text: "Blog", url: "/blog" },
+  { text: "News", url: "/news" },
+  { text: "Press Releases", url: "/press-releases" },
   { text: "Case Studies", url: "/case-studies" },
-  { text: "About Us", url: "/about" },
-  { text: "Careers", url: "/career" },
-  { text: "Contact", url: "/contact" }
 ];
 ---
 <header class="fixed w-full bg-white/90 dark:bg-secondary-500 backdrop-blur-xs z-50 py-4 transition-colors duration-300">
@@ -19,12 +15,10 @@ const allPages = [
   </a>
     
     <nav class="hidden md:flex items-center space-x-8">
-      <a href="/" class="text-secondary-600 hover:text-primary-600 dark:text-white dark:hover:text-accent-500 font-medium transition-colors">Home</a>
+      <a href="/about" class="text-secondary-600 hover:text-primary-600 dark:text-white dark:hover:text-accent-500 font-medium transition-colors">About Us</a>
       <a href="/services" class="text-secondary-600 hover:text-accent-500 dark:text-white dark:hover:text-accent-500 font-medium transition-colors">Services</a>
-      <a href="/pricing" class="text-secondary-600 hover:text-primary-600 dark:text-white dark:hover:text-accent-500 font-medium transition-colors">Pricing</a>
-      <a href="/blog" class="text-secondary-600 hover:text-primary-600 dark:text-white dark:hover:text-accent-500 font-medium transition-colors">Blog</a>
-      <a href="/contact" class="text-secondary-600 hover:text-primary-600 dark:text-white dark:hover:text-accent-500 font-medium transition-colors">Contact</a>
-      
+      <a href="/sustainability" class="text-secondary-600 hover:text-primary-600 dark:text-white dark:hover:text-accent-500 font-medium transition-colors">Sustainability</a>      
+      <a href="/events" class="text-secondary-600 hover:text-primary-600 dark:text-white dark:hover:text-accent-500 font-medium transition-colors">Events</a>
       <!-- All Pages Dropdown -->
       <div x-data="{ open: false }" class="relative">
         <button 
@@ -32,8 +26,8 @@ const allPages = [
           @click.away="open = false"
           class="flex items-center text-secondary-600 hover:text-primary-600 dark:text-white dark:hover:text-accent-500 font-medium transition-colors"
         >
-          All Pages
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          Insights
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="accent-500">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
         </button>
@@ -56,8 +50,7 @@ const allPages = [
               </a>
             ))}
           </div>
-        </div>
-      </div>
+       </div>
     </nav>
     
     <div class="flex items-center space-x-4">
