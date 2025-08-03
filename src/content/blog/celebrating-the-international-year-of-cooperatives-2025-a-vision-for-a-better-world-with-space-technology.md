@@ -7,6 +7,8 @@ slug: celebrating-the-international-year-of-cooperatives-2025-a-vision-for-a-bet
 url: https://greenorbit.space/blog/celebrating-the-international-year-of-cooperatives-2025-a-vision-for-a-better-world-with-space-technology/
 featured: false
 author: Ryan Laird
+tags:
+- cooperatives
 pubdate: '2025-01-09T11:36:00.000+00:00'
 categories:
 - blog

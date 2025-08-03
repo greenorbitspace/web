@@ -48,4 +48,5 @@ export const collections = {
   news: defineCollection({ schema: baseSchema }),
   resources: defineCollection({ schema: baseSchema }),
   'press-releases': defineCollection({ schema: baseSchema }),
+  tools: defineCollection({ schema: baseSchema }), 
 };

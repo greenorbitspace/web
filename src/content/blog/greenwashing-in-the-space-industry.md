@@ -6,6 +6,8 @@ slug: greenwashing-in-the-space-industry
 url: https://greenorbit.space/blog/greenwashing-in-the-space-industry/
 featured: false
 author: Ryan Laird
+tags:
+- environmental monitoring
 pubdate: '2023-10-18T11:00:00.000+00:00'
 categories:
 - blog

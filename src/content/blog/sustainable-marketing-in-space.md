@@ -6,6 +6,8 @@ slug: sustainable-marketing-in-space
 url: https://greenorbit.space/blog/sustainable-marketing-in-space/
 featured: false
 author: Ryan Laird
+tags:
+- environmental monitoring
 pubdate: '2023-10-17T11:00:00.000+00:00'
 categories:
 - blog

@@ -6,6 +6,8 @@ slug: small-business-saturday
 url: https://greenorbit.space/blog/small-business-saturday/
 featured: false
 author: Ryan Laird
+tags:
+- environmental monitoring
 pubdate: '2024-12-07T21:06:00.000+00:00'
 categories:
 - blog

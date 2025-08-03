@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.astro';
+import SDGsList from '../components/SDGsList.jsx'; // React component that uses SDGs data
+---
+
+<Layout title="Sustainable Development Goals" description="Explore the UN Sustainable Development Goals (SDGs).">
+  <Header />
+
+  <main class="py-12 max-w-6xl mx-auto px-4">
+    <HeroSection
+      title="Sustainable Development Goals"
+      description="Explore the UN Sustainable Development Goals (SDGs) and learn how we contribute to these global objectives."
+    />
+
+    <section>
+      <SDGsList client:load />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

@@ -5,98 +5,229 @@ import Footer from '../../components/Footer.astro';
 import HeroSection from '../../components/HeroSection.astro';
 ---
 
-<Layout title="Customer Reviews - Green Orbit Digital">
+<Layout title="Sustainability">
   <Header />
-  <main>
+
+  <main class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <HeroSection 
-      title="Customer Reviews" 
-      highlightText="Reviews"
-      description="See what our customers are saying about their experience with Green Orbit Digital."
+      title="Sustainability"
+      description="See how our customers are achieving success with Green Orbit Digital"
     />
-    
-    <section class="py-16 bg-white dark:bg-gray-800">
-      <div class="container-custom">
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Review Card 1 -->
-          <div class="card p-6 border border-gray-200 dark:border-gray-700">
-            <div class="flex items-center mb-4">
-              <div class="shrink-0">
-                <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Johnson" />
-              </div>
-              <div class="ml-4">
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Sarah Johnson</h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400">Marketing Director</p>
-              </div>
-            </div>
-            <div class="flex mb-4">
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-            </div>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
-              "Green Orbit Digital has completely transformed how we manage our marketing campaigns. The intuitive interface and powerful analytics have helped us increase our conversion rates by 35% in just three months."
-            </p>
-            <p class="text-sm text-gray-500 dark:text-gray-400">June 12, 2023</p>
-          </div>
-          
-          <!-- Review Card 2 -->
-          <div class="card p-6 border border-gray-200 dark:border-gray-700">
-            <div class="flex items-center mb-4">
-              <div class="shrink-0">
-                <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/men/45.jpg" alt="David Chen" />
-              </div>
-              <div class="ml-4">
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">David Chen</h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400">CTO, TechStart</p>
-              </div>
-            </div>
-            <div class="flex mb-4">
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-            </div>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
-              "The API integration capabilities of Green Orbit Digital are second to none. We were able to connect all our existing tools seamlessly, saving us countless development hours. Their support team is also incredibly responsive."
-            </p>
-            <p class="text-sm text-gray-500 dark:text-gray-400">May 3, 2023</p>
-          </div>
-          
-          <!-- Review Card 3 -->
-          <div class="card p-6 border border-gray-200 dark:border-gray-700">
-            <div class="flex items-center mb-4">
-              <div class="shrink-0">
-                <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Rodriguez" />
-              </div>
-              <div class="ml-4">
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Emily Rodriguez</h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400">Product Manager</p>
-              </div>
-            </div>
-            <div class="flex mb-4">
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-5 h-5 text-gray-300 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-            </div>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
-              "What I love most about Green Orbit Digital is how it grows with our business. We started with the basic plan and as our needs expanded, the platform scaled perfectly with us. The onboarding process was smooth and the learning curve minimal."
-            </p>
-            <p class="text-sm text-gray-500 dark:text-gray-400">April 18, 2023</p>
-          </div>
-          
-          <!-- More review cards can be added here -->
+
+    <!-- COMMITMENT -->
+    <div class="mb-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+        <div>
+          <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+            Commitment
+          </span>
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            Our Commitment to Sustainable Marketing
+          </h2>
+          <p class="text-gray-600 dark:text-gray-300 mb-6">
+            At Green Orbit Digital, sustainability is embedded at the core of our marketing philosophy. We strive to help clients grow their business while reducing environmental impact, especially within the space sector where innovation meets responsibility.
+          </p>
+          <a href="/about" class="btn-primary">Learn More About Us</a>
         </div>
-        
-        <div class="mt-16 text-center">
-          <a href="/contact" class="btn-primary">Share Your Experience</a>
+        <div class="rounded-lg overflow-hidden shadow-xl">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Sustainability Commitment" class="w-full h-auto" />
         </div>
       </div>
-    </section>
+    </div>
+
+    <!-- OUR IMPACT -->
+    <div class="mb-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center mb-12 md:flex-row-reverse">
+              <div class="rounded-lg overflow-hidden shadow-xl">
+          <img src="https://images.unsplash.com/photo-1526378721678-5038b9a3a739?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Our Impact" class="w-full h-auto" />
+        </div>
+        <div>
+          <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+            Our Impact
+          </span>
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            Driving Measurable Change for a Sustainable Future
+          </h2>
+          <p class="text-gray-600 dark:text-gray-300 mb-6">
+            We partner with organisations committed to sustainability and translate their vision into effective, data-driven marketing campaigns that deliver real-world impact.
+          </p>
+          <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
+            <li>Reduced carbon footprint of digital campaigns by up to 30% through carbon-aware content and optimised SEO.</li>
+            <li>Helped clients achieve clearer alignment and reporting against <a href="https://sdgs.greenorbit.space" class="underline text-accent-600">UN Sustainable Development Goals</a>.</li>
+            <li>Enabled space sector organisations to communicate responsible satellite and debris mitigation efforts, promoting <a href="/space-sustainability" class="underline text-accent-600">space sustainability</a>.</li>
+            <li>Supported transparent ESG reporting aligned with frameworks like <a href="/reporting" class="underline text-accent-600">GRI</a> and <a href="/reporting" class="underline text-accent-600">SASB</a>, increasing stakeholder trust.</li>
+            <li>Amplified awareness of Earth Observation technologies in climate resilience and disaster response campaigns.</li>
+          </ul>
+          <a href="/case-studies" class="btn-primary">Explore Our Case Studies</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- UN SDGs, CLIMATE ACTION & SPACE4SDGS -->
+    <div class="mb-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+        <div>
+          <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+            UN SDGs & Climate Action
+          </span>
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            Aligning Marketing with the UN Sustainable Development Goals & Climate Action
+          </h2>
+          <p class="text-gray-600 dark:text-gray-300 mb-6">
+            We actively support the United Nations Sustainable Development Goals (SDGs), with a strong focus on <a href="https://sdgs.un.org/goals/goal13" target="_blank" class="underline text-accent-600">Climate Action (SDG 13)</a>.  
+            Through initiatives like <a href="https://www.space4sdgs.org/" target="_blank" class="underline text-accent-600">Space4SDGs</a>, we showcase how space technologies underpin global efforts to monitor and combat climate change.
+          </p>
+          <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
+            <li>Mapping marketing narratives to SDGs, particularly climate resilience and environmental sustainability</li>
+            <li>Highlighting the role of space-enabled <a href="#earth-observation" class="underline text-accent-600">Earth Observation</a> in tracking climate trends and informing policy</li>
+            <li>Reporting measurable impacts aligned with climate-focused SDG indicators</li>
+          </ul>
+          <a href="https://sdgs.greenorbit.space" class="btn-primary">Explore Our SDG Work</a>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-xl">
+          <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="UN SDGs and Climate Action" class="w-full h-auto" />
+        </div>
+      </div>
+    </div>
+
+    <!-- EARTH OBSERVATION -->
+    <div id="earth-observation" class="mb-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center mb-12 md:flex-row-reverse">
+              <div class="rounded-lg overflow-hidden shadow-xl">
+          <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Earth Observation Satellite" class="w-full h-auto" />
+        </div>
+        <div>
+          <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+            Earth Observation
+          </span>
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            Harnessing Earth Observation for Sustainable Development
+          </h2>
+          <p class="text-gray-600 dark:text-gray-300 mb-6">
+            Earth Observation satellites provide critical data for understanding environmental changes, supporting climate science, disaster response, and natural resource management.  
+            Our marketing expertise helps space organisations communicate the societal value of these technologies and their direct impact on sustainability goals.
+          </p>
+          <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
+            <li>Showcasing space-based monitoring of deforestation, ice melt, and air quality</li>
+            <li>Promoting data-driven solutions for climate adaptation and mitigation</li>
+            <li>Linking Earth Observation benefits to UN SDGs and CSR narratives</li>
+          </ul>
+          <a href="/earth-observation" class="btn-primary">Learn More About Earth Observation</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CSR, MSG, SASB & GRI -->
+    <div class="mb-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+        <div>
+          <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+            Governance & Reporting
+          </span>
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            CSR, Materiality & Sustainability Reporting Frameworks
+          </h2>
+          <p class="text-gray-600 dark:text-gray-300 mb-6">
+            We support businesses in communicating their Corporate Social Responsibility (CSR) initiatives transparently, aligning with global frameworks such as:
+          </p>
+          <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
+            <li><strong>MSG (Materiality and Stakeholder Governance):</strong> Prioritising sustainability topics that matter most to your stakeholders.</li>
+            <li><strong>SASB (Sustainability Accounting Standards Board):</strong> Industry-specific standards for financially material ESG disclosures.</li>
+            <li><strong>GRI (Global Reporting Initiative):</strong> Comprehensive guidelines covering environmental, social, and governance factors.</li>
+          </ul>
+          <p class="text-gray-600 dark:text-gray-300 mb-6">
+            Our expertise ensures clear, credible sustainability reports that meet stakeholder expectations and regulatory requirements.
+          </p>
+          <a href="/reporting" class="btn-primary">Learn About Our Reporting Services</a>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-xl">
+          <img src="https://images.unsplash.com/photo-1532074205216-d0e1f5db5c32?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Sustainability Reporting" class="w-full h-auto" />
+        </div>
+      </div>
+    </div>
+
+    <!-- SPACE SUSTAINABILITY -->
+    <div class="mb-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center mb-12 md:flex-row-reverse">
+        <div class="rounded-lg overflow-hidden shadow-xl">
+          <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Space Sustainability" class="w-full h-auto" />
+        </div>
+        <div>
+          <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+            Space Sustainability
+          </span>
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            Promoting Sustainability Beyond Earth
+          </h2>
+          <p class="text-gray-600 dark:text-gray-300 mb-6">
+            Space sustainability focuses on preserving the orbital environment to ensure long-term access and safety.  
+            We assist organisations in communicating commitments to responsible satellite design, debris mitigation, and international cooperation — vital to supporting <a href="/sdgs" class="underline text-accent-600">global sustainability goals</a>.
+          </p>
+          <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
+            <li>Highlighting sustainable satellite design and end-of-life planning</li>
+            <li>Raising awareness about space debris and active removal efforts</li>
+            <li>Supporting industry-wide collaboration for a safe, sustainable space environment</li>
+          </ul>
+          <a href="/space-sustainability" class="btn-primary">Discover Our Space Sector Work</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOOLS -->
+    <div class="mb-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+        <div>
+          <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+            Tools
+          </span>
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            Tools and Technologies We Use
+          </h2>
+          <p class="text-gray-600 dark:text-gray-300 mb-6">
+            To meet the highest sustainability standards, we leverage tools that monitor and reduce environmental impact:
+          </p>
+          <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
+            <li>Carbon footprint auditing platforms for digital campaigns</li>
+            <li>Green web hosting providers running on renewable energy</li>
+            <li>Google Analytics and Tag Manager with privacy-focused, efficient tracking</li>
+            <li>SEO tools like Ahrefs and SEMrush to maximise organic reach</li>
+            <li>Email marketing platforms optimised for targeted, minimal sends</li>
+          </ul>
+          <a href="/tools" class="btn-primary">Learn About Our Tech Stack</a>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-xl">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Marketing Tools" class="w-full h-auto" />
+        </div>
+      </div>
+    </div>
+
+    <!-- GET INVOLVED -->
+    <div class="mb-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center mb-12 md:flex-row-reverse">
+        <div>
+          <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+            Get Involved
+          </span>
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            Get Involved & Learn More
+          </h2>
+          <p class="text-gray-600 dark:text-gray-300 mb-6">
+            Join us in driving sustainable digital marketing innovation within the space sector and beyond:
+          </p>
+          <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
+            <li><a href="/podcast" class="text-accent-600 underline">Listen to The Sustainable Space Podcast</a> exploring sustainability in space innovation.</li>
+            <li><a href="/workshops" class="text-accent-600 underline">Attend our workshops</a> on sustainable marketing tailored for your industry.</li>
+            <li><a href="/blog/tag/sustainability" class="text-accent-600 underline">Read our latest insights</a> on sustainability trends and best practices.</li>
+          </ul>
+          <a href="/contact" class="btn-primary">Contact Us</a>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-xl">
+          <img src="https://images.unsplash.com/photo-1486308510493-cb3f19580f17?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Community Engagement" class="w-full h-auto" />
+        </div>
+      </div>
+    </div>
+
   </main>
+
   <Footer />
-</Layout> 
+</Layout>

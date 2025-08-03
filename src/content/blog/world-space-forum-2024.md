@@ -6,6 +6,9 @@ slug: world-space-forum-2024
 url: https://greenorbit.space/blog/world-space-forum-2024/
 featured: false
 author: Ryan Laird
+tags:
+- world space forum
+- united nations
 pubdate: '2024-12-04T16:26:00.000+00:00'
 categories:
 - blog

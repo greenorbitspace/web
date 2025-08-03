@@ -6,6 +6,10 @@ slug: tackling-climate-anxiety-communicating-hope-and-action-in-a-time-of-urgenc
 url: https://greenorbit.space/blog/tackling-climate-anxiety-communicating-hope-and-action-in-a-time-of-urgency/
 featured: false
 author: Ryan Laird
+tags:
+- climate anxiety
+sdgs:
+- 13
 pubdate: '2025-01-24T11:37:00.000+00:00'
 categories:
 - blog
