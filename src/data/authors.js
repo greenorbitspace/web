@@ -9,6 +9,7 @@ export default [
     website: 'https://rjmlaird.space',
     twitter: 'rjmlaird',
     linkedin: 'rjmlaird',
+    github: 'rjmlaird',
     tags: ['sustainability', 'space', 'marketing']
   },
   // Add more authors as needed

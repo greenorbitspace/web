@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.astro';
+---
+
+<Layout title="Client Feedback">
+  <Header />
+
+  <main class="py-12">
+    <HeroSection 
+      title="Share Your Feedback" 
+      description="Your input is invaluable to us. Whether you’ve just wrapped up a project or collaborated on a campaign, we’d love your thoughts. This helps us refine our services and celebrate your success." 
+    />
+
+    <section class="container mx-auto px-4 my-8">
+<script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
+<script>
+  hbspt.forms.create({
+    portalId: "143471159",
+    formId: "efd1bf54-2b41-4472-94a6-8110e186f325",
+    region: "eu1"
+  });
+</script>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

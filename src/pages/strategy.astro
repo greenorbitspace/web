@@ -1,24 +1,24 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import HeroSection from '../../components/HeroSection.astro';
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.astro';
 
 const stripeHTML = `
   <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
   <stripe-pricing-table
-    pricing-table-id="prctbl_1RjhReE9V0wpcpD50MA3j8dJ"
+    pricing-table-id="prctbl_1RjhpfE9V0wpcpD5zlaTCoww"
     publishable-key="pk_live_51RZOfOE9V0wpcpD5X5hZuiXbtRoCa2cMhcILadCbF63npB6O4NdpjKVTqsSBnqx9vrOTWHbgven6dUnGVoVDuhMT00TO8eklxX">
   </stripe-pricing-table>
 `;
 ---
 
-<Layout title="Reporting">
+<Layout title="Strategy">
   <Header />
 
   <main class="py-12">
     <HeroSection 
-      title="Reporting" 
+      title="Strategy" 
       description="Choose a plan that fits your mission. All options include a 14-day free trial—no credit card required." 
     />
 
