@@ -5,7 +5,6 @@ import Footer from '../components/Footer.astro';
 import HeroSection from '../components/HeroSection.astro';
 ---
 
-
 <Layout title="About Us">
   <Header />
 
@@ -15,8 +14,7 @@ import HeroSection from '../components/HeroSection.astro';
       description="Choose a plan that fits your mission. All options include a 14-day free trial—no credit card required."
     />
 
-    
-      <section class="py-16 bg-white dark:bg-secondary-500">
+    <section class="py-16 bg-white dark:bg-secondary-500">
       <div class="container-custom">
         <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
           <div>
@@ -25,30 +23,39 @@ import HeroSection from '../components/HeroSection.astro';
             </span>
             <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">From Startup to Industry Leader</h2>
             <p class="text-gray-600 dark:text-gray-300 mb-4">
-              Green Orbit Digital was born from a shared belief that space holds the key to solving some of the world’s biggest challenges. We’re a sustainable marketing agency helping businesses communicate complex, space-enabled solutions through clear, impactful strategies that drive change.
+              Green Orbit Digital was founded on a shared belief: space holds the key to solving some of the world’s most pressing challenges. We are a sustainable marketing agency dedicated to helping businesses communicate complex, space-enabled solutions through clear, impactful strategies that drive meaningful change.
             </p>
             <p class="text-gray-600 dark:text-gray-300 mb-4">
-              Our journey hasn't always been easy, but our commitment to innovation, quality, and customer success has remained unwavering. Today, we're proud to be recognized as a leader in the SaaS industry, helping businesses transform their operations and achieve remarkable results.
+              Our journey has had its challenges, but our commitment to innovation, quality, and client success remains steadfast. Today, we proudly stand as a recognised leader in the sustainable SaaS marketing space, empowering organisations to transform their operations and achieve measurable impact.
             </p>
             <p class="text-gray-600 dark:text-gray-300">
-              As we continue to grow, we remain dedicated to our core mission: empowering businesses with the tools they need to succeed in the digital age.
+              As we grow, we stay true to our core mission: equipping businesses with the tools they need to thrive responsibly in the digital era.
             </p>
           </div>
           <div class="rounded-lg overflow-hidden shadow-xl">
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="Sassify Team" class="w-full h-auto" />
+            <img 
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" 
+              alt="Team Collaboration" 
+              class="w-full h-auto" 
+              loading="lazy"
+            />
           </div>
         </div>
-        </section>    
+      </div>
+    </section>
 
+    <section class="section relative z-10 overflow-hidden py-12 md:py-16">
+      <div class="container-custom">
+        <div class="flex justify-center">
+          <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+            Our Values
+          </span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
 
-
-<section class="section relative z-10 overflow-hidden py-12 md:py-16">
-  <div class="container-custom">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
-      
-      <!-- Card 1: Innovation -->
+          <!-- Card: Innovation -->
           <div class="feature-card group perspective">
-            <div class="relative h-full min-h-[420px] w-full transform-gpu transition-transform duration-700 preserve-3d group-hover:rotate-y-180">
+            <div class="relative h-full min-h-[380px] w-full transform-gpu transition-transform duration-700 preserve-3d group-hover:rotate-y-180">
               <div class="absolute inset-0 backface-hidden">
                 <div class="card p-6 md:p-8 h-full flex flex-col items-center justify-center text-center">
                   <div class="w-14 h-14 md:w-16 md:h-16 rounded-xl bg-primary-100 dark:bg-accent-500 flex items-center justify-center mb-4 md:mb-6">
@@ -61,22 +68,19 @@ import HeroSection from '../components/HeroSection.astro';
                 </div>
               </div>
               <div class="absolute inset-0 backface-hidden rotate-y-180">
-                <div class="card p-6 md:p-8 h-full bg-primary-600 dark:bg-primary-800 text-white flex flex-col items-center justify-center text-center">
-                  <h3 class="text-xl font-semibold mb-4">How It Works</h3>
-                  <p class="mb-4">We believe in the power of creativity and innovation to transform industries. In an ever-evolving world, we strive to push boundaries, continuously developing fresh, sustainable marketing strategies that empower businesses to thrive in a responsible way. Innovation is at the heart of what we do—finding new solutions, tackling new challenges, and driving positive change in the space sector and beyond.</p>
-                  <ul class="text-left space-y-2 mb-4">
-                    <li>• CSS perspective property</li>
-                    <li>• Transform-style: preserve-3d</li>
-                    <li>• Backface visibility control</li>
-                  </ul>
+                <div class="card p-6 md:p-8 h-full bg-primary-600 dark:bg-accent-500 text-white flex flex-col items-center justify-center text-center">
+                  <h3 class="text-xl font-semibold mb-4">Innovation</h3>
+                  <p class="mb-4">
+                    Creativity and innovation drive transformation. We push boundaries, crafting sustainable marketing strategies that empower businesses to thrive responsibly. Innovation lies at our core—developing new solutions, tackling challenges, and championing positive change within the space sector and beyond.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
-      <!-- Card 2: Responsibility -->
+          <!-- Card: Responsibility -->
           <div class="feature-card group perspective">
-            <div class="relative h-full min-h-[420px] w-full transform-gpu transition-transform duration-700 preserve-3d group-hover:rotate-y-180">
+            <div class="relative h-full min-h-[380px] w-full transform-gpu transition-transform duration-700 preserve-3d group-hover:rotate-y-180">
               <div class="absolute inset-0 backface-hidden">
                 <div class="card p-6 md:p-8 h-full flex flex-col items-center justify-center text-center">
                   <div class="w-14 h-14 md:w-16 md:h-16 rounded-xl bg-primary-100 dark:bg-accent-500 flex items-center justify-center mb-4 md:mb-6">
@@ -89,23 +93,19 @@ import HeroSection from '../components/HeroSection.astro';
                 </div>
               </div>
               <div class="absolute inset-0 backface-hidden rotate-y-180">
-                <div class="card p-6 md:p-8 h-full bg-primary-600 dark:bg-primary-800 text-white flex flex-col items-center justify-center text-center">
-                  <h3 class="text-xl font-semibold mb-4">How It Works</h3>
-                  <p class="mb-4">With great power comes great responsibility. At Green Orbit Digital, we take our role in shaping the future seriously. We are stewards of both our industry and our planet, using marketing to promote responsible practices across the space industry, smart cities, maritime sectors, and beyond. Our responsibility extends to all we serve—clients, communities, and the environment.</p>
-                  <ul class="text-left space-y-2 mb-4">
-                    <li>• CSS perspective property</li>
-                    <li>• Transform-style: preserve-3d</li>
-                    <li>• Backface visibility control</li>
-                  </ul>
+                <div class="card p-6 md:p-8 h-full bg-primary-600 dark:bg-accent-500 text-white flex flex-col items-center justify-center text-center">
+                  <h3 class="text-xl font-semibold mb-4">Responsibility</h3>
+                  <p class="mb-4">
+                    With great power comes great responsibility. We champion responsible practices across the space, smart cities, and maritime sectors. Our stewardship extends to clients, communities, and the environment, ensuring ethical leadership guides all our actions.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
-
-      <!-- Card 3: Collaboration -->
+          <!-- Card: Collaboration -->
           <div class="feature-card group perspective">
-            <div class="relative h-full min-h-[420px] w-full transform-gpu transition-transform duration-700 preserve-3d group-hover:rotate-y-180">
+            <div class="relative h-full min-h-[380px] w-full transform-gpu transition-transform duration-700 preserve-3d group-hover:rotate-y-180">
               <div class="absolute inset-0 backface-hidden">
                 <div class="card p-6 md:p-8 h-full flex flex-col items-center justify-center text-center">
                   <div class="w-14 h-14 md:w-16 md:h-16 rounded-xl bg-primary-100 dark:bg-accent-500 flex items-center justify-center mb-4 md:mb-6">
@@ -118,23 +118,19 @@ import HeroSection from '../components/HeroSection.astro';
                 </div>
               </div>
               <div class="absolute inset-0 backface-hidden rotate-y-180">
-                <div class="card p-6 md:p-8 h-full bg-primary-600 dark:bg-primary-800 text-white flex flex-col items-center justify-center text-center">
-                  <h3 class="text-xl font-semibold mb-4">How It Works</h3>
-                  <p class="mb-4">We understand that the best results come from working together. Whether with clients, partners, or within our team, we prioritise collaboration. We believe in the strength of diverse ideas and perspectives to craft marketing solutions that not only achieve business goals but also make a positive societal and environmental impact. Together, we can amplify our vision of a sustainable future.</p>
-                  <ul class="text-left space-y-2 mb-4">
-                    <li>• CSS perspective property</li>
-                    <li>• Transform-style: preserve-3d</li>
-                    <li>• Backface visibility control</li>
-                  </ul>
+                <div class="card p-6 md:p-8 h-full bg-primary-600 dark:bg-accent-500 text-white flex flex-col items-center justify-center text-center">
+                  <h3 class="text-xl font-semibold mb-4">Collaboration</h3>
+                  <p class="mb-4">
+                    The best outcomes arise from collaboration. We value diverse perspectives and work closely with clients, partners, and our team to craft marketing strategies that deliver business results while advancing societal and environmental impact.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
-
-      <!-- Card 4: Imoact -->
+          <!-- Card: Impact -->
           <div class="feature-card group perspective">
-            <div class="relative h-full min-h-[420px] w-full transform-gpu transition-transform duration-700 preserve-3d group-hover:rotate-y-180">
+            <div class="relative h-full min-h-[380px] w-full transform-gpu transition-transform duration-700 preserve-3d group-hover:rotate-y-180">
               <div class="absolute inset-0 backface-hidden">
                 <div class="card p-6 md:p-8 h-full flex flex-col items-center justify-center text-center">
                   <div class="w-14 h-14 md:w-16 md:h-16 rounded-xl bg-primary-100 dark:bg-accent-500 flex items-center justify-center mb-4 md:mb-6">
@@ -143,27 +139,23 @@ import HeroSection from '../components/HeroSection.astro';
                     </svg>
                   </div>
                   <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">Impact</h3>
-                  <p class="text-gray-600 dark:text-gray-300">Purpose-driven success</p>
+                  <p class="text-gray-600 dark:text-gray-300">Purpose-driven success.</p>
                 </div>
               </div>
               <div class="absolute inset-0 backface-hidden rotate-y-180">
-                <div class="card p-6 md:p-8 h-full bg-primary-600 dark:bg-primary-800 text-white flex flex-col items-center justify-center text-center">
-                  <h3 class="text-xl font-semibold mb-4">How It Works</h3>
-                  <p class="mb-4">Our mission is not only to succeed but to make a meaningful difference. We measure our success by the positive impact we create for our clients and the world. From improving space operations to fostering smart cities, we focus on campaigns that contribute to a sustainable, prosperous, and more equitable future for all.</p>
-                  <ul class="text-left space-y-2 mb-4">
-                    <li>• CSS perspective property</li>
-                    <li>• Transform-style: preserve-3d</li>
-                    <li>• Backface visibility control</li>
-                  </ul>
+                <div class="card p-6 md:p-8 h-full bg-primary-600 dark:bg-accent-500 text-white flex flex-col items-center justify-center text-center">
+                  <h3 class="text-xl font-semibold mb-4">Impact</h3>
+                  <p class="mb-4">
+                    We measure success by the positive impact we create. From enhancing space operations to supporting smart cities, our campaigns focus on building a sustainable, prosperous, and equitable future.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
-
-      <!-- Card 5: Integrity -->
+          <!-- Card: Integrity -->
           <div class="feature-card group perspective">
-            <div class="relative h-full min-h-[420px] w-full transform-gpu transition-transform duration-700 preserve-3d group-hover:rotate-y-180">
+            <div class="relative h-full min-h-[380px] w-full transform-gpu transition-transform duration-700 preserve-3d group-hover:rotate-y-180">
               <div class="absolute inset-0 backface-hidden">
                 <div class="card p-6 md:p-8 h-full flex flex-col items-center justify-center text-center">
                   <div class="w-14 h-14 md:w-16 md:h-16 rounded-xl bg-primary-100 dark:bg-accent-500 flex items-center justify-center mb-4 md:mb-6">
@@ -176,22 +168,19 @@ import HeroSection from '../components/HeroSection.astro';
                 </div>
               </div>
               <div class="absolute inset-0 backface-hidden rotate-y-180">
-                <div class="card p-6 md:p-8 h-full bg-primary-600 dark:bg-primary-800 text-white flex flex-col items-center justify-center text-center">
-                  <h3 class="text-xl font-semibold mb-4">How It Works</h3>
-                  <p class="mb-4">Trust is the foundation of all successful partnerships. We uphold the highest standards of integrity in everything we do. Our transparency, accountability, and ethical marketing practices set us apart as a reliable partner, allowing clients to confidently trust in our commitment to their success and the environment.</p>
-                  <ul class="text-left space-y-2 mb-4">
-                    <li>• CSS perspective property</li>
-                    <li>• Transform-style: preserve-3d</li>
-                    <li>• Backface visibility control</li>
-                  </ul>
+                <div class="card p-6 md:p-8 h-full bg-primary-600 dark:bg-accent-500 text-white flex flex-col items-center justify-center text-center">
+                  <h3 class="text-xl font-semibold mb-4">Integrity</h3>
+                  <p class="mb-4">
+                    Trust is foundational. We uphold the highest ethical standards with transparency and accountability, ensuring clients and partners can rely on our commitment to their success and sustainability.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
-      <!-- Card 6: Continuous Improvement -->
+          <!-- Card: Continuous Improvement -->
           <div class="feature-card group perspective">
-            <div class="relative h-full min-h-[420px] w-full transform-gpu transition-transform duration-700 preserve-3d group-hover:rotate-y-180">
+            <div class="relative h-full min-h-[380px] w-full transform-gpu transition-transform duration-700 preserve-3d group-hover:rotate-y-180">
               <div class="absolute inset-0 backface-hidden">
                 <div class="card p-6 md:p-8 h-full flex flex-col items-center justify-center text-center">
                   <div class="w-14 h-14 md:w-16 md:h-16 rounded-xl bg-primary-100 dark:bg-accent-500 flex items-center justify-center mb-4 md:mb-6">
@@ -204,23 +193,19 @@ import HeroSection from '../components/HeroSection.astro';
                 </div>
               </div>
               <div class="absolute inset-0 backface-hidden rotate-y-180">
-                <div class="card p-6 md:p-8 h-full bg-primary-600 dark:bg-primary-800 text-white flex flex-col items-center justify-center text-center">
-                  <h3 class="text-xl font-semibold mb-4">How It Works</h3>
-                  <p class="mb-4">We are never content to stand still. We are always learning, adapting, and evolving. By embracing a culture of continuous improvement, we ensure that we stay at the forefront of sustainable marketing practices, providing innovative solutions that meet the dynamic needs of the space industry and beyond. Our passion for growth fuels our dedication to a greener, smarter world.</p>
-                  <ul class="text-left space-y-2 mb-4">
-                    <li>• CSS perspective property</li>
-                    <li>• Transform-style: preserve-3d</li>
-                    <li>• Backface visibility control</li>
-                  </ul>
+                <div class="card p-6 md:p-8 h-full bg-primary-600 dark:bg-accent-500 text-white flex flex-col items-center justify-center text-center">
+                  <h3 class="text-xl font-semibold mb-4">Continuous Improvement</h3>
+                  <p class="mb-4">
+                    We embrace a culture of continuous learning and adaptation. Staying at the forefront of sustainable marketing, we deliver innovative solutions tailored to the evolving needs of the space industry and beyond.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
-
-    </div>
-  </div>
-</section>
+        </div>
+      </div>
+    </section>
     
 <section class="section relative z-10 overflow-hidden py-12 md:py-16">
   <div class="container-custom max-w-5xl mx-auto">

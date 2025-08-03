@@ -58,6 +58,9 @@
   --color-warning-900: #713f12;
   --color-warning-950: #422006;
 
+  /* Gray scale (for borders etc.) */
+  --color-gray-200: #e5e7eb;
+
   /* Border radius & shadows */
   --radius-lg: 0.75rem;
   --shadow-primary: rgba(15, 192, 131, 0.35);
@@ -127,6 +130,9 @@
   --color-warning-800: #fef08a;
   --color-warning-900: #fef9c3;
   --color-warning-950: #fefce8;
+
+  /* Gray scale for dark mode */
+  --color-gray-200: #4b5563;
 }
 
 /* ====================
@@ -154,7 +160,7 @@
    ==================== */
 @layer base {
   *, ::after, ::before, ::backdrop, ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
+    border-color: var(--color-gray-200);
   }
 
   html {
@@ -183,8 +189,7 @@
     @apply text-xl md:text-2xl font-semibold;
   }
   p {
-    @apply text-base md:text-lg leading-relaxed;
-    margin-bottom: 1em;
+    @apply text-base md:text-lg leading-relaxed mb-4;
   }
 
   /* Hide elements with x-cloak until Alpine initializes */
@@ -246,7 +251,27 @@
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center px-8 py-4 rounded-lg font-medium transition-colors duration-300 focus:outline-none border-2 border-secondary-300 dark:border-secondary-700 hover:bg-secondary-100 dark:hover:bg-secondary-800 text-secondary-900 dark:text-secondary-100;
+    @apply inline-flex items-center justify-center px-8 py-4 rounded-lg font-medium transition-colors duration-300 focus:outline-none;
+    border: 2px solid var(--color-secondary-300);
+    color: var(--color-secondary-900);
+    background-color: transparent;
+    transition-property: background-color, color, border-color;
+  }
+
+  .btn-outline:hover {
+    background-color: var(--color-secondary-100);
+    color: var(--color-secondary-900);
+  }
+
+  .dark .btn-outline {
+    border-color: var(--color-secondary-700);
+    color: var(--color-secondary-100);
+    background-color: transparent;
+  }
+
+  .dark .btn-outline:hover {
+    background-color: var(--color-secondary-800);
+    color: var(--color-secondary-100);
   }
 
   /* Container */
@@ -262,7 +287,11 @@
 
   /* Cards */
   .card {
-    @apply bg-white dark:bg-secondary-900 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-secondary-200 dark:border-secondary-800;
+    @apply bg-white dark:bg-secondary-900 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border;
+    border-color: var(--color-secondary-200);
+  }
+  .dark .card {
+    border-color: var(--color-secondary-800);
   }
 }
 
@@ -272,15 +301,12 @@
 .fade-in {
   @apply animate-fade-in;
 }
-
 .slide-up {
   @apply animate-slide-up;
 }
-
 .slide-down {
   @apply animate-slide-down;
 }
-
 .float {
   animation: float 6s ease-in-out infinite;
 }

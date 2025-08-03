@@ -1,11 +1,11 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  darkMode: 'class', // Use 'dark' class strategy for toggling dark mode
+// tailwind.config.js
+import plugin from 'tailwindcss/plugin';
+
+export default {
   content: [
-    './src/**/*.{astro,html,js,jsx,ts,tsx,vue,svelte}',
-    './public/**/*.html',
-    './pages/**/*.astro', // Fixed extra comma here
+    './src/**/*.{astro,html,js,jsx,ts,tsx,vue}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -61,15 +61,31 @@ module.exports = {
           900: '#713f12',
           950: '#422006',
         },
+        gray: {
+          200: '#e5e7eb',
+        },
+      },
+      borderRadius: {
+        lg: '0.75rem',
+      },
+      boxShadow: {
+        primary: '0 4px 6px rgba(15, 192, 131, 0.35)',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: [
+          'Inter',
+          'system-ui',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'Roboto',
+          'Helvetica',
+          'Arial',
+          'sans-serif',
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+        ],
         display: ['Lexend', 'system-ui', 'sans-serif'],
-      },
-      animation: {
-        'fade-in': 'fadeIn 0.5s ease-in-out',
-        'slide-up': 'slideUp 0.5s ease-in-out',
-        'slide-down': 'slideDown 0.5s ease-in-out',
       },
       keyframes: {
         fadeIn: {
@@ -84,8 +100,71 @@ module.exports = {
           '0%': { transform: 'translateY(-20px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-in-out forwards',
+        'slide-up': 'slideUp 0.5s ease-in-out forwards',
+        'slide-down': 'slideDown 0.5s ease-in-out forwards',
+        float: 'float 6s ease-in-out infinite',
+      },
+      transitionTimingFunction: {
+        standard: 'cubic-bezier(0.4, 0, 0.2, 1)',
+      },
+      rotate: {
+        'y-180': 'rotateY(180deg)',
+      },
+      transformOrigin: {
+        center: '50% 50%',
+      },
+      perspective: {
+        1000: '1000px',
+        1500: '1500px',
+      },
+      transformStyle: {
+        'preserve-3d': 'preserve-3d',
+      },
+      backfaceVisibility: {
+        hidden: 'hidden',
+        visible: 'visible',
       },
     },
   },
-  plugins: [],
+  variants: {
+    extend: {
+      rotate: ['group-hover', 'group-focus', 'hover', 'focus'],
+      transform: ['group-hover', 'group-focus', 'hover', 'focus'],
+      perspective: ['responsive'],
+      transformStyle: ['responsive'],
+      backfaceVisibility: ['responsive'],
+    },
+  },
+  plugins: [
+    plugin(({ addUtilities, e, theme }) => {
+      const perspectiveUtilities = Object.entries(theme('perspective')).map(([key, value]) => ({
+        [`.perspective-${e(key)}`]: { perspective: value },
+      }));
+
+      const transformStyleUtilities = Object.entries(theme('transformStyle')).map(([key, value]) => ({
+        [`.transform-style-${e(key)}`]: { 'transform-style': value },
+      }));
+
+      const backfaceVisibilityUtilities = Object.entries(theme('backfaceVisibility')).map(([key, value]) => ({
+        [`.backface-${e(key)}`]: { 'backface-visibility': value },
+      }));
+
+      addUtilities([
+        ...perspectiveUtilities,
+        ...transformStyleUtilities,
+        ...backfaceVisibilityUtilities,
+      ]);
+    }),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
+    require('tailwindcss-animate'),
+  ],
 };

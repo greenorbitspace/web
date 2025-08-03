@@ -23,10 +23,12 @@ export default defineConfig({
         strict: false,
       },
     },
+
     build: {
       target: 'esnext',
       minify: 'esbuild',
     },
+
     resolve: {
       alias: {
         '@components': '/src/components',
@@ -36,6 +38,7 @@ export default defineConfig({
         '@assets': '/src/assets',
       },
     },
+
     optimizeDeps: {
       include: ['react', 'react-dom'],
       esbuildOptions: {
@@ -47,10 +50,13 @@ export default defineConfig({
         },
       },
     },
+
     esbuild: {
       loader: 'tsx',
       include: /src\/.*\.(ts|tsx|js|jsx|astro)$/,
       exclude: [],
     },
+
+    // Note: No tailwindcss plugin here; the integration handles it
   },
 });

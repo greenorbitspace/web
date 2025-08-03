@@ -8,166 +8,98 @@ import HeroSection from '../../components/HeroSection.astro';
 <Layout title="Services">
   <Header />
 
-  <main class="py-8">
+  <main class="py-8 relative">
     <HeroSection 
       title="Services" 
       description="Choose a plan that fits your mission. All options include a 14-day free trial—no credit card required."
     />
 
-      <!-- Animated Shapes -->
-      <div class="absolute -bottom-16 left-0 right-0 flex justify-center">
-        <div
-          class="w-48 md:w-64 h-48 md:h-64 bg-accent-400 rounded-full filter blur-3xl opacity-20 animate-pulse"
-        ></div>
-      </div>
-    </section>
+    <!-- Animated Background Shape -->
+    <div class="absolute -bottom-16 left-0 right-0 flex justify-center pointer-events-none">
+      <div
+        class="w-48 md:w-64 h-48 md:h-64 bg-accent-400 rounded-full filter blur-3xl opacity-20 animate-pulse"
+        aria-hidden="true"
+      ></div>
+    </div>
 
-    <!-- Services Overview with Cards -->
-       <section class="py-16 bg-white dark:bg-secondary-500">
-      <div class="container-custom text-center mb-12">
+    <!-- Services Overview Section -->
+    <section class="py-16 bg-white dark:bg-secondary-500 relative z-10">
+      <div class="container-custom text-center mb-12 px-4 md:px-0">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
           Sustainable Strategies, Stellar Results
         </h2>
-        <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+        <p class="text-lg text-gray-600 dark:text-white max-w-3xl mx-auto">
           At Green Orbit Digital, we craft planet-positive marketing strategies designed to help your
           organisation thrive. Our approach blends creativity, digital precision, and sustainability
           expertise to drive measurable, meaningful change.
         </p>
       </div>
 
-      <div
-        class="container-custom grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-16"
-      >
-        <!-- Card 1: Creative Services -->
-        <div class="feature-card relative z-30 group perspective min-h-[32rem]">
-          <div
-            class="relative h-full transform-gpu transition-all duration-700 preserve-3d hover:rotate-y-180 cursor-pointer touch-action-card"
-          >
-            <!-- Front -->
-            <div class="absolute inset-0 backface-hidden">
-              <div
-                class="card p-6 md:p-8 h-full flex flex-col items-center justify-center text-center bg-white dark:bg-secondary-800 rounded-xl shadow-lg"
-              >
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                  Creative Services
-                </h3>
-                <p class="text-gray-600 dark:text-gray-300">
-                  From branding to campaign development and storytelling, we bring your mission to
-                  life through sustainable creativity.
-                </p>
-              </div>
-            </div>
-
-            <!-- Back -->
-            <div
-              class="absolute inset-0 backface-hidden rotate-y-180"
+      <!-- 3D Card Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
+        {[
+          {
+            title: "Creative Services",
+            description: "From branding to campaign development and storytelling, we bring your mission to life through sustainable creativity.",
+            link: "/services/creative",
+            features: [
+              "Sustainable branding & visual identity",
+              "ESG-focused campaign development",
+              "Purpose-driven copywriting",
+            ]
+          },
+          {
+            title: "Digital Marketing",
+            description: "We power your visibility through ethical SEO, CRM, content marketing, and social media strategies that scale sustainably.",
+            link: "/services/digital",
+            features: [
+              "Ethical SEO & on-page optimisation",
+              "CRM & personalised journeys",
+              "Content & email marketing",
+              "Sustainable social media strategy",
+            ]
+          },
+          {
+            title: "Consulting & Strategy",
+            description: "We guide your strategic positioning, marketing sustainability, and ESG communications with clarity and credibility.",
+            link: "/services/consulting",
+            features: [
+              "Sustainable marketing strategy",
+              "ESG impact reporting & messaging",
+              "Market positioning & value proposition",
+            ]
+          }
+        ].map(service => (
+          <div class="card perspective-1000 transform-style-3d transition-transform duration-500 hover:rotate-y-2 p-6 md:p-8 h-full bg-primary-500 dark:bg-primary-500 text-white flex flex-col items-center justify-center text-center rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold mb-4">{service.title}</h3>
+            <p class="mb-4">{service.description}</p>
+            <ul class="text-left space-y-2 mb-4">
+              {service.features.map(feature => (
+                <li key={feature}>• {feature}</li>
+              ))}
+            </ul>
+            <a
+              href={service.link}
+              class="inline-block mt-4 text-sm underline hover:text-accent-500"
             >
-              <div
-                class="card p-6 md:p-8 h-full bg-primary-600 dark:bg-primary-800 text-white rounded-xl flex flex-col items-center justify-center text-center"
-              >
-                <h4 class="text-lg font-semibold mb-3">What’s Included</h4>
-                <ul class="text-left space-y-2 text-sm">
-                  <li>• Sustainable branding & visual identity</li>
-                  <li>• ESG-focused campaign development</li>
-                  <li>• Purpose-driven copywriting</li>
-                </ul>
-                <a
-                  href="/services/creative"
-                  class="mt-4 inline-block text-sm underline text-white hover:text-accent-200"
-                  >Find out more</a
-                >
-              </div>
-            </div>
+              Find out more
+            </a>
           </div>
-        </div>
-
-        <!-- Card 2: Digital Marketing -->
-        <div class="feature-card relative z-30 group perspective min-h-[32rem]">
-          <div
-            class="relative h-full transform-gpu transition-all duration-700 preserve-3d hover:rotate-y-180 cursor-pointer touch-action-card"
-          >
-            <!-- Front -->
-            <div class="absolute inset-0 backface-hidden">
-              <div
-                class="card p-6 md:p-8 h-full flex flex-col items-center justify-center text-center bg-white dark:bg-secondary-800 rounded-xl shadow-lg"
-              >
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                  Digital Marketing
-                </h3>
-                <p class="text-gray-600 dark:text-gray-300">
-                  We power your visibility through ethical SEO, CRM, content marketing, and social
-                  media strategies that scale sustainably.
-                </p>
-              </div>
-            </div>
-
-            <!-- Back -->
-            <div
-              class="absolute inset-0 backface-hidden rotate-y-180"
-            >
-              <div
-                class="card p-6 md:p-8 h-full bg-primary-600 dark:bg-primary-800 text-white rounded-xl flex flex-col items-center justify-center text-center"
-              >
-                <h4 class="text-lg font-semibold mb-3">What’s Included</h4>
-                <ul class="text-left space-y-2 text-sm">
-                  <li>• Ethical SEO & on-page optimisation</li>
-                  <li>• CRM & personalised journeys</li>
-                  <li>• Content & email marketing</li>
-                  <li>• Sustainable social media strategy</li>
-                </ul>
-                <a
-                  href="/services/digital"
-                  class="mt-4 inline-block text-sm underline text-white hover:text-accent-200"
-                  >Find out more</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3: Consulting & Strategy -->
-        <div class="feature-card relative z-30 group perspective min-h-[32rem]">
-          <div
-            class="relative h-full transform-gpu transition-all duration-700 preserve-3d hover:rotate-y-180 cursor-pointer touch-action-card"
-          >
-            <!-- Front -->
-            <div class="absolute inset-0 backface-hidden">
-              <div
-                class="card p-6 md:p-8 h-full flex flex-col items-center justify-center text-center bg-white dark:bg-secondary-800 rounded-xl shadow-lg"
-              >
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                  Consulting & Strategy
-                </h3>
-                <p class="text-gray-600 dark:text-gray-300">
-                  We guide your strategic positioning, marketing sustainability, and ESG
-                  communications with clarity and credibility.
-                </p>
-              </div>
-            </div>
-
-            <!-- Back -->
-            <div
-              class="absolute inset-0 backface-hidden rotate-y-180"
-            >
-              <div
-                class="card p-6 md:p-8 h-full bg-primary-600 dark:bg-primary-800 text-white rounded-xl flex flex-col items-center justify-center text-center"
-              >
-                <h4 class="text-lg font-semibold mb-3">What’s Included</h4>
-                <ul class="text-left space-y-2 text-sm">
-                  <li>• Sustainable marketing strategy</li>
-                  <li>• ESG impact reporting & messaging</li>
-                  <li>• Market positioning & value proposition</li>
-                </ul>
-                <a
-                  href="/services/consulting"
-                  class="mt-4 inline-block text-sm underline text-white hover:text-accent-200"
-                  >Find out more</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
+              <!-- CTA -->
+        <div class="mt-16 text-center">
+          <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+            Ready to achieve similar results?
+          </h3>
+          <p class="text-gray-600 dark:text-white mb-8 max-w-2xl mx-auto">
+            Join hundreds of companies that are transforming their businesses with Sassify. Our team is ready to help you succeed.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="/contact" class="btn-primary">Contact Sales</a>
+            <a href="/pricing" class="btn-secondary">View Pricing</a>
+          </div>
+        </div>
     </section>
   </main>
 
