@@ -1,0 +1,650 @@
+[
+    {
+        "Organisation": "UK Space Agency",
+        "Description": "Responsible for the UK's civil space programme.",
+        "URL": "https://www.gov.uk/government/organisations/uk-space-agency",
+        "HubSpot Company ID": "180115567816",
+        "Industry": "DEFENSE_SPACE",
+        "Category": "space agency",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "United Nations Office for Outer Space Affairs",
+        "Description": "",
+        "URL": "https://unoosa.org",
+        "HubSpot Company ID": "28180536554",
+        "Industry": "INTERNATIONAL_AFFAIRS",
+        "Category": "intergovernmental",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "Rainforest Foundation UK",
+        "Description": "",
+        "URL": "https://rainforestfoundation.org.uk",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "",
+        "Type": "member"
+    },
+    {
+        "Organisation": "European Centre for Medium-Wave Forecasting",
+        "Description": "",
+        "URL": "https://ecmwf.int",
+        "HubSpot Company ID": "28118386899",
+        "Industry": "MECHANICAL_OR_INDUSTRIAL_ENGINEERING",
+        "Category": "intergovernmental",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "University of Leicester",
+        "Description": "",
+        "URL": "https://le.ac.uk",
+        "HubSpot Company ID": "128913278200",
+        "Industry": "HIGHER_EDUCATION",
+        "Category": "university",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "INCO Academy",
+        "Description": "",
+        "URL": "https://inco-group.co",
+        "HubSpot Company ID": "27661914319",
+        "Industry": "PROFESSIONAL_TRAINING_COACHING",
+        "Category": "education",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "Leicester City Council",
+        "Description": "",
+        "URL": "https://leicester.gov.uk",
+        "HubSpot Company ID": "28162402530",
+        "Industry": "LEGAL_SERVICES",
+        "Category": "local authority",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "Space Park Leicester",
+        "Description": "",
+        "URL": "https://space-park.co.uk",
+        "HubSpot Company ID": "27661914315",
+        "Industry": "HIGHER_EDUCATION",
+        "Category": "space agency",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "UK Earth Observation Network for Sustainability",
+        "Description": "",
+        "URL": "",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "Secure World Foundation",
+        "Description": "",
+        "URL": "https://swfound.org",
+        "HubSpot Company ID": "28118386921",
+        "Industry": "FUND_RAISING",
+        "Category": "NGO",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "Space4Climate",
+        "Description": "",
+        "URL": "https://space4cliamte.com",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "professional society",
+        "Type": "member"
+    },
+    {
+        "Organisation": "SmartCitiesWorld",
+        "Description": "",
+        "URL": "https://SmartCitiesWorld.com",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "",
+        "Type": "member"
+    },
+    {
+        "Organisation": "National Centre for Earth Observation",
+        "Description": "",
+        "URL": "https://nceo.ac.uk",
+        "HubSpot Company ID": "28203876539",
+        "Industry": "HIGHER_EDUCATION",
+        "Category": "NGO",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "Space Communications Alliance",
+        "Description": "",
+        "URL": "https://spacecommsalliance.com",
+        "HubSpot Company ID": "28165924075",
+        "Industry": "RESTAURANTS",
+        "Category": "space agency",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "Space Partnership",
+        "Description": "",
+        "URL": "https://spacepartnership.org.uk",
+        "HubSpot Company ID": "28249998544",
+        "Industry": "FUND_RAISING",
+        "Category": "space agency",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "The Climate Coalition",
+        "Description": "",
+        "URL": "https://theclimatecoalition.org",
+        "HubSpot Company ID": "28203875572",
+        "Industry": "CONSUMER_SERVICES",
+        "Category": "space agency",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "Climate Perks",
+        "Description": "",
+        "URL": "https://climateperks.com",
+        "HubSpot Company ID": "128913280206",
+        "Industry": "CONSUMER_SERVICES",
+        "Category": "space agency",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "Supply Chain Sustainability School",
+        "Description": "",
+        "URL": "https://unglobalcompact.org",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "higher education",
+        "Type": "member"
+    },
+    {
+        "Organisation": "International Space University",
+        "Description": "",
+        "URL": "https://isunet.edu",
+        "HubSpot Company ID": "28288113874",
+        "Category": "higher education",
+        "Category": "space agency",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "Space Safety Coalition",
+        "Description": "",
+        "URL": "https://spacesafety.org",
+        "HubSpot Company ID": "28203934967",
+        "Industry": "",
+        "Category": "space agency",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "BSI Sustainable Space Community",
+        "Description": "",
+        "URL": "https://bsigroup.com",
+        "HubSpot Company ID": "28242758900",
+        "Industry": "PROFESSIONAL_TRAINING_COACHING",
+        "Category": "space agency",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "Leicester Startups",
+        "Description": "",
+        "URL": "https://leicesterstartups.com",
+        "HubSpot Company ID": "28249998537",
+        "Industry": "",
+        "Category": "space agency",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "Space City Leicester",
+        "Description": "",
+        "URL": "https://spacecityleicester.co.uk",
+        "HubSpot Company ID": "",
+        "Industry": "PROFESSIONAL_TRAINING_COACHING",
+        "Category": "local",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "Cosmos for Humanity",
+        "Description": "",
+        "URL": "https://cosmosforhumanity.org",
+        "HubSpot Company ID": "50469090509",
+        "Industry": "",
+        "Category": "space agency",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "SME Climate Hub",
+        "Description": "",
+        "URL": "https://smeclimatehub.org",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "",
+        "Type": "member"
+    },
+    {
+        "Organisation": "Taskforce on Nature-related Financial Disclosures",
+        "Description": "",
+        "URL": "https://tnfd.global",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "",
+        "Type": "member"
+    },
+    {
+        "Organisation": "DOCK",
+        "Description": "",
+        "URL": "https://dockleicester.co.uk",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "space agency",
+        "Type": "supplier"
+    },
+    {
+        "Organisation": "Place Support Partnership",
+        "Description": "",
+        "URL": "https://placesupportpartnership.com",
+        "HubSpot Company ID": "122073527494",
+        "Industry": "",
+        "Category": "space agency",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "Space Enterprise Community",
+        "Description": "",
+        "URL": "spaceenterprise.uk",
+        "HubSpot Company ID": "129841171660",
+        "Industry": "",
+        "Category": "space agency",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "European Space Agency",
+        "Description": "",
+        "URL": "https://www.esa.int",
+        "HubSpot Company ID": "118940428524",
+        "Industry": "DEFENSE_SPACE",
+        "Category": "space agency",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "Sustainable East Midlands",
+        "Description": "",
+        "URL": "",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "local authority",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "SpaceProjects.uk",
+        "Description": "",
+        "URL": "https://spaceprojects.uk",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "NGO",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "GreenerFuture Leicestershire",
+        "Description": "",
+        "URL": "",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "academic",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "Climate Impact Partners",
+        "Description": "",
+        "URL": "",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "industry group",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "Sustainable Business Alliance",
+        "Description": "",
+        "URL": "https://sustainablebusinessalliance.com",
+        "HubSpot Company ID": "",
+        "Industry": "business",
+        "Category": "NGO",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "UK Students for the Exploration and Development of Space",
+        "Description": "",
+        "URL": "https://www.ukseds.org",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "youth",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "Declaration on Research Assessment (DORA)",
+        "Description": "",
+        "URL": "https://sfdora.org",
+        "HubSpot Company ID": "178336278741",
+        "Industry": "",
+        "Category": "space agency",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "Justspace Alliance",
+        "Description": "",
+        "URL": "https://justspacealliance.org",
+        "HubSpot Company ID": "178313345242",
+        "Industry": "",
+        "Category": "space agency",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "Zero Waste International Alliance",
+        "Description": "",
+        "URL": "",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "space agency",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "Institute of Physics",
+        "Description": "",
+        "URL": "",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "professional association",
+        "Type": "member"
+    },
+    {
+        "Organisation": "IAU CPS",
+        "Description": "",
+        "URL": "",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "intergovernmental",
+        "Type": "member"
+    },
+    {
+        "Organisation": "SpacePride",
+        "Description": "",
+        "URL": "https://spacepride.space",
+        "HubSpot Company ID": "178350111950",
+        "Industry": "",
+        "Category": "space agency",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "Space City Leicester",
+        "Description": "",
+        "URL": "https://space-city.co.uk",
+        "HubSpot Company ID": "178334464231",
+        "Industry": "",
+        "Category": "space agency",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "Circular Economy Club",
+        "Description": "",
+        "URL": "",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "non-profit",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "ClimateAction.tech",
+        "Description": "",
+        "URL": "https://ClimateAction.tech",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "Zero Emissions Network",
+        "Description": "",
+        "URL": "https://zeroemissionsnetwork.com",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "space agency",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "Chartered Institute of Public Relations",
+        "Description": "",
+        "URL": "https://cipr.co.uk",
+        "HubSpot Company ID": "",
+        "Industry": "public relations",
+        "Category": "professional association",
+        "Type": "member"
+    },
+    {
+        "Organisation": "Chartered Institute of Marketing",
+        "Description": "",
+        "URL": "https://cim.co.uk",
+        "HubSpot Company ID": "",
+        "Industry": "marketing",
+        "Category": "professional association",
+        "Type": "member"
+    },
+    {
+        "Organisation": "Midlands Space Cluster",
+        "Description": "",
+        "URL": "",
+        "HubSpot Company ID": "",
+        "Industry": "aerospace",
+        "Category": "association",
+        "Type": "partner"
+    },
+    {
+        "Organisation": "European Association of Remote Sensing Companies",
+        "Description": "",
+        "URL": "https://earsc.org",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "NGO",
+        "Type": "member"
+    },
+    {
+        "Organisation": "UKspace",
+        "Description": "",
+        "URL": "https://ukspace.org",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "trade association",
+        "Type": "member"
+    },
+    {
+        "Organisation": "Good Business Foundation",
+        "Description": "",
+        "URL": "https://ukspace.org",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "trade association",
+        "Type": "member"
+    },
+    {
+        "Organisation": "Federation of Small Businesses",
+        "Description": "",
+        "URL": "https://fsb.org.uk",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "trade association",
+        "Type": "member"
+    },
+    {
+        "Organisation": "CharityComms",
+        "Description": "",
+        "URL": "https://charitycomms.org.uk",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "trade association",
+        "Type": "member"
+    },
+    {
+        "Organisation": "Designers in Space Community",
+        "Description": "",
+        "URL": "https://dis.community",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "",
+        "Type": "member"
+    },
+    {
+        "Organisation": "HubSpot",
+        "Description": "",
+        "URL": "https://hubspot.com",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "CRM",
+        "Type": "supplier"
+    },
+    {
+        "Organisation": "Notion",
+        "Description": "",
+        "URL": "https://notion.so",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "software",
+        "Type": "supplier"
+    },
+    {
+        "Organisation": "Proton",
+        "Description": "",
+        "URL": "https://proton.me",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "software",
+        "Type": "supplier"
+    }, 
+    {
+        "Organisation": "Ecosend",
+        "Description": "",
+        "URL": "https://proton.me",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "software",
+        "Type": "supplier"
+    },
+    {
+        "Organisation": "Krystal",
+        "Description": "",
+        "URL": "https://proton.me",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "software",
+        "Type": "supplier"
+    },
+    {
+        "Organisation": "Canva",
+        "Description": "",
+        "URL": "https://proton.me",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "software",
+        "Type": "supplier"
+    },
+    {
+        "Organisation": "Association of British Science Writers",
+        "Description": "",
+        "URL": "https://proton.me",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "",
+        "Type": "member"
+    },
+    {
+        "Organisation": "Climate Voice",
+        "Description": "",
+        "URL": "https://proton.me",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "",
+        "Type": "member"
+    },
+    {
+        "Organisation": "ACT Climate Labs",
+        "Description": "",
+        "URL": "https://proton.me",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "",
+        "Type": "member"
+    },
+    {
+        "Organisation": "Creatives for Climate",
+        "Description": "",
+        "URL": "https://proton.me",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "",
+        "Type": "member"
+    },
+    {
+        "Organisation": "Enterprise Nation",
+        "Description": "",
+        "URL": "https://proton.me",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "",
+        "Type": "member"
+    },
+    {
+        "Organisation": "Future Earth",
+        "Description": "",
+        "URL": "https://proton.me",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "software",
+        "Type": "member"
+    },
+    {
+        "Organisation": "Green Economy",
+        "Description": "",
+        "URL": "https://Green Economy",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "",
+        "Type": "member"
+    },
+    {
+        "Organisation": "Global Space Enablers Network",
+        "Description": "",
+        "URL": "https://proton.me",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "",
+        "Type": "member"
+    },
+    {
+        "Organisation": "Leaders for Climate Action",
+        "Description": "",
+        "URL": "https://proton.me",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "",
+        "Type": "member"
+    },
+    {
+        "Organisation": "Net Zero Carbon Events",
+        "Description": "",
+        "URL": "https://nzce.org",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "events",
+        "Type": "member"
+    },
+    {
+        "Organisation": "Locality",
+        "Description": "",
+        "URL": "https://locality.org.uk",
+        "HubSpot Company ID": "",
+        "Industry": "",
+        "Category": "",
+        "Type": "member"
+    }
+]

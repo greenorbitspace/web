@@ -1,0 +1,47 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import InsightsList from '../../components/InsightsList.jsx';
+import { getCollection } from 'astro:content';
+
+// Fetch all collections
+const blogPosts = await getCollection('blog');
+const newsItems = await getCollection('news');
+const resources = await getCollection('resources');
+
+// Helper to tag entries with contentType for filtering/display
+const formatEntries = (entries, type) =>
+  entries.map(entry => ({
+    ...entry,
+    data: { ...entry.data, contentType: type }
+  }));
+
+const allInsights = [
+  ...formatEntries(blogPosts, 'blog'),
+  ...formatEntries(newsItems, 'news'),
+  ...formatEntries(resources, 'resource')
+];
+
+// Sort by published date (latest first)
+// Note: Use `pubdate` or your actual date field consistently
+allInsights.sort(
+  (a, b) => new Date(b.data.pubdate ?? 0) - new Date(a.data.pubdate ?? 0)
+);
+---
+
+<Layout title="Insights" description="Explore the latest blogs, news, and resources.">
+  <Header />
+
+  <main class="py-12 max-w-6xl mx-auto px-4">
+    <HeroSection 
+      title="Insights" 
+      description="Explore articles, news, and knowledge resources from across our platform." 
+    />
+
+    <InsightsList client:load posts={allInsights} />
+  </main>
+
+  <Footer />
+</Layout>

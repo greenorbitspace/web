@@ -1,0 +1,1760 @@
+[
+  {
+    "product_name": "Fractional CMO Office Hours",
+    "description": "On-demand strategic marketing advisory",
+    "prices": [
+      {
+        "tax_code": "txcd_20060048",
+        "description": "On-demand strategic marketing advisory",
+        "unit_amount": 80000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      },
+      {
+        "tax_code": "txcd_20060048",
+        "description": "On-demand strategic marketing advisory",
+        "unit_amount": 150000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      },
+      {
+        "tax_code": "txcd_20060048",
+        "description": "On-demand strategic marketing advisory",
+        "unit_amount": 250000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Sustainability Strategy Sprint",
+    "description": "2-week sustainability mission & priority workshop",
+    "prices": [
+      {
+        "tax_code": "txcd_20060048",
+        "description": "2-week sustainability mission & priority workshop",
+        "unit_amount": 700000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Sustainability Leadership Coaching",
+    "description": "One-on-one ESG leadership coaching",
+    "prices": [
+      {
+        "tax_code": "txcd_20060048",
+        "description": "One-on-one ESG leadership coaching",
+        "unit_amount": 60000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        }
+      },
+      {
+        "tax_code": "txcd_20060048",
+        "description": "One-on-one ESG leadership coaching",
+        "unit_amount": 120000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        }
+      },
+      {
+        "tax_code": "txcd_20060048",
+        "description": "One-on-one ESG leadership coaching",
+        "unit_amount": 200000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Green Innovation Mentorship",
+    "description": "3-month mentorship for green innovation",
+    "prices": [
+      {
+        "tax_code": "txcd_20060048",
+        "description": "3-month mentorship for green innovation",
+        "unit_amount": 600000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Sustainable Innovation Consultancy",
+    "description": "Project-based sustainability innovation support",
+    "prices": [
+      {
+        "tax_code": "txcd_20060048",
+        "description": "Project-based sustainability innovation support",
+        "unit_amount": 800000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        }
+      },
+      {
+        "tax_code": "txcd_20060048",
+        "description": "Project-based sustainability innovation support",
+        "unit_amount": 1500000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        }
+      },
+      {
+        "tax_code": "txcd_20060048",
+        "description": "Project-based sustainability innovation support",
+        "unit_amount": 2500000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Sustainability Mastermind Sessions",
+    "description": "Peer-group mastermind facilitation",
+    "prices": [
+      {
+        "tax_code": "txcd_20060044",
+        "description": "Peer-group mastermind facilitation",
+        "unit_amount": 120000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Impact Strategy Development",
+    "description": "Build measurable ESG impact frameworks",
+    "prices": [
+      {
+        "tax_code": "txcd_20060048",
+        "description": "Build measurable ESG impact frameworks",
+        "unit_amount": 450000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        }
+      },
+      {
+        "tax_code": "txcd_20060048",
+        "description": "Build measurable ESG impact frameworks",
+        "unit_amount": 800000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        }
+      },
+      {
+        "tax_code": "txcd_20060048",
+        "description": "Build measurable ESG impact frameworks",
+        "unit_amount": 1200000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "SDG Alignment & Mapping Consultation",
+    "description": "Workshop to align strategy with UN SDGs",
+    "prices": [
+      {
+        "tax_code": "txcd_20060044",
+        "description": "Workshop to align strategy with UN SDGs",
+        "unit_amount": 500000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Standards Gap Analysis (GRI/ESG/CSRD/SASB)",
+    "description": "ESG disclosure benchmarking",
+    "prices": [
+      {
+        "tax_code": "txcd_20060048",
+        "description": "ESG disclosure benchmarking",
+        "unit_amount": 350000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        }
+      },
+      {
+        "tax_code": "txcd_20060048",
+        "description": "ESG disclosure benchmarking",
+        "unit_amount": 700000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        }
+      },
+      {
+        "tax_code": "txcd_20060048",
+        "description": "ESG disclosure benchmarking",
+        "unit_amount": 1200000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Sustainable Procurement Audit",
+    "description": "Audit of supply chain sustainability practices",
+    "prices": [
+      {
+        "tax_code": "txcd_20060048",
+        "description": "Audit of supply chain sustainability practices",
+        "unit_amount": 400000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        }
+      },
+      {
+        "tax_code": "txcd_20060048",
+        "description": "Audit of supply chain sustainability practices",
+        "unit_amount": 850000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        }
+      },
+      {
+        "tax_code": "txcd_20060048",
+        "description": "Audit of supply chain sustainability practices",
+        "unit_amount": 1500000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Sustainable Brand Transformation",
+    "description": "Reframe brand for sustainability purpose",
+    "prices": [
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Reframe brand for sustainability purpose",
+        "unit_amount": 600000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        }
+      },
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Reframe brand for sustainability purpose",
+        "unit_amount": 1200000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        }
+      },
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Reframe brand for sustainability purpose",
+        "unit_amount": 2000000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Sustainability Stakeholder Training",
+    "description": "Team workshops on sustainability strategy",
+    "prices": [
+      {
+        "tax_code": "txcd_20060044",
+        "description": "Team workshops on sustainability strategy",
+        "unit_amount": 200000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        }
+      },
+      {
+        "tax_code": "txcd_20060044",
+        "description": "Team workshops on sustainability strategy",
+        "unit_amount": 400000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        }
+      },
+      {
+        "tax_code": "txcd_20060044",
+        "description": "Team workshops on sustainability strategy",
+        "unit_amount": 700000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Partnership & Ecosystem Mapping",
+    "description": "Identify sustainability-aligned partners",
+    "prices": [
+      {
+        "tax_code": "txcd_20060048",
+        "description": "Identify sustainability-aligned partners",
+        "unit_amount": 550000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Annual ESG Report",
+    "description": "Full ESG disclosure reporting",
+    "prices": [
+      {
+        "tax_code": "txcd_20060048",
+        "description": "Full ESG disclosure reporting",
+        "unit_amount": 800000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        }
+      },
+      {
+        "tax_code": "txcd_20060048",
+        "description": "Full ESG disclosure reporting",
+        "unit_amount": 1500000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        }
+      },
+      {
+        "tax_code": "txcd_20060048",
+        "description": "Full ESG disclosure reporting",
+        "unit_amount": 2500000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Sustainability Strategy Starter Pack",
+    "description": "A compact yet impactful strategy engagement designed to help startups and SMEs define their sustainability mission, baseline performance, and priority areas.",
+    "prices": [
+      {
+        "tax_code": "txcd_20060048",
+        "description": "A compact yet impactful strategy engagement designed to help startups and SMEs define their sustainability mission, baseline performance, and priority areas.",
+        "unit_amount": 350000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      },
+      {
+        "tax_code": "txcd_20060048",
+        "description": "A compact yet impactful strategy engagement designed to help startups and SMEs define their sustainability mission, baseline performance, and priority areas.",
+        "unit_amount": 250000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      },
+      {
+        "tax_code": "txcd_20060048",
+        "description": "A compact yet impactful strategy engagement designed to help startups and SMEs define their sustainability mission, baseline performance, and priority areas.",
+        "unit_amount": 100000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Materiality & Double Materiality Assessment",
+    "description": "Identify your most material ESG risks and opportunities, aligned with CSRD/ESRS, to guide strategy and disclosures.",
+    "prices": [
+      {
+        "tax_code": "txcd_20060048",
+        "description": "Identify your most material ESG risks and opportunities, aligned with CSRD/ESRS, to guide strategy and disclosures.",
+        "unit_amount": 300000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      },
+      {
+        "tax_code": "txcd_20060048",
+        "description": "Identify your most material ESG risks and opportunities, aligned with CSRD/ESRS, to guide strategy and disclosures.",
+        "unit_amount": 150000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      },
+      {
+        "tax_code": "txcd_20060048",
+        "description": "Identify your most material ESG risks and opportunities, aligned with CSRD/ESRS, to guide strategy and disclosures.",
+        "unit_amount": 180000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Sustainability Roadmap Development",
+    "description": "Design a multi-year sustainability plan that aligns with global standards and investor expectations.",
+    "prices": [
+      {
+        "tax_code": "txcd_20060048",
+        "description": "Design a multi-year sustainability plan that aligns with global standards and investor expectations.",
+        "unit_amount": 120000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      },
+      {
+        "tax_code": "txcd_20060048",
+        "description": "Design a multi-year sustainability plan that aligns with global standards and investor expectations.",
+        "unit_amount": 45000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      },
+      {
+        "tax_code": "txcd_20060048",
+        "description": "Design a multi-year sustainability plan that aligns with global standards and investor expectations.",
+        "unit_amount": 100000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Regulatory Readiness & Gap Analysis",
+    "description": "CSRD/SFDR/GRI/TCFD/SASB alignment check with full gap analysis and priority action plan.",
+    "prices": [
+      {
+        "tax_code": "txcd_20060048",
+        "description": "CSRD/SFDR/GRI/TCFD/SASB alignment check with full gap analysis and priority action plan.",
+        "unit_amount": 240000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      },
+      {
+        "tax_code": "txcd_20060048",
+        "description": "CSRD/SFDR/GRI/TCFD/SASB alignment check with full gap analysis and priority action plan.",
+        "unit_amount": 450000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      },
+      {
+        "tax_code": "txcd_20060048",
+        "description": "CSRD/SFDR/GRI/TCFD/SASB alignment check with full gap analysis and priority action plan.",
+        "unit_amount": 10000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Sustainability Performance Metrics & Dashboards",
+    "description": "Define key performance indicators and build a tailored dashboard using your existing tools or APIs.",
+    "prices": [
+      {
+        "tax_code": "txcd_20060048",
+        "description": "Define key performance indicators and build a tailored dashboard using your existing tools or APIs.",
+        "unit_amount": 200000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      },
+      {
+        "tax_code": "txcd_20060048",
+        "description": "Define key performance indicators and build a tailored dashboard using your existing tools or APIs.",
+        "unit_amount": 75000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      },
+      {
+        "tax_code": "txcd_20060048",
+        "description": "Define key performance indicators and build a tailored dashboard using your existing tools or APIs.",
+        "unit_amount": 50000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Sustainability Risk & Resilience Strategy",
+    "description": "Anticipate and prepare for regulatory, environmental, and supply chain risks across global operations.",
+    "prices": [
+      {
+        "tax_code": "txcd_20060048",
+        "description": "Anticipate and prepare for regulatory, environmental, and supply chain risks across global operations.",
+        "unit_amount": 250000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      },
+      {
+        "tax_code": "txcd_20060048",
+        "description": "Anticipate and prepare for regulatory, environmental, and supply chain risks across global operations.",
+        "unit_amount": 5000000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      },
+      {
+        "tax_code": "txcd_20060048",
+        "description": "Anticipate and prepare for regulatory, environmental, and supply chain risks across global operations.",
+        "unit_amount": 500000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Bespoke ESG Strategy & Board Advisory",
+    "description": "Ongoing strategic ESG support at the leadership level. Includes deep advisory and engagement planning.",
+    "prices": [
+      {
+        "tax_code": "txcd_20060048",
+        "description": "Ongoing strategic ESG support at the leadership level. Includes deep advisory and engagement planning.",
+        "unit_amount": 3000000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      },
+      {
+        "tax_code": "txcd_20060048",
+        "description": "Ongoing strategic ESG support at the leadership level. Includes deep advisory and engagement planning.",
+        "unit_amount": 300000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      },
+      {
+        "tax_code": "txcd_20060048",
+        "description": "Ongoing strategic ESG support at the leadership level. Includes deep advisory and engagement planning.",
+        "unit_amount": 1500000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "",
+          "client_type": ""
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Website & SEO Performance Audit",
+    "description": "Full SEO audit incl. Traffic, technical and landing page review.",
+    "prices": [
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Full SEO audit incl. Traffic, technical and landing page review.",
+        "unit_amount": 50000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "seo",
+          "client_type": "startup"
+        }
+      },
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Full SEO audit incl. Traffic, technical and landing page review.",
+        "unit_amount": 100000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "seo",
+          "client_type": "sme"
+        }
+      },
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Full SEO audit incl. Traffic, technical and landing page review.",
+        "unit_amount": 200000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "seo",
+          "client_type": "enterprise"
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Website & SEO Performance Audit Setup Fee",
+    "description": "Setup for analytics + crawler config.",
+    "prices": [
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Setup for analytics + crawler config.",
+        "unit_amount": 40000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "setup",
+          "client_type": "all"
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Keyword & Search Visibility Tracker",
+    "description": "Ongoing monitoring of keyword rankings and search CTR.",
+    "prices": [
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Ongoing monitoring of keyword rankings and search CTR.",
+        "unit_amount": 20000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "seo",
+          "client_type": "startup"
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      },
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Ongoing monitoring of keyword rankings and search CTR.",
+        "unit_amount": 40000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "seo",
+          "client_type": "sme"
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      },
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Ongoing monitoring of keyword rankings and search CTR.",
+        "unit_amount": 65000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "seo",
+          "client_type": "enterprise"
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Keyword Tracker Setup Fee",
+    "description": "Setup for keyword tracker",
+    "prices": [
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Setup for keyword tracker",
+        "unit_amount": 10000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "setup",
+          "client_type": "all"
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Technical SEO Health Check",
+    "description": "Monthly crawl for broken links, metadata, speed & mobile issues.",
+    "prices": [
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Monthly crawl for broken links, metadata, speed & mobile issues.",
+        "unit_amount": 50000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "seo",
+          "client_type": "startup"
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      },
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Monthly crawl for broken links, metadata, speed & mobile issues.",
+        "unit_amount": 90000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "seo",
+          "client_type": "sme"
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      },
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Monthly crawl for broken links, metadata, speed & mobile issues.",
+        "unit_amount": 150000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "seo",
+          "client_type": "enterprise"
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Technical SEO Setup Fee",
+    "description": "Setup",
+    "prices": [
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Setup",
+        "unit_amount": 30000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "setup",
+          "client_type": "all"
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Social Media Engagement Report",
+    "description": "Channel-specific social metrics & top posts.",
+    "prices": [
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Channel-specific social metrics & top posts.",
+        "unit_amount": 30000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "social",
+          "client_type": "startup"
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      },
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Channel-specific social metrics & top posts.",
+        "unit_amount": 60000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "social",
+          "client_type": "sme"
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      },
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Channel-specific social metrics & top posts.",
+        "unit_amount": 100000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "social",
+          "client_type": "enterprise"
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Social Media Setup Fee",
+    "description": "Setup",
+    "prices": [
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Setup",
+        "unit_amount": 20000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "setup",
+          "client_type": "all"
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Email Marketing Insights",
+    "description": "Email open/click rates & segmentation insights.",
+    "prices": [
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Email open/click rates & segmentation insights.",
+        "unit_amount": 25000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "email",
+          "client_type": "startup"
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      },
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Email open/click rates & segmentation insights.",
+        "unit_amount": 50000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "email",
+          "client_type": "sme"
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      },
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Email open/click rates & segmentation insights.",
+        "unit_amount": 90000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "email",
+          "client_type": "enterprise"
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Email Marketing Setup Fee",
+    "description": "Setup",
+    "prices": [
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Setup",
+        "unit_amount": 15000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "setup",
+          "client_type": "all"
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Lead Gen & CRM Funnel Insights",
+    "description": "Conversion & lifecycle analysis using HubSpot API.",
+    "prices": [
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Conversion & lifecycle analysis using HubSpot API.",
+        "unit_amount": 30000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "crm",
+          "client_type": "startup"
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      },
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Conversion & lifecycle analysis using HubSpot API.",
+        "unit_amount": 60000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "crm",
+          "client_type": "sme"
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      },
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Conversion & lifecycle analysis using HubSpot API.",
+        "unit_amount": 100000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "crm",
+          "client_type": "enterprise"
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Lead Gen Setup Fee",
+    "description": "Setup",
+    "prices": [
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Setup",
+        "unit_amount": 20000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "setup",
+          "client_type": "all"
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Ad Campaign Performance Snapshot",
+    "description": "Metrics across Google Ads & Meta Ads.",
+    "prices": [
+      {
+        "tax_code": "txcd_10701000",
+        "description": "Metrics across Google Ads & Meta Ads.",
+        "unit_amount": 50000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "ads",
+          "client_type": "startup"
+        }
+      },
+      {
+        "tax_code": "txcd_10701000",
+        "description": "Metrics across Google Ads & Meta Ads.",
+        "unit_amount": 90000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "ads",
+          "client_type": "sme"
+        }
+      },
+      {
+        "tax_code": "txcd_10701000",
+        "description": "Metrics across Google Ads & Meta Ads.",
+        "unit_amount": 150000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "ads",
+          "client_type": "enterprise"
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Ad Campaign Setup Fee",
+    "description": "Setup",
+    "prices": [
+      {
+        "tax_code": "txcd_10701000",
+        "description": "Setup",
+        "unit_amount": 30000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "setup",
+          "client_type": "all"
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Brand Sentiment & Reputation Monitoring",
+    "description": "Brand health via reviews, social & NLP.",
+    "prices": [
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Brand health via reviews, social & NLP.",
+        "unit_amount": 40000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "brand",
+          "client_type": "startup"
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      },
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Brand health via reviews, social & NLP.",
+        "unit_amount": 80000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "brand",
+          "client_type": "sme"
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      },
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Brand health via reviews, social & NLP.",
+        "unit_amount": 140000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "recurring",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "brand",
+          "client_type": "enterprise"
+        },
+        "recurring": {
+          "interval": "month",
+          "interval_count": 1,
+          "usage_type": "licensed"
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Brand Setup Fee",
+    "description": "Setup",
+    "prices": [
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Setup",
+        "unit_amount": 25000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "setup",
+          "client_type": "all"
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Competitor Marketing Benchmark",
+    "description": "Audit of keyword gaps, traffic, and ad strategy.",
+    "prices": [
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Audit of keyword gaps, traffic, and ad strategy.",
+        "unit_amount": 50000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "competitive",
+          "client_type": "startup"
+        }
+      },
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Audit of keyword gaps, traffic, and ad strategy.",
+        "unit_amount": 100000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "competitive",
+          "client_type": "sme"
+        }
+      },
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Audit of keyword gaps, traffic, and ad strategy.",
+        "unit_amount": 180000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "competitive",
+          "client_type": "enterprise"
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Competitor Benchmark Setup Fee",
+    "description": "Setup",
+    "prices": [
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Setup",
+        "unit_amount": 30000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "setup",
+          "client_type": "all"
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Sustainability Campaign Audit",
+    "description": "Measure CO2 impact, SDG alignment, and messaging.",
+    "prices": [
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Measure CO2 impact, SDG alignment, and messaging.",
+        "unit_amount": 60000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "sustainability",
+          "client_type": "startup"
+        }
+      },
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Measure CO2 impact, SDG alignment, and messaging.",
+        "unit_amount": 120000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "sustainability",
+          "client_type": "sme"
+        }
+      },
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Measure CO2 impact, SDG alignment, and messaging.",
+        "unit_amount": 200000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "sustainability",
+          "client_type": "enterprise"
+        }
+      }
+    ]
+  },
+  {
+    "product_name": "Sustainability Audit Setup Fee",
+    "description": "Setup",
+    "prices": [
+      {
+        "tax_code": "txcd_20060055",
+        "description": "Setup",
+        "unit_amount": 30000,
+        "currency": "gbp",
+        "billing_scheme": "per_unit",
+        "tax_behavior": "exclusive",
+        "type": "",
+        "tiers_mode": null,
+        "metadata": {
+          "category": "setup",
+          "client_type": "all"
+        }
+      }
+    ]
+  }
+]

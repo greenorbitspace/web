@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.astro';
+import OrganisationsList from '../components/OrganisationsList.jsx';
+import allOrganisations from '../data/organisations.json';
+
+// Filter to suppliers only (still server-side)
+const suppliers = allOrganisations.filter(org => org.Type === 'supplier');
+
+// Sort alphabetically
+const sortedSuppliers = suppliers.slice().sort((a, b) =>
+  (a.Organisation ?? '').localeCompare(b.Organisation ?? '')
+);
+---
+
+<Layout title="suppliers" description="Explore our strategic and delivery suppliers in the space sector.">
+  <Header />
+
+  <main class="py-12 max-w-6xl mx-auto px-4">
+    <HeroSection 
+      title="Suppliers" 
+      description="Explore our strategic and delivery suppliers in the space sector." 
+    />
+
+    <!-- Hydrated client-side component -->
+    <section class="mt-8">
+      <OrganisationsList organisations={sortedSuppliers} client:load />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

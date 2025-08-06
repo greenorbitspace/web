@@ -1,0 +1,147 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.astro';
+---
+
+<Layout title="Privacy Policy">
+  <Header />
+
+  <main class="py-8">
+    <HeroSection 
+      title="Privacy Policy" 
+      description="Your privacy matters. Here's how we handle your data at Green Orbit Digital."
+    />
+
+    <section class="py-16 bg-white dark:bg-secondary-500">
+      <div class="container-custom">
+        <article class="prose prose-lg dark:prose-invert max-w-4xl mx-auto">
+
+          <p class="mb-8 text-gray-600 dark:text-white">Effective Date: 30 July 2025</p>
+
+          <h2 class="mt-10 mb-4">1. Who We Are</h2>
+          <p class="mb-8">
+            <strong>Green Orbit Digital Ltd</strong> is a private limited company registered in England and Wales (Company No. 15207389). Our registered office is located at DOCK - Space City, 75 Exploration Drive, Leicester LE4 5NU.
+          </p>
+          <p class="mb-8">
+            We act as a data controller under the UK General Data Protection Regulation and are registered with the Information Commissioner’s Office (ICO), Registration Number: ZB640949.
+          </p>
+
+          <h2 class="mt-10 mb-4">2. What Personal Data We Collect</h2>
+          <p class="mb-4">We may collect personal data about you when:</p>
+          <ul class="mb-8 list-disc list-inside space-y-2">
+            <li>You browse our website.</li>
+            <li>Your organisation uses our services.</li>
+          </ul>
+          <p class="mb-4">
+            We use analytics services such as Google Analytics and GoSquared Analytics to understand user behaviour. These services collect information including:
+          </p>
+          <ul class="mb-8 list-disc list-inside space-y-2">
+            <li>Your IP address and referring domain.</li>
+            <li>Device details such as operating system, screen resolution, and browser type.</li>
+            <li>Location, language, and interaction data including pages visited and session duration.</li>
+          </ul>
+          <p class="mb-8">
+            This data is pseudonymised and is not sold. For more details, please review:
+          </p>
+          <ul class="mb-8 list-disc list-inside space-y-2">
+            <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">Google Analytics Privacy Policy</a></li>
+            <li><a href="https://www.gosquared.com/legal/privacy" target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">GoSquared Privacy Policy</a></li>
+          </ul>
+          <p class="mb-8">
+            We also use cookies to improve your experience. For details, see our <a href="/cookie-policy" target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">Cookie Policy</a>.
+          </p>
+
+          <h2 class="mt-10 mb-4">3. How We Use Your Data</h2>
+          <p class="mb-8">
+            We may use your personal data to:
+          </p>
+          <ul class="mb-8 list-disc list-inside space-y-2">
+            <li>Send marketing and promotional messages based on your preferences.</li>
+            <li>Deliver personalised content and advertising, and measure campaign performance.</li>
+          </ul>
+
+          <h2 class="mt-10 mb-4">4. Who We Share Your Data With</h2>
+          <p class="mb-8">
+            Your website data may be shared with third-party partners for analytics and marketing, who process it under their own privacy policies:
+          </p>
+          <ul class="mb-8 list-disc list-inside space-y-2">
+            <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">Google Analytics</a></li>
+            <li><a href="https://www.gosquared.com/legal/privacy" target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">GoSquared</a></li>
+          </ul>
+
+          <h2 class="mt-10 mb-4">5. Data Retention</h2>
+          <p class="mb-8">
+            We retain personal data only as long as necessary for the purposes stated. When no longer needed, data is securely deleted or anonymised. If immediate deletion is not possible (e.g., in backups), data is securely isolated until deletion can occur.
+          </p>
+
+          <h2 class="mt-10 mb-4">6. Data Security</h2>
+          <p class="mb-8">
+            We implement a variety of technical and organisational safeguards, including:
+          </p>
+          <ul class="mb-8 list-disc list-inside space-y-2">
+            <li>Encryption of data at rest and in transit.</li>
+            <li>Role-based access controls and secure password policies.</li>
+            <li>Regular staff training on security and privacy.</li>
+            <li>Automated vulnerability scanning and static code analysis.</li>
+            <li>API key rotation and optional mutual TLS (MTLS) authentication.</li>
+            <li>Privacy by design and data minimisation principles throughout our platform development.</li>
+            <li>Background checks for employees handling sensitive data.</li>
+          </ul>
+
+          <h2 class="mt-10 mb-4">7. Your Privacy Rights</h2>
+          <p class="mb-4">
+            If you are located in the UK, EEA, or Switzerland, you have rights including:
+          </p>
+          <ul class="mb-8 list-disc list-inside space-y-2">
+            <li>Accessing your personal data.</li>
+            <li>Requesting corrections or deletion of your data.</li>
+          </ul>
+          <p class="mb-8">
+            For regulatory concerns, you may contact:
+          </p>
+          <ul class="mb-8 list-disc list-inside space-y-2">
+            <li><a href="http://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm" target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">EEA & UK Data Protection Authorities</a></li>
+            <li><a href="https://www.edoeb.admin.ch/edoeb/en/home.html" target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">Swiss Data Protection Authority</a></li>
+          </ul>
+
+          <h2 class="mt-10 mb-4">8. Do-Not-Track Signals</h2>
+          <p class="mb-8">
+            Some browsers offer “Do-Not-Track” (DNT) settings. Currently, there is no universally accepted standard for responding to DNT signals, so we do not act upon these requests at this time. We will update this policy if standards change.
+          </p>
+
+          <h2 class="mt-10 mb-4">9. Policy Updates</h2>
+          <p class="mb-8">
+            We may update this Privacy Policy occasionally. We will notify you of significant changes where reasonably possible.
+          </p>
+
+          <h2 class="mt-10 mb-4">10. Contact Us</h2>
+          <p class="mb-6">
+            For any questions, concerns, or requests regarding your personal data, please get in touch with us:
+          </p>
+
+        <div class="flex flex-wrap gap-4">
+          <a href="/contact" class="btn-primary">
+            Contact us
+          </a>
+        </div>
+
+          <p class="mt-6 mb-4 text-sm text-gray-600 dark:text-white">
+            Alternatively, you may contact the UK Information Commissioner’s Office directly:
+          </p>
+
+          <address class="not-italic text-sm mb-8">
+            The Information Commissioner’s Office<br />
+            Wycliffe House, Water Lane, Wilmslow, Cheshire, SK9 5AF<br />
+            Phone: 0303 123 1113<br />
+            <a href="https://www.ico.org.uk" target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">www.ico.org.uk</a>
+          </address>
+
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

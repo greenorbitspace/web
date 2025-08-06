@@ -3,63 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import HeroSection from '../components/HeroSection.astro';
-const priceId = Astro.url.searchParams.get('price_id');
+import StripeWrapper from '../components/StripeWrapper.jsx';
 ---
 
 <Layout title="Checkout">
-  <Header />
-
-  <main>
-    <div class="container">
-      <HeroSection 
-        title="Checkout" 
-        description="Choose a plan that fits your mission. All options include a 14-day free trial—no credit card required."
-      />
-
-    {priceId ? (
-      <>
-        <p>You selected a plan with ID: <code>{priceId}</code></p>
-        <button id="checkout-button" class="btn">Proceed to Payment</button>
-      </>
-    ) : (
-      <p>No plan selected. Please return to pricing to choose a plan.</p>
-    )}
-  </main>
-
-  <Footer />
-
-  <script type="module">
-    import { loadStripe } from 'https://js.stripe.com/v3/';
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const priceId = new URLSearchParams(window.location.search).get('price_id');
-      const button = document.getElementById('checkout-button');
-
-      if (!button || !priceId) return;
-
-      button.addEventListener('click', async () => {
-        button.disabled = true;
-        button.textContent = 'Redirecting...';
-
-        try {
-          const response = await fetch('/api/create-checkout-session', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ priceId }),
-          });
-
-          const { sessionId, publicKey, error } = await response.json();
-
-          if (error) throw new Error(error);
-
-          const stripe = await loadStripe(publicKey);
-          await stripe.redirectToCheckout({ sessionId });
-        } catch (err) {
-          alert(`Error: ${err.message}`);
-          button.disabled = false;
-          button.textContent = 'Proceed to Payment';
-        }
-      });
-    });
-  </script>
+  <h1 class="text-3xl font-bold mb-8">Secure Checkout</h1>
+  <StripeWrapper client:load />
 </Layout>

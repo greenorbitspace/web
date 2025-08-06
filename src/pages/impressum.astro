@@ -1,0 +1,132 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.astro';
+---
+
+<Layout title="Impressum">
+  <Header />
+
+  <main class="py-8">
+    <HeroSection 
+      title="Impressum" 
+      description="Your privacy matters. Here's how we handle your data at Green Orbit Digital."
+    />
+
+---
+// This Astro component renders the Impressum page
+---
+
+<section class="py-16 bg-white dark:bg-secondary-500 text-base leading-relaxed">
+  <div class="max-w-4xl mx-auto px-4">
+    <h1 class="text-3xl font-bold mb-8">Impressum</h1>
+
+    <div class="space-y-8">
+
+      <div>
+        <h2 class="text-xl font-semibold mb-2">Green Orbit Digital Ltd</h2>
+        <p>Registered Office:<br />
+        Unit 3, Innovation House<br />
+        12 Space Park Avenue<br />
+        Leicester, LE1 4ST<br />
+        United Kingdom</p>
+        <p class="mt-2">Company Registration Number: 12345678 (England and Wales)<br />
+        VAT Number: GB123456789</p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-semibold mb-2">Contact Information</h2>
+        <p>Phone: +44 (0)116 123 4567<br />
+        Email: <a href="mailto:contact@greenorbit.digital" class="text-blue-600 hover:underline">contact@greenorbit.digital</a><br />
+        Website: <a href="https://greenorbit.space" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">https://greenorbit.space</a></p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-semibold mb-2">Managing Director</h2>
+        <p>Ryan Laird</p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-semibold mb-2">Responsible for Content</h2>
+        <p>Ryan Laird<br />
+        Director &amp; Founder<br />
+        <a href="mailto:contact@greenorbit.digital" class="text-blue-600 hover:underline">contact@greenorbit.digital</a></p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-semibold mb-2">Regulatory Authority</h2>
+        <p>Companies House, UK<br />
+        <a href="https://www.gov.uk/government/organisations/companies-house" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">
+          https://www.gov.uk/government/organisations/companies-house
+        </a></p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-semibold mb-2">Professional Regulations</h2>
+        <p>
+          Green Orbit Digital operates in accordance with UK laws and regulations governing digital marketing and consultancy services.
+          We adhere to data protection regulations under the UK GDPR and the Data Protection Act 2018.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-semibold mb-2">Disclaimer</h2>
+        <p>
+          The information provided on this website is for general informational purposes only. While we strive to keep the information up to date and correct,
+          Green Orbit Digital makes no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability,
+          or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose.
+          Any reliance you place on such information is therefore strictly at your own risk.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-semibold mb-2">Intellectual Property</h2>
+        <p>
+          All content, logos, trademarks, and intellectual property on this website are the property of Green Orbit Digital Ltd or its licensors.
+          Unauthorized use or reproduction of any material is prohibited.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-semibold mb-2">External Links</h2>
+        <p>
+          This website may contain links to external websites for your convenience. Green Orbit Digital does not endorse or take responsibility
+          for the content or availability of these external sites.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-semibold mb-2">Privacy & Data Protection</h2>
+        <p>
+          Please see our <a href="/privacy-policy" class="text-blue-600 hover:underline">Privacy Policy</a> for information on how we collect, use, and protect your personal data.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-semibold mb-2">Complaints & Dispute Resolution</h2>
+        <p>
+          Should you have any complaints about our services or content, please contact us directly at 
+          <a href="mailto:contact@greenorbit.digital" class="text-blue-600 hover:underline"> contact@greenorbit.digital</a>.
+          We are committed to resolving issues amicably and swiftly.
+        </p>
+        <p class="mt-2">
+          For disputes that cannot be resolved amicably, the courts of England and Wales shall have exclusive jurisdiction.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-semibold mb-2">Accessibility Statement</h2>
+        <p>
+          Green Orbit Digital strives to ensure our website is accessible to everyone, including users with disabilities.
+          We are continuously working to improve accessibility standards.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+  </main>
+
+  <Footer />
+</Layout>

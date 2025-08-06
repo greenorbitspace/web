@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.astro';
+import PledgesList from '../components/PledgesList.jsx';
+import allPledges from '../data/pledges.json';
+
+// Sort all entries alphabetically by Name (no filter)
+const sortedPledges = allPledges.slice().sort((a, b) =>
+  (a.Name ?? '').localeCompare(b.Name ?? '')
+);
+---
+
+<Layout title="Pledges" description="Explore the sustainability pledges we’ve committed to as part of our environmental mission.">
+  <Header />
+
+  <main class="py-12 max-w-6xl mx-auto px-4">
+    <HeroSection 
+      title="Our Pledges" 
+      description="Explore the sustainability pledges we’ve committed to as part of our environmental mission." 
+    />
+
+    <!-- Hydrated client-side component -->
+    <section class="mt-8">
+      <PledgesList pledges={sortedPledges} client:load />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

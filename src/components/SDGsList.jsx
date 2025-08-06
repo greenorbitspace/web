@@ -20,8 +20,12 @@ const SDG_COLORS = {
   'peace-justice': '#00689D',
   'partnerships': '#19486A',
 };
+
 const fallbackColor = '#666';
-const CATEGORIES = ['All', ...SDGs.map(sdg => sdg.id.toString())];
+const fallbackIcon = '/icons/sdg-placeholder.svg';
+
+// Modified to include full SDG object
+const CATEGORIES = ['All', ...SDGs.map(sdg => sdg)];
 
 function SDGBadge({ slug, name }) {
   const bgColor = SDG_COLORS[slug] || fallbackColor;
@@ -29,9 +33,8 @@ function SDGBadge({ slug, name }) {
     <span
       style={{ backgroundColor: bgColor }}
       className="inline-block text-white px-3 py-1 rounded font-semibold text-sm select-none"
-      aria-label={`SDG color badge for ${name}`}
+      aria-label={`SDG badge for ${name}`}
       role="img"
-      aria-hidden="false"
     >
       #{slug.replace(/-/g, ' ')}
     </span>
@@ -45,7 +48,7 @@ export default function SDGsList() {
   const filteredSDGs = useMemo(() => {
     const term = searchTerm.toLowerCase();
     return SDGs.filter(({ name, description, id }) => {
-      const matchesCategory = activeCategory === 'All' || id.toString() === activeCategory;
+      const matchesCategory = activeCategory === 'All' || id === activeCategory.id;
       const matchesSearch =
         name.toLowerCase().includes(term) || description.toLowerCase().includes(term);
       return matchesCategory && matchesSearch;
@@ -54,24 +57,52 @@ export default function SDGsList() {
 
   return (
     <section className="space-y-6" aria-label="Sustainable Development Goals List">
-      {/* Filter Buttons */}
-      <div className="flex flex-wrap gap-2 mb-6" role="tablist" aria-label="Filter Sustainable Development Goals">
-        {CATEGORIES.map(cat => (
-          <button
-            key={cat}
-            onClick={() => setActiveCategory(cat)}
-            className={`px-4 py-2 rounded font-semibold transition ${
-              activeCategory === cat
-                ? 'bg-accent-500 text-white'
-                : 'bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-accent-400'
-            }`}
-            aria-pressed={activeCategory === cat}
-            role="tab"
-            tabIndex={activeCategory === cat ? 0 : -1}
-          >
-            {cat === 'All' ? 'All' : `#${cat}`}
-          </button>
-        ))}
+      {/* Filter Buttons with Icons */}
+      <div
+        className="flex flex-wrap gap-3 mb-6"
+        role="tablist"
+        aria-label="Filter Sustainable Development Goals"
+      >
+        <button
+          key="All"
+          onClick={() => setActiveCategory('All')}
+          className={`px-4 py-2 rounded font-semibold flex items-center gap-2 transition ${
+            activeCategory === 'All'
+              ? 'bg-accent-500 text-white'
+              : 'bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-accent-400'
+          }`}
+          aria-pressed={activeCategory === 'All'}
+          role="tab"
+        >
+          All
+        </button>
+
+        {SDGs.map(({ id, slug, name, icon }) => {
+          const isActive = activeCategory?.id === id;
+          const bgColor = SDG_COLORS[slug] || fallbackColor;
+          return (
+            <button
+              key={id}
+              onClick={() => setActiveCategory({ id, slug })}
+              className={`px-3 py-1 rounded flex items-center gap-2 text-sm font-medium transition ${
+                isActive
+                  ? 'bg-accent-500 text-white'
+                  : 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-100 hover:bg-accent-400'
+              }`}
+              aria-pressed={isActive}
+              role="tab"
+            >
+              <img
+                src={icon || fallbackIcon}
+                alt=""
+                className="w-6 h-6"
+                loading="lazy"
+                decoding="async"
+              />
+              <span>{name}</span>
+            </button>
+          );
+        })}
       </div>
 
       {/* Search Input */}
@@ -84,14 +115,14 @@ export default function SDGsList() {
           aria-labelledby="sdg-heading"
           placeholder="Search SDGs..."
           value={searchTerm}
-          onChange={e => setSearchTerm(e.target.value)}
+          onChange={(e) => setSearchTerm(e.target.value)}
           className="border rounded px-4 py-2 w-full max-w-sm focus:outline-none focus:ring-2 focus:ring-accent-500"
           aria-label="Search Sustainable Development Goals"
           role="search"
         />
       </div>
 
-      {/* SDG Cards Grid */}
+      {/* SDG Cards */}
       <ul
         className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
         role="list"
@@ -118,7 +149,7 @@ export default function SDGsList() {
                 >
                   <div className="flex items-center gap-4 mb-4">
                     <img
-                      src={icon}
+                      src={icon || fallbackIcon}
                       alt={`${name} icon`}
                       className="w-14 h-14 flex-shrink-0"
                       loading="lazy"
@@ -132,7 +163,10 @@ export default function SDGsList() {
                       {name}
                     </h3>
                   </div>
-                  <p id={`sdg-desc-${id}`} className="flex-grow text-gray-700 dark:text-gray-300 text-base leading-relaxed">
+                  <p
+                    id={`sdg-desc-${id}`}
+                    className="flex-grow text-gray-700 dark:text-gray-300 text-base leading-relaxed"
+                  >
                     {description}
                   </p>
                   <footer className="mt-6">

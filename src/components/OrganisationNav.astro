@@ -1,0 +1,16 @@
+---
+// OrganisationNav.astro
+const { categories = [], activeCategory = '' } = Astro.props;
+---
+
+<div class="flex flex-wrap gap-4 mt-4" role="tablist">
+  <a href="/organisations" class={`px-4 py-2 rounded ${!activeCategory ? 'bg-accent-500 text-white' : 'bg-gray-200'}`}>All</a>
+  {categories.map(category => (
+    <a
+      href={`/organisations?category=${encodeURIComponent(category)}`}
+      class={`px-4 py-2 rounded ${category === activeCategory ? 'bg-accent-500 text-white' : 'bg-gray-200'}`}
+    >
+      {category}
+    </a>
+  ))}
+</div>

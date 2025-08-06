@@ -14,9 +14,10 @@
     "moduleResolution": "node",
     "target": "esnext",
     "module": "esnext",
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "isolatedModules": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true
+    "strict": true,
+    "jsxImportSource": "react"
   }
 }

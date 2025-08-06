@@ -1,0 +1,16 @@
+---
+// PledgeNav.astro
+const { SDGs = [], activeSDG = '' } = Astro.props;
+---
+
+<div class="flex flex-wrap gap-4 mt-4" role="tablist">
+  <a href="/pledges" class={`px-4 py-2 rounded ${!activeSDG ? 'bg-accent-500 text-white' : 'bg-gray-200'}`}>All</a>
+  {categories.map(SDG => (
+    <a
+      href={`/pledges?SDG=${encodeURIComponent(SDG)}`}
+      class={`px-4 py-2 rounded ${SDG === activeSDG ? 'bg-accent-500 text-white' : 'bg-gray-200'}`}
+    >
+      {SDG}
+    </a>
+  ))}
+</div>
