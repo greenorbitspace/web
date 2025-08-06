@@ -7,7 +7,13 @@ import PricingList from '../components/PricingList.jsx';
 
 import Stripe from 'stripe';
 
-const stripe = new Stripe(import.meta.env.STRIPE_SECRET_KEY, {
+const stripeSecretKey = import.meta.env.STRIPE_SECRET_KEY;
+
+if (!stripeSecretKey) {
+  throw new Error('STRIPE_SECRET_KEY environment variable is not set.');
+}
+
+const stripe = new Stripe(stripeSecretKey, {
   apiVersion: '2022-11-15',
 });
 
@@ -18,7 +24,7 @@ const prices = await stripe.prices.list({
   expand: ['data.product'],
 });
 
-// Map prices grouped by product including category from product metadata
+// Group prices by product and include category from product metadata
 const productsMap = new Map();
 
 for (const price of prices.data) {
@@ -36,7 +42,7 @@ for (const price of prices.data) {
   productsMap.get(product.id).prices.push(price);
 }
 
-// Convert map to sorted array
+// Convert Map to sorted array alphabetically by product_name
 const sortedProducts = Array.from(productsMap.values()).sort((a, b) =>
   a.product_name.localeCompare(b.product_name)
 );
