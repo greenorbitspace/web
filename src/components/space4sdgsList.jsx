@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import space4sdgs from '../data/space4sdgs.json' assert { type: 'json' };
+import space4sdgsInfo from '../data/space4sdgs-info.json';
 import { SDGs } from '../data/sdgs';
 
 const SDG_COLORS = {
@@ -36,9 +36,10 @@ export default function Space4SDGsList() {
 
   const filteredItems = useMemo(() => {
     const term = searchTerm.trim().toLowerCase();
-    if (!term) return space4sdgs;
-    return space4sdgs.filter(({ Space4SDGs = '', Description = '' }) =>
-      `${Space4SDGs} ${Description}`.toLowerCase().includes(term)
+    if (!term) return space4sdgsInfo;
+
+    return space4sdgsInfo.filter(({ initiative = '', description = '' }) =>
+      `${initiative} ${description}`.toLowerCase().includes(term)
     );
   }, [searchTerm]);
 
@@ -70,13 +71,20 @@ export default function Space4SDGsList() {
           aria-relevant="additions removals"
         >
           {filteredItems.map((item, index) => {
-            const sdgId = Number(item.SDGs);
+            // Attempt multiple possible keys for SDG number
+            const rawSdgId = item.sdg ?? item.SDGs ?? item.SDG ?? '';
+            const sdgId = Number(rawSdgId);
+
+            if (isNaN(sdgId)) {
+              console.warn(`Invalid SDG ID at index ${index}:`, rawSdgId);
+            }
+
             const sdg = sdgMap[sdgId];
             const icon = sdg?.icon || fallbackIcon;
-            const name = sdg?.name || `SDG ${sdgId}`;
-            const slug = sdg?.slug || `sdg-${sdgId}`;
+            const name = sdg?.name || `SDG ${sdgId || '?'}`;
+            const slug = sdg?.slug || `sdg-${sdgId || 'unknown'}`;
             const bgColor = SDG_COLORS[slug] || fallbackColor;
-            const linkHref = `https://sdgs.greenorbit.space/${sdgId}`;
+            const linkHref = sdgId ? `https://sdgs.greenorbit.space/${sdgId}` : '#';
 
             return (
               <li
@@ -87,7 +95,7 @@ export default function Space4SDGsList() {
                   className="flex flex-col h-full justify-between"
                   aria-labelledby={`sdg-title-${index}`}
                 >
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-4 mb-2">
                     <a href={linkHref} target="_blank" rel="noopener noreferrer">
                       <img
                         src={icon}
@@ -111,8 +119,8 @@ export default function Space4SDGsList() {
                     </h3>
                   </div>
 
-                  <p className="text-gray-800 dark:text-white text-base">
-                    {item.Space4SDGs}
+                  <p className="text-gray-800 dark:text-white text-base mt-0 mb-4">
+                    {item.initiative || item.Space4SDGs || 'No description'}
                   </p>
 
                   <footer>
@@ -123,7 +131,7 @@ export default function Space4SDGsList() {
                       className="inline-block px-3 py-1 text-sm font-semibold text-white rounded"
                       style={{ backgroundColor: bgColor }}
                     >
-                      SDG {sdgId}
+                      SDG {sdgId || '?'}
                     </a>
                   </footer>
                 </article>
