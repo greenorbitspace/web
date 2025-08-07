@@ -14,6 +14,14 @@ tags:
 pubdate: '2024-02-01T15:51:00.000+00:00'
 categories:
 - news
+organisations:
+  - European Association of Remote Sensing Companies
+SDGs:
+  - 9
+  - 13
+  - 14
+  - 15
+  - 17
 name: Green Orbit Digital Joins EARSC to Promote the Benefits of Earth Observation
   Data for Sustainability
 exerpt: "Green Orbit Digital is proud to announce its membership with the European Association of Remote Sensing Companies (EARSC). This membership underscores Green Orbit Digital’s commitment to advancing the use of EO data to drive sustainability initiatives across various sectors."

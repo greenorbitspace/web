@@ -11,6 +11,16 @@ tags:
 pubdate: '2024-04-03T19:26:00.000+00:00'
 categories:
 - blog
+organisations:
+  - Dark Sky International
+SDGs:
+  - 3
+  - 7
+  - 9
+  - 11
+  - 12
+  - 15
+  - 17
 name: 'Celebrating International Dark Sky Week: Embracing Dark and Quiet Skies'
 exerpt: "International Dark Sky Week is a global celebration of the dark and natural night—a time to appreciate the beauty and importance of our unadulterated skies. In a world where artificial light pervades every corner of our existence, the natural darkness of night often goes unnoticed, misunderstood, or even feared."
 ---

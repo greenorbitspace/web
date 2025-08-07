@@ -9,11 +9,19 @@ featured: false
 author: Ryan Laird
 tags:
 - sustainable development
-- sustainable web mainfesto
 - sustanable marketing strategy
 pubdate: '2024-05-30T16:08:00.000+00:00'
 categories:
 - news
+pledges:
+  - Sustainable Web Manifesto
+organisations:
+  - Sustainable Web Manifesto
+SDGs:
+  - 7
+  - 12
+  - 13
+  - 17
 name: 'Charting a Greener Digital Future: Green Orbit Digital Signs the Sustainable
   Web Manifesto'
 exerpt: "This manifesto, a public declaration of our shared commitment to creating a sustainable internet, underscores the vital importance of reducing the environmental impact of digital activities."

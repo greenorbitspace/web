@@ -12,6 +12,11 @@ tags:
 pubdate: '2025-01-09T11:36:00.000+00:00'
 categories:
 - blog
+SDGs:
+  - 9
+  - 11
+  - 15
+  - 17
 name: 'Celebrating the International Year of Cooperatives 2025: A Vision for a Better
   World with Space Technology'
 exerpt: "As we look ahead to 2025, the world will celebrate the United Nations’ declaration of the International Year of Cooperatives (IYC 2025). This significant year highlights the crucial role that cooperatives play in achieving the United Nations Sustainable Development Goals (SDGs), with the theme “Cooperatives Build a Better World.” At the intersection of cooperative development and sustainable innovation, space technology offers unique opportunities to help build a more inclusive, resilient, and environmentally conscious future for all."

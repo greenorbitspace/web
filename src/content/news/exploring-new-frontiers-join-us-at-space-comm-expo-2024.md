@@ -12,6 +12,12 @@ tags:
 pubdate: '2024-02-27T15:53:00.000+00:00'
 categories:
 - news
+organisations:
+  - Space-Comm Expo
+SDGs:
+  - 8
+  - 9
+  - 17
 name: 'Exploring New Frontiers: Join Us at Space-Comm Expo 2024'
 exerpt: "We’re thrilled to announce that Green Orbit Digital will be attending the upcoming Space-Comm Expo, the premier event that brings together the entire spectrum of space, aerospace, defence, and technology industries."
 ---
@@ -31,7 +37,3 @@ According to the ADS Group’s Space Outlook 2023, the UK’s space industry con
 If you share our enthusiasm for the intersection of technology, sustainability, and the boundless possibilities of space, we invite you to connect with Green Orbit Digital at Space-Comm Expo. 
 
 Let’s explore how we can collaborate, innovate, and contribute to the future of space exploration. Feel free to schedule a meeting with us below. We look forward to meeting you at Space-Comm Expo 2024 and embarking on a journey to new frontiers together!
-
-Calendly inline widget begin
-
-Calendly inline widget end

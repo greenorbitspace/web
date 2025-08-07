@@ -14,6 +14,12 @@ pubdate: '2024-04-07T15:55:00.000+00:00'
 categories:
 - news
 - press
+organisations:
+  - GoSquared
+SDGs:
+  - 7
+  - 12
+  - 17
 name: Green Orbit Digital Takes Sustainability to New Heights on The Ecosend Podcast
 exerpt: "Green Orbit Digital is thrilled to announce our recent appearance on The Ecosend Podcast by GoSquared. In this exciting episode, our director, Ryan Laird, delved into the fascinating intersection of sustainability, space technology, and satellite management."
 ---

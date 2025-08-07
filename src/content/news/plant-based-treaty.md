@@ -9,6 +9,16 @@ author: Ryan Laird
 pubdate: '2024-12-23T19:18:00.000+00:00'
 categories:
 - news
+pledges:
+  - Plant-Based Treaty
+organisations:
+  - Plant-Based Treaty
+SDGs:
+  - 2
+  - 3
+  - 12
+  - 13
+  - 17
 name: 'Endorsing the Plant Based Treaty: A Path to Sustainable Change'
 exerpt: "In a landmark commitment to environmental responsibility, Green Orbit Digital has proudly endorsed the Plant Based Treaty, aligning with its mission to drive eco-conscious innovation in the space industry. This endorsement represents a firm stand against environmental degradation and an embrace of sustainable practices both within and beyond the company’s digital marketing services."
 ---

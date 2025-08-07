@@ -13,6 +13,9 @@ sdgs:
 pubdate: '2025-01-24T11:37:00.000+00:00'
 categories:
 - blog
+SDGs:
+  - 11
+  - 13
 name: 'Tackling Climate Anxiety: Communicating Hope and Action in a Time of Urgency'
 ---
 

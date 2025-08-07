@@ -1,0 +1,36 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import PledgesList from '../../components/PledgesList.jsx';
+import { getCollection } from 'astro:content';
+
+const pledgesCollection = await getCollection('pledges');
+
+const sortedPledges = pledgesCollection
+  .map(post => ({
+    ...post.data,
+    slug: post.data.slug ?? post.slug, // Ensure slug present
+  }))
+  .filter(post => post.name) // filter out any without name
+  .sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }));
+---
+
+<Layout title="Pledges" description="Explore the sustainability pledges we’ve committed to as part of our environmental mission.">
+  <Header />
+
+  <main class="py-12 max-w-6xl mx-auto px-4">
+    <HeroSection 
+      title="Our Pledges" 
+      description="Explore the sustainability pledges we’ve committed to as part of our environmental mission." 
+    />
+
+    <!-- Hydrated client-side component -->
+    <section class="mt-8">
+      <PledgesList pledges={sortedPledges} client:load />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

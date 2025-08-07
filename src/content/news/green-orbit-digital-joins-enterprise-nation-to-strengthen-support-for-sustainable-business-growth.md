@@ -12,6 +12,10 @@ categories:
 - news
 name: Green Orbit Digital Joins Enterprise Nation to Strengthen Support for Sustainable
   Business Growth
+organisations:
+  - Enterprise Action
+SDGs:
+  - 9
 exerpt: "Green Orbit Digital, a sustainable marketing agency committed to driving innovation through space-enabled and climate-conscious strategies, is proud to announce its official membership with Enterprise Nation, the UK’s leading support network for small businesses"
 ---
 

@@ -1,0 +1,27 @@
+---
+const companyName = "Green Orbit Digital";
+const contactEmail = "hr@greenorbit.space";
+const disabilityPledgeUrl = "/pledges/disability-confident";
+const recruitmentPrivacyPolicyUrl = "/recruitment-privacy-policy";
+const equalOpportunitiesUrl = "/equal-opportunities";
+---
+
+      <section>
+        <h2 class="text-2xl font-semibold mb-2">Further Information</h2>
+  
+  <p>
+    {companyName} is committed to promoting equal opportunities and fostering an inclusive recruitment process. We welcome applications from all sections of the community and believe in fair treatment for all candidates regardless of age, disability, gender reassignment, marriage and civil partnership, pregnancy and maternity, race, religion or belief, sex, or sexual orientation.
+  </p>
+  
+  <p>
+    We are proud to support the <a href={disabilityPledgeUrl} target="_blank" rel="noopener noreferrer" class="text-accent-600 underline">Disability Confident Committed</a> pledge, ensuring our recruitment and employment practices are accessible and inclusive to candidates with disabilities.
+  </p>
+  
+  <p>
+    For details on how we handle your personal data during recruitment, please see our <a href={recruitmentPrivacyPolicyUrl} class="text-accent-600 underline">Recruitment Privacy Policy</a>. Our full <a href={equalOpportunitiesUrl} class="text-accent-600 underline">Equal Opportunities Statement</a> is also available online.
+  </p>
+  
+  <p>
+    For recruitment inquiries or assistance, please contact us at <a href={`mailto:${contactEmail}`} class="text-accent-600 underline">{contactEmail}</a>.
+  </p>
+</section>

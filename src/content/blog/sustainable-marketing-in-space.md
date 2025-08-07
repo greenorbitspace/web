@@ -11,6 +11,9 @@ tags:
 pubdate: '2023-10-17T11:00:00.000+00:00'
 categories:
 - blog
+SDGs:
+  - 13
+  - 17
 name: 'Sustainable Marketing in Space: Paving the Way to a Greener Future'
 ---
 

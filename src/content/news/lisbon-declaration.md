@@ -9,9 +9,20 @@ featured: false
 author: Ryan Laird
 tags:
 - sustainable development
+- Portugal
+- Lisbon Declaration
 pubdate: '2024-05-15T12:16:00.000+00:00'
 categories:
 - news
+organisations:
+  - UNOOSA
+  - Portuguese Space Agency
+SDGs:
+  - 9
+  - 12
+  - 13
+  - 16
+  - 17
 name: Green Orbit Digital Highlights Importance of Effective Communication at UN/Portugal
   Conference
 exerpt: "Green Orbit Digital Highlights Importance of Effective Communication at UN/Portugal Conference Green Orbit Digital proudly participated in the Management and Sustainability of Outer Space Activities Conference, held on 14-15 May."

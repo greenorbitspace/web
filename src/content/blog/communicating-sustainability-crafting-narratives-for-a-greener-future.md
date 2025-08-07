@@ -11,6 +11,10 @@ tags:
 pubdate: '2024-06-02T16:40:00.000+00:00'
 categories:
 - blog
+SDGs:
+  - 9
+  - 13
+  - 17
 name: 'Communicating Sustainability: Crafting Narratives for a Greener Future'
 exerpt: "In an era where sustainability has become a mainstream topic, we find ourselves at a critical juncture. Climate change, biodiversity loss, and environmental degradation have permeated our everyday conversations, through the fabric of both business and society. As we navigate these challenges, one truth becomes increasingly evident: sustainability is not just an environmental issue; it’s a communication challenge with profound implications for people, planet, and profit."
 ---

@@ -16,6 +16,11 @@ tags:
 pubdate: '2024-12-31T20:20:00.000+00:00'
 categories:
 - blog
+SDGs:
+  - 9
+  - 12
+  - 13
+  - 17
 name: '2024 in Review: A Landmark Year for Sustainable Space'
 exerpt: "The year 2024 marked a significant period of transformation for the space sector, driven by innovative technologies, global collaborations, and a concerted focus on sustainability."
 ---

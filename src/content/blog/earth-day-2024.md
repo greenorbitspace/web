@@ -14,6 +14,13 @@ tags:
 pubdate: '2024-04-22T09:00:00.000+00:00'
 categories:
 - blog
+organisations:
+  - Earth Day
+SDGs:
+  - 11
+  - 12
+  - 13
+  - 17
 name: 'Earth Day 2024: Championing the Planet vs. Plastics'
 exerpt: "Earth Day 2024: Championing the Planet vs. Plastics On 22 April 1970, millions of people across the United States united for the first Earth Day, marking the birth of the […]"
 ---

@@ -15,6 +15,12 @@ tags:
 pubdate: '2024-12-03T16:39:00.000+00:00'
 categories:
 - news
+organisations:
+  - Department for Work and Pensions
+SDGs:
+  - 3
+  - 10
+  - 16
 name: Green Orbit Digital Announces Disability Confident Commitment on International
   Day of Persons with Disabilities
 exerpt: "Green Orbit Digital Announces Disability Confident Commitment on International Day of Persons with Disabilities This International Day of Persons with Disabilities (IDPWD), Green Orbit Digital is proud to announce its […]"

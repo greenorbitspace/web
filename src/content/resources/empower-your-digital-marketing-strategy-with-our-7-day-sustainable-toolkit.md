@@ -11,6 +11,9 @@ tags:
 pubdate: '2024-04-18T14:22:00.000+00:00'
 categories:
 - resources
+SDGs:
+  - 4
+  - 13
 name: Empower Your Digital Marketing Strategy with our 7-Day Sustainability Toolkit
 exerpt: "At Green Orbit Digital, we understand the importance of effective, eco-conscious marketing. That’s why we’ve curated this comprehensive toolkit, designed to empower businesses like yours to succeed in the digital realm while minimising their environmental impact."
 ---

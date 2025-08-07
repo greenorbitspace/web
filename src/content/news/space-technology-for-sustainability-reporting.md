@@ -10,6 +10,14 @@ author: Ryan Laird
 pubdate: '2025-05-17T11:44:00.000+00:00'
 categories:
 - news
+organisations:
+  - TNFD Forum
+SDGs:
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
 name: Green Orbit Digital Joins TNFD Forum, Expands Commitment to Nature-Positive
   Outcomes
 exerpt: "Green Orbit Digital has joined the Taskforce on Nature-related Financial Disclosures (TNFD) Forum to advocate for the use of space technology in sustainability reporting."

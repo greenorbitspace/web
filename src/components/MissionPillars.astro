@@ -1,0 +1,19 @@
+---
+import missionPillars from '../data/mission-pillars.json' assert { type: 'json' };
+---
+
+<section class="max-w-6xl mx-auto px-4 py-12">
+  <h2 class="text-3xl font-bold text-accent-600 mb-8 text-center">Our Mission Pillars</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+    {missionPillars.map((pillar) => (
+      <article class="border rounded-lg p-6 shadow-sm hover:shadow-md transition bg-white dark:bg-secondary-800" key={pillar.Name}>
+        <h3 class="text-xl font-semibold text-accent-500 mb-3">{pillar.Name}</h3>
+        {pillar.CSR && pillar.CSR.trim() !== '' && (
+          <p class="text-sm font-semibold text-accent-700 mb-2">CSR: {pillar.CSR}</p>
+        )}
+        <p class="text-gray-700 dark:text-gray-300 whitespace-pre-line">{pillar.Text}</p>
+      </article>
+    ))}
+  </div>
+</section>

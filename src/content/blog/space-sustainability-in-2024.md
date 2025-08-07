@@ -15,6 +15,9 @@ tags:
 pubdate: '2024-12-31T20:41:00.000+00:00'
 categories:
 - blog
+SDGs:
+  - 13
+  - 17
 name: 'Space Sustainability in 2024: Marketing as the Catalyst'
 ---
 

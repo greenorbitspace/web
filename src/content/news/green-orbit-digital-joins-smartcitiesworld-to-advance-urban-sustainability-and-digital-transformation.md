@@ -10,6 +10,14 @@ author: Ryan Laird
 pubdate: '2025-05-22T12:00:00.000+00:00'
 categories:
 - news
+organisations:
+  - SmartCitiesWorld
+SDGs:
+  - 9
+  - 11
+  - 12
+  - 13
+  - 17
 name: Green Orbit Digital Joins SmartCitiesWorld to Advance Urban Sustainability and
   Digital Transformation
 ---

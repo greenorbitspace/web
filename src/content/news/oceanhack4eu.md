@@ -14,6 +14,15 @@ tags:
 pubdate: '2024-06-03T08:00:00.000+00:00'
 categories:
 - news
+organisations:
+  - Mercator Ocean
+  - Copernicus EU
+  - EUMETSAT
+SDGs:
+  - 6
+  - 9
+  - 14
+  - 16
 name: 'Championing Sustainability at #OceanHack4EU'
 exerpt: "Green Orbit Digital is proud to participate in the prestigious #OceanHack4EU hackathon. Our involvement underscores our dedication to leveraging technology and creativity to address critical environmental challenges. This year, we bring forward the idea of Ocean Explorer—a unique fusion of cutting-edge digital tools and sustainability-focused education."
 ---

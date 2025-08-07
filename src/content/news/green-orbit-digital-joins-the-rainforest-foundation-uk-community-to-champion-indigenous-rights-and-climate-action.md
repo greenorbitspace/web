@@ -10,6 +10,13 @@ author: Ryan Laird
 pubdate: '2025-05-19T14:30:00.000+00:00'
 categories:
 - news
+organisations:
+  - Rainforest Foundation UK
+SDGs:
+  - 13
+  - 15
+  - 16
+  - 17
 name: Green Orbit Digital Joins the Rainforest Foundation UK Community to Champion
   Indigenous Rights and Climate Action
 ---

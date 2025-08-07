@@ -14,6 +14,14 @@ tags:
 pubdate: '2024-09-16T22:27:00.000+00:00'
 categories:
 - blog
+organisations:
+  - National Centre for Earth Observation
+SDGs:
+  - 9
+  - 13
+  - 14
+  - 15
+  - 17
 name: 'How Earth Observation Data is Revolutionising Sustainable Marketing and Consumer
   Behaviour: Key Insights from NEOC 2024'
 exerpt: "By leveraging real-time environmental insights, businesses can create impactful campaigns, enhance transparency, and drive meaningful consumer behaviour change. Learn how these strategies are shaping the future of eco-conscious marketing."

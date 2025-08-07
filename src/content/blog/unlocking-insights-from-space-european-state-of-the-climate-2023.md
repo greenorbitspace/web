@@ -14,6 +14,12 @@ tags:
 pubdate: '2024-05-08T15:58:00.000+00:00'
 categories:
 - blog
+organisations:
+  - European Centre for Medium-Wave Forecasting
+SDGs:
+  - 9
+  - 13
+  - 17
 name: 'Unlocking Insights from Space: European State of the Climate 2023'
 ---
 

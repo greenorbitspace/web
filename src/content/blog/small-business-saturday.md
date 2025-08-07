@@ -11,6 +11,13 @@ tags:
 pubdate: '2024-12-07T21:06:00.000+00:00'
 categories:
 - blog
+organisations:
+  - Small Business Saturday
+SDGs:
+  - 8
+  - 9
+  - 11
+  - 17
 name: 'Small Business Saturday: Supporting Local Enterprises for a Sustainable Future'
 ---
 

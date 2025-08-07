@@ -10,6 +10,14 @@ author: Ryan Laird
 pubdate: '2025-02-14T11:33:00.000+00:00'
 categories:
 - news
+organisations:
+  - SpaceProjects.UK
+  - UKSEDS
+  - Space Universities Network
+SDGs:
+  - 4
+  - 13
+  - 17
 name: Green Orbit Digital Partners with SpaceProjects.uk to Offer Remote Student Opportunity
   in Space Sustainability Communication
 ---

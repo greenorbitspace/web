@@ -8,10 +8,15 @@ featured: false
 author: Ryan Laird
 tags:
 - world space forum
-- united nations
 pubdate: '2024-12-04T16:26:00.000+00:00'
 categories:
 - blog
+organisations:
+  - United Nations
+SDGs:
+  - 13
+  - 16
+  - 17
 name: Insights from the World Space Forum 2024
 ---
 

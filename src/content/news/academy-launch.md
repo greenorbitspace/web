@@ -11,6 +11,13 @@ tags:
 pubdate: '2024-12-20T15:52:00.000+00:00'
 categories:
 - news
+organisations:
+  - Green Orbit Academy
+SDGs:
+  - 4
+  - 8
+  - 9
+  - 17
 name: 'Green Orbit Academy: Shaping the Future of Sustainable Space'
 excerpt: "With a mission to redefine space exploration through ethical and sustainable practices, the Academy empowers professionals and businesses to innovate in this dynamic sector while prioritising environmental stewardship."
 ---

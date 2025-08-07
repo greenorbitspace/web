@@ -1,0 +1,167 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import { getCollection } from 'astro:content';
+import { SDGs } from '../../data/sdgs'; // Adjust path as needed
+
+export async function getStaticPaths() {
+  const pledges = await getCollection('pledges');
+  return pledges.map(pledge => ({
+    params: { pledge: pledge.slug ?? pledge.id },
+  }));
+}
+
+const { pledge } = Astro.params;
+const pledges = await getCollection('pledges');
+const pledgeEntry = pledges.find(p => p.slug === pledge || p.id === pledge);
+
+if (!pledgeEntry) throw new Error(`No pledge post found for: "${pledge}"`);
+
+const { Content } = await pledgeEntry.render();
+const data = pledgeEntry.data;
+
+const formattedDate = data.pubdate
+  ? new Date(data.pubdate).toLocaleDateString('en-GB', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    })
+  : null;
+
+// Create a lookup map for SDG codes (e.g., "SDG 01") to SDG metadata
+const sdgMap = SDGs.reduce((acc, sdg) => {
+  const sdgCode = `SDG ${String(sdg.id).padStart(2, '0')}`;
+  acc[sdgCode.toUpperCase()] = sdg;
+  return acc;
+}, {});
+
+// Normalize SDGs for display and icons
+let sdgCodes = [];
+if (Array.isArray(data.SDGs)) {
+  sdgCodes = data.SDGs
+    .filter((sdgNum) => typeof sdgNum === 'number')
+    .map((sdgNum) => `SDG ${String(sdgNum).padStart(2, '0')}`);
+} else if (typeof data.SDGs === 'number') {
+  sdgCodes = [`SDG ${String(data.SDGs).padStart(2, '0')}`];
+}
+---
+
+<Layout title={data.name || data.title || 'Pledge'}>
+  <Header />
+
+  <main class="py-12">
+    <HeroSection
+      title={data.name || data.title}
+      description="Explore our latest pledge content."
+    />
+
+    <section class="prose dark:prose-invert max-w-4xl mx-auto px-4 py-12">
+      <article>
+        <header class="mb-8">
+          <h1 class="text-4xl font-bold text-accent-500 mb-4">{data.name || data.title}</h1>
+          {formattedDate && (
+            <p class="text-sm text-gray-400 mb-4">Published on {formattedDate}</p>
+          )}
+
+          {data.organisations && (
+            <p>
+              <strong>Organisation:</strong> {data.organisations}
+            </p>
+          )}
+
+          {data.values && data.values.length > 0 && (
+            <p>
+              <strong>Core Values:</strong> {data.values.join(', ')}
+            </p>
+          )}
+
+          {sdgCodes.length > 0 && (
+            <div>
+              <strong>Related SDGs:</strong>
+              <div class="flex flex-wrap mt-2 gap-2">
+                {sdgCodes.map((code) => {
+                  const sdgData = sdgMap[code];
+                  if (!sdgData) return null;
+
+                  // Define sdgNumber here to extract the numeric SDG id for the URL
+                  const sdgNumber = Number(code.split(' ')[1]);
+
+                  return (
+                    <a
+                      href={`https://sdgs.greenorbit.space/${sdgNumber}/`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="group"
+                      aria-label={`View details about ${sdgData.name}`}
+                      key={code}
+                    >
+                      <img
+                        src={sdgData.icon}
+                        alt={sdgData.name}
+                        class="w-10 h-10 rounded-sm border border-gray-300 dark:border-gray-600"
+                      />
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+        </header>
+        
+        {data.why && (
+          <section class="mb-6">
+            <h2 class="text-2xl font-semibold mb-2">Why We Support It</h2>
+            <p>{data.why}</p>
+          </section>
+        )}
+
+        {data.how && (
+          <section class="mb-6">
+            <h2 class="text-2xl font-semibold mb-2">How We Support It</h2>
+            <p>{data.how}</p>
+          </section>
+        )}
+
+        {data.commitments && data.commitments.length > 0 && (
+          <section class="mb-6">
+            <h2 class="text-2xl font-semibold mb-2">Commitments</h2>
+            <ul class="list-disc list-inside">
+              {data.commitments.map((commitment) => (
+                <li key={commitment}>{commitment}</li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {data.CSR && data.CSR.trim() !== '' && (
+          <section class="mb-6">
+            <h2 class="text-2xl font-semibold mb-2">CSR</h2>
+            <p>{data.CSR}</p>
+          </section>
+        )}
+
+        <Content />
+
+          {data.URL && (
+    <div class="mt-8 text-center">
+      <a
+        href={data.URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        role="button"
+        title={`Visit external pledge resource`}
+        aria-label={`Learn more about the ${data.name || data.title || 'pledge'}`}
+        class="btn-primary no-underline"
+      >
+        Learn more about the {data.name || data.title || 'pledge'}
+      </a>
+    </div>
+      )}
+      </article>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

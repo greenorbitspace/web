@@ -9,6 +9,9 @@ author: Ryan Laird
 pubdate: '2024-12-30T16:45:00.000+00:00'
 categories:
 - resources
+SDGs:
+  - 4
+  - 13
 name: Top 24 Books on Space Sustainability 2024
 exerpt: "We’ve curated a list of 24 standout books from 2024 that delve into the intersection of space exploration, climate action, and environmental sustainability."
 ---

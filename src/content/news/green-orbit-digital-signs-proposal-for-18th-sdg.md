@@ -13,6 +13,11 @@ tags:
 pubdate: '2024-04-17T10:56:00.000+00:00'
 categories:
 - news
+organisations:
+  - Space Renaissance International
+SDGs:
+  - 16
+  - 17
 name: Green Orbit Digital Endorses Proposal for 18th SDG
 exerpt: "Green Orbit Digital is proud to announce its endorsement of the proposal to introduce an 18th Sustainable Development Goal (SDG)."
 ---

@@ -12,6 +12,13 @@ tags:
 pubdate: '2024-05-16T21:38:00.000+00:00'
 categories:
 - blog
+SDGs:
+  - 7
+  - 9
+  - 11
+  - 12
+  - 15
+  - 17
 name: Celebrating the International Day of Light
 exerpt: "Today, as we mark the International Day of Light, we honour the significance of light in our lives and its profound impact on our planet. "
 ---

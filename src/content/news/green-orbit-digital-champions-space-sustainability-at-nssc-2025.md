@@ -9,6 +9,12 @@ author: Ryan Laird
 pubdate: '2025-02-28T11:40:00.000+00:00'
 categories:
 - news
+organisations:
+  - UKSEDS
+SDGs:
+  - 4
+  - 9
+  - 17
 name: Green Orbit Digital Champions Space Sustainability at NSSC 2025
 exerpt: "Green Orbit Digital is proud to play a leading role at the 37th UKSEDS National Student Space Conference (NSSC 2025), held at the University of Leicester. With a strong focus on sustainability, this year’s conference brings together students, academics, and professionals to shape the future of the space sector."
 ---

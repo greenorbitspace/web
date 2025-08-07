@@ -9,6 +9,13 @@ author: Ryan Laird
 pubdate: '2024-04-23T16:10:00.000+00:00'
 categories:
 - news
+organisations:
+  - UK Space Agency
+  - Exotopic
+SDGs:
+  - 8
+  - 9
+  - 17
 name: Green Orbit Digital Selected for UK Space Agency Accelerator’s Explore Programme
 exerpt: "Green Orbit Digital, a pioneering digital marketing agency committed to sustainability, is thrilled to announce its acceptance onto the Explore Programme of the UK Space Agency Accelerator."
 ---

@@ -11,6 +11,9 @@ tags:
 pubdate: '2023-10-18T11:00:00.000+00:00'
 categories:
 - blog
+SDGs:
+  - 12
+  - 13
 name: 'Greenwashing in the Space Industry: Beyond the Stars, Behind the Claims'
 exerpt: "The rapid advancement of space technology has opened up new frontiers for humanity, igniting dreams of exploring distant galaxies and harnessing the boundless resources of the cosmos. While the achievements of the space industry are awe-inspiring, they come with responsibilities that extend far beyond our planet. As sustainability and eco-consciousness gain traction on Earth, it’s crucial that these principles are not left behind when we venture into space. But there’s a growing concern: the rise of greenwashing in the space industry."
 ---

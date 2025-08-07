@@ -13,6 +13,14 @@ tags:
 pubdate: '2024-09-16T15:25:00.000+00:00'
 categories:
 - news
+pledges:
+  - SDG18
+organisations:
+  - Space Renaissance Society
+  - United Nations
+SDGs:
+  - 16
+  - 17
 name: Green Orbit Digital Joins Space 18th SDG Coalition at United Nations Workshop
   on Sustainable Space Development
 exerpt: "Join Green Orbit Digital as we take part in the prestigious Space 18th SDG Coalition’s United Nations Workshop, where global industry leaders and policy influencers will gather to discuss the critical role of space in achieving sustainable development goals. Explore our thought-provoking presentation on engaging stakeholders in sustainable space development, as he shares strategies and best practices for crafting compelling narratives that resonate across different sectors and cultures. Discover how education and awareness can bridge knowledge gaps and promote the idea of space development as a key driver of global sustainability. Don’t miss out on this opportunity to shape a sustainable future for space exploration and development!"

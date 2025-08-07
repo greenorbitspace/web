@@ -9,6 +9,13 @@ author: Ryan Laird
 pubdate: '2025-02-27T11:13:00.000+00:00'
 categories:
 - news
+organisations:
+  - Sustainable Business Alliance
+SDGs:
+  - 8
+  - 9
+  - 13
+  - 17
 name: Green Orbit Digital to Speak at SBA Café on Sustainability in the Space Sector
 ---
 

@@ -9,6 +9,14 @@ author: Ryan Laird
 pubdate: '2024-12-05T14:00:00.000+00:00'
 categories:
 - news
+organisations:
+  - Good Business Foundation
+SDGs:
+  - 8
+  - 9
+  - 11
+  - 16
+  - 17
 name: Green Orbit Digital Achieves Good Business Charter Accreditation
 exerpt: "Green Orbit Digital is proud to announce its accreditation by the Good Business Charter (GBC), joining an esteemed list of organisations, including Aviva, TSB, and Schroders Personal Wealth, recognised for their commitment to responsible business practices."
 ---

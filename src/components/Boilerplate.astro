@@ -1,0 +1,25 @@
+---
+const companyName = "Green Orbit Digital";
+const description = `Green Orbit Digital is a Leicester-based agency specialising in sustainable marketing for the space sector.
+With over a decade of experience, we help organisations leverage innovative, data-driven strategies to amplify their
+impact while championing environmental responsibility.`;
+
+const contactEmail = "contact@greenorbit.space";
+const contactPhone = "+44 116 123 4567";
+const websiteURL = "https://greenorbit.space";
+const logoSrc = "/logo.svg";
+---
+
+<section class="max-w-3xl mx-auto p-6 text-center">
+  <img src={logoSrc} alt={`${companyName} logo`} class="mx-auto mb-4 w-32 h-auto" />
+
+  <h2 class="text-2xl font-semibold mb-3">{companyName}</h2>
+
+  <p class="text-gray-700 mb-4 leading-relaxed">{description}</p>
+
+  <address class="not-italic text-gray-600 mb-2">
+    <a href={`mailto:${contactEmail}`} class="text-accent-600 underline">{contactEmail}</a><br />
+    <a href={`tel:${contactPhone}`} class="text-accent-600 underline">{contactPhone}</a><br />
+    <a href={websiteURL} target="_blank" rel="noopener noreferrer" class="text-accent-600 underline">{websiteURL}</a>
+  </address>
+</section>

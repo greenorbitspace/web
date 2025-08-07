@@ -7,11 +7,18 @@ url: https://greenorbit.space/news/ejis-workshop/
 featured: false
 author: Ryan Laird
 tags:
-- JustSpace Alliance
+- justice
 - sustainable development
 pubdate: '2024-04-23T15:56:00.000+00:00'
 categories:
 - news
+organisations:
+  - JustSpace Alliance
+SDGs:
+  - 5
+  - 10
+  - 16
+  - 17
 name: Green Orbit Digital to Present at Environmental Justice in Space Workshop
 exerpt: "We are excited to announce that we have been selected to present at the Environmental Justice in Space (EJiS) Workshop, hosted by the JustSpace Alliance."
 ---

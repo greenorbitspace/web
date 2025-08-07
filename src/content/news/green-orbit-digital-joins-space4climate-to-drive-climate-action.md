@@ -11,6 +11,12 @@ tags:
 pubdate: '2024-05-08T17:02:00.000+00:00'
 categories:
 - news
+organisations:
+  - Space4Climate
+SDGs:
+  - 9
+  - 13
+  - 17
 name: Green Orbit Digital Joins Space4Climate to Drive Climate Action
 exerpt: "Green Orbit Digital proudly announces its membership of Space4Climate, a leading advocate for leveraging Earth Observation data to combat climate change. "
 ---
