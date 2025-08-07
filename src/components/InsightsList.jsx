@@ -214,7 +214,7 @@ export default function InsightsList({ posts = [] }) {
                       {organisations.map(org => (
                         <span
                           key={org}
-                          className="bg-gray-300 dark:bg-gray-600 text-gray-800 dark:text-gray-200 rounded-full px-3 py-1 text-xs font-medium capitalize"
+                          className="bg-gray-300 dark:bg-accent-500 text-white dark:text-white rounded-full px-3 py-1 text-xs font-medium capitalize"
                         >
                           {org}
                         </span>

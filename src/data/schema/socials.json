@@ -1,0 +1,32 @@
+[
+  {
+    "platform": "LinkedIn",
+    "url": "https://linkedin.com/company/green-orbit-digital",
+    "icon": "linkedin",
+    "sameAs": true
+  },
+  {
+    "platform": "GitHub",
+    "url": "https://github.com/greenorbitspace",
+    "icon": "github",
+    "sameAs": true
+  },
+  {
+    "platform": "X (Twitter)",
+    "url": "https://x.com/greenorbitspace",
+    "icon": "twitter",
+    "sameAs": true
+  },
+  {
+    "platform": "Facebook",
+    "url": "https://facebook.com/greenorbit.space",
+    "icon": "facebook",
+    "sameAs": false
+  }
+  {
+    "platform": "Instagram",
+    "url": "https://instagram.com/greenorbit.space",
+    "icon": "instagram",
+    "sameAs": false
+  }
+]

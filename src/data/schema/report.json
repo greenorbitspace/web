@@ -1,0 +1,109 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Report",
+  "@id": "https://greenorbit.digital/reports/sustainable-marketing-2025",
+  "url": "https://greenorbit.digital/reports/sustainable-marketing-2025",
+  "name": "Sustainable Marketing in the Space Sector: 2025 Impact Report",
+  "alternateName": "2025 Green Orbit Digital Sustainable Marketing Report",
+  "description": "An in-depth analysis of sustainable marketing strategies and their impact on the space sector, aligned with UN SDGs and digital carbon reduction targets.",
+  "datePublished": "2025-08-01T08:00:00+01:00",
+  "dateModified": "2025-08-05T15:30:00+01:00",
+  "author": {
+    "@type": "Person",
+    "name": "Ryan Laird",
+    "jobTitle": "Director and Founder",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Green Orbit Digital",
+      "url": "https://greenorbit.digital"
+    },
+    "url": "https://greenorbit.digital/team/ryan-laird"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Green Orbit Digital",
+    "url": "https://greenorbit.digital",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://greenorbit.digital/logo.svg",
+      "width": 250,
+      "height": 60
+    }
+  },
+  "keywords": [
+    "sustainable marketing",
+    "space sector",
+    "carbon footprint",
+    "UN SDGs",
+    "digital emissions",
+    "eco-friendly marketing"
+  ],
+  "inLanguage": "en-GB",
+  "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "about": {
+    "@type": "Thing",
+    "name": "Sustainable Marketing",
+    "url": "https://greenorbit.digital/sustainable-marketing"
+  },
+  "citation": [
+    {
+      "@type": "CreativeWork",
+      "name": "UN Sustainable Development Goals",
+      "url": "https://sdgs.un.org/goals"
+    },
+    {
+      "@type": "Report",
+      "name": "Digital Carbon Emissions Report 2024",
+      "url": "https://example.org/reports/digital-carbon-2024"
+    }
+  ],
+  "hasPart": [
+    {
+      "@type": "CreativeWork",
+      "name": "Executive Summary",
+      "url": "https://greenorbit.digital/reports/sustainable-marketing-2025#executive-summary"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Methodology",
+      "url": "https://greenorbit.digital/reports/sustainable-marketing-2025#methodology"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Data Analysis",
+      "url": "https://greenorbit.digital/reports/sustainable-marketing-2025#data-analysis"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Recommendations",
+      "url": "https://greenorbit.digital/reports/sustainable-marketing-2025#recommendations"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "CreativeWork",
+      "name": "IPCC Climate Change Report 2023",
+      "url": "https://www.ipcc.ch/report/ar6/wg1/"
+    }
+  ],
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Marketing Professionals, Space Industry Stakeholders, Sustainability Officers"
+  },
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "contentLocation": {
+    "@type": "Place",
+    "name": "United Kingdom"
+  },
+  "distribution": {
+    "@type": "DataDownload",
+    "contentUrl": "https://greenorbit.digital/reports/sustainable-marketing-2025/download.pdf",
+    "encodingFormat": "application/pdf"
+  },
+  "mainEntityOfPage": "https://greenorbit.digital/reports/sustainable-marketing-2025"
+}
+</script>

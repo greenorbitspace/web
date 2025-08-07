@@ -1,0 +1,32 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "Green Orbit Digital Launches New Sustainable Marketing Toolkit for Space Industry",
+  "mainEntityOfPage": "https://greenorbit.digital/news/sustainable-marketing-toolkit-launch",
+  "url": "https://greenorbit.digital/news/sustainable-marketing-toolkit-launch",
+  "datePublished": "2025-08-07T09:00:00+01:00",
+  "dateModified": "2025-08-07T12:00:00+01:00",
+  "articleBody": "Green Orbit Digital has unveiled a new comprehensive sustainable marketing toolkit designed specifically for space sector organisations, helping them align campaigns with UN SDGs and reduce digital carbon footprints.",
+  "image": [
+    "https://greenorbit.digital/assets/images/news-toolkit-launch-1.jpg",
+    "https://greenorbit.digital/assets/images/news-toolkit-launch-2.jpg"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Ryan Laird",
+    "url": "https://greenorbit.digital/team/ryan-laird"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Green Orbit Digital",
+    "url": "https://greenorbit.digital",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://greenorbit.digital/logo.svg",
+      "width": 250,
+      "height": 60
+    }
+  }
+}
+</script>

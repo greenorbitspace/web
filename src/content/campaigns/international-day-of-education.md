@@ -1,0 +1,12 @@
+---
+title: International Day of Education
+notion_page_id: 1d5d6625-c679-80f7-ac4a-f4b71b9c3109
+exported_at: '2025-08-07T15:42:40.104875+00:00'
+month: January
+name: International Day of Education
+organisations:
+- United Nations
+SDGs:
+- 7
+---
+

@@ -1,0 +1,93 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://greenorbit.space/#organization",
+  "name": "Green Orbit Digital",
+  "alternateName": "Green Orbit",
+  "url": "https://greenorbit.space",
+  "logo": "https://greenorbit.space/images/logo.svg",
+  "foundingDate": "2020-01-01",
+  "legalName": "Green Orbit Digital Ltd",
+  "description": "Green Orbit Digital is a Leicester-based digital marketing agency specialising in sustainable marketing solutions for the space sector. We integrate ESG principles, digital sustainability, and data-led strategy to deliver ethical and high-impact campaigns.",
+  "slogan": "Sustainable marketing for the space sector.",
+  "keywords": [
+    "sustainable marketing",
+    "space sector marketing",
+    "digital sustainability",
+    "ethical marketing",
+    "B2B SEO",
+    "ESG strategy",
+    "HubSpot CRM",
+    "GA4",
+    "content marketing",
+    "space industry branding"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Leicester",
+    "addressRegion": "Leicestershire",
+    "postalCode": "LE1",
+    "addressCountry": "GB"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "52.6369",
+    "longitude": "-1.1398"
+  },
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+44-116-000-0000",
+      "email": "hello@greenorbit.space",
+      "contactType": "customer support",
+      "areaServed": "GB",
+      "availableLanguage": ["English"]
+    }
+  ],
+  "sameAs": {
+  "$ref": "./socials.json"
+  },
+  "founder": {
+    "$ref": "./founders.json"
+  },
+  "memberOf": {
+    "$ref": "./organisations.json"
+  },
+  "awards": [
+    "Shortlisted: Best Sustainable Campaign – UK Space Marketing Awards 2024",
+    "Nominee: Ethical Digital Agency of the Year – Tech for Good Awards 2023"
+  ],
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "B Corp Pending",
+      "credentialCategory": "Sustainability",
+      "url": "https://www.bcorporation.net/"
+    }
+  ],
+  "makesOffer": {
+    "$ref": "./services.json"
+  },
+  "hasPart": {
+    "$ref": "./webpages.json"
+  },
+  "publishingPrinciples": "https://greenorbit.space/",
+  "isAccessibleForFree": true,
+  "publishes": {
+    "$ref": "./blog.json"
+  },
+  "hasPOS": {
+    "@type": "Place",
+    "name": "Green Orbit Digital HQ",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Leicester",
+      "addressCountry": "GB"
+    }
+  },
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/SubscribeAction",
+    "userInteractionCount": 2500
+  }
+}

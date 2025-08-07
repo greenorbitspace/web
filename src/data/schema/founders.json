@@ -1,0 +1,89 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ryan Laird",
+    "alternateName": "rjmlaird",
+    "jobTitle": "Founder & Director",
+    "honorificSuffix": "CMktr",
+    "description": "Ryan Laird is the Founder and Director of Green Orbit Digital, a Leicester-based agency specialising in sustainable marketing for the space sector. With over a decade of experience in the space industry, he is a Chartered Marketer and a leading voice in digital sustainability.",
+    "image": "https://greenorbit.space/images/founders/ryan-laird.jpg",
+    "url": "https://greenorbit.space/about/founders/ryan-laird",
+    "email": "mailto:ryan@greenorbit.space",
+    "gender": "Male",
+    "nationality": "British",
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "University of Leicester"
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Green Orbit Digital",
+      "url": "https://greenorbit.space"
+    },
+    "memberOf": [
+      {
+        "@type": "Organization",
+        "name": "UKspace",
+        "url": "https://www.ukspace.org/",
+        "roleName": "Chair, Startup Working Group"
+      },
+      {
+        "@type": "Organization",
+        "name": "Chartered Institute of Marketing",
+        "url": "https://www.cim.co.uk/",
+        "roleName": "Chartered Marketer"
+      }
+    ],
+    "sameAs": [
+      "https://linkedin.com/in/rjmlaird",
+      "https://github.com/rjmlaird",
+      "https://twitter.com/rjmlaird",
+      "https://www.instagram.com/rjmlaird"
+    ],
+    "knowsAbout": [
+      "Sustainable Marketing",
+      "Digital Sustainability",
+      "Space Industry",
+      "SEO",
+      "Content Marketing",
+      "Email Marketing",
+      "HubSpot",
+      "Open SDG",
+      "Web Accessibility",
+      "Google Analytics",
+      "Technical SEO",
+      "Sustainable Development Goals"
+    ],
+    "affiliation": {
+      "@type": "Organization",
+      "name": "The Sustainable Space Podcast",
+      "url": "https://greenorbit.space/podcast"
+    },
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Sustainable Marketing Consultant",
+      "skills": [
+        "Digital Strategy",
+        "Campaign Management",
+        "Stakeholder Engagement",
+        "Brand Development",
+        "Thought Leadership"
+      ]
+    },
+    "award": [
+      "Chartered Marketer (CIM)",
+      "UKSEDS National Student Space Conference Speaker",
+      "Sustainable Business Alliance Café Facilitator"
+    ],
+    "knowsLanguage": ["en-GB"],
+    "birthPlace": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "UK",
+        "addressLocality": "Leicester"
+      }
+    }
+  }
+]

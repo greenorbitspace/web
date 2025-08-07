@@ -1,0 +1,42 @@
+[
+  {
+    "question": "What is sustainable marketing?",
+    "answer": "Sustainable marketing refers to strategies and campaigns designed to reduce environmental impact, promote responsible consumption, and align with long-term ecological and social goals. At Green Orbit Digital, we apply these principles across every digital touchpoint—from website design and SEO to campaign reporting."
+  },
+  {
+    "question": "How does Green Orbit Digital measure the carbon footprint of a website?",
+    "answer": "We use tools like EcoPing, Website Carbon, and custom scripts like `eco_audit.js` to assess the emissions of your website based on page weight, hosting efficiency, and traffic. We provide recommendations to reduce unnecessary energy consumption through design, development, and content optimisation."
+  },
+  {
+    "question": "Do I need to be in the space sector to work with you?",
+    "answer": "While our expertise is deeply rooted in the space sector, we welcome values-aligned organisations from all sectors, especially those committed to sustainability, innovation, and impact."
+  },
+  {
+    "question": "What are your core services?",
+    "answer": "We offer SEO, content marketing, analytics, digital strategy, and sustainable web design tailored for the space industry. Our services are designed to maximise visibility, reduce environmental impact, and ensure regulatory compliance."
+  },
+  {
+    "question": "What platforms do you work with?",
+    "answer": "We work across modern CMS and frameworks including WordPress (headless or classic), Astro, Hugo, Next.js, and Notion-based stacks. We also integrate with tools like Stripe, HubSpot, Proton, and Rize.io."
+  },
+  {
+    "question": "How do you incorporate ESG and SDGs into your marketing work?",
+    "answer": "We align every project with ESG principles and map deliverables to relevant UN Sustainable Development Goals. We use the SDG Compass, B Impact Assessment frameworks, and Open SDG data standards to track and report impact."
+  },
+  {
+    "question": "What is the Sustainable Space Podcast?",
+    "answer": "Hosted by our founder Ryan Laird, the podcast explores the intersection of space exploration, sustainability, and marketing. We feature guests from startups, space agencies, and academia, discussing how the sector can become more sustainable."
+  },
+  {
+    "question": "How do you support early-stage space startups?",
+    "answer": "We provide tailored marketing frameworks, growth strategies, and ecosystem support for startups. This includes help with funding visibility, ESG strategy, web presence, and targeted lead generation within the space sector."
+  },
+  {
+    "question": "Are your tools open source?",
+    "answer": "Yes, many of our tools—such as CO₂ auditing scripts, SDG mapping helpers, and Hugo/Notion pipelines—are available as open source or Creative Commons. We believe in transparency and collaboration."
+  },
+  {
+    "question": "Where are you based?",
+    "answer": "Green Orbit Digital is based in Leicester, UK, but we operate globally through remote-first collaboration. We work with partners, clients, and contributors across Europe and beyond."
+  }
+]

@@ -1,0 +1,95 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.astro';
+
+// React component for the SDG grid
+import Space4SDGsList from '../components/Space4SDGsList.jsx';
+---
+
+<Layout title="Space4SDGs" description="Space data supporting the Sustainable Development Goals.">
+  <Header />
+
+  <main class="py-12 max-w-6xl mx-auto px-4 prose prose-accent dark:prose-invert">
+    <HeroSection
+      title="Space4SDGs"
+      description="Explore how space data supports the UN Sustainable Development Goals — from poverty alleviation to climate action."
+    />
+
+    <h2>Unlocking the Power of Space for a Sustainable Future</h2>
+    <p>
+      At Green Orbit Digital, we believe that space is not just a frontier of exploration—it’s a catalyst for sustainable development on Earth. The Space4SDGs initiative aligns with the United Nations’ 2030 Agenda by showcasing how space technologies, data, and applications are driving progress across the 17 Sustainable Development Goals (SDGs).
+    </p>
+
+    <hr />
+
+    <h2>Why Space Matters for the SDGs</h2>
+    <p>
+      Despite rapid technological progress, humanity still faces deep-rooted challenges—poverty, climate change, inequality, and access to basic resources. The United Nations’ 2030 Agenda for Sustainable Development lays out a roadmap to tackle these global issues through 17 SDGs and 169 targets.
+    </p>
+    <p>Space-based technologies such as:</p>
+    <ul>
+      <li>Earth Observation (EO) satellites monitor environmental changes and support disaster response.</li>
+      <li>Global Navigation Satellite Systems (GNSS) improve logistics, agriculture, and infrastructure.</li>
+      <li>Telecommunications satellites connect remote regions to education, health, and economic opportunities.</li>
+    </ul>
+    <p>These applications—and more—enable smarter, faster, and more equitable development outcomes.</p>
+
+    <hr />
+
+    <h2>From Space to Solutions</h2>
+    <p>
+      Backed by initiatives like the UNOOSA–ESA Space Solutions Compendium and “Space2030” Agenda, there’s growing global recognition of how space science and services support sustainable growth and resilience.
+    </p>
+    <p>Key reports include:</p>
+    <ul>
+      <li><strong>ST/SPACE/71</strong> – EU GNSS and Copernicus: Building blocks toward the SDGs</li>
+      <li><strong>ST/SPACE/85</strong> – EU Space: Supporting a World of 8 Billion People</li>
+      <li><strong>ST/SPACE/93</strong> – UNOOSA Annual Report 2024: From Strategy to Action</li>
+    </ul>
+    <p>
+      These studies show how space is not a luxury—it’s a necessity for achieving a sustainable, inclusive future.
+    </p>
+
+    <hr />
+
+    <h2>🔍 Explore How Space Supports Each Goal</h2>
+    <p>
+      Click on any SDG below to explore how space contributes to its advancement. Each icon links to a dedicated page on <a href="https://sdgs.greenorbit.space" target="_blank" rel="noopener noreferrer">sdgs.greenorbit.space</a> with data, case studies, and technologies in action:
+    </p>
+
+    <section class="mt-12">
+      <Space4SDGsList client:visible />
+    </section>
+
+    <hr />
+
+    <h2>📖 Learn More</h2>
+    <ul>
+      <li><a href="https://www.unoosa.org/documents/pdf/Space4SDGs_Brochure.pdf" target="_blank" rel="noopener noreferrer">UNOOSA Brochure – Space4SDGs</a></li>
+      <li><a href="https://www.unoosa.org/documents/pdf/ST_SPACE_71E.pdf" target="_blank" rel="noopener noreferrer">ST/SPACE/71 Report – GNSS & Copernicus for the SDGs</a></li>
+      <li><a href="https://www.unoosa.org/documents/pdf/ST_SPACE_85E.pdf" target="_blank" rel="noopener noreferrer">ST/SPACE/85 – EU Space and the “Space2030” Agenda</a></li>
+      <li><a href="https://spacesolutions.unoosa.org/" target="_blank" rel="noopener noreferrer">Space Solutions Compendium (Pilot)</a></li>
+    </ul>
+
+    <hr />
+
+    <h2>📅 Upcoming Events</h2>
+    <p>
+      <strong>COPUOS 2025</strong> – UN Committee on the Peaceful Uses of Outer Space<br />
+      19–20 November 2025 – Vienna
+    </p>
+
+
+    <hr />
+
+    <h2>✅ Let’s Build a Sustainable Space Future</h2>
+    <p>
+      At Green Orbit Digital, we’re helping organisations in the space sector communicate their role in building a better world—sustainably, ethically, and impactfully.
+    </p>
+    <p><em>Space for Earth. Strategy for Impact. That’s the Green Orbit way.</em></p>
+  </main>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,73 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "@id": "https://greenorbit.digital/blog/#blog",
+  "mainEntityOfPage": "https://greenorbit.digital/blog",
+  "name": "Green Orbit Digital Blog",
+  "description": "Insights on sustainable marketing, digital strategy, and the space industry.",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://greenorbit.digital/#organization",
+    "name": "Green Orbit Digital",
+    "url": "https://greenorbit.digital",
+    "logo": {
+      "@type": "ImageObject",
+      "@id": "https://greenorbit.digital/logo.svg",
+      "url": "https://greenorbit.digital/logo.svg",
+      "width": 250,
+      "height": 60
+    }
+  },
+  "blogPost": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://greenorbit.digital/blog/2025/08/01/sustainable-marketing-trends/#blogposting",
+      "mainEntityOfPage": "https://greenorbit.digital/blog/2025/08/01/sustainable-marketing-trends",
+      "headline": "Top Sustainable Marketing Trends for 2025",
+      "name": "Top Sustainable Marketing Trends for 2025",
+      "description": "Explore the latest trends in sustainable marketing shaping the space industry and beyond.",
+      "datePublished": "2025-08-01T09:00:00+01:00",
+      "dateModified": "2025-08-02T12:00:00+01:00",
+      "author": {
+        "@type": "Person",
+        "@id": "https://greenorbit.digital/team/ryan-laird/#person",
+        "name": "Ryan Laird"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "@id": "https://greenorbit.digital/assets/images/sustainable-marketing-trends.jpg",
+        "url": "https://greenorbit.digital/assets/images/sustainable-marketing-trends.jpg",
+        "width": 1200,
+        "height": 628
+      },
+      "url": "https://greenorbit.digital/blog/2025/08/01/sustainable-marketing-trends",
+      "keywords": ["sustainable marketing", "space industry", "digital marketing", "SDGs"]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://greenorbit.digital/blog/2025/07/15/eco-audit-tools/#blogposting",
+      "mainEntityOfPage": "https://greenorbit.digital/blog/2025/07/15/eco-audit-tools",
+      "headline": "How to Use Eco Audit Tools to Reduce Digital Carbon Footprint",
+      "name": "How to Use Eco Audit Tools to Reduce Digital Carbon Footprint",
+      "description": "A practical guide to measuring and minimizing digital emissions using open-source auditing tools.",
+      "datePublished": "2025-07-15T10:30:00+01:00",
+      "dateModified": "2025-07-16T14:00:00+01:00",
+      "author": {
+        "@type": "Person",
+        "@id": "https://greenorbit.digital/team/ryan-laird/#person",
+        "name": "Ryan Laird"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "@id": "https://greenorbit.digital/assets/images/eco-audit-tools.jpg",
+        "url": "https://greenorbit.digital/assets/images/eco-audit-tools.jpg",
+        "width": 1200,
+        "height": 628
+      },
+      "url": "https://greenorbit.digital/blog/2025/07/15/eco-audit-tools",
+      "keywords": ["eco audit", "carbon footprint", "digital sustainability", "green IT"]
+    }
+  ]
+}
+</script>

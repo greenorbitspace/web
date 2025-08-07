@@ -4,6 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import HeroSection from '../../components/HeroSection.astro';
 import { getCollection } from 'astro:content';
+import { SDGs } from '../../data/sdgs';
 import authors from '../../data/authors.js';
 import crypto from 'crypto';
 import { slug as slugify } from 'github-slugger';
@@ -19,15 +20,12 @@ const { slug } = Astro.params;
 const posts = await getCollection('resources');
 const postEntry = posts.find(p => p.slug === slug || p.id === slug);
 
-if (!postEntry) throw new Error(`No resources post found for slug: "${slug}"`);
+if (!postEntry) throw new Error(`No resources articles found for slug: "${slug}"`);
 
 const { Content } = await postEntry.render();
 const data = postEntry.data;
 
-// Normalize frontmatter author name to slug for lookup
 const authorSlug = slugify(data.author || '').toLowerCase();
-
-// Find author by slug in authors array
 const authorInfo = authors.find(a => a.slug === authorSlug) || null;
 
 function getGravatarUrl(email, size = 80) {
@@ -48,16 +46,15 @@ const formattedDate = data.pubdate
     })
   : null;
 
-// Meta info
-const pageTitle = data.seoTitle || data.title || 'resources';
-const pageDescription = data.seoDescription || data.description || data.title || 'Resources by Green Orbit Digital';
+const pageTitle = data.seoTitle || data.title || 'resources post';
+const pageDescription = data.seoDescription || data.description || data.title;
 const pageURL = `https://greenorbit.space/resources/${slug}`;
 const pageAuthor = data.author || 'Green Orbit Digital';
 const pageImage = data.featuredImage || '/default-og-image.jpg';
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "resourcesPosting",
+  "@type": "resourcesArticle",
   headline: pageTitle,
   description: pageDescription,
   author: {
@@ -76,50 +73,109 @@ const jsonLd = {
   },
   ...(pageImage && { image: pageImage }),
 };
+
+const sdgMap = SDGs.reduce((acc, sdg) => {
+  const code = `SDG ${String(sdg.id).padStart(2, '0')}`;
+  acc[code.toUpperCase()] = sdg;
+  return acc;
+}, {});
+
+let sdgCodes = [];
+if (Array.isArray(data.SDGs)) {
+  sdgCodes = data.SDGs
+    .filter((n) => typeof n === 'number')
+    .map((n) => `SDG ${String(n).padStart(2, '0')}`);
+} else if (typeof data.SDGs === 'number') {
+  sdgCodes = [`SDG ${String(data.SDGs).padStart(2, '0')}`];
+}
 ---
 
-<Layout title={pageTitle}>
+<Layout title={pageTitle} description={pageDescription}>
   <Header />
 
   <main class="py-12">
     <HeroSection
-      title="resources"
-      description="Explore our latest resources posts."
+      title="Resources"
+      description="Explore our latest resources."
     />
 
     <main class="prose dark:prose-invert max-w-4xl mx-auto px-4 py-12">
-      <article>
-        <header class="mb-8">
-          <h1 class="text-4xl font-bold text-accent-500 mb-2">{data.title}</h1>
+    <article>
+      <header class="mb-8">
+        <h1 class="text-4xl font-bold text-accent-500 mb-2">{data.title}</h1>
 
-            {authorInfo && (
-              <div class="flex items-center gap-2 mt-4 text-sm text-white">
-                <img src={avatarUrl} alt={authorInfo.name} class="w-6 h-6 rounded-full" />
-                <span>
-                  By <a href={`/authors/${authorInfo.slug}`} class="underline">{authorInfo.name}</a>
-                </span>
-                <span> · {formattedDate}</span>
-              </div>
-            )}
-
-            {data.tags?.length && (
-              <div class="mt-2 flex flex-wrap gap-2">
-                {data.tags.map((tag) => (
-                  <a
-                    href={`/resources?tag=${encodeURIComponent(tag)}`}
-                    class="text-xs bg-accent-600 text-white px-2 py-1 rounded hover:bg-accent-700 transition"
-                  >
-                    #{tag}
-                  </a>
-                ))}
-              </div>
-            )}
+        {authorInfo && (
+          <div class="flex items-center gap-2 mt-4 text-sm text-white">
+            <img src={avatarUrl} alt={authorInfo.name} class="w-6 h-6 rounded-full" />
+            <span>
+              By <a href={`/authors/${authorInfo.slug}`} class="underline">{authorInfo.name}</a>
+            </span>
+            {formattedDate && <span> · {formattedDate}</span>}
           </div>
-        </header>
+        )}
 
+        {data.organisations?.length > 0 && (
+          <div class="mt-4 flex flex-wrap gap-2">
+            {data.organisations.map((org) => (
+              <span
+                key={org}
+                class="bg-gray-300 dark:bg-accent-500 text-white rounded-full px-3 py-1 text-xs font-medium capitalize"
+              >
+                {org}
+              </span>
+            ))}
+          </div>
+        )}
+
+        {data.tags?.length > 0 && (
+          <div class="mt-4 flex flex-wrap gap-2">
+            {data.tags.map((tag) => (
+              <a
+                key={tag}
+                href={`/resources?tag=${encodeURIComponent(tag)}`}
+                class="text-xs bg-accent-600 text-white px-2 py-1 rounded hover:bg-accent-700 transition"
+              >
+                #{tag}
+              </a>
+            ))}
+          </div>
+        )}
+
+        {sdgCodes.length > 0 && (
+          <div class="mt-4 flex flex-wrap gap-2">
+            {sdgCodes.map((code) => {
+              const sdg = sdgMap[code];
+              if (!sdg) return null;
+              return (
+                <a
+                  key={code}
+                  href={`https://sdgs.greenorbit.space/${sdg.id}/`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group"
+                  aria-label={`View details about ${sdg.name}`}
+                >
+                  <img
+                    src={sdg.icon}
+                    alt={sdg.name}
+                    class="w-10 h-10 rounded-sm border border-gray-300 dark:border-gray-600"
+                  />
+                </a>
+              );
+            })}
+          </div>
+        )}
+      </header>
+
+      <section class="prose prose-invert max-w-none">
         <Content />
-      </article>
-    </main>
+      </section>
+    </article>
+  </main>
 
   <Footer />
+
+  <script type="application/ld+json">
+    {JSON.stringify(jsonLd)}
+  </script>
 </Layout>

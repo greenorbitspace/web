@@ -1,0 +1,79 @@
+[
+  {
+    "name": "Chartered Marketer (CMktr)",
+    "issuer": "Chartered Institute of Marketing (CIM)",
+    "url": "https://www.cim.co.uk/membership/chartered-marketer-status/",
+    "description": "The Chartered Marketer designation recognises a high level of expertise, experience and commitment to continued professional development in marketing.",
+    "category": "Professional Accreditation",
+    "awarded_to": "Ryan Laird",
+    "year_awarded": 2021
+  },
+  {
+    "name": "Google Analytics Certification",
+    "issuer": "Google",
+    "url": "https://skillshop.withgoogle.com/",
+    "description": "Validated proficiency in Google Analytics for data-driven marketing insights and performance analysis.",
+    "category": "Digital Marketing",
+    "year_awarded": 2024
+  },
+  {
+    "name": "B Corp Impact Assessment (Completed)",
+    "issuer": "B Lab",
+    "url": "https://www.bcorporation.net/en-us/programs-and-tools/b-impact-assessment/",
+    "description": "Completed the B Impact Assessment as part of ongoing commitment to social and environmental performance standards.",
+    "category": "Sustainability & Ethics",
+    "status": "Assessment Completed, not yet Certified",
+    "year_awarded": 2025
+  },
+  {
+    "name": "SBA Accreditation (in progress)",
+    "issuer": "Sustainable Business Alliance",
+    "url": "https://sustainablealliance.co.uk/",
+    "description": "Working toward official accreditation aligned with SBA sustainability reporting standards.",
+    "category": "Sustainability & Ethics",
+    "status": "In Progress",
+    "year_awarded": null
+  },
+  {
+    "name": "HubSpot Solutions Partner",
+    "issuer": "HubSpot",
+    "url": "https://ecosystem.hubspot.com/",
+    "description": "Recognised partner with certified expertise in CRM, inbound marketing, automation and reporting using the HubSpot platform.",
+    "category": "Partnership & Tools",
+    "year_awarded": 2023
+  },
+  {
+    "name": "UKspace Membership",
+    "issuer": "UKspace",
+    "url": "https://www.ukspace.org/",
+    "description": "Active member and Chair of the Startup Working Group, promoting sustainable growth and innovation in the UK space sector.",
+    "category": "Industry Membership",
+    "year_awarded": 2022
+  },
+  {
+    "name": "Carbon Literacy Certification (anticipated)",
+    "issuer": "The Carbon Literacy Project",
+    "url": "https://carbonliteracy.com/",
+    "description": "Working towards carbon literacy accreditation to support climate-aware decision making in digital delivery.",
+    "category": "Sustainability & Ethics",
+    "status": "Planned",
+    "year_awarded": null
+  },
+  {
+    "name": "Sustainable Digital Design (Training Completed)",
+    "issuer": "Sustainable Web Design",
+    "url": "https://sustainablewebdesign.org/",
+    "description": "Completed training on designing low-emission, energy-efficient websites based on W3C and GHG Protocol aligned principles.",
+    "category": "Digital Sustainability",
+    "year_awarded": 2024
+  },
+  {
+    "name": "Cyber Essentials (In progress)",
+    "issuer": "IASME Consortium",
+    "url": "https://www.cyberessentials.ncsc.gov.uk/",
+    "description": "Aiming for baseline certification to demonstrate commitment to secure digital practices.",
+    "category": "Security",
+    "status": "In Progress",
+    "year_awarded": null
+  }
+]

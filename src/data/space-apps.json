@@ -1,0 +1,1028 @@
+[
+  {
+    "Name": "Carbon capture and content assessment ",
+    "Markets": "Agriculture",
+    "Description": "",
+    "Domains": "Environmental monitoring",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [13, 15]
+  },
+  {
+    "Name": "Environmental impact monitoring ",
+    "Markets": "Agriculture",
+    "Description": "",
+    "Domains": "Environmental monitoring",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [13, 15]
+  },
+  {
+    "Name": "Biomass monitoring",
+    "Markets": "Agriculture",
+    "Description": "",
+    "Domains": "Natural resources monitoring",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [15, 2]
+  },
+  {
+    "Name": "Crop yield forecasting",
+    "Markets": "Agriculture",
+    "Description": "",
+    "Domains": "Natural resources monitoring",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [2, 12]
+  },
+  {
+    "Name": "Soil condition monitoring ",
+    "Markets": "Agriculture",
+    "Description": "",
+    "Domains": "Natural resources monitoring",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [15, 2]
+  },
+  {
+    "Name": "Vegetation monitoring ",
+    "Markets": "Agriculture",
+    "Description": "",
+    "Domains": "Natural resources monitoring",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [15, 2]
+  },
+  {
+    "Name": "Asset monitoring",
+    "Markets": "Agriculture",
+    "Description": "",
+    "Domains": "Operations management",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [8, 9]
+  },
+  {
+    "Name": "Automatic steering",
+    "Markets": "Agriculture",
+    "Description": "",
+    "Domains": "Operations management",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [8, 9]
+  },
+  {
+    "Name": "CAP monitoring",
+    "Markets": "Agriculture",
+    "Description": "",
+    "Domains": "Operations management",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [2, 12]
+  },
+  {
+    "Name": "Farm machinery guidance ",
+    "Markets": "Agriculture",
+    "Description": "",
+    "Domains": "Operations management",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [8, 9]
+  },
+  {
+    "Name": "Climate services for agriculture ",
+    "Markets": "Agriculture",
+    "Description": "",
+    "Domains": "Weather services for agriculture",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [13, 2]
+  },
+  {
+    "Name": "Farm management systems",
+    "Markets": "Agriculture",
+    "Description": "",
+    "Domains": "Operations management",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [8, 9]
+  },
+  {
+    "Name": "Field definition",
+    "Markets": "Agriculture",
+    "Description": "",
+    "Domains": "Operations management",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [8, 9]
+  },
+  {
+    "Name": "Livestock wearables ",
+    "Markets": "Agriculture",
+    "Description": "",
+    "Domains": "Operations management",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [3, 2]
+  },
+  {
+    "Name": "Pastureland management ",
+    "Markets": "Agriculture",
+    "Description": "",
+    "Domains": "Operations management",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [15, 2]
+  },
+  {
+    "Name": "Precision irrigation ",
+    "Markets": "Agriculture",
+    "Description": "",
+    "Domains": "Operations management",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [6, 2]
+  },
+  {
+    "Name": "Variable rate application",
+    "Markets": "Agriculture",
+    "Description": "",
+    "Domains": "Operations management",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [12, 2]
+  },
+  {
+    "Name": "",
+    "Markets": "Agriculture",
+    "Description": "",
+    "Domains": "Weather services for agriculture",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": []
+  },
+  {
+    "Name": "Aircraft emission measurement and monitoring",
+    "Markets": "Aviation & drones",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [13]
+  },
+  {
+    "Name": "Particulate matter monitoring",
+    "Markets": "Aviation & drones",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [3, 13]
+  },
+  {
+    "Name": "Open drone navigation",
+    "Markets": "Aviation & drones",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [9, 11]
+  },
+  {
+    "Name": "Animal tracking for biodiversity purposes",
+    "Markets": "Biodiversity, Ecosystems and Natural Capital",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [15, 14]
+  },
+  {
+    "Name": "Coastal ecosystems monitoring",
+    "Markets": "Biodiversity, Ecosystems and Natural Capital",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [14, 15]
+  },
+  {
+    "Name": "Snow and ice ecosystems monitoring",
+    "Markets": "Biodiversity, Ecosystems and Natural Capital",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [13, 15]
+  },
+  {
+    "Name": "Terrestrial ecosystems monitoring",
+    "Markets": "Biodiversity, Ecosystems and Natural Capital",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [15, 13]
+  },
+  {
+    "Name": "Water ecosystems monitoring",
+    "Markets": "Biodiversity, Ecosystems and Natural Capital",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [6, 14, 15]
+  },
+  {
+    "Name": "Climate change mitigation and adaptation",
+    "Markets": "Climate services",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [13, 7, 9]
+  },
+  {
+    "Name": "Earth observation-based modelling",
+    "Markets": "Climate services",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [13, 9]
+  },
+  {
+    "Name": "GNSS-based climate modelling",
+    "Markets": "Climate services",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [13, 9]
+  },
+  {
+    "Name": "Climate forecasting",
+    "Markets": "Climate services",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [13, 9]
+  },
+  {
+    "Name": "Climate monitoring",
+    "Markets": "Climate services",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [13, 9]
+  },
+  {
+    "Name": "Mapping and GIS",
+    "Markets": "Consumer solutions, tourism and health",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [11, 9]
+  },
+  {
+    "Name": "Workforce management",
+    "Markets": "Consumer solutions, tourism and health",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [8, 9]
+  },
+  {
+    "Name": "Air quality monitoring",
+    "Markets": "Consumer solutions, tourism and health",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [3, 13]
+  },
+  {
+    "Name": "mHealth",
+    "Markets": "Consumer solutions, tourism and health",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [3, 9]
+  },
+  {
+    "Name": "Safety and emergency",
+    "Markets": "Consumer solutions, tourism and health",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [3, 11]
+  },
+  {
+    "Name": "Social networks",
+    "Markets": "Consumer solutions, tourism and health",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [9, 10]
+  },
+  {
+    "Name": "Sport, fitness and wellness incl. specialist support tracking",
+    "Markets": "Consumer solutions, tourism and health",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [3, 10]
+  },
+  {
+    "Name": "UV monitoring",
+    "Markets": "Consumer solutions, tourism and health",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [3, 13]
+  },
+  {
+    "Name": "Navigation for smartphone users",
+    "Markets": "Consumer solutions, tourism and health",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [9, 11]
+  },
+  {
+    "Name": "Personal and asset tracking",
+    "Markets": "Consumer solutions, tourism and health",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [9, 11]
+  },
+  {
+    "Name": "Visually impaired support",
+    "Markets": "Consumer solutions, tourism and health",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [3, 10]
+  },
+  {
+    "Name": "Consumer robotics",
+    "Markets": "Consumer solutions, tourism and health",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [9, 8]
+  },
+  {
+    "Name": "Points of interest",
+    "Markets": "Consumer solutions, tourism and health",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [11, 9]
+  },
+  {
+    "Name": "Early warning",
+    "Markets": "Consumer solutions, tourism and health",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [11, 13]
+  },
+  {
+    "Name": "GNSS-enabled ocean monitoring buoys",
+    "Markets": "Consumer solutions, tourism and health",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [14, 3, 9]
+  },
+  {
+    "Name": "Earth observation human displacement monitoring",
+    "Markets": "Emergency management & humanitarian aid",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [1, 11, 16]
+  },
+  {
+    "Name": "Management of refugee camps",
+    "Markets": "Emergency management & humanitarian aid",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [1, 3, 11, 16]
+  },
+  {
+    "Name": "Population counting",
+    "Markets": "Emergency management & humanitarian aid",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [1, 11, 16]
+  },
+  {
+    "Name": "Telematics for humanitarian aid",
+    "Markets": "Emergency management & humanitarian aid",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [9, 11, 16]
+  },
+  {
+    "Name": "Post-event analysis",
+    "Markets": "Emergency management & humanitarian aid",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [11, 13, 16]
+  },
+  {
+    "Name": "Preparedness",
+    "Markets": "Emergency management & humanitarian aid",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [11, 13, 16]
+  },
+  {
+    "Name": "Rapid mapping",
+    "Markets": "Emergency management & humanitarian aid",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [11, 13, 16]
+  },
+  {
+    "Name": "Beacons for aviation",
+    "Markets": "Emergency management & humanitarian aid",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [9, 11]
+  },
+  {
+    "Name": "Beacons for maritime",
+    "Markets": "Emergency management & humanitarian aid",
+    "Description": "",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [9, 11]
+  },
+  {
+    "Name": "Beacons on land",
+    "Markets": "Emergency management & humanitarian aid",
+    "Description": "Climbers and hikers are advised to equip themselves with a PLB in case they\nfind themselves in distress.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [3, 11]
+  },
+  {
+    "Name": "Situational awareness supporting search and rescue",
+    "Markets": "Emergency management & humanitarian aid",
+    "Description": "Earth observation services can assist\nMaritime and Joint Rescue Coordination Centres in a wide range of activities at sea, including\nsupport to search and rescue operations and exercises. Earth observation information, com-\nbined with maritime data and external sources, can provide you with a better understanding and\nimproved monitoring of activities at sea (incl. detection of ships in distress, search and rescue\nresponse support, etc.).",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [3, 11, 14]
+  },
+  {
+    "Name": "Energy network conditions monitoring",
+    "Markets": "Energy & raw materials",
+    "Description": "The situational awareness and monitoring capabilities\nof Earth observation contribute through application such as monitoring the structural integrity of\nassets including towers, poles, wind plants and solar plants; monitoring land subsidence around\nenergy infrastructure such as pipeline and plants, assessment of vegetation encroachments; and\nallowing for asset condition management damages, degradation, corrosion, etc.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [7, 9, 13]
+  },
+  {
+    "Name": "Phasor measurement units (PMU)",
+    "Markets": "Energy & raw materials",
+    "Description": "GNSS provides accurate timing and synchronization for\nPMUs, which are deployed across remote locations of the power network (nodes), improving the\nreliability of power systems.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [7, 9]
+  },
+  {
+    "Name": "Environmental impact assessment of energy and mineral resources plants",
+    "Markets": "Energy & raw materials",
+    "Description": "Earth observation\ncan support the mitigation of energy/mining effects of the environment through continuous monitoring of relevant environmental characteristics and through the capacity of Earth observation to detect changes. Relevant products and services include coastal ecosystems monitoring, water quality monitoring, air quality monitoring, erosion monitoring, pollution monitoring, vegetation monitoring, etc. In some cases, Earth observation-based products could also include the production of environmental impact assessment “certificate”.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [6, 7, 13, 15]
+  },
+  {
+    "Name": "Supply chain insights",
+    "Markets": "Energy & raw materials",
+    "Description": "Earth observation data support market analysts, traders, investors, energy\noperators and regulators, governments, international banking institutions and citizens, to better\nunderstand the new energy dynamics shifting under the pressure of climate change. AI and\nadvanced analytics are applied to Earth observation for applications such as reservoir monitoring, heavy oil production mapping, underground gas storage, sophisticated methane-detection technologies, etc.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [7, 9, 13]
+  },
+  {
+    "Name": "Power plant design optimization",
+    "Markets": "Energy & raw materials",
+    "Description": "Earth observation can help optimizing the design of renewable energy power plants (e.g., optimization of the positioning of solar panels, onshore and offshore wind turbines, etc.). Relevant Earth observation-based products include terrain elevation models, solar irradiance, wind speed, precipitation and climate conditions.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [7, 9, 13]
+  },
+  {
+    "Name": "Renewable energy assessment potential and forecast:",
+    "Markets": "Energy & raw materials",
+    "Description": "Prior to the selection of a power plant site, Earth observation can contribute to the assessment of the potential of a given area based on the analysis of historical data for example, wind, solar irradiation, ocean currents, ocean temperature (e.g., for OTEC or SWAC) and snow cover. During the exploitation phase, Earth observation can help calculating daily production estimates based on plant characteristics coupled with relevant forecasts. This includes for instance solar plant production estimates based on solar irradiation forecasts or hydropower production estimates based on snow cover smelting.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [7, 13]
+  },
+  {
+    "Name": "Risk assessment for energy assets",
+    "Markets": "Energy & raw materials",
+    "Description": "Energy assets are exposed to a variety of natural risks which can put at danger the people working on site or, damage equipment or negatively impact production. Earth observation can contribute to the assessment of the level of risk to prevent/mitigate the effects of adverse events on the exploitation of energy (incl. the protection of workers maintaining offshore wind platforms for instance). Relevant Earth observation-based products and services include the monitoring of dangerous subsurface currents, iceberg detection and tracking, etc.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [3, 7, 11, 13]
+  },
+  {
+    "Name": "Site selection, planning and monitoring",
+    "Markets": "Energy & raw materials",
+    "Description": ": Earth observation can provide a large variety of products and information supporting the identification of the most suitable areas for the exploitation of renewable energy sources. These products and information include for instance data on relevant environmental parameters influencing the production of energy, data on the status of the power plants, geological evaluation, topography mapping, etc. GNSS can enable geomatics applications such as mine and construction surveying, mapping and GIS, photogrammetry, laser scanning and remote sensing, as well as route planning and augmented reality visualization. The GNSS devices that are used for those applications include high-accuracy GNSS receivers (geodetic-grade smart antennas, all-in-one integrated mapping/GIS devices or infrastructure/CORS) and embedded chipsets. On the other hand, a number of CORS networks operate receivers that are powered by renewable energy sources (e.g., solar panels or wind turbines), so the utilization of GNSS for renewable energy operations brings mutual benefits.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [7, 9, 11, 13]
+  },
+  {
+    "Name": "Environmental auditing",
+    "Markets": "Environmental Monitoring",
+    "Description": ": Earth observation data is used in environmental auditing as an input to assess the repercussions of human activity across four different environments: Atmosphere, Coasts, Land, Water and oceans. Includes air quality, greenhouse gases, wetland loss, land-use change, vegetation monitoring, pollution, and infrastructure impacts.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [6, 11, 13, 15]
+  },
+  {
+    "Name": "Environmental resources management",
+    "Markets": "Environmental Monitoring",
+    "Description": "The use of Earth observation satellites and data provides users the means to properly manage environmental resources across atmosphere, coasts, land, and water environments. Enables monitoring of air quality, wetland loss, land-use change, erosion, pollution, and human impact.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [6, 11, 13, 15]
+  },
+  {
+    "Name": "Impact studies and environmental, social and corporate governance (ESG)",
+    "Markets": "Environmental Monitoring",
+    "Description": "Earth observation monitors parameters necessary for impact studies and ESG policy implementation across atmosphere, coasts, land, and water environments, covering air quality, greenhouse gases, wetland loss, land-use change, vegetation, waste, and infrastructure monitoring.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [6, 11, 12, 13, 15]
+  },
+  {
+    "Name": "Aquaculture operations optimization",
+    "Markets": "Fisheries & Aquaculture",
+    "Description": "Earth observation supports water quality monitoring, harmful algae blooms detection, fish farming environmental impact assessment and stock health modelling. GNSS supports automated vessels navigation and buoy localization.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [2, 14, 15]
+  },
+  {
+    "Name": "Aquaculture site selection",
+    "Markets": "Fisheries & Aquaculture",
+    "Description": "Earth observation data and forecasting assist in selecting suitable locations and types of aquaculture in nearshore and offshore environments.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [2, 14]
+  },
+  {
+    "Name": "Catch optimization",
+    "Markets": "Fisheries & Aquaculture",
+    "Description": "Earth observation data and forecasting help optimize catch by identifying suitable zones and times.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [2, 14]
+  },
+  {
+    "Name": "Illegal, unreported and unregulated (IUU) control",
+    "Markets": "Fisheries & Aquaculture",
+    "Description": "Satellite data including Earth observation and GNSS (AIS/VMS) support surveillance and identification to combat illegal fishing.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [14, 16]
+  },
+  {
+    "Name": "Fishing aggregating devices",
+    "Markets": "Fisheries & Aquaculture",
+    "Description": "GNSS-enabled buoys assist fishermen in locating nets, equipment and fish stocks.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [2, 14]
+  },
+  {
+    "Name": "Fish stock detection",
+    "Markets": "Fisheries & Aquaculture",
+    "Description": "Earth observation contributes to modelling fish stocks and detecting fish shoals using data on sea surface temperature, currents, ocean colour, and bathymetry.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [14, 15]
+  },
+  {
+    "Name": "Fishing vessels navigation",
+    "Markets": "Fisheries & Aquaculture",
+    "Description": "GNSS-enabled navigation devices help fishing vessels navigate safely to fishing zones and equipment.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [9, 14]
+  },
+  {
+    "Name": "Biomass monitoring",
+    "Markets": "Forestry",
+    "Description": "Earth observation and GNSS enable biomass monitoring for understanding CO2 absorption capacity and biomass energy potential.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [13, 15]
+  },
+  {
+    "Name": "Deforestation/degradation monitoring",
+    "Markets": "Forestry",
+    "Description": "Earth observation and GNSS track forest biomass changes to monitor deforestation and degradation, relevant for climate and biodiversity goals.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [13, 15]
+  },
+  {
+    "Name": "Forest inventory monitoring",
+    "Markets": "Forestry",
+    "Description": "Earth observation and GNSS enable the monitoring of the timber inventories using various optical measurements, radar measurements and in situ sensors.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [13, 15]
+  },
+  {
+    "Name": "Forest vegetation health monitoring",
+    "Markets": "Forestry",
+    "Description": "The health of forest vegetation can be monitored and managed using Earth observation. Optical and radar data can be used to measure forest vegetation intensity (through the generation of various indices such as NDVI) to infer the health of trees and forest vegetation.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [13, 15]
+  },
+  {
+    "Name": "Illegal logging monitoring",
+    "Markets": "Forestry",
+    "Description": "Earth observation can help in the identification of illegal logging. By using optical and radar data to monitor land-use changes and measure forest vegetation cover, illegal destruction of forests can be detected and monitored.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [13, 15, 16]
+  },
+  {
+    "Name": "Environmental impact assessment of infrastructure",
+    "Markets": "Infrastructure",
+    "Description": "Earth observation can support the analysis of the impact of existing infrastructures (including during the construction phase) on the environment and ecosystem in their surroundings. Relevant Earth observation-based products and services include pollution monitoring (air, water, soil), vegetation and biodiversity monitoring, etc.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [6, 11, 13, 15]
+  },
+  {
+    "Name": "Permitting",
+    "Markets": "Infrastructure",
+    "Description": "Earth observation can support the evaluations to be carried out before a permit is delivered for the construction of a new infrastructure. Thus, Earth observation can deliver products and services related to land cover/land-use mapping, forest mapping, geological evaluation, exposure to disaster risk (e.g., floods), ground deformation, etc.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [9, 11, 13, 15]
+  },
+  {
+    "Name": "Site selection and planning",
+    "Markets": "Infrastructure",
+    "Description": "Earth observation can contribute to the selection of sites (e.g., tailing dams) or routes (e.g., roads/rail) through the provision of products and services such as geological evaluation, topography mapping, historical data on land subsidence. Through geomatics applications like construction surveying, mapping and GIS, photogrammetry, laser scanning and remote sensing, GNSS can significantly speed up the accurate determination of site borders, while also providing adequate methods for development of detailed specialized maps, route planning or establishment of GIS database with accurate positions of all infrastructure site features. In addition, to high-accuracy GNSS devices (smart antennas or integrated mapping/GIS devices), GNSS chipsets can feed high-accuracy positioning data into LiDAR and imaging devices (drone or land-based), and augmented reality technologies for a-priori in situ infrastructure visualization.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [9, 11, 13]
+  },
+  {
+    "Name": "Vulnerability analysis",
+    "Markets": "Infrastructure",
+    "Description": "Earth observation can contribute to the vulnerability assessment for locations prone to natural hazards. Relevant Earth observation-based products and services include historical data on floods, droughts, and fires as well as climate projections enabling the assessment of the evolution of risks.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [11, 13]
+  },
+  {
+    "Name": "Construction operations",
+    "Markets": "Infrastructure",
+    "Description": "Thanks to its capacity to detect surface changes, Earth observation can support the monitoring in near-real-time of the progress achieved anywhere on the construction site. It can also help verifying the alignment between actual building and original plans. While also providing typical surveying techniques on the site, GNSS is an ultimate supplier of positioning and orientation data for heavy machinery (graders, dozers, excavators, compactors), which can be used for either semi-automatic (GNSS serves as a guide to the operator) or fully automatic operations (GNSS data is directly fused into the machine hydraulic control). For the needs of BIM, GNSS can feed the model with high accuracy positioning data of all relevant construction assets.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [9, 11]
+  },
+  {
+    "Name": "Monitoring of impact of human activities on infrastructures",
+    "Markets": "Infrastructure",
+    "Description": "Earth observation enables the monitoring of the impact on buildings and infrastructures of land subsidence caused by a variety of human activities (e.g., aquifer overexploitation in urban areas).",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [11, 13]
+  },
+  {
+    "Name": "ODA support monitoring",
+    "Markets": "Infrastructure",
+    "Description": "Earth observation can be used to validate that Official Development Assistance (ODA) support (i.e., investment in different development projects) is utilized as planned. This is often directly informing the further release of funds from a donor country to a receiving one.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [1, 11, 16]
+  },
+  {
+    "Name": "Post-construction operations",
+    "Markets": "Infrastructure",
+    "Description": "Critical infrastructures such as dams, bridges, factories etc. can be damaged in case of Earth’s surface deformation. Earth observation offers solutions for the monitoring of infrastructure stability and for the provision of situation awareness as it can accurately monitor land deformation and to detect minor changes (e.g., building subsidence). The stability of critical infrastructure is monitored also via high-precision GNSS methods, e.g., by post-processing of static relative GNSS observations at field control points (established directly into or in the vicinity of the object) with station data from local or global CORS networks. In addition, GNSS data may be utilized to feed various smart sensors, mounted into the infrastructure body for real-time stability monitoring.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [9, 11, 13]
+  },
+  {
+    "Name": "Pipeline monitoring",
+    "Markets": "Infrastructure",
+    "Description": "Earth observation can contribute to the monitoring of pipelines through the provision of ground deformation information across pipeline networks as well as through the provision of information related to vegetation encroachment or third-party interference. For above-ground pipelines, GNSS provides methods for stability monitoring like post-construction operations, while for underground assets it may feed high-accuracy positioning data into ground-penetration radars to map and detect leakages and other faults.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [9, 11, 13]
+  },
+  {
+    "Name": "Data centre",
+    "Markets": "Infrastructure",
+    "Description": "A data centre is a dedicated space within a building, or a group of buildings used to house computer systems and associated components, such as telecommunications and storage systems. GNSS is used as a time source for network synchronization of computing resources.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [9]
+  },
+  {
+    "Name": "Digital cellular network (DCN)",
+    "Markets": "Infrastructure",
+    "Description": "Telecom operators require accurate and consistent time and frequency at distant points of their networks to meet increasingly demanding broadband requirements. GNSS is used to provide consistent frequency and time alignment between all base stations within the network.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [9]
+  },
+  {
+    "Name": "Professional mobile radio (PMR)",
+    "Markets": "Infrastructure",
+    "Description": "Telecom operators require accurate and consistent time and frequency at distant points of their networks to meet increasingly demanding broadband requirements. GNSS is used for synchronization of time slots and handovers between base stations.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [9]
+  },
+  {
+    "Name": "Public switched telephone network (PSTN)",
+    "Markets": "Infrastructure",
+    "Description": "Telecom operators require accurate and consistent time and frequency at distant points of their networks to meet increasingly demanding broadband requirements. Originally a network of fixed-line analogue telephone systems, the PSTN is now entirely digital in its core network and in this report, it consists in fixed telephones networks. GNSS is usually a backup to atomic clocks to provide time slot management.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [9]
+  },
+  {
+    "Name": "Satellite communication (SATCOM)",
+    "Markets": "Infrastructure",
+    "Description": "Telecom operators require accurate and consistent time and frequency at distant points of their networks to meet increasingly demanding broadband requirements. GNSS is typically used in satellite control stations and telecommunications gateways, mostly for frequency control.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [9]
+  },
+  {
+    "Name": "Small cells",
+    "Markets": "Infrastructure",
+    "Description": "Telecom operators require accurate and consistent time and frequency at distant points of their networks to meet increasingly demanding broadband requirements. GNSS is used to provide frequency and phase alignment in small cells networks.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [9]
+  },
+  {
+    "Name": "Marine pollution monitoring",
+    "Markets": "Environmental Monitoring",
+    "Description": "SAR-based and optical satellite data can be used for detecting and monitoring of oil spills and marine litter. Earth observation also provides forecasts of sea currents and sea-surface heights (altimetry), sea-surface salinity, sea-surface temperature, ocean colour and sea-ice data – useful for monitoring and forecasting the course of the pollution. Moreover, remote sensing data can also contribute to identifying the polluters. Ocean services Metocean (meteorology over oceans, and offshore weather and sea state monitoring): Earth observation can provide data for quality meteorology over oceans (offshore weather and sea state monitoring) complemented with near-real-time data collection of variables such as wave height and frequency, wind speed, direction, and ocean current velocity on global and regional scales.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [14, 15]
+  },
+  {
+    "Name": "Dark vessel monitoring",
+    "Markets": "Maritime and Inland Waterways",
+    "Description": "GNSS-enabled long-range identification and tracking as well as AIS or VMS provide the means to monitor and track suspicious vessels. When those vessels turn off or disable their own AIS or VMS, Earth observation data provides enhanced situational awareness that can be used by dedicated maritime authorities to monitor and track “dark vessels” through Earth observation imagery and SAR data.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [14, 16]
+  },
+  {
+    "Name": "Passenger information systems",
+    "Markets": "Rail",
+    "Description": "GNSS is used to provide enhanced passenger services such as real time location and speed of trains along their route during a journey. Increasingly, GNSS location of trains is also supporting platform and online passenger information services.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [9, 11]
+  },
+  {
+    "Name": "Bike-sharing",
+    "Markets": "Road & automotive",
+    "Description": "Bike-sharing and especially free-floating bike-sharing systems rely on GNSS to locate the bike across the city by both end users and the bike-sharing service provider. Public transport – buses: Public transit agencies use GNSS receivers in buses to track their location in real-time to display their position on a map in the control centre and their expected arrival times on digital displays at bus stops. Road fleet management: Fleet management on-board units transmit GNSS positioning information through telematics to support transport operators in monitoring the performance of logistics activities. This application is used within cars that form a so-called fleet such as taxis, rental cars and cars used for sharing schemes. Commercial vehicle fleet owners also adopt it. As subset, dangerous goods tracking is done by transmitting GNSS-based positioning data on the vehicles carrying them, together with other information about the status of the cargo.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [9, 11]
+  },
+  {
+    "Name": "Navigation (IVS and PND):",
+    "Markets": "Road & automotive",
+    "Description": "Navigation is the most widespread application, providing turn-by-turn indications to drivers through portable navigation devices (PNDs) and in-vehicle systems (IVS) built in cars.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [9, 11]
+  },
+  {
+    "Name": "Air quality monitoring in urban environments:",
+    "Markets": "Urban development & cultural heritage",
+    "Description": "Using satellite data and in situ measurements, Earth observation can support detecting, collecting, and interpreting information on a multitude of air pollutants, including their origins, movement, and expected health risks.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [3, 11, 13]
+  },
+  {
+    "Name": "Smart streetlights",
+    "Markets": "Urban development & cultural heritage",
+    "Description": "Smart streetlights incorporate precise GNSS positioning data, in addition to other technologies such as cameras and photocells, to remotely control the output of individual streetlights, detect faults, monitor energy performance. They also facilitate real time alerts for city-wide problems including traffic flow, parking spaces, electrical outages, and accidents.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [7, 11]
+  },
+  {
+    "Name": "Urban planning",
+    "Markets": "Urban development & cultural heritage",
+    "Description": "Earth observation can measure urban footprints including sprawl, density, and sealed surfaces. It can also measure change such as increase or decrease of urban deprivation. This information can in turn be used to help inform and plan future urban developments.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [11, 13]
+  },
+  {
+    "Name": "Urban modelling, 3D modelling, digital twins",
+    "Markets": "Urban development & cultural heritage",
+    "Description": "Earth observation data can serve as input to digital surface models, enabling simulations, including shadow effects or street canyon effects. The creation of so-called digital twins of cities would enable the visualization, monitoring and forecasting of natural and human activity in support of sustainable development. GNSS can help in precisely defining and measuring specific location points of interest for urban and 3D modelling purposes.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [9, 11, 13]
+  },
+  {
+    "Name": "Surveying and mapping",
+    "Markets": "Urban development & cultural heritage",
+    "Description": "Earth observation can support mapping of urban land-use and land cover while enabling to classify built structures including building height and urban infrastructure such as roads. GNSS-based cadastral surveying and mapping help in precisely defining and measuring specific location points of interest for cartographic and urban planning purposes (all GNSS cadastral and mapping devices are being quantified under this application, regardless of where they are used e.g., non-urban areas, energy and raw materials, infrastructures). Both Earth observation and GNSS power GIS applications for surveying and mapping of urban areas.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [9, 11]
+  },
+  {
+    "Name": "Real estate",
+    "Markets": "Urban development & cultural heritage",
+    "Description": "Earth observation enables detection of illegal structures outside of planning as well as violations of property lines.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [11, 16]
+  },
+  {
+    "Name": "Informal dwellings",
+    "Markets": "Urban development & cultural heritage",
+    "Description": "Earth observation enables detection of illegal structures outside of planning as well as violations of property lines.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [11, 16]
+  },
+  {
+    "Name": "Cultural heritage monitoring",
+    "Markets": "Urban development & cultural heritage",
+    "Description": "Cultural heritage, including monuments, spaces, and cultural infrastructure can be supported by means of Earth observation, both to assess (e.g., structural) conditions as well as disruptions (e.g., illegal construction, violation of preservation orders).",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [11, 16]
+  },
+  {
+    "Name": "Smart waste management",
+    "Markets": "Urban development & cultural heritage",
+    "Description": "GNSS can be used in smart waste management by precisely positioning waste containers, thereby helping in the monitoring and collection planning of waste.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [11, 12]
+  },
+  {
+    "Name": "Urban heat islands",
+    "Markets": "Urban development & cultural heritage",
+    "Description": "Earth observation can support mapping temperatures and temperature variations across urban areas, e.g., to alert health authorities of related risks for specific demographic groups.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [3, 11, 13]
+  },
+  {
+    "Name": "Urban greening",
+    "Markets": "Urban development & cultural heritage",
+    "Description": "Earth observation and GNSS can be used to monitor vegetation cover, the health of green space vegetation as well as precise definition, positioning and monitoring green space infrastructure.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [11, 13, 15]
+  },
+  {
+    "Name": "Congestion control",
+    "Markets": "Road & automotive",
+    "Description": "Satellite road traffic monitoring services collect floating car location data from vehicles through PNDs, IVS and mobile devices. The traffic information is then processed and distributed to users and other interested parties. Remote sensing data can be used as an additional layer of information for monitoring traffic flows.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [9, 11]
+  },
+  {
+    "Name": "Rail fleet management",
+    "Markets": "Rail",
+    "Description": "Train location provided by GNSS could be used to perform fleet analysis to optimize the use of locomotives and railway cars and to properly size rail fleets.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [9, 11]
+  },
+  {
+    "Name": "Public transport – tram and light rail",
+    "Markets": "Rail",
+    "Description": "Currently, GNSS is used in smart mobility applications to optimize the network capacity by managing tram locations or to provide real time information to passengers such as the estimated arrival time of a tram at a designated station. GNSS has started to be used for advanced applications, such as automatic speed limitation, ensuring that the tram speed is lower than a customer-defined speed limit in a specific area. It is also used for maintenance or on-board energy management, ensuring that the tram’s on-board battery has sufficient energy level before passing a section without external power supply.",
+    "Domains": "",
+    "Copernicus": "No",
+    "EGNSS": "No",
+    "SDGs": [9, 11]
+  }
+]
