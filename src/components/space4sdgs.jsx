@@ -1,9 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import space4sdgs from '../data/space4sdgs.json';
+import space4sdgs from '../data/space4sdgs.json' assert { type: 'json' };
 import { SDGs } from '../data/sdgs';
-
-const fallbackColor = '#666';
-const fallbackIcon = '/icons/sdg-placeholder.svg';
 
 const SDG_COLORS = {
   'no-poverty': '#E5243B',
@@ -25,9 +22,12 @@ const SDG_COLORS = {
   'partnerships': '#19486A',
 };
 
-// Create a quick lookup map for SDG metadata
+const fallbackColor = '#666';
+const fallbackIcon = '/icons/sdg-placeholder.svg';
+
+// Map SDG id (number) to SDG metadata object
 const sdgMap = SDGs.reduce((acc, sdg) => {
-  acc[sdg.id] = sdg;
+  acc[Number(sdg.id)] = sdg;
   return acc;
 }, {});
 
@@ -35,8 +35,9 @@ export default function Space4SDGsList() {
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredItems = useMemo(() => {
-    const term = searchTerm.toLowerCase();
-    return space4sdgs.filter(({ Space4SDGs, Description }) =>
+    const term = searchTerm.trim().toLowerCase();
+    if (!term) return space4sdgs;
+    return space4sdgs.filter(({ Space4SDGs = '', Description = '' }) =>
       `${Space4SDGs} ${Description}`.toLowerCase().includes(term)
     );
   }, [searchTerm]);
@@ -86,7 +87,7 @@ export default function Space4SDGsList() {
                   className="flex flex-col h-full justify-between"
                   aria-labelledby={`sdg-title-${index}`}
                 >
-                  <div className="flex items-center gap-4 mb-4">
+                  <div className="flex items-center gap-4">
                     <a href={linkHref} target="_blank" rel="noopener noreferrer">
                       <img
                         src={icon}
@@ -103,14 +104,14 @@ export default function Space4SDGsList() {
                         href={linkHref}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:underline"
+                        className="text-accent-500 no-underline"
                       >
                         {name}
                       </a>
                     </h3>
                   </div>
 
-                  <p className="text-gray-800 dark:text-white text-base mb-4">
+                  <p className="text-gray-800 dark:text-white text-base">
                     {item.Space4SDGs}
                   </p>
 
