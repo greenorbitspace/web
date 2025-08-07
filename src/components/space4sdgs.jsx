@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import space4sdgsData from '../data/space4sdgs.json';
+import space4sdgs from '../data/space4sdgs.json';
 import { SDGs } from '../data/sdgs';
 
 const fallbackColor = '#666';
@@ -36,9 +36,9 @@ export default function Space4SDGsList() {
 
   const filteredItems = useMemo(() => {
     const term = searchTerm.toLowerCase();
-    return space4sdgsData.filter(({ Space4SDGs, Description }) => {
-      return `${Space4SDGs} ${Description}`.toLowerCase().includes(term);
-    });
+    return space4sdgs.filter(({ Space4SDGs, Description }) =>
+      `${Space4SDGs} ${Description}`.toLowerCase().includes(term)
+    );
   }, [searchTerm]);
 
   return (
