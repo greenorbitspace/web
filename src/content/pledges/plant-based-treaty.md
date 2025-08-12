@@ -4,6 +4,7 @@ description: "We are a grassroots initiative creating bottom-up pressure for the
 organisations: 
   - Plant Based Treaty
 URL: "https://www.example.org/we-declare-climate-emergency"  # external or internal URL to pledge site or info
+logo: "/logos/pledges/pbt.png"
 values: 
   - responsibility
   - impact

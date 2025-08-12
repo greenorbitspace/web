@@ -4,6 +4,7 @@ description: ""
 organisations: 
   - Net Zero Carbon Events
 URL: "https://www.example.org/we-declare-climate-emergency"  # external or internal URL to pledge site or info
+logo: "/logos/pledges/nzce.png"
 values: 
   - responsibility
   - integrity

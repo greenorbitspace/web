@@ -1,4 +1,4 @@
-// src/data/authors.js
+// src/data/team.js
 export default [
   {
     slug: 'ryan-laird',

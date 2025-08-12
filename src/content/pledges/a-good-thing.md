@@ -3,6 +3,7 @@ name: "A Good Thing"
 description: ""
 organisations:
   - A Good Thing
+logo: "/logos/pledges/a-good-thing.png"
 values: 
   - responsibility
   - collaboration

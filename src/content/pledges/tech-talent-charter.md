@@ -3,6 +3,7 @@ name: "Tech Talent Charter"
 description: ""
 organisations: 
   - techUK
+logo: "/logos/pledges/ttc.png"
 values: 
   - continuous improvement
   - collaboration

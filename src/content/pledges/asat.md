@@ -3,6 +3,7 @@ name: "Space Industry Statement in Support of International Commitments to Not C
 description: "Our societal reliance on commercial space applications and services continues to grow, with applications spanning communication systems, navigation, Earth observation, and more. These societal benefits are at risk of being disrupted by the continued testing of anti-satellite (ASAT) weapons that produce large amounts of orbital debris, such as direct-ascent anti-satellite missiles. These tests directly threaten the safety of our space systems and the long-term sustainability of the space environment within which they operate, including the future economic development of low Earth orbit.  In December 2023, the UN General Assembly adopted a resolution 77/41 calling upon countries to commit not to conduct such tests."
 organisations: 
   - Secure World Foundation
+logo: "/logos/pledges/asat.png"
 values: 
   - responsibility
   - collaboration

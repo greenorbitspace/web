@@ -1,650 +1,712 @@
 [
     {
         "Organisation": "UK Space Agency",
-        "Description": "Responsible for the UK's civil space programme.",
+        "Description": "The UK Space Agency leads the nation's civil space programme, supporting innovation, research, and partnerships that drive economic growth, scientific discovery, and sustainable use of space.",
         "URL": "https://www.gov.uk/government/organisations/uk-space-agency",
         "HubSpot Company ID": "180115567816",
-        "Industry": "DEFENSE_SPACE",
+        "Industry": "space",
         "Category": "space agency",
-        "Type": "partner"
+        "Type": "partner",
+        "logo": "/logos/organisations/uksa.png"
     },
     {
         "Organisation": "United Nations Office for Outer Space Affairs",
-        "Description": "",
+        "Description": "UNOOSA promotes international cooperation in the peaceful use and exploration of space, ensuring space activities contribute to sustainable development and benefit all humankind.",
         "URL": "https://unoosa.org",
         "HubSpot Company ID": "28180536554",
-        "Industry": "INTERNATIONAL_AFFAIRS",
+        "Industry": "international affairs",
         "Category": "intergovernmental",
-        "Type": "partner"
+        "Type": "partner",
+        "logo": "/logos/organisations/unoosa.png"
     },
     {
         "Organisation": "Rainforest Foundation UK",
-        "Description": "",
+        "Description": "Rainforest Foundation UK works alongside Indigenous peoples and local communities to protect rainforests, safeguard biodiversity, and address the climate crisis through rights-based approaches.",
         "URL": "https://rainforestfoundation.org.uk",
         "HubSpot Company ID": "",
-        "Industry": "",
-        "Category": "",
-        "Type": "member"
-    },
-    {
-        "Organisation": "European Centre for Medium-Wave Forecasting",
-        "Description": "",
-        "URL": "https://ecmwf.int",
-        "HubSpot Company ID": "28118386899",
-        "Industry": "MECHANICAL_OR_INDUSTRIAL_ENGINEERING",
-        "Category": "intergovernmental",
-        "Type": "partner"
+        "Industry": "environmental services",
+        "Category": "ngo",
+        "Type": "member",
+        "logo": "/logos/organisations/rainforest-uk.png"
     },
     {
         "Organisation": "University of Leicester",
-        "Description": "",
+        "Description": "The University of Leicester is a leading UK research institution, recognised globally for its expertise in space science, planetary exploration, and Earth observation technologies.",
         "URL": "https://le.ac.uk",
         "HubSpot Company ID": "128913278200",
-        "Industry": "HIGHER_EDUCATION",
+        "Industry": "higher education",
         "Category": "university",
-        "Type": "partner"
+        "Type": "partner",
+        "logo": "/logos/organisations/uol.png"
     },
     {
         "Organisation": "INCO Academy",
-        "Description": "",
+        "Description": "INCO Academy provides innovative training programmes to equip individuals with the digital and green skills needed for the jobs of tomorrow, fostering inclusive and sustainable growth.",
         "URL": "https://inco-group.co",
         "HubSpot Company ID": "27661914319",
-        "Industry": "PROFESSIONAL_TRAINING_COACHING",
+        "Industry": "professional training & coaching",
         "Category": "education",
-        "Type": "partner"
+        "Type": "partner",
+        "logo": "/logos/organisations/inco-academy.png"
     },
     {
         "Organisation": "Leicester City Council",
-        "Description": "",
+        "Description": "Leicester City Council is the local authority for the city of Leicester, working to deliver sustainable urban development, community services, and economic opportunities.",
         "URL": "https://leicester.gov.uk",
         "HubSpot Company ID": "28162402530",
-        "Industry": "LEGAL_SERVICES",
+        "Industry": "local council",
         "Category": "local authority",
-        "Type": "partner"
+        "Type": "partner",
+        "logo": "/logos/organisations/lcc.png"
     },
     {
         "Organisation": "Space Park Leicester",
-        "Description": "",
+        "Description": "Space Park Leicester is a collaborative hub for space research, innovation, and industry, enabling partnerships that drive advancements in satellite technology, data analytics, and sustainability.",
         "URL": "https://space-park.co.uk",
         "HubSpot Company ID": "27661914315",
-        "Industry": "HIGHER_EDUCATION",
+        "Industry": "higher education",
         "Category": "space agency",
-        "Type": "partner"
+        "Type": "partner",
+        "logo": "/logos/organisations/spl.png"
     },
     {
         "Organisation": "UK Earth Observation Network for Sustainability",
-        "Description": "",
+        "Description": "The UK Earth Observation Network for Sustainability connects researchers, industry, and policymakers to leverage satellite data for tackling environmental challenges and advancing sustainable development goals.",
         "URL": "",
         "HubSpot Company ID": "",
-        "Industry": "",
-        "Category": "",
-        "Type": "partner"
-    },
-    {
-        "Organisation": "Secure World Foundation",
-        "Description": "",
-        "URL": "https://swfound.org",
-        "HubSpot Company ID": "28118386921",
-        "Industry": "FUND_RAISING",
-        "Category": "NGO",
-        "Type": "partner"
+        "Industry": "environmental services",
+        "Category": "network",
+        "Type": "partner",
+        "logo": "/logos/organisations/uk-eons.png"
     },
     {
         "Organisation": "Space4Climate",
-        "Description": "",
-        "URL": "https://space4cliamte.com",
+        "Description": "Space4Climate is a professional network bringing together expertise in climate services from space, helping to turn satellite data into actionable insights for climate resilience and sustainability.",
+        "URL": "https://space4climate.com",
         "HubSpot Company ID": "",
-        "Industry": "",
+        "Industry": "space",
         "Category": "professional society",
-        "Type": "member"
+        "Type": "member",
+        "logo": "/logos/organisations/s4c.png"
     },
     {
         "Organisation": "SmartCitiesWorld",
-        "Description": "",
+        "Description": "SmartCitiesWorld is an online platform providing news, insights, and best practices on smart city innovations, helping urban leaders develop more sustainable, connected, and resilient communities.",
         "URL": "https://SmartCitiesWorld.com",
         "HubSpot Company ID": "",
-        "Industry": "",
-        "Category": "",
-        "Type": "member"
+        "Industry": "media",
+        "Category": "industry group",
+        "Type": "member",
+        "logo": "/logos/organisations/smartcitiesworld.png"
     },
     {
         "Organisation": "National Centre for Earth Observation",
-        "Description": "",
+        "Description": "The National Centre for Earth Observation delivers world-class research using satellite data to monitor and understand environmental change, supporting policy, industry, and public services.",
         "URL": "https://nceo.ac.uk",
         "HubSpot Company ID": "28203876539",
-        "Industry": "HIGHER_EDUCATION",
-        "Category": "NGO",
-        "Type": "partner"
+        "Industry": "higher education",
+        "Category": "ngo",
+        "Type": "partner",
+        "logo": "/logos/organisations/nceo.png"
     },
     {
         "Organisation": "Space Communications Alliance",
-        "Description": "",
+        "Description": "The Space Communications Alliance is a global network of marketing and PR professionals dedicated to raising awareness of the space industry and its contribution to innovation and sustainability.",
         "URL": "https://spacecommsalliance.com",
         "HubSpot Company ID": "28165924075",
-        "Industry": "RESTAURANTS",
-        "Category": "space agency",
-        "Type": "partner"
+        "Industry": "marketing & communications",
+        "Category": "industry group",
+        "Type": "partner",
+        "logo": "/logos/organisations/sca.png"
     },
     {
         "Organisation": "Space Partnership",
-        "Description": "",
+        "Description": "Space Partnership is a UK initiative that brings together industry, academia, and government to coordinate space sector growth and deliver strategic benefits to the economy and society.",
         "URL": "https://spacepartnership.org.uk",
         "HubSpot Company ID": "28249998544",
-        "Industry": "FUND_RAISING",
+        "Industry": "public policy",
         "Category": "space agency",
-        "Type": "partner"
+        "Type": "partner",
+        "logo": "/logos/organisations/space-partnership.png"
     },
     {
         "Organisation": "The Climate Coalition",
-        "Description": "",
+        "Description": "The Climate Coalition is the UK’s largest group of organisations dedicated to action on climate change, uniting voices to protect the things we love and promote a sustainable future.",
         "URL": "https://theclimatecoalition.org",
         "HubSpot Company ID": "28203875572",
-        "Industry": "CONSUMER_SERVICES",
-        "Category": "space agency",
-        "Type": "partner"
+        "Industry": "environmental services",
+        "Category": "ngo",
+        "Type": "partner",
+        "logo": "/logos/organisations/tcc.png"
     },
     {
         "Organisation": "Climate Perks",
-        "Description": "",
+        "Description": "Climate Perks partners with employers to offer paid travel days for low-carbon journeys, encouraging sustainable transport choices and reducing business travel emissions.",
         "URL": "https://climateperks.com",
         "HubSpot Company ID": "128913280206",
-        "Industry": "CONSUMER_SERVICES",
-        "Category": "space agency",
-        "Type": "partner"
+        "Industry": "environmental services",
+        "Category": "ngo",
+        "Type": "partner",
+        "logo": "/logos/organisations/climate-perks.png"
     },
     {
         "Organisation": "Supply Chain Sustainability School",
-        "Description": "",
-        "URL": "https://unglobalcompact.org",
+        "Description": "The Supply Chain Sustainability School is a free, award-winning virtual learning platform providing sustainability training to professionals in the built environment sector.",
+        "URL": "https://www.supplychainschool.co.uk",
         "HubSpot Company ID": "",
-        "Industry": "",
+        "Industry": "education",
         "Category": "higher education",
-        "Type": "member"
+        "Type": "member",
+        "logo": "/logos/organisations/scss.png"
     },
     {
         "Organisation": "International Space University",
-        "Description": "",
+        "Description": "The International Space University offers interdisciplinary space education, fostering global cooperation and developing leaders to meet the challenges of humanity’s future in space.",
         "URL": "https://isunet.edu",
         "HubSpot Company ID": "28288113874",
-        "Category": "higher education",
+        "Industry": "higher education",
         "Category": "space agency",
-        "Type": "partner"
+        "Type": "partner",
+        "logo": "/logos/organisations/isunet.png"
     },
     {
         "Organisation": "Space Safety Coalition",
-        "Description": "",
+        "Description": "The Space Safety Coalition is an industry-led initiative promoting best practices and guidelines for the safe and sustainable use of outer space.",
         "URL": "https://spacesafety.org",
         "HubSpot Company ID": "28203934967",
-        "Industry": "",
-        "Category": "space agency",
-        "Type": "partner"
+        "Industry": "space",
+        "Category": "professional association",
+        "Type": "partner",
+        "logo": "/logos/organisations/space-safety.png"
     },
     {
         "Organisation": "BSI Sustainable Space Community",
-        "Description": "",
+        "Description": "The BSI Sustainable Space Community is a forum for organisations committed to developing standards and practices that ensure space activities are environmentally and socially responsible.",
         "URL": "https://bsigroup.com",
         "HubSpot Company ID": "28242758900",
-        "Industry": "PROFESSIONAL_TRAINING_COACHING",
-        "Category": "space agency",
-        "Type": "partner"
+        "Industry": "professional training & coaching",
+        "Category": "industry group",
+        "Type": "partner",
+        "logo": "/logos/organisations/bsi.png"
     },
     {
         "Organisation": "Leicester Startups",
-        "Description": "",
+        "Description": "Leicester Startups is a community network supporting entrepreneurs and early-stage businesses through events, mentoring, and collaboration opportunities.",
         "URL": "https://leicesterstartups.com",
         "HubSpot Company ID": "28249998537",
-        "Industry": "",
-        "Category": "space agency",
-        "Type": "partner"
+        "Industry": "entrepreneurship",
+        "Category": "local",
+        "Type": "partner",
+        "logo": "/logos/organisations/leicester-startups.png"
     },
     {
         "Organisation": "Space City Leicester",
-        "Description": "",
+        "Description": "Space City Leicester is a dedicated cluster for space-related businesses, research, and innovation, supporting economic growth and collaboration in the space sector.",
         "URL": "https://spacecityleicester.co.uk",
         "HubSpot Company ID": "",
-        "Industry": "PROFESSIONAL_TRAINING_COACHING",
+        "Industry": "space",
         "Category": "local",
-        "Type": "partner"
+        "Type": "partner",
+        "logo": "/logos/organisations/scl.png"
     },
     {
         "Organisation": "Cosmos for Humanity",
-        "Description": "",
+        "Description": "Cosmos for Humanity promotes sustainable and inclusive space exploration, ensuring the benefits of space are shared by all people and future generations.",
         "URL": "https://cosmosforhumanity.org",
         "HubSpot Company ID": "50469090509",
-        "Industry": "",
-        "Category": "space agency",
-        "Type": "partner"
+        "Industry": "space",
+        "Category": "ngo",
+        "Type": "partner",
+        "logo": "/logos/organisations/cosmosforhumanity.png"
     },
     {
         "Organisation": "SME Climate Hub",
-        "Description": "",
+        "Description": "The SME Climate Hub provides tools, resources, and commitments for small and medium-sized businesses to reduce emissions and align with net-zero targets.",
         "URL": "https://smeclimatehub.org",
         "HubSpot Company ID": "",
-        "Industry": "",
-        "Category": "",
-        "Type": "member"
+        "Industry": "environmental services",
+        "Category": "network",
+        "Type": "member",
+        "logo": "/logos/organisations/sme-climate-hub.png"
     },
     {
         "Organisation": "Taskforce on Nature-related Financial Disclosures",
-        "Description": "",
+        "Description": "The TNFD develops a risk management and disclosure framework for organisations to report and act on nature-related risks, supporting a shift in global financial flows toward nature-positive outcomes.",
         "URL": "https://tnfd.global",
         "HubSpot Company ID": "",
-        "Industry": "",
-        "Category": "",
-        "Type": "member"
+        "Industry": "finance",
+        "Category": "network",
+        "Type": "member",
+        "logo": "/logos/organisations/tnfd.png"
     },
     {
         "Organisation": "DOCK",
-        "Description": "",
+        "Description": "DOCK is a Leicester-based innovation hub providing office space, labs, and support for high-tech and low-carbon businesses.",
         "URL": "https://dockleicester.co.uk",
         "HubSpot Company ID": "",
-        "Industry": "",
-        "Category": "space agency",
-        "Type": "supplier"
+        "Industry": "business services",
+        "Category": "local",
+        "Type": "supplier",
+        "logo": "/logos/organisations/dockleicester.png"
     },
     {
         "Organisation": "Place Support Partnership",
-        "Description": "",
+        "Description": "Place Support Partnership helps local authorities and communities improve town centre vitality through business engagement, support, and resilience-building initiatives.",
         "URL": "https://placesupportpartnership.com",
         "HubSpot Company ID": "122073527494",
-        "Industry": "",
-        "Category": "space agency",
-        "Type": "partner"
+        "Industry": "business services",
+        "Category": "partnership",
+        "Type": "partner",
+        "logo": "/logos/organisations/psp.png"
     },
     {
         "Organisation": "Space Enterprise Community",
-        "Description": "",
-        "URL": "spaceenterprise.uk",
+        "Description": "The Space Enterprise Community is a digital platform connecting UK space professionals, fostering collaboration, innovation, and knowledge-sharing across the sector.",
+        "URL": "https://spaceenterprise.uk",
         "HubSpot Company ID": "129841171660",
-        "Industry": "",
-        "Category": "space agency",
-        "Type": "partner"
+        "Industry": "space",
+        "Category": "network",
+        "Type": "partner",
+        "logo": "/logos/organisations/sec.png"
     },
     {
         "Organisation": "European Space Agency",
-        "Description": "",
+        "Description": "The European Space Agency is an intergovernmental organisation dedicated to the exploration and use of space for peaceful purposes, advancing science, technology, and sustainability.",
         "URL": "https://www.esa.int",
         "HubSpot Company ID": "118940428524",
-        "Industry": "DEFENSE_SPACE",
+        "Industry": "defence & space",
         "Category": "space agency",
-        "Type": "partner"
+        "Type": "partner",
+        "logo": "/logos/organisations/esa.png"
     },
     {
         "Organisation": "Sustainable East Midlands",
-        "Description": "",
+        "Description": "Sustainable East Midlands is a regional network promoting low-carbon initiatives, green business practices, and environmental collaboration.",
         "URL": "",
         "HubSpot Company ID": "",
-        "Industry": "",
+        "Industry": "environmental services",
         "Category": "local authority",
-        "Type": "partner"
+        "Type": "partner",
+        "logo": "/logos/organisations/sustainable-east-mids.png"
     },
     {
         "Organisation": "SpaceProjects.uk",
-        "Description": "",
+        "Description": "SpaceProjects.uk showcases and supports UK-led space projects, encouraging collaboration between researchers, industry, and educators.",
         "URL": "https://spaceprojects.uk",
         "HubSpot Company ID": "",
-        "Industry": "",
-        "Category": "NGO",
-        "Type": "partner"
+        "Industry": "space",
+        "Category": "ngo",
+        "Type": "partner",
+        "logo": "/logos/organisations/spaceprojects-uk.png"
     },
     {
         "Organisation": "GreenerFuture Leicestershire",
-        "Description": "",
+        "Description": "GreenerFuture Leicestershire is a local initiative focused on community-led sustainability projects, environmental education, and climate action.",
         "URL": "",
         "HubSpot Company ID": "",
-        "Industry": "",
+        "Industry": "environmental services",
         "Category": "academic",
-        "Type": "partner"
+        "Type": "partner",
+        "logo": "/logos/organisations/greenerfuture.png"
     },
     {
         "Organisation": "Climate Impact Partners",
-        "Description": "",
+        "Description": "Climate Impact Partners delivers high-quality carbon credit solutions and climate finance to help organisations achieve net-zero goals while supporting sustainable development projects.",
         "URL": "",
         "HubSpot Company ID": "",
-        "Industry": "",
+        "Industry": "environmental services",
         "Category": "industry group",
-        "Type": "partner"
+        "Type": "partner",
+        "logo": "/logos/organisations/cip.png"
     },
     {
         "Organisation": "Sustainable Business Alliance",
-        "Description": "",
+        "Description": "The Sustainable Business Alliance brings together companies committed to environmental responsibility, social equity, and ethical governance.",
         "URL": "https://sustainablebusinessalliance.com",
         "HubSpot Company ID": "",
         "Industry": "business",
-        "Category": "NGO",
-        "Type": "partner"
+        "Category": "ngo",
+        "Type": "partner",
+        "logo": "/logos/organisations/sba.png"
     },
     {
         "Organisation": "UK Students for the Exploration and Development of Space",
-        "Description": "",
+        "Description": "UKSEDS is the UK’s national student space society, supporting and inspiring students to pursue careers in the space industry through projects, competitions, and outreach.",
         "URL": "https://www.ukseds.org",
         "HubSpot Company ID": "",
-        "Industry": "",
+        "Industry": "space",
         "Category": "youth",
-        "Type": "partner"
+        "Type": "partner",
+        "logo": "/logos/organisations/ukseds.png"
     },
     {
-        "Organisation": "Declaration on Research Assessment (DORA)",
-        "Description": "",
+        "Organisation": "International Society for Development and Sustainability",
+        "Description": "The International Society for Development and Sustainability promotes sustainable development research and practice through global collaboration and knowledge exchange.",
         "URL": "https://sfdora.org",
         "HubSpot Company ID": "178336278741",
-        "Industry": "",
-        "Category": "space agency",
-        "Type": "partner"
+        "Industry": "non-profit",
+        "Category": "ngo",
+        "Type": "partner",
+        "logo": "/logos/organisations/isds.png"
     },
     {
         "Organisation": "Justspace Alliance",
-        "Description": "",
+        "Description": "Justspace Alliance advocates for a more inclusive and ethical space future, addressing issues of environmental sustainability, social justice, and responsible governance.",
         "URL": "https://justspacealliance.org",
         "HubSpot Company ID": "178313345242",
-        "Industry": "",
-        "Category": "space agency",
-        "Type": "partner"
+        "Industry": "space",
+        "Category": "ngo",
+        "Type": "partner",
+        "logo": "/logos/organisations/justspace.png"
     },
     {
         "Organisation": "Zero Waste International Alliance",
-        "Description": "",
+        "Description": "The Zero Waste International Alliance promotes zero waste principles globally, supporting communities, businesses, and governments in reducing waste and protecting resources.",
         "URL": "",
         "HubSpot Company ID": "",
-        "Industry": "",
-        "Category": "space agency",
-        "Type": "partner"
+        "Industry": "environmental services",
+        "Category": "ngo",
+        "Type": "partner",
+        "logo": "/logos/organisations/zwia.png"
     },
     {
         "Organisation": "Institute of Physics",
-        "Description": "",
+        "Description": "The Institute of Physics is a scientific charity working to advance physics education, research, and application for the benefit of society.",
         "URL": "",
         "HubSpot Company ID": "",
-        "Industry": "",
+        "Industry": "science & research",
         "Category": "professional association",
-        "Type": "member"
+        "Type": "member",
+        "logo": "/logos/organisations/iop.png"
     },
     {
         "Organisation": "IAU CPS",
-        "Description": "",
+        "Description": "The IAU Centre for the Protection of the Dark and Quiet Sky from Satellite Constellation Interference coordinates global efforts to safeguard astronomy from the impact of satellite constellations.",
         "URL": "",
         "HubSpot Company ID": "",
-        "Industry": "",
+        "Industry": "science & research",
         "Category": "intergovernmental",
-        "Type": "member"
+        "Type": "member",
+        "logo": "/logos/organisations/iau-cps.png"
     },
     {
         "Organisation": "SpacePride",
-        "Description": "",
+        "Description": "SpacePride is an inclusive community celebrating diversity in the space sector and promoting equal opportunities for all space professionals.",
         "URL": "https://spacepride.space",
         "HubSpot Company ID": "178350111950",
-        "Industry": "",
-        "Category": "space agency",
-        "Type": "partner"
-    },
-    {
-        "Organisation": "Space City Leicester",
-        "Description": "",
-        "URL": "https://space-city.co.uk",
-        "HubSpot Company ID": "178334464231",
-        "Industry": "",
-        "Category": "space agency",
-        "Type": "partner"
+        "Industry": "space",
+        "Category": "ngo",
+        "Type": "partner",
+        "logo": "/logos/organisations/spacepride.png"
     },
     {
         "Organisation": "Circular Economy Club",
-        "Description": "",
-        "URL": "",
+        "Description": "The Circular Economy Club is a global non-profit network connecting professionals and organisations to accelerate the transition to a circular economy.",
+        "URL": "https://www.circulareconomyclub.com",
         "HubSpot Company ID": "",
-        "Industry": "",
+        "Industry": "environmental services",
         "Category": "non-profit",
-        "Type": "partner"
+        "Type": "member",
+        "logo": "/logos/organisations/cec.png"
     },
     {
         "Organisation": "ClimateAction.tech",
-        "Description": "",
+        "Description": "ClimateAction.tech is a community of tech professionals taking climate action by sharing knowledge, tools, and best practices for building a sustainable digital future.",
         "URL": "https://ClimateAction.tech",
         "HubSpot Company ID": "",
-        "Industry": "",
-        "Category": "",
-        "Type": "partner"
+        "Industry": "technology",
+        "Category": "network",
+        "Type": "partner",
+        "logo": "/logos/organisations/cat.png"
     },
     {
         "Organisation": "Zero Emissions Network",
-        "Description": "",
+        "Description": "The Zero Emissions Network helps businesses and residents reduce emissions by promoting active travel, electric vehicles, and cleaner air initiatives.",
         "URL": "https://zeroemissionsnetwork.com",
         "HubSpot Company ID": "",
-        "Industry": "",
-        "Category": "space agency",
-        "Type": "partner"
+        "Industry": "environmental services",
+        "Category": "network",
+        "Type": "member",
+        "logo": "/logos/organisations/zen.png"
     },
     {
         "Organisation": "Chartered Institute of Public Relations",
-        "Description": "",
+        "Description": "The Chartered Institute of Public Relations is a professional body representing PR practitioners, promoting best practice, skills development, and ethical standards.",
         "URL": "https://cipr.co.uk",
         "HubSpot Company ID": "",
         "Industry": "public relations",
         "Category": "professional association",
-        "Type": "member"
+        "Type": "member",
+        "logo": "/logos/organisations/cipr.png"
     },
     {
         "Organisation": "Chartered Institute of Marketing",
-        "Description": "",
+        "Description": "The Chartered Institute of Marketing is the world’s leading professional marketing body, providing training, resources, and accreditation to marketers worldwide.",
         "URL": "https://cim.co.uk",
         "HubSpot Company ID": "",
         "Industry": "marketing",
         "Category": "professional association",
-        "Type": "member"
+        "Type": "member",
+        "logo": "/logos/organisations/cim.png"
     },
     {
         "Organisation": "Midlands Space Cluster",
-        "Description": "",
+        "Description": "The Midlands Space Cluster is a regional initiative uniting businesses, research institutions, and local authorities to grow the space economy in the Midlands.",
         "URL": "",
         "HubSpot Company ID": "",
         "Industry": "aerospace",
         "Category": "association",
-        "Type": "partner"
+        "Type": "partner",
+        "logo": "/logos/organisations/midlands-space-cluster.png"
     },
     {
         "Organisation": "European Association of Remote Sensing Companies",
-        "Description": "",
+        "Description": "The European Association of Remote Sensing Companies represents the Earth observation industry, fostering growth, partnerships, and the uptake of satellite-based services.",
         "URL": "https://earsc.org",
         "HubSpot Company ID": "",
-        "Industry": "",
-        "Category": "NGO",
-        "Type": "member"
+        "Industry": "space",
+        "Category": "ngo",
+        "Type": "member",
+        "logo": "/logos/organisations/earsc.png"
     },
     {
         "Organisation": "UKspace",
-        "Description": "",
+        "Description": "UKspace is the official trade association for the UK space industry, representing and promoting the sector’s interests to government, media, and international stakeholders.",
         "URL": "https://ukspace.org",
         "HubSpot Company ID": "",
-        "Industry": "",
+        "Industry": "space",
         "Category": "trade association",
-        "Type": "member"
+        "Type": "member",
+        "logo": "/logos/organisations/ukspace.png"
     },
     {
-        "Organisation": "Good Business Foundation",
-        "Description": "",
-        "URL": "https://ukspace.org",
+        "Organisation": "Good Business Charter",
+        "Description": "The Good Business Charter recognises and encourages responsible business practices across areas such as fair pay, employee wellbeing, diversity, and environmental responsibility.",
+        "URL": "https://goodbusinesscharter.com",
         "HubSpot Company ID": "",
-        "Industry": "",
+        "Industry": "business services",
         "Category": "trade association",
-        "Type": "member"
+        "Type": "member",
+        "logo": "/logos/organisations/gbc.png"
     },
     {
         "Organisation": "Federation of Small Businesses",
-        "Description": "",
+        "Description": "The Federation of Small Businesses champions the interests of small business owners and the self-employed through advocacy, resources, and networking opportunities.",
         "URL": "https://fsb.org.uk",
         "HubSpot Company ID": "",
-        "Industry": "",
+        "Industry": "business services",
         "Category": "trade association",
-        "Type": "member"
+        "Type": "member",
+        "logo": "/logos/organisations/fsb.png"
     },
     {
         "Organisation": "CharityComms",
-        "Description": "",
+        "Description": "CharityComms is the professional membership network for charity communicators, providing training, best practice, and peer support to enhance impact across the sector.",
         "URL": "https://charitycomms.org.uk",
         "HubSpot Company ID": "",
-        "Industry": "",
+        "Industry": "nonprofit organisation management",
         "Category": "trade association",
-        "Type": "member"
+        "Type": "member",
+        "logo": "/logos/organisations/charitycomms.png"
     },
     {
         "Organisation": "Designers in Space Community",
-        "Description": "",
+        "Description": "Designers in Space is a global community for creatives working in or inspired by the space sector, fostering collaboration and design-led innovation in space exploration.",
         "URL": "https://dis.community",
         "HubSpot Company ID": "",
-        "Industry": "",
-        "Category": "",
-        "Type": "member"
+        "Industry": "design",
+        "Category": "network",
+        "Type": "member",
+        "logo": "/logos/organisations/disc.png"
     },
-    {
-        "Organisation": "HubSpot",
-        "Description": "",
-        "URL": "https://hubspot.com",
-        "HubSpot Company ID": "",
-        "Industry": "",
-        "Category": "CRM",
-        "Type": "supplier"
-    },
-    {
-        "Organisation": "Notion",
-        "Description": "",
-        "URL": "https://notion.so",
-        "HubSpot Company ID": "",
-        "Industry": "",
-        "Category": "software",
-        "Type": "supplier"
-    },
-    {
-        "Organisation": "Proton",
-        "Description": "",
-        "URL": "https://proton.me",
-        "HubSpot Company ID": "",
-        "Industry": "",
-        "Category": "software",
-        "Type": "supplier"
-    }, 
     {
         "Organisation": "Ecosend",
-        "Description": "",
-        "URL": "https://proton.me",
+        "Description": "Ecosend is an email marketing platform designed to minimise environmental impact, using carbon offsetting and energy-efficient infrastructure for sustainable digital communications.",
+        "URL": "https://ecosend.io",
         "HubSpot Company ID": "",
-        "Industry": "",
+        "Industry": "software",
         "Category": "software",
-        "Type": "supplier"
-    },
-    {
-        "Organisation": "Krystal",
-        "Description": "",
-        "URL": "https://proton.me",
-        "HubSpot Company ID": "",
-        "Industry": "",
-        "Category": "software",
-        "Type": "supplier"
-    },
-    {
-        "Organisation": "Canva",
-        "Description": "",
-        "URL": "https://proton.me",
-        "HubSpot Company ID": "",
-        "Industry": "",
-        "Category": "software",
-        "Type": "supplier"
+        "Type": "supplier",
+        "logo": "/logos/organisations/ecosend.png"
     },
     {
         "Organisation": "Association of British Science Writers",
-        "Description": "",
-        "URL": "https://proton.me",
+        "Description": "The Association of British Science Writers supports, promotes, and defends the professional interests of science writers, journalists, and communicators in the UK.",
+        "URL": "https://absw.org.uk",
         "HubSpot Company ID": "",
-        "Industry": "",
-        "Category": "",
-        "Type": "member"
+        "Industry": "media",
+        "Category": "professional society",
+        "Type": "member",
+        "logo": "/logos/organisations/absw.png"
     },
     {
         "Organisation": "Climate Voice",
-        "Description": "",
-        "URL": "https://proton.me",
+        "Description": "Climate Voice mobilises employees, students, and the public to push organisations towards bold climate action and advocacy for systemic environmental change.",
+        "URL": "https://climatevoice.org",
         "HubSpot Company ID": "",
-        "Industry": "",
-        "Category": "",
-        "Type": "member"
+        "Industry": "environmental services",
+        "Category": "advocacy group",
+        "Type": "member",
+        "logo": "/logos/organisations/climatevoice.png"
     },
     {
         "Organisation": "ACT Climate Labs",
-        "Description": "",
-        "URL": "https://proton.me",
+        "Description": "ACT Climate Labs is a collaborative initiative developing creative campaigns and strategies to inspire large-scale climate action and public engagement.",
+        "URL": "https://www.actclimatelabs.org",
         "HubSpot Company ID": "",
-        "Industry": "",
-        "Category": "",
-        "Type": "member"
+        "Industry": "environmental services",
+        "Category": "nonprofit",
+        "Type": "member",
+        "logo": "/logos/organisations/act.png"
     },
     {
         "Organisation": "Creatives for Climate",
-        "Description": "",
-        "URL": "https://proton.me",
+        "Description": "Creatives for Climate is a global network of creative professionals using storytelling, design, and campaigns to accelerate the transition to a sustainable future.",
+        "URL": "https://www.creativesforclimate.co",
         "HubSpot Company ID": "",
-        "Industry": "",
-        "Category": "",
-        "Type": "member"
+        "Industry": "creative services",
+        "Category": "network",
+        "Type": "member",
+        "logo": "/logos/organisations/c4c.png"
     },
     {
         "Organisation": "Enterprise Nation",
-        "Description": "",
-        "URL": "https://proton.me",
+        "Description": "Enterprise Nation is a small business network offering advice, resources, training, and community support to help entrepreneurs start and grow their ventures.",
+        "URL": "https://www.enterprisenation.com",
         "HubSpot Company ID": "",
-        "Industry": "",
-        "Category": "",
-        "Type": "member"
+        "Industry": "business services",
+        "Category": "network",
+        "Type": "member",
+        "logo": "/logos/organisations/enterprise-nation.png"
     },
     {
         "Organisation": "Future Earth",
-        "Description": "",
-        "URL": "https://proton.me",
+        "Description": "Future Earth is a global research network advancing sustainability science to support transformations towards a resilient, equitable, and sustainable planet.",
+        "URL": "https://futureearth.org",
         "HubSpot Company ID": "",
-        "Industry": "",
-        "Category": "software",
-        "Type": "member"
+        "Industry": "research",
+        "Category": "nonprofit",
+        "Type": "member",
+        "logo": "/logos/organisations/futureearth.png"
     },
     {
         "Organisation": "Green Economy",
-        "Description": "",
-        "URL": "https://Green Economy",
+        "Description": "Green Economy connects businesses with low-carbon solutions, helping organisations reduce their environmental impact and transition to net zero.",
+        "URL": "https://greeneconomy.co.uk",
         "HubSpot Company ID": "",
-        "Industry": "",
-        "Category": "",
-        "Type": "member"
+        "Industry": "environmental services",
+        "Category": "network",
+        "Type": "member",
+        "logo": "/logos/organisations/green-economy.png"
     },
     {
         "Organisation": "Global Space Enablers Network",
-        "Description": "",
-        "URL": "https://proton.me",
+        "Description": "The Global Space Enablers Network fosters equitable entrepreneurial ecosystems in developing and emerging countries to ensure inclusive access to the opportunities of space.",
+        "URL": "https://www.spaceenablers.net/",
         "HubSpot Company ID": "",
-        "Industry": "",
-        "Category": "",
-        "Type": "member"
+        "Industry": "space",
+        "Category": "network",
+        "Type": "member",
+        "logo": "/logos/organisations/gsen.png"
     },
     {
         "Organisation": "Leaders for Climate Action",
-        "Description": "",
-        "URL": "https://proton.me",
+        "Description": "Leaders for Climate Action is a global community of entrepreneurs and changemakers committed to measurable emissions reduction and climate advocacy.",
+        "URL": "https://lfca.earth",
         "HubSpot Company ID": "",
-        "Industry": "",
-        "Category": "",
-        "Type": "member"
+        "Industry": "environmental services",
+        "Category": "network",
+        "Type": "member",
+        "logo": "/logos/organisations/lca.png"
     },
     {
         "Organisation": "Net Zero Carbon Events",
-        "Description": "",
+        "Description": "Net Zero Carbon Events is an industry-wide initiative supporting the events sector in reducing greenhouse gas emissions and achieving net zero by 2050.",
         "URL": "https://nzce.org",
         "HubSpot Company ID": "",
-        "Industry": "",
+        "Industry": "events",
         "Category": "events",
-        "Type": "member"
+        "Type": "member",
+        "logo": "/logos/organisations/nzce.png"
+    },
+    {
+        "Organisation": "Krystal",
+        "Description": "Krystal provides sustainable web hosting powered by renewable energy, combining high-performance services with a commitment to environmental responsibility.",
+        "URL": "https://krystal.uk",
+        "HubSpot Company ID": "",
+        "Industry": "technology",
+        "Category": "web hosting",
+        "Type": "supplier",
+        "logo": "/logos/organisations/krystal.png"
+    },
+    {
+        "Organisation": "Plusnet",
+        "Description": "Plusnet is a UK-based broadband and telecommunications provider known for affordable services and customer-focused support.",
+        "URL": "https://plus.net",
+        "HubSpot Company ID": "",
+        "Industry": "telecommunications",
+        "Category": "telecoms",
+        "Type": "supplier",
+        "logo": "/logos/organisations/plusnet.png"
+    },
+    {
+        "Organisation": "Stripe",
+        "Description": "Stripe is a global payments platform that enables businesses to securely accept and manage online transactions while offering tools to support growth.",
+        "URL": "https://stripe.com",
+        "HubSpot Company ID": "",
+        "Industry": "financial services",
+        "Category": "payments",
+        "Type": "supplier",
+        "logo": "/logos/organisations/stripe.png"
+    },
+    {
+        "Organisation": "Tide",
+        "Description": "Tide is a UK-based digital banking platform offering accounts, payment services, and tools tailored for small businesses and entrepreneurs.",
+        "URL": "https://tide.co",
+        "HubSpot Company ID": "",
+        "Industry": "financial services",
+        "Category": "bank",
+        "Type": "supplier",
+        "logo": "/logos/organisations/tide.png"
+    },
+    {
+        "Organisation": "Rebel Business School",
+        "Description": "Rebel Business School delivers practical, free training that empowers people to start and grow businesses without debt or traditional constraints.",
+        "URL": "https://therebelschool.com",
+        "HubSpot Company ID": "",
+        "Industry": "education",
+        "Category": "education",
+        "Type": "partner",
+        "logo": "/logos/organisations/rebel.png"
+    },
+    {
+        "Organisation": "Ecodemy",
+        "Description": "Ecodemy provides sustainability-focused education and training, helping individuals and organisations gain the skills to create positive environmental change.",
+        "URL": "https://ecodemy.ca",
+        "HubSpot Company ID": "",
+        "Industry": "education",
+        "Category": "education",
+        "Type": "partner",
+        "logo": "/logos/organisations/ecodemy.png"
+    },
+    {
+        "Organisation": "GreenerFuture Leicestershire",
+        "Description": "GreenerFuture Leicestershire supports local businesses and communities in adopting sustainable practices, tools, and technologies to achieve net zero goals.",
+        "URL": "https://greenerfutureleicestershire.co.uk",
+        "HubSpot Company ID": "",
+        "Industry": "environmental services",
+        "Category": "tools",
+        "Type": "supplier",
+        "logo": "/logos/organisations/greenerfuture.png"
     },
     {
         "Organisation": "Locality",
-        "Description": "",
+        "Description": "Locality is a national membership network supporting community organisations to create thriving, inclusive, and sustainable local places.",
         "URL": "https://locality.org.uk",
         "HubSpot Company ID": "",
-        "Industry": "",
-        "Category": "",
-        "Type": "member"
+        "Industry": "nonprofit organisation management",
+        "Category": "network",
+        "Type": "member",
+        "logo": "/logos/organisations/locality.png"
     }
 ]

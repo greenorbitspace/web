@@ -4,6 +4,7 @@ description: ""
 organisations: 
   - LEAD statement
 URL: "https://www.example.org/we-declare-climate-emergency"  # external or internal URL to pledge site or info
+logo: "/logos/pledges/lead.png"
 values: 
   - responsibility
   - collaboration

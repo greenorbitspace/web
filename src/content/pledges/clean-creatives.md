@@ -4,6 +4,7 @@ description: ""
 organisations: 
   - Clean Creatives
 URL: "https://www.example.org/we-declare-climate-emergency"  # external or internal URL to pledge site or info
+logo: "/logos/pledges/cc.png"
 values: 
   - responsibility
   - collaboration

@@ -58,7 +58,12 @@ const pledgeSchema = z.object({
   SDGs: z.array(z.number()).optional(),
   commitments: z.array(z.string()).optional(),
   CSR: z.string().optional(),
-  logo: z.string().url().optional(),
+
+  // Allow either remote URLs or /public paths for logos
+  logo: z.string()
+    .regex(/^(https?:\/\/|\/)/, { message: 'Logo must be a full URL or start with / for public assets' })
+    .optional(),
+
   URL: z.string().url().optional(),
 });
 

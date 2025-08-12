@@ -3,6 +3,7 @@ name: "The Ethical Move"
 description: ""
 organisations:
   - The Ethical Move
+logo: "/logos/pledges/tem.png"
 values: 
   - responsibility
   - integrity

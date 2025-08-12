@@ -3,36 +3,36 @@
     "title": "Innovation",
     "tagline": "Creativity and innovation drive transformation.",
     "description": "We push boundaries, crafting sustainable marketing strategies that empower businesses to thrive responsibly. Innovation lies at our core—developing new solutions, tackling challenges, and championing positive change within the space sector and beyond.",
-    "icon": "/icons/innovation.svg"
+    "icon": "/icons/values/innovation.png"
   },
   {
     "title": "Responsibility",
     "tagline": "Ethical leadership in action.",
     "description": "With great power comes great responsibility. We champion responsible practices across the space, smart cities, and maritime sectors. Our stewardship extends to clients, communities, and the environment, ensuring ethical leadership guides all our actions.",
-    "icon": "/icons/responsibility.svg"
+    "icon": "/icons/values/responsibility.png"
   },
   {
     "title": "Collaboration",
     "tagline": "Strength in unity.",
     "description": "The best outcomes arise from collaboration. We value diverse perspectives and work closely with clients, partners, and our team to craft marketing strategies that deliver business results while advancing societal and environmental impact.",
-    "icon": "/icons/collaboration.svg"
+    "icon": "/icons/values/collaboration.png"
   },
   {
     "title": "Impact",
     "tagline": "Purpose-driven success.",
     "description": "We measure success by the positive impact we create. From enhancing space operations to supporting smart cities, our campaigns focus on building a sustainable, prosperous, and equitable future.",
-    "icon": "/icons/impact.svg"
+    "icon": "/icons/values/impact.png"
   },
   {
     "title": "Integrity",
     "tagline": "Honesty in every step.",
     "description": "Trust is foundational. We uphold the highest ethical standards with transparency and accountability, ensuring clients and partners can rely on our commitment to their success and sustainability.",
-    "icon": "/icons/integrity.svg"
+    "icon": "/icons/values/integrity.png"
   },
   {
     "title": "Continuous Improvement",
     "tagline": "Evolving for a better tomorrow.",
     "description": "We embrace a culture of continuous learning and adaptation. Staying at the forefront of sustainable marketing, we deliver innovative solutions tailored to the evolving needs of the space industry and beyond.",
-    "icon": "/icons/continuous-improvement.svg"
+    "icon": "/icons/values/continuous-improvement.png"
   }
 ]

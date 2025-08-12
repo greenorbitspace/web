@@ -3,6 +3,7 @@ name: "SME Climate Hub"
 description: ""
 organisations: 
   - SME Climate Hub
+logo: "/logos/pledges/sme-climate-hub.png"
 values: 
   - responsibility
   - collaboration

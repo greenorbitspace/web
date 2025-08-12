@@ -1,8 +1,9 @@
 ---
-name: "Tech Net Zero"
+name: "Tech Zero"
 description: "The climate action group for tech companies of all sizes committed to fighting the climate crisis. We believe that by joining forces, we can make faster progress to net zero."
 organisations: 
   - techUK
+logo: "/logos/pledges/tech-zero.png"
 values: 
   - innovation
   - collaboration

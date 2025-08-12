@@ -93,7 +93,7 @@ export default function OrganisationsList({ organisations = [] }) {
               URL,
               Category,
               Industry,
-              logo,
+              logo, // <-- New logo field
             } = org;
 
             return (
@@ -109,8 +109,8 @@ export default function OrganisationsList({ organisations = [] }) {
                       alt={`${Organisation} logo`}
                       className="w-16 h-16 object-contain flex-shrink-0"
                       onError={(e) => {
-                        e.target.onerror = null;
-                        e.target.src = fallbackLogo;
+                        e.currentTarget.onerror = null;
+                        e.currentTarget.src = fallbackLogo;
                       }}
                     />
                     <h3

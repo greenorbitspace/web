@@ -3,6 +3,7 @@ name: "Pledge to Net Zero"
 description: ""
 organisations: 
   - Pledge to Net Zero
+logo: "/logos/pledges/pledge-to-net-zero.png"
 values: 
   - responsibility
   - collaboration

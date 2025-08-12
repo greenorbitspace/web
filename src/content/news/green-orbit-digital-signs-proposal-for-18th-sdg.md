@@ -4,6 +4,7 @@ notion_page_id: 217d6625-c679-811f-883d-e517d37be8b3
 exported_at: '2025-07-31T23:19:29.897504+00:00'
 slug: green-orbit-digital-signs-proposal-for-18th-sdg
 url: https://greenorbit.space/news/green-orbit-digital-signs-proposal-for-18th-sdg/
+featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F06dcc2c3-6b5f-4375-90ab-9baf55af8348%2Fspace18sdg.jpg/size/w=2000?exp=1755007959&sig=GrEPJ2Ywxa1zKpBNWS5s0frHj75ky8ErBz4khOPNUKI&id=fc3683f5-5983-4760-a65e-c3cf583c50e3&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
 featured: false
 author: Ryan Laird
 tags:

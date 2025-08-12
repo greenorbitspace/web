@@ -4,7 +4,8 @@ title: 'Charting a Greener Digital Future: Green Orbit Digital Signs the Sustain
 notion_page_id: 217d6625-c679-812c-8af5-d7da1b76f003
 exported_at: '2025-07-31T23:19:41.062034+00:00'
 slug: sustainable-web-manifesto
-url: https://greenorbit.space/news/sustainable-web-manifesto/
+url: https://greenorbit.space/news/sustainable-web-manifesto
+featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F7155a55b-0b0f-4afc-b3b8-e62497148d17%2Fswm2.jpg/size/w=2000?exp=1755007290&sig=rCQ_0v3253dwC9jJdKu_ch84kVZO4IMtWouIaPmnDGI&id=4c7bcf67-53ca-41cd-9b39-83fd836e9a1b&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
 featured: false
 author: Ryan Laird
 tags:

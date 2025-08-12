@@ -3,6 +3,7 @@ name: "Race to Zero"
 description: ""
 organisations: 
   - Race to Zero
+logo: "/logos/pledges/race-to-zero.png"
 values: 
   - innovation
   - impact

@@ -3,6 +3,7 @@ name: "Statement for a Responsible Space Sector"
 description: ""
 organisations: 
   - European Space Agency
+logo: "/logos/pledges/sfrss.png"
 values: 
   - responsibility
   - collaboration

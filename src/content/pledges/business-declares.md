@@ -4,6 +4,7 @@ description: ""
 organisations: 
   - Business Declares
 URL: "https://www.example.org/we-declare-climate-emergency"  # external or internal URL to pledge site or info
+logo: "/logos/pledges/business-declares.png"
 values: 
   - responsibility
   - integrity

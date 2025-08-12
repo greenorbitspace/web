@@ -4,6 +4,7 @@ description: "Design Declares is committed to the Sustainable Development Goals 
 organisations:
   - Design Declares
 URL: "https://www.example.org/we-declare-climate-emergency"  # external or internal URL to pledge site or info
+logo: "/logos/pledges/dd.png"
 values: 
   - responsibility
   - collaboration

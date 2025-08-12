@@ -4,6 +4,7 @@ notion_page_id: 217d6625-c679-8106-99e4-d1ee6f4a4cd5
 exported_at: '2025-07-31T23:19:32.458842+00:00'
 slug: a-beginners-guide-to-developing-your-companys-esg-strategy
 url: https://greenorbit.space/blog/a-beginners-guide-to-developing-your-companys-esg-strategy/
+featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2Fa75d19a8-c473-48cc-9351-720a40a08a73%2Fesg.jpg/size/w=2000?exp=1755008771&sig=CcDL7L151BMo9vGFuHdYD-HeOWF6o5dDdKj5VAD964Y&id=737d7ecd-0ca7-4d9e-9f29-57b37d826690&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
 featured: false
 author: Ryan Laird
 tags:

@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { SDGs } from '../data/sdgs';
 
 const fallbackIcon = '/sdgs/default.svg';
+const fallbackImage = '/images/placeholder.jpg';
 
 const sdgMap = SDGs.reduce((acc, sdg) => {
   const code = `SDG ${String(sdg.id).padStart(2, '0')}`;
@@ -18,20 +19,14 @@ export default function InsightsList({ posts = [] }) {
 
   const sdgCategories = useMemo(() => {
     const set = new Set();
-
     posts.forEach(post => {
       const sdgs = post.data?.SDGs;
       if (Array.isArray(sdgs)) {
-        sdgs.forEach(id => {
-          const code = `SDG ${String(id).padStart(2, '0')}`;
-          set.add(code);
-        });
+        sdgs.forEach(id => set.add(`SDG ${String(id).padStart(2, '0')}`));
       } else if (typeof sdgs === 'number') {
-        const code = `SDG ${String(sdgs).padStart(2, '0')}`;
-        set.add(code);
+        set.add(`SDG ${String(sdgs).padStart(2, '0')}`);
       }
     });
-
     return ['All', ...Array.from(set).sort()];
   }, [posts]);
 
@@ -77,12 +72,10 @@ export default function InsightsList({ posts = [] }) {
         >
           All SDGs
         </button>
-
         {sdgCategories
           .filter(code => code !== 'All')
           .map(code => {
             const sdg = sdgMap[code.toUpperCase()];
-            const num = Number(code.split(' ')[1]);
             return (
               <button
                 key={code}
@@ -147,6 +140,7 @@ export default function InsightsList({ posts = [] }) {
               contentType,
               organisations = [],
               SDGs = [],
+              featuredImage,
             } = post.data;
 
             const date = pubdate
@@ -181,9 +175,20 @@ export default function InsightsList({ posts = [] }) {
             return (
               <li
                 key={post.slug}
-                className="border border-accent-500 p-4 rounded hover:shadow-md transition"
+                className="border border-accent-500 rounded overflow-hidden hover:shadow-md transition"
               >
-                <div className="block group space-y-2">
+                      {/* Featured Image */}
+                <a href={`/${post.collection}/${post.slug}`} className="block">
+                  <div className="aspect-w-16 aspect-h-9 w-full overflow-hidden rounded">
+                    <img
+                      src={featuredImage || fallbackImage}
+                      alt={title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </a>
+
+                <div className="p-4 space-y-2">
                   <a
                     href={`/${post.collection}/${post.slug}`}
                     className="block group-hover:text-white"
@@ -194,7 +199,7 @@ export default function InsightsList({ posts = [] }) {
                   </a>
 
                   {date && <p className="text-sm text-white">{date}</p>}
-                  {excerpt && <p className="text-white text-sm">{excerpt}</p>}
+                  {excerpt && <p className="text-gray-700 dark:text-gray-300 text-sm">{excerpt}</p>}
 
                   {tags.length > 0 && (
                     <div className="flex flex-wrap gap-2 mt-2">
@@ -214,7 +219,7 @@ export default function InsightsList({ posts = [] }) {
                       {organisations.map(org => (
                         <span
                           key={org}
-                          className="bg-gray-300 dark:bg-accent-500 text-white dark:text-white rounded-full px-3 py-1 text-xs font-medium capitalize"
+                          className="bg-gray-300 dark:bg-accent-500 text-white rounded-full px-3 py-1 text-xs font-medium capitalize"
                         >
                           {org}
                         </span>

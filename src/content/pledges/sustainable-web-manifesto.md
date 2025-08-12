@@ -4,6 +4,7 @@ description: ""
 organisations: 
   - Wholegrain Digital
 URL: "https://www.example.org/we-declare-climate-emergency"  # external or internal URL to pledge site or info
+logo: "/logos/pledges/swm.png"
 values: 
   - responsibility
   - collaboration

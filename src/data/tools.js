@@ -9,7 +9,7 @@ export default [
     openSource: false,
     sustainable: true,
     usedBy: ['green-orbit-digital'],
-    image: '/images/tools/hubspot.png',
+    image: '/logos/tools/hubspot.png',
   },
   {
     slug: 'notion',
@@ -21,7 +21,7 @@ export default [
     openSource: false,
     sustainable: true,
     usedBy: ['green-orbit-digital'],
-    image: '/images/tools/notion.png',
+    image: '/logos/tools/notion.png',
   },
   {
     slug: 'stripe',
@@ -33,7 +33,7 @@ export default [
     openSource: false,
     sustainable: true,
     usedBy: ['green-orbit-digital'],
-    image: '/images/tools/stripe.png',
+    image: '/logos/tools/stripe.png',
   },
   {
     slug: 'xero',
@@ -45,7 +45,7 @@ export default [
     openSource: false,
     sustainable: true,
     usedBy: ['green-orbit-digital'],
-    image: '/images/tools/xero.png',
+    image: '/logos/tools/xero.png',
   },
   {
     slug: 'ecosend',
@@ -57,7 +57,7 @@ export default [
     openSource: false,
     sustainable: true,
     usedBy: ['green-orbit-digital'],
-    image: '/images/tools/ecosend.png',
+    image: '/logos/tools/ecosend.png',
   },
   {
     slug: 'github',
@@ -69,7 +69,7 @@ export default [
     openSource: false,
     sustainable: false,
     usedBy: ['green-orbit-digital'],
-    image: '/images/tools/github.png',
+    image: '/logos/tools/github.png',
   },
   {
     slug: 'slack',
@@ -81,7 +81,7 @@ export default [
     openSource: false,
     sustainable: false,
     usedBy: ['green-orbit-digital'],
-    image: '/images/tools/slack.png',
+    image: '/logos/tools/slack.png',
   },
   {
     slug: 'google-workspace',
@@ -93,7 +93,7 @@ export default [
     openSource: false,
     sustainable: false,
     usedBy: ['green-orbit-digital'],
-    image: '/images/tools/google-workspace.png',
+    image: '/logos/tools/google-workspace.png',
   },
   {
     slug: 'asana',
@@ -105,7 +105,7 @@ export default [
     openSource: false,
     sustainable: true,
     usedBy: ['green-orbit-digital'],
-    image: '/images/tools/asana.png',
+    image: '/logos/tools/asana.png',
   },
   {
     slug: 'mailchimp',
@@ -117,7 +117,7 @@ export default [
     openSource: false,
     sustainable: false,
     usedBy: ['green-orbit-digital'],
-    image: '/images/tools/mailchimp.png',
+    image: '/logos/tools/mailchimp.png',
   },
   {
     slug: 'zapier',
@@ -129,7 +129,7 @@ export default [
     openSource: false,
     sustainable: true,
     usedBy: ['green-orbit-digital'],
-    image: '/images/tools/zapier.png',
+    image: '/logos/tools/zapier.png',
   },
   {
     slug: 'trello',
@@ -141,7 +141,7 @@ export default [
     openSource: false,
     sustainable: true,
     usedBy: ['green-orbit-digital'],
-    image: '/images/tools/trello.png',
+    image: '/logos/tools/trello.png',
   },
   {
     slug: 'figma',
@@ -153,7 +153,7 @@ export default [
     openSource: false,
     sustainable: true,
     usedBy: ['green-orbit-digital'],
-    image: '/images/tools/figma.png',
+    image: '/logos/tools/figma.png',
   },
   {
     slug: 'jira',
@@ -165,7 +165,7 @@ export default [
     openSource: false,
     sustainable: false,
     usedBy: ['green-orbit-digital'],
-    image: '/images/tools/jira.png',
+    image: '/logos/tools/jira.png',
   },
   {
     slug: 'monday-com',
@@ -177,7 +177,7 @@ export default [
     openSource: false,
     sustainable: false,
     usedBy: ['green-orbit-digital'],
-    image: '/images/tools/monday-com.png',
+    image: '/logos/tools/monday-com.png',
   },
   {
     slug: 'google-analytics',
@@ -189,6 +189,6 @@ export default [
     openSource: false,
     sustainable: false,
     usedBy: ['green-orbit-digital'],
-    image: '/images/tools/google-analytics.png',
+    image: '/logos/tools/google-analytics.png',
   },
 ];

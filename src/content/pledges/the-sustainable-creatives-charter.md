@@ -3,6 +3,7 @@ name: "The Sustainable Creatives Charter"
 description: ""
 organisations: 
   - The Sustainable Creatives Charter
+logo: "/logos/pledges/ssc.png"
 values: 
   - continuous improvement
   - collaboration

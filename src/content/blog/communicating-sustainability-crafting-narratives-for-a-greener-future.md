@@ -4,6 +4,7 @@ notion_page_id: 217d6625-c679-8126-829f-d4527f4bf4e8
 exported_at: '2025-07-31T23:19:41.471951+00:00'
 slug: communicating-sustainability-crafting-narratives-for-a-greener-future
 url: https://greenorbit.space/blog/communicating-sustainability-crafting-narratives-for-a-greener-future/
+featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F423e0159-6e09-4fa6-b2db-ee5da5638698%2Fnarrative.jpg/size/w=2000?exp=1755008616&sig=V8E3SjwGsTwUP1WvkRQ0LJWoSWwhWFFPxVCfFoPn2bA&id=509b81fe-7271-4219-8edb-b1941dc75306&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
 featured: false
 author: Ryan Laird
 tags:

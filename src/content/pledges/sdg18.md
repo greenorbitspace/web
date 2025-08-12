@@ -3,6 +3,7 @@ name: "SDG18"
 description: "Only by expanding the domain of life into space can we fulfill the 17 SDGs on Earth in the long term. Therefore, the Space Renaissance International and the National Space Society, in partnership with many other space organizations, urge UN COPUOS State Parties to develop and introduce a resolution for a Space 18th Sustainable Development Goal (SDG), calling for the expansion of community life into space to achieve universal and sustainable development for the whole humanity, life, and the life support environment, on Earth and beyond."
 organisations: 
   - Space Renaissance International
+logo: "/logos/pledges/sdg18.png"
 values: 
   - responsibility
   - collaboration

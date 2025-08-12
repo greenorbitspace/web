@@ -5,6 +5,7 @@ notion_page_id: 217d6625-c679-812e-9829-f58bd932f756
 exported_at: '2025-07-31T23:19:36.861579+00:00'
 slug: lisbon-declaration
 url: https://greenorbit.space/news/lisbon-declaration/
+featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2Fdeba351f-c48b-43ce-9f90-c17322724815%2Flisbon.jpg/size/w=2000?exp=1755007544&sig=EVen36tJLnAez1LXqU2_jtcRz2ptsKYVnUpG-RIfV94&id=68fa63f9-9206-468e-a6ed-0d540dfb154d&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
 featured: false
 author: Ryan Laird
 tags:

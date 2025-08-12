@@ -4,6 +4,7 @@ notion_page_id: 217d6625-c679-8142-9394-fd9ff83d7217
 exported_at: '2025-07-31T23:19:52.411110+00:00'
 slug: green-orbit-digital-champions-space-sustainability-at-nssc-2025
 url: https://greenorbit.space/news/green-orbit-digital-champions-space-sustainability-at-nssc-2025/
+featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2Fc7ffc3ea-850c-4c7e-a083-9edc7056c542%2Fgeneral_visual_OceanHack4EU.png/size/w=2000?exp=1755005197&sig=Iy-24i9xRBZRPJgwzrC7ADaTVpMBGCMZj0_qP9bLGdM&id=338c92b2-c6e7-48cc-b8f6-5d4a267fd3bc&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
 featured: false
 author: Ryan Laird
 pubdate: '2025-02-28T11:40:00.000+00:00'

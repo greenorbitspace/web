@@ -5,6 +5,7 @@ organisations:
   - We Declare a Climate Emergency
 slug: "we-declare-a-climate-emergency"
 URL: "https://www.example.org/we-declare-climate-emergency"  # external or internal URL to pledge site or info
+logo: "/logos/pledges/we-declare-climate-emergency.png"
 values: 
   - responsibility
   - collaboration

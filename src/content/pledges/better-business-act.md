@@ -4,6 +4,7 @@ description: "Shareholder interests must align with societal and environmental c
 organisations: 
   - Better Business Network
 URL: "https://www.example.org/we-declare-climate-emergency"  # external or internal URL to pledge site or info
+logo: "/logos/pledges/bba.png"
 values: 
   - responsibility
   - impact
