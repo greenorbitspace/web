@@ -25,25 +25,26 @@ import Values from '../../components/Values.astro';
             <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
               Our Story
             </span>
-            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">From Startup to Industry Leader</h2>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
-              Green Orbit Digital was founded on a shared belief: space holds the key to solving some of the world’s most pressing challenges. We are a sustainable marketing agency dedicated to helping businesses communicate complex, space-enabled solutions through clear, impactful strategies that drive meaningful change.
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">From Startup to Sustainability Champion</h2>
+            <p class="text-gray-600 dark:text-white mb-4">
+              Founded on the belief that space technology can play a pivotal role in tackling the world’s most pressing challenges, Green Orbit Digital was created to help organisations translate complex, space-enabled capabilities into clear, compelling strategies that inspire action and deliver measurable results.
             </p>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
-              Our journey has had its challenges, but our commitment to innovation, quality, and client success remains steadfast. Today, we proudly stand as a recognised leader in sustainable SaaS marketing, empowering organisations to transform their operations and achieve measurable impact.
+            <p class="text-gray-600 dark:text-white mb-4">
+              From our earliest projects to today, we’ve remained committed to innovation, clarity, and client success—partnering with those who share our vision for a cleaner, fairer, and more connected world. Our expertise spans sustainable marketing, strategic communications, and data-driven storytelling, enabling organisations to grow responsibly while contributing to global sustainability goals.
             </p>
-            <p class="text-gray-600 dark:text-gray-300">
-              As we grow, we stay true to our mission: equipping businesses with the tools they need to thrive responsibly in the digital era.
+            <p class="text-gray-600 dark:text-white">
+              As we continue to expand, our mission remains the same: to equip forward-thinking businesses with the insights, tools, and strategies they need to thrive—without compromising the future of our planet.
             </p>
           </div>
 
           <!-- Image -->
           <div class="rounded-lg overflow-hidden shadow-xl">
             <img 
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+              src="images/earth-observation.png" 
               alt="Green Orbit Digital team collaborating" 
               class="w-full h-auto" 
               loading="lazy"
+              decoding="async"
             />
           </div>
         </div>
@@ -61,66 +62,76 @@ import Values from '../../components/Values.astro';
         </div>
 
         <!-- Values Component -->
-          <Values />
-        </div>
-    </section>
-
-    <!-- Leadership Spotlight -->
-    <section class="py-16 bg-white dark:bg-secondary-500">
-      <div class="container-custom max-w-5xl mx-auto">
-        <div class="text-center mb-12">
-          <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
-            Leadership Spotlight
-          </span>
-          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Meet Our Team</h2>
-          <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Driving sustainable innovation in the space sector through marketing leadership and advocacy.
-          </p>
-        </div>
-
-        <div class="flex flex-col md:flex-row items-center gap-10">
-          <!-- Profile Image -->
-          <div class="w-64 h-64 rounded-full overflow-hidden shadow-lg">
-            <img 
-              src="https://greenorbit.space/wp-content/uploads/2023/10/profile.jpg" 
-              alt="Ryan Laird, Director and Founder" 
-              class="w-full h-full object-cover" 
-            />
-          </div>
-
-          <!-- Profile Text -->
-          <div class="text-center md:text-left">
-            <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-2">Ryan Laird</h3>
-            <p class="text-primary-600 dark:text-white font-medium mb-3">Director & Founder, Green Orbit Digital</p>
-            <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-              With over a decade of experience in the space industry, Ryan leads Green Orbit Digital with a vision for sustainability, strategic digital innovation, and impactful storytelling. As Chair of the UKspace Startup Working Group and host of <em>The Sustainable Space Podcast</em>, he champions environmentally responsible growth across the sector.
-            </p>
-
-            <!-- Social Links -->
-            <div class="flex justify-center md:justify-start gap-5">
-              <a href="https://www.linkedin.com/in/rjmlaird" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-                <svg class="w-6 h-6 fill-white" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24..."/></svg>
-              </a>
-              <a href="https://github.com/rjmlaird" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-                <svg class="w-6 h-6 fill-white" viewBox="0 0 24 24"><path d="M12 0a12 12 0 00-3.8 23.4..."/></svg>
-              </a>
-              <a href="https://twitter.com/rjmlaird" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
-                <svg class="w-6 h-6 fill-white" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58..."/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
+        <Values />
       </div>
     </section>
+
+<!-- Leadership Spotlight -->
+<section class="py-16 bg-white dark:bg-secondary-500">
+  <div class="container-custom max-w-5xl mx-auto">
+    <div class="text-center mb-12">
+      <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+        Leadership Spotlight
+      </span>
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Meet Our Team</h2>
+      <p class="text-gray-600 dark:text-white max-w-3xl mx-auto">
+        Driving sustainable innovation in the space sector through marketing leadership and advocacy.
+      </p>
+    </div>
+
+    <div class="flex flex-col md:flex-row items-center gap-10">
+      <!-- Larger Profile Image -->
+      <div class="w-48 rounded-full overflow-hidden shadow-lg">
+        <img 
+          src="https://www.gravatar.com/avatar/a2c75a0a732f6ea38a8ba1c7a80ffad5" 
+          alt="Ryan Laird, Director and Founder" 
+          class="w-full h-full object-cover" 
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+
+      <!-- Profile Text -->
+      <div class="text-center md:text-left">
+        <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-2">Ryan Laird</h3>
+        <p class="text-primary-600 dark:text-white font-medium mb-3">Director & Founder, Green Orbit Digital</p>
+        <p class="text-gray-600 dark:text-white leading-relaxed mb-4">
+          With over a decade of experience in the space industry, Ryan leads Green Orbit Digital with a vision for sustainability, strategic digital innovation, and impactful storytelling. As Chair of the UKspace Startup Working Group and host of <em>The Sustainable Space Podcast</em>, he champions environmentally responsible growth across the sector.
+        </p>
+
+        <!-- Correct Social Icons -->
+        <div class="flex justify-center md:justify-start gap-5">
+          <a href="https://www.linkedin.com/in/rjmlaird" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="text-secondary-600 dark:text-white hover:text-accent-500">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.3c-1 0-1.8-.82-1.8-1.8s.8-1.8 1.8-1.8 1.8.82 1.8 1.8-.8 1.8-1.8 1.8zm13.5 10.3h-3v-4.5c0-1.1-.9-2-2-2s-2 .9-2 2v4.5h-3v-9h3v1.25c.58-.9 1.64-1.25 2.5-1.25 2.21 0 4 1.79 4 4v4z"/>
+            </svg>
+          </a>
+
+          <a href="https://github.com/rjmlaird" aria-label="GitHub" target="_blank" rel="noopener noreferrer" class="text-secondary-600 dark:text-white hover:text-accent-500">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.73.083-.73 1.205.084 1.84 1.238 1.84 1.238 1.07 1.835 2.807 1.305 3.492.997.107-.774.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.47-2.38 1.236-3.22-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 016 0c2.29-1.552 3.295-1.23 3.295-1.23.655 1.653.243 2.873.12 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.807 5.625-5.48 5.92.43.37.823 1.103.823 2.222 0 1.604-.015 2.896-.015 3.287 0 .322.215.694.825.576C20.565 21.796 24 17.298 24 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+          </a>
+
+          <a href="https://twitter.com/rjmlaird" aria-label="Twitter" target="_blank" rel="noopener noreferrer" class="text-secondary-600 dark:text-white hover:text-accent-500">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.724-.951.555-2.005.959-3.127 1.184-.897-.959-2.178-1.559-3.594-1.559-3.179 0-5.515 3.034-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.248-2.229-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.6 3.415-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.557 2.212 9.142 0 14.307-7.721 13.995-14.646.961-.695 1.8-1.562 2.46-2.549z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Careers CTA -->
     <section class="py-16 bg-gray-50 dark:bg-secondary-600 text-center">
       <div class="container-custom max-w-3xl mx-auto">
         <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Join Our Team</h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-8">
+        <p class="text-gray-600 dark:text-white mb-8">
           We’re always on the lookout for passionate professionals who share our vision for a more sustainable space industry. Check out our current openings and join us on our mission.
         </p>
-        <a href="/careers" class="btn-primary">View Open Positions</a>
+        <a href="/careers" class="btn-primary" rel="noopener noreferrer">View Open Positions</a>
       </div>
     </section>
   </main>
