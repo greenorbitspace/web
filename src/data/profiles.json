@@ -1,0 +1,52 @@
+{
+  "profiles": [
+    {
+      "name": "UKspace Member Directory",
+      "category": "Industry Association",
+      "url": "https://www.ukspace.org/members/green-orbit-digital",
+      "description": "Listing in the UKspace members directory, highlighting our role in sustainable marketing for the space sector.",
+      "status": "active",
+      "last_verified": "2025-08-13"
+    },
+    {
+      "name": "Sustainable Business Alliance",
+      "category": "Sustainability Network",
+      "url": "https://sustainablebusinessalliance.org/members/green-orbit-digital",
+      "description": "Profile as a member of the Sustainable Business Alliance, showcasing our sustainability commitments.",
+      "status": "active",
+      "last_verified": "2025-08-13"
+    },
+    {
+      "name": "Companies House",
+      "category": "Official Registration",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/XXXXXXXX",
+      "description": "UK government official company registration and filing history.",
+      "status": "active",
+      "last_verified": "2025-08-13"
+    },
+    {
+      "name": "Chartered Institute of Marketing (CIM) Directory",
+      "category": "Professional Accreditation",
+      "url": "https://www.cim.co.uk/membership/directory/",
+      "description": "Professional listing under Chartered Marketer accreditation.",
+      "status": "active",
+      "last_verified": "2025-08-13"
+    },
+    {
+      "name": "Event Speaker Profiles",
+      "category": "Conference Participation",
+      "url": "https://ukseds.org/nssc/speakers/ryan-laird",
+      "description": "Speaker profile for UKSEDS National Student Space Conference.",
+      "status": "active",
+      "last_verified": "2025-08-13"
+    },
+    {
+      "name": "Culture Declares Emergency",
+      "category": "Pledge",
+      "url": "https://www.culturedeclares.org/declarers/greenorbitspace",
+      "description": "We declare that the climate and ecological emergency demands immediate and transformative action.",
+      "status": "active",
+      "last_verified": "2025-08-13"
+    }
+  ]
+}
