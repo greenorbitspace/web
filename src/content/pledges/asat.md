@@ -1,6 +1,6 @@
 ---
 name: "Space Industry Statement in Support of International Commitments to Not Conduct ASAT Tests"
-description: "Our societal reliance on commercial space applications and services continues to grow, including communication systems, navigation, Earth observation, and more. These critical benefits are at risk due to the continued testing of anti-satellite (ASAT) weapons, which generate large amounts of orbital debris, threatening the safety and long-term sustainability of the space environment and the future economic development of low Earth orbit. In December 2023, the UN General Assembly adopted resolution 77/41, urging countries to commit to not conducting such tests."
+description: "Our growing reliance on commercial space services—such as communication, navigation, and Earth observation—is threatened by anti-satellite (ASAT) weapon tests that create hazardous orbital debris. This endangers space safety, sustainability, and future economic activities in low Earth orbit. In December 2023, the UN General Assembly adopted resolution 77/41 urging countries to commit to halting such tests."
 organisations: 
   - Secure World Foundation
 logo: "/logos/pledges/asat.png"
