@@ -177,16 +177,6 @@ export default function InsightsList({ posts = [] }) {
                 key={post.slug}
                 className="border border-accent-500 rounded overflow-hidden hover:shadow-md transition"
               >
-                      {/* Featured Image */}
-                <a href={`/${post.collection}/${post.slug}`} className="block">
-                  <div className="aspect-w-16 aspect-h-9 w-full overflow-hidden rounded">
-                    <img
-                      src={featuredImage || fallbackImage}
-                      alt={title}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </a>
 
                 <div className="p-4 space-y-2">
                   <a
