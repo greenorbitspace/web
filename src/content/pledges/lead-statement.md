@@ -1,9 +1,9 @@
 ---
 name: "LEAD statement"
-description: ""
+description: "A commitment to responsible leadership and climate action, promoting accountability, collaboration, and integrity to drive the transition to a sustainable future."
 organisations: 
   - LEAD statement
-URL: "https://www.example.org/we-declare-climate-emergency"  # external or internal URL to pledge site or info
+URL: "https://climatevoice.org/lead-statement-signatures/"
 logo: "/logos/pledges/lead.png"
 values: 
   - responsibility
@@ -14,8 +14,8 @@ why: "We support the LEAD statement because it embodies our core values and comm
 SDGs: 
   - 16
 commitments:
-  - Leave obstructing trade associations; Elevate\u00a0climate policy as a company priority
+  - Leave obstructing trade associations; elevate climate policy as a company priority
   - Advocate publicly for effective binding climate policies
-  - Demonstrate real commitment to the collective action needed to achieve the just and equitable transition from fossil fuels agreed on at COP28. 
-CSR: ""
+  - Demonstrate real commitment to the collective action needed to achieve the just and equitable transition from fossil fuels agreed on at COP28.
+CSR: "We are committed to transparent leadership, active engagement in climate advocacy, and fostering a culture that supports the just transition to a sustainable low-carbon economy."
 ---

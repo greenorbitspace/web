@@ -1,22 +1,24 @@
 ---
 name: "The Ethical Move"
-description: ""
+description: "A commitment to promoting sustainable and ethical business practices that prioritize transparency, inclusivity, and social responsibility in alignment with the Sustainable Development Goals (SDGs)."
 organisations:
   - The Ethical Move
 logo: "/logos/pledges/tem.png"
 values: 
   - responsibility
   - integrity
-how: "We support the Ethical Move by promoting sustainable practices, encouraging transparency in business operations, and fostering collaborations that align with the Sustainable Development Goals (SDGs). Through our initiatives, we engage communities and organizations to adopt ethical frameworks that prioritise environmental and social responsibility."
-why: "We support The Ethical Move because it promotes transparency and accountability in the design and development of products and services. By aligning with the Sustainable Development Goals (SDGs) and core values that prioritize ethical considerations, we can contribute to a more sustainable and equitable future. Supporting this initiative encourages responsible practices and inspires others in the industry to adopt similar commitments."
+  - transparency
+  - inclusivity
+how: "We support The Ethical Move by championing sustainable practices and fostering transparency throughout our business operations. We actively engage with communities and organizations to promote ethical frameworks that prioritize environmental stewardship and social equity. Our initiatives encourage collaboration and adoption of responsible practices aligned with the SDGs."
+why: "We support The Ethical Move because it drives accountability and ethical decision-making in the design, development, and delivery of products and services. By aligning with its principles, we contribute to building a more sustainable, inclusive, and equitable marketplace. This commitment also inspires peers and industry stakeholders to embrace similar values, amplifying collective impact."
 SDGs:
   - 6
   - 9
   - 12
   - 17
 commitments:
-  - we put the person before the sale
-  - we communicate inclusively, truthfully, and clearly
-  - we take responsibility for our part in changing the marketplace
+  - Put people’s needs and wellbeing before the sale.
+  - Communicate inclusively, honestly, and clearly.
+  - Take active responsibility for our role in transforming the marketplace towards sustainability.
 CSR: ""
 ---

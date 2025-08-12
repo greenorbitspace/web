@@ -1,6 +1,6 @@
 ---
 name: "The Sustainable Creatives Charter"
-description: ""
+description: "A commitment to responsible, ethical, and sustainable practices within the creative industry that promotes environmental stewardship, transparency, and community impact."
 organisations: 
   - The Sustainable Creatives Charter
 logo: "/logos/pledges/ssc.png"
@@ -8,15 +8,17 @@ values:
   - continuous improvement
   - collaboration
   - innovation
-how: "We support the Sustainable Creatives Charter because it promotes responsible and ethical practices within the creative industry. By committing to sustainability, we can make a positive impact on the environment and society. The charter encourages transparency, collaboration, and innovation, empowering creatives to lead by example and inspire others. Supporting this initiative aligns with our values and goals of fostering a more sustainable future for all."
-why: "We support the Sustainable Creatives Charter by promoting sustainable practices within our projects, collaborating with like-minded individuals and organisations, and actively engaging in transparency and accountability regarding our sustainability goals. We encourage creativity that prioritizes environmental responsibility and community impact, ensuring that our actions align with the core values outlined in the charter."
+  - responsibility
+  - transparency
+how: "We support the Sustainable Creatives Charter by embedding sustainable practices throughout our creative projects, fostering collaboration with individuals and organizations who share these values, and maintaining transparency about our sustainability progress. Our approach prioritizes reducing environmental impact while promoting social responsibility within the creative sector."
+why: "We support the Sustainable Creatives Charter because it empowers creatives to lead by example, encouraging innovation and accountability that contribute to a more sustainable future. This initiative aligns with our commitment to environmental stewardship and community well-being, inspiring us to take bold actions that drive positive change."
 SDGs: 
-  - 13
+  - 13  # Climate Action
 commitments:
-  - create clean
-  - declare and share
-  - lead by example
-  - be human
-  - start now, be bold!
+  - Create clean and sustainable work processes and outputs
+  - Declare and share sustainability goals and progress openly
+  - Lead by example in ethical and responsible creative practices
+  - Be human: foster inclusive and community-focused collaborations
+  - Start now and be bold in taking meaningful sustainability actions
 CSR: ""
 ---

@@ -1,6 +1,6 @@
 ---
 name: "Stripe Climate"
-description: ""
+description: "Stripe Climate is an initiative that enables businesses to contribute directly to carbon removal projects. By integrating support for effective carbon removal technologies into their operations, Stripe Climate empowers companies to take measurable action against climate change."
 organisations: 
   - Stripe
 logo: "/logos/pledges/stripe-climate.png"
@@ -8,11 +8,13 @@ values:
   - responsibility
   - collaboration
   - innovation
-how: "We support the Space Safety Coalition by promoting collaboration among space agencies, sharing best practices for safety protocols, and advocating for comprehensive regulations that protect both space assets and the environment. Through workshops, research initiatives, and outreach programs, we aim to enhance awareness of space safety challenges and solutions within the global space community."
-why: "We support the Space Safety Coalition because it aims to enhance the safety and sustainability of space operations. By fostering collaboration among various stakeholders, including governments, industry, and academia, the coalition seeks to address the growing challenges in space traffic management, debris mitigation, and overall space environment preservation. This initiative not only safeguards current space assets but also ensures a secure and accessible space environment for future generations."
+how: "We support Stripe Climate by facilitating contributions to verified carbon removal projects, integrating sustainability into our business processes, and encouraging stakeholders to participate in climate action. This includes raising awareness of emerging carbon removal technologies and promoting transparency in environmental impact reporting."
+why: "We support Stripe Climate because it provides a scalable and impactful approach to carbon removal, which is critical for meeting global climate goals. By backing innovative solutions and empowering businesses to take responsibility for their carbon footprint, Stripe Climate helps accelerate progress towards a net-zero future."
 SDGs:
-  - 17
+  - 13
 commitments:
-  - test
+  - Commit to funding carbon removal projects that meet rigorous verification standards
+  - Integrate carbon removal contributions into our business operations
+  - Promote transparency and reporting on environmental impact and progress
 CSR: ""
 ---

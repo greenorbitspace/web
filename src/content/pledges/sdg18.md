@@ -1,6 +1,6 @@
 ---
 name: "SDG18"
-description: "Only by expanding the domain of life into space can we fulfill the 17 SDGs on Earth in the long term. Therefore, the Space Renaissance International and the National Space Society, in partnership with many other space organizations, urge UN COPUOS State Parties to develop and introduce a resolution for a Space 18th Sustainable Development Goal (SDG), calling for the expansion of community life into space to achieve universal and sustainable development for the whole humanity, life, and the life support environment, on Earth and beyond."
+description: "Only by expanding the domain of life into space can we fulfill the 17 Sustainable Development Goals (SDGs) on Earth in the long term. The Space Renaissance International and the National Space Society, alongside numerous space organizations, urge UN COPUOS State Parties to adopt a resolution establishing an 18th Sustainable Development Goal (SDG18). This goal calls for the sustainable expansion of human and community life into space to ensure universal and sustainable development for humanity, all life forms, and the life support environment — both on Earth and beyond."
 organisations: 
   - Space Renaissance International
 logo: "/logos/pledges/sdg18.png"
@@ -8,12 +8,14 @@ values:
   - responsibility
   - collaboration
   - impact
-how: "We support SDG18 by advocating for policies that promote the sustainable development of space communities. This includes engaging with stakeholders, conducting research on the implications of space colonization, and raising public awareness about the importance of expanding life into space to achieve the existing Sustainable Development Goals (SDGs) on Earth. Additionally, we collaborate with international space organizations to ensure that space exploration and development are conducted responsibly and sustainably."
-why: "We support the Space 18th Sustainable Development Goal (SDG) because it represents a critical step towards ensuring the long-term sustainability of life on Earth and beyond. By advocating for the expansion of human presence into space, we can address pressing challenges such as resource scarcity, climate change, and the need for innovation in sustainability practices. This initiative aligns with our commitment to achieving the existing 17 SDGs and promotes a future where humanity can thrive in harmony with its environment, both on our planet and in outer space."
+how: "We support SDG18 by actively advocating for international policies that promote the responsible and sustainable development of space communities. Our efforts include engaging key stakeholders, facilitating research on the socio-environmental implications of space colonization, and raising global awareness about the necessity of extending sustainable development beyond Earth. Additionally, we collaborate with global space organizations to ensure exploration and expansion efforts align with ethical and sustainability principles."
+why: "We support the establishment of SDG18 because the long-term sustainability of humanity and life on Earth depends on expanding our presence into space. Addressing challenges such as resource limitations, climate change, and the need for innovative sustainability solutions requires a new frontier. SDG18 aligns with our commitment to the existing 17 SDGs by promoting a future where humanity thrives in harmony with its environment — both on our home planet and in outer space."
 SDGs:
-  - 9
-  - 17
+  - 9    # Industry, Innovation and Infrastructure
+  - 17   # Partnerships for the Goals
 commitments:
-  - Supporting a resolution for a Space 18th Sustainable Development Goal (SDG), calling for the expansion of community life into space to achieve universal and sustainable development for the whole humanity, life, and the life support environment, on Earth and beyond,
+  - Advocate for and support a UN resolution to establish Space 18th Sustainable Development Goal (SDG18) focused on sustainable space community development.
+  - Facilitate collaboration among international space organizations, policymakers, and researchers to advance sustainable space exploration.
+  - Promote education and public awareness on the importance of space expansion as integral to achieving global sustainability goals.
 CSR: ""
 ---

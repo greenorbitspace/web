@@ -1,6 +1,6 @@
 ---
 name: "Space Industry Statement in Support of International Commitments to Not Conduct ASAT Tests"
-description: "Our societal reliance on commercial space applications and services continues to grow, with applications spanning communication systems, navigation, Earth observation, and more. These societal benefits are at risk of being disrupted by the continued testing of anti-satellite (ASAT) weapons that produce large amounts of orbital debris, such as direct-ascent anti-satellite missiles. These tests directly threaten the safety of our space systems and the long-term sustainability of the space environment within which they operate, including the future economic development of low Earth orbit.  In December 2023, the UN General Assembly adopted a resolution 77/41 calling upon countries to commit not to conduct such tests."
+description: "Our societal reliance on commercial space applications and services continues to grow, including communication systems, navigation, Earth observation, and more. These critical benefits are at risk due to the continued testing of anti-satellite (ASAT) weapons, which generate large amounts of orbital debris, threatening the safety and long-term sustainability of the space environment and the future economic development of low Earth orbit. In December 2023, the UN General Assembly adopted resolution 77/41, urging countries to commit to not conducting such tests."
 organisations: 
   - Secure World Foundation
 logo: "/logos/pledges/asat.png"
@@ -10,13 +10,16 @@ values:
   - innovation
   - integrity
   - impact
-how: "We support the Space Industry Statement in Support of International Commitments to Not Conduct ASAT Tests by providing resources for research, facilitating collaboration among teams, and ensuring access to necessary tools and technology. Additionally, we prioritise training and development to enhance skills related to ASAT initiatives."
-why: "We support the Space Industry Statement in Support of International Commitments to Not Conduct ASAT Tests because it fosters innovation, encourages collaboration, and drives the advancement of technology that can benefit society. By investing in ASAT initiatives, we aim to promote sustainable practices and ensure a brighter future for all."
+how: "We support the statement by actively promoting peaceful and sustainable space practices, facilitating multi-stakeholder collaboration to prevent ASAT tests, providing research resources, and advocating for adherence to international norms. We also prioritise education and capacity-building to strengthen industry-wide commitment to preserving the space environment."
+why: "We support this statement because the prevention of ASAT testing is essential for maintaining a safe and sustainable orbital environment. Reducing debris-producing activities protects vital space infrastructure that supports global communications, security, and environmental monitoring. Our commitment aligns with advancing peaceful use of space for the benefit of all humanity."
 SDGs:
-  - 9
-  - 17
+  - 9   # Industry, Innovation and Infrastructure
+  - 17  # Partnerships for the Goals
 commitments:
-  - test
+  - Promote adherence to international norms banning ASAT testing
+  - Support collaborative efforts to enhance space sustainability and debris mitigation
+  - Advocate for transparent reporting and accountability in space activities
+  - Invest in education and capacity-building for responsible space operations
 CSR: ""
-URL: https://www.swfound.org/publications-and-reports/space-industry-statement-in-support-of-international-commitments-to-not-conduct-asat-tests
+URL: "https://www.swfound.org/publications-and-reports/space-industry-statement-in-support-of-international-commitments-to-not-conduct-asat-tests"
 ---
