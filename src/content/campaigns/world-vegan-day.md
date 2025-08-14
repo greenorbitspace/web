@@ -7,5 +7,6 @@ organisations:
 - United Nations
 SDGs:
 - 2
+- 12
 ---
 

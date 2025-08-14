@@ -1,12 +1,12 @@
 ---
-title: World Meteorological Day
-notion_page_id: 1d5d6625-c679-80f4-9863-fc9ea5bd9345
-exported_at: '2025-08-07T15:42:42.835609+00:00'
+title: World Meteorological Day 
 month: March
-name: World Meteorological Day
+name: World Meteorological Day 
+un-resolution: WMO/EC-XII/Res.6
 organisations:
 - United Nations
+- World Meteorological Organization
 SDGs:
 - 13
+- 17
 ---
-

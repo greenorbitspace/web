@@ -6,7 +6,7 @@ url: https://greatbiggreenweek.com
 month: June
 name: The Great Big Green Week
 organisations:
-- United Nations
+- The Great Big Green Week
 SDGs:
 - 12
 ---

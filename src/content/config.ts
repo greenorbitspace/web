@@ -33,6 +33,9 @@ const baseSchema = z.object({
   pledges: z.array(z.string()).optional(),
   organisations: z.array(z.string()).optional(),
   SDGs: z.array(z.number()).optional(),
+
+  // UN Resolution metadata
+  un_resolution: z.string().optional(),
 });
 
 const organisationSchema = baseSchema.extend({
@@ -67,7 +70,6 @@ const pledgeSchema = z.object({
   URL: z.string().url().optional(),
 });
 
-// New career/job posting schema
 const careerSchema = z.object({
   title: z.string().min(5),
   slug: z.string().optional(),
@@ -99,5 +101,5 @@ export const collections = {
   insights: defineCollection({ schema: baseSchema }),
   organisations: defineCollection({ schema: organisationSchema }),
   pledges: defineCollection({ schema: pledgeSchema }),
-  careers: defineCollection({ schema: careerSchema }),  // <-- added careers collection
+  careers: defineCollection({ schema: careerSchema }),
 };

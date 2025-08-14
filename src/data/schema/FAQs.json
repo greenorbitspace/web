@@ -1,42 +1,232 @@
 [
   {
     "question": "What is sustainable marketing?",
-    "answer": "Sustainable marketing refers to strategies and campaigns designed to reduce environmental impact, promote responsible consumption, and align with long-term ecological and social goals. At Green Orbit Digital, we apply these principles across every digital touchpoint—from website design and SEO to campaign reporting."
+    "answer": "Sustainable marketing refers to strategies and campaigns designed to reduce environmental impact, promote responsible consumption, and align with long-term ecological and social goals. At Green Orbit Digital, we apply these principles across every digital touchpoint—from website design and SEO to campaign reporting.",
+    "category": "marketing",
+    "links": []
   },
   {
-    "question": "How does Green Orbit Digital measure the carbon footprint of a website?",
-    "answer": "We use tools like EcoPing, Website Carbon, and custom scripts like `eco_audit.js` to assess the emissions of your website based on page weight, hosting efficiency, and traffic. We provide recommendations to reduce unnecessary energy consumption through design, development, and content optimisation."
+    "question": "How can sustainable marketing benefit my space industry business?",
+    "answer": "Sustainable marketing can enhance your brand reputation, increase customer trust, and open access to environmentally conscious funding and partnerships. It also ensures compliance with evolving regulations and positions your business as a leader in ethical innovation.",
+    "category": "marketing",
+    "links": []
   },
   {
-    "question": "Do I need to be in the space sector to work with you?",
-    "answer": "While our expertise is deeply rooted in the space sector, we welcome values-aligned organisations from all sectors, especially those committed to sustainability, innovation, and impact."
+    "question": "Is sustainable marketing more expensive than traditional marketing?",
+    "answer": "Not necessarily. Sustainable marketing focuses on efficiency, long-term value, and authenticity, which can reduce wasted spend and improve ROI. While some elements like impact measurement may require investment, the overall approach often leads to cost savings and better outcomes.",
+    "category": "marketing",
+    "links": []
   },
   {
-    "question": "What are your core services?",
-    "answer": "We offer SEO, content marketing, analytics, digital strategy, and sustainable web design tailored for the space industry. Our services are designed to maximise visibility, reduce environmental impact, and ensure regulatory compliance."
+    "question": "How do you integrate sustainability into digital marketing campaigns?",
+    "answer": "We integrate sustainability by prioritising eco-friendly digital practices such as optimising website performance to reduce energy consumption, creating authentic content about environmental impact, and focusing on long-term relationship building rather than short-term sales tactics.",
+    "category": "marketing",
+    "links": []
   },
   {
-    "question": "What platforms do you work with?",
-    "answer": "We work across modern CMS and frameworks including WordPress (headless or classic), Astro, Hugo, Next.js, and Notion-based stacks. We also integrate with tools like Stripe, HubSpot, Proton, and Rize.io."
+    "question": "Can sustainable marketing help with regulatory compliance?",
+    "answer": "Yes. Many jurisdictions are increasingly requiring transparency and responsibility in environmental claims and business practices. Sustainable marketing helps ensure your messaging aligns with regulations like greenwashing laws and supports credible reporting.",
+    "category": "marketing",
+    "links": []
   },
   {
-    "question": "How do you incorporate ESG and SDGs into your marketing work?",
-    "answer": "We align every project with ESG principles and map deliverables to relevant UN Sustainable Development Goals. We use the SDG Compass, B Impact Assessment frameworks, and Open SDG data standards to track and report impact."
+    "question": "How does Green Orbit Digital specialise in the space sector?",
+    "answer": "Green Orbit Digital combines over a decade of space industry experience with sustainable marketing expertise. We understand the unique challenges and opportunities of space technology and satellite data, allowing us to craft targeted campaigns that resonate with this high-tech, environmentally conscious sector.",
+    "category": "industry",
+    "links": [
+      {
+        "text": "space sector services",
+        "url": "/services/space-sector"
+      }
+    ]
   },
   {
-    "question": "What is the Sustainable Space Podcast?",
-    "answer": "Hosted by our founder Ryan Laird, the podcast explores the intersection of space exploration, sustainability, and marketing. We feature guests from startups, space agencies, and academia, discussing how the sector can become more sustainable."
+    "question": "What are common challenges for marketing space sector companies?",
+    "answer": "Challenges include communicating complex technical concepts clearly, addressing niche and specialist audiences, aligning innovation messaging with sustainability goals, and navigating a rapidly evolving regulatory landscape.",
+    "category": "industry",
+    "links": []
   },
   {
-    "question": "How do you support early-stage space startups?",
-    "answer": "We provide tailored marketing frameworks, growth strategies, and ecosystem support for startups. This includes help with funding visibility, ESG strategy, web presence, and targeted lead generation within the space sector."
+    "question": "How does the space sector contribute to sustainability?",
+    "answer": "Space applications enable critical environmental monitoring, disaster response, climate science, resource management, and infrastructure resilience. Satellites provide data that supports smarter policy, business decisions, and public awareness around climate action.",
+    "category": "industry",
+    "links": [
+      {
+        "text": "space sustainability",
+        "url": "/insights/space-sustainability"
+      }
+    ]
   },
   {
-    "question": "Are your tools open source?",
-    "answer": "Yes, many of our tools—such as CO₂ auditing scripts, SDG mapping helpers, and Hugo/Notion pipelines—are available as open source or Creative Commons. We believe in transparency and collaboration."
+    "question": "What types of space organisations do you work with?",
+    "answer": "We work with satellite operators, space resource companies, research institutions, government agencies, and startups focused on sustainable space innovation.",
+    "category": "industry",
+    "links": []
   },
   {
-    "question": "Where are you based?",
-    "answer": "Green Orbit Digital is based in Leicester, UK, but we operate globally through remote-first collaboration. We work with partners, clients, and contributors across Europe and beyond."
+    "question": "How do you stay current with space industry trends?",
+    "answer": "Our team actively participates in space sector events, collaborates with industry bodies like UKspace, and continuously monitors technological and regulatory developments to ensure our strategies remain cutting-edge and relevant.",
+    "category": "industry",
+    "links": [
+      {
+        "text": "UKspace Startup Working Group",
+        "url": "https://ukspace.org"
+      }
+    ]
+  },
+  {
+    "question": "Which sustainable development goals (SDGs) do you focus on?",
+    "answer": "Our work primarily supports SDGs related to Climate Action (SDG 13), Responsible Consumption and Production (SDG 12), Industry Innovation and Infrastructure (SDG 9), and Partnerships for the Goals (SDG 17). We align every project to ensure measurable contributions to these global objectives.",
+    "category": "sustainability",
+    "links": [
+      {
+        "text": "UN Sustainable Development Goals",
+        "url": "https://sdgs.un.org/goals"
+      }
+    ]
+  },
+  {
+    "question": "How do you measure the impact of your sustainability efforts?",
+    "answer": "We use a blend of quantitative metrics such as carbon footprint analysis, engagement rates on sustainability content, and qualitative stakeholder feedback to measure and continuously improve our environmental and social impact.",
+    "category": "sustainability",
+    "links": []
+  },
+  {
+    "question": "How do you help clients align with the SDGs?",
+    "answer": "We identify the most relevant SDGs to their business goals and develop marketing and communication strategies that highlight their contributions, create transparency, and connect with stakeholders aligned to these goals.",
+    "category": "sustainability",
+    "links": [
+      {
+        "text": "sustainability consulting",
+        "url": "/services/sustainability-consulting"
+      }
+    ]
+  },
+  {
+    "question": "What role does transparency play in sustainable marketing?",
+    "answer": "Transparency builds trust by openly sharing the environmental and social impacts of products and services, avoiding greenwashing, and fostering authentic relationships with customers and partners.",
+    "category": "sustainability",
+    "links": []
+  },
+  {
+    "question": "Do you help clients set sustainability targets?",
+    "answer": "Yes, we assist clients in defining achievable, measurable sustainability goals that align with industry best practices and global frameworks such as the SDGs and Science Based Targets initiative.",
+    "category": "sustainability",
+    "links": []
+  },
+  {
+    "question": "What types of digital marketing services do you offer?",
+    "answer": "We offer a full spectrum of digital marketing services including SEO, social media strategy, content marketing, email campaigns, analytics, and digital advertising, all tailored with a sustainability-first approach and optimised for the space sector.",
+    "category": "services",
+    "links": [
+      {
+        "text": "digital marketing services",
+        "url": "/services/digital-marketing"
+      }
+    ]
+  },
+  {
+    "question": "Do you provide consulting on sustainability strategy beyond marketing?",
+    "answer": "Yes, we offer sustainability consulting that complements marketing efforts, including stakeholder engagement, impact measurement, and integration of sustainability into business models and communications.",
+    "category": "services",
+    "links": [
+      {
+        "text": "sustainability consulting",
+        "url": "/services/sustainability-consulting"
+      }
+    ]
+  },
+  {
+    "question": "Do you offer training or workshops on sustainable marketing?",
+    "answer": "Yes, we provide bespoke workshops and training sessions tailored to teams in the space sector and other industries looking to integrate sustainability into their marketing and communications strategies.",
+    "category": "services",
+    "links": [
+      {
+        "text": "training and workshops",
+        "url": "/services/training"
+      }
+    ]
+  },
+  {
+    "question": "Can Green Orbit Digital help with grant applications or funding opportunities?",
+    "answer": "While our primary focus is marketing and communications, we support clients by crafting compelling narratives and digital collateral that strengthen grant and funding applications in the sustainability and space sectors.",
+    "category": "services",
+    "links": []
+  },
+  {
+    "question": "How do you tailor marketing strategies for different client types?",
+    "answer": "We customise strategies based on sector, audience, goals, and maturity level, ensuring alignment with sustainability objectives and using data to optimise impact across channels.",
+    "category": "services",
+    "links": []
+  },
+  {
+    "question": "What makes Green Orbit Digital different from other marketing agencies?",
+    "answer": "Our unique combination of deep space sector expertise, sustainability leadership, and data-driven digital marketing strategies enables us to deliver impactful campaigns that genuinely contribute to environmental and social goals.",
+    "category": "company",
+    "links": []
+  },
+  {
+    "question": "How do you ensure your own operations are sustainable?",
+    "answer": "Green Orbit Digital operates with a strong commitment to sustainability through remote work policies, energy-efficient technology, carbon offsetting, and prioritising partnerships with environmentally responsible vendors.",
+    "category": "company",
+    "links": []
+  },
+  {
+    "question": "Who is behind Green Orbit Digital?",
+    "answer": "Green Orbit Digital was founded by Ryan Laird, a Chartered Marketer with over a decade of experience in the space sector and a passion for sustainable business practices.",
+    "category": "company",
+    "links": [
+      {
+        "text": "Ryan Laird profile",
+        "url": "/about#ryan-laird"
+      }
+    ]
+  },
+  {
+    "question": "How do you collaborate with other organisations?",
+    "answer": "We partner with space industry bodies, sustainability networks, academic institutions, and creative agencies to broaden impact and share expertise.",
+    "category": "company",
+    "links": []
+  },
+  {
+    "question": "What is your approach to client relationships?",
+    "answer": "We build long-term partnerships based on trust, transparency, and shared commitment to sustainability and measurable results.",
+    "category": "company",
+    "links": []
+  },
+  {
+    "question": "How can I get started with Green Orbit Digital?",
+    "answer": "You can start by contacting us through our website form or emailing hello@greenorbit.space. We offer an initial consultation to understand your needs and discuss how sustainable marketing can support your goals.",
+    "category": "process",
+    "links": [
+      {
+        "text": "website form",
+        "url": "/contact"
+      }
+    ]
+  },
+  {
+    "question": "What does the initial consultation involve?",
+    "answer": "During the consultation, we assess your current marketing efforts, sustainability priorities, and business goals to propose a tailored plan of action.",
+    "category": "process",
+    "links": []
+  },
+  {
+    "question": "How long does it typically take to see results?",
+    "answer": "Results depend on project scope and goals, but many clients start seeing measurable impact within 3 to 6 months of campaign launch.",
+    "category": "process",
+    "links": []
+  },
+  {
+    "question": "What is your pricing model?",
+    "answer": "We offer flexible pricing based on project size and complexity, including retainer and fixed-fee options tailored to client needs.",
+    "category": "process",
+    "links": []
+  },
+  {
+    "question": "Do you support clients internationally?",
+    "answer": "Yes, while based in the UK, we work with clients globally, especially within the space sector and sustainability community.",
+    "category": "process",
+    "links": []
   }
 ]

@@ -6,8 +6,9 @@ url: https://www.refill.org.uk/world-refill-day
 month: June
 name: World Refill Day
 organisations:
-- United Nations
+- Refill
 SDGs:
 - 12
+- 14
 ---
 

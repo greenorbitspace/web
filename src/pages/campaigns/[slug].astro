@@ -25,6 +25,7 @@ const data = campaign.data;
 
 const formattedMonth = data.month ?? null;
 const campaignUrl = data.url ?? null;
+const unResolution = data.unResolution ?? null;
 
 const pageTitle = data.seoTitle || data.title || 'Campaign';
 const pageDescription = data.seoDescription || data.description || data.title;
@@ -40,6 +41,13 @@ const jsonLd = {
   ...(formattedMonth && { startDate: formattedMonth }),
   ...(pageImage && {
     image: [pageImage]
+  }),
+  ...(unResolution && { 
+    "legislation": {
+      "@type": "Legislation",
+      name: `UN Resolution ${unResolution}`,
+      legislationIdentifier: unResolution
+    }
   }),
   location: {
     "@type": "Place",
@@ -79,17 +87,26 @@ if (Array.isArray(data.SDGs)) {
     <main class="prose dark:prose-invert max-w-4xl mx-auto px-4 py-12">
       <article>
         <header class="mb-8">
+          <!-- Plain title (no link) -->
           <h1 class="text-4xl font-bold text-accent-500 mb-2">{data.title}</h1>
 
           {formattedMonth && (
             <p class="text-sm text-white mt-2">📅 {formattedMonth}</p>
           )}
 
+          <!-- Show URL link separately -->
           {campaignUrl && (
             <p class="mt-2">
               🔗 <a href={campaignUrl} class="underline text-accent-400" target="_blank" rel="noopener noreferrer">
                 Visit Campaign Site
               </a>
+            </p>
+          )}
+
+          <!-- Show UN Resolution if available -->
+          {unResolution && (
+            <p class="mt-2 text-sm text-gray-400">
+              <strong>UN Resolution:</strong> {unResolution}
             </p>
           )}
 

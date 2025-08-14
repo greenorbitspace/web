@@ -6,6 +6,7 @@ name: Energy Efficiency Day
 organisations:
 - United Nations
 SDGs:
-- 5
+- 7
+- 12
 ---
 

@@ -8,6 +8,9 @@ name: Global Tourism Resilience Day
 organisations:
 - United Nations
 SDGs:
-- 7
+- 11
+- 12
+- 13
+- 14
+- 15
 ---
-

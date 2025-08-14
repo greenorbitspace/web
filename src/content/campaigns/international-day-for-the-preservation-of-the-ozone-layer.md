@@ -5,5 +5,11 @@ exported_at: '2025-08-07T15:42:40.345068+00:00'
 url: https://www.un.org/en/observances/ozone-day
 month: September
 name: International Day for the Preservation of the Ozone Layer
+un-resolution: A/RES/49/114
+organisations:
+- United Nations
+SDGs:
+- 11
+- 12
+- 13
 ---
-

@@ -6,7 +6,7 @@ url: https://www.actionforcleanair.org.uk/campaigns/clean-air-day
 month: June
 name: National Clean Air Day
 organisations:
-- United Nations
+- Action for Clean Air
 SDGs:
 - 3
 ---

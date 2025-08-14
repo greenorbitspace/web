@@ -6,8 +6,9 @@ url: https://www.waterwise.org.uk/wsw
 month: May
 name: Water Saving Week
 organisations:
-- United Nations
+- Waterwise
 SDGs:
-- 11
+- 12
+- 15
 ---
 

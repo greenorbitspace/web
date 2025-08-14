@@ -6,7 +6,7 @@ url: https://www.stopfoodwasteday.com/en/index.html
 month: April
 name: Stop Food Waste Day
 organisations:
-- United Nations
+- Stop Food Waste Day
 SDGs:
 - 2
 - 12

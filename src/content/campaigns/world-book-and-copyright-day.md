@@ -5,8 +5,7 @@ exported_at: '2025-08-07T15:42:53.994772+00:00'
 url: https://www.calendarr.com/united-kingdom/world-book-day/
 month: April
 name: World Book and Copyright Day
-organisations:
-- United Nations
+organisations: []
 SDGs:
 - 4
 ---

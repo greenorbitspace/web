@@ -6,6 +6,7 @@ name: World Urban Forum
 organisations:
 - United Nations
 SDGs:
+- 9
 - 11
 ---
 

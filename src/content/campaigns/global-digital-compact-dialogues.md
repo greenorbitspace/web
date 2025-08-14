@@ -6,6 +6,8 @@ name: Global Digital Compact Dialogues
 organisations:
 - United Nations
 SDGs:
-- 7
+- 4
+- 11
+- 17
 ---
 

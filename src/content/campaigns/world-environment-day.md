@@ -5,10 +5,10 @@ exported_at: '2025-08-07T15:42:57.581333+00:00'
 url: https://www.un.org/en/observances/environment-day
 month: June
 name: World Environment Day
+un-resolution: A/RES/2994 (XXVII)
 organisations:
 - United Nations
 SDGs:
 - 13
 - 15
 ---
-

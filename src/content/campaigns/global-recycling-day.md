@@ -6,8 +6,9 @@ url: https://www.globalrecyclingday.com/
 month: March
 name: Global Recycling Day
 organisations:
-- United Nations
+- Global Recycling
 SDGs:
-- 7
+- 11
+- 12
 ---
 

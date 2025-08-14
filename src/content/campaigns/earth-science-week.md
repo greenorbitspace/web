@@ -7,6 +7,8 @@ name: Earth Science Week
 organisations:
 - United Nations
 SDGs:
+- 13
 - 14
+- 15
 ---
 

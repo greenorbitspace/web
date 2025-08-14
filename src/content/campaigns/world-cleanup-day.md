@@ -5,9 +5,9 @@ exported_at: '2025-08-07T15:42:48.606388+00:00'
 url: ','
 month: September
 name: World Cleanup Day
+un-resolution: A/RES/78/122
 organisations:
 - United Nations
 SDGs:
 - 12
 ---
-

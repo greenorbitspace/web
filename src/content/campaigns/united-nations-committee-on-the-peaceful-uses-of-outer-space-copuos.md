@@ -7,6 +7,7 @@ month: June
 name: United Nations Committee on the Peaceful Uses of Outer Space (COPUOS)
 organisations:
 - United Nations
+- United Nations Office for Outer Space Affairs (UNOOSA)
 SDGs:
 - 13
 - 17
