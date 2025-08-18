@@ -1,0 +1,111 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.astro';
+import Callout from '../components/Callout.astro';
+import ImageSection from '../components/ImageSection.astro';
+---
+
+<Layout title="Earth Observation">
+  <Header />
+
+  <main class="py-12">
+
+    <!-- Hero / Introduction -->
+    <section class="py-16 bg-white dark:bg-primary-500">
+      <div class="container mx-auto max-w-5xl px-4 text-center">
+        <h1 class="text-3xl font-bold mb-6 text-white">Earth Observation</h1>
+        <p class="text-lg text-white leading-relaxed">
+          Leveraging satellite imagery and remote sensing technologies to monitor environmental change, optimise resource management, and support the Sustainable Development Goals.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section: Importance of Earth Observation -->
+    <section class="py-16 bg-gray-50 dark:bg-secondary-500">
+      <div class="container mx-auto max-w-5xl px-4">
+        <h2 class="text-3xl font-bold mb-6 text-white">Why Earth Observation Matters</h2>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          Earth observation satellites provide continuous, high-resolution data that is impossible to capture solely from ground-based measurements. These datasets allow governments, NGOs, and businesses to track climate change, monitor natural resources, and manage urban and agricultural development with unprecedented precision.
+        </p>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          From mapping deforestation to assessing water scarcity, Earth observation is a critical tool for informed decision-making and evidence-based policy. It supports disaster preparedness, biodiversity protection, and sustainable urban planning, ensuring that interventions are timely, effective, and impactful.
+        </p>
+
+        <Callout title="Key Insight" class="my-6 text-secondary-500">
+          Over 70% of climate adaptation strategies worldwide incorporate Earth observation data for planning and monitoring.
+        </Callout>
+      </div>
+    </section>
+
+    <!-- Section: Applications of Earth Observation -->
+    <section class="py-16 bg-white dark:bg-primary-500">
+      <div class="container mx-auto max-w-5xl px-4">
+        <h2 class="text-3xl font-bold mb-6 text-white">Applications Across Sectors</h2>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          Earth observation enables actionable insights across multiple sectors:
+        </p>
+
+        <ul class="list-disc pl-6 text-white text-lg mb-6">
+          <li><strong>Climate Monitoring:</strong> Detecting greenhouse gas emissions, global temperature trends, and sea-level rise.</li>
+          <li><strong>Disaster Management:</strong> Providing early warning and damage assessment for floods, wildfires, and storms.</li>
+          <li><strong>Agriculture:</strong> Supporting precision farming, crop health monitoring, and irrigation optimisation.</li>
+          <li><strong>Urban Planning:</strong> Guiding sustainable development, infrastructure resilience, and land use mapping.</li>
+          <li><strong>Natural Resource Management:</strong> Tracking water, forest, and biodiversity changes for responsible stewardship.</li>
+        </ul>
+
+        <ImageSection src="/images/earth-observation-applications.png" alt="Earth observation applications across sectors" class="my-6" />
+      </div>
+    </section>
+
+    <!-- Section: Green Orbit Digital’s Approach -->
+    <section class="py-16 bg-gray-50 dark:bg-secondary-500">
+      <div class="container mx-auto max-w-5xl px-4">
+        <h2 class="text-3xl font-bold mb-6 text-white">Our Approach</h2>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          At Green Orbit, we transform raw satellite data into actionable intelligence. Our team performs advanced data analysis, visualisation, and integration into strategic planning to enable organisations to respond proactively to environmental challenges.
+        </p>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          We map insights to the United Nations Sustainable Development Goals, helping stakeholders demonstrate tangible progress. Our services include monitoring frameworks, policy support, and public communications, ensuring that Earth observation drives both operational efficiency and sustainability leadership.
+        </p>
+
+        <Callout title="Our Services Include" class="my-6 text-secondary-500">
+          Satellite data analysis | Geospatial intelligence | SDG mapping & reporting | Risk assessment | Stakeholder communication
+        </Callout>
+      </div>
+    </section>
+
+    <!-- Section: Benefits & Impact -->
+    <section class="py-16 bg-white dark:bg-primary-500">
+      <div class="container mx-auto max-w-5xl px-4">
+        <h2 class="text-3xl font-bold mb-6 text-white">Benefits and Impact</h2>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          Integrating Earth observation data improves situational awareness, reduces environmental risk, and enhances decision-making across sectors. Organisations can plan interventions, allocate resources efficiently, and report impact credibly.
+        </p>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          This evidence-based approach ensures tangible progress in climate resilience, disaster preparedness, sustainable development, and resource stewardship—positioning organisations as leaders in responsible, data-driven innovation.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section: References & Related Links -->
+    <section class="py-16 bg-gray-50 dark:bg-secondary-500 text-center text-white text-sm">
+      <div class="container mx-auto max-w-5xl px-4">
+        <p class="mb-2 text-accent-500">
+          Reference: European Space Agency (ESA). Earth Observation Handbook, 2023. 
+          <a href="https://earth.esa.int/eohb" class="underline hover:text-primary-500">https://earth.esa.int/eohb</a>
+        </p>
+        <p>
+          Explore related topics: 
+          <a href="/space-sustainability/from-space" class="underline hover:text-primary-500">From Space</a> | 
+          <a href="/space-sustainability/in-space" class="underline hover:text-primary-500">In Space</a> | 
+          <a href="/space-sustainability/for-space" class="underline hover:text-primary-500">For Space</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
