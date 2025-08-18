@@ -1,0 +1,99 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import Callout from '../../components/Callout.astro';
+import ImageSection from '../../components/ImageSection.astro';
+---
+
+<Layout title="In Space">
+  <Header />
+
+  <main class="py-12">
+    <HeroSection 
+      title="Sustainability In Space" 
+      description="Championing responsible orbital use — debris mitigation, traffic management, and extending satellite lifetimes with servicing and reuse."
+    />
+
+    <!-- Section: Context and Importance -->
+    <section class="py-16 bg-gray-50 dark:bg-secondary-500">
+      <div class="container mx-auto max-w-5xl px-4">
+        <h2 class="text-3xl font-bold mb-6 text-white">Maintaining a Safe and Sustainable Orbital Environment</h2>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          The growing number of satellites and space missions increases congestion in Earth's orbit. Without careful management, collisions and debris proliferation threaten the long-term viability of space operations. Responsible orbital practices are critical to ensure continued access to these environments for science, communication, and exploration.
+        </p>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          Green Orbit supports organisations in adopting **best-practice guidelines for debris mitigation, satellite end-of-life planning, and in-orbit servicing**. Our work ensures that operational efficiency and sustainability are balanced with safety and regulatory compliance.
+        </p>
+
+        <Callout title="Key Insight" class="my-6 text-secondary-500">
+          Over 34,000 objects larger than 10 cm currently orbit Earth, highlighting the need for active debris management and collision avoidance strategies.
+        </Callout>
+      </div>
+    </section>
+
+    <!-- Section: Key Practices -->
+    <section class="py-16 bg-white dark:bg-primary-500">
+      <div class="container mx-auto max-w-5xl px-4">
+        <h2 class="text-3xl font-bold mb-6 text-white">Key Practices for Responsible Orbital Use</h2>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          To maintain long-term orbital sustainability, satellite operators must adopt rigorous procedures at every mission phase. This includes careful orbit selection, reliable end-of-life disposal, and avoidance of unnecessary fragmentation. Emerging technologies like on-orbit servicing and in-space refueling also extend satellite lifetimes, reducing the need for frequent replacements.
+        </p>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          Additionally, international cooperation and adherence to regulatory frameworks, such as the UN COPUOS Space Debris Mitigation Guidelines, are essential. Green Orbit guides clients through compliance, ensuring operational decisions align with both safety and sustainability objectives.
+        </p>
+
+        <ImageSection src="/images/orbital-debris-management.png" alt="Orbital debris mitigation diagram" class="my-6" />
+      </div>
+    </section>
+
+    <!-- Section: Green Orbit Digital’s Approach -->
+    <section class="py-16 bg-gray-50 dark:bg-secondary-500">
+      <div class="container mx-auto max-w-5xl px-4">
+        <h2 class="text-3xl font-bold mb-6 text-white">Our Approach</h2>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          We help space operators integrate **responsible orbital practices** into mission planning, from launch through end-of-life. Our services include orbital debris risk assessment, mission design optimisation, and the implementation of sustainable servicing solutions.
+        </p>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          By combining technical expertise with industry-leading software and simulations, we model collision risks, evaluate debris mitigation strategies, and quantify environmental impact. This empowers clients to operate safely, efficiently, and sustainably.
+        </p>
+
+        <Callout title="Our Services Include" class="my-6 text-secondary-500">
+          Orbital risk modelling | End-of-life & deorbit planning | Satellite servicing strategy | Regulatory compliance support
+        </Callout>
+      </div>
+    </section>
+
+    <!-- Section: Benefits & Impact -->
+    <section class="py-16 bg-white dark:bg-primary-500">
+      <div class="container mx-auto max-w-5xl px-4">
+        <h2 class="text-3xl font-bold mb-6 text-white">Benefits and Impact</h2>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          Adopting responsible orbital practices reduces collision risks, limits debris generation, and ensures continuity of space services. These measures safeguard investments, maintain access to critical orbital slots, and support the long-term sustainability of commercial, civil, and scientific missions.
+        </p>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          By operationalising sustainable practices in orbit, Green Orbit clients demonstrate leadership in **space stewardship**, contribute to safer global space operations, and advance international sustainability goals for the space environment.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section: References & Related Links -->
+    <section class="py-16 bg-gray-50 dark:bg-secondary-500 text-center text-white text-sm">
+      <div class="container mx-auto max-w-5xl px-4">
+        <p class="mb-2 text-accent-500">
+          Reference: Wilson, A. R., & Vasile, M. (2023). <em>The space sustainability paradox</em>. <strong>Journal of Cleaner Production</strong>. 
+          <a href="https://doi.org/10.1016/j.jclepro.2023.138869" class="underline hover:text-primary-500">DOI: 10.1016/j.jclepro.2023.138869</a>
+        </p>
+        <p>
+          Explore other pillars: 
+          <a href="/space-sustainability/from-space" class="underline hover:text-primary-500">From Space</a> | 
+          <a href="/space-sustainability/for-space" class="underline hover:text-primary-500">For Space</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>

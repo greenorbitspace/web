@@ -3,7 +3,6 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import HeroSection from '../../components/HeroSection.astro';
-
 ---
 
 <Layout title="Space Sustainability">
@@ -11,12 +10,97 @@ import HeroSection from '../../components/HeroSection.astro';
 
   <main class="py-12">
     <HeroSection 
-      title="Space Sustainability" 
-      description="Choose a plan that fits your mission. All options include a 14-day free trial—no credit card required." 
+      title="Space Sustainability: From, In & For Space" 
+      description="How Green Orbit helps organisations embed sustainability into space strategies, services, and partnerships." 
     />
 
-<section class="py-16 bg-white dark:bg-secondary-500">
+    <!-- Section: Why Sustainability Matters -->
+    <section class="py-16 bg-white dark:bg-secondary-500">
+      <div class="container mx-auto max-w-5xl px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6 text-white">Why Space Sustainability Matters</h2>
+        <p class="mb-6 text-lg text-white">Space activities are accelerating — driving advances in climate monitoring, global connectivity, and innovation. But rapid growth brings challenges: orbital debris, environmental impacts, and pressure on planetary boundaries. At Green Orbit, we approach sustainability through a <strong>holistic lens</strong> — ensuring that space continues to deliver benefits without crossing ecological or orbital tipping points.</p>
+      </div>
+    </section>
 
+    <!-- Section: Defining Space Sustainability -->
+    <section class="py-16 bg-gray-50 dark:bg-primary-500">
+      <div class="container mx-auto max-w-5xl px-4">
+        <h2 class="text-3xl font-bold mb-6 text-white">Defining Space Sustainability</h2>
+        <p class="mb-6 text-white"><em>Although ‘space sustainability’ is now widely used, until recently, there was no shared definition across the sector.</em></p>
+
+        <blockquote class="p-4 mb-8 border-l-4 border-blue-600 bg-blue-50 dark:bg-gray-800 dark:border-blue-400 text-white">
+          <p class="italic">“The long-term sustainability of outer space activities is defined as the ability to maintain the conduct of space activities indefinitely into the future in a manner that realizes the objectives of equitable access to the benefits of the exploration and use of outer space for peaceful purposes, in order to meet the needs of the present generations while preserving the outer space environment for future generations.”</p>
+          <footer class="mt-2 text-sm">— United Nations COPUOS, 2018</footer>
+        </blockquote>
+
+        <blockquote class="p-4 mb-8 border-l-4 border-green-600 bg-green-50 dark:bg-gray-800 dark:border-green-400 text-white">
+          <p class="italic">“The long-term sustainability of outer space activities (on-ground and in-orbit) is defined as the ability to maintain and improve the conduct of space activities indefinitely into the future in a manner that ensures continued access to the benefits of the exploration and use of space for peaceful purposes, in order to meet the needs of the present generations while preserving both the Earth and the outer space environment for future generations. Space sustainability also requires promoting the use and environmental benefits of space data and recognising the need for the launch and in-orbit activities to be carried out in an increasingly responsible and sustainable manner.”</p>
+          <footer class="mt-2 text-sm">— Space Scotland, 2022</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Section: Green Orbit Perspective -->
+    <section class="py-16 bg-white dark:bg-accent-500">
+      <div class="container mx-auto max-w-5xl px-4">
+        <h2 class="text-3xl font-bold mb-6 text-white">Our Perspective at Green Orbit</h2>
+        <p class="mb-6 text-white">Building on the research of <strong>Wilson & Vasile (2023)</strong>, we use a <strong>three-pillar framework</strong> to embed sustainability into every strategy. Explore our approaches to <a href="/from-space">From Space</a>, <a href="/in-space">In Space</a>, and <a href="/for-space">For Space</a> through our <a href="/services">services</a>, <a href="/insights">insights</a>, and collaborative <a href="/partnerships">partnerships</a>.</p>
+
+        <ul class="grid md:grid-cols-3 gap-6 mb-12">
+          <li class="p-6 rounded-lg shadow bg-gray-50 dark:bg-primary-500">
+          <a href="/space-sustainability/from-space" class="hover:underline">
+            <h3 class="text-xl font-semibold mb-2 text-white">From Space</h3>
+          </a>
+            <p class="text-white">Leveraging space data and applications to tackle global challenges such as <a href="/earth-observation">climate monitoring</a> and the <a href="/space4sdgs">Sustainable Development Goals</a>.</p>
+          </li>
+          <li class="p-6 rounded-lg shadow bg-gray-50 dark:bg-primary-500">
+          <a href="/space-sustainability/in-space" class="hover:underline">
+            <h3 class="text-xl font-semibold mb-2 text-white">In Space</h3>
+          </a>
+            <p class="text-white">Championing responsible orbital use — debris mitigation, traffic management, and extending satellite lifetimes with servicing and reuse.</p>
+          </li>
+          <li class="p-6 rounded-lg shadow bg-gray-50 dark:bg-primary-500">
+          <a href="/space-sustainability/for-space" class="hover:underline">
+            <h3 class="text-xl font-semibold mb-2 text-white">For Space</h3>
+          </a>
+            <p class="text-white">Minimising Earth impacts from launches, manufacturing, and re-entry, while aligning with planetary boundaries and net-zero commitments.</p>
+          </li>
+        </ul>
+
+        <img src="/images/three-pillars-diagram.svg" alt="Diagram of the three pillars of space sustainability" class="mx-auto my-8 w-3/4" />
+      </div>
+    </section>
+
+    <!-- Section: Action Framework -->
+    <section class="py-16 bg-gray-50 dark:bg-secondary-500">
+      <div class="container mx-auto max-w-5xl px-4">
+        <h2 class="text-3xl font-bold mb-6 text-white">Action Framework: Net-Zero ×3</h2>
+        <p class="mb-8 text-white">We co-develop roadmaps with clients and partners to achieve a <strong>Net-Zero ×3</strong> vision by 2050:</p>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-lg shadow bg-gray-50 dark:bg-primary-500">
+            <h3 class="text-xl font-semibold mb-2 text-white">Zero Debris Proliferation</h3>
+            <p class="text-white">Adopting strict debris mitigation and reliable disposal strategies, while investing in debris removal innovation.</p>
+          </div>
+          <div class="p-6 rounded-lg shadow bg-gray-50 dark:bg-primary-500">
+            <h3 class="text-xl font-semibold mb-2 text-white">Zero Unnecessary Earth Impacts</h3>
+            <p class="text-white">Conducting robust life-cycle assessments, reporting emissions transparently, and addressing harmful re-entry pollution.</p>
+          </div>
+          <div class="p-6 rounded-lg shadow bg-gray-50 dark:bg-primary-500">
+            <h3 class="text-xl font-semibold mb-2 text-white">Zero Unsustainable Resource Use</h3>
+            <p class="text-white">Designing for modularity, reuse, and recycling — supporting a circular space economy.</p>
+          </div>
+        </div>
+
+        <img src="/images/net-zero-framework.svg" alt="Net-Zero x3 action framework" class="mx-auto my-8 w-3/4" />
+      </div>
+    </section>
+
+    <!-- Section: Partnerships -->
+    <section class="py-16 bg-white dark:bg-accent-500">
+      <div class="container mx-auto max-w-5xl px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6 text-white">Partnerships for a Sustainable Future</h2>
+        <p class="mb-6 text-white">True sustainability requires collaboration. At Green Orbit, we work with industry, academia, and policymakers to shape standards, share knowledge, and accelerate adoption. From leadership roles in the <strong>UKspace Startup Working Group</strong> to joint innovation projects, partnerships are central to turning sustainability from ambition into action.</p>
+      </div>
     </section>
   </main>
 

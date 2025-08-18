@@ -3,20 +3,97 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import HeroSection from '../../components/HeroSection.astro';
+import Callout from '../../components/Callout.astro';
+import ImageSection from '../../components/ImageSection.astro';
 ---
 
-<Layout title="From Space">
+<Layout title="In Space">
   <Header />
 
   <main class="py-12">
     <HeroSection 
-      title="From Space" 
-      description="Choose a plan that fits your mission. All options include a 14-day free trial—no credit card required." 
+      title="Sustainability From Space" 
+      description="Leveraging space data and applications to tackle global challenges such as climate monitoring, disaster management, and the Sustainable Development Goals."
     />
 
-    <section class="container mx-auto px-4 my-8">
 
+    <!-- Section: Context and Importance -->
+    <section class="py-16 bg-gray-50 dark:bg-secondary-500">
+      <div class="container mx-auto max-w-5xl px-4">
+        <h2 class="text-3xl font-bold mb-6 text-white">Harnessing Space Data for Global Challenges</h2>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          Satellites orbiting the Earth capture critical datasets that are impossible to obtain from the ground. From monitoring deforestation and ocean health to mapping urban growth and agricultural productivity, these observations inform global efforts to manage natural resources and reduce environmental risks.
+        </p>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          At Green Orbit, we specialise in transforming raw satellite data into actionable insights. Our approach enables governments, NGOs, and businesses to identify environmental risks, optimise operations, and design interventions aligned with the UN Sustainable Development Goals.
+        </p>
+
+        <Callout title="Key Insight" class="my-6 text-secondary-500">
+          90% of environmental monitoring datasets used in disaster preparedness rely on satellite imagery.
+        </Callout>
+      </div>
     </section>
+
+    <!-- Section: Key Applications -->
+    <section class="py-16 bg-white dark:bg-primary-500">
+      <div class="container mx-auto max-w-5xl px-4">
+        <h2 class="text-3xl font-bold mb-6 text-white">Applications Across Sectors</h2>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          Space data informs decisions across climate science, agriculture, energy, and urban planning. Earth observation satellites detect greenhouse gas concentrations and track climate anomalies. Remote sensing supports precision agriculture, allowing farmers to monitor crop health, optimise irrigation, and predict yields.
+        </p>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          In the energy sector, satellite data maps renewable potential and monitors grid resilience. Urban planners use geospatial intelligence to optimise land use, manage infrastructure, and improve disaster preparedness. Each of these applications is underpinned by accurate, timely, and verifiable satellite observations.
+        </p>
+
+        <ImageSection src="/images/satellite-data.png" alt="Satellite data visualization" class="my-6" />
+      </div>
+    </section>
+
+    <!-- Section: Green Orbit Digital’s Approach -->
+    <section class="py-16 bg-gray-50 dark:bg-secondary-500">
+      <div class="container mx-auto max-w-5xl px-4">
+        <h2 class="text-3xl font-bold mb-6 text-white">Our Approach</h2>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          We help clients unlock the potential of space data through tailored strategies. Our services include satellite data interpretation, mapping insights to SDGs, and integrating findings into strategic decision-making.
+        </p>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          By combining technical expertise with clear communication, we translate complex datasets into actionable recommendations. This allows stakeholders to respond rapidly to environmental events, implement sustainable practices, and measure their impact over time.
+        </p>
+
+        <Callout title="Our Services Include" class="my-6 text-secondary-500">
+          Data analysis & modelling | SDG mapping & reporting | Policy support | Stakeholder communication
+        </Callout>
+      </div>
+    </section>
+
+    <!-- Section: Benefits & Impact -->
+    <section class="py-16 bg-white dark:bg-primary-500">
+      <div class="container mx-auto max-w-5xl px-4">
+        <h2 class="text-3xl font-bold mb-6 text-white">Benefits and Impact</h2>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          Integrating satellite data into organisational strategy provides measurable benefits. Organisations gain better situational awareness, anticipate environmental risks, and optimise resource use. Evidence-based insights improve reporting, strengthen stakeholder confidence, and demonstrate leadership in sustainability.
+        </p>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          Ultimately, leveraging space data helps achieve tangible progress towards climate resilience, environmental stewardship, and long-term societal well-being.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section: References & Related Links -->
+    <section class="py-16 bg-gray-50 dark:bg-secondary-500 text-center text-white text-sm">
+      <div class="container mx-auto max-w-5xl px-4">
+        <p class="mb-2 text-accent-500">
+          Reference: Wilson, A. R., & Vasile, M. (2023). <em>The space sustainability paradox</em>. <strong>Journal of Cleaner Production</strong>. 
+          <a href="https://doi.org/10.1016/j.jclepro.2023.138869" class="underline hover:text-primary-500">DOI: 10.1016/j.jclepro.2023.138869</a>
+        </p>
+        <p>
+          Explore other pillars: 
+          <a href="/space-sustainability/in-space" class="underline hover:text-primary-500">In Space</a> | 
+          <a href="/space-sustainability/for-space" class="underline hover:text-primary-500">For Space</a>
+        </p>
+      </div>
+    </section>
+
   </main>
 
   <Footer />

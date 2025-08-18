@@ -3,20 +3,97 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import HeroSection from '../../components/HeroSection.astro';
+import Callout from '../../components/Callout.astro';
+import ImageSection from '../../components/ImageSection.astro';
 ---
 
-<Layout title="For Space">
+<Layout title="Sustainability For Space">
   <Header />
 
   <main class="py-12">
     <HeroSection 
-      title="For Space" 
-      description="Choose a plan that fits your mission. All options include a 14-day free trial—no credit card required." 
+      title="Sustainability For Space" 
+      description="Minimising Earth impacts from launches, manufacturing, and re-entry, while aligning with planetary boundaries and net-zero commitments."
     />
 
-    <section class="container mx-auto px-4 my-8">
 
+    <!-- Section: Context and Importance -->
+    <section class="py-16 bg-gray-50 dark:bg-secondary-500">
+      <div class="container mx-auto max-w-5xl px-4">
+        <h2 class="text-3xl font-bold mb-6 text-white">Sustainable Practices for Terrestrial Impacts</h2>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          Space missions start on Earth, and the environmental footprint of launch vehicles, manufacturing, and ground operations can be significant. Rocket emissions, material production, and re-entry events contribute to greenhouse gases, chemical pollution, and resource depletion. Minimising these impacts is critical for achieving net-zero goals and respecting planetary boundaries.
+        </p>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          Green Orbit works with space operators, manufacturers, and launch providers to implement sustainable practices across the entire value chain, reducing environmental harm while maintaining operational performance.
+        </p>
+
+        <Callout title="Key Insight" class="my-6 text-secondary-500">
+          Life-cycle assessments show that satellite production and launch can account for up to 90% of the mission’s total carbon footprint.
+        </Callout>
+      </div>
     </section>
+
+    <!-- Section: Key Practices -->
+    <section class="py-16 bg-white dark:bg-primary-500">
+      <div class="container mx-auto max-w-5xl px-4">
+        <h2 class="text-3xl font-bold mb-6 text-white">Key Practices for Minimising Earth Impact</h2>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          Sustainable launches involve optimising fuel use, reducing emissions, and selecting environmentally conscious propellants. Satellite manufacturing can leverage **recycled and low-impact materials**, modular design, and energy-efficient production processes. Responsible disposal strategies and controlled re-entry ensure minimal environmental disruption.
+        </p>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          Organisations can also adopt circular economy principles, designing for reuse, refurbishment, and end-of-life recycling. Green Orbit guides clients in implementing these strategies, ensuring measurable reductions in environmental footprint without compromising mission objectives.
+        </p>
+
+        <ImageSection src="/images/earth-impact-reduction.png" alt="Earth impact reduction strategies" class="my-6" />
+      </div>
+    </section>
+
+    <!-- Section: Green Orbit Digital’s Approach -->
+    <section class="py-16 bg-gray-50 dark:bg-secondary-500">
+      <div class="container mx-auto max-w-5xl px-4">
+        <h2 class="text-3xl font-bold mb-6 text-white">Our Approach</h2>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          Green Orbit helps clients embed sustainability into terrestrial operations associated with space. Our services include life-cycle assessment, sustainable materials selection, energy optimisation, and launch impact mitigation. 
+        </p>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          By combining environmental expertise with sector knowledge, we support organisations in **reporting, benchmarking, and reducing their carbon footprint**, aligning operations with net-zero commitments and international sustainability frameworks.
+        </p>
+
+        <Callout title="Our Services Include" class="my-6 text-secondary-500">
+          Life-cycle assessment | Sustainable materials & manufacturing | Launch emission reduction | Net-zero roadmap & reporting
+        </Callout>
+      </div>
+    </section>
+
+    <!-- Section: Benefits & Impact -->
+    <section class="py-16 bg-white dark:bg-primary-500">
+      <div class="container mx-auto max-w-5xl px-4">
+        <h2 class="text-3xl font-bold mb-6 text-white">Benefits and Impact</h2>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          Applying sustainable practices across production and launch reduces carbon emissions, resource consumption, and chemical pollutants. Organisations achieve **long-term cost savings, regulatory compliance, and stronger sustainability reporting**.
+        </p>
+        <p class="text-white text-lg leading-relaxed mb-6">
+          By minimising the Earth-side footprint of space activities, Green Orbit clients demonstrate leadership in responsible space operations and contribute to planetary stewardship, supporting the broader goal of **sustainable space exploration**.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section: References & Related Links -->
+    <section class="py-16 bg-gray-50 dark:bg-secondary-500 text-center text-white text-sm">
+      <div class="container mx-auto max-w-5xl px-4">
+        <p class="mb-2 text-accent-500">
+          Reference: Wilson, A. R., & Vasile, M. (2023). <em>The space sustainability paradox</em>. <strong>Journal of Cleaner Production</strong>. 
+          <a href="https://doi.org/10.1016/j.jclepro.2023.138869" class="underline hover:text-primary-500">DOI: 10.1016/j.jclepro.2023.138869</a>
+        </p>
+        <p>
+          Explore other pillars: 
+          <a href="/space-sustainability/from-space" class="underline hover:text-primary-500">From Space</a> | 
+          <a href="/space-sustainability/in-space" class="underline hover:text-primary-500">In Space</a>
+        </p>
+      </div>
+    </section>
+
   </main>
 
   <Footer />
