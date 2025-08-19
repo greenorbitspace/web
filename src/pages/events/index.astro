@@ -3,120 +3,210 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import HeroSection from '../../components/HeroSection.astro';
+import eventsData from '../../data/events.json';
+import slugify from '../../utils/slugify.js';
+
+// --- UN Country List ---
+const UN_COUNTRIES = [
+  "Afghanistan","Albania","Algeria","Andorra","Angola","Antigua and Barbuda","Argentina","Armenia",
+  "Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium",
+  "Belize","Benin","Bhutan","Bolivia","Bosnia and Herzegovina","Botswana","Brazil","Brunei","Bulgaria",
+  "Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Canada","Central African Republic","Chad",
+  "Chile","China","Colombia","Comoros","Congo","Costa Rica","Côte d’Ivoire","Croatia","Cuba","Cyprus",
+  "Czechia","Democratic Republic of the Congo","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador",
+  "Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Eswatini","Ethiopia","Fiji","Finland","France",
+  "Gabon","Gambia","Georgia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea","Guinea-Bissau","Guyana",
+  "Haiti","Honduras","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","Jamaica",
+  "Japan","Jordan","Kazakhstan","Kenya","Kiribati","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho",
+  "Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Madagascar","Malawi","Malaysia","Maldives","Mali",
+  "Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia",
+  "Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Zealand","Nicaragua",
+  "Niger","Nigeria","North Korea","North Macedonia","Norway","Oman","Pakistan","Palau","Palestine","Panama",
+  "Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Qatar","Romania","Russia","Rwanda",
+  "Saint Kitts and Nevis","Saint Lucia","Saint Vincent and the Grenadines","Samoa","San Marino","Sao Tome and Principe",
+  "Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands",
+  "Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Sweden","Switzerland",
+  "Syria","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tonga","Trinidad and Tobago","Tunisia","Turkey",
+  "Turkmenistan","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay",
+  "Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Yemen","Zambia","Zimbabwe"
+];
+
+// --- Helpers ---
+function parseEventDate(dateStr) {
+  if (!dateStr) return null;
+  const date = new Date(dateStr);
+  return isNaN(date) ? null : date;
+}
+
+function formatEventDate(date) {
+  if (!date) return '';
+  return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+}
+
+function detectCountry(location) {
+  if (!location) return '';
+  const loc = location.toLowerCase();
+  return UN_COUNTRIES.find(c => loc.includes(c.toLowerCase())) || '';
+}
+
+const today = new Date();
+
+// --- Normalize Events ---
+const upcomingEvents = eventsData
+  .map(e => ({
+    ...e,
+    slug: e.slug || slugify(e.title),
+    startDate: parseEventDate(e.start),
+    endDate: parseEventDate(e.end),
+    location: e.location && e.location !== '-' ? e.location : 'TBD',
+    country: detectCountry(e.location),
+    organizer: e.organizer || 'TBD',
+    status: e.status || 'TBD',
+    featured: e.featured || false,
+    categories: e.categories || []
+  }))
+  .filter(e => e.startDate && e.startDate >= today)
+  .sort((a, b) => a.startDate - b.startDate);
+
+// --- Group by Month ---
+function groupByMonth(eventsList) {
+  const grouped = {};
+  eventsList.forEach(event => {
+    const month = event.startDate.toLocaleString('default', { month: 'long', year: 'numeric' });
+    if (!grouped[month]) grouped[month] = [];
+    grouped[month].push(event);
+  });
+  return grouped;
+}
+
+const eventsByMonth = groupByMonth(upcomingEvents);
+
+// --- Filter Options ---
+const categories = Array.from(new Set(upcomingEvents.flatMap(e => e.categories))).sort();
+const organizers = Array.from(new Set(upcomingEvents.map(e => e.organizer))).sort();
+const countries = Array.from(new Set(upcomingEvents.map(e => e.country).filter(Boolean))).sort();
+const statuses = Array.from(new Set(upcomingEvents.map(e => e.status))).sort();
 ---
 
-<Layout title="Events">
+<Layout title="Events | Green Orbit Digital">
   <Header />
 
-  <main class="py-8">
-    <HeroSection 
-      title="Our Events" 
-      description="We don’t just market for the space industry—we bring it together. Our mission-aligned events drive innovation, collaboration, and sustainable growth across the space sector."
-    />
+  <HeroSection 
+    title="Upcoming Events" 
+    description="Discover all space, sustainability, and marketing events we are organising or attending." 
+  />
 
-    <!-- What We Offer -->
-    <section id="events" class="section bg-gray-50 dark:bg-secondary-500 py-16">
-      <div class="container-custom">
-        <span class="inline-block px-4 py-1 rounded-full bg-accent-500 text-primary-500 dark:text-white font-medium text-sm mb-4">
-          What We Offer
-        </span>
-        <h2 class="text-3xl font-semibold text-white dark:text-white mb-4">
-          Purpose-Driven Events for the Space Ecosystem
-        </h2>
-        <p class="text-white dark:text-white mb-12 max-w-3xl">
-          Designed for education, collaboration, and measurable impact—our events connect stakeholders across the space sector through engaging formats rooted in sustainability.
-        </p>
+  <main class="py-12 max-w-6xl mx-auto px-4 space-y-8">
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-white">
-          {[
-            {
-              title: 'Workshops',
-              text: 'Practical, in-person or virtual sessions to build capability in sustainable marketing, innovation, and strategy.',
-              href: '/events/workshops',
-            },
-            {
-              title: 'Hackathons',
-              text: 'Challenge-led innovation sprints tackling sustainability and data problems using space-enabled technologies.',
-              href: '/events/hackathons',
-            },
-            {
-              title: 'Conferences',
-              text: 'Impactful events—from roundtables to full-scale conferences—designed to shape policy and spark collaboration.',
-              href: '/events/conferences',
-            },
-            {
-              title: 'Webinars',
-              text: 'Scalable online sessions for lead generation, audience engagement, or specialist training.',
-              href: '/events/webinars',
-            },
-            {
-              title: 'Masterclasses',
-              text: 'Deep-dive learning experiences on space marketing, audience strategy, and digital transformation.',
-              href: '/events/masterclasses',
-            },
-          ].map(({ title, text, href }) => (
-            <div class="p-6 bg-muted rounded-2xl">
-              <h3 class="font-semibold text-xl mb-2">{title}</h3>
-              <p class="mb-4">{text}</p>
-              <a href={href} class="bg-accent-500 hover:bg-primary-500 text-white font-semibold py-3 px-6 rounded-xl transition">
-                Learn More
-              </a>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-<!-- Why Green Orbit Digital -->
-<section class="bg-gray-100 dark:bg-primary-500 py-16 px-6 sm:px-12 rounded-2xl shadow-md">
-  <div class="max-w-5xl mx-auto text-center">
-    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-      Why Green Orbit Digital?
-    </h2>
-    <p class="text-lg text-gray-700 dark:text-white mb-10">
-      We’re not just another digital agency. As a sustainability-led team with deep roots in the space sector, we combine industry insight with measurable marketing strategies. Here's what sets us apart:
-    </p>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-      <div>
-        <h3 class="font-semibold text-xl text-accent-500 dark:text-accent-500 mb-2">Sustainable by Design</h3>
-        <p class="text-gray-700 dark:text-white">
-          Every campaign is designed with environmental impact in mind, aligning with your sustainability goals and the UN SDGs.
-        </p>
-      </div>
-      <div>
-        <h3 class="font-semibold text-xl text-accent-500 dark:text-accent-500 mb-2">Deep Space Sector Expertise</h3>
-        <p class="text-gray-700 dark:text-white">
-          With over a decade of experience in space marketing, we understand your audience, your mission, and the nuance of your tech.
-        </p>
-      </div>
-      <div>
-        <h3 class="font-semibold text-xl text-accent-500 dark:text-accent-500 mb-2">Data-Driven Results</h3>
-        <p class="text-gray-700 dark:text-white">
-          We focus on what matters: ROI, engagement, and conversion. Every tactic is tracked, analysed, and optimised for performance.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-    <!-- CTA -->
-    <section class="bg-accent-500 rounded-2xl p-10 md:p-16 text-center text-white mb-24">
-      <h2 class="text-3xl font-bold mb-4">Ready to Engage the Space Community?</h2>
-      <p class="text-lg mb-8 max-w-2xl mx-auto">
-        Let’s co-create a workshop, conference, or digital experience that delivers real value for your organisation and the space sector.
+    <!-- Filters -->
+    <section class="filters border-b pb-4 mb-8">
+      <h2 class="text-xl font-semibold mb-2">Filter Events</h2>
+      <p class="text-sm text-gray-600 mb-4">
+        Change any filter to refresh the events list.
       </p>
-      <div class="flex justify-center gap-4 flex-wrap">
-        <a href="/contact" class="bg-white hover:bg-secondary-500 text-primary-500 hover:text-white font-semibold py-3 px-6 rounded-xl transition">
-          Enquire Now
-        </a>
-        <a href="https://cal.com/rjmlaird" class="bg-white hover:bg-secondary-500 text-primary-500 hover:text-white font-semibold py-3 px-6 rounded-xl transition">
-          Book a Discovery Call
-        </a>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <select id="categoryFilter" class="border rounded px-2 py-1">
+          <option value="">All Categories</option>
+          {categories.map(c => <option value={c.toLowerCase()}>{c}</option>)}
+        </select>
+        <select id="organizerFilter" class="border rounded px-2 py-1">
+          <option value="">All Organizers</option>
+          {organizers.map(o => <option value={o.toLowerCase()}>{o}</option>)}
+        </select>
+        <select id="countryFilter" class="border rounded px-2 py-1">
+          <option value="">All Countries</option>
+          {countries.map(c => <option value={c.toLowerCase()}>{c}</option>)}
+        </select>
+        <select id="statusFilter" class="border rounded px-2 py-1">
+          <option value="">All Statuses</option>
+          {statuses.map(s => <option value={s.toLowerCase()}>{s}</option>)}
+        </select>
       </div>
     </section>
+
+    <!-- Events by Month -->
+    {Object.entries(eventsByMonth).map(([month, events]) => (
+      <section class="month-group space-y-6">
+        <h2 class="text-2xl font-bold">{month}</h2>
+        <ul class="space-y-4">
+          {events.map(e => (
+            <li class="border border-gray-300 p-4 rounded-lg" 
+                data-categories={e.categories.join(', ')} 
+                data-organizer={e.organizer.toLowerCase()}
+                data-country={e.country.toLowerCase()}
+                data-status={e.status.toLowerCase()}>
+              
+              <h3 class="text-lg font-semibold mb-1">{e.title}</h3>
+
+              {e.categories.length > 0 && (
+                <div class="flex flex-wrap gap-2 mb-2">
+                  {e.categories.map(cat => (
+                    <span class="bg-gray-200 text-gray-800 text-xs font-medium px-2 py-1 rounded-full cursor-pointer hover:bg-gray-300 category-badge" 
+                          data-category={cat.toLowerCase()}>
+                      {cat}
+                    </span>
+                  ))}
+                </div>
+              )}
+
+              <p class="text-sm text-accent-500 mb-1">
+                {formatEventDate(e.startDate)}{e.endDate ? ` - ${formatEventDate(e.endDate)}` : ''}
+              </p>
+              <p class="text-sm mb-1">{e.location}</p>
+              <p class="text-sm mb-2">{e.organizer}</p>
+              <a href={`/events/${e.slug}/`} class="inline-block px-4 py-2 bg-accent-500 text-white rounded hover:bg-accent-500">
+                View Event
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
 
   </main>
 
   <Footer />
 </Layout>
+
+<script type="module">
+  const allEvents = [...document.querySelectorAll('li[data-categories]')];
+  const categorySelect = document.getElementById('categoryFilter');
+  const organizerSelect = document.getElementById('organizerFilter');
+  const countrySelect = document.getElementById('countryFilter');
+  const statusSelect = document.getElementById('statusFilter');
+
+  function filterEvents() {
+    const category = categorySelect.value;
+    const organizer = organizerSelect.value;
+    const country = countrySelect.value;
+    const status = statusSelect.value;
+
+    allEvents.forEach(card => {
+      const cardCategory = card.dataset.categories.toLowerCase();
+      const cardOrganizer = card.dataset.organizer;
+      const cardCountry = card.dataset.country;
+      const cardStatus = card.dataset.status;
+
+      const show =
+        (!category || cardCategory.includes(category)) &&
+        (!organizer || cardOrganizer.includes(organizer)) &&
+        (!country || cardCountry.includes(country)) &&
+        (!status || cardStatus.includes(status));
+
+      card.style.display = show ? '' : 'none';
+    });
+  }
+
+  [categorySelect, organizerSelect, countrySelect, statusSelect].forEach(select => {
+    select.addEventListener('change', filterEvents);
+  });
+
+  // --- Clickable category badges ---
+  document.querySelectorAll('.category-badge').forEach(badge => {
+    badge.addEventListener('click', () => {
+      categorySelect.value = badge.dataset.category;
+      filterEvents();
+      categorySelect.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+</script>
