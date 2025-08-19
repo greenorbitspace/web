@@ -37,7 +37,6 @@
     "@types/react": "^19.1.9",
     "@types/react-dom": "^19.1.7",
     "alpinejs": "^3.14.9",
-    "astro": "^5.12.8",
     "date-fns": "^4.1.0",
     "markdown-it": "^14.1.0",
     "react": "^19.1.1",
@@ -48,6 +47,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.11",
+    "astro": "^5.13.2",
     "autoprefixer": "^10.4.21",
     "dotenv": "^17.2.1",
     "eslint-plugin-jsx-a11y": "^6.10.2",
