@@ -45,7 +45,7 @@ function formatEventDate(date) {
 function detectCountry(location) {
   if (!location) return '';
   const loc = location.toLowerCase();
-  return UN_COUNTRIES.find(c => loc.toLowerCase() === loc || loc.includes(c.toLowerCase())) || '';
+  return UN_COUNTRIES.find(c => loc.toLowerCase() === c || loc.includes(c.toLowerCase())) || '';
 }
 
 const today = new Date();
@@ -98,7 +98,7 @@ const statuses = Array.from(new Set(upcomingEvents.map(e => e.status))).sort();
     description="Discover all space, sustainability, and marketing events we are organising or attending." 
   />
 
-  <main class="py-12 max-w-6xl mx-auto px-4 space-y-8">
+  <main class="py-12 max-w-6xl mx-auto px-4 space-y-12">
 
     <!-- Filters -->
     <section class="filters border-b pb-4 mb-8">
@@ -124,34 +124,32 @@ const statuses = Array.from(new Set(upcomingEvents.map(e => e.status))).sort();
     </section>
 
     <!-- Events by Month -->
-    <div id="eventsContainer">
+    <div id="eventsContainer" class="space-y-12">
       {Object.entries(eventsByMonth).map(([month, events]) => (
         <section class="month-group space-y-6">
           <h2 class="text-2xl font-bold">{month}</h2>
-          <ul class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {events.map(e => (
-              <li class="border border-gray-300 rounded-lg overflow-hidden shadow-sm" 
-                  data-categories={e.categories.join(', ').toLowerCase()} 
-                  data-organizer={e.organizer.toLowerCase()}
-                  data-country={e.country.toLowerCase()}
-                  data-status={e.status.toLowerCase()}>
+              <div class="border border-gray-300 rounded-lg overflow-hidden shadow-sm flex flex-col h-full transition-shadow duration-300 hover:shadow-lg"
+                   data-categories={e.categories.join(', ').toLowerCase()} 
+                   data-organizer={e.organizer.toLowerCase()}
+                   data-country={e.country.toLowerCase()}
+                   data-status={e.status.toLowerCase()}>
 
-                  {/* Event image (if available) */}
-                  {e.image && (
-                    <a href={`/events/${e.slug}/`}>
-                      <div class="w-full aspect-video overflow-hidden rounded-t-lg">
-                        <img 
-                          src={e.image} 
-                          alt={e.title} 
-                          class="w-full h-full object-cover"
-                          loading="lazy"
-                        />
-                      </div>
-                    </a>
-                  )}
+                {e.image && (
+                  <a href={`/events/${e.slug}/`}>
+                    <div class="w-full aspect-video overflow-hidden rounded-t-lg">
+                      <img 
+                        src={e.image} 
+                        alt={e.title} 
+                        class="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                )}
 
-                <div class="p-4">
-                  {/* Event title links to internal slug page */}
+                <div class="p-4 flex flex-col flex-1">
                   <h3 class="text-lg font-semibold mb-1">
                     <a href={`/events/${e.slug}/`} class="hover:underline">{e.title}</a>
                   </h3>
@@ -179,16 +177,15 @@ const statuses = Array.from(new Set(upcomingEvents.map(e => e.status))).sort();
                     )}
                   </p>
 
-                  {/* View Event button links to external official URL if present */}
                   {e.url && (
-                    <a href={e.url} target="_blank" rel="noopener noreferrer" class="inline-block px-4 py-2 bg-accent-500 text-white rounded hover:bg-accent-600">
+                    <a href={e.url} target="_blank" rel="noopener noreferrer" class="inline-block px-4 py-2 bg-accent-500 text-white rounded hover:bg-accent-600 mt-auto">
                       View Event
                     </a>
                   )}
                 </div>
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         </section>
       ))}
     </div>
@@ -198,7 +195,7 @@ const statuses = Array.from(new Set(upcomingEvents.map(e => e.status))).sort();
 </Layout>
 
 <script type="module">
-  const allEvents = [...document.querySelectorAll('li[data-categories]')];
+  const allEvents = [...document.querySelectorAll('div[data-categories]')];
   const categorySelect = document.getElementById('categoryFilter');
   const organizerSelect = document.getElementById('organizerFilter');
   const countrySelect = document.getElementById('countryFilter');
