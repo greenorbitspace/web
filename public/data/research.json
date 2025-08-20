@@ -1,0 +1,948 @@
+[
+  {
+    "id": "Martinez2021",
+    "type": "article",
+    "title": "The UN COPUOS Guidelines for the Long-term Sustainability of Outer Space Activities",
+    "author": "Peter Martinez",
+    "year": "2021",
+    "journal": "Journal of Space Safety Engineering",
+    "doi": "10.1016/j.jsse.2021.02.003",
+    "url": "",
+    "keywords": [
+      "COPUOS",
+      "LTS",
+      "LTS Guidelines",
+      "Space sustainability",
+      "space governance"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Wilson2023",
+    "type": "article",
+    "title": "Life cycle engineering of space systems: Preliminary findings",
+    "author": "Andrew Ross Wilson and Massimiliano Vasile",
+    "year": "2023",
+    "journal": "Advances in Space Research",
+    "doi": "10.1016/j.asr.2023.01.023",
+    "url": "",
+    "keywords": [
+      "Concurrent engineering",
+      "Ecodesign",
+      "Life cycle assessment",
+      "Life cycle engineering",
+      "SmallSats",
+      "Space systems",
+      "Sustainable design"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Lindsay2022",
+    "type": "article",
+    "title": "The efficacy of managing space environmental risk by regulating probability of collision with large objects",
+    "author": "Mike Lindsay and Toby Harris and Sam Cox and Matt Duncan",
+    "year": "2022",
+    "journal": "Journal of Space Safety Engineering",
+    "doi": "10.1016/j.jsse.2022.02.012",
+    "url": "",
+    "keywords": [
+      "Active debris removal",
+      "Catastrophic fragmentation",
+      "Environmental risk",
+      "Regulations",
+      "Space policy"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Fuchs2024",
+    "type": "article",
+    "title": "A primer to new space business - Beyond “Business in space: The new frontier” (Goodrich, Kitmacher and Amtey, 1987)",
+    "author": "Sebastian H. Fuchs and Tim Vorley and Marc J. Ventresca",
+    "year": "2024",
+    "journal": "Journal of Business Venturing Insights",
+    "doi": "10.1016/j.jbvi.2024.e00493",
+    "url": "",
+    "keywords": [
+      "Low Earth Orbit",
+      "New Space",
+      "Space business",
+      "Space management"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Martinez2018",
+    "type": "article",
+    "title": "Development of an international compendium of guidelines for the long-term sustainability of outer space activities",
+    "author": "Peter Martinez",
+    "year": "2018",
+    "journal": "Space Policy",
+    "doi": "10.1016/j.spacepol.2018.01.002",
+    "url": "",
+    "keywords": [
+      "Space diplomacy",
+      "Space security",
+      "Space sustainability"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Zhang2022",
+    "type": "article",
+    "title": "Geopolitical risk and the returns and volatility of global defense companies: A new race to arms?",
+    "author": "Zhengyong Zhang and Elie Bouri and Tony Klein and Naji Jalkh",
+    "year": "2022",
+    "journal": "International Review of Financial Analysis",
+    "doi": "10.1016/j.irfa.2022.102327",
+    "url": "",
+    "keywords": [
+      "Co-movements via wavelets",
+      "Defense and aerospace companies",
+      "Geopolitical risk (GPR) index",
+      "Russia",
+      "War in Ukraine"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Smith2024",
+    "type": "article",
+    "title": "The political and legal landscape of space debris mitigation in emerging space nations",
+    "author": "Jacqueline H. Smith and Minoo Rathnasabapathy and Danielle Wood",
+    "year": "2024",
+    "journal": "Journal of Space Safety Engineering",
+    "doi": "10.1016/j.jsse.2024.08.009",
+    "url": "",
+    "keywords": [
+      "Emerging space nations",
+      "LTS 2.0",
+      "Long-term space sustainability",
+      "Space sustainability rating"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Maiwald2023",
+    "type": "article",
+    "title": "Frameworks of sustainability and sustainable development in a spaceflight context: A systematic review and critical analysis",
+    "author": "Volker Maiwald",
+    "year": "2023",
+    "journal": "Acta Astronautica",
+    "doi": "10.1016/j.actaastro.2023.01.023",
+    "url": "",
+    "keywords": [
+      "ISRU",
+      "Space treaty",
+      "Sustainable development",
+      "planetary Sustainability"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Palmroth2021",
+    "type": "article",
+    "title": "Toward Sustainable Use of Space: Economic, Technological, and Legal Perspectives",
+    "author": "M. Palmroth and J. Tapio and A. Soucek and A. Perrels and M. Jah and M. Lönnqvist and M. Nikulainen and V. Piaulokaite and T. Seppälä and J. Virtanen",
+    "year": "2021",
+    "journal": "Space Policy",
+    "doi": "10.1016/j.spacepol.2021.101428",
+    "url": "",
+    "keywords": [
+      "Economy",
+      "Satellite technology",
+      "Space debris",
+      "Space law",
+      "Space physics",
+      "Space regulation",
+      "Spaceflight",
+      "Sustainability"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Aversano2024",
+    "type": "article",
+    "title": "Circular and sustainable space: Findings from hyperspectral imaging",
+    "author": "N. Aversano and G. Bonifazi and I. D'Adamo and R. Palmieri and S. Serranti and A. Simone",
+    "year": "2024",
+    "journal": "Journal of Cleaner Production",
+    "doi": "10.1016/j.jclepro.2024.143386",
+    "url": "",
+    "keywords": [
+      "Hyperspectral imaging",
+      "Material sorting",
+      "Space waste management",
+      "Space waste recycling",
+      "Sustainable procedures"
+    ],
+    "note": ""
+  },
+  {
+    "id": "DAnniballe2025",
+    "type": "article",
+    "title": "Preliminary analysis and design of an optical space surveillance and tracking constellation for LEO coverage",
+    "author": "A. D'Anniballe and L. Felicetti and S. Hobbs",
+    "year": "2025",
+    "journal": "Acta Astronautica",
+    "doi": "10.1016/j.actaastro.2025.02.019",
+    "url": "",
+    "keywords": [
+      "Constellation design",
+      "Orbit determination",
+      "Space debris",
+      "Space surveillance"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Weeden2011",
+    "type": "article",
+    "title": "Overview of the legal and policy challenges of orbital debris removal",
+    "author": "Brian Weeden",
+    "year": "2011",
+    "journal": "Space Policy",
+    "doi": "10.1016/j.spacepol.2010.12.019",
+    "url": "",
+    "keywords": [
+      ""
+    ],
+    "note": ""
+  },
+  {
+    "id": "Schulz2021",
+    "type": "article",
+    "title": "On the anthropogenic and natural injection of matter into Earth's atmosphere",
+    "author": "Leonard Schulz and Karl Heinz Glassmeier",
+    "year": "2021",
+    "journal": "Advances in Space Research",
+    "doi": "10.1016/j.asr.2020.10.036",
+    "url": "",
+    "keywords": [
+      "Ablation",
+      "Anthropogenic effect",
+      "Atmosphere",
+      "Human-made injection",
+      "Mass influx",
+      "Meteorite composition",
+      "Meteoroids",
+      "Satellite constellations"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Miraux2022",
+    "type": "article",
+    "title": "Environmental sustainability of future proposed space activities",
+    "author": "Loïs Miraux and Andrew Ross Wilson and Guillermo J. Dominguez Calabuig",
+    "year": "2022",
+    "journal": "Acta Astronautica",
+    "doi": "10.1016/j.actaastro.2022.07.034",
+    "url": "",
+    "keywords": [
+      "Environmental impact",
+      "Future",
+      "Life Cycle Assessment",
+      "Scenario",
+      "Space sustainability",
+      "Space system"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Maury2017",
+    "type": "article",
+    "title": "Towards the integration of orbital space use in Life Cycle Impact Assessment",
+    "author": "Thibaut Maury and Philippe Loubet and Jonathan Ouziel and Maud Saint-Amand and Ludovic Dariol and Guido Sonnemann",
+    "year": "2017",
+    "journal": "Science of the Total Environment",
+    "doi": "10.1016/j.scitotenv.2017.04.008",
+    "url": "",
+    "keywords": [
+      "Impact pathway",
+      "Life Cycle Assessment",
+      "Outer space",
+      "Resource use",
+      "Space debris"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Letizia2020",
+    "type": "article",
+    "title": "Environment capacity as an early mission design driver",
+    "author": "Francesca Letizia and Stijn Lemmens and Holger Krag",
+    "year": "2020",
+    "journal": "Acta Astronautica",
+    "doi": "10.1016/j.actaastro.2020.04.041",
+    "url": "",
+    "keywords": [
+      "Mitigation guidelines",
+      "Space debris environment",
+      "Space debris index",
+      "Space traffic management"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Maury2020",
+    "type": "article",
+    "title": "Application of environmental life cycle assessment (LCA) within the space sector: A state of the art",
+    "author": "Thibaut Maury and Philippe Loubet and Sara Morales Serrano and Aurélie Gallice and Guido Sonnemann",
+    "year": "2020",
+    "journal": "Acta Astronautica",
+    "doi": "10.1016/j.actaastro.2020.01.035",
+    "url": "",
+    "keywords": [
+      "ecodesign",
+      "environmental impact",
+      "life cycle assessment",
+      "space industry",
+      "space sustainability",
+      "space systems"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Kwak2023",
+    "type": "article",
+    "title": "Assessing the potential toxicity of hazardous material released from Pb-based perovskite solar cells to crop plants",
+    "author": "Jin Il Kwak and Tae Yang Lee and Youn Joo An",
+    "year": "2023",
+    "journal": "Journal of Cleaner Production",
+    "doi": "10.1016/j.jclepro.2023.138856",
+    "url": "",
+    "keywords": [
+      "Akagare",
+      "Crop plant",
+      "Lead iodide",
+      "Perovskite",
+      "Phytotoxicity"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Zardo2025",
+    "type": "article",
+    "title": "Circular supply chain and circular practices: An analysis from the perspective of sustainability and Industry 4.0",
+    "author": "Duane Jaqueline Zardo and Ana Paula Granela and Simone Sehnem and Dulcimar Jose Julkovski",
+    "year": "2025",
+    "journal": "Corporate Social Responsibility and Environmental Management",
+    "doi": "10.1002/CSR.3022",
+    "url": "",
+    "keywords": [
+      "Industry 4.0",
+      "circular economy",
+      "supply chain",
+      "sustainability"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Detsis2013",
+    "type": "article",
+    "title": "The benefits brought by space - General public versus space agencies perspectives",
+    "author": "Bianca Detsis and Emmanouil Detsis",
+    "year": "2013",
+    "journal": "Acta Astronautica",
+    "doi": "10.1016/j.actaastro.2013.03.021",
+    "url": "",
+    "keywords": [
+      "Awareness",
+      "Problems",
+      "Public perception",
+      "Space agency",
+      "Space benefits",
+      "Space technology"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Goh2023",
+    "type": "article",
+    "title": "Solving carbon tax challenges with a holistic approach: Integrating evolutionary game theory and life cycle energy solutions",
+    "author": "Hui Hwang Goh and Zhaoyang Xu and Xue Liang and Dongdong Zhang and Wei Dai and Hui Liu and Tonni Agustiono Kurniawan and Shen Yuong Wong and Kai Chen Goh",
+    "year": "2023",
+    "journal": "Journal of Cleaner Production",
+    "doi": "10.1016/j.jclepro.2023.138817",
+    "url": "",
+    "keywords": [
+      "Carbon emission",
+      "Carbon tax",
+      "Evolutionary game",
+      "Fossil fuel",
+      "Life cycle assessment",
+      "Renewable energy"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Miraux2022",
+    "type": "article",
+    "title": "Environmental limits to the space sector's growth",
+    "author": "Loïs Miraux",
+    "year": "2022",
+    "journal": "Science of the Total Environment",
+    "doi": "10.1016/j.scitotenv.2021.150862",
+    "url": "",
+    "keywords": [
+      "Environmental impact",
+      "Limits to growth",
+      "NewSpace",
+      "Planetary boundaries",
+      "Regulatory risk",
+      "Space sustainability"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Lawrence2022",
+    "type": "article",
+    "title": "The case for space environmentalism",
+    "author": "Andy Lawrence and Meredith L. Rawls and Moriba Jah and Aaron Boley and Federico Di Vruno and Simon Garrington and Michael Kramer and Samantha Lawler and James Lowenthal and Jonathan McDowell and Mark McCaughrean",
+    "year": "2022",
+    "journal": "Nature Astronomy",
+    "doi": "10.1038/S41550-022-01655-6",
+    "url": "",
+    "keywords": [
+      ""
+    ],
+    "note": ""
+  },
+  {
+    "id": "Vogler2012",
+    "type": "article",
+    "title": "Global Commons Revisited",
+    "author": "John Vogler",
+    "year": "2012",
+    "journal": "Global Policy",
+    "doi": "10.1111/J.1758-5899.2011.00156.X",
+    "url": "",
+    "keywords": [
+      ""
+    ],
+    "note": ""
+  },
+  {
+    "id": "Wilson2022",
+    "type": "article",
+    "title": "Estimating the CO2 intensity of the space sector",
+    "author": "Andrew Ross Wilson",
+    "year": "2022",
+    "journal": "Nature Astronomy",
+    "doi": "10.1038/S41550-022-01639-6",
+    "url": "",
+    "keywords": [
+      ""
+    ],
+    "note": ""
+  },
+  {
+    "id": "Garcia2021",
+    "type": "article",
+    "title": "Global commons law: norms to safeguard the planet and humanity’s heritage",
+    "author": "Denise Garcia",
+    "year": "2021",
+    "journal": "International Relations",
+    "doi": "10.1177/00471178211036027",
+    "url": "",
+    "keywords": [
+      "Antarctica",
+      "arctic",
+      "climate change",
+      "global commons",
+      "global commons law",
+      "international law"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Cziczo2013",
+    "type": "article",
+    "title": "Clarifying the dominant sources and mechanisms of cirrus cloud formation",
+    "author": "Daniel J. Cziczo and Karl D. Froyd and Corinna Hoose and Eric J. Jensen and Minghui Diao and Mark A. Zondlo and Jessica B. Smith and Cynthia H. Twohy and Daniel M. Murphy",
+    "year": "2013",
+    "journal": "Science",
+    "doi": "10.1126/SCIENCE.1234145",
+    "url": "",
+    "keywords": [
+      ""
+    ],
+    "note": ""
+  },
+  {
+    "id": "Hardin1968",
+    "type": "article",
+    "title": "The tragedy of the commons",
+    "author": "Garrett Hardin",
+    "year": "1968",
+    "journal": "Science",
+    "doi": "10.1126/SCIENCE.162.3859.1243",
+    "url": "",
+    "keywords": [
+      ""
+    ],
+    "note": ""
+  },
+  {
+    "id": "Wilson2023",
+    "type": "article",
+    "title": "The space sustainability paradox",
+    "author": "Andrew Ross Wilson and Massimiliano Vasile",
+    "year": "2023",
+    "journal": "Journal of Cleaner Production",
+    "doi": "10.1016/J.JCLEPRO.2023.138869",
+    "url": "https://www.sciencedirect.com/science/article/pii/S0959652623030275?via%3Dihub#cebib0010",
+    "keywords": [
+      "Global commons",
+      "Outer space",
+      "Space sustainability",
+      "Space sustainability paradox",
+      "Sustainable development"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Gates2015",
+    "type": "article",
+    "title": "The Asteroid Redirect Mission and sustainable human exploration",
+    "author": "Michele Gates and Steve Stich and Mark McDonald and Brian Muirhead and Dan Mazanek and Paul Abell and Pedro Lopez",
+    "year": "2015",
+    "journal": "Acta Astronautica",
+    "doi": "10.1016/j.actaastro.2015.01.025",
+    "url": "",
+    "keywords": [
+      "Asteroid Redirect Mission",
+      "Human Space Exploration",
+      "Human exploration"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Do2016",
+    "type": "article",
+    "title": "An independent assessment of the technical feasibility of the Mars One mission plan - Updated analysis",
+    "author": "Sydney Do and Andrew Owens and Koki Ho and Samuel Schreiner and Olivier De Weck",
+    "year": "2016",
+    "journal": "Acta Astronautica",
+    "doi": "10.1016/j.actaastro.2015.11.025",
+    "url": "",
+    "keywords": [
+      "Colonization",
+      "Habitation",
+      "ISRU",
+      "Life support",
+      "Mars",
+      "Supportability"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Hein2020",
+    "type": "article",
+    "title": "A techno-economic analysis of asteroid mining",
+    "author": "Andreas M. Hein and Robert Matheson and Dan Fries",
+    "year": "2020",
+    "journal": "Acta Astronautica",
+    "doi": "10.1016/j.actaastro.2019.05.009",
+    "url": "",
+    "keywords": [
+      "Asteroid mining",
+      "Platinum",
+      "Space economics",
+      "Techno-economic analysis"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Newman2015",
+    "type": "article",
+    "title": "Seeking tranquillity: Embedding sustainability in lunar exploration policy",
+    "author": "Christopher J. Newman",
+    "year": "2015",
+    "journal": "Space Policy",
+    "doi": "10.1016/j.spacepol.2015.05.003",
+    "url": "",
+    "keywords": [
+      "Commercial mining",
+      "Lunar exploration",
+      "Lunar regulation",
+      "Space sustainability"
+    ],
+    "note": ""
+  },
+  {
+    "id": "undefined",
+    "type": "misc",
+    "title": "Frameworks of sustainability and sustainable development in a spaceflight context: A systematic review and critical analysis - ScienceDirect - https://www.sciencedirect.com/science/article/abs/pii/S0094576523000255",
+    "author": "",
+    "year": "",
+    "journal": "",
+    "doi": "",
+    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0094576523000255",
+    "keywords": [
+      ""
+    ],
+    "note": ""
+  },
+  {
+    "id": "Som2010",
+    "type": "article",
+    "title": "An international symbol for the sustained exploration of space",
+    "author": "Sanjoy Som",
+    "year": "2010",
+    "journal": "Space Policy",
+    "doi": "10.1016/j.spacepol.2010.05.002",
+    "url": "",
+    "keywords": [
+      ""
+    ],
+    "note": ""
+  },
+  {
+    "id": "Broniatowski2008",
+    "type": "article",
+    "title": "The political sustainability of space exploration",
+    "author": "David A. Broniatowski and Annalisa L. Weigel",
+    "year": "2008",
+    "journal": "Space Policy",
+    "doi": "10.1016/j.spacepol.2008.06.004",
+    "url": "",
+    "keywords": [
+      ""
+    ],
+    "note": ""
+  },
+  {
+    "id": "Ehrenfreund2009",
+    "type": "article",
+    "title": "Toward a paradigm shift in managing future global space exploration endeavors",
+    "author": "P. Ehrenfreund and N. Peter",
+    "year": "2009",
+    "journal": "Space Policy",
+    "doi": "10.1016/j.spacepol.2009.09.004",
+    "url": "",
+    "keywords": [
+      ""
+    ],
+    "note": ""
+  },
+  {
+    "id": "Maclay2021",
+    "type": "article",
+    "title": "Space environment management: Framing the objective and setting priorities for controlling orbital debris risk",
+    "author": "T. Maclay and D. McKnight",
+    "year": "2021",
+    "journal": "Journal of Space Safety Engineering",
+    "doi": "10.1016/j.jsse.2020.11.002",
+    "url": "",
+    "keywords": [
+      "Debris Mitigation",
+      "Debris Remediation",
+      "Space Environment Management",
+      "Space Safety",
+      "Space Situational Awareness",
+      "Space Traffic Management"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Galli2019",
+    "type": "article",
+    "title": "Beyond planetary protection: What is planetary sustainability and what are its implications for space research?",
+    "author": "André Galli and Andreas Losch",
+    "year": "2019",
+    "journal": "Life Sciences in Space Research",
+    "doi": "10.1016/j.lssr.2019.02.005",
+    "url": "",
+    "keywords": [
+      "Ethics",
+      "Space exploration",
+      "Sustainability",
+      "UN sustainable development goals"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Dinda2004",
+    "type": "article",
+    "title": "Environmental Kuznets Curve hypothesis: A survey",
+    "author": "Soumyananda Dinda",
+    "year": "2004",
+    "journal": "Ecological Economics",
+    "doi": "10.1016/j.ecolecon.2004.02.011",
+    "url": "",
+    "keywords": [
+      "EKC",
+      "Economic growth",
+      "Environmental Kuznets Curve",
+      "Environmental protection",
+      "Environmental quality",
+      "Inverted-U-shape",
+      "N50",
+      "O13",
+      "Pollution",
+      "Q20",
+      "Turning point"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Lpez2016",
+    "type": "article",
+    "title": "Space sustainability approaches of emerging space nations: Brazil, Colombia, and Mexico",
+    "author": "Laura Delgado López",
+    "year": "2016",
+    "journal": "Space Policy",
+    "doi": "10.1016/j.spacepol.2015.12.004",
+    "url": "",
+    "keywords": [
+      "Emerging space nations",
+      "Norms of behavior",
+      "Space sustainability"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Trur2021",
+    "type": "article",
+    "title": "Governance aspects of space sustainability: The role of epistemic actors as enablers of progress",
+    "author": "Aurélie Trur",
+    "year": "2021",
+    "journal": "Acta Astronautica",
+    "doi": "10.1016/j.actaastro.2020.10.012",
+    "url": "",
+    "keywords": [
+      "Epistemic communities",
+      "Global governance",
+      "International cooperation",
+      "Space debris",
+      "Space sustainability"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Paladini2021",
+    "type": "article",
+    "title": "Sustainable space for a sustainable Earth? Circular economy insights from the space sector",
+    "author": "Stefania Paladini and Krish Saha and Xavier Pierron",
+    "year": "2021",
+    "journal": "Journal of Environmental Management",
+    "doi": "10.1016/j.jenvman.2021.112511",
+    "url": "",
+    "keywords": [
+      "CE",
+      "Closed-loop system",
+      "ESA-MELiSSA",
+      "Industry 4.0",
+      "Space sector",
+      "Spaceship Earth",
+      "Sustainability"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Johnson2020",
+    "type": "article",
+    "title": "Space cultures and space imaginaries in Mexico: Anthropological dialogues with the Mexican Space Agency",
+    "author": "Anne W. Johnson",
+    "year": "2020",
+    "journal": "Acta Astronautica",
+    "doi": "10.1016/j.actaastro.2020.08.002",
+    "url": "",
+    "keywords": [
+      "Anthropology",
+      "Mexican space agency",
+      "Social studies of science",
+      "Space culture"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Omaly2023",
+    "type": "article",
+    "title": "CNES space sustainability index",
+    "author": "Pierre Omaly and Nicolas Pillet and Vincent Ruch and Bruno Revelin",
+    "year": "2023",
+    "journal": "Advances in Space Research",
+    "doi": "10.1016/j.asr.2023.01.062",
+    "url": "",
+    "keywords": [
+      "INDEX sustainability cnes"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Vengerova2024",
+    "type": "article",
+    "title": "Space bioprocess engineering as a potential catalyst for sustainability",
+    "author": "Gretchen Vengerova and Isaac Lipsky and Gwyneth A. Hutchinson and Nils J.H. Averesch and Aaron J. Berliner",
+    "year": "2024",
+    "journal": "Nature Sustainability",
+    "doi": "10.1038/S41893-024-01305-X",
+    "url": "",
+    "keywords": [
+      ""
+    ],
+    "note": ""
+  },
+  {
+    "id": "Irons2023",
+    "type": "article",
+    "title": "Pancosmorio (world limit) theory of the sustainability of human migration and settlement in space",
+    "author": "Lee G. Irons and Morgan A. Irons",
+    "year": "2023",
+    "journal": "Frontiers in Astronomy and Space Sciences",
+    "doi": "10.3389/FSPAS.2023.1081340",
+    "url": "",
+    "keywords": [
+      "Fermi paradox",
+      "ecology",
+      "resilience",
+      "space habitation",
+      "sustainability",
+      "sustainable development",
+      "terraform",
+      "thermodynamics"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Sawik2023",
+    "type": "article",
+    "title": "Space Mission Risk, Sustainability and Supply Chain: Review, Multi-Objective Optimization Model and Practical Approach",
+    "author": "Bartosz Sawik",
+    "year": "2023",
+    "journal": "Sustainability (Switzerland)",
+    "doi": "10.3390/SU151411002",
+    "url": "",
+    "keywords": [
+      "environmental impact",
+      "ethical considerations",
+      "multi-objective optimization",
+      "risk",
+      "space mission",
+      "supply chain",
+      "sustainability"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Maiwald2024",
+    "type": "article",
+    "title": "About feasibility of SpaceX's human exploration Mars mission scenario with Starship",
+    "author": "Volker Maiwald and Mika Bauerfeind and Svenja Fälker and Bjarne Westphal and Christian Bach",
+    "year": "2024",
+    "journal": "Scientific Reports",
+    "doi": "10.1038/S41598-024-54012-0",
+    "url": "",
+    "keywords": [
+      "Future space missions",
+      "Human spaceflight",
+      "Mars",
+      "Mission feasibility"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Figueira2025",
+    "type": "article",
+    "title": "Biomining of lunar regolith simulant EAC-1 A with the fungus Penicillium simplicissimum",
+    "author": "João Figueira and Stella Koch and Daniel W. Müller and Sebastian Slawik and Aidan Cowley and Ralf Moeller and Marta Cortesão",
+    "year": "2025",
+    "journal": "Fungal Biology and Biotechnology",
+    "doi": "10.1186/S40694-025-00201-Z",
+    "url": "",
+    "keywords": [
+      "Fungal biotechnology4",
+      "ISRU1",
+      "LUNA10",
+      "Lunar habitat9",
+      "Lunar regolith6",
+      "Space exploration8",
+      "bioleaching7",
+      "biomining2",
+      "moon3",
+      "penicillium5"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Bo2025",
+    "type": "article",
+    "title": "A review of oxygen generation through renewable hydrogen production",
+    "author": "Zhang Bo and Mohd Farid Muhamad Said and Erdiwansyah Erdiwansyah and Rizalman Mamat and Jiang Xiaoxia",
+    "year": "2025",
+    "journal": "Sustainable Chemistry for Climate Action",
+    "doi": "10.1016/j.scca.2025.100079",
+    "url": "",
+    "keywords": [
+      "Environmental impact",
+      "High purity oxygen",
+      "Renewable energy",
+      "System efficiency",
+      "Water electrolysis"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Maiwald2023",
+    "type": "article",
+    "title": "Frameworks of sustainability and sustainable development in a spaceflight context: A systematic review and critical analysis",
+    "author": "Volker Maiwald",
+    "year": "2023",
+    "journal": "Acta Astronautica",
+    "doi": "10.1016/J.ACTAASTRO.2023.01.023",
+    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0094576523000255",
+    "keywords": [
+      "ISRU",
+      "Space treaty",
+      "Sustainable development",
+      "planetary Sustainability"
+    ],
+    "note": ""
+  },
+  {
+    "id": "Wilson2023",
+    "type": "article",
+    "title": "Implementing life cycle sustainability assessment for improved space mission design",
+    "author": "Andrew R. Wilson and Massimiliano Vasile and Christie Maddock and Keith Baker",
+    "year": "2023",
+    "journal": "Integrated Environmental Assessment and Management",
+    "doi": "10.1002/ieam.4722",
+    "url": "",
+    "keywords": [
+      ""
+    ],
+    "note": ""
+  },
+  {
+    "id": "Toivonen2022",
+    "type": "article",
+    "title": "Sustainability dimensions in space tourism: the case of Finland",
+    "author": "Annette Toivonen",
+    "year": "2022",
+    "journal": "Journal of Sustainable Tourism",
+    "doi": "10.1080/09669582.2020.1783276",
+    "url": "",
+    "keywords": [
+      ""
+    ],
+    "note": ""
+  },
+  {
+    "id": "Varughese2023",
+    "type": "misc",
+    "title": "The intersection of space and sustainability: The need for a transdisciplinary and bi-cultural approach",
+    "author": "Carolle Varughese and Lena Henry and Adam Morris and Sarah Bickerton and Nicholas Rattenbury and Cody Mankelow and Alice Gorman and Stevie Katavich-Barton and Priyanka Dhopade",
+    "year": "2023",
+    "journal": "Acta Astronautica",
+    "doi": "10.1016/j.actaastro.2023.07.009",
+    "url": "",
+    "keywords": [
+      ""
+    ],
+    "note": ""
+  }
+]
