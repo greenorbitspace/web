@@ -4,8 +4,8 @@ import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
-  site: 'https://greenorbit.space',
-  base: '/',
+  site: 'https://greenorbit.space', // ✅ custom domain
+  base: '/', // ⚠️ Change this if deploying to a repo subpath (e.g. '/my-repo/')
   integrations: [
     alpinejs(),
     react({
@@ -23,12 +23,10 @@ export default defineConfig({
         strict: false,
       },
     },
-
     build: {
       target: 'esnext',
       minify: 'esbuild',
     },
-
     resolve: {
       alias: {
         '@components': '/src/components',
@@ -38,7 +36,6 @@ export default defineConfig({
         '@assets': '/src/assets',
       },
     },
-
     optimizeDeps: {
       include: ['react', 'react-dom'],
       esbuildOptions: {
@@ -50,13 +47,10 @@ export default defineConfig({
         },
       },
     },
-
     esbuild: {
       loader: 'tsx',
       include: /src\/.*\.(ts|tsx|js|jsx|astro)$/,
       exclude: [],
     },
-
-    // Note: No tailwindcss plugin here; the integration handles it
   },
 });
