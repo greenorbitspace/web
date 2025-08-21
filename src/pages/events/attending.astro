@@ -3,33 +3,62 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import HeroSection from '../../components/HeroSection.astro';
-import PledgesList from '../../components/PledgesList.jsx';
-import { getCollection } from 'astro:content';
+import EventFilters from '../../components/EventFilters.jsx';
+import slugify from '../../utils/slugify.js';
 
-const pledgesCollection = await getCollection('pledges');
+import attendingList from '../../data/eventsAttending.json';
+import eventsData from '../../data/events.json';
 
-const sortedPledges = pledgesCollection
-  .map(post => ({
-    ...post.data,
-    slug: post.data.slug ?? post.slug, // Ensure slug present
-  }))
-  .filter(post => post.name) // filter out any without name
-  .sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }));
+// Create a set of slugs from attending list
+const attendingSet = new Set(attendingList.map(slug => slugify(slug)));
+
+// Filter events based on attending list and sort by start date
+const attendingEvents = eventsData
+  .filter(e => attendingSet.has(slugify(e.title)))
+  .sort((a, b) => new Date(a.start || 0) - new Date(b.start || 0));
 ---
 
-<Layout title="Pledges" description="Explore the sustainability pledges we’ve committed to as part of our environmental mission.">
+<Layout title="Meet Us at Events" description="See the events where you can meet the Green Orbit team. Let us know if you are coming and book a time to connect.">
   <Header />
 
-  <main class="py-12 max-w-6xl mx-auto px-4">
-    <HeroSection 
-      title="Our Pledges" 
-      description="Explore the sustainability pledges we’ve committed to as part of our environmental mission." 
+  <main class="py-12">
+
+    <!-- Hero Section -->
+    <HeroSection
+      title="Meet the Green Orbit Team"
+      description="We’re planning to attend the following upcoming space and sustainability events. Let us know you’re coming and book a time to meet us!"
+      ctaText="Let Us Know You're Coming"
+      ctaHref="/contact#book-us"
     />
 
-    <!-- Hydrated client-side component -->
-    <section class="mt-8">
-      <PledgesList pledges={sortedPledges} client:load />
+    <!-- Concise Full-width Intro Block -->
+    <section class="w-full py-12 bg-secondary-500 dark:bg-secondary-500 mt-12">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+          Staying Connected
+        </span>
+        <p class="text-white mb-4">
+          We attend key events to stay engaged with the latest developments and connect with innovators across the space and sustainability sectors.
+        </p>
+      </div>
     </section>
+
+    <!-- Attending Events List (flat cards) -->
+    <section class="mt-12 max-w-6xl mx-auto px-4">
+      <EventFilters events={attendingEvents} batchSize={6} flatList={true} client:load />
+    </section>
+
+    <!-- Secondary CTA -->
+    <section class="mt-16 bg-secondary-500 rounded-lg p-8 text-center max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl text-white font-bold mb-4">Book a Meeting with Us</h2>
+      <p class="mb-6 text-white">
+        We’d love to connect at any of these events. Let us know you’re attending and schedule a time to talk with our team.
+      </p>
+      <a href="/contact#book-us" class="inline-block px-6 py-3 bg-accent-500 text-white font-semibold rounded hover:bg-primary-600 transition">
+        Book a Meeting
+      </a>
+    </section>
+
   </main>
 
   <Footer />

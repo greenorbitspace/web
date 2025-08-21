@@ -6,12 +6,9 @@ import { UN_COUNTRIES } from '../data/unCountries.js';
 // Robust date parser for ISO, DD/MM/YYYY, and fallback
 function parseEventDate(dateStr) {
   if (!dateStr) return null;
-
-  // Try ISO format first
   let date = new Date(dateStr);
   if (!isNaN(date)) return date;
 
-  // Fallback: DD/MM/YYYY
   const parts = dateStr.split('/');
   if (parts.length === 3) {
     const [day, month, year] = parts.map(Number);
@@ -19,7 +16,6 @@ function parseEventDate(dateStr) {
     if (!isNaN(date)) return date;
   }
 
-  // Fallback: Date.parse
   date = Date.parse(dateStr);
   return isNaN(date) ? null : new Date(date);
 }
@@ -35,19 +31,16 @@ function detectCountry(location) {
   return UN_COUNTRIES.find(c => loc.includes(c.toLowerCase())) || '';
 }
 
-export default function EventFilters({ events, batchSize = 6 }) {
+export default function EventFilters({ events, batchSize = 6, flatList = false }) {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
+  // Process events: parse dates, slugify, extract country, etc.
   const processedEvents = useMemo(() =>
     events
       .map(e => {
         const startDate = parseEventDate(e.start);
         const endDate = parseEventDate(e.end);
-
-        // DEBUG: uncomment if needed
-        // console.log('Parsing Event:', e.title, e.start, startDate);
-
         return {
           ...e,
           slug: e.slug || slugify(e.title),
@@ -66,6 +59,7 @@ export default function EventFilters({ events, batchSize = 6 }) {
     [events]
   );
 
+  // Filters (skip if flatList)
   const categories = useMemo(() => Array.from(new Set(processedEvents.flatMap(e => e.categories))).sort(), [processedEvents]);
   const organizers = useMemo(() => Array.from(new Set(processedEvents.map(e => e.organizer))).sort(), [processedEvents]);
   const countries = useMemo(() => Array.from(new Set(processedEvents.map(e => e.country).filter(Boolean))).sort(), [processedEvents]);
@@ -83,25 +77,27 @@ export default function EventFilters({ events, batchSize = 6 }) {
     [processedEvents, selectedCategory, selectedOrganizer, selectedCountry]
   );
 
-  // Infinite scroll
+  // Infinite scroll (skip if flatList)
   const [visibleCount, setVisibleCount] = useState(batchSize);
   const { ref: sentinelRef, inView } = useInView({ rootMargin: '200px', triggerOnce: false });
 
   useEffect(() => {
-    if (inView) {
+    if (!flatList && inView) {
       setVisibleCount(prev => Math.min(prev + batchSize, filteredEvents.length));
     }
-  }, [inView, filteredEvents.length, batchSize]);
+  }, [inView, filteredEvents.length, batchSize, flatList]);
 
   useEffect(() => {
-    setVisibleCount(batchSize);
-  }, [selectedCategory, selectedOrganizer, selectedCountry, batchSize]);
+    if (!flatList) setVisibleCount(batchSize);
+  }, [selectedCategory, selectedOrganizer, selectedCountry, batchSize, flatList]);
 
   const toggleFilter = (current, value, setter) => setter(current === value ? '' : value);
 
-  const eventsToShow = filteredEvents.slice(0, visibleCount);
+  const eventsToShow = flatList ? filteredEvents : filteredEvents.slice(0, visibleCount);
 
+  // Group by month (skip if flatList)
   const eventsByMonth = useMemo(() => {
+    if (flatList) return { all: eventsToShow };
     const grouped = {};
     eventsToShow.forEach(event => {
       const month = event.startDate.toLocaleString('default', { month: 'long', year: 'numeric' });
@@ -109,30 +105,32 @@ export default function EventFilters({ events, batchSize = 6 }) {
       grouped[month].push(event);
     });
     return grouped;
-  }, [eventsToShow]);
+  }, [eventsToShow, flatList]);
 
   return (
     <div className="space-y-8">
-      {/* Filters */}
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-        <select value={selectedCategory} onChange={e => setSelectedCategory(e.target.value)} className="border rounded px-2 py-1 text-primary-500">
-          <option value="">All Categories</option>
-          {categories.map(c => <option key={c} value={c.toLowerCase()}>{c}</option>)}
-        </select>
-        <select value={selectedOrganizer} onChange={e => setSelectedOrganizer(e.target.value)} className="border rounded px-2 py-1 text-primary-500">
-          <option value="">All Organisers</option>
-          {organizers.map(o => <option key={o} value={o.toLowerCase()}>{o}</option>)}
-        </select>
-        <select value={selectedCountry} onChange={e => setSelectedCountry(e.target.value)} className="border rounded px-2 py-1 text-primary-500">
-          <option value="">All Countries</option>
-          {countries.map(c => <option key={c} value={c.toLowerCase()}>{c}</option>)}
-        </select>
-      </div>
+      {/* Filters: hide if flatList */}
+      {!flatList && (
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+          <select value={selectedCategory} onChange={e => setSelectedCategory(e.target.value)} className="border rounded px-2 py-1 text-primary-500">
+            <option value="">All Categories</option>
+            {categories.map(c => <option key={c} value={c.toLowerCase()}>{c}</option>)}
+          </select>
+          <select value={selectedOrganizer} onChange={e => setSelectedOrganizer(e.target.value)} className="border rounded px-2 py-1 text-primary-500">
+            <option value="">All Organisers</option>
+            {organizers.map(o => <option key={o} value={o.toLowerCase()}>{o}</option>)}
+          </select>
+          <select value={selectedCountry} onChange={e => setSelectedCountry(e.target.value)} className="border rounded px-2 py-1 text-primary-500">
+            <option value="">All Countries</option>
+            {countries.map(c => <option key={c} value={c.toLowerCase()}>{c}</option>)}
+          </select>
+        </div>
+      )}
 
       {/* Events */}
       {Object.entries(eventsByMonth).map(([month, monthEvents]) => (
         <section key={month} className="space-y-6">
-          <h2 className="text-2xl font-bold">{month}</h2>
+          {!flatList && <h2 className="text-2xl font-bold">{month}</h2>}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {monthEvents.map((e, idx) => (
               <div
@@ -175,13 +173,9 @@ export default function EventFilters({ events, batchSize = 6 }) {
         </section>
       ))}
 
-      {/* Sentinel */}
-      {visibleCount < filteredEvents.length && (
-        <div
-          ref={sentinelRef}
-          style={{ height: '80px' }}
-          className="text-center text-gray-500 bg-gray-100"
-        >
+      {/* Sentinel: hide if flatList */}
+      {!flatList && visibleCount < filteredEvents.length && (
+        <div ref={sentinelRef} style={{ height: '80px' }} className="text-center text-gray-500 bg-gray-100">
           Loading more events...
         </div>
       )}
