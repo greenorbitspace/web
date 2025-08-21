@@ -3,7 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import HeroSection from '../components/HeroSection.astro';
-import researchData from "../../public/data/research.json";
 import SearchableLibrary from "../components/SearchableLibrary.jsx";
 ---
 
@@ -16,8 +15,8 @@ import SearchableLibrary from "../components/SearchableLibrary.jsx";
       description="Discover all space, sustainability, and marketing events we are organising or attending." 
     />
 
-    <!-- Render the React Island -->
-    <SearchableLibrary client:load researchData={researchData} />
+    <!-- React island now fetches .bib itself -->
+    <SearchableLibrary client:load />
   </main>
 
   <Footer />

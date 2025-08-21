@@ -4,24 +4,16 @@ import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
-  site: 'https://greenorbit.space', // ✅ custom domain
-  base: '/', // ⚠️ Change this if deploying to a repo subpath (e.g. '/my-repo/')
+  site: 'https://greenorbit.space',
+  base: '/',
   integrations: [
     alpinejs(),
-    react({
-      fastRefresh: true,
-    }),
-    tailwind({
-      config: {
-        applyBaseStyles: true,
-      },
-    }),
+    react({ fastRefresh: true }),
+    tailwind({ config: { applyBaseStyles: true } }),
   ],
   vite: {
     server: {
-      fs: {
-        strict: false,
-      },
+      fs: { strict: false },
     },
     build: {
       target: 'esnext',
@@ -38,6 +30,7 @@ export default defineConfig({
     },
     optimizeDeps: {
       include: ['react', 'react-dom'],
+      exclude: ['lightningcss', 'fsevents'], // prevent Vite from prebundling problematic native modules
       esbuildOptions: {
         loader: {
           '.ts': 'ts',

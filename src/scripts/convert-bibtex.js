@@ -17,12 +17,13 @@ const formatted = parsed.map(entry => {
     id: entry.citationKey,
     type: entry.entryType,
     title: fields.title || "",
-    author: fields.author || "",
+    author: fields.author || "",        // ✅ keep author
+    publisher: fields.publisher || "",  // ✅ also keep publisher
     year: fields.year || "",
     journal: fields.journal || "",
     doi: fields.doi || "",
     url: fields.url || "",
-    keywords: (fields.keywords || "").split(",").map(k => k.trim()),
+    keywords: (fields.keywords || "").split(",").map(k => k.trim()).filter(Boolean),
     note: fields.note || ""
   };
 });

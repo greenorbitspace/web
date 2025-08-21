@@ -104,12 +104,17 @@ export default {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
         },
+        pulseSlow: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.5' },
+        },
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out forwards',
         'slide-up': 'slideUp 0.5s ease-in-out forwards',
         'slide-down': 'slideDown 0.5s ease-in-out forwards',
         float: 'float 6s ease-in-out infinite',
+        'pulse-slow': 'pulseSlow 2s ease-in-out infinite',
       },
       transitionTimingFunction: {
         standard: 'cubic-bezier(0.4, 0, 0.2, 1)',
@@ -140,6 +145,7 @@ export default {
       perspective: ['responsive'],
       transformStyle: ['responsive'],
       backfaceVisibility: ['responsive'],
+      opacity: ['disabled'],
     },
   },
   plugins: [

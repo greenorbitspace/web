@@ -7,30 +7,25 @@ import EventDescription from '../../components/EventDescription.jsx';
 import events from '../../data/events.json';
 import slugify from '../../utils/slugify.js';
 
-// Generate paths for all events
+// Generate static paths
 export async function getStaticPaths() {
-  return events.map((e) => ({
+  return events.map(e => ({
     params: { slug: e.slug || slugify(e.title) },
   }));
 }
 
-// Get slug from page params
 const { slug } = Astro.params;
 
-// Find the matching event
-const event = events.find((e) => (e.slug || slugify(e.title)) === slug);
+// Find matching event
+const event = events.find(e => (e.slug || slugify(e.title)) === slug);
 if (!event) throw new Error(`No event found with slug: ${slug}`);
 
-// Format dates
+// Format date helper
 function formatDate(dateStr) {
   if (!dateStr) return null;
   const date = new Date(dateStr);
   if (isNaN(date)) return dateStr;
-  return date.toLocaleDateString('en-GB', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
+  return date.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
 // Normalize event data
@@ -41,16 +36,17 @@ const normalizedEvent = {
   end: event.end || null,
   location: event.location && event.location !== '-' ? event.location : 'TBD',
   organizer: event.organizer || 'TBD',
-  organizer_url: event.organizer_url || '', // optional
+  organizer_url: event.organizer_url || '',
   status: event.status || 'TBD',
   categories: event.categories || [],
+  tags: event.tags || event.categories || [],
   url: event.url || '',
-  image: event.image || event.image_url || '', // optional event image
+  image: event.image || event.image_url || '',
   calendar_links: event.calendar_links || [],
 };
 
-// Previous and next events
-const eventIndex = events.findIndex((e) => (e.slug || slugify(e.title)) === slug);
+// Previous / next events
+const eventIndex = events.findIndex(e => (e.slug || slugify(e.title)) === slug);
 const prevEvent = events[eventIndex - 1] || null;
 const nextEvent = events[eventIndex + 1] || null;
 
@@ -64,7 +60,7 @@ function getEventSlug(e) {
 
   <main class="py-12 max-w-4xl mx-auto px-4 space-y-8">
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <HeroSection
       title={normalizedEvent.title}
       description={
@@ -74,7 +70,7 @@ function getEventSlug(e) {
       }
     />
 
-    <!-- Event Image -->
+    <!-- Image -->
     {normalizedEvent.image && (
       <img
         src={normalizedEvent.image}
@@ -84,7 +80,7 @@ function getEventSlug(e) {
       />
     )}
 
-    <!-- Categories -->
+    <!-- Categories / Tags -->
     {normalizedEvent.categories.length > 0 && (
       <div>
         <strong>Categories:</strong>
@@ -101,7 +97,7 @@ function getEventSlug(e) {
       </div>
     )}
 
-    <!-- Main Description -->
+    <!-- Description -->
     <section class="py-12 max-w-full space-y-4">
       <EventDescription description={normalizedEvent.description} />
 
@@ -131,8 +127,8 @@ function getEventSlug(e) {
         </details>
       )}
     </section>
-    
-    <!-- Meta Data -->
+
+    <!-- Meta -->
     <section class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-primary-500 border border-accent-500 p-6 rounded text-white">
       {normalizedEvent.organizer && (
         <p>

@@ -1,34 +1,27 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 import slugify from '../utils/slugify.js';
+import { UN_COUNTRIES } from '../data/unCountries.js';
 
-const UN_COUNTRIES = [
-  "Afghanistan","Albania","Algeria","Andorra","Angola","Antigua and Barbuda","Argentina","Armenia",
-  "Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium",
-  "Belize","Benin","Bhutan","Bolivia","Bosnia and Herzegovina","Botswana","Brazil","Brunei","Bulgaria",
-  "Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Canada","Central African Republic","Chad",
-  "Chile","China","Colombia","Comoros","Congo","Costa Rica","Côte d’Ivoire","Croatia","Cuba","Cyprus",
-  "Czechia","Czech Republic", "Democratic Republic of the Congo","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador",
-  "Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Eswatini","Ethiopia","Fiji","Finland","France",
-  "Gabon","Gambia","Georgia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea","Guinea-Bissau","Guyana",
-  "Haiti","Honduras","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","Jamaica",
-  "Japan","Jordan","Kazakhstan","Kenya","Kiribati","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho",
-  "Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Madagascar","Malawi","Malaysia","Maldives","Mali",
-  "Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia",
-  "Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Zealand","Nicaragua",
-  "Niger","Nigeria","North Korea","North Macedonia","Norway","Oman","Pakistan","Palau","Palestine","Panama",
-  "Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Qatar","Romania","Russia","Rwanda",
-  "Saint Kitts and Nevis","Saint Lucia","Saint Vincent and the Grenadines","Samoa","San Marino","Sao Tome and Principe",
-  "Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands",
-  "Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Sweden","Switzerland",
-  "Syria","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tonga","Trinidad and Tobago","Tunisia","Turkey",
-  "Turkmenistan","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay",
-  "Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Yemen","Zambia","Zimbabwe"
-];
-
+// Robust date parser for ISO, DD/MM/YYYY, and fallback
 function parseEventDate(dateStr) {
   if (!dateStr) return null;
-  const date = new Date(dateStr);
-  return isNaN(date) ? null : date;
+
+  // Try ISO format first
+  let date = new Date(dateStr);
+  if (!isNaN(date)) return date;
+
+  // Fallback: DD/MM/YYYY
+  const parts = dateStr.split('/');
+  if (parts.length === 3) {
+    const [day, month, year] = parts.map(Number);
+    date = new Date(year, month - 1, day);
+    if (!isNaN(date)) return date;
+  }
+
+  // Fallback: Date.parse
+  date = Date.parse(dateStr);
+  return isNaN(date) ? null : new Date(date);
 }
 
 function formatEventDate(date) {
@@ -42,62 +35,85 @@ function detectCountry(location) {
   return UN_COUNTRIES.find(c => loc.includes(c.toLowerCase())) || '';
 }
 
-export default function EventFilters({ events }) {
+export default function EventFilters({ events, batchSize = 6 }) {
   const today = new Date();
+  today.setHours(0, 0, 0, 0);
 
-  const upcomingEvents = useMemo(() =>
+  const processedEvents = useMemo(() =>
     events
-      .map(e => ({
-        ...e,
-        slug: e.slug || slugify(e.title),
-        startDate: parseEventDate(e.start),
-        endDate: parseEventDate(e.end),
-        location: e.location && e.location !== '-' ? e.location : 'TBD',
-        country: detectCountry(e.location),
-        organizer: e.organizer || 'TBD',
-        categories: e.categories || [],
-        url: e.url || '',
-        image: e.image || e.image_url || '',
-      }))
+      .map(e => {
+        const startDate = parseEventDate(e.start);
+        const endDate = parseEventDate(e.end);
+
+        // DEBUG: uncomment if needed
+        // console.log('Parsing Event:', e.title, e.start, startDate);
+
+        return {
+          ...e,
+          slug: e.slug || slugify(e.title),
+          startDate,
+          endDate,
+          location: e.location && e.location !== '-' ? e.location : 'TBD',
+          country: detectCountry(e.location),
+          organizer: e.organizer || 'TBD',
+          categories: e.categories || [],
+          url: e.url || '',
+          image: e.image || e.image_url || '',
+        };
+      })
       .filter(e => e.startDate && e.startDate >= today)
       .sort((a, b) => a.startDate - b.startDate),
     [events]
   );
 
-  // Filter options
-  const categories = useMemo(() => Array.from(new Set(upcomingEvents.flatMap(e => e.categories))).sort(), [upcomingEvents]);
-  const organizers = useMemo(() => Array.from(new Set(upcomingEvents.map(e => e.organizer))).sort(), [upcomingEvents]);
-  const countries = useMemo(() => Array.from(new Set(upcomingEvents.map(e => e.country).filter(Boolean))).sort(), [upcomingEvents]);
+  const categories = useMemo(() => Array.from(new Set(processedEvents.flatMap(e => e.categories))).sort(), [processedEvents]);
+  const organizers = useMemo(() => Array.from(new Set(processedEvents.map(e => e.organizer))).sort(), [processedEvents]);
+  const countries = useMemo(() => Array.from(new Set(processedEvents.map(e => e.country).filter(Boolean))).sort(), [processedEvents]);
 
-  // Filters state
   const [selectedCategory, setSelectedCategory] = useState('');
   const [selectedOrganizer, setSelectedOrganizer] = useState('');
   const [selectedCountry, setSelectedCountry] = useState('');
 
   const filteredEvents = useMemo(() =>
-    upcomingEvents.filter(e =>
+    processedEvents.filter(e =>
       (!selectedCategory || e.categories.map(c => c.toLowerCase()).includes(selectedCategory)) &&
       (!selectedOrganizer || e.organizer.toLowerCase() === selectedOrganizer) &&
       (!selectedCountry || e.country.toLowerCase() === selectedCountry)
     ),
-    [upcomingEvents, selectedCategory, selectedOrganizer, selectedCountry]
+    [processedEvents, selectedCategory, selectedOrganizer, selectedCountry]
   );
+
+  // Infinite scroll
+  const [visibleCount, setVisibleCount] = useState(batchSize);
+  const { ref: sentinelRef, inView } = useInView({ rootMargin: '200px', triggerOnce: false });
+
+  useEffect(() => {
+    if (inView) {
+      setVisibleCount(prev => Math.min(prev + batchSize, filteredEvents.length));
+    }
+  }, [inView, filteredEvents.length, batchSize]);
+
+  useEffect(() => {
+    setVisibleCount(batchSize);
+  }, [selectedCategory, selectedOrganizer, selectedCountry, batchSize]);
+
+  const toggleFilter = (current, value, setter) => setter(current === value ? '' : value);
+
+  const eventsToShow = filteredEvents.slice(0, visibleCount);
 
   const eventsByMonth = useMemo(() => {
     const grouped = {};
-    filteredEvents.forEach(event => {
+    eventsToShow.forEach(event => {
       const month = event.startDate.toLocaleString('default', { month: 'long', year: 'numeric' });
       if (!grouped[month]) grouped[month] = [];
       grouped[month].push(event);
     });
     return grouped;
-  }, [filteredEvents]);
-
-  const toggleFilter = (current, value, setter) => setter(current === value ? '' : value);
+  }, [eventsToShow]);
 
   return (
     <div className="space-y-8">
-      {/* Top Dropdown Filters */}
+      {/* Filters */}
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
         <select value={selectedCategory} onChange={e => setSelectedCategory(e.target.value)} className="border rounded px-2 py-1 text-primary-500">
           <option value="">All Categories</option>
@@ -113,54 +129,40 @@ export default function EventFilters({ events }) {
         </select>
       </div>
 
-      {/* Events grouped by month */}
+      {/* Events */}
       {Object.entries(eventsByMonth).map(([month, monthEvents]) => (
         <section key={month} className="space-y-6">
           <h2 className="text-2xl font-bold">{month}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {monthEvents.map(e => (
-              <div key={e.slug} className="border rounded-lg p-4 shadow-sm flex flex-col h-full">
+            {monthEvents.map((e, idx) => (
+              <div
+                key={e.slug}
+                className="border rounded-lg p-4 shadow-sm flex flex-col h-full transition-opacity duration-700"
+                style={{ opacity: 1, animationDelay: `${idx * 0.1}s` }}
+              >
                 {e.image && <img src={e.image} alt={e.title} className="w-full h-48 object-cover rounded mb-4" />}
-
-                {/* Clickable title */}
                 <a href={`/events/${e.slug}`} className="text-lg font-semibold mb-1 hover:underline">{e.title}</a>
-
-                <p className="text-sm text-accent-500 mb-1">{formatEventDate(e.startDate)}{e.endDate ? ` - ${formatEventDate(e.endDate)}` : ''}</p>
+                <p className="text-sm text-accent-500 mb-1">
+                  {formatEventDate(e.startDate)}{e.endDate ? ` - ${formatEventDate(e.endDate)}` : ''}
+                </p>
                 <p className="text-sm mb-2">{e.location}</p>
 
-                {/* Clickable pills inside cards */}
                 <div className="flex flex-wrap gap-2 mb-2 items-center">
-                  {e.categories.map(cat => {
-                    const active = selectedCategory === cat.toLowerCase();
-                    return (
-                      <span
-                        key={cat}
-                        className={`text-xs font-medium px-2 py-1 rounded-full cursor-pointer ${
-                          active ? 'bg-primary-500 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
-                        }`}
-                        onClick={() => toggleFilter(selectedCategory, cat.toLowerCase(), setSelectedCategory)}
-                      >
-                        {cat}
-                      </span>
-                    );
-                  })}
+                  {e.categories.map(cat => (
+                    <span key={cat} className={`text-xs font-medium px-2 py-1 rounded-full cursor-pointer ${selectedCategory === cat.toLowerCase() ? 'bg-primary-500 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}
+                      onClick={() => toggleFilter(selectedCategory, cat.toLowerCase(), setSelectedCategory)}>
+                      {cat}
+                    </span>
+                  ))}
                   {e.organizer && (
-                    <span
-                      className={`text-xs font-medium px-2 py-1 rounded-full cursor-pointer ${
-                        selectedOrganizer === e.organizer.toLowerCase() ? 'bg-blue-500 text-white' : 'bg-blue-100 text-blue-800 hover:bg-blue-200'
-                      }`}
-                      onClick={() => toggleFilter(selectedOrganizer, e.organizer.toLowerCase(), setSelectedOrganizer)}
-                    >
+                    <span className={`text-xs font-medium px-2 py-1 rounded-full cursor-pointer ${selectedOrganizer === e.organizer.toLowerCase() ? 'bg-blue-500 text-white' : 'bg-blue-100 text-blue-800 hover:bg-blue-200'}`}
+                      onClick={() => toggleFilter(selectedOrganizer, e.organizer.toLowerCase(), setSelectedOrganizer)}>
                       {e.organizer}
                     </span>
                   )}
                   {e.country && (
-                    <span
-                      className={`text-xs font-medium px-2 py-1 rounded-full cursor-pointer ${
-                        selectedCountry === e.country.toLowerCase() ? 'bg-green-500 text-white' : 'bg-green-100 text-green-800 hover:bg-green-200'
-                      }`}
-                      onClick={() => toggleFilter(selectedCountry, e.country.toLowerCase(), setSelectedCountry)}
-                    >
+                    <span className={`text-xs font-medium px-2 py-1 rounded-full cursor-pointer ${selectedCountry === e.country.toLowerCase() ? 'bg-green-500 text-white' : 'bg-green-100 text-green-800 hover:bg-green-200'}`}
+                      onClick={() => toggleFilter(selectedCountry, e.country.toLowerCase(), setSelectedCountry)}>
                       {e.country}
                     </span>
                   )}
@@ -172,6 +174,17 @@ export default function EventFilters({ events }) {
           </div>
         </section>
       ))}
+
+      {/* Sentinel */}
+      {visibleCount < filteredEvents.length && (
+        <div
+          ref={sentinelRef}
+          style={{ height: '80px' }}
+          className="text-center text-gray-500 bg-gray-100"
+        >
+          Loading more events...
+        </div>
+      )}
     </div>
   );
 }
