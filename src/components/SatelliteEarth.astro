@@ -1,0 +1,92 @@
+---
+const satelliteId = "satellite-icon";
+const tooltipId = "satellite-tooltip";
+---
+
+<div class="relative w-full h-96 mx-auto fade-in">
+  <svg viewBox="0 0 300 300" class="w-full h-full">
+
+    <!-- Earth -->
+    <g id="earth" transform="rotate(23 150 150)">
+      <circle cx="150" cy="150" r="70" fill="none" stroke="#00B67A" stroke-width="3" stroke-linecap="round"/>
+      <!-- Continents -->
+      <path d="M95,125 C100,115 115,112 125,120 C135,128 138,140 130,145 C120,150 105,140 95,125 Z" fill="none" stroke="#00B67A" stroke-width="2" stroke-linecap="round"/>
+      <path d="M125,150 C130,160 132,170 128,180 C122,185 115,175 120,165 C125,155 125,150 125,150 Z" fill="none" stroke="#00B67A" stroke-width="2" stroke-linecap="round"/>
+      <path d="M150,110 C155,105 165,105 170,110 C168,115 162,118 155,115 C150,112 150,110 150,110 Z" fill="none" stroke="#00B67A" stroke-width="2" stroke-linecap="round"/>
+      <path d="M155,125 C160,130 162,140 160,150 C155,155 150,148 150,140 C150,135 155,125 155,125 Z" fill="none" stroke="#00B67A" stroke-width="2" stroke-linecap="round"/>
+      <path d="M170,110 C175,105 185,105 190,110 C192,115 190,125 185,130 C180,130 175,125 170,120 C170,115 170,110 170,110 Z" fill="none" stroke="#00B67A" stroke-width="2" stroke-linecap="round"/>
+      <path d="M180,145 C185,150 188,155 185,160 C180,160 178,155 180,150 C180,147 180,145 180,145 Z" fill="none" stroke="#00B67A" stroke-width="2" stroke-linecap="round"/>
+      <animateTransform attributeName="transform" type="rotate" from="23 150 150" to="383 150 150" dur="40s" repeatCount="indefinite"/>
+    </g>
+
+    <!-- Orbit path -->
+    <circle cx="150" cy="150" r="110" fill="none" stroke="#00B67A" stroke-width="1" stroke-dasharray="6 6" class="opacity-25"/>
+
+    <!-- Single orbiting spacecraft with orbit applied directly -->
+    <g id={satelliteId} class="cursor-pointer" data-tooltip="Satellite: GeoX-1">
+      <!-- Orbit animation applied here -->
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="0 150 150"
+        to="360 150 150"
+        dur="10s"
+        repeatCount="indefinite"
+        keySplines="0.4 0 0.2 1"
+        calcMode="spline"/>
+
+      <!-- Main body -->
+      <rect x="144" y="32" width="12" height="14" fill="none" stroke="#00B67A" stroke-width="2" rx="2" ry="2"/>
+      
+      <!-- Long solar panels -->
+      <polygon points="130,33 140,32 140,38 130,39" fill="none" stroke="#00B67A" stroke-width="1.2">
+        <animateTransform attributeName="transform" type="rotate" from="0 135 35" to="10 135 35" dur="1s" repeatCount="indefinite" alternate="true"/>
+      </polygon>
+      <polygon points="160,33 170,32 170,38 160,39" fill="none" stroke="#00B67A" stroke-width="1.2">
+        <animateTransform attributeName="transform" type="rotate" from="0 165 35" to="-10 165 35" dur="1s" repeatCount="indefinite" alternate="true"/>
+      </polygon>
+
+      <!-- Antenna -->
+      <line x1="150" y1="32" x2="150" y2="26" stroke="#00B67A" stroke-width="1.2"/>
+      <circle cx="150" cy="25" r="1.2" fill="#00B67A"/>
+      
+      <!-- Thrusters -->
+      <line x1="144" y1="46" x2="144" y2="48" stroke="#00B67A" stroke-width="1"/>
+      <line x1="156" y1="46" x2="156" y2="48" stroke="#00B67A" stroke-width="1"/>
+
+      <!-- Surface panel lines -->
+      <line x1="146" y1="34" x2="154" y2="34" stroke="#00B67A" stroke-width="0.8"/>
+      <line x1="146" y1="38" x2="154" y2="38" stroke="#00B67A" stroke-width="0.8"/>
+      <line x1="138" y1="35" x2="142" y2="35" stroke="#00B67A" stroke-width="0.8"/>
+      <line x1="158" y1="35" x2="162" y2="35" stroke="#00B67A" stroke-width="0.8"/>
+    </g>
+  </svg>
+
+  <!-- Tooltip -->
+  <div id={tooltipId} class="absolute bg-black text-white text-sm px-2 py-1 rounded opacity-0 pointer-events-none transition-opacity duration-200">
+    Satellite: GeoX-1
+  </div>
+
+  <script>
+    const satellite = document.getElementById(`${satelliteId}`);
+    const tooltip = document.getElementById(`${tooltipId}`);
+
+    satellite.addEventListener('mousemove', e => {
+      tooltip.style.left = e.offsetX + 20 + 'px';
+      tooltip.style.top = e.offsetY + 20 + 'px';
+      tooltip.style.opacity = '1';
+    });
+
+    satellite.addEventListener('mouseleave', () => { tooltip.style.opacity = '0'; });
+
+    satellite.addEventListener('mouseover', () => {
+      satellite.querySelector('rect').setAttribute('width', 16);
+      satellite.querySelector('rect').setAttribute('height', 16);
+    });
+
+    satellite.addEventListener('mouseout', () => {
+      satellite.querySelector('rect').setAttribute('width', 14);
+      satellite.querySelector('rect').setAttribute('height', 14);
+    });
+  </script>
+</div>
