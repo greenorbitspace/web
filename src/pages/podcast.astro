@@ -1,0 +1,12 @@
+---
+// src/pages/portal.astro
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Billing Portal">
+  <main class="py-10">
+    <form action="/api/create-portal-session" method="POST">
+      <button type="submit">Manage Billing</button>
+    </form>
+  </main>
+</Layout>

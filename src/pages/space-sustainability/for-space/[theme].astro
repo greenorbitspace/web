@@ -1,0 +1,102 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import HeroSection from '../../../components/HeroSection.astro';
+import AllThemes from '../../../components/AllThemes.jsx';
+import { getCollection } from 'astro:content';
+import { SDGs } from '../../../data/sdgs';
+import { slug as slugify } from 'github-slugger';
+
+export const prerender = true;
+
+const fallbackIcon = '/sdgs/default.svg';
+const fallbackImage = '/images/placeholder.jpg';
+
+const sdgMap = SDGs.reduce((acc, sdg) => {
+  const code = `SDG ${String(sdg.id).padStart(2, '0')}`;
+  acc[code.toUpperCase()] = sdg;
+  return acc;
+}, {});
+
+// -----------------------------
+// Dynamic route paths
+// -----------------------------
+export async function getStaticPaths() {
+  const allThemes = await getCollection('space-sustainability');
+  const category = 'for-space';
+
+  const categoryThemes = allThemes.filter(t => t.data?.category === category);
+
+  return categoryThemes.map(theme => ({
+    params: { theme: theme.slug }
+  }));
+}
+
+// -----------------------------
+// Page data
+// -----------------------------
+const category = 'for-space';
+const { theme: themeSlug } = Astro.params;
+
+const allThemes = await getCollection('space-sustainability');
+const categoryThemes = allThemes.filter(t => t.data?.category === category);
+
+const theme = categoryThemes.find(t => t.slug === themeSlug);
+if (!theme) throw new Error(`Theme not found: category "${category}", theme "${themeSlug}"`);
+
+const {
+  title = 'Untitled Theme',
+  summary = '',
+  SDGs: themeSDGs = [],
+  featuredImage,
+  render,
+  tags = [],
+  organisations = [],
+} = theme.data ?? {};
+
+const sdgCodes = Array.isArray(themeSDGs)
+  ? themeSDGs.filter(n => typeof n === 'number').map(n => `SDG ${String(n).padStart(2,'0')}`)
+  : [];
+
+// Related themes in the same category, excluding current
+const relatedThemes = categoryThemes.filter(t => t.slug !== theme.slug);
+
+---
+
+<Layout title={title}>
+  <Header />
+
+  <HeroSection title={title} summary={summary} image={featuredImage || fallbackImage} />
+
+  <main class="container py-12">
+    <article>{render && render()}</article>
+
+    {sdgCodes.length > 0 && (
+      <section class="mt-8">
+        <h2 class="text-2xl font-semibold mb-4">Relevant SDGs</h2>
+        <ul class="flex flex-wrap gap-4">
+          {sdgCodes.map(code => {
+            const sdg = sdgMap[code.toUpperCase()] || {};
+            return (
+              <li key={code} class="flex flex-col items-center text-center">
+                <img src={sdg.icon || fallbackIcon} alt={sdg.title || code} class="w-10 h-10" />
+                <span class="text-sm mt-1">{sdg.title || code}</span>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+    )}
+
+    {relatedThemes.length > 0 && (
+      <section class="mt-12">
+        <h2 class="text-2xl font-semibold mb-4">Related Themes</h2>
+        <!-- React component hydrated on the client -->
+        <AllThemes themes={relatedThemes} categorySlug={slugify(category)} client:load />
+      </section>
+    )}
+  </main>
+
+  <Footer />
+</Layout>

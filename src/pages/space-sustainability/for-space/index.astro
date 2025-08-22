@@ -1,0 +1,112 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import HeroSection from '../../../components/HeroSection.astro';
+import ImageSection from '../../../components/ImageSection.astro';
+import AllThemes from '../../../components/AllThemes.jsx'
+import { getCollection } from 'astro:content';
+
+// Fetch all themes from the "space-sustainability" collection
+const themes = await getCollection('space-sustainability');
+
+// Static category for this page
+const categorySlug = 'for-space';
+
+// Filter themes by category
+const filteredThemes = themes.filter((t) => t.data.category === categorySlug);
+---
+
+<Layout title="Sustainability For Space">
+  <Header />
+
+  <main class="flex-1">
+
+    <!-- Hero Section -->
+    <HeroSection 
+      title="Sustainability For Space" 
+      description="Minimising Earth impacts from launches, manufacturing, and re-entry, while aligning with planetary boundaries and net-zero commitments."
+    />
+
+    <!-- Context & Importance -->
+    <section class="py-16 bg-gray-50 dark:bg-secondary-500">
+      <div class="container mx-auto max-w-5xl px-4">
+        <h2 class="text-3xl font-bold mb-6">Sustainable Practices for Terrestrial Impacts</h2>
+        <p class="text-lg leading-relaxed mb-6">
+          Space missions begin on Earth, and the environmental footprint of launch vehicles, satellite manufacturing, and ground operations can be significant. Thoughtful planning and responsible practices reduce emissions, material waste, and resource consumption.
+        </p>
+        <p class="my-6 px-4 py-3 bg-primary-600 text-white rounded-md font-semibold">
+          Key Insight: Life-cycle assessments indicate that satellite production and launch can account for up to 90% of a mission’s total carbon footprint.
+        </p>
+      </div>
+    </section>
+
+    <!-- Key Practices -->
+    <section class="py-16 bg-white dark:bg-primary-500">
+      <div class="container mx-auto max-w-5xl px-4">
+        <h2 class="text-3xl font-bold mb-6">Key Practices for Minimising Earth Impact</h2>
+        <ImageSection 
+          src="/images/earth-impact-reduction.png" 
+          alt="Earth impact reduction strategies for space missions" 
+          class="my-6" 
+        />
+        <p class="text-lg leading-relaxed mb-6">
+          Operators can adopt sustainable materials, optimise manufacturing processes, and select launch providers with low-emission practices. End-of-life planning, component reuse, and modular design further reduce environmental impact.
+        </p>
+      </div>
+    </section>
+
+    <!-- Our Approach -->
+    <section class="py-16 bg-gray-50 dark:bg-secondary-500">
+      <div class="container mx-auto max-w-5xl px-4">
+        <h2 class="text-3xl font-bold mb-6">Our Approach</h2>
+        <p class="text-lg leading-relaxed mb-6">
+          Green Orbit assists clients in embedding sustainability across terrestrial operations related to space. This encompasses production, testing, launch planning, and re-entry management.
+        </p>
+        <p class="my-6 px-4 py-3 bg-primary-600 text-white rounded-md font-semibold">
+          Our Services Include: Life-cycle assessment | Sustainable materials & manufacturing | Launch emission reduction | Net-zero roadmap & reporting
+        </p>
+      </div>
+    </section>
+
+<!-- Explore Themes -->
+<section class="py-16 bg-white dark:bg-primary-500">
+  <div class="container mx-auto max-w-5xl px-4">
+    <h2 class="text-3xl font-bold mb-6">Explore Themes in Space Sustainability</h2>
+
+    <!-- Render AllThemes component -->
+    <AllThemes themes={themes} categorySlug={categorySlug} />
+  </div>
+</section>
+
+    <!-- Benefits & Impact -->
+    <section class="py-16 bg-white dark:bg-primary-500">
+      <div class="container mx-auto max-w-5xl px-4">
+        <h2 class="text-3xl font-bold mb-6">Benefits and Impact</h2>
+        <p class="text-lg leading-relaxed mb-6">
+          Implementing sustainable practices in satellite production and launches reduces carbon emissions, conserves materials, and mitigates environmental risks. Organisations demonstrate responsible stewardship while achieving compliance with net-zero targets and regulatory frameworks.
+        </p>
+      </div>
+    </section>
+
+    <!-- References & Related Links -->
+    <section class="py-16 bg-gray-50 dark:bg-secondary-500 text-center text-white text-sm">
+      <div class="container mx-auto max-w-5xl px-4">
+        <p class="mb-2 text-accent-500">
+          Reference: Wilson, A. R., & Vasile, M. (2023). <em>The space sustainability paradox</em>. <strong>Journal of Cleaner Production</strong>. 
+          <a href="https://doi.org/10.1016/j.jclepro.2023.138869" class="underline hover:text-primary-500" target="_blank" rel="noopener noreferrer">
+            DOI: 10.1016/j.jclepro.2023.138869
+          </a>
+        </p>
+        <p>
+          Explore other pillars: 
+          <a href="/space-sustainability/from-space" class="underline hover:text-primary-500">From Space</a> | 
+          <a href="/space-sustainability/in-space" class="underline hover:text-primary-500">In Space</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>

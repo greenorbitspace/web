@@ -1,0 +1,12 @@
+[
+  { "name": "dark and quiet skies", "subArea": "for space" },
+  { "name": "disaster risk management", "subArea": "from space" },
+  { "name": "environmental monitoring", "subArea": "from space" },
+  { "name": "green propulsion", "subArea": "for space" },
+  { "name": "in-orbit servicing", "subArea": "for space" },
+  { "name": "space applications", "subArea": "from space" },
+  { "name": "space environment", "subArea": "for space" },
+  { "name": "space resource utilisation", "subArea": "for space" },
+  { "name": "space tourism", "subArea": "for space" },
+  { "name": "telecommunications", "subArea": "from space" }
+]

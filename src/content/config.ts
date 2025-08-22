@@ -1,19 +1,20 @@
 import { z, defineCollection } from 'astro:content';
 
+// Base schema for all content types
 const baseSchema = z.object({
   title: z.string().min(5),
   description: z.string().max(160).optional(),
+  summary: z.string().max(300).optional(),      // Short summary for cards
   pubdate: z.string().optional().refine((val) => !val || !isNaN(Date.parse(val)), {
     message: 'pubdate must be a valid ISO 8601 date string',
   }),
   slug: z.string().optional(),
   author: z.string().optional(),
   tags: z.array(z.string()).optional(),
-  categories: z.array(z.string()).optional(),
+  category: z.enum(['for space', 'from space', 'in space']).optional(),
   url: z.string().url().optional(),
   notion_page_id: z.string().optional(),
   exported_at: z.string().optional(),
-  name: z.string().optional(),
   featuredImage: z.string().url().optional(),
   seoTitle: z.string().max(70).optional(),
   seoDescription: z.string().max(160).optional(),
@@ -38,6 +39,7 @@ const baseSchema = z.object({
   un_resolution: z.string().optional(),
 });
 
+// Schema specifically for Organisations
 const organisationSchema = baseSchema.extend({
   Organisation: z.string().min(2),
   Description: z.string().optional(),
@@ -50,6 +52,7 @@ const organisationSchema = baseSchema.extend({
   entry: z.boolean().optional(),
 });
 
+// Schema for Pledges
 const pledgeSchema = z.object({
   name: z.string(),
   slug: z.string().optional(),
@@ -62,7 +65,6 @@ const pledgeSchema = z.object({
   commitments: z.array(z.string()).optional(),
   CSR: z.string().optional(),
 
-  // Allow either remote URLs or /public paths for logos
   logo: z.string()
     .regex(/^(https?:\/\/|\/)/, { message: 'Logo must be a full URL or start with / for public assets' })
     .optional(),
@@ -70,6 +72,7 @@ const pledgeSchema = z.object({
   URL: z.string().url().optional(),
 });
 
+// Schema for Careers
 const careerSchema = z.object({
   title: z.string().min(5),
   slug: z.string().optional(),
@@ -92,6 +95,7 @@ const careerSchema = z.object({
   featuredImage: z.string().url().optional(),
 });
 
+// Define collections
 export const collections = {
   blog: defineCollection({ schema: baseSchema }),
   news: defineCollection({ schema: baseSchema }),
@@ -99,6 +103,7 @@ export const collections = {
   'press-releases': defineCollection({ schema: baseSchema }),
   tools: defineCollection({ schema: baseSchema }),
   insights: defineCollection({ schema: baseSchema }),
+  themes: defineCollection({ schema: baseSchema }),   // <-- Added for Themes
   organisations: defineCollection({ schema: organisationSchema }),
   pledges: defineCollection({ schema: pledgeSchema }),
   careers: defineCollection({ schema: careerSchema }),
