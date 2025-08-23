@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import '../styles/transitions.css';
+import GlobalSchema from '../components/schema/GlobalSchema.astro';
 
 export interface Props {
   title: string;
@@ -22,7 +23,6 @@ const {
   twitter = {}
 } = Astro.props;
 
-const clientKey = import.meta.env.PUBLIC_BREVO_CLIENT_KEY ?? '';
 const isLocal = Astro.site?.hostname?.includes('localhost') ?? import.meta.env.DEV;
 ---
 
@@ -31,19 +31,11 @@ const isLocal = Astro.site?.hostname?.includes('localhost') ?? import.meta.env.D
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#ffffff" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonical} />
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <title>{title}</title>
 
     <!-- OpenGraph -->
     <meta property="og:type" content="website" />
@@ -58,76 +50,14 @@ const isLocal = Astro.site?.hostname?.includes('localhost') ?? import.meta.env.D
     <meta name="twitter:description" content={twitter.description ?? description} />
     <meta name="twitter:image" content={twitter.image ?? ogImage} />
 
-    <!-- Prevent dark mode flicker (pre-Alpine) -->
-    <script>
-      (function () {
-        try {
-          let darkMode = localStorage.getItem('darkMode');
-          if (darkMode === null) {
-            darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'true' : 'false';
-            localStorage.setItem('darkMode', darkMode);
-          }
-          document.documentElement.classList.toggle('dark', darkMode === 'true');
-        } catch (_) {}
-      })();
-    </script>
-
     {Astro.head}
-    <title>{title}</title>
-
-    <!-- Alpine.js for reactive UI (defer to avoid blocking) -->
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-
-    <!-- Cookie Consent (only load in production) -->
-    {!isLocal && (
-      <script
-        id="cookieyes"
-        type="text/javascript"
-        src="https://cdn-cookieyes.com/client_data/58366b5b83a0075b30699f8a/script.js"
-        async
-      ></script>
-    )}
-        <!-- HubSpot Embed Code -->
-    <script
-      type="text/javascript"
-      id="hs-script-loader"
-      async
-      defer
-      src="//js-eu1.hs-scripts.com/143471159.js"
-    ></script>
   </head>
 
-  <body
-    x-data="{
-      darkMode: localStorage.getItem('darkMode') === 'true',
-      toggleDarkMode() {
-        this.darkMode = !this.darkMode;
-      }
-    }"
-    x-init="
-      $watch('darkMode', val => {
-        localStorage.setItem('darkMode', val);
-        document.documentElement.classList.toggle('dark', val);
-      });
-    "
-    x-cloak
-    class="antialiased bg-white dark:bg-primary-500 text-secondary-900 dark:text-secondary-100 transition-colors duration-300"
-  >
+  <body class="antialiased bg-white dark:bg-primary-500 text-secondary-900 dark:text-secondary-100 transition-colors duration-300">
     <main id="page-wrapper" class="page-wrapper" role="main" tabindex="-1">
       <slot />
+      <!-- Inject Global JSON-LD -->
+      <GlobalSchema />
     </main>
-
-    <!-- Native page transition events -->
-    <script>
-      document.addEventListener('astro:page-load', () => {
-        document.getElementById('page-wrapper')?.classList.add('page-loaded');
-      });
-      document.addEventListener('astro:before-swap', () => {
-        document.getElementById('page-wrapper')?.classList.remove('page-loaded');
-      });
-    </script>
-
-    <!-- Page transition module -->
-    <script type="module" defer src="/scripts/transitions.js"></script>
   </body>
 </html>
