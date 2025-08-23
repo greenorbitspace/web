@@ -50,12 +50,12 @@
     "react-dom": "^19.1.1",
     "react-intersection-observer": "^9.16.0",
     "react-leaflet": "^5.0.0",
+    "recharts": "^3.1.2",
     "sharp": "^0.34.3",
     "stripe": "^18.4.0",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.11",
     "astro": "^5.13.2",
     "autoprefixer": "^10.4.21",
     "dotenv": "^17.2.1",

@@ -22,8 +22,6 @@ const {
   canonical = "https://greenorbit.space",
   twitter = {}
 } = Astro.props;
-
-const isLocal = Astro.site?.hostname?.includes('localhost') ?? import.meta.env.DEV;
 ---
 
 <!DOCTYPE html>
@@ -51,6 +49,24 @@ const isLocal = Astro.site?.hostname?.includes('localhost') ?? import.meta.env.D
     <meta name="twitter:image" content={twitter.image ?? ogImage} />
 
     {Astro.head}
+
+    <!-- Dark mode initializer (avoids FOUC) -->
+    <script>
+      (function() {
+        try {
+          const root = document.documentElement;
+          const stored = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (stored === 'dark' || (!stored && prefersDark)) {
+            root.classList.add('dark');
+          } else {
+            root.classList.remove('dark');
+          }
+        } catch (e) {
+          console.error('Dark mode init error', e);
+        }
+      })();
+    </script>
   </head>
 
   <body class="antialiased bg-white dark:bg-primary-500 text-secondary-900 dark:text-secondary-100 transition-colors duration-300">
@@ -58,8 +74,7 @@ const isLocal = Astro.site?.hostname?.includes('localhost') ?? import.meta.env.D
       <slot />
     </main>
 
-    <!-- Inject Global JSON-LD for structured data -->
+    <!-- Global structured data -->
     <GlobalSchema />
-
   </body>
 </html>

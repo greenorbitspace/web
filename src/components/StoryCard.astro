@@ -1,0 +1,31 @@
+---
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { motion } from "framer-motion";
+
+const { title, description, image, link } = Astro.props;
+---
+
+<motion.div
+  whileHover={{ scale: 1.02 }}
+  transition={{ duration: 0.2 }}
+>
+  <Card class="rounded-2xl shadow-md overflow-hidden">
+    {image && (
+      <img src={image} alt={title} class="w-full h-48 object-cover" />
+    )}
+    <CardHeader>
+      <CardTitle class="text-xl font-semibold">{title}</CardTitle>
+    </CardHeader>
+    <CardContent>
+      <p class="text-gray-600 dark:text-gray-300">{description}</p>
+      {link && (
+        <a
+          href={link}
+          class="inline-block mt-3 text-indigo-600 hover:underline"
+        >
+          Read More →
+        </a>
+      )}
+    </CardContent>
+  </Card>
+</motion.div>

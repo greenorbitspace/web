@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.astro';
+import CardGrid from '../components/CardGrid.astro';
+import DataCard from '../components/DataCard.astro';
+
+// Example data for visualisations and missions
+import vnlData from '../data/dark-skies-vnl.json';
+import missionsData from '../data/missions.json';
+
+// Ensure arrays are defined to avoid runtime errors
+const vnlCards = Array.isArray(vnlData) ? vnlData : [];
+const darkSkiesMissions = Array.isArray(missionsData)
+  ? missionsData.filter(m => m.theme === "dark-skies")
+  : [];
+---
+
+<Layout title="Dark & Quiet Skies" description="Reducing light pollution and preserving natural night environments using satellite data and sustainable space practices.">
+  <Header />
+
+  <main class="py-12 max-w-6xl mx-auto px-4">
+
+    <!-- Hero Section -->
+    <HeroSection
+      title="Dark & Quiet Skies"
+      description="Protecting the natural night environment through sustainable space practices and satellite monitoring."
+      image="/images/dark-skies-hero.jpg"
+    />
+
+    <!-- Background -->
+    <section class="py-12 prose max-w-none">
+      <h2>Why Dark and Quiet Skies Matter</h2>
+      <p>
+        Excess artificial light at night, known as <strong>light pollution</strong>, disrupts human circadian rhythms, affects wildlife behavior, and diminishes our ability to observe the cosmos. Quiet skies also reduce radio frequency interference, critical for astronomy and satellite operations.
+      </p>
+      <p>
+        Studies show that chronic exposure to artificial light at night can lead to sleep disorders, hormonal imbalances, and increased risk of certain health conditions. Wildlife, from migratory birds to nocturnal mammals, are equally affected, with disruptions to natural behaviors and ecosystems.
+      </p>
+    </section>
+
+    <!-- Our Approach -->
+    <section class="py-12 prose max-w-none">
+      <h2>How We Support Dark and Quiet Skies</h2>
+      <ul>
+        <li>Monitoring global light pollution using VIIRS Day/Night Band data and Earth Observation Group products.</li>
+        <li>Promoting satellite and space operations that minimize reflective surfaces and stray light.</li>
+        <li>Engaging with sustainable propulsion and satellite design initiatives to reduce orbital debris and maintain dark skies.</li>
+        <li>Supporting astronomy-friendly orbital regulations and international dark-sky initiatives.</li>
+      </ul>
+    </section>
+
+    <!-- Data Visualisations -->
+    <section class="py-12">
+      <h2 class="text-2xl font-bold mb-6">Nighttime Light Visualisations</h2>
+      {vnlCards.length > 0 && (
+        <CardGrid>
+          {vnlCards.map(item => (
+            <DataCard
+              title={item.title || "Untitled"}
+              description={item.description || ""}
+              image={item.image || ""}
+              link={item.link || ""}
+            />
+          ))}
+        </CardGrid>
+      )}
+    </section>
+
+    <!-- Relevant Missions & Programmes -->
+    <section class="py-12 prose max-w-none">
+      <h2>Missions & Programmes Supporting Dark Skies</h2>
+      {darkSkiesMissions.length > 0 ? (
+        <ul>
+          {darkSkiesMissions.map(m => (
+            <li key={m.name}>
+              <strong>{m.name}</strong>: {m.description} {m.link && (<a href={m.link}>More info</a>)}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No dark-skies missions data available.</p>
+      )}
+    </section>
+
+    <!-- References & Resources -->
+    <section class="py-12 prose max-w-none">
+      <h2>References & Resources</h2>
+      <ul>
+        <li>Elvidge, C.D., Baugh, K., Zhizhin, M., Hsu, F.-C., & Ghosh, T. “VIIRS night-time lights.” International Journal of Remote Sensing, 2017.</li>
+        <li>Falchi, F., Cinzano, P., Duriscoe, D. et al. “The new world atlas of artificial night sky brightness.” Science Advances, 2016.</li>
+        <li>International Dark-Sky Association: <a href="https://www.darksky.org">https://www.darksky.org</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>

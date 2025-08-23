@@ -1,0 +1,108 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import HeroSection from '../../components/HeroSection.astro';
+---
+
+<Layout 
+  title="Satellite Data & Copernicus Data Access" 
+  description="Explore access to satellite data, including the Copernicus Sentinel satellites, contributing missions, and Copernicus services for land, ocean, atmosphere, and climate monitoring."
+>
+  <main class="py-12 max-w-7xl mx-auto px-4">
+    <h1 class="text-4xl font-bold mb-6">Satellite Data & Copernicus Data Access</h1>
+
+    <p class="mb-6 text-lg">
+      At the heart of Copernicus is a constellation of satellites – the Sentinels – providing daily observations of Earth. This data ecosystem is the largest space data provider worldwide, supporting environmental monitoring, research, and sustainable decision-making.
+    </p>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-4">Copernicus Space Component</h2>
+    <p class="mb-4">
+      The Copernicus Space Component consists of the Sentinel satellites, which generate high-quality reference products. These satellites are complemented by the Copernicus Contributing Missions, including other European, national, and international satellites, along with land, air, and marine-based sensors.
+    </p>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-4">Core Ground Segment & Reference Products</h2>
+    <ul class="list-disc ml-6 mb-4">
+      <li>Command and control of Sentinel satellites</li>
+      <li>Acquisition of Sentinel data and generation of Sentinel Reference Products</li>
+      <li>Long-Term Archive (LTA) to securely store reference products over extended periods</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-4">Copernicus Services Reference Products</h2>
+    <p class="mb-4">
+      Copernicus Services use Sentinel reference products and other data sources to produce thematic information. These services include:
+    </p>
+    <ul class="list-disc ml-6 mb-4">
+      <li>Atmosphere Monitoring (CAMS)</li>
+      <li>Marine Monitoring (CMEMS)</li>
+      <li>Land Monitoring (CLMS)</li>
+      <li>Climate Change (C3S)</li>
+      <li>Emergency Management (EMS)</li>
+      <li>Security & Safety</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-4">Copernicus Data Portals</h2>
+    <p class="mb-4">
+      Data and reference products are accessible via multiple portals, each tailored to different users and services:
+    </p>
+    <ul class="list-disc ml-6 mb-4">
+      <li>
+        <strong>CDSE Portal:</strong> Sentinel 1,2,3,5P + Contributing Missions, visualization & cloud processing.  
+        <a href="https://dataspace.copernicus.eu" target="_blank">dataspace.copernicus.eu</a>
+      </li>
+      <li>
+        <strong>WEkEO Portal:</strong> Sentinel 1,2,3,5P,6 + other mission data, visualization & cloud processing.  
+        <a href="https://www.wekeo.eu" target="_blank">wekeo.eu</a>
+      </li>
+      <li>
+        <strong>CAMS Portal:</strong> Atmospheric composition data (Sentinel 5P primary).  
+        <a href="https://atmosphere.copernicus.eu" target="_blank">atmosphere.copernicus.eu</a>
+      </li>
+      <li>
+        <strong>CMEMS Portal:</strong> Ocean data from Sentinel 1,2,3,6 + in-situ measurements.  
+        <a href="https://marine.copernicus.eu" target="_blank">marine.copernicus.eu</a>
+      </li>
+      <li>
+        <strong>CLMS Portal:</strong> Land monitoring from Sentinel 1,2 + other data sources.  
+        <a href="https://land.copernicus.eu" target="_blank">land.copernicus.eu</a>
+      </li>
+      <li>
+        <strong>C3S Portal:</strong> Climate change reference products from Sentinel 1,3 + in-situ data.  
+        <a href="https://climate.copernicus.eu" target="_blank">climate.copernicus.eu</a>
+      </li>
+      <li>
+        <strong>EMS Portals:</strong> Emergency maps, floods, wildfires, and drought data.  
+        <a href="https://emergency.copernicus.eu/mapping" target="_blank">Emergency Mapping</a> | 
+        <a href="https://european-flood.emergency.copernicus.eu" target="_blank">EFAS</a> | 
+        <a href="https://www.globalfloods.eu" target="_blank">GloFAS</a>
+      </li>
+      <li>
+        <strong>Security Services:</strong> Limited public access for EU border, maritime, and SESA monitoring.  
+        <a href="https://sesa.security.copernicus.eu" target="_blank">SESA Portal</a>
+      </li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-4">Accessing Data Externally</h2>
+    <p class="mb-4">
+      Beyond the official Copernicus portals, several European and international collaborating ground segment portals, commercial providers, and governmental portals provide Sentinel data or derived products. Notable examples include:
+    </p>
+    <ul class="list-disc ml-6 mb-4">
+      <li><a href="https://sentinels.copernicus.eu/web/sentinel/missions/collaborative" target="_blank">European Collaborating Ground Segment Portals</a></li>
+      <li><a href="https://sentinels.copernicus.eu/web/sentinel/missions/international-cooperation" target="_blank">International Collaborating Ground Segment Portals</a></li>
+      <li><a href="https://user.eumetsat.int/data-access" target="_blank">EUMETSAT User Portal</a></li>
+      <li><a href="https://www.earthdata.nasa.gov" target="_blank">NASA Earth Data Portal</a></li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-4">Why Use Copernicus Data?</h2>
+    <ul class="list-disc ml-6 mb-4">
+      <li>Trustworthy, high-quality reference products generated under operational monitoring</li>
+      <li>Comprehensive coverage of Earth’s land, ocean, atmosphere, and climate systems</li>
+      <li>Open and free access for research, business, and policy applications</li>
+      <li>Supports sustainable decision-making, climate studies, and disaster response</li>
+    </ul>
+
+    <p class="mt-8 text-gray-700 text-sm">
+      For more information about Copernicus services, licensing, and open data, visit <a href="https://www.copernicus.eu/en/access-data/copyright-and-licences" target="_blank" class="underline text-blue-600">Copernicus Copyright & Licenses</a>.
+    </p>
+  </main>
+</Layout>

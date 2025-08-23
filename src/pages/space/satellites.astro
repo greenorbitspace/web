@@ -1,0 +1,97 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import HeroSection from '../../components/HeroSection.astro';
+import satellitesData from '../../data/satellites.json';
+
+// Ensure satellitesData is an array
+const satellites = Array.isArray(satellitesData) ? satellitesData : [];
+
+// Group satellites by type safely
+const groupedSatellites = satellites.reduce((acc, sat) => {
+  const type = sat.type || 'Unknown';
+  if (!acc[type]) acc[type] = [];
+  acc[type].push(sat);
+  return acc;
+}, {});
+
+// Generate JSON-LD structured data safely
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Copernicus Satellites",
+  "itemListElement": satellites.map((sat, index) => ({
+    "@type": "Satellite",
+    "name": sat.name || "Unnamed",
+    "launchDate": sat.launchDate || "",
+    "description": sat.description || "",
+    "provider": {
+      "@type": "Organization",
+      "name": sat.agency || ""
+    },
+    "mission": sat.mission || "",
+    "image": sat.image || "",
+    "additionalType": sat.type || ""
+  }))
+};
+---
+
+<Layout title="Copernicus Satellites" description="Explore all Copernicus satellites monitoring land, ocean, atmosphere, and climate for sustainability insights.">
+  <script type="application/ld+json">
+    {JSON.stringify(jsonLd)}
+  </script>
+
+  <main class="py-12 max-w-7xl mx-auto px-4">
+    <h1 class="text-4xl font-bold mb-8">Copernicus Satellites</h1>
+    <p class="mb-6 text-lg">Discover the satellites contributing to Earth observation, climate monitoring, and sustainability initiatives.</p>
+
+    <!-- Filters by type -->
+    {Object.keys(groupedSatellites).length > 0 && (
+      <div class="mb-8 flex gap-4">
+        {Object.keys(groupedSatellites).map(type => (
+          <button
+            class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+            onClick={() => {
+              document.querySelectorAll('.satellite-card').forEach(card => {
+                card.style.display = card.dataset.type === type || type === 'All' ? 'block' : 'none';
+              });
+            }}
+          >
+            {type}
+          </button>
+        ))}
+        <button
+          class="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700"
+          onClick={() => document.querySelectorAll('.satellite-card').forEach(card => card.style.display = 'block')}
+        >
+          All
+        </button>
+      </div>
+    )}
+
+    <!-- Satellite Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {satellites.length > 0 ? satellites.map((sat, index) => (
+        <div class="satellite-card border rounded shadow p-4" data-type={sat.type || 'Unknown'} key={index}>
+          {sat.image && <img src={sat.image} alt={sat.name} class="mb-4 w-full h-48 object-cover rounded" />}
+          <h2 class="text-2xl font-semibold mb-2">{sat.name || "Unnamed Satellite"}</h2>
+          <p class="text-sm mb-2"><strong>Mission:</strong> {sat.mission || "N/A"}</p>
+          <p class="text-sm mb-2"><strong>Agency:</strong> {sat.agency || "Unknown"}</p>
+          <p class="text-sm mb-2"><strong>Launch Date:</strong> {sat.launchDate || "N/A"}</p>
+          <p class="text-sm mb-2"><strong>Status:</strong> {sat.status || 'Operational'}</p>
+          <p class="text-gray-700">{sat.description || ""}</p>
+          {Array.isArray(sat.marketingTag) && sat.marketingTag.length > 0 && (
+            <div class="mt-2 flex flex-wrap gap-2">
+              {sat.marketingTag.map((tag, idx) => (
+                <span key={idx} class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded">{tag}</span>
+              ))}
+            </div>
+          )}
+        </div>
+      )) : (
+        <p class="text-center text-gray-500">No satellite data available.</p>
+      )}
+    </div>
+  </main>
+</Layout>

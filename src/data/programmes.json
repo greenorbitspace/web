@@ -1,0 +1,128 @@
+{
+  "programmes": [
+    {
+      "id": "gnss_galileo",
+      "name": "Galileo",
+      "operational_since": "2016-12-15",
+      "services": [
+        {
+          "id": "galileo_os",
+          "name": "Open Service",
+          "type": "mass-market",
+          "description": "Free service for positioning, navigation and timing.",
+          "features": ["Navigation, positioning and timing", "Free-of-charge", "Navigation Message Authentication (OS NMA)"]
+        },
+        {
+          "id": "galileo_prs",
+          "name": "Public Regulated Service (PRS)",
+          "type": "government-authorized",
+          "description": "Service for authorized users such as civil protection, customs, and police. Robust and encrypted.",
+          "features": ["Fully encrypted", "Continuity in emergencies or crises"]
+        },
+        {
+          "id": "galileo_sar",
+          "name": "Search and Rescue Service (SAR)",
+          "type": "emergency",
+          "description": "Europe's contribution to COSPAS-SARSAT to locate distress beacons.",
+          "features": ["Automatic forward link distress call", "Return link alert service"]
+        },
+        {
+          "id": "galileo_commercial",
+          "name": "Commercial Service",
+          "type": "value-added",
+          "description": "Complementing Open Service with additional navigation signal and added-value services.",
+          "features": ["Encrypted signal", "High positioning accuracy", "Authentication to prevent spoofing", "Precise Point Positioning corrections worldwide"]
+        }
+      ],
+      "innovations": [
+        "First GNSS to broadcast authentication data",
+        "SAR return link alert unique among GNSS",
+        "Commercial service enables new business models in GNSS downstream market"
+      ]
+    },
+    {
+      "id": "gnss_egnos",
+      "name": "EGNOS",
+      "initial_operations": "2009-07",
+      "safety_certified": "2011-03",
+      "description": "Europe's regional satellite-based augmentation system improving GNSS performance.",
+      "components": {
+        "satellites": [
+          {"name": "Inmarsat-3 East Atlantic", "type": "geostationary"},
+          {"name": "Inmarsat-3 Indian Ocean", "type": "geostationary"},
+          {"name": "ESA Artemis", "type": "geostationary"}
+        ],
+        "ground_stations": {
+          "RIMS": {"count": 40, "description": "Ranging and Integrity Monitoring Stations measure satellite positions"},
+          "MCC": {"count": 2, "description": "Mission Control Centres generate correction messages"},
+          "NLES": {"count": 6, "description": "Navigation Land Earth Stations uplink error corrections to GEO satellites"}
+        }
+      },
+      "services": [
+        {"id": "egnos_os", "name": "Open Service", "description": "For applications where human life is not at stake.", "availability": "2009-10"},
+        {"id": "egnos_safety_of_life", "name": "Safety-of-Life Service", "description": "Critical applications where human life depends on accuracy and integrity.", "availability": "2011-03"},
+        {"id": "egnos_edas", "name": "EDAS", "description": "Terrestrial data service disseminating EGNOS data in real time."}
+      ]
+    }
+  ],
+  "sectors": [
+    {
+      "id": "fisheries_aquaculture",
+      "name": "Fisheries & Aquaculture",
+      "services": [
+        {"id": "fish_stock_detection", "name": "Fish stock detection", "description": "Earth observation contributes to modelling fish stocks and detecting fish shoals using data on sea surface temperature, currents, ocean colour, and bathymetry.", "Copernicus": false, "EGNSS": false, "SDGs": [14, 15]},
+        {"id": "fishing_vessels_navigation", "name": "Fishing vessels navigation", "description": "GNSS-enabled navigation devices help fishing vessels navigate safely to fishing zones and equipment.", "Copernicus": false, "EGNSS": false, "SDGs": [9, 14]}
+      ]
+    },
+    {
+      "id": "forestry",
+      "name": "Forestry",
+      "services": [
+        {"id": "biomass_monitoring", "name": "Biomass monitoring", "description": "Earth observation and GNSS enable biomass monitoring for understanding CO2 absorption capacity and biomass energy potential.", "Copernicus": false, "EGNSS": false, "SDGs": [13, 15]},
+        {"id": "deforestation_monitoring", "name": "Deforestation/degradation monitoring", "description": "Earth observation and GNSS track forest biomass changes to monitor deforestation and degradation.", "Copernicus": false, "EGNSS": false, "SDGs": [13, 15]},
+        {"id": "forest_inventory", "name": "Forest inventory monitoring", "description": "Monitoring of timber inventories using optical, radar, and in situ sensors.", "Copernicus": false, "EGNSS": false, "SDGs": [13, 15]},
+        {"id": "forest_health", "name": "Forest vegetation health monitoring", "description": "Monitoring forest health using optical and radar data, NDVI indices.", "Copernicus": false, "EGNSS": false, "SDGs": [13, 15]},
+        {"id": "illegal_logging", "name": "Illegal logging monitoring", "description": "Identification of illegal logging using EO data.", "Copernicus": false, "EGNSS": false, "SDGs": [13, 15, 16]}
+      ]
+    },
+    {
+      "id": "infrastructure",
+      "name": "Infrastructure",
+      "services": [
+        {"id": "env_impact_infra", "name": "Environmental impact assessment of infrastructure", "description": "EO supports analysis of the impact of infrastructures on the environment.", "Copernicus": false, "EGNSS": false, "SDGs": [6, 11, 13, 15]},
+        {"id": "permitting", "name": "Permitting", "description": "EO supports evaluations before permit delivery.", "Copernicus": false, "EGNSS": false, "SDGs": [9, 11, 13, 15]},
+        {"id": "site_selection", "name": "Site selection and planning", "description": "EO and GNSS support site selection, mapping, route planning, and accurate GIS database creation.", "Copernicus": false, "EGNSS": false, "SDGs": [9, 11, 13]},
+        {"id": "vulnerability_analysis", "name": "Vulnerability analysis", "description": "EO supports risk assessment for natural hazards.", "Copernicus": false, "EGNSS": false, "SDGs": [11, 13]},
+        {"id": "construction_ops", "name": "Construction operations", "description": "EO and GNSS support site monitoring and heavy machinery positioning.", "Copernicus": false, "EGNSS": false, "SDGs": [9, 11]},
+        {"id": "post_construction", "name": "Post-construction operations", "description": "Monitoring critical infrastructure stability using EO and GNSS.", "Copernicus": false, "EGNSS": false, "SDGs": [9, 11, 13]},
+        {"id": "pipeline_monitoring", "name": "Pipeline monitoring", "description": "Monitoring pipelines using EO and GNSS-enabled positioning.", "Copernicus": false, "EGNSS": false, "SDGs": [9, 11, 13]},
+        {"id": "data_centre", "name": "Data centre", "description": "GNSS as time source for network synchronization.", "Copernicus": false, "EGNSS": false, "SDGs": [9]},
+        {"id": "satcom", "name": "Satellite communication (SATCOM)", "description": "GNSS for frequency control in telecom gateways.", "Copernicus": false, "EGNSS": false, "SDGs": [9]}
+      ]
+    },
+    {
+      "id": "urban_dev",
+      "name": "Urban development & cultural heritage",
+      "services": [
+        {"id": "air_quality_monitoring", "name": "Air quality monitoring in urban environments", "description": "EO supports detection and analysis of urban air pollutants.", "Copernicus": false, "EGNSS": false, "SDGs": [3, 11, 13]},
+        {"id": "smart_streetlights", "name": "Smart streetlights", "description": "GNSS supports smart streetlight positioning and monitoring.", "Copernicus": false, "EGNSS": false, "SDGs": [7, 11]},
+        {"id": "urban_planning", "name": "Urban planning", "description": "EO supports measuring urban footprints and sprawl for planning.", "Copernicus": false, "EGNSS": false, "SDGs": [11, 13]},
+        {"id": "digital_twins", "name": "Urban modelling, 3D modelling, digital twins", "description": "EO and GNSS support creation of digital twins for cities.", "Copernicus": false, "EGNSS": false, "SDGs": [9, 11, 13]},
+        {"id": "surveying_mapping", "name": "Surveying and mapping", "description": "EO and GNSS support cadastral and urban mapping.", "Copernicus": false, "EGNSS": false, "SDGs": [9, 11]},
+        {"id": "urban_greening", "name": "Urban greening", "description": "EO and GNSS can be used to monitor vegetation cover, the health of green space vegetation as well as precise definition, positioning and monitoring green space infrastructure.", "Copernicus": false, "EGNSS": false, "SDGs": [11, 13, 15]}
+      ]
+    },
+    {
+      "id": "road_automotive",
+      "name": "Road & automotive",
+      "services": [
+        {"id": "bike_sharing", "name": "Bike-sharing", "description": "Bike-sharing and free-floating systems rely on GNSS to locate bikes.", "Copernicus": false, "EGNSS": false, "SDGs": [9, 11]},
+        {"id": "navigation_pnd_ivs", "name": "Navigation (IVS and PND)", "description": "Turn-by-turn indications to drivers through PNDs and IVS.", "Copernicus": false, "EGNSS": false, "SDGs": [9, 11]},
+        {"id": "congestion_control", "name": "Congestion control", "description": "Satellite road traffic monitoring services collect floating car location data for traffic monitoring.", "Copernicus": false, "EGNSS": false, "SDGs": [9, 11]}
+      ]
+    },
+    {
+      "id": "rail",
+      "name": "Rail",
+      "services": [
+        {"id": "passenger_info", "name": "Passenger information systems", "description": "GNSS provides real-time location and speed of trains.", "Copernicus": false, "EGNSS": false,

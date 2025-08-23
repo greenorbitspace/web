@@ -1,0 +1,213 @@
+{
+  "satellites": [
+    {
+      "name": "Sentinel-1A",
+      "type": "Radar Imaging",
+      "mission": "All-weather, day & night radar imagery for land and ocean",
+      "agency": "ESA",
+      "launchDate": "2014-04-03",
+      "status": "Retired",
+      "referenceProducts": ["SAR imagery", "Ground deformation maps", "Flood maps", "Sea ice monitoring"],
+      "services": ["CMEMS", "CLMS", "EMS"],
+      "portals": ["CDSE", "WEkEO"]
+    },
+    {
+      "name": "Sentinel-1B",
+      "type": "Radar Imaging",
+      "mission": "All-weather, day & night radar imagery for land and ocean",
+      "agency": "ESA",
+      "launchDate": "2016-04-25",
+      "status": "Retired",
+      "referenceProducts": ["SAR imagery", "Ground deformation maps", "Flood maps", "Sea ice monitoring"],
+      "services": ["CMEMS", "CLMS", "EMS"],
+      "portals": ["CDSE", "WEkEO"]
+    },
+    {
+      "name": "Sentinel-1C",
+      "type": "Radar Imaging",
+      "mission": "All-weather, day & night radar imagery for land and ocean",
+      "agency": "ESA",
+      "launchDate": "2024-12-04",
+      "status": "Operational",
+      "referenceProducts": ["SAR imagery", "Ground deformation maps", "Flood maps", "Sea ice monitoring"],
+      "services": ["CMEMS", "CLMS", "EMS"],
+      "portals": ["CDSE", "WEkEO"]
+    },
+    {
+      "name": "Sentinel-2A",
+      "type": "Optical Imaging",
+      "mission": "High-resolution optical imagery for land and coastal monitoring",
+      "agency": "ESA",
+      "launchDate": "2015-06-23",
+      "status": "Operational",
+      "referenceProducts": ["Vegetation maps", "Water bodies", "Land cover", "Disaster monitoring"],
+      "services": ["CLMS", "CMEMS", "EMS"],
+      "portals": ["CDSE", "WEkEO"]
+    },
+    {
+      "name": "Sentinel-2B",
+      "type": "Optical Imaging",
+      "mission": "High-resolution optical imagery for land and coastal monitoring",
+      "agency": "ESA",
+      "launchDate": "2017-03-07",
+      "status": "Operational",
+      "referenceProducts": ["Vegetation maps", "Water bodies", "Land cover", "Disaster monitoring"],
+      "services": ["CLMS", "CMEMS", "EMS"],
+      "portals": ["CDSE", "WEkEO"]
+    },
+    {
+      "name": "Sentinel-2C",
+      "type": "Optical Imaging",
+      "mission": "High-resolution optical imagery for land and coastal monitoring",
+      "agency": "ESA",
+      "launchDate": "2024-09-05",
+      "status": "Operational",
+      "referenceProducts": ["Vegetation maps", "Water bodies", "Land cover", "Disaster monitoring"],
+      "services": ["CLMS", "CMEMS", "EMS"],
+      "portals": ["CDSE", "WEkEO"]
+    },
+    {
+      "name": "Sentinel-3A",
+      "type": "Ocean & Land Monitoring",
+      "mission": "Sea-surface topography, temperature, ocean & land colour",
+      "agency": "ESA / EUMETSAT",
+      "launchDate": "2016-02-16",
+      "status": "Operational",
+      "referenceProducts": ["Sea-surface temperature", "Ocean colour", "Land surface temperature", "Sea ice monitoring"],
+      "services": ["CMEMS", "C3S"],
+      "portals": ["CDSE", "WEkEO"]
+    },
+    {
+      "name": "Sentinel-3B",
+      "type": "Ocean & Land Monitoring",
+      "mission": "Sea-surface topography, temperature, ocean & land colour",
+      "agency": "ESA / EUMETSAT",
+      "launchDate": "2018-04-25",
+      "status": "Operational",
+      "referenceProducts": ["Sea-surface temperature", "Ocean colour", "Land surface temperature", "Sea ice monitoring"],
+      "services": ["CMEMS", "C3S"],
+      "portals": ["CDSE", "WEkEO"]
+    },
+    {
+      "name": "Sentinel-4 (Instrument)",
+      "type": "Atmospheric Monitoring",
+      "mission": "Geostationary monitoring of atmospheric composition over Europe",
+      "agency": "EUMETSAT",
+      "launchDate": "Planned",
+      "status": "Upcoming",
+      "referenceProducts": ["Ozone", "Nitrogen dioxide", "Aerosols"],
+      "services": ["CAMS"],
+      "portals": ["WEkEO"]
+    },
+    {
+      "name": "Sentinel-5 (Instrument)",
+      "type": "Atmospheric Monitoring",
+      "mission": "Monitoring key atmospheric constituents from Metop-SG",
+      "agency": "EUMETSAT",
+      "launchDate": "Planned 2025",
+      "status": "Upcoming",
+      "referenceProducts": ["Ozone", "NO2", "SO2", "CO", "CH4", "Formaldehyde", "Aerosols"],
+      "services": ["CAMS"],
+      "portals": ["WEkEO"]
+    },
+    {
+      "name": "Sentinel-5P",
+      "type": "Atmospheric Monitoring",
+      "mission": "Precursor to Sentinel-5 for air quality and atmospheric composition",
+      "agency": "ESA",
+      "launchDate": "2017-10-13",
+      "status": "Operational",
+      "referenceProducts": ["Ozone", "NO2", "SO2", "CO", "CH4", "Formaldehyde", "Aerosols"],
+      "services": ["CAMS"],
+      "portals": ["CDSE", "WEkEO"]
+    },
+    {
+      "name": "Sentinel-6A",
+      "type": "Altimetry",
+      "mission": "High accuracy sea-surface height for oceanography and climate studies",
+      "agency": "EU / ESA / EUMETSAT / NASA / NOAA",
+      "launchDate": "2020-11-21",
+      "status": "Operational",
+      "referenceProducts": ["Sea-surface height", "Ocean currents", "Climate monitoring"],
+      "services": ["CMEMS", "C3S"],
+      "portals": ["WEkEO"]
+    },
+    {
+      "name": "Sentinel-6B",
+      "type": "Altimetry",
+      "mission": "Follow-up mission for high accuracy sea-surface height measurements",
+      "agency": "EU / ESA / EUMETSAT / NASA / NOAA",
+      "launchDate": "Planned 2025",
+      "status": "Upcoming",
+      "referenceProducts": ["Sea-surface height", "Ocean currents", "Climate monitoring"],
+      "services": ["CMEMS", "C3S"],
+      "portals": ["WEkEO"]
+    },
+    {
+      "name": "NOAA-20",
+      "type": "Weather Monitoring",
+      "mission": "Atmospheric, ocean, and land observation for weather forecasting",
+      "agency": "NOAA",
+      "launchDate": "2017-11-18",
+      "status": "Operational",
+      "referenceProducts": ["Temperature profiles", "Cloud imagery", "Sea surface temperature"],
+      "services": ["CAMS", "CMEMS"],
+      "portals": ["NASA Earth Data"]
+    },
+    {
+      "name": "Landsat-9",
+      "type": "Optical Imaging",
+      "mission": "High-resolution land observation for vegetation and water monitoring",
+      "agency": "NASA / USGS",
+      "launchDate": "2021-09-27",
+      "status": "Operational",
+      "referenceProducts": ["Land cover maps", "Vegetation indices", "Water bodies"],
+      "services": ["CLMS"],
+      "portals": ["NASA Earth Data"]
+    }
+  ],
+  "services": [
+    {
+      "name": "Copernicus Atmosphere Monitoring Service (CAMS)",
+      "description": "Provides atmospheric composition and air quality data derived primarily from Sentinel-5P and other sources.",
+      "portal": "https://atmosphere.copernicus.eu"
+    },
+    {
+      "name": "Copernicus Marine Environment Monitoring Service (CMEMS)",
+      "description": "Provides oceanographic data and products from Sentinel 1,2,3,6 and in-situ sensors.",
+      "portal": "https://marine.copernicus.eu"
+    },
+    {
+      "name": "Copernicus Land Monitoring Service (CLMS)",
+      "description": "Provides global land monitoring data derived from Sentinel 1 and 2 and other sources.",
+      "portal": "https://land.copernicus.eu"
+    },
+    {
+      "name": "Copernicus Climate Change Service (C3S)",
+      "description": "Provides authoritative information on past, present, and future global climate using Sentinel reference products.",
+      "portal": "https://climate.copernicus.eu"
+    },
+    {
+      "name": "Copernicus Emergency Management Service (EMS)",
+      "description": "Provides disaster and emergency mapping from Sentinel satellites and other sources.",
+      "portal": "https://emergency.copernicus.eu"
+    }
+  ],
+  "portals": [
+    {
+      "name": "CDSE Portal",
+      "description": "Access to Sentinel 1,2,3,5P and Contributing Missions, visualization and cloud processing.",
+      "url": "https://dataspace.copernicus.eu"
+    },
+    {
+      "name": "WEkEO Portal",
+      "description": "Access to Sentinel reference products, subsets of Copernicus services and other mission data.",
+      "url": "https://www.wekeo.eu"
+    },
+    {
+      "name": "NASA Earth Data Portal",
+      "description": "Access to NASA satellite data and derived products, including Landsat and NOAA missions.",
+      "url": "https://www.earthdata.nasa.gov"
+    }
+  ]
+}

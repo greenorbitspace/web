@@ -1,0 +1,718 @@
+{
+  "sectors": [
+    {
+      "id": "agriculture",
+      "name": "Agriculture",
+      "services": [
+        {
+          "id": "carbon_capture",
+          "name": "Carbon capture and content assessment",
+          "description": "Assessment of carbon content in soils and crops, and evaluation of carbon capture potential.",
+          "Markets": "Agriculture",
+          "Domains": "Environmental monitoring",
+          "SDGs": [13, 15]
+        },
+        {
+          "id": "environmental_impact_monitoring",
+          "name": "Environmental impact monitoring",
+          "description": "Monitoring environmental impacts of agricultural activity across soil, water, and vegetation.",
+          "Markets": "Agriculture",
+          "Domains": "Environmental monitoring",
+          "SDGs": [13, 15]
+        },
+        {
+          "id": "biomass_monitoring",
+          "name": "Biomass monitoring",
+          "description": "Assessment of biomass quantity and health using EO and GNSS for crop and soil management.",
+          "Markets": "Agriculture",
+          "Domains": "Natural resources monitoring",
+          "SDGs": [2, 15]
+        },
+        {
+          "id": "crop_yield_forecasting",
+          "name": "Crop yield forecasting",
+          "description": "Forecasting crop production using satellite data and predictive models.",
+          "Markets": "Agriculture",
+          "Domains": "Natural resources monitoring",
+          "SDGs": [2, 12]
+        },
+        {
+          "id": "soil_condition_monitoring",
+          "name": "Soil condition monitoring",
+          "description": "Monitoring soil health and nutrient status using EO data.",
+          "Markets": "Agriculture",
+          "Domains": "Natural resources monitoring",
+          "SDGs": [2, 15]
+        },
+        {
+          "id": "vegetation_monitoring",
+          "name": "Vegetation monitoring",
+          "description": "Tracking vegetation growth, health, and coverage for precision farming.",
+          "Markets": "Agriculture",
+          "Domains": "Natural resources monitoring",
+          "SDGs": [2, 15]
+        },
+        {
+          "id": "asset_monitoring",
+          "name": "Asset monitoring",
+          "description": "Monitoring farm infrastructure and equipment using EO and GNSS.",
+          "Markets": "Agriculture",
+          "Domains": "Operations management",
+          "SDGs": [8, 9]
+        },
+        {
+          "id": "automatic_steering",
+          "name": "Automatic steering",
+          "description": "Precision guidance for tractors and agricultural machinery using GNSS.",
+          "Markets": "Agriculture",
+          "Domains": "Operations management",
+          "SDGs": [8, 9]
+        },
+        {
+          "id": "cap_monitoring",
+          "name": "CAP monitoring",
+          "description": "Monitoring compliance with Common Agricultural Policy using EO data.",
+          "Markets": "Agriculture",
+          "Domains": "Operations management",
+          "SDGs": [2, 12]
+        },
+        {
+          "id": "farm_machinery_guidance",
+          "name": "Farm machinery guidance",
+          "description": "Navigation support for machinery to optimize operations.",
+          "Markets": "Agriculture",
+          "Domains": "Operations management",
+          "SDGs": [8, 9]
+        },
+        {
+          "id": "climate_services_agriculture",
+          "name": "Climate services for agriculture",
+          "description": "Weather forecasting and climate risk monitoring to support farming decisions.",
+          "Markets": "Agriculture",
+          "Domains": "Weather services for agriculture",
+          "SDGs": [2, 13]
+        },
+        {
+          "id": "farm_management_systems",
+          "name": "Farm management systems",
+          "description": "Software platforms integrating EO and GNSS data to optimize farm operations.",
+          "Markets": "Agriculture",
+          "Domains": "Operations management",
+          "SDGs": [8, 9]
+        },
+        {
+          "id": "field_definition",
+          "name": "Field definition",
+          "description": "Mapping and defining field boundaries using satellite and GNSS data.",
+          "Markets": "Agriculture",
+          "Domains": "Operations management",
+          "SDGs": [8, 9]
+        },
+        {
+          "id": "livestock_wearables",
+          "name": "Livestock wearables",
+          "description": "Wearable GNSS devices for monitoring livestock location, health, and behavior.",
+          "Markets": "Agriculture",
+          "Domains": "Operations management",
+          "SDGs": [2, 3]
+        }
+      ]
+    },
+    {
+      "id": "aviation_drones",
+      "name": "Aviation & Drones",
+      "services": [
+        {
+          "id": "aircraft_emission_measurement",
+          "name": "Aircraft emission measurement and monitoring",
+          "description": "Monitoring and measurement of aircraft emissions using sensors and satellite data.",
+          "Markets": "Aviation & Drones",
+          "Domains": "N/A",
+          "SDGs": [13]
+        },
+        {
+          "id": "particulate_matter_monitoring",
+          "name": "Particulate matter monitoring",
+          "description": "Detection and monitoring of airborne particulate matter using drone-based sensors.",
+          "Markets": "Aviation & Drones",
+          "Domains": "N/A",
+          "SDGs": [3, 13]
+        },
+        {
+          "id": "open_drone_navigation",
+          "name": "Open drone navigation",
+          "description": "GNSS and EO-enabled navigation services for safe and efficient drone operations.",
+          "Markets": "Aviation & Drones",
+          "Domains": "N/A",
+          "SDGs": [9, 11]
+        }
+      ]
+    },
+    {
+      "id": "biodiversity_ecosystems",
+      "name": "Biodiversity, Ecosystems and Natural Capital",
+      "services": [
+        {
+          "id": "animal_tracking",
+          "name": "Animal tracking for biodiversity purposes",
+          "description": "GNSS and satellite tracking of animals to monitor population and behavior.",
+          "Markets": "Biodiversity, Ecosystems and Natural Capital",
+          "Domains": "N/A",
+          "SDGs": [14, 15]
+        },
+        {
+          "id": "coastal_ecosystems_monitoring",
+          "name": "Coastal ecosystems monitoring",
+          "description": "Monitoring the health and changes of coastal ecosystems using EO.",
+          "Markets": "Biodiversity, Ecosystems and Natural Capital",
+          "Domains": "N/A",
+          "SDGs": [14, 15]
+        },
+        {
+          "id": "snow_ice_ecosystems_monitoring",
+          "name": "Snow and ice ecosystems monitoring",
+          "description": "Observation and monitoring of polar and snow-covered ecosystems using EO.",
+          "Markets": "Biodiversity, Ecosystems and Natural Capital",
+          "Domains": "N/A",
+          "SDGs": [13, 15]
+        },
+        {
+          "id": "terrestrial_ecosystems_monitoring",
+          "name": "Terrestrial ecosystems monitoring",
+          "description": "Monitoring forests, grasslands, and other terrestrial ecosystems via EO data.",
+          "Markets": "Biodiversity, Ecosystems and Natural Capital",
+          "Domains": "N/A",
+          "SDGs": [13, 15]
+        },
+        {
+          "id": "water_ecosystems_monitoring",
+          "name": "Water ecosystems monitoring",
+          "description": "Monitoring lakes, rivers, and freshwater ecosystems for water quality and biodiversity.",
+          "Markets": "Biodiversity, Ecosystems and Natural Capital",
+          "Domains": "N/A",
+          "SDGs": [6, 14, 15]
+        }
+      ]
+    },
+    {
+      "id": "climate_services",
+      "name": "Climate Services",
+      "services": [
+        {
+          "id": "climate_change_mitigation_adaptation",
+          "name": "Climate change mitigation and adaptation",
+          "description": "Services supporting mitigation and adaptation strategies using satellite and GNSS data.",
+          "Markets": "Climate services",
+          "Domains": "N/A",
+          "SDGs": [13, 7, 9]
+        },
+        {
+          "id": "earth_observation_modeling",
+          "name": "Earth observation-based modelling",
+          "description": "Modeling climate and environmental processes using satellite data.",
+          "Markets": "Climate services",
+          "Domains": "N/A",
+          "SDGs": [13, 9]
+        },
+        {
+          "id": "gnss_based_climate_modeling",
+          "name": "GNSS-based climate modelling",
+          "description": "Using GNSS data for climate-related modeling and predictions.",
+          "Markets": "Climate services",
+          "Domains": "N/A",
+          "SDGs": [13, 9]
+        },
+        {
+          "id": "climate_forecasting",
+          "name": "Climate forecasting",
+          "description": "Forecasting weather and climate patterns with EO and GNSS inputs.",
+          "Markets": "Climate services",
+          "Domains": "N/A",
+          "SDGs": [13, 9]
+        },
+        {
+          "id": "climate_monitoring",
+          "name": "Climate monitoring",
+          "description": "Continuous monitoring of climate parameters using Earth observation systems.",
+          "Markets": "Climate services",
+          "Domains": "N/A",
+          "SDGs": [13, 9]
+        }
+      ]
+    },
+    {
+      "id": "consumer_solutions_health",
+      "name": "Consumer Solutions, Tourism & Health",
+      "services": [
+        {
+          "id": "mapping_gis",
+          "name": "Mapping and GIS",
+          "description": "Mapping services and GIS solutions for tourism, health, and consumer applications.",
+          "Markets": "Consumer solutions, tourism and health",
+          "Domains": "N/A",
+          "SDGs": [11, 9]
+        },
+        {
+          "id": "workforce_management",
+          "name": "Workforce management",
+          "description": "Monitoring and management of workforce logistics using EO and GNSS.",
+          "Markets": "Consumer solutions, tourism and health",
+          "Domains": "N/A",
+          "SDGs": [8, 9]
+        },
+        {
+          "id": "air_quality_monitoring",
+          "name": "Air quality monitoring",
+          "description": "Monitoring of urban air quality and pollution levels.",
+          "Markets": "Consumer solutions, tourism and health",
+          "Domains": "N/A",
+          "SDGs": [3, 13]
+        },
+        {
+          "id": "mhealth",
+          "name": "mHealth",
+          "description": "Mobile health solutions integrating geospatial and environmental data.",
+          "Markets": "Consumer solutions, tourism and health",
+          "Domains": "N/A",
+          "SDGs": [3, 9]
+        },
+        {
+          "id": "safety_emergency",
+          "name": "Safety and emergency",
+          "description": "Monitoring and management of safety and emergency services.",
+          "Markets": "Consumer solutions, tourism and health",
+          "Domains": "N/A",
+          "SDGs": [3, 11]
+        },
+        {
+          "id": "social_networks",
+          "name": "Social networks",
+          "description": "Integration of geospatial data into social networking platforms for urban monitoring and services.",
+          "Markets": "Consumer solutions, tourism and health",
+          "Domains": "N/A",
+          "SDGs": [9, 10]
+        },
+        {
+          "id": "sport_fitness_tracking",
+          "name": "Sport, fitness and wellness tracking",
+          "description": "Tracking and analytics for wellness and specialized support services.",
+          "Markets": "Consumer solutions, tourism and health",
+          "Domains": "N/A",
+          "SDGs": [3, 10]
+        },
+        {
+          "id": "uv_monitoring",
+          "name": "UV monitoring",
+          "description": "Monitoring ultraviolet radiation levels for public health.",
+          "Markets": "Consumer solutions, tourism and health",
+          "Domains": "N/A",
+          "SDGs": [3, 13]
+        },
+        {
+          "id": "navigation_smartphone",
+          "name": "Navigation for smartphone users",
+          "description": "GNSS-enabled navigation services for smartphones.",
+          "Markets": "Consumer solutions, tourism and health",
+          "Domains": "N/A",
+          "SDGs": [9, 11]
+        },
+        {
+          "id": "personal_asset_tracking",
+          "name": "Personal and asset tracking",
+          "description": "GNSS-based tracking solutions for people and assets.",
+          "Markets": "Consumer solutions, tourism and health",
+          "Domains": "N/A",
+          "SDGs": [9, 11]
+        },
+        {
+          "id": "visually_impaired_support",
+          "name": "Visually impaired support",
+          "description": "Navigation and support systems for visually impaired people.",
+          "Markets": "Consumer solutions, tourism and health",
+          "Domains": "N/A",
+          "SDGs": [3, 10]
+        },
+        {
+          "id": "consumer_robotics",
+          "name": "Consumer robotics",
+          "description": "Robotic solutions for consumer applications including GNSS-based navigation.",
+          "Markets": "Consumer solutions, tourism and health",
+          "Domains": "N/A",
+          "SDGs": [9, 8]
+        },
+        {
+          "id": "points_of_interest",
+          "name": "Points of interest",
+          "description": "Mapping and geospatial identification of points of interest for consumers.",
+          "Markets": "Consumer solutions, tourism and health",
+          "Domains": "N/A",
+          "SDGs": [11, 9]
+        },
+        {
+          "id": "early_warning",
+          "name": "Early warning",
+          "description": "Early warning systems for natural hazards and urban risk management.",
+          "Markets": "Consumer solutions, tourism and health",
+          "Domains": "N/A",
+          "SDGs": [11, 13]
+        },
+        {
+          "id": "gnss_ocean_buoys",
+          "name": "GNSS-enabled ocean monitoring buoys",
+          "description": "GNSS-equipped buoys to monitor oceanographic parameters and support maritime safety.",
+          "Markets": "Consumer solutions, tourism and health",
+          "Domains": "N/A",
+          "SDGs": [14, 3, 9]
+        }
+      ]
+    },
+    {
+      "id": "emergency_humanitarian",
+      "name": "Emergency Management & Humanitarian Aid",
+      "services": [
+        {
+          "id": "human_displacement_monitoring",
+          "name": "Earth observation human displacement monitoring",
+          "description": "Monitoring population displacement and migration patterns using EO.",
+          "Markets": "Emergency management & humanitarian aid",
+          "Domains": "N/A",
+          "SDGs": [1, 11, 16]
+        },
+        {
+          "id": "refugee_camp_management",
+          "name": "Management of refugee camps",
+          "description": "Optimizing operations and safety in refugee camps through EO and GNSS data.",
+          "Markets": "Emergency management & humanitarian aid",
+          "Domains": "N/A",
+          "SDGs": [1, 3, 11, 16]
+        },
+        {
+          "id": "population_counting",
+          "name": "Population counting",
+          "description": "Accurate counting of populations in crisis areas using satellite and GNSS data.",
+          "Markets": "Emergency management & humanitarian aid",
+          "Domains": "N/A",
+          "SDGs": [1, 11, 16]
+        },
+        {
+          "id": "telematics_humanitarian_aid",
+          "name": "Telematics for humanitarian aid",
+          "description": "Tracking and monitoring aid delivery using GNSS and EO services.",
+          "Markets": "Emergency management & humanitarian aid",
+          "Domains": "N/A",
+          "SDGs": [9, 11, 16]
+        },
+        {
+          "id": "post_event_analysis",
+          "name": "Post-event analysis",
+          "description": "Analyzing the impact of disasters or conflicts using EO data.",
+          "Markets": "Emergency management & humanitarian aid",
+          "Domains": "N/A",
+          "SDGs": [11, 13, 16]
+        },
+        {
+          "id": "preparedness",
+          "name": "Preparedness",
+          "description": "Disaster preparedness planning and simulations using EO and GNSS.",
+          "Markets": "Emergency management & humanitarian aid",
+          "Domains": "N/A",
+          "SDGs": [11, 13, 16]
+        },
+        {
+          "id": "rapid_mapping",
+          "name": "Rapid mapping",
+          "description": "Quick generation of maps post-disaster or emergency for decision-making.",
+          "Markets": "Emergency management & humanitarian aid",
+          "Domains": "N/A",
+          "SDGs": [11, 13, 16]
+        },
+        {
+          "id": "aviation_beacons",
+          "name": "Beacons for aviation",
+          "description": "Positioning and identification of aviation beacons during emergencies.",
+          "Markets": "Emergency management & humanitarian aid",
+          "Domains": "N/A",
+          "SDGs": [9, 11]
+        },
+        {
+          "id": "maritime_beacons",
+          "name": "Beacons for maritime",
+          "description": "GNSS-enabled beacons to support maritime search and rescue operations.",
+          "Markets": "Emergency management & humanitarian aid",
+          "Domains": "N/A",
+          "SDGs": [9, 11]
+        },
+        {
+          "id": "land_beacons",
+          "name": "Beacons on land",
+          "description": "GNSS-enabled beacons supporting land search and rescue and emergency operations.",
+          "Markets": "Emergency management & humanitarian aid",
+          "Domains": "N/A",
+          "SDGs": [9, 11]
+        },
+        {
+          "id": "situational_awareness_sar",
+          "name": "Situational awareness supporting search and rescue",
+          "description": "EO and GNSS solutions supporting SAR teams and rescue coordination.",
+          "Markets": "Emergency management & humanitarian aid",
+          "Domains": "N/A",
+          "SDGs": [3, 11, 14]
+        }
+      ]
+    },
+    {
+      "id": "energy_raw_materials",
+      "name": "Energy & Raw Materials",
+      "services": [
+        {
+          "id": "energy_network_monitoring",
+          "name": "Energy network conditions monitoring",
+          "description": "Monitoring the structural integrity and operational conditions of energy infrastructure including towers, poles, wind and solar plants using EO and GNSS.",
+          "Markets": "Energy & raw materials",
+          "Domains": "N/A",
+          "SDGs": [7, 9, 13]
+        },
+        {
+          "id": "phasor_measurement_units",
+          "name": "Phasor measurement units (PMU)",
+          "description": "GNSS-enabled timing and synchronization for PMUs across power networks to improve reliability.",
+          "Markets": "Energy & raw materials",
+          "Domains": "N/A",
+          "SDGs": [7, 9]
+        },
+        {
+          "id": "environmental_impact_energy_mineral",
+          "name": "Environmental impact assessment of energy and mineral resources plants",
+          "description": "Earth observation supports mitigation of environmental effects through continuous monitoring of relevant parameters including air, water, soil quality and vegetation.",
+          "Markets": "Energy & raw materials",
+          "Domains": "N/A",
+          "SDGs": [6, 7, 13, 15]
+        },
+        {
+          "id": "supply_chain_insights",
+          "name": "Supply chain insights",
+          "description": "EO data supports market analysts, operators, regulators and investors in understanding energy dynamics using advanced analytics for applications such as reservoir monitoring, methane detection, and production mapping.",
+          "Markets": "Energy & raw materials",
+          "Domains": "N/A",
+          "SDGs": [7, 9, 13]
+        },
+        {
+          "id": "power_plant_optimization",
+          "name": "Power plant design optimization",
+          "description": "EO data helps optimize renewable energy plant design including solar panel positioning, wind turbine layout, and climate conditions analysis.",
+          "Markets": "Energy & raw materials",
+          "Domains": "N/A",
+          "SDGs": [7, 9, 13]
+        },
+        {
+          "id": "renewable_energy_assessment",
+          "name": "Renewable energy assessment potential and forecast",
+          "description": "EO data aids in site selection and production forecasting for renewable energy projects, including solar, wind, OTEC, and hydropower plants.",
+          "Markets": "Energy & raw materials",
+          "Domains": "N/A",
+          "SDGs": [7, 13]
+        },
+        {
+          "id": "risk_assessment_energy_assets",
+          "name": "Risk assessment for energy assets",
+          "description": "EO data helps assess natural risks to energy infrastructure to prevent damage and ensure worker safety.",
+          "Markets": "Energy & raw materials",
+          "Domains": "N/A",
+          "SDGs": [3, 7, 13]
+        },
+        {
+          "id": "site_selection_energy",
+          "name": "Site selection, planning and monitoring",
+          "description": "EO and GNSS data provide site evaluation, topography mapping, geomatics, and environmental monitoring for renewable energy installations.",
+          "Markets": "Energy & raw materials",
+          "Domains": "N/A",
+          "SDGs": [7, 9, 11, 13]
+        }
+      ]
+    },
+    {
+      "id": "environmental_monitoring",
+      "name": "Environmental Monitoring",
+      "services": [
+        {
+          "id": "environmental_auditing",
+          "name": "Environmental auditing",
+          "description": "EO data used to assess human impact on atmosphere, coasts, land, water, and oceans including air quality, greenhouse gases, wetland loss, land-use change, vegetation monitoring, pollution, and infrastructure impacts.",
+          "Markets": "Environmental Monitoring",
+          "Domains": "N/A",
+          "SDGs": [6, 11, 13, 15]
+        },
+        {
+          "id": "environmental_resources_management",
+          "name": "Environmental resources management",
+          "description": "EO data supports sustainable management of natural resources, enabling monitoring of air, water, land, and coasts including pollution and human impact.",
+          "Markets": "Environmental Monitoring",
+          "Domains": "N/A",
+          "SDGs": [6, 11, 13, 15]
+        },
+        {
+          "id": "impact_studies_esg",
+          "name": "Impact studies and ESG",
+          "description": "EO data supports environmental, social, and corporate governance (ESG) monitoring for air quality, land-use, wetlands, vegetation, waste, and infrastructure.",
+          "Markets": "Environmental Monitoring",
+          "Domains": "N/A",
+          "SDGs": [6, 11, 12, 13, 15]
+        }
+      ]
+    },
+    {
+      "id": "fisheries_aquaculture",
+      "name": "Fisheries & Aquaculture",
+      "services": [
+        {
+          "id": "aquaculture_operations",
+          "name": "Aquaculture operations optimization",
+          "description": "EO and GNSS support water quality monitoring, harmful algae bloom detection, stock health modelling, and vessel/buoy navigation.",
+          "Markets": "Fisheries & Aquaculture",
+          "Domains": "N/A",
+          "SDGs": [2, 14, 15]
+        },
+        {
+          "id": "aquaculture_site_selection",
+          "name": "Aquaculture site selection",
+          "description": "EO data and forecasting assist in selecting optimal aquaculture sites in nearshore and offshore environments.",
+          "Markets": "Fisheries & Aquaculture",
+          "Domains": "N/A",
+          "SDGs": [2, 14]
+        },
+        {
+          "id": "catch_optimization",
+          "name": "Catch optimization",
+          "description": "EO data and forecasting identify optimal zones and times to improve fishing yield.",
+          "Markets": "Fisheries & Aquaculture",
+          "Domains": "N/A",
+          "SDGs": [2, 14]
+        },
+        {
+          "id": "iuu_control",
+          "name": "Illegal, unreported, and unregulated (IUU) control",
+          "description": "EO and GNSS (AIS/VMS) support monitoring to combat illegal fishing.",
+          "Markets": "Fisheries & Aquaculture",
+          "Domains": "N/A",
+          "SDGs": [14, 16]
+        },
+        {
+          "id": "fishing_aggregating_devices",
+          "name": "Fishing aggregating devices",
+          "description": "GNSS-enabled buoys assist fishermen in locating nets, equipment, and fish stocks.",
+          "Markets": "Fisheries & Aquaculture",
+          "Domains": "N/A",
+          "SDGs": [2, 14]
+        },
+        {
+          "id": "fish_stock_detection",
+          "name": "Fish stock detection",
+          "description": "EO contributes to modelling and detecting fish stocks using sea surface temperature, currents, ocean colour, and bathymetry.",
+          "Markets": "Fisheries & Aquaculture",
+          "Domains": "N/A",
+          "SDGs": [2, 14]
+        },
+        {
+          "id": "fishing_vessels_navigation",
+          "name": "Fishing vessels navigation",
+          "description": "GNSS-enabled navigation devices help fishing vessels reach fishing zones and locate equipment.",
+          "Markets": "Fisheries & Aquaculture",
+          "Domains": "N/A",
+          "SDGs": [9, 14]
+        }
+      ]
+    },
+    {
+      "id": "forestry",
+      "name": "Forestry",
+      "services": [
+        {
+          "id": "biomass_monitoring",
+          "name": "Biomass monitoring",
+          "description": "EO and GNSS enable biomass monitoring to understand CO2 absorption and biomass energy potential.",
+          "Markets": "Forestry",
+          "Domains": "N/A",
+          "SDGs": [13, 15]
+        },
+        {
+          "id": "deforestation_monitoring",
+          "name": "Deforestation/degradation monitoring",
+          "description": "EO and GNSS track forest biomass changes to monitor deforestation and degradation.",
+          "Markets": "Forestry",
+          "Domains": "N/A",
+          "SDGs": [13, 15]
+        },
+        {
+          "id": "forest_inventory_monitoring",
+          "name": "Forest inventory monitoring",
+          "description": "EO and GNSS track timber inventories using optical, radar, and in situ measurements.",
+          "Markets": "Forestry",
+          "Domains": "N/A",
+          "SDGs": [13, 15]
+        },
+        {
+          "id": "forest_vegetation_health",
+          "name": "Forest vegetation health monitoring",
+          "description": "EO data (optical and radar) monitors tree and forest vegetation health via indices like NDVI.",
+          "Markets": "Forestry",
+          "Domains": "N/A",
+          "SDGs": [13, 15]
+        },
+        {
+          "id": "illegal_logging_monitoring",
+          "name": "Illegal logging monitoring",
+          "description": "EO identifies illegal logging by monitoring land-use changes and forest cover.",
+          "Markets": "Forestry",
+          "Domains": "N/A",
+          "SDGs": [13, 15]
+        }
+      ]
+    },
+    {
+      "id": "infrastructure",
+      "name": "Infrastructure",
+      "services": [
+        {
+          "id": "environmental_impact_infrastructure",
+          "name": "Environmental impact assessment of infrastructure",
+          "description": "EO supports analysis of infrastructure impact including pollution, vegetation, and biodiversity monitoring.",
+          "Markets": "Infrastructure",
+          "Domains": "N/A",
+          "SDGs": [6, 11, 13, 15]
+        },
+        {
+          "id": "permitting",
+          "name": "Permitting",
+          "description": "EO assists in pre-construction evaluations including land use, forest mapping, geological and disaster risk assessments.",
+          "Markets": "Infrastructure",
+          "Domains": "N/A",
+          "SDGs": [9, 11, 13, 15]
+        },
+        {
+          "id": "site_selection_planning",
+          "name": "Site selection and planning",
+          "description": "EO and GNSS contribute to selecting sites and routes for infrastructure with topography, geomatics, and mapping support.",
+          "Markets": "Infrastructure",
+          "Domains": "N/A",
+          "SDGs": [9, 11, 13, 15]
+        },
+        {
+          "id": "vulnerability_analysis",
+          "name": "Vulnerability analysis",
+          "description": "EO contributes to assessing natural hazard risks with historical data and climate projections.",
+          "Markets": "Infrastructure",
+          "Domains": "N/A",
+          "SDGs": [11, 13]
+        },
+        {
+          "id": "construction_operations",
+          "name": "Construction operations",
+          "description": "EO and GNSS monitor construction sites, provide semi-automatic or fully automated heavy machinery guidance, and feed BIM models.",
+          "Markets": "Infrastructure",
+          "Domains": "N/A",
+          "SDGs": [9, 11, 13]
+        }
+      ]
+    }
+  ]
+}

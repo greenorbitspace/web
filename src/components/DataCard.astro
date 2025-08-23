@@ -1,0 +1,24 @@
+---
+const { title, value, unit, description, icon, chart } = Astro.props;
+// title: string, main heading
+// value: number/string, primary metric
+// unit: string, optional unit (e.g., "%", "Gt CO2")
+// description: string, supporting text
+// icon: string (optional, could be a Heroicon or emoji)
+// chart: JSX component (optional) to render inside the card
+---
+
+<div class="bg-white dark:bg-gray-800 shadow-md rounded-2xl p-6 flex flex-col space-y-4 hover:shadow-xl transition-shadow duration-200">
+  <div class="flex items-center space-x-3">
+    {icon && <div class="text-3xl">{icon}</div>}
+    <div>
+      <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">{title}</h3>
+      {unit && value !== undefined
+        ? <p class="text-2xl font-bold text-blue-600 dark:text-blue-400">{value}{unit}</p>
+        : <p class="text-2xl font-bold text-blue-600 dark:text-blue-400">{value}</p>
+      }
+    </div>
+  </div>
+  {description && <p class="text-gray-700 dark:text-gray-300 text-sm">{description}</p>}
+  {chart && <div class="w-full h-40">{chart}</div>}
+</div>

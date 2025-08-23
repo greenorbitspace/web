@@ -1,0 +1,343 @@
+{
+  "environmental_aspects": [
+    {
+      "category": "Air Emissions",
+      "aspects": [
+        {
+          "name": "Electricity Consumption",
+          "description": "Use of electricity for office operations and digital infrastructure.",
+          "impacts": [
+            {
+              "type": "Adverse",
+              "description": "Increased greenhouse gas emissions contributing to climate change."
+            }
+          ],
+          "controls": [
+            "Switch to 100% renewable energy providers",
+            "Implement energy-efficient lighting and devices",
+            "Encourage power-saving modes for office equipment"
+          ],
+          "legal_requirements": [
+            "UK Climate Change Act 2008",
+            "EU Emissions Trading Scheme (if applicable)"
+          ],
+          "monitoring_metrics": [
+            "Monthly kWh consumption",
+            "Annual CO2 equivalent emissions"
+          ]
+        },
+        {
+          "name": "Business Travel",
+          "description": "Travel by employees for client meetings and conferences.",
+          "impacts": [
+            {
+              "type": "Adverse",
+              "description": "Emission of CO2 and other pollutants from transportation."
+            }
+          ],
+          "controls": [
+            "Prioritise train and EV travel",
+            "Encourage virtual meetings",
+            "Offset unavoidable air travel emissions via certified carbon credits"
+          ],
+          "legal_requirements": [
+            "UK Corporate Carbon Reporting (Streamlined Energy and Carbon Reporting)"
+          ],
+          "monitoring_metrics": [
+            "Annual travel distance by mode",
+            "CO2e emissions per employee"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Water and Effluents",
+      "aspects": [
+        {
+          "name": "Office Water Usage",
+          "description": "Consumption of water for sanitation, cooling, and cleaning systems.",
+          "impacts": [
+            {
+              "type": "Adverse",
+              "description": "Depletion of local water resources and increased wastewater load."
+            }
+          ],
+          "controls": [
+            "Install low-flow faucets and toilets",
+            "Promote water-saving behavior among staff"
+          ],
+          "legal_requirements": [
+            "UK Water Resources Act 1991",
+            "Local council water use regulations"
+          ],
+          "monitoring_metrics": [
+            "Monthly water meter readings",
+            "Water usage per employee"
+          ]
+        },
+        {
+          "name": "Wastewater Discharge",
+          "description": "Effluent from office facilities and cooling systems.",
+          "impacts": [
+            {
+              "type": "Adverse",
+              "description": "Potential contamination of local water bodies."
+            }
+          ],
+          "controls": [
+            "Use non-toxic cleaning agents",
+            "Proper maintenance of drainage and cooling systems"
+          ],
+          "legal_requirements": [
+            "UK Environmental Protection Act 1990",
+            "Water Industry Act 1991"
+          ],
+          "monitoring_metrics": [
+            "Periodic effluent testing",
+            "Compliance reports from local water authorities"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Soil Contamination",
+      "aspects": [
+        {
+          "name": "Waste Disposal",
+          "description": "Disposal of office waste, including electronic waste.",
+          "impacts": [
+            {
+              "type": "Adverse",
+              "description": "Potential leaching of hazardous substances into soil."
+            }
+          ],
+          "controls": [
+            "Segregate recyclable and hazardous waste",
+            "Use certified e-waste recycling vendors"
+          ],
+          "legal_requirements": [
+            "UK Hazardous Waste Regulations 2005",
+            "Waste Electrical and Electronic Equipment (WEEE) Regulations"
+          ],
+          "monitoring_metrics": [
+            "Annual waste tonnage by type",
+            "Percentage of waste recycled"
+          ]
+        },
+        {
+          "name": "Chemical Handling",
+          "description": "Use and storage of cleaning agents and printer toners.",
+          "impacts": [
+            {
+              "type": "Adverse",
+              "description": "Risk of soil contamination if spills occur."
+            }
+          ],
+          "controls": [
+            "Proper storage in labeled containers",
+            "Spill response procedures and training"
+          ],
+          "legal_requirements": [
+            "Control of Substances Hazardous to Health (COSHH) Regulations 2002"
+          ],
+          "monitoring_metrics": [
+            "Incident reports",
+            "Inventory tracking of hazardous substances"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Energy Use",
+      "aspects": [
+        {
+          "name": "Office Lighting and HVAC",
+          "description": "Energy consumption for lighting and heating, ventilation, and air conditioning systems.",
+          "impacts": [
+            {
+              "type": "Adverse",
+              "description": "Increased energy demand leading to higher emissions."
+            }
+          ],
+          "controls": [
+            "Install motion-sensor lighting",
+            "Schedule regular HVAC maintenance",
+            "Upgrade to high-efficiency systems"
+          ],
+          "legal_requirements": [
+            "UK Energy Performance of Buildings Regulations",
+            "UK Climate Change Act 2008"
+          ],
+          "monitoring_metrics": [
+            "kWh consumption per month",
+            "Energy efficiency rating improvements"
+          ]
+        },
+        {
+          "name": "Digital Infrastructure",
+          "description": "Energy use by servers and data centers hosting digital platforms.",
+          "impacts": [
+            {
+              "type": "Adverse",
+              "description": "High energy consumption contributing to carbon footprint."
+            }
+          ],
+          "controls": [
+            "Use energy-efficient servers",
+            "Consolidate workloads to reduce server redundancy",
+            "Choose green cloud providers"
+          ],
+          "legal_requirements": [
+            "UK Streamlined Energy and Carbon Reporting (SECR)"
+          ],
+          "monitoring_metrics": [
+            "Server energy consumption",
+            "CO2e emissions per service"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Noise Emissions",
+      "aspects": [
+        {
+          "name": "Office Equipment Noise",
+          "description": "Noise from printers, servers, and HVAC systems.",
+          "impacts": [
+            {
+              "type": "Adverse",
+              "description": "Potential disturbance to employees and nearby community."
+            }
+          ],
+          "controls": [
+            "Install noise-dampening materials",
+            "Regular maintenance to reduce operational noise"
+          ],
+          "legal_requirements": [
+            "UK Control of Noise at Work Regulations 2005"
+          ],
+          "monitoring_metrics": [
+            "Decibel measurements in office",
+            "Employee noise complaints logged"
+          ]
+        },
+        {
+          "name": "Construction or Renovation Activities",
+          "description": "Noise from office upgrades or building work.",
+          "impacts": [
+            {
+              "type": "Adverse",
+              "description": "Disturbance to local environment and community."
+            }
+          ],
+          "controls": [
+            "Schedule work during permitted hours",
+            "Use noise-reducing equipment"
+          ],
+          "legal_requirements": [
+            "Local council noise ordinances"
+          ],
+          "monitoring_metrics": [
+            "Construction noise log",
+            "Compliance with permitted work hours"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Physical Aspects",
+      "aspects": [
+        {
+          "name": "Office Space Layout",
+          "description": "Ergonomics, lighting, and ventilation.",
+          "impacts": [
+            {
+              "type": "Adverse",
+              "description": "Improper design can affect health, safety, and productivity."
+            }
+          ],
+          "controls": [
+            "Regular ergonomic assessments",
+            "Optimize natural lighting and air circulation"
+          ],
+          "legal_requirements": [
+            "UK Health and Safety at Work Act 1974"
+          ],
+          "monitoring_metrics": [
+            "Employee comfort surveys",
+            "Number of ergonomics-related incidents"
+          ]
+        },
+        {
+          "name": "Building Maintenance",
+          "description": "Maintenance of physical infrastructure including roofs, flooring, and furniture.",
+          "impacts": [
+            {
+              "type": "Adverse",
+              "description": "Poor maintenance may increase waste or require replacement more frequently."
+            }
+          ],
+          "controls": [
+            "Scheduled preventive maintenance",
+            "Use sustainable materials for repairs"
+          ],
+          "legal_requirements": [
+            "UK Building Regulations"
+          ],
+          "monitoring_metrics": [
+            "Maintenance logs",
+            "Frequency of replacements"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Radiation",
+      "aspects": [
+        {
+          "name": "Electronic Devices",
+          "description": "EMF emissions from servers, monitors, and Wi-Fi routers.",
+          "impacts": [
+            {
+              "type": "Adverse",
+              "description": "Potential minor health effects and regulatory compliance requirements."
+            }
+          ],
+          "controls": [
+            "Follow recommended distance and exposure guidelines",
+            "Limit use of high-emission devices in shared spaces"
+          ],
+          "legal_requirements": [
+            "UK Health Protection Agency EMF guidelines"
+          ],
+          "monitoring_metrics": [
+            "Periodic EMF measurements",
+            "Incident reports related to EMF exposure"
+          ]
+        },
+        {
+          "name": "Satellite Communication Equipment",
+          "description": "Use of antennas and radio transmitters for space-related services.",
+          "impacts": [
+            {
+              "type": "Adverse",
+              "description": "Requires compliance with radiation and frequency regulations."
+            }
+          ],
+          "controls": [
+            "Operate equipment according to manufacturer guidelines",
+            "Ensure compliance with frequency licensing"
+          ],
+          "legal_requirements": [
+            "Ofcom licensing for radio transmissions",
+            "ICNIRP EMF exposure limits"
+          ],
+          "monitoring_metrics": [
+            "Compliance audits",
+            "Equipment calibration and inspection records"
+          ]
+        }
+      ]
+    }
+  ]
+}

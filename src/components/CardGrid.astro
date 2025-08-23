@@ -1,12 +1,20 @@
 ---
-const { cards } = Astro.props;
+const { cards = [] } = Astro.props; // default to empty array
 ---
 
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-  {cards.map(card => (
-    <a href={card.link} class={`block rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 ${card.color} text-white`}>
-      <h3 class="text-xl font-bold mb-2">{card.title}</h3>
-      <p class="text-sm">{card.description}</p>
-    </a>
-  ))}
-</div>
+{cards.length > 0 ? (
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {cards.map((card, index) => (
+      <a
+        key={index}
+        href={card.link || "#"}
+        class={`block rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 ${card.color || "bg-gray-800"} text-white`}
+      >
+        <h3 class="text-xl font-bold mb-2">{card.title || "Untitled"}</h3>
+        <p class="text-sm">{card.description || "No description available."}</p>
+      </a>
+    ))}
+  </div>
+) : (
+  <p class="text-center text-gray-500">No cards available.</p>
+)}

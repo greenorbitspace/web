@@ -1,0 +1,49 @@
+---
+import satellitesData from '../data/satellites-services-links.json';
+
+const { satelliteServiceLinks, services, portals } = satellitesData;
+---
+
+<section class="py-12 max-w-6xl mx-auto px-4">
+  <h2 class="text-3xl font-bold mb-6">Copernicus & Contributing Satellites</h2>
+
+  <div class="grid gap-8">
+    {satelliteServiceLinks.map(sat => (
+      <article class="p-6 bg-white rounded-2xl shadow-md dark:bg-gray-800">
+        <h3 class="text-xl font-semibold mb-2">{sat.satellite}</h3>
+
+        <div class="mb-4">
+          <strong>Services:</strong>
+          <ul class="list-disc list-inside">
+            {sat.services.map(serviceKey => {
+              const service = services.find(s => s.name === serviceKey);
+              return (
+                <li>
+                  <a href={service.url} target="_blank" class="text-blue-600 hover:underline">
+                    {service.name}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
+        <div>
+          <strong>Portals:</strong>
+          <ul class="list-disc list-inside">
+            {sat.portals.map(portalKey => {
+              const portal = portals.find(p => p.name === portalKey);
+              return (
+                <li>
+                  <a href={portal.url} target="_blank" class="text-blue-600 hover:underline">
+                    {portal.name}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

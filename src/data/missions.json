@@ -1,0 +1,54 @@
+[
+  {
+    "name": "ELSA-d",
+    "description": "Astroscale's End-of-Life Services by Astroscale demonstration mission for active debris removal in Low Earth Orbit.",
+    "launchDate": "2021-03-22",
+    "status": "active",
+    "type": ["Debris Removal", "In-Orbit Servicing", "Sustainability"],
+    "themes": ["For Space", "In Space"],
+    "satellites": ["ELSA-d Chaser", "ELSA-d Client"],
+    "agencies": ["Astroscale"],
+    "innovations": [
+      "Magnetic Capture Technology",
+      "Autonomous Rendezvous and Docking",
+      "Debris Removal Demonstration"
+    ],
+    "portals": [
+      {"name": "Astroscale ELSA-d", "url": "https://astroscale.com/technology/elsa-d/"}
+    ],
+    "objectives": [
+      "Demonstrate satellite capture and deorbit technologies",
+      "Validate active debris removal procedures in orbit",
+      "Support sustainable LEO operations"
+    ],
+    "references": [
+      {"type": "website", "url": "https://astroscale.com/technology/elsa-d/"}
+    ]
+  },
+  {
+    "name": "OrbitFab Tanker Demonstration",
+    "description": "OrbitFab's in-space refueling demonstration mission to test standardized fuel transfer interfaces and satellite servicing in orbit.",
+    "launchDate": "2023-01-15",
+    "status": "active",
+    "type": ["In-Orbit Servicing", "Refueling", "Sustainability"],
+    "themes": ["For Space", "In Space"],
+    "satellites": ["Tanker-1", "Client Satellite"],
+    "agencies": ["OrbitFab"],
+    "innovations": [
+      "Standardized Fuel Interfaces",
+      "Autonomous Fuel Transfer",
+      "In-Orbit Logistics Testing"
+    ],
+    "portals": [
+      {"name": "OrbitFab Mission Info", "url": "https://orbitfab.com/technology/"}
+    ],
+    "objectives": [
+      "Test in-space satellite refueling capabilities",
+      "Demonstrate fuel transfer between satellites",
+      "Enable longer satellite operational lifetimes and debris reduction"
+    ],
+    "references": [
+      {"type": "website", "url": "https://orbitfab.com/technology/"}
+    ]
+  }
+]
