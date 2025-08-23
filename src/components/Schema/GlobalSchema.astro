@@ -1,12 +1,12 @@
 ---
 import organisations from "../../data/organisations.json";
-import brands from "../../data/brands.json";
-import socials from "../../data/socials.json";
-import contact from "../../data/contact.json";
-import founder from "../../data/founder.json";
-import areas from "../../data/areas.json";
-import knowledge from "../../data/knowledge.json";
-import profiles from "../../data/profiles.json";
+import brands from "../../data/Schema/brands.json";
+import socials from "../../data/Schema/socials.json";
+import contact from "../../data/Schema/contact.json";
+import founders from "../../data/Schema/founders.json";
+import areas from "../../data/Schema/areas.json";
+import knowledge from "../../data/Schema/knowledge.json";
+import profiles from "../../data/Schema/profiles.json";
 
 // Filter member or partner organisations
 const memberOfOrgs = organisations
@@ -39,9 +39,9 @@ const orgSchema = {
   "alternateName": "Green Orbit",
   "url": "https://greenorbit.space",
   "logo": "https://greenorbit.space/images/logo.png",
-  "foundingDate": "2020-01-01",
+  "foundingDate": "2023-10-12",
   "description": "Green Orbit Digital is a Leicester-based agency specialising in sustainable marketing for the space sector. We help space organisations grow through strategic SEO, content, PR, and digital sustainability practices.",
-  "founder": founder,
+  "founder": founders,
   "contactPoint": contact.contactPoint,
   "address": contact.address,
   "sameAs": sameAsLinks,
