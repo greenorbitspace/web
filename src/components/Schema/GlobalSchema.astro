@@ -8,50 +8,51 @@ import areas from "../../data/schema/areas.json";
 import knowledge from "../../data/schema/knowledge.json";
 import profiles from "../../data/schema/profiles.json";
 
-// Filter member or partner organisations
+// --- Filter member or partner organisations ---
 const memberOfOrgs = organisations
-  .filter(org => org.Type === "member" || org.Type === "partner")
+  .filter(org => ["member", "partner"].includes(org.Type))
   .map(org => ({
     "@type": "Organization",
-    "name": org.Organisation,
-    "url": org.URL,
-    "description": org.Description,
-    "logo": org.logo
+    name: org.Organisation,
+    url: org.URL,
+    description: org.Description,
+    logo: org.logo
   }));
 
-// Flatten all profile categories into a single array
-const flattenedProfiles = Object.values(profiles.profiles).flat();
+// --- Flatten all profile categories into a single array ---
+const flattenedProfiles = Object.values(profiles.profiles || {}).flat();
 
-// Collect sameAs links from socials.json + flattened profiles
+// --- Collect sameAs links from socials.json + flattened profiles ---
 const sameAsRaw = [
   ...socials.map(s => (typeof s === "string" ? s : s.url)),
   ...flattenedProfiles.map(p => (typeof p === "string" ? p : p.url))
 ];
 
-// Deduplicate links
-const sameAsLinks = [...new Set(sameAsRaw)];
+// --- Deduplicate links ---
+const sameAsLinks = Array.from(new Set(sameAsRaw));
 
-// Build the global Organization schema
+// --- Build the Organization schema ---
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Green Orbit Digital",
-  "alternateName": "Green Orbit",
-  "url": "https://greenorbit.space",
-  "logo": "https://greenorbit.space/images/logo.png",
-  "foundingDate": "2023-10-12",
-  "description": "Green Orbit Digital is a Leicester-based agency specialising in sustainable marketing for the space sector. We help space organisations grow through strategic SEO, content, PR, and digital sustainability practices.",
-  "founder": founders,
-  "contactPoint": contact.contactPoint,
-  "address": contact.address,
-  "sameAs": sameAsLinks,
-  "areaServed": areas,
-  "memberOf": memberOfOrgs,
-  "knowsAbout": knowledge,
-  "brand": brands
+  name: "Green Orbit Digital",
+  alternateName: "Green Orbit",
+  url: "https://greenorbit.space",
+  logo: "https://greenorbit.space/images/logo.png",
+  foundingDate: "2023-10-12",
+  description: "Green Orbit Digital is a Leicester-based agency specialising in sustainable marketing for the space sector. We help space organisations grow through strategic SEO, content, PR, and digital sustainability practices.",
+  founder: founders,
+  contactPoint: contact.contactPoint,
+  address: contact.address,
+  sameAs: sameAsLinks,
+  areaServed: areas,
+  memberOf: memberOfOrgs,
+  knowsAbout: knowledge,
+  brand: brands
 };
 ---
 
-<script type="application/ld+json" is:inline>
-  {JSON.stringify(orgSchema, null, 2)}
+<!-- JSON-LD for SEO / structured data -->
+<script type="application/ld+json">
+{JSON.stringify(orgSchema, null, 2)}
 </script>
