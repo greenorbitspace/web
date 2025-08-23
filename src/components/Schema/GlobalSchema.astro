@@ -7,6 +7,9 @@ import founders from "../../data/schema/founders.json";
 import areas from "../../data/schema/areas.json";
 import knowledge from "../../data/schema/knowledge.json";
 import profiles from "../../data/schema/profiles.json";
+import services from "../../data/schema/services.json";
+import webpages from "../../data/schema/webpages.json";
+import blog from "../../data/schema/blog.json";
 
 // --- Safe JSON copies ---
 const safeFounders = JSON.parse(JSON.stringify(founders));
@@ -14,6 +17,9 @@ const safeContact = JSON.parse(JSON.stringify(contact));
 const safeAreas = JSON.parse(JSON.stringify(areas));
 const safeKnowledge = JSON.parse(JSON.stringify(knowledge));
 const safeBrands = JSON.parse(JSON.stringify(brands));
+const safeServices = JSON.parse(JSON.stringify(services));
+const safeWebpages = JSON.parse(JSON.stringify(webpages));
+const safeBlog = JSON.parse(JSON.stringify(blog));
 
 // --- Filter member or partner organisations ---
 const memberOfOrgs = organisations
@@ -41,20 +47,67 @@ const sameAsLinks = Array.from(
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://greenorbit.space/#organization",
   name: "Green Orbit Digital",
   alternateName: "Green Orbit",
   url: "https://greenorbit.space",
   logo: "https://greenorbit.space/images/logo.png",
   foundingDate: "2023-10-12",
+  legalName: "Green Orbit Digital Ltd",
   description: "Green Orbit Digital is a Leicester-based agency specialising in sustainable marketing for the space sector. We help space organisations grow through strategic SEO, content, PR, and digital sustainability practices.",
+  slogan: "Sustainable marketing for the space sector.",
+  keywords: [
+    "sustainable marketing",
+    "space sector marketing",
+    "digital sustainability",
+    "ethical marketing",
+    "B2B SEO",
+    "ESG strategy",
+    "HubSpot CRM",
+    "GA4",
+    "content marketing",
+    "space industry branding"
+  ],
   founder: safeFounders,
   contactPoint: safeContact.contactPoint || [],
   address: safeContact.address || {},
+  geo: safeContact.geo || {},
   sameAs: sameAsLinks,
   areaServed: safeAreas || [],
   memberOf: memberOfOrgs,
   knowsAbout: safeKnowledge || [],
-  brand: safeBrands || []
+  brand: safeBrands || [],
+  awards: [
+    "Shortlisted: Best Sustainable Campaign – UK Space Marketing Awards 2024",
+    "Nominee: Ethical Digital Agency of the Year – Tech for Good Awards 2023"
+  ],
+  hasCredential: [
+    {
+      "@type": "EducationalOccupationalCredential",
+      name: "B Corp Pending",
+      credentialCategory: "Sustainability",
+      url: "https://www.bcorporation.net/"
+    }
+  ],
+  makesOffer: safeServices,
+  hasPart: safeWebpages,
+  publishes: safeBlog,
+  publishingPrinciples: "https://greenorbit.space/",
+  isAccessibleForFree: true,
+  hasPOS: {
+    "@type": "Place",
+    name: "Green Orbit Digital HQ",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Leicester",
+      addressCountry: "GB"
+    }
+  },
+  interactionStatistic: {
+    "@type": "InteractionCounter",
+    interactionType: "https://schema.org/SubscribeAction",
+    userInteractionCount: 2500
+  }
 };
 ---
 
