@@ -15,8 +15,8 @@ const memberOfOrgs = organisations
     "@type": "Organization",
     name: org.Organisation,
     url: org.URL,
-    description: org.Description,
-    logo: org.logo
+    description: org.Description || "",
+    logo: org.logo || ""
   }));
 
 // --- Flatten all profile categories into a single array ---
@@ -42,17 +42,17 @@ const orgSchema = {
   foundingDate: "2023-10-12",
   description: "Green Orbit Digital is a Leicester-based agency specialising in sustainable marketing for the space sector. We help space organisations grow through strategic SEO, content, PR, and digital sustainability practices.",
   founder: founders,
-  contactPoint: contact.contactPoint,
-  address: contact.address,
+  contactPoint: contact.contactPoint || [],
+  address: contact.address || {},
   sameAs: sameAsLinks,
-  areaServed: areas,
+  areaServed: areas || [],
   memberOf: memberOfOrgs,
-  knowsAbout: knowledge,
-  brand: brands
+  knowsAbout: knowledge || [],
+  brand: brands || []
 };
 ---
 
 <!-- JSON-LD for SEO / structured data -->
-<script type="application/ld+json">
+<script type="application/ld+json" is:inline>
 {JSON.stringify(orgSchema, null, 2)}
 </script>
