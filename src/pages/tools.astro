@@ -4,16 +4,10 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import HeroSection from '../components/HeroSection.astro';
 import ToolsList from '../components/ToolsList.jsx';
-import InteractiveMapWrapper from '../components/InteractiveMapWrapper.jsx';
 import tools from '../data/tools.js';
 
 // Sort tools alphabetically
 const sortedTools = tools.slice().sort((a, b) => a.name.localeCompare(b.name));
-
-// Prepare markers for the map (only tools with lat/lng)
-const mapMarkers = sortedTools
-  .filter(t => t.lat && t.lng)
-  .map(t => ({ lat: t.lat, lng: t.lng, label: t.name }));
 ---
 
 <Layout
@@ -22,30 +16,27 @@ const mapMarkers = sortedTools
 >
   <Header />
 
-  <main class="py-12 max-w-6xl mx-auto px-4">
+  <main class="py-12">
 
     <!-- Hero Section -->
-    <HeroSection 
-      title="Tools"
-      description="Explore the digital tools, platforms, and resources we use and recommend for sustainable marketing and space industry innovation."
-    />
+    <div class="max-w-6xl mx-auto px-4">
+      <HeroSection 
+        title="Tools" 
+        description="Explore the digital tools, platforms, and resources we use and recommend for sustainable marketing and space industry innovation."  
+      />
+    </div>
 
     <!-- Tools List Section -->
     <section class="py-12 bg-white dark:bg-secondary-500">
-      <ToolsList client:load tools={sortedTools} />
+      <div class="max-w-6xl mx-auto px-4">
+        <!-- Hydrated client-side component -->
+        <ToolsList client:load tools={sortedTools} />
+      </div>
     </section>
-
-    <!-- Tools Map Section -->
-    {mapMarkers.length > 0 && (
-      <section class="py-12 bg-white dark:bg-secondary-500">
-        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Tool Locations</h2>
-        <InteractiveMapWrapper markers={mapMarkers} />
-      </section>
-    )}
 
     <!-- Developer / API Access Section -->
     <section class="py-16 bg-white dark:bg-secondary-500">
-      <div class="border-t border-gray-200 dark:border-gray-700 pt-16">
+      <div class="max-w-6xl mx-auto px-4 border-t border-gray-200 dark:border-gray-700 pt-16">
         <div class="grid md:grid-cols-2 gap-12 items-center">
 
           <!-- Text Content -->
@@ -67,7 +58,7 @@ const mapMarkers = sortedTools
               {["RESTful API with OAuth 2.0", "Webhooks for automated updates", "Developer sandbox and testing environment"].map(feature => (
                 <div class="flex items-start">
                   <svg class="w-5 h-5 text-green-500 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                   </svg>
                   <p class="text-gray-600 dark:text-white">{feature}</p>
                 </div>

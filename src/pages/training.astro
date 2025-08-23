@@ -6,31 +6,25 @@ import HeroSection from '../components/HeroSection.astro';
 import StripePricingTable from '../components/StripePricingTable.jsx';
 ---
 
-<Layout
-  title="Training"
-  description="Choose a plan that fits your mission. All options include a 14-day free trial—no credit card required."
->
+<Layout title="Training">
   <Header />
 
   <main class="py-12 max-w-6xl mx-auto px-4">
-
-    <!-- Hero Section -->
     <HeroSection 
       title="Training" 
-      description="Choose a plan that fits your mission. All options include a 14-day free trial—no credit card required." 
+      description="Choose a plan that fits your mission. All options include a 14-day free trial—no credit card required."
     />
 
-    <!-- Stripe Pricing Table Section (client-only) -->
+    <!-- Stripe Pricing Table -->
     <section class="py-12 bg-white dark:bg-secondary-500">
       <div class="max-w-6xl mx-auto px-4">
-        <StripePricingTable 
+        <StripePricingTable
           client:load
           pricingTableId="prctbl_1RjhMLE9V0wpcpD5KXUVy3N1"
           publishableKey="pk_live_51RZOfOE9V0wpcpD5X5hZuiXbtRoCa2cMhcILadCbF63npB6O4NdpjKVTqsSBnqx9vrOTWHbgven6dUnGVoVDuhMT00TO8eklxX"
         />
       </div>
     </section>
-
   </main>
 
   <Footer />

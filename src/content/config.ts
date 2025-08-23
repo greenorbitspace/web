@@ -1,13 +1,16 @@
 import { z, defineCollection } from 'astro:content';
 
-// Base schema for all content types
+/** 
+ * Base schema for general content types
+ */
 const baseSchema = z.object({
   title: z.string().min(5),
   description: z.string().max(160).optional(),
-  summary: z.string().max(300).optional(),      // Short summary for cards
-  pubdate: z.string().optional().refine((val) => !val || !isNaN(Date.parse(val)), {
-    message: 'pubdate must be a valid ISO 8601 date string',
-  }),
+  summary: z.string().max(300).optional(), // Short summary for cards
+  pubdate: z.string().optional().refine(
+    val => !val || !isNaN(Date.parse(val)),
+    { message: 'pubdate must be a valid ISO 8601 date string' }
+  ),
   slug: z.string().optional(),
   author: z.string().optional(),
   tags: z.array(z.string()).optional(),
@@ -39,7 +42,9 @@ const baseSchema = z.object({
   un_resolution: z.string().optional(),
 });
 
-// Schema specifically for Organisations
+/** 
+ * Organisation-specific schema
+ */
 const organisationSchema = baseSchema.extend({
   Organisation: z.string().min(2),
   Description: z.string().optional(),
@@ -52,7 +57,9 @@ const organisationSchema = baseSchema.extend({
   entry: z.boolean().optional(),
 });
 
-// Schema for Pledges
+/** 
+ * Pledge schema
+ */
 const pledgeSchema = z.object({
   name: z.string(),
   slug: z.string().optional(),
@@ -72,13 +79,16 @@ const pledgeSchema = z.object({
   URL: z.string().url().optional(),
 });
 
-// Schema for Careers
+/** 
+ * Career schema
+ */
 const careerSchema = z.object({
   title: z.string().min(5),
   slug: z.string().optional(),
-  pubdate: z.string().optional().refine((val) => !val || !isNaN(Date.parse(val)), {
-    message: 'pubdate must be a valid ISO 8601 date string',
-  }),
+  pubdate: z.string().optional().refine(
+    val => !val || !isNaN(Date.parse(val)),
+    { message: 'pubdate must be a valid ISO 8601 date string' }
+  ),
   location: z.string().optional(),
   employment_type: z.enum(['Full-time', 'Part-time', 'Contract', 'Internship', 'Temporary']).optional(),
   department: z.string().optional(),
@@ -95,7 +105,9 @@ const careerSchema = z.object({
   featuredImage: z.string().url().optional(),
 });
 
-// Define collections
+/** 
+ * Define all content collections
+ */
 export const collections = {
   blog: defineCollection({ schema: baseSchema }),
   news: defineCollection({ schema: baseSchema }),
@@ -103,7 +115,10 @@ export const collections = {
   'press-releases': defineCollection({ schema: baseSchema }),
   tools: defineCollection({ schema: baseSchema }),
   insights: defineCollection({ schema: baseSchema }),
-  themes: defineCollection({ schema: baseSchema }),   // <-- Added for Themes
+
+  // Renamed from "themes" → "space-sustainability"
+  'space-sustainability': defineCollection({ schema: baseSchema }),
+
   organisations: defineCollection({ schema: organisationSchema }),
   pledges: defineCollection({ schema: pledgeSchema }),
   careers: defineCollection({ schema: careerSchema }),
