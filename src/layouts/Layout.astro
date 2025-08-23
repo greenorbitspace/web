@@ -56,8 +56,10 @@ const isLocal = Astro.site?.hostname?.includes('localhost') ?? import.meta.env.D
   <body class="antialiased bg-white dark:bg-primary-500 text-secondary-900 dark:text-secondary-100 transition-colors duration-300">
     <main id="page-wrapper" class="page-wrapper" role="main" tabindex="-1">
       <slot />
-      <!-- Inject Global JSON-LD -->
-      <GlobalSchema />
     </main>
+
+    <!-- Inject Global JSON-LD for structured data -->
+    <GlobalSchema />
+
   </body>
 </html>
