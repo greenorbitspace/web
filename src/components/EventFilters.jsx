@@ -3,7 +3,6 @@ import { useInView } from 'react-intersection-observer';
 import slugify from '../utils/slugify.js';
 import { UN_COUNTRIES } from '../data/unCountries.js';
 
-// Robust date parser for ISO, DD/MM/YYYY, and fallback
 function parseEventDate(dateStr) {
   if (!dateStr) return null;
   let date = new Date(dateStr);
@@ -31,11 +30,14 @@ function detectCountry(location) {
   return UN_COUNTRIES.find(c => loc.includes(c.toLowerCase())) || '';
 }
 
-export default function EventFilters({ events, batchSize = 6, flatList = false }) {
+export default function TicketedEvents({ preRenderedEvents = [], batchSize = 6, flatList = false }) {
+  // Ensure events is always an array
+  const events = Array.isArray(preRenderedEvents) ? preRenderedEvents : [];
+
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
-  // Process events: parse dates, slugify, extract country, etc.
+  // Process events
   const processedEvents = useMemo(() =>
     events
       .map(e => {
@@ -59,7 +61,7 @@ export default function EventFilters({ events, batchSize = 6, flatList = false }
     [events]
   );
 
-  // Filters (skip if flatList)
+  // Filter options
   const categories = useMemo(() => Array.from(new Set(processedEvents.flatMap(e => e.categories))).sort(), [processedEvents]);
   const organizers = useMemo(() => Array.from(new Set(processedEvents.map(e => e.organizer))).sort(), [processedEvents]);
   const countries = useMemo(() => Array.from(new Set(processedEvents.map(e => e.country).filter(Boolean))).sort(), [processedEvents]);
@@ -67,6 +69,8 @@ export default function EventFilters({ events, batchSize = 6, flatList = false }
   const [selectedCategory, setSelectedCategory] = useState('');
   const [selectedOrganizer, setSelectedOrganizer] = useState('');
   const [selectedCountry, setSelectedCountry] = useState('');
+
+  const toggleFilter = (current, value, setter) => setter(current === value ? '' : value);
 
   const filteredEvents = useMemo(() =>
     processedEvents.filter(e =>
@@ -77,7 +81,7 @@ export default function EventFilters({ events, batchSize = 6, flatList = false }
     [processedEvents, selectedCategory, selectedOrganizer, selectedCountry]
   );
 
-  // Infinite scroll (skip if flatList)
+  // Infinite scroll
   const [visibleCount, setVisibleCount] = useState(batchSize);
   const { ref: sentinelRef, inView } = useInView({ rootMargin: '200px', triggerOnce: false });
 
@@ -91,11 +95,9 @@ export default function EventFilters({ events, batchSize = 6, flatList = false }
     if (!flatList) setVisibleCount(batchSize);
   }, [selectedCategory, selectedOrganizer, selectedCountry, batchSize, flatList]);
 
-  const toggleFilter = (current, value, setter) => setter(current === value ? '' : value);
-
   const eventsToShow = flatList ? filteredEvents : filteredEvents.slice(0, visibleCount);
 
-  // Group by month (skip if flatList)
+  // Group by month
   const eventsByMonth = useMemo(() => {
     if (flatList) return { all: eventsToShow };
     const grouped = {};
@@ -109,7 +111,6 @@ export default function EventFilters({ events, batchSize = 6, flatList = false }
 
   return (
     <div className="space-y-8">
-      {/* Filters: hide if flatList */}
       {!flatList && (
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
           <select value={selectedCategory} onChange={e => setSelectedCategory(e.target.value)} className="border rounded px-2 py-1 text-primary-500">
@@ -127,15 +128,14 @@ export default function EventFilters({ events, batchSize = 6, flatList = false }
         </div>
       )}
 
-      {/* Events */}
       {Object.entries(eventsByMonth).map(([month, monthEvents]) => (
         <section key={month} className="space-y-6">
           {!flatList && <h2 className="text-2xl font-bold">{month}</h2>}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {monthEvents.map((e, idx) => (
               <div
                 key={e.slug}
-                className="border rounded-lg p-4 shadow-sm flex flex-col h-full transition-opacity duration-700"
+                className="border rounded-lg p-4 shadow-sm flex flex-col h-full bg-white transition-opacity duration-700 text-primary-500"
                 style={{ opacity: 1, animationDelay: `${idx * 0.1}s` }}
               >
                 {e.image && <img src={e.image} alt={e.title} className="w-full h-48 object-cover rounded mb-4" />}
@@ -143,7 +143,7 @@ export default function EventFilters({ events, batchSize = 6, flatList = false }
                 <p className="text-sm text-accent-500 mb-1">
                   {formatEventDate(e.startDate)}{e.endDate ? ` - ${formatEventDate(e.endDate)}` : ''}
                 </p>
-                <p className="text-sm mb-2">{e.location}</p>
+                <p className="text-sm mb-2 text-primary-500">{e.location}</p>
 
                 <div className="flex flex-wrap gap-2 mb-2 items-center">
                   {e.categories.map(cat => (
@@ -173,9 +173,8 @@ export default function EventFilters({ events, batchSize = 6, flatList = false }
         </section>
       ))}
 
-      {/* Sentinel: hide if flatList */}
       {!flatList && visibleCount < filteredEvents.length && (
-        <div ref={sentinelRef} style={{ height: '80px' }} className="text-center text-gray-500 bg-gray-100">
+        <div ref={sentinelRef} style={{ height: '80px' }} className="text-center text-gray-500">
           Loading more events...
         </div>
       )}

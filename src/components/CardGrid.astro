@@ -1,0 +1,12 @@
+---
+const { cards } = Astro.props;
+---
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  {cards.map(card => (
+    <a href={card.link} class={`block rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 ${card.color} text-white`}>
+      <h3 class="text-xl font-bold mb-2">{card.title}</h3>
+      <p class="text-sm">{card.description}</p>
+    </a>
+  ))}
+</div>

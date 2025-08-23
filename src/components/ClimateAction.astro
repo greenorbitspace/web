@@ -1,0 +1,129 @@
+---
+// File: src/components/ClimateAction.astro
+import { Collapse } from '@components/ui/Collapse'; // Example UI component, adjust to your setup
+import SDGIcon from '@components/icons/SDGIcon.astro'; // Custom SDG icon component
+
+const sections = [
+  {
+    title: "Our Climate and ESG Commitment",
+    id: "esg-commitment",
+    content: `
+      Sustainability is embedded into every facet of Green Orbit Digital’s operations and client services.
+      We adopt Environmental, Social, and Governance (ESG) principles to guide strategic decisions, operations, and stakeholder engagement.
+      <ul>
+        <li><a href="/esg">Learn more about ESG at Green Orbit Digital</a></li>
+      </ul>
+    `,
+  },
+  {
+    title: "Environmental Responsibility",
+    id: "environmental-responsibility",
+    content: `
+      <ul>
+        <li><strong>Operational Sustainability:</strong> Optimised energy usage, cloud computing efficiency, and remote work to minimise emissions. 
+          <a href="/operations/sustainability">Learn more</a>
+        </li>
+        <li><strong>Digital Carbon Auditing:</strong> Proprietary tools analyse the footprint of digital campaigns. 
+          <a href="/tools/eco-audit">Read methodology</a>
+        </li>
+        <li><strong>Sustainable Space Projects:</strong> Collaborations with Earth observation and climate-focused space initiatives.
+          <a href="/projects/space">View projects</a>
+        </li>
+        <li><strong>Climate Data Advocacy:</strong> Turning satellite data into actionable insights for policymakers.
+          <a href="/data/climate">Learn more</a>
+        </li>
+      </ul>
+    `,
+  },
+  {
+    title: "Social Responsibility",
+    id: "social-responsibility",
+    content: `
+      <ul>
+        <li><strong>Education & Advocacy:</strong> Hosting <em>The Sustainable Space Podcast</em> and UKspace workshops.
+          <a href="/about/ukspace">Explore initiatives</a>
+        </li>
+        <li><strong>Diversity, Equity & Inclusion:</strong> Inclusive recruitment, mentorship, and equitable workplace policies. 
+          <a href="/people/dei">Read our DEI policy</a>
+        </li>
+        <li><strong>Community Engagement:</strong> Supporting STEM and sustainability awareness programs. 
+          <a href="/community">Explore projects</a>
+        </li>
+      </ul>
+    `,
+  },
+  {
+    title: "Governance and Accountability",
+    id: "governance-accountability",
+    content: `
+      <ul>
+        <li><strong>ESG-Aligned Operations:</strong> Embedding sustainability in all strategic decisions. 
+          <a href="/esg/governance">Explore framework</a>
+        </li>
+        <li><strong>Transparent Reporting:</strong> Following GRI, SASB, and UN Global Compact standards. 
+          <a href="/reports/esg">View reports</a>
+        </li>
+        <li><strong>Compliance & Risk Management:</strong> Paris Agreement alignment and climate risk disclosure.
+          <a href="/policies/compliance">Read policies</a>
+        </li>
+      </ul>
+    `,
+  },
+  {
+    title: "Driving Sector-Wide Change",
+    id: "sector-impact",
+    content: `
+      <ul>
+        <li><strong>Sustainable Marketing Campaigns:</strong> Communicating ESG and climate narratives. 
+          <a href="/projects/campaigns">See case studies</a>
+        </li>
+        <li><strong>Data-Driven Climate Insights:</strong> Translating satellite data into actionable insights. 
+          <a href="/data/insights">Explore insights</a>
+        </li>
+        <li><strong>Thought Leadership & Collaboration:</strong> Webinars, reports, and partnerships promoting sustainable practices.
+          <a href="/insights/thought-leadership">Learn more</a>
+        </li>
+        <li><strong>SDG Alignment:</strong> Initiatives linked to key SDGs:
+          <div class="sdg-icons">
+            <SDGIcon number="7" link="/sdg/7" />
+            <SDGIcon number="12" link="/sdg/12" />
+            <SDGIcon number="13" link="/sdg/13" />
+          </div>
+          <a href="/sdg/dashboard">See full SDG dashboard</a>
+        </li>
+      </ul>
+    `,
+  },
+  {
+    title: "Future Commitment",
+    id: "future-commitment",
+    content: `
+      <ul>
+        <li>Expand ESG and sustainability integration across all operations and client services.</li>
+        <li>Enhance tools for carbon auditing, climate data reporting, and low-impact digital marketing.</li>
+        <li>Partner with global initiatives, governments, and private-sector stakeholders to advance sustainable innovation.</li>
+      </ul>
+      <a href="/about/future">Learn about our future goals</a>
+    `,
+  },
+];
+
+---
+
+<section id="climate-action">
+  <h1>Green Orbit Digital Climate Action Statement</h1>
+  <p>
+    Green Orbit Digital is committed to measurable ESG practices, transparent reporting, and actionable climate initiatives
+    that empower the space and technology sectors to act decisively on climate change.
+  </p>
+
+  {sections.map(section => (
+    <Collapse title={section.title} key={section.id}>
+      <div innerHTML={section.content} />
+    </Collapse>
+  ))}
+
+  <p>
+    <a href="/sustainability">Return to Sustainability Overview</a>
+  </p>
+</section>

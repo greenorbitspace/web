@@ -1,0 +1,35 @@
+---
+let { content = '' } = Astro.props;
+
+// Collect TOC entries
+const toc = [];
+
+// Inject IDs into headings and build TOC
+const processedContent = content.replace(/^(#{2,6})\s+(.*)$/gm, (_, hashes, title) => {
+  const level = hashes.length;
+  const id = title
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, '')  // remove invalid characters
+    .replace(/\s+/g, '-');     // replace spaces with hyphens
+  toc.push({ level, text: title, id });
+  return `${hashes} ${title} {#${id}}`;
+});
+
+const baseIndent = 4; // indentation multiplier per heading level
+---
+
+{toc.length > 0 && (
+  <nav class="mb-12 border-l-4 border-primary-500 pl-4">
+    <h2 class="text-xl font-semibold mb-2">On this page</h2>
+    <ul class="space-y-2">
+      {toc.map(({ level, text, id }) => (
+        <li class={`ml-${(level - 2) * baseIndent}`}>
+          <a href={`#${id}`} class="text-primary-600 hover:underline">{text}</a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+)}
+
+<astro:markdown>{processedContent}</astro:markdown>

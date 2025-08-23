@@ -1,0 +1,125 @@
+---
+import { useEffect } from 'solid-js'; // Optional if you want reactive hooks
+---
+
+<section class="calculator py-12 bg-gray-50">
+  <div class="max-w-2xl mx-auto px-4">
+    <h2 class="text-2xl font-semibold mb-6 text-center text-primary-500">Calculate Your Emissions</h2>
+
+    <form id="emissionsForm" class="space-y-6">
+
+      <!-- Scope 1 -->
+      <div class="space-y-3">
+        <h3 class="font-bold text-lg text-primary-500">Scope 1: Direct Emissions</h3>
+        <div class="grid gap-4">
+          <div>
+            <label class="block text-sm font-medium mb-1 text-primary-500">Fuel Type</label>
+            <select id="fuelType" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 text-primary-500">
+              <option value="petrol">Petrol</option>
+              <option value="diesel">Diesel</option>
+              <option value="naturalGas">Natural Gas</option>
+              <option value="LPG">LPG</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1 text-primary-500">Fuel Consumed (litres/m³)</label>
+            <input type="number" id="fuelLitres" placeholder="e.g., 1000" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1 text-primary-500">Fleet Distance (km)</label>
+            <input type="number" id="fleetKm" placeholder="e.g., 5000" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Scope 2 -->
+      <div class="space-y-3">
+        <h3 class="font-bold text-lg text-primary-500">Scope 2: Indirect Emissions</h3>
+        <div class="grid gap-4">
+          <div>
+            <label class="block text-sm font-medium mb-1 text-primary-500">Region</label>
+            <select id="region" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-primary-500">
+              <option value="UK">UK</option>
+              <option value="EU">EU Average</option>
+              <option value="US">USA</option>
+              <option value="Global">Global Average</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1 text-primary-500">Electricity Consumed (kWh)</label>
+            <input type="number" id="electricity" placeholder="e.g., 20000" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1 text-primary-500">Heating Consumed (kWh)</label>
+            <input type="number" id="heating" placeholder="e.g., 5000" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+          </div>
+        </div>
+      </div>
+
+      <button id="calculateBtn" type="button" class="w-full bg-accent-500 text-white font-semibold px-4 py-2 rounded-md hover:bg-accent-600 transition-colors">Calculate</button>
+    </form>
+
+    <div id="results" class="mt-8 text-center space-y-2 text-lg text-primary-500">
+      <p>Scope 1 Emissions: <span id="scope1Result" class="font-medium">0</span> t CO₂e</p>
+      <p>Scope 2 Emissions: <span id="scope2Result" class="font-medium">0</span> t CO₂e</p>
+      <p>Total Emissions: <span id="totalResult" class="font-bold">0</span> t CO₂e</p>
+    </div>
+
+    <canvas id="emissionsChart" class="mt-8"></canvas>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module">
+    document.addEventListener('DOMContentLoaded', () => {
+      const emissionFactors = {
+        fuel: { petrol: 2.31, diesel: 2.68, naturalGas: 2.05, LPG: 1.51 },
+        fleet: 0.21,
+        electricity: { UK: 0.233, EU: 0.255, US: 0.4, Global: 0.475 },
+        heating: 0.202
+      };
+
+      let chart;
+
+      const calculateEmissions = () => {
+        const fuelType = document.getElementById('fuelType').value;
+        const fuel = parseFloat(document.getElementById('fuelLitres').value || 0);
+        const fleet = parseFloat(document.getElementById('fleetKm').value || 0);
+        const region = document.getElementById('region').value;
+        const electricity = parseFloat(document.getElementById('electricity').value || 0);
+        const heating = parseFloat(document.getElementById('heating').value || 0);
+
+        const scope1 = ((fuel * emissionFactors.fuel[fuelType]) + (fleet * emissionFactors.fleet)) / 1000;
+        const scope2 = ((electricity * emissionFactors.electricity[region]) + (heating * emissionFactors.heating)) / 1000;
+        const total = scope1 + scope2;
+
+        document.getElementById('scope1Result').innerText = scope1.toFixed(2);
+        document.getElementById('scope2Result').innerText = scope2.toFixed(2);
+        document.getElementById('totalResult').innerText = total.toFixed(2);
+
+        const ctx = document.getElementById('emissionsChart').getContext('2d');
+        if(chart && chart.destroy) chart.destroy();
+
+        chart = new Chart(ctx, {
+          type: 'doughnut',
+          data: {
+            labels: ['Scope 1', 'Scope 2'],
+            datasets: [{
+              label: 'Emissions (t CO₂e)',
+              data: [scope1, scope2],
+              backgroundColor: ['#22c55e', '#3b82f6']
+            }]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: { position: 'bottom' },
+              tooltip: { callbacks: { label: (item) => `${item.label}: ${item.raw.toFixed(2)} t CO₂e` } }
+            }
+          }
+        });
+      };
+
+      document.getElementById('calculateBtn').addEventListener('click', calculateEmissions);
+    });
+  </script>
+</section>

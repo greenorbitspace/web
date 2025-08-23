@@ -1,52 +1,378 @@
 {
-  "profiles": [
-    {
-      "name": "UKspace Member Directory",
-      "category": "Industry Association",
-      "url": "https://www.ukspace.org/members/green-orbit-digital",
-      "description": "Listing in the UKspace members directory, highlighting our role in sustainable marketing for the space sector.",
-      "status": "active",
-      "last_verified": "2025-08-13"
-    },
-    {
-      "name": "Sustainable Business Alliance",
-      "category": "Sustainability Network",
-      "url": "https://sustainablebusinessalliance.org/members/green-orbit-digital",
-      "description": "Profile as a member of the Sustainable Business Alliance, showcasing our sustainability commitments.",
-      "status": "active",
-      "last_verified": "2025-08-13"
-    },
-    {
-      "name": "Companies House",
-      "category": "Official Registration",
-      "url": "https://find-and-update.company-information.service.gov.uk/company/XXXXXXXX",
-      "description": "UK government official company registration and filing history.",
-      "status": "active",
-      "last_verified": "2025-08-13"
-    },
-    {
-      "name": "Chartered Institute of Marketing (CIM) Directory",
-      "category": "Professional Accreditation",
-      "url": "https://www.cim.co.uk/membership/directory/",
-      "description": "Professional listing under Chartered Marketer accreditation.",
-      "status": "active",
-      "last_verified": "2025-08-13"
-    },
-    {
-      "name": "Event Speaker Profiles",
-      "category": "Conference Participation",
-      "url": "https://ukseds.org/nssc/speakers/ryan-laird",
-      "description": "Speaker profile for UKSEDS National Student Space Conference.",
-      "status": "active",
-      "last_verified": "2025-08-13"
-    },
-    {
-      "name": "Culture Declares Emergency",
-      "category": "Pledge",
-      "url": "https://www.culturedeclares.org/declarers/greenorbitspace",
-      "description": "We declare that the climate and ecological emergency demands immediate and transformative action.",
-      "status": "active",
-      "last_verified": "2025-08-13"
-    }
-  ]
+  "profiles": {
+    "business_directories": [
+      {
+        "name": "Google My Business",
+        "url": "https://www.google.com/intl/en_ie/business/",
+        "description": "Enhances local and global discoverability on Google Search and Maps.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "Yelp",
+        "url": "https://www.yelp.co.uk/",
+        "description": "Showcases customer reviews and ratings.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "Bing Places for Business",
+        "url": "https://www.bingplaces.com/",
+        "description": "Reaches audiences using Microsoft's search engine.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "LinkedIn Company Directory",
+        "url": "https://www.linkedin.com/directory/companies/",
+        "description": "Connects with professionals and showcases expertise.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "AngelList",
+        "url": "https://angel.co/",
+        "description": "Connects with startups and investors.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "Yellow Pages (Yell)",
+        "url": "https://www.yell.com/biz/green-orbit-digital-leicester-10873033",
+        "description": "Classic platform with global reach.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "Clutch.co",
+        "url": "https://clutch.co/profile/green-orbit-digital",
+        "description": "Highlights marketing agency services and client reviews.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "UpCity",
+        "url": "https://upcity.com/",
+        "description": "Connects with businesses seeking marketing expertise.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "F6S",
+        "url": "https://www.f6s.com/company/greenorbitspace",
+        "description": "Profile on F6S to connect with startup programs and accelerators.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "Trustpilot",
+        "url": "https://uk.trustpilot.com/review/greenorbit.space",
+        "description": "Customer reviews and ratings for reputation management.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "Ticket Tailor",
+        "url": "https://www.tickettailor.com/events/greenorbitspace",
+        "description": "Manage and promote events for Green Orbit Digital.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "Crunchbase",
+        "url": "https://www.crunchbase.com/organization/green-orbit-digital",
+        "description": "Company profile for networking, investment, and business intelligence.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      }
+    ],
+    "recruitment_and_talent_directories": [
+      {
+        "name": "LinkedIn Recruiter",
+        "url": "https://www.linkedin.com/talent/solutions/recruiter",
+        "description": "Talent acquisition and networking with space industry professionals.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "Indeed",
+        "url": "https://www.indeed.co.uk/",
+        "description": "Post job openings and connect with freelancers and employees.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "Glassdoor",
+        "url": "https://www.glassdoor.co.uk/",
+        "description": "Builds a brand profile and attracts talent.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "PeoplePerHour",
+        "url": "https://www.peopleperhour.com/",
+        "description": "Connects with freelance specialists.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "SpaceCareers.uk",
+        "url": "https://www.spacecareers.uk/",
+        "description": "Specialised in space industry recruitment.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "Jobrapido",
+        "url": "https://uk.jobrapido.com/",
+        "description": "Post open positions globally.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      }
+    ],
+    "social_media_and_influencer_directories": [
+      {
+        "name": "Influence.co",
+        "url": "https://influence.co/",
+        "description": "Connects with influencers in sustainability or space industries.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "Heepsy",
+        "url": "https://www.heepsy.com/",
+        "description": "Find influencers based on niche categories like space or environmental topics.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "Shoutcart",
+        "url": "https://shoutcart.com/",
+        "description": "Collaborate with influencers for campaigns.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "Social Blade",
+        "url": "https://socialblade.com/",
+        "description": "Analyse potential social media collaborators' performance metrics.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "Facebook Business Directory",
+        "url": "https://www.facebook.com/business",
+        "description": "List services and engage local communities.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      }
+    ],
+    "industry_specific_directories": [
+      {
+        "name": "Space Industry Directory (IAF)",
+        "url": "https://www.iafastro.org/",
+        "description": "Connect with key players in the space sector.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "SatSearch",
+        "url": "https://www.satsearch.io/",
+        "description": "Marketplace for space technology components and partnerships.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "Ecosia Partners Directory",
+        "url": "https://www.ecologi.com/greenorbitdigital",
+        "description": "For businesses with a sustainability focus.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "Environmental Directory",
+        "url": "https://www.environmental-expert.com/",
+        "description": "Connect with eco-conscious organisations.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "Global Sustainable Development Directory",
+        "url": "https://www.globalreporting.org/",
+        "description": "Network with sustainability-driven businesses.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "UKspace Member Directory",
+        "url": "https://www.ukspace.org/members/green-orbit-digital",
+        "description": "Listing in the UKspace members directory, highlighting our role in sustainable marketing for the space sector.",
+        "status": "active",
+        "last_verified": "2025-08-13"
+      },
+      {
+        "name": "Sustainable Business Alliance",
+        "url": "https://sustainablebusinessalliance.org/members/green-orbit-digital",
+        "description": "Profile as a member of the Sustainable Business Alliance, showcasing our sustainability commitments.",
+        "status": "active",
+        "last_verified": "2025-08-13"
+      }
+    ],
+    "creative_and_marketing_directories": [
+      {
+        "name": "Behance",
+        "url": "https://www.behance.net/",
+        "description": "Showcase creative marketing campaigns.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "Dribbble",
+        "url": "https://dribbble.com/",
+        "description": "Collaborate with designers.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "Canva Directory",
+        "url": "https://www.canva.com/design/DAE7b6V8J6s/view",
+        "description": "Connect with graphic designers.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "HubSpot Agency Directory",
+        "url": "https://www.hubspot.com/agencies",
+        "description": "Gain leads for marketing and consultancy services.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "99Designs",
+        "url": "https://99designs.co.uk/",
+        "description": "Source custom design work or promote services.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      }
+    ],
+    "local_and_community_directories": [
+      {
+        "name": "Chamber of Commerce Directories",
+        "url": "https://www.britishchambers.org.uk/",
+        "description": "For local partnerships and collaborations.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "Meetup.com",
+        "url": "https://www.meetup.com/",
+        "description": "Organise and join community events in sustainability and space topics.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "Nextdoor",
+        "url": "https://nextdoor.co.uk/",
+        "description": "Engage with hyperlocal communities and businesses.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      }
+    ],
+    "freelance_and_contract_work_directories": [
+      {
+        "name": "Fiverr",
+        "url": "https://www.fiverr.com/",
+        "description": "Offer niche services like sustainable marketing consultancy.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "Toptal",
+        "url": "https://www.toptal.com/",
+        "description": "Find highly skilled freelancers in design, development, or marketing.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "Upwork",
+        "url": "https://www.upwork.com/",
+        "description": "Hire or list services.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "We Work Remotely",
+        "url": "https://weworkremotely.com/",
+        "description": "Attract talent for remote opportunities.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      }
+    ],
+    "official_and_professional_profiles": [
+      {
+        "name": "Companies House",
+        "url": "https://find-and-update.company-information.service.gov.uk/company/15207389",
+        "description": "UK government official company registration and filing history.",
+        "status": "active",
+        "last_verified": "2025-08-13"
+      },
+      {
+        "name": "Chartered Institute of Marketing (CIM) Directory",
+        "url": "https://www.cim.co.uk/membership/directory/",
+        "description": "Professional listing under Chartered Marketer accreditation.",
+        "status": "active",
+        "last_verified": "2025-08-13"
+      },
+      {
+        "name": "Event Speaker Profiles",
+        "url": "https://ukseds.org/nssc/speakers/ryan-laird",
+        "description": "Speaker profile for UKSEDS National Student Space Conference.",
+        "status": "active",
+        "last_verified": "2025-08-13"
+      },
+      {
+        "name": "Culture Declares Emergency",
+        "url": "https://www.culturedeclares.org/declarers/greenorbitspace",
+        "description": "We declare that the climate and ecological emergency demands immediate and transformative action.",
+        "status": "active",
+        "last_verified": "2025-08-13"
+      },
+      {
+        "name": "Stripe Climate",
+        "url": "https://climate.stripe.com/p9WRow",
+        "description": "Support and track carbon removal projects through Stripe Climate.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "Small99 Action Progress",
+        "url": "https://action.small99.co.uk/progress/greenorbitspace",
+        "description": "Track progress on sustainability and social action initiatives.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "Good Firms",
+        "url": "https://www.goodfirms.co/company/green-orbit-digital",
+        "description": "Track progress on sustainability and social action initiatives.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "Sustainable Business Alliance",
+        "url": "https://www.sustainablebusinessalliance.org.uk/user/green%20orbit%20digital/",
+        "description": "The Sustainable Business Alliance (SBA) exists to empower businesses to embed sustainability at the heart of their operations—not as an add-on, but as a driver of resilience, growth, and real impact.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      },
+      {
+        "name": "Good Business Charter",
+        "url": "https://accreditation.goodbusinesscharter.com/directory?page=10",
+        "description": "The Good Business Charter is the UK’s benchmark for responsible business, accessible to all.",
+        "status": "active",
+        "last_verified": "2025-08-23"
+      }
+    ]
+  }
 }
+

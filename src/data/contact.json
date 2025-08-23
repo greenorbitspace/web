@@ -1,35 +1,12 @@
 {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Green Orbit Digital",
   "contactPoint": [
     {
       "@type": "ContactPoint",
-      "telephone": "+44-116-123-4567",
-      "contactType": "Customer Service",
-      "areaServed": "GB",
-      "availableLanguage": ["English"],
-      "email": "support@greenorbit.space",
-      "hoursAvailable": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
-        "opens": "09:00",
-        "closes": "17:30"
-      }
-    },
-    {
-      "@type": "ContactPoint",
-      "telephone": "+44-116-987-6543",
+      "telephone": "+44-116-483-0155",
       "contactType": "Sales",
       "areaServed": "GB",
       "availableLanguage": ["English"],
-      "email": "sales@greenorbit.digital",
+      "email": "hello@greenorbit.space",
       "hoursAvailable": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": [
@@ -45,9 +22,57 @@
     },
     {
       "@type": "ContactPoint",
+      "telephone": "+44-116-483-0156",
+      "contactType": "Customer Service",
+      "areaServed": "GB",
+      "availableLanguage": ["English"],
+      "email": "hello@greenorbit.space",
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "17:30"
+      }
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+44-116-483-0157",
+      "contactType": "Technical Support",
+      "areaServed": "GB",
+      "availableLanguage": ["English"],
+      "email": "support@greenorbit.space",
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "10:00",
+        "closes": "18:00"
+      }
+    },
+    {
+      "@type": "ContactPoint",
       "contactType": "General Inquiries",
       "availableLanguage": ["English"],
-      "email": "info@greenorbit.digital"
+      "email": "hello@greenorbit.space"
     }
-  ]
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "DOCK - Space City, 75 Exploration Drive",
+    "addressLocality": "Leicester",
+    "addressRegion": "England",
+    "postalCode": "LE4 5NU",
+    "addressCountry": "GB"
+  }
 }

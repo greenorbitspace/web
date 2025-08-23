@@ -18,6 +18,10 @@ export default defineConfig({
     build: {
       target: 'esnext',
       minify: 'esbuild',
+      rollupOptions: {
+        // Treat gray-matter as external so it's not bundled for the browser
+        external: ['gray-matter', 'node-fetch'],
+      },
     },
     resolve: {
       alias: {
@@ -30,7 +34,7 @@ export default defineConfig({
     },
     optimizeDeps: {
       include: ['react', 'react-dom'],
-      exclude: ['lightningcss', 'fsevents'], // prevent Vite from prebundling problematic native modules
+      exclude: ['lightningcss', 'fsevents', 'gray-matter', 'node-fetch'],
       esbuildOptions: {
         loader: {
           '.ts': 'ts',

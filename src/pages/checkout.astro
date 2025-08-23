@@ -7,6 +7,20 @@ import StripeWrapper from '../components/StripeWrapper.jsx';
 ---
 
 <Layout title="Checkout">
-  <h1 class="text-3xl font-bold mb-8">Secure Checkout</h1>
+  <Header />
+
+  <main class="py-8">
+    <HeroSection 
+      title="Experience" 
+      description="Your privacy matters. Here's how we handle your data at Green Orbit Digital."
+    />
+
+<section class="py-12 bg-white dark:bg-secondary-500">
+
   <StripeWrapper client:load />
+
+    <section/>
+  </main>
+
+  <Footer />
 </Layout>

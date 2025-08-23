@@ -1,0 +1,71 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+
+const sustainabilityTopics = [
+  {
+    title: "Corporate Social Responsibility (CSR)",
+    description: "Driving social and environmental impact while delivering sustainable business value.",
+    link: "/sustainability/csr"
+  },
+  {
+    title: "Environmental, Social, Governance (ESG)",
+    description: "Integrating ESG principles to create transparency, resilience, and long-term value.",
+    link: "/sustainability/esg"
+  },
+  {
+    title: "People, Planet, Profit (PPP)",
+    description: "Balancing economic, environmental, and social performance in all business decisions.",
+    link: "/sustainability/ppp"
+  },
+  {
+    title: "Digital Sustainability",
+    description: "Building a digital future that reduces carbon footprint, optimises resources, and ensures responsible digital practices.",
+    link: "/sustainability/digital"
+  },
+  {
+    title: "Space Sustainability",
+    description: "Ensuring the responsible use of space resources and technologies, from orbital debris mitigation to Earth Observation for SDGs.",
+    link: "/sustainability/space"
+  }
+];
+---
+
+<Layout title="Sustainability Hub - Green Orbit Digital">
+  <Header />
+  <main class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <HeroSection 
+      title="Sustainability at Green Orbit Digital" 
+      highlightText="Sustainability"
+      description="Explore how we integrate CSR, ESG, PPP, Digital Sustainability, and Space Sustainability into every aspect of our operations and client services."
+    />
+
+    <section title="Our Sustainability Frameworks">
+      <div class="grid md:grid-cols-2 gap-8 mt-8">
+        {sustainabilityTopics.map(topic => (
+          <a href={topic.link} class="block border rounded-lg p-6 hover:shadow-lg transition-shadow bg-white">
+            <h3 class="text-xl font-semibold mb-2">{topic.title}</h3>
+            <p class="text-gray-700">{topic.description}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section title="Why Sustainability Matters">
+      <ul class="list-disc ml-6 space-y-2">
+        <li>Aligns business practices with the UN SDGs and global sustainability goals.</li>
+        <li>Reduces environmental impact and resource use across digital and physical operations.</li>
+        <li>Strengthens brand reputation, stakeholder trust, and market differentiation.</li>
+        <li>Drives long-term profitability, resilience, and innovation.</li>
+      </ul>
+    </section>
+
+    <section title="Get Started with Sustainability">
+      <p>We help organisations across industries embed sustainability into strategy, operations, and digital presence, ensuring measurable impact for people, planet, and profit.</p>
+      <p><a href="/contact" class="text-green-600 font-semibold hover:underline">Contact us</a> to explore how Green Orbit Digital can support your sustainability journey.</p>
+    </section>
+  </main>
+  <Footer />
+</Layout>

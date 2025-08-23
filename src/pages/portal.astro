@@ -1,12 +1,25 @@
 ---
-// src/pages/portal.astro
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.astro';
 ---
 
 <Layout title="Billing Portal">
-  <main class="py-10">
+  <Header />
+
+  <main class="py-8">
+    <HeroSection 
+      title="Billing Portal" 
+      description="Your privacy matters. Here's how we handle your data at Green Orbit Digital."
+    />
+    
+  <section class="py-16 bg-white dark:bg-secondary-500">
     <form action="/api/create-portal-session" method="POST">
       <button type="submit">Manage Billing</button>
     </form>
+  <section>
   </main>
+
+  <Footer />
 </Layout>

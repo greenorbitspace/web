@@ -1,0 +1,44 @@
+[
+  {
+    "@type": "Brand",
+    "name": "Green Orbit Academy",
+    "description": "A platform offering workshops and online courses on sustainable marketing for space organisations.",
+    "url": "https://academy.greenorbit.space"
+  },
+  {
+    "@type": "Brand",
+    "name": "Green Orbit Earth",
+    "description": "Resources and training focused on environmental responsibility within the space sector.",
+    "url": "https://greenorbit.earth"
+  },
+  {
+    "@type": "Brand",
+    "name": "Green Orbit Live",
+    "description": "Live events, webinars, and interactive sessions for space marketing professionals.",
+    "url": "https://greenorbit.live"
+  },
+  {
+    "@type": "Brand",
+    "name": "Space Impact Forum",
+    "description": "An online forum for discussion, collaboration, and networking in the space industry.",
+    "url": "https://spaceimpactforum.com"
+  },
+  {
+    "@type": "Brand",
+    "name": "Leicester Space Week",
+    "description": "Annual event celebrating space innovation and community engagement in Leicester.",
+    "url": "https://leicesterspaceweek.com"
+  },
+  {
+    "@type": "Brand",
+    "name": "Space Integrity Initiative",
+    "description": "Promoting responsible and sustainable practices in space operations worldwide.",
+    "url": "https://spaceintegrity.org"
+  },
+  {
+    "@type": "Brand",
+    "name": "The Sustainable Space Podcast",
+    "description": "A podcast exploring the intersection of space innovation and environmental responsibility.",
+    "url": "https://sustainablespacepodcast.com"
+  }
+]

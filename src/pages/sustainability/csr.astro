@@ -5,98 +5,63 @@ import Footer from '../../components/Footer.astro';
 import HeroSection from '../../components/HeroSection.astro';
 ---
 
-<Layout title="Customer Reviews - Green Orbit Digital">
+<Layout title="Corporate Social Responsibility - Green Orbit Digital">
   <Header />
-  <main>
+  <main class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <HeroSection 
-      title="Customer Reviews" 
-      highlightText="Reviews"
-      description="See what our customers are saying about their experience with Green Orbit Digital."
+      title="Corporate Social Responsibility" 
+      highlightText="CSR"
+      description="Driving positive social and environmental impact while delivering sustainable business value."
     />
-    
-    <section class="py-16 bg-white dark:bg-gray-800">
-      <div class="container-custom">
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Review Card 1 -->
-          <div class="card p-6 border border-gray-200 dark:border-gray-700">
-            <div class="flex items-center mb-4">
-              <div class="shrink-0">
-                <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Johnson" />
-              </div>
-              <div class="ml-4">
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Sarah Johnson</h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400">Marketing Director</p>
-              </div>
-            </div>
-            <div class="flex mb-4">
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-            </div>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
-              "Green Orbit Digital has completely transformed how we manage our marketing campaigns. The intuitive interface and powerful analytics have helped us increase our conversion rates by 35% in just three months."
-            </p>
-            <p class="text-sm text-gray-500 dark:text-gray-400">June 12, 2023</p>
-          </div>
-          
-          <!-- Review Card 2 -->
-          <div class="card p-6 border border-gray-200 dark:border-gray-700">
-            <div class="flex items-center mb-4">
-              <div class="shrink-0">
-                <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/men/45.jpg" alt="David Chen" />
-              </div>
-              <div class="ml-4">
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">David Chen</h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400">CTO, TechStart</p>
-              </div>
-            </div>
-            <div class="flex mb-4">
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-            </div>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
-              "The API integration capabilities of Green Orbit Digital are second to none. We were able to connect all our existing tools seamlessly, saving us countless development hours. Their support team is also incredibly responsive."
-            </p>
-            <p class="text-sm text-gray-500 dark:text-gray-400">May 3, 2023</p>
-          </div>
-          
-          <!-- Review Card 3 -->
-          <div class="card p-6 border border-gray-200 dark:border-gray-700">
-            <div class="flex items-center mb-4">
-              <div class="shrink-0">
-                <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Rodriguez" />
-              </div>
-              <div class="ml-4">
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Emily Rodriguez</h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400">Product Manager</p>
-              </div>
-            </div>
-            <div class="flex mb-4">
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-5 h-5 text-gray-300 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-            </div>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
-              "What I love most about Green Orbit Digital is how it grows with our business. We started with the basic plan and as our needs expanded, the platform scaled perfectly with us. The onboarding process was smooth and the learning curve minimal."
-            </p>
-            <p class="text-sm text-gray-500 dark:text-gray-400">April 18, 2023</p>
-          </div>
-          
-          <!-- More review cards can be added here -->
-        </div>
-        
-        <div class="mt-16 text-center">
-          <a href="/contact" class="btn-primary">Share Your Experience</a>
-        </div>
-      </div>
+
+    <section title="What is CSR?">
+      <p>
+        Corporate Social Responsibility (CSR) is the commitment of businesses to act ethically, 
+        contribute to economic development, and improve the quality of life of employees, 
+        communities, and society at large.
+      </p>
+    </section>
+
+    <section title="Key CSR Areas">
+      <ul class="list-disc ml-6 space-y-2">
+        <li><strong>Social Impact:</strong> Employee welfare, community engagement, education, and equality.</li>
+        <li><strong>Environmental Stewardship:</strong> Sustainable operations, carbon reduction, resource management, and green innovation.</li>
+        <li><strong>Economic Responsibility:</strong> Transparent governance, ethical business practices, and long-term value creation.</li>
+      </ul>
+    </section>
+
+    <section title="Why CSR Matters">
+      <ul class="list-disc ml-6 space-y-2">
+        <li>Strengthens brand reputation and stakeholder trust.</li>
+        <li>Enhances employee engagement and retention.</li>
+        <li>Supports sustainable growth and alignment with global goals, such as the UN SDGs.</li>
+        <li>Encourages responsible business practices across the value chain.</li>
+      </ul>
+    </section>
+
+    <section title="Our CSR Approach">
+      <p>At Green Orbit Digital, we integrate CSR principles across our operations and client services:</p>
+      <ul class="list-disc ml-6 space-y-2">
+        <li>Community Programs – Education, mentoring, and outreach initiatives in the space and digital sectors.</li>
+        <li>Environmental Responsibility – Digital sustainability, renewable hosting, and efficient workflows to reduce carbon footprint.</li>
+        <li>Ethical Governance – Transparency in decision-making, compliance, and fair business practices.</li>
+        <li>Partnerships – Collaborating with NGOs, industry groups, and local communities to maximise impact.</li>
+      </ul>
+    </section>
+
+    <section title="Benefits of CSR Integration">
+      <ul class="list-disc ml-6 space-y-2">
+        <li>Improved corporate reputation and brand loyalty.</li>
+        <li>Increased stakeholder confidence and investor appeal.</li>
+        <li>Positive social and environmental impact with measurable outcomes.</li>
+        <li>Alignment with ESG and SDG initiatives for long-term sustainability.</li>
+      </ul>
+    </section>
+
+    <section title="Get Started with CSR">
+      <p>We support organisations in developing actionable CSR strategies that deliver real impact for people, planet, and profit.</p>
+      <p><a href="/contact" class="text-green-600 font-semibold hover:underline">Contact us</a> to begin embedding CSR into your business strategy.</p>
     </section>
   </main>
   <Footer />
-</Layout> 
+</Layout>

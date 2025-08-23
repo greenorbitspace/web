@@ -1,0 +1,86 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import CardGrid from '../../components/CardGrid.astro';
+import EarthGlobe from '../../components/EarthGlobe.astro';
+
+const earthThemes = [
+  {
+    title: "Land",
+    description: "Monitoring terrestrial ecosystems, forests, agriculture, and urban development for sustainable management.",
+    link: "/earth/land",
+    color: "bg-green-500"
+  },
+  {
+    title: "Ocean",
+    description: "Observing ocean currents, marine biodiversity, and sustainable fisheries management.",
+    link: "/earth/ocean",
+    color: "bg-blue-500"
+  },
+  {
+    title: "Atmosphere",
+    description: "Tracking air quality, greenhouse gases, and climate indicators for environmental health.",
+    link: "/earth/atmosphere",
+    color: "bg-cyan-500"
+  },
+  {
+    title: "Climate",
+    description: "Analyzing climate change impacts, mitigation strategies, and adaptation measures worldwide.",
+    link: "/earth/climate",
+    color: "bg-indigo-500"
+  },
+  {
+    title: "Weather",
+    description: "Forecasting weather patterns, extreme events, and supporting disaster risk reduction.",
+    link: "/earth/weather",
+    color: "bg-yellow-500"
+  }
+];
+---
+
+<Layout title="Earth Sustainability - Green Orbit Digital">
+  <Header />
+  <main class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <HeroSection 
+      title="Earth Sustainability" 
+      highlightText="Earth" 
+      description="Monitoring and managing our planet's land, oceans, atmosphere, and climate using advanced space and digital technologies."
+    />
+
+    <section title="Interactive Globe">
+      <p class="mb-4">Explore Earth in 3D to visualize sustainability data and planetary health.</p>
+      <EarthGlobe />
+    </section>
+
+    <section title="Key Earth Domains">
+      <CardGrid cards={earthThemes} />
+    </section>
+
+    <section title="Why Earth Sustainability Matters">
+      <ul class="list-disc ml-6 space-y-2">
+        <li><strong>Food Security:</strong> Monitoring agricultural land and ocean fisheries ensures sustainable production.</li>
+        <li><strong>Climate Change:</strong> Real-time data on greenhouse gases and global temperatures helps mitigation and adaptation.</li>
+        <li><strong>Natural Resource Management:</strong> Tracking forests, water, and biodiversity protects ecosystems.</li>
+        <li><strong>Disaster Preparedness:</strong> Weather and environmental monitoring supports early warning and risk reduction.</li>
+      </ul>
+    </section>
+
+    <section title="How We Support Sustainability">
+      <p>Green Orbit Digital leverages space-based Earth Observation and digital analytics to help organisations track, report, and act on sustainability goals:</p>
+      <ul class="list-disc ml-6 space-y-2">
+        <li>Integration of EO data into dashboards and ESG reporting.</li>
+        <li>Mapping projects to UN SDGs and sustainability frameworks.</li>
+        <li>Optimising resource management through predictive analytics.</li>
+        <li>Providing actionable insights for climate, land, and ocean stewardship.</li>
+      </ul>
+    </section>
+
+    <section title="Get Started">
+      <p>We work with organisations across sectors to integrate Earth sustainability insights into operations and strategy.</p>
+      <p><a href="/contact" class="text-green-600 font-semibold hover:underline">Contact us</a> to start your journey towards a sustainable planet.</p>
+    </section>
+  </main>
+  <Footer />
+</Layout>

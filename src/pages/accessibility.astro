@@ -5,140 +5,115 @@ import Footer from '../components/Footer.astro';
 import HeroSection from '../components/HeroSection.astro';
 ---
 
-<Layout title="Accessibility">
+<Layout title="Accessibility Policy">
   <Header />
 
-  <main class="py-8">
+  <main class="py-8 scroll-smooth">
     <HeroSection 
-      title="Accessibility"
-      description="See how our customers are achieving success with Green Orbit Digital"
+      title="Accessibility Policy" 
+      description="Our commitment to ensuring accessible digital experiences for everyone."
     />
 
     <section class="py-16 bg-white dark:bg-secondary-500">
-      <div class="container-custom">
-        <article class="prose prose-lg dark:prose-invert max-w-4xl mx-auto">
+      <div class="max-w-6xl mx-auto px-4 prose prose-lg dark:prose-invert">
 
-          <p class="mb-8 text-gray-600 dark:text-white">Effective Date: 30 July 2025</p>
-
-          <h2 class="mt-10 mb-4">1. Who We Are</h2>
-          <p class="mb-8">
-            <strong>Green Orbit Digital Ltd</strong> is a private limited company registered in England and Wales (Company No. 15207389). Our registered office is located at DOCK - Space City, 75 Exploration Drive, Leicester LE4 5NU.
-          </p>
-          <p class="mb-8">
-            We act as a data controller under the UK General Data Protection Regulation and are registered with the Information Commissioner’s Office (ICO), Registration Number: ZB640949.
-          </p>
-
-          <h2 class="mt-10 mb-4">2. What Personal Data We Collect</h2>
-          <p class="mb-4">We may collect personal data about you when:</p>
-          <ul class="mb-8 list-disc list-inside space-y-2">
-            <li>You browse our website.</li>
-            <li>Your organisation uses our services.</li>
+        <!-- Table of Contents -->
+        <nav class="mb-12 border-l-4 border-primary-500 pl-4">
+          <h2 class="text-xl font-semibold mb-2">On this page</h2>
+          <ul class="space-y-2">
+            <li><a href="#purpose-and-scope" class="text-primary-600 hover:underline">Purpose and Scope</a></li>
+            <li><a href="#policy-statement" class="text-primary-600 hover:underline">Policy Statement</a></li>
+            <li><a href="#core-principles" class="text-primary-600 hover:underline">Core Principles</a></li>
+            <li><a href="#technical-requirements" class="text-primary-600 hover:underline">Technical Requirements</a></li>
+            <li><a href="#content-standards" class="text-primary-600 hover:underline">Content Standards</a></li>
+            <li><a href="#testing-and-monitoring" class="text-primary-600 hover:underline">Testing and Monitoring</a></li>
+            <li><a href="#support-and-feedback" class="text-primary-600 hover:underline">Support and Feedback</a></li>
+            <li><a href="#continuous-improvement" class="text-primary-600 hover:underline">Continuous Improvement</a></li>
+            <li><a href="#compliance" class="text-primary-600 hover:underline">Compliance</a></li>
           </ul>
-          <p class="mb-4">
-            We use analytics services such as Google Analytics and GoSquared Analytics to understand user behaviour. These services collect information including:
-          </p>
-          <ul class="mb-8 list-disc list-inside space-y-2">
-            <li>Your IP address and referring domain.</li>
-            <li>Device details such as operating system, screen resolution, and browser type.</li>
-            <li>Location, language, and interaction data including pages visited and session duration.</li>
-          </ul>
-          <p class="mb-8">
-            This data is pseudonymised and is not sold. For more details, please review:
-          </p>
-          <ul class="mb-8 list-disc list-inside space-y-2">
-            <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">Google Analytics Privacy Policy</a></li>
-            <li><a href="https://www.gosquared.com/legal/privacy" target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">GoSquared Privacy Policy</a></li>
-          </ul>
-          <p class="mb-8">
-            We also use cookies to improve your experience. For details, see our <a href="/cookie-policy" target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">Cookie Policy</a>.
-          </p>
+        </nav>
 
-          <h2 class="mt-10 mb-4">3. How We Use Your Data</h2>
-          <p class="mb-8">
-            We may use your personal data to:
-          </p>
-          <ul class="mb-8 list-disc list-inside space-y-2">
-            <li>Send marketing and promotional messages based on your preferences.</li>
-            <li>Deliver personalised content and advertising, and measure campaign performance.</li>
-          </ul>
+        <!-- Policy Content -->
+        <h3 id="purpose-and-scope">Purpose and Scope</h3>
+        <p>
+          Green Orbit Digital is committed to ensuring digital accessibility for all users across our platforms, products, 
+          and services. This policy establishes our framework for creating, maintaining, and improving accessible digital experiences.
+        </p>
 
-          <h2 class="mt-10 mb-4">4. Who We Share Your Data With</h2>
-          <p class="mb-8">
-            Your website data may be shared with third-party partners for analytics and marketing, who process it under their own privacy policies:
-          </p>
-          <ul class="mb-8 list-disc list-inside space-y-2">
-            <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">Google Analytics</a></li>
-            <li><a href="https://www.gosquared.com/legal/privacy" target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">GoSquared</a></li>
-          </ul>
+        <h3 id="policy-statement">Policy Statement</h3>
+        <p>
+          We strive to ensure that all digital content and services are accessible to people with disabilities, following 
+          the Web Content Accessibility Guidelines (WCAG) 2.1 AA standards.
+        </p>
 
-          <h2 class="mt-10 mb-4">5. Data Retention</h2>
-          <p class="mb-8">
-            We retain personal data only as long as necessary for the purposes stated. When no longer needed, data is securely deleted or anonymised. If immediate deletion is not possible (e.g., in backups), data is securely isolated until deletion can occur.
-          </p>
+        <h3 id="core-principles">Core Principles</h3>
+        <ul>
+          <li><strong>Perceivable:</strong> Information and user interface components must be presentable to users in ways they can perceive.</li>
+          <li><strong>Operable:</strong> User interface components and navigation must be operable.</li>
+          <li><strong>Understandable:</strong> Information and operation of user interface must be understandable.</li>
+          <li><strong>Robust:</strong> Content must be robust enough to be interpreted reliably by a wide variety of user agents.</li>
+        </ul>
 
-          <h2 class="mt-10 mb-4">6. Data Security</h2>
-          <p class="mb-8">
-            We implement a variety of technical and organisational safeguards, including:
-          </p>
-          <ul class="mb-8 list-disc list-inside space-y-2">
-            <li>Encryption of data at rest and in transit.</li>
-            <li>Role-based access controls and secure password policies.</li>
-            <li>Regular staff training on security and privacy.</li>
-            <li>Automated vulnerability scanning and static code analysis.</li>
-            <li>API key rotation and optional mutual TLS (MTLS) authentication.</li>
-            <li>Privacy by design and data minimisation principles throughout our platform development.</li>
-            <li>Background checks for employees handling sensitive data.</li>
-          </ul>
+        <h3 id="technical-requirements">Technical Requirements</h3>
+        <h4>Website Accessibility</h4>
+        <ul>
+          <li>All websites must be navigable via keyboard</li>
+          <li>Content must be readable when zoomed up to 300%</li>
+          <li>All images must include meaningful alternative text</li>
+          <li>Videos must include captions and audio descriptions</li>
+          <li>Color contrast must meet WCAG 2.1 AA standards</li>
+          <li>Forms must include proper labels and error handling</li>
+        </ul>
 
-          <h2 class="mt-10 mb-4">7. Your Privacy Rights</h2>
-          <p class="mb-4">
-            If you are located in the UK, EEA, or Switzerland, you have rights including:
-          </p>
-          <ul class="mb-8 list-disc list-inside space-y-2">
-            <li>Accessing your personal data.</li>
-            <li>Requesting corrections or deletion of your data.</li>
-          </ul>
-          <p class="mb-8">
-            For regulatory concerns, you may contact:
-          </p>
-          <ul class="mb-8 list-disc list-inside space-y-2">
-            <li><a href="http://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm" target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">EEA & UK Data Protection Authorities</a></li>
-            <li><a href="https://www.edoeb.admin.ch/edoeb/en/home.html" target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">Swiss Data Protection Authority</a></li>
-          </ul>
+        <h3 id="content-standards">Content Standards</h3>
+        <ul>
+          <li>Use clear, simple language</li>
+          <li>Provide consistent navigation</li>
+          <li>Ensure proper heading structure</li>
+          <li>Include descriptive link text</li>
+          <li>Provide transcripts for audio content</li>
+        </ul>
 
-          <h2 class="mt-10 mb-4">8. Do-Not-Track Signals</h2>
-          <p class="mb-8">
-            Some browsers offer “Do-Not-Track” (DNT) settings. Currently, there is no universally accepted standard for responding to DNT signals, so we do not act upon these requests at this time. We will update this policy if standards change.
-          </p>
+        <h3 id="testing-and-monitoring">Testing and Monitoring</h3>
+        <p>We conduct regular accessibility testing using:</p>
+        <ul>
+          <li>Automated testing tools</li>
+          <li>Manual testing by trained staff</li>
+          <li>User testing with assistive technologies</li>
+          <li>Third-party accessibility audits</li>
+        </ul>
 
-          <h2 class="mt-10 mb-4">9. Policy Updates</h2>
-          <p class="mb-8">
-            We may update this Privacy Policy occasionally. We will notify you of significant changes where reasonably possible.
-          </p>
+        <h3 id="support-and-feedback">Support and Feedback</h3>
+        <p>
+          Users who experience accessibility issues or require alternative formats can contact us at:
+        </p>
+        <p><strong>Email:</strong> hello@greenorbit.space</p>
+        <p><strong>Phone:</strong> +44 7599423050</p>
+        <p>We aim to respond to accessibility requests within 5 working days.</p>
 
-          <h2 class="mt-10 mb-4">10. Contact Us</h2>
-          <p class="mb-6">
-            For any questions, concerns, or requests regarding your personal data, please get in touch with us:
-          </p>
+        <h3 id="continuous-improvement">Continuous Improvement</h3>
+        <p>We are committed to:</p>
+        <ul>
+          <li>Regular review and updates of this policy</li>
+          <li>Ongoing staff training in accessibility</li>
+          <li>Implementation of emerging accessibility technologies</li>
+          <li>Regular consultation with users with disabilities</li>
+        </ul>
 
-        <div class="flex flex-wrap gap-4">
-          <a href="/contact" class="btn-primary">
-            Contact us
-          </a>
-        </div>
+        <h3 id="compliance">Compliance</h3>
+        <p>This policy aligns with:</p>
+        <ul>
+          <li>Web Content Accessibility Guidelines (WCAG) 2.1 Level AA</li>
+          <li>Relevant disability discrimination legislation</li>
+          <li>Industry best practices for digital accessibility</li>
+        </ul>
 
-          <p class="mt-6 mb-4 text-sm text-gray-600 dark:text-white">
-            Alternatively, you may contact the UK Information Commissioner’s Office directly:
-          </p>
-
-          <address class="not-italic text-sm mb-8">
-            The Information Commissioner’s Office<br />
-            Wycliffe House, Water Lane, Wilmslow, Cheshire, SK9 5AF<br />
-            Phone: 0303 123 1113<br />
-            <a href="https://www.ico.org.uk" target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">www.ico.org.uk</a>
-          </address>
-
-        </article>
+        <aside class="mt-12 p-4 border-t border-gray-300 dark:border-gray-600 text-sm">
+          <p><strong>Green Orbit Digital Ltd</strong><br/>
+          86-90 Paul Street, London EC2A 4NE<br/>
+          Company number: 15207389 registered in England and Wales<br/>
+          VAT number: GB462243312</p>
+        </aside>
       </div>
     </section>
   </main>

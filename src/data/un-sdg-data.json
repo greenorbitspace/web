@@ -1,0 +1,1475 @@
+  {
+    "id": 1,
+    "slug": "no-poverty",
+    "name": "No Poverty",
+    "description": "End poverty in all its forms everywhere",
+    "icon": "https://open-sdg.github.io/sdg-translations/assets/img/goals/en/1.png",
+    "targets": [
+      {
+        "target": "1.1",
+        "description": "By 2030, eradicate extreme poverty for all people everywhere, currently measured as people living on less than $1.25 a day",
+        "sources": [
+          "UN SDG Indicators: https://sdgdata.gov.uk/1/",
+          "SDG House: https://www.sdghouse.org/en/sdg/sdg-1-no-poverty-en/"
+        ]
+      },
+      {
+        "target": "1.2",
+        "description": "By 2030, reduce at least by half the proportion of men, women and children of all ages living in poverty in all its dimensions according to national definitions",
+        "sources": [
+          "UN SDG Indicators: https://sdgdata.gov.uk/1/",
+          "SDG House: https://www.sdghouse.org/en/sdg/sdg-1-no-poverty-en/"
+        ]
+      },
+      {
+        "target": "1.3",
+        "description": "Implement nationally appropriate social protection systems and measures for all, including floors, and achieve substantial coverage of the poor and the vulnerable",
+        "sources": [
+          "UN SDG Indicators: https://sdgdata.gov.uk/1/",
+          "SDG House: https://www.sdghouse.org/en/sdg/sdg-1-no-poverty-en/"
+        ]
+      },
+      {
+        "target": "1.4",
+        "description": "By 2030, ensure that all men and women, in particular the poor and the vulnerable, have equal rights to economic resources, as well as access to basic services, ownership and control over land and other forms of property, inheritance, natural resources, appropriate new technology and financial services, including microfinance",
+        "sources": [
+          "UN SDG Indicators: https://sdgdata.gov.uk/1/",
+          "SDG House: https://www.sdghouse.org/en/sdg/sdg-1-no-poverty-en/"
+        ]
+      },
+      {
+        "target": "1.5",
+        "description": "By 2030, build the resilience of the poor and those in vulnerable situations and reduce their exposure and vulnerability to climate-related extreme events and other economic, social and environmental shocks and disasters",
+        "sources": [
+          "UN SDG Indicators: https://sdgdata.gov.uk/1/",
+          "SDG House: https://www.sdghouse.org/en/sdg/sdg-1-no-poverty-en/"
+        ]
+      },
+      {
+        "target": "1.a",
+        "description": "Ensure significant mobilization of resources from a variety of sources, including through enhanced development cooperation, in order to provide adequate and predictable means for developing countries, in particular least developed countries, to implement programmes and policies to end poverty in all its dimensions",
+        "sources": [
+          "UN SDG Indicators: https://sdgdata.gov.uk/1/",
+          "SDG House: https://www.sdghouse.org/en/sdg/sdg-1-no-poverty-en/"
+        ]
+      },
+      {
+        "target": "1.b",
+        "description": "Create sound policy frameworks at the national, regional and international levels, based on pro-poor and gender-sensitive development strategies, to support accelerated investment in poverty eradication actions",
+        "sources": [
+          "UN SDG Indicators: https://sdgdata.gov.uk/1/",
+          "SDG House: https://www.sdghouse.org/en/sdg/sdg-1-no-poverty-en/"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "zero-hunger",
+    "name": "Zero Hunger",
+    "description": "End hunger, achieve food security and improved nutrition, and promote sustainable agriculture",
+    "icon": "https://open-sdg.github.io/sdg-translations/assets/img/goals/en/2.png",
+    "targets": [
+      {
+        "target": "2.1",
+        "description": "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round",
+        "sources": [
+          "UN SDG Indicators: https://sdgdata.gov.uk/2/",
+          "SDG House: https://www.sdghouse.org/en/sdg/sdg-2-zero-hunger-en/"
+        ]
+      },
+      {
+        "target": "2.2",
+        "description": "By 2030, end all forms of malnutrition, including achieving, by 2025, the internationally agreed targets on stunting and wasting in children under 5 years of age, and address the nutritional needs of adolescent girls, pregnant and lactating women and older persons",
+        "sources": [
+          "UN SDG Indicators: https://sdgdata.gov.uk/2/",
+          "SDG House: https://www.sdghouse.org/en/sdg/sdg-2-zero-hunger-en/"
+        ]
+      },
+      {
+        "target": "2.3",
+        "description": "By 2030, double the agricultural productivity and incomes of small-scale food producers, in particular women, indigenous peoples, family farmers, pastoralists and fishers, including through secure and equal access to land, other productive resources and inputs, knowledge, financial services, markets and opportunities for value addition and non-farm employment",
+        "sources": [
+          "UN SDG Indicators: https://sdgdata.gov.uk/2/",
+          "SDG House: https://www.sdghouse.org/en/sdg/sdg-2-zero-hunger-en/"
+        ]
+      },
+      {
+        "target": "2.4",
+        "description": "By 2030, ensure sustainable food production systems and implement resilient agricultural practices that increase productivity and production, that help maintain ecosystems, that strengthen capacity for adaptation to climate change, extreme weather, drought, flooding and other disasters and that progressively improve land and soil quality",
+        "sources": [
+          "UN SDG Indicators: https://sdgdata.gov.uk/2/",
+          "SDG House: https://www.sdghouse.org/en/sdg/sdg-2-zero-hunger-en/"
+        ]
+      },
+      {
+        "target": "2.5",
+        "description": "By 2020, maintain the genetic diversity of seeds, cultivated plants and farmed and domesticated animals and their related wild species, including through soundly managed and diversified seed and plant banks at the national, regional and international levels, and promote access to and fair and equitable sharing of benefits arising from the utilization of genetic resources and associated traditional knowledge, as internationally agreed",
+        "sources": [
+          "UN SDG Indicators: https://sdgdata.gov.uk/2/",
+          "SDG House: https://www.sdghouse.org/en/sdg/sdg-2-zero-hunger-en/"
+        ]
+      },
+      {
+        "target": "2.a",
+        "description": "Increase investment, including through enhanced international cooperation, in rural infrastructure, agricultural research and extension services, technology development and plant and livestock gene banks in order to enhance agricultural productive capacity in developing countries, in particular least developed countries",
+        "sources": [
+          "UN SDG Indicators: https://sdgdata.gov.uk/2/",
+          "SDG House: https://www.sdghouse.org/en/sdg/sdg-2-zero-hunger-en/"
+        ]
+      },
+      {
+        "target": "2.b",
+        "description": "Correct and prevent trade restrictions and distortions in world agricultural markets, including through the parallel elimination of all forms of agricultural export subsidies and all export measures with equivalent effect, in accordance with the mandate of the Doha Development Round",
+        "sources": [
+          "UN SDG Indicators: https://sdgdata.gov.uk/2/",
+          "SDG House: https://www.sdghouse.org/en/sdg/sdg-2-zero-hunger-en/"
+        ]
+      },
+      {
+        "target": "2.c",
+        "description": "Adopt measures to ensure the proper functioning of food commodity markets and their derivatives and facilitate timely access to market information, including on food reserves, in order to help limit extreme food price volatility",
+        "sources": [
+          "UN SDG Indicators: https://sdgdata.gov.uk/2/",
+          "SDG House: https://www.sdghouse.org/en/sdg/sdg-2-zero-hunger-en/"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "good-health",
+    "name": "Good Health and Well-being",
+    "description": "Ensure healthy lives and promote well-being for all at all ages",
+    "icon": "https://open-sdg.github.io/sdg-translations/assets/img/goals/en/3.png",
+    "targets": [
+      {
+        "target": "3.1",
+        "description": "By 2030, reduce the global maternal mortality ratio to less than 70 per 100,000 live births",
+        "sources": [
+          "WHO SDG targets: https://www.who.int/europe/about-us/our-work/sustainable-development-goals/targets-of-sustainable-development-goal-3",
+          "UN SDG Indicators: https://sdgdata.gov.uk/3/"
+        ]
+      },
+      {
+        "target": "3.2",
+        "description": "By 2030, end preventable deaths of newborns and children under 5 years of age, with all countries aiming to reduce neonatal mortality to at least as low as 12 per 1,000 live births and under-5 mortality to at least as low as 25 per 1,000 live births",
+        "sources": [
+          "WHO SDG targets: https://www.who.int/europe/about-us/our-work/sustainable-development-goals/targets-of-sustainable-development-goal-3",
+          "UN SDG Indicators: https://sdgdata.gov.uk/3/"
+        ]
+      },
+      {
+        "target": "3.3",
+        "description": "By 2030, end the epidemics of AIDS, tuberculosis, malaria and neglected tropical diseases and combat hepatitis, water-borne diseases and other communicable diseases",
+        "sources": [
+          "WHO SDG targets: https://www.who.int/europe/about-us/our-work/sustainable-development-goals/targets-of-sustainable-development-goal-3",
+          "UN SDG Indicators: https://sdgdata.gov.uk/3/"
+        ]
+      },
+      {
+        "target": "3.4",
+        "description": "By 2030, reduce by one third premature mortality from non-communicable diseases through prevention and treatment and promote mental health and well-being",
+        "sources": [
+          "WHO NCD Country Profiles: https://www.who.int/data/ncds",
+          "UN SDG Indicators: https://sdgdata.gov.uk/3/"
+        ]
+      },
+      {
+        "target": "3.5",
+        "description": "Strengthen the prevention and treatment of substance abuse, including narcotic drug abuse and harmful use of alcohol",
+        "sources": [
+          "WHO Global Status Report on Alcohol and Health: https://www.who.int/publications/i/item/9789241565639",
+          "UNODC World Drug Report: https://www.unodc.org/unodc/en/data-and-analysis/wdr2023.html"
+        ]
+      },
+      {
+        "target": "3.6",
+        "description": "By 2020, halve the number of global deaths and injuries from road traffic accidents",
+        "sources": [
+          "WHO Global Status Report on Road Safety: https://www.who.int/publications/i/item/9789241565684",
+          "UN SDG Indicators: https://sdgdata.gov.uk/3/"
+        ]
+      },
+      {
+        "target": "3.7",
+        "description": "By 2030, ensure universal access to sexual and reproductive health-care services, including family planning, information and education, and the integration of reproductive health into national strategies and programmes",
+        "sources": [
+          "UNFPA Reproductive Health Data: https://www.unfpa.org/data",
+          "WHO SDG Indicators: https://www.who.int/data/gho/data/themes/maternal-and-reproductive-health"
+        ]
+      },
+      {
+        "target": "3.8",
+        "description": "Achieve universal health coverage, including financial risk protection, access to quality essential health-care services and access to safe, effective, quality and affordable essential medicines and vaccines for all",
+        "sources": [
+          "WHO Universal Health Coverage Data Portal: https://www.who.int/health-topics/universal-health-coverage#tab=tab_1",
+          "World Bank Health Nutrition and Population Statistics: https://databank.worldbank.org/source/health-nutrition-and-population-statistics"
+        ]
+      },
+      {
+        "target": "3.9",
+        "description": "By 2030, substantially reduce the number of deaths and illnesses from hazardous chemicals and air, water and soil pollution and contamination",
+        "sources": [
+          "WHO Air Quality Database: https://www.who.int/data/gho/data/themes/air-pollution",
+          "UNEP Chemicals and Waste: https://www.unep.org/resources"
+        ]
+      },
+      {
+        "target": "3.a",
+        "description": "Strengthen the implementation of the World Health Organization Framework Convention on Tobacco Control in all countries, as appropriate",
+        "sources": [
+          "WHO FCTC Data Portal: https://www.who.int/fctc/reporting/data",
+          "UN SDG Indicators: https://sdgdata.gov.uk/3/"
+        ]
+      },
+      {
+        "target": "3.b",
+        "description": "Support the research and development of vaccines and medicines for the communicable and non-communicable diseases that primarily affect developing countries, provide access to affordable essential medicines and vaccines",
+        "sources": [
+          "WHO Global Observatory on Health R&D: https://www.who.int/observatories/global-observatory-on-health-research-and-development",
+          "UNICEF Vaccine Data: https://data.unicef.org/topic/child-health/immunization/"
+        ]
+      },
+      {
+        "target": "3.c",
+        "description": "Substantially increase health financing and recruitment, development, training and retention of the health workforce in developing countries, especially in least developed countries and small island developing States",
+        "sources": [
+          "WHO Global Health Workforce Statistics: https://www.who.int/data/gho/data/themes/topics/health-workforce",
+          "World Bank Health Workforce Data: https://databank.worldbank.org/source/health-nutrition-and-population-statistics"
+        ]
+      },
+      {
+        "target": "3.d",
+        "description": "Strengthen the capacity of all countries, in particular developing countries, for early warning, risk reduction and management of national and global health risks",
+        "sources": [
+          "WHO Health Emergency Data: https://www.who.int/teams/emergency-preparedness-response",
+          "UN SDG Indicators: https://sdgdata.gov.uk/3/"
+        ]
+      },
+{
+    "id": 4,
+    "slug": "quality-education",
+    "name": "Quality Education",
+    "description": "Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all",
+    "icon": "https://open-sdg.github.io/sdg-translations/assets/img/goals/en/4.png",
+    "targets": [
+      {
+        "target": "4.1",
+        "description": "By 2030, ensure that all girls and boys complete free, equitable and quality primary and secondary education leading to relevant and effective learning outcomes",
+        "sources": [
+          "UNESCO Institute for Statistics (UIS): http://uis.unesco.org/",
+          "UN SDG Indicators: https://sdgdata.gov.uk/4/"
+        ]
+      },
+      {
+        "target": "4.2",
+        "description": "By 2030, ensure that all girls and boys have access to quality early childhood development, care and pre-primary education so that they are ready for primary education",
+        "sources": [
+          "UNICEF Early Childhood Development: https://data.unicef.org/topic/early-childhood-development/",
+          "UNESCO UIS: http://uis.unesco.org/"
+        ]
+      },
+      {
+        "target": "4.3",
+        "description": "By 2030, ensure equal access for all women and men to affordable and quality technical, vocational and tertiary education, including university",
+        "sources": [
+          "World Bank Education Data: https://databank.worldbank.org/source/education-statistics",
+          "UNESCO UIS: http://uis.unesco.org/"
+        ]
+      },
+      {
+        "target": "4.4",
+        "description": "By 2030, substantially increase the number of youth and adults who have relevant skills, including technical and vocational skills, for employment, decent jobs and entrepreneurship",
+        "sources": [
+          "ILO Skills and Employability Data: https://www.ilo.org/global/statistics-and-databases/lang--en/index.htm",
+          "UNESCO UIS: http://uis.unesco.org/"
+        ]
+      },
+      {
+        "target": "4.5",
+        "description": "By 2030, eliminate gender disparities in education and ensure equal access to all levels of education and vocational training for the vulnerable, including persons with disabilities, indigenous peoples and children in vulnerable situations",
+        "sources": [
+          "UNESCO Gender Data Portal: http://uis.unesco.org/en/topic/gender-equality-education",
+          "UN SDG Indicators: https://sdgdata.gov.uk/4/"
+        ]
+      },
+      {
+        "target": "4.6",
+        "description": "By 2030, ensure that all youth and a substantial proportion of adults, both men and women, achieve literacy and numeracy",
+        "sources": [
+          "UNESCO UIS Literacy Data: http://uis.unesco.org/",
+          "UN SDG Indicators: https://sdgdata.gov.uk/4/"
+        ]
+      },
+      {
+        "target": "4.7",
+        "description": "By 2030, ensure that all learners acquire the knowledge and skills needed to promote sustainable development, including, among others, through education for sustainable development and sustainable lifestyles, human rights, gender equality, promotion of a culture of peace and non-violence, global citizenship and appreciation of cultural diversity",
+        "sources": [
+          "UNESCO Education for Sustainable Development: https://en.unesco.org/themes/education-sustainable-development",
+          "UN SDG Indicators: https://sdgdata.gov.uk/4/"
+        ]
+      },
+      {
+        "target": "4.a",
+        "description": "Build and upgrade education facilities that are child, disability and gender sensitive and provide safe, non-violent, inclusive and effective learning environments for all",
+        "sources": [
+          "UNESCO UIS Infrastructure Data: http://uis.unesco.org/",
+          "UNICEF Education Facilities: https://data.unicef.org/topic/education/infrastructure/"
+        ]
+      },
+      {
+        "target": "4.b",
+        "description": "By 2020, substantially expand globally the number of scholarships available to developing countries, in particular least developed countries, small island developing States and African countries, for enrolment in higher education",
+        "sources": [
+          "UNESCO UIS Scholarships Data: http://uis.unesco.org/",
+          "World Bank Education Finance Data: https://databank.worldbank.org/source/education-statistics"
+        ]
+      },
+      {
+        "target": "4.c",
+        "description": "By 2030, substantially increase the supply of qualified teachers, including through international cooperation for teacher training in developing countries",
+        "sources": [
+          "UNESCO Institute for Statistics (UIS) Teacher Data: http://uis.unesco.org/",
+          "UNICEF Education Workforce Data: https://data.unicef.org/topic/education/teachers/"
+        ]
+      },
+{
+    "id": 5,
+    "slug": "gender-equality",
+    "name": "Gender Equality",
+    "description": "Achieve gender equality and empower all women and girls",
+    "icon": "https://open-sdg.github.io/sdg-translations/assets/img/goals/en/5.png",
+    "targets": [
+      {
+        "target": "5.1",
+        "description": "End all forms of discrimination against all women and girls everywhere",
+        "sources": [
+          "UN Women Data: https://data.unwomen.org/",
+          "UN SDG Indicators: https://sdgdata.gov.uk/5/"
+        ]
+      },
+      {
+        "target": "5.2",
+        "description": "Eliminate all forms of violence against all women and girls in the public and private spheres, including trafficking and sexual and other types of exploitation",
+        "sources": [
+          "UN Women Global Database on Violence against Women: https://evaw-global-database.unwomen.org/",
+          "UN SDG Indicators: https://sdgdata.gov.uk/5/"
+        ]
+      },
+      {
+        "target": "5.3",
+        "description": "Eliminate all harmful practices, such as child, early and forced marriage and female genital mutilation",
+        "sources": [
+          "UNICEF Child Marriage Data: https://data.unicef.org/topic/child-protection/child-marriage/",
+          "WHO Female Genital Mutilation Data: https://www.who.int/health-topics/female-genital-mutilation"
+        ]
+      },
+      {
+        "target": "5.4",
+        "description": "Recognize and value unpaid care and domestic work through the provision of public services, infrastructure and social protection policies, and promote shared responsibility within the household and the family",
+        "sources": [
+          "ILO Time Use Data: https://www.ilo.org/global/statistics-and-databases/lang--en/index.htm",
+          "UN SDG Indicators: https://sdgdata.gov.uk/5/"
+        ]
+      },
+      {
+        "target": "5.5",
+        "description": "Ensure women’s full and effective participation and equal opportunities for leadership at all levels of decision-making in political, economic and public life",
+        "sources": [
+          "UN Women Leadership Data: https://data.unwomen.org/",
+          "IPU Parline Database on Women in Parliament: https://data.ipu.org/women-ranking?month=8&year=2025"
+        ]
+      },
+      {
+        "target": "5.6",
+        "description": "Ensure universal access to sexual and reproductive health and reproductive rights",
+        "sources": [
+          "UNFPA Reproductive Health Data: https://www.unfpa.org/data",
+          "WHO Reproductive Health Data: https://www.who.int/data/gho/data/themes/maternal-and-reproductive-health"
+        ]
+      },
+      {
+        "target": "5.a",
+        "description": "Undertake reforms to give women equal rights to economic resources, as well as access to ownership and control over land and other forms of property, financial services, inheritance and natural resources",
+        "sources": [
+          "FAO Gender and Land Rights Data: http://www.fao.org/gender-landrights-database/en/",
+          "World Bank Gender Data Portal: https://databank.worldbank.org/source/gender-statistics"
+        ]
+      },
+      {
+        "target": "5.b",
+        "description": "Enhance the use of enabling technology, in particular information and communications technology, to promote the empowerment of women",
+        "sources": [
+          "ITU ICT and Gender Data: https://www.itu.int/en/ITU-D/Statistics/Pages/stat/default.aspx",
+          "UN Women Data: https://data.unwomen.org/"
+        ]
+      },
+      {
+        "target": "5.c",
+        "description": "Adopt and strengthen sound policies and enforceable legislation for the promotion of gender equality and the empowerment of all women and girls at all levels",
+        "sources": [
+          "UN Women Gender Equality Legal Data: https://data.unwomen.org/",
+          "World Bank Gender Data Portal: https://databank.worldbank.org/source/gender-statistics"
+        ]
+      },
+{
+    "id": 6,
+    "slug": "clean-water",
+    "name": "Clean Water and Sanitation",
+    "description": "Ensure availability and sustainable management of water and sanitation for all",
+    "icon": "https://open-sdg.github.io/sdg-translations/assets/img/goals/en/6.png",
+    "targets": [
+      {
+        "target": "6.1",
+        "description": "By 2030, achieve universal and equitable access to safe and affordable drinking water for all",
+        "sources": [
+          "WHO/UNICEF Joint Monitoring Programme (JMP): https://washdata.org/",
+          "UN SDG Indicators: https://sdgdata.gov.uk/6/"
+        ]
+      },
+      {
+        "target": "6.2",
+        "description": "By 2030, achieve access to adequate and equitable sanitation and hygiene for all and end open defecation, paying special attention to the needs of women and girls and those in vulnerable situations",
+        "sources": [
+          "WHO/UNICEF JMP Sanitation Data: https://washdata.org/",
+          "UN SDG Indicators: https://sdgdata.gov.uk/6/"
+        ]
+      },
+      {
+        "target": "6.3",
+        "description": "By 2030, improve water quality by reducing pollution, eliminating dumping and minimizing release of hazardous chemicals and materials, halving the proportion of untreated wastewater and substantially increasing recycling and safe reuse globally",
+        "sources": [
+          "UN Environment Programme (UNEP) Water Quality Data: https://www.unep.org/resources",
+          "World Bank Water Data: https://databank.worldbank.org/source/water"
+        ]
+      },
+      {
+        "target": "6.4",
+        "description": "By 2030, substantially increase water-use efficiency across all sectors and ensure sustainable withdrawals and supply of freshwater to address water scarcity and substantially reduce the number of people suffering from water scarcity",
+        "sources": [
+          "FAO AQUASTAT: http://www.fao.org/aquastat/en/",
+          "World Bank Water Use Data: https://databank.worldbank.org/source/water"
+        ]
+      },
+      {
+        "target": "6.5",
+        "description": "By 2030, implement integrated water resources management at all levels, including through transboundary cooperation as appropriate",
+        "sources": [
+          "UNESCO World Water Assessment Programme: https://www.unesco.org/en/dams-and-water-resources",
+          "UN SDG Indicators: https://sdgdata.gov.uk/6/"
+        ]
+      },
+      {
+        "target": "6.6",
+        "description": "By 2020, protect and restore water-related ecosystems, including mountains, forests, wetlands, rivers, aquifers and lakes",
+        "sources": [
+          "Ramsar Convention on Wetlands: https://www.ramsar.org/",
+          "UN Environment Programme (UNEP) Ecosystem Data: https://www.unep.org/resources"
+        ]
+      },
+      {
+        "target": "6.a",
+        "description": "By 2030, expand international cooperation and capacity-building support to developing countries in water- and sanitation-related activities and programmes, including water harvesting, desalination, water efficiency, wastewater treatment, recycling and reuse technologies",
+        "sources": [
+          "UN Water Cooperation Data: https://www.unwater.org/",
+          "World Bank Water and Sanitation Projects: https://projects.worldbank.org/en/projects-operations/products-and-services"
+        ]
+      },
+      {
+        "target": "6.b",
+        "description": "Support and strengthen the participation of local communities in improving water and sanitation management",
+        "sources": [
+          "UNICEF Community Water and Sanitation Data: https://data.unicef.org/topic/water-and-sanitation/",
+          "UN SDG Indicators: https://sdgdata.gov.uk/6/"
+        ]
+      },
+{
+    "id": 7,
+    "slug": "affordable-clean-energy",
+    "name": "Affordable and Clean Energy",
+    "description": "Ensure access to affordable, reliable, sustainable and modern energy for all",
+    "icon": "https://open-sdg.github.io/sdg-translations/assets/img/goals/en/7.png",
+    "targets": [
+      {
+        "target": "7.1",
+        "description": "By 2030, ensure universal access to affordable, reliable and modern energy services",
+        "sources": [
+          "International Energy Agency (IEA) Energy Access Data: https://www.iea.org/data-and-statistics",
+          "World Bank Energy Data: https://databank.worldbank.org/source/world-development-indicators"
+        ]
+      },
+      {
+        "target": "7.2",
+        "description": "By 2030, increase substantially the share of renewable energy in the global energy mix",
+        "sources": [
+          "IRENA Renewable Energy Statistics: https://www.irena.org/Statistics",
+          "IEA Renewables Data: https://www.iea.org/data-and-statistics"
+        ]
+      },
+      {
+        "target": "7.3",
+        "description": "By 2030, double the global rate of improvement in energy efficiency",
+        "sources": [
+          "IEA Energy Efficiency Data: https://www.iea.org/data-and-statistics",
+          "UN SDG Indicators: https://sdgdata.gov.uk/7/"
+        ]
+      },
+      {
+        "target": "7.a",
+        "description": "Enhance international cooperation to facilitate access to clean energy research and technology, including renewable energy, energy efficiency and advanced and cleaner fossil-fuel technology, and promote investment in energy infrastructure and clean energy technology",
+        "sources": [
+          "UN Energy Data Portal: https://www.un.org/en/global-issues/energy",
+          "IRENA Investment Data: https://www.irena.org/Statistics"
+        ]
+      },
+      {
+        "target": "7.b",
+        "description": "By 2030, expand infrastructure and upgrade technology for supplying modern and sustainable energy services for all in developing countries, particularly least developed countries, small island developing States and landlocked developing countries, in accordance with their respective programs of support",
+        "sources": [
+          "World Bank Energy Projects Data: https://projects.worldbank.org/",
+          "UN SDG Indicators: https://sdgdata.gov.uk/7/"
+        ]
+      },
+{
+    "id": 8,
+    "slug": "decent-work",
+    "name": "Decent Work and Economic Growth",
+    "description": "Promote sustained, inclusive and sustainable economic growth, full and productive employment and decent work for all",
+    "icon": "https://open-sdg.github.io/sdg-translations/assets/img/goals/en/8.png",
+    "targets": [
+      {
+        "target": "8.1",
+        "description": "Sustain per capita economic growth in accordance with national circumstances and, in particular, at least 7 per cent gross domestic product growth per annum in the least developed countries",
+        "sources": [
+          "World Bank GDP Data: https://databank.worldbank.org/source/world-development-indicators",
+          "IMF World Economic Outlook: https://www.imf.org/en/Publications/WEO"
+        ]
+      },
+      {
+        "target": "8.2",
+        "description": "Achieve higher levels of economic productivity through diversification, technological upgrading and innovation, including through a focus on high-value added and labour-intensive sectors",
+        "sources": [
+          "UNIDO Industrial Statistics: https://stat.unido.org/",
+          "World Bank Productivity Data: https://databank.worldbank.org/source/world-development-indicators"
+        ]
+      },
+      {
+        "target": "8.3",
+        "description": "Promote development-oriented policies that support productive activities, decent job creation, entrepreneurship, creativity and innovation, and encourage the formalization and growth of micro-, small- and medium-sized enterprises",
+        "sources": [
+          "ILO Employment and Labour Data: https://www.ilo.org/global/statistics-and-databases/lang--en/index.htm",
+          "World Bank Enterprise Surveys: https://www.enterprisesurveys.org/"
+        ]
+      },
+      {
+        "target": "8.4",
+        "description": "Improve progressively, through 2030, global resource efficiency in consumption and production and endeavour to decouple economic growth from environmental degradation",
+        "sources": [
+          "UNEP Resource Efficiency Data: https://www.unep.org/resources",
+          "World Bank Environment and Natural resources Data: https://databank.worldbank.org/source/environment"
+        ]
+      },
+      {
+        "target": "8.5",
+        "description": "By 2030, achieve full and productive employment and decent work for all women and men, including for young people and persons with disabilities, and equal pay for work of equal value",
+        "sources": [
+          "ILO Labour Statistics: https://www.ilo.org/global/statistics-and-databases/lang--en/index.htm",
+          "UN SDG Indicators: https://sdgdata.gov.uk/8/"
+        ]
+      },
+      {
+        "target": "8.6",
+        "description": "By 2020, substantially reduce the proportion of youth not in employment, education or training",
+        "sources": [
+          "ILO Youth Employment Data: https://www.ilo.org/global/statistics-and-databases/lang--en/index.htm",
+          "UN SDG Indicators: https://sdgdata.gov.uk/8/"
+        ]
+      },
+      {
+        "target": "8.7",
+        "description": "Take immediate and effective measures to eradicate forced labour, end modern slavery and human trafficking and secure the prohibition and elimination of the worst forms of child labour, including recruitment and use of child soldiers",
+        "sources": [
+          "ILO Forced Labour Data: https://www.ilo.org/global/statistics-and-databases/lang--en/index.htm",
+          "UNICEF Child Labour Data: https://data.unicef.org/topic/child-protection/child-labour/"
+        ]
+      },
+      {
+        "target": "8.8",
+        "description": "Protect labour rights and promote safe and secure working environments for all workers, including migrant workers, particularly women migrants, and those in precarious employment",
+        "sources": [
+          "ILO Labour Rights Data: https://www.ilo.org/global/statistics-and-databases/lang--en/index.htm",
+          "UN SDG Indicators: https://sdgdata.gov.uk/8/"
+        ]
+      },
+      {
+        "target": "8.9",
+        "description": "By 2030, devise and implement policies to promote sustainable tourism that creates jobs and promotes local culture and products",
+        "sources": [
+          "UNWTO Tourism Statistics: https://www.unwto.org/statistics",
+          "World Bank Tourism Data: https://databank.worldbank.org/source/world-development-indicators"
+        ]
+      },
+      {
+        "target": "8.10",
+        "description": "Strengthen the capacity of domestic financial institutions to encourage and expand access to banking, insurance and financial services for all",
+        "sources": [
+          "World Bank Global Financial Inclusion (Global Findex) Database: https://globalfindex.worldbank.org/",
+          "IMF Financial Access Survey: https://data.imf.org/?sk=E5DCAB7E-A5CA-4892-A6EA-598B5463A34C"
+        ]
+      },
+      {
+        "target": "8.a",
+        "description": "Increase Aid for Trade support for developing countries, in particular least developed countries, including through the Enhanced Integrated Framework for Trade-Related Technical Assistance",
+        "sources": [
+          "WTO Aid for Trade Data: https://www.wto.org/english/tratop_e/devel_e/a4t_e/a4t_e.htm",
+          "UN SDG Indicators: https://sdgdata.gov.uk/8/"
+        ]
+      },
+      {
+        "target": "8.b",
+        "description": "By 2020, develop and operationalize a global strategy for youth employment and implement the Global Jobs Pact of the International Labour Organization",
+        "sources": [
+          "ILO Global Jobs Pact Data: https://www.ilo.org/global/statistics-and-databases/lang--en/index.htm",
+          "UN SDG Indicators: https://sdgdata.gov.uk/8/"
+        ]
+      },
+{
+    "id": 9,
+    "slug": "industry-innovation",
+    "name": "Industry, Innovation and Infrastructure",
+    "description": "Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation",
+    "icon": "https://open-sdg.github.io/sdg-translations/assets/img/goals/en/9.png",
+    "targets": [
+      {
+        "target": "9.1",
+        "description": "Develop quality, reliable, sustainable and resilient infrastructure, including regional and transborder infrastructure, to support economic development and human well-being",
+        "sources": [
+          "World Bank Infrastructure Data: https://databank.worldbank.org/source/world-development-indicators",
+          "UN SDG Indicators: https://sdgdata.gov.uk/9/"
+        ]
+      },
+      {
+        "target": "9.2",
+        "description": "Promote inclusive and sustainable industrialization and, by 2030, significantly raise industry’s share of employment and gross domestic product",
+        "sources": [
+          "UNIDO Industrial Statistics: https://stat.unido.org/",
+          "World Bank Employment by Sector Data: https://databank.worldbank.org/source/world-development-indicators"
+        ]
+      },
+      {
+        "target": "9.3",
+        "description": "Increase the access of small-scale industrial and other enterprises, in particular in developing countries, to financial services, including affordable credit, and their integration into value chains and markets",
+        "sources": [
+          "World Bank Enterprise Surveys: https://www.enterprisesurveys.org/",
+          "ILO SME and Entrepreneurship Data: https://www.ilo.org/global/statistics-and-databases/lang--en/index.htm"
+        ]
+      },
+      {
+        "target": "9.4",
+        "description": "By 2030, upgrade infrastructure and retrofit industries to make them sustainable, with increased resource-use efficiency and greater adoption of clean and environmentally sound technologies and industrial processes",
+        "sources": [
+          "UNEP Sustainable Industry Data: https://www.unep.org/resources",
+          "World Bank Environment and Industry Data: https://databank.worldbank.org/source/environment"
+        ]
+      },
+      {
+        "target": "9.5",
+        "description": "Enhance scientific research, upgrade the technological capabilities of industrial sectors in all countries, particularly developing countries, including by 2030 encouraging innovation and substantially increasing the number of research and development workers per 1 million people",
+        "sources": [
+          "UNESCO Science, Technology and Innovation Data: http://uis.unesco.org/",
+          "World Bank R&D Data: https://databank.worldbank.org/source/world-development-indicators"
+        ]
+      },
+      {
+        "target": "9.a",
+        "description": "Facilitate sustainable and resilient infrastructure development in developing countries through enhanced financial, technological and technical support",
+        "sources": [
+          "UN Infrastructure Data Portal: https://www.un.org/en/global-issues/infrastructure",
+          "World Bank Infrastructure Finance Data: https://projects.worldbank.org/"
+        ]
+      },
+      {
+        "target": "9.b",
+        "description": "Support domestic technology development, research and innovation in developing countries, including by ensuring a conducive policy environment for, inter alia, industrial diversification and value addition to commodities",
+        "sources": [
+          "UNESCO Innovation and Technology Data: http://uis.unesco.org/",
+          "World Bank Technology Adoption Data: https://databank.worldbank.org/source/world-development-indicators"
+        ]
+      },
+      {
+        "target": "9.c",
+        "description": "Significantly increase access to information and communications technology and strive to provide universal and affordable access to the Internet in least developed countries by 2020",
+        "sources": [
+          "ITU ICT Access Data: https://www.itu.int/en/ITU-D/Statistics/Pages/stat/default.aspx",
+          "World Bank Internet Access Data: https://databank.worldbank.org/source/world-development-indicators"
+        ]
+      },
+{
+    "id": 10,
+    "slug": "reduced-inequalities",
+    "name": "Reduced Inequalities",
+    "description": "Reduce inequality within and among countries",
+    "icon": "https://open-sdg.github.io/sdg-translations/assets/img/goals/en/10.png",
+    "targets": [
+      {
+        "target": "10.1",
+        "description": "By 2030, progressively achieve and sustain income growth of the bottom 40 per cent of the population at a rate higher than the national average",
+        "sources": [
+          "World Bank PovcalNet: https://www.worldbank.org/en/research/poverty-mapping",
+          "UN SDG Indicators: https://sdgdata.gov.uk/10/"
+        ]
+      },
+      {
+        "target": "10.2",
+        "description": "By 2030, empower and promote the social, economic and political inclusion of all, irrespective of age, sex, disability, race, ethnicity, origin, religion or economic or other status",
+        "sources": [
+          "UN DESA Social Inclusion Data: https://sdgs.un.org/goals/goal10",
+          "World Bank Gender and Social Inclusion Data: https://databank.worldbank.org/source/gender-statistics"
+        ]
+      },
+      {
+        "target": "10.3",
+        "description": "Ensure equal opportunity and reduce inequalities of outcome, including by eliminating discriminatory laws, policies and practices and promoting appropriate legislation, policies and action in this regard",
+        "sources": [
+          "World Bank Governance and Inequality Data: https://databank.worldbank.org/source/world-development-indicators",
+          "UN DESA SDG 10 Monitoring: https://sdgs.un.org/goals/goal10"
+        ]
+      },
+      {
+        "target": "10.4",
+        "description": "Adopt policies, especially fiscal, wage and social protection policies, and progressively achieve greater equality",
+        "sources": [
+          "OECD Inequality Data: https://data.oecd.org/inequality.htm",
+          "World Bank Fiscal Policy Data: https://databank.worldbank.org/source/world-development-indicators"
+        ]
+      },
+      {
+        "target": "10.5",
+        "description": "Improve the regulation and monitoring of global financial markets and institutions and strengthen the implementation of such regulations",
+        "sources": [
+          "IMF Financial Sector Data: https://data.imf.org/",
+          "World Bank Global Financial Development Database: https://databank.worldbank.org/source/global-financial-development"
+        ]
+      },
+      {
+        "target": "10.6",
+        "description": "Ensure enhanced representation and voice for developing countries in decision-making in global international economic and financial institutions to deliver more effective, credible, accountable and legitimate institutions",
+        "sources": [
+          "UN DESA Governance Data: https://sdgs.un.org/goals/goal10",
+          "IMF Data on Country Representation: https://www.imf.org/en/Data"
+        ]
+      },
+      {
+        "target": "10.7",
+        "description": "Facilitate orderly, safe, regular and responsible migration and mobility of people, including through implementation of planned and well-managed migration policies",
+        "sources": [
+          "IOM Migration Data Portal: https://www.migrationdataportal.org/",
+          "UN DESA International Migration Data: https://www.un.org/en/global-issues/migration"
+        ]
+      },
+      {
+        "target": "10.a",
+        "description": "Implement the principle of special and differential treatment for developing countries, in particular least developed countries, in accordance with World Trade Organization agreements",
+        "sources": [
+          "WTO Trade Data: https://www.wto.org/english/res_e/statis_e/statis_e.htm",
+          "UN SDG Indicators: https://sdgdata.gov.uk/10/"
+        ]
+      },
+      {
+        "target": "10.b",
+        "description": "Encourage official development assistance and financial flows, including foreign direct investment, to states where the need is greatest, in particular least developed countries, African countries, small island developing States and landlocked developing countries, in accordance with their national plans and programmes",
+        "sources": [
+          "OECD Development Assistance Data: https://data.oecd.org/aid.htm",
+          "UNCTAD Investment Data: https://unctad.org/statistics"
+        ]
+      },
+      {
+        "target": "10.c",
+        "description": "Reduce to less than 3 per cent the transaction costs of migrant remittances and eliminate remittance corridors with costs higher than 5 per cent",
+        "sources": [
+          "World Bank Remittance Prices Worldwide: https://remittanceprices.worldbank.org/",
+          "UN DESA Migration Data: https://www.un.org/en/global-issues/migration"
+        ]
+      },
+{
+    "id": 11,
+    "slug": "sustainable-cities",
+    "name": "Sustainable Cities and Communities",
+    "description": "Make cities and human settlements inclusive, safe, resilient and sustainable",
+    "icon": "https://open-sdg.github.io/sdg-translations/assets/img/goals/en/11.png",
+    "targets": [
+      {
+        "target": "11.1",
+        "description": "By 2030, ensure access for all to adequate, safe and affordable housing and basic services and upgrade slums",
+        "sources": [
+          "UN Habitat Urban Data: https://unhabitat.org/topic/urban-data",
+          "World Bank Urban Development Data: https://databank.worldbank.org/source/world-development-indicators"
+        ]
+      },
+      {
+        "target": "11.2",
+        "description": "By 2030, provide access to safe, affordable, accessible and sustainable transport systems for all, improving road safety, notably by expanding public transport",
+        "sources": [
+          "World Bank Transport Data: https://databank.worldbank.org/source/world-development-indicators",
+          "UN SDG Indicators: https://sdgdata.gov.uk/11/"
+        ]
+      },
+      {
+        "target": "11.3",
+        "description": "By 2030, enhance inclusive and sustainable urbanization and capacity for participatory, integrated and sustainable human settlement planning and management",
+        "sources": [
+          "UN Habitat City Data: https://unhabitat.org/topic/urban-data",
+          "World Bank Urban Population Data: https://databank.worldbank.org/source/world-development-indicators"
+        ]
+      },
+      {
+        "target": "11.4",
+        "description": "Strengthen efforts to protect and safeguard the world’s cultural and natural heritage",
+        "sources": [
+          "UNESCO World Heritage Data: https://whc.unesco.org/en/list/",
+          "UN SDG Indicators: https://sdgdata.gov.uk/11/"
+        ]
+      },
+      {
+        "target": "11.5",
+        "description": "By 2030, significantly reduce the number of deaths and the number of people affected and substantially decrease the direct economic losses relative to global gross domestic product caused by disasters, including water-related disasters",
+        "sources": [
+          "EM-DAT International Disaster Database: https://www.emdat.be/",
+          "UNDRR Global Assessment Reports: https://www.undrr.org/publications"
+        ]
+      },
+      {
+        "target": "11.6",
+        "description": "By 2030, reduce the adverse per capita environmental impact of cities, including by paying special attention to air quality and municipal and other waste management",
+        "sources": [
+          "WHO Urban Air Quality Data: https://www.who.int/data/gho/data/themes/air-pollution",
+          "UN Habitat Waste Management Data: https://unhabitat.org/topic/urban-data"
+        ]
+      },
+      {
+        "target": "11.7",
+        "description": "By 2030, provide universal access to safe, inclusive and accessible, green and public spaces, particularly for women and children, older persons and persons with disabilities",
+        "sources": [
+          "UN Habitat Green Spaces Data: https://unhabitat.org/topic/urban-data",
+          "World Bank Urban Population Access to Green Spaces: https://databank.worldbank.org/source/world-development-indicators"
+        ]
+      },
+      {
+        "target": "11.a",
+        "description": "Support positive economic, social and environmental links between urban, peri-urban and rural areas by strengthening national and regional development planning",
+        "sources": [
+          "UN Habitat Urban-Rural Linkages Data: https://unhabitat.org/topic/urban-data",
+          "World Bank Regional Development Data: https://databank.worldbank.org/source/world-development-indicators"
+        ]
+      },
+      {
+        "target": "11.b",
+        "description": "By 2020, substantially increase the number of cities and human settlements adopting and implementing integrated policies and plans towards inclusion, resource efficiency, mitigation and adaptation to climate change, resilience to disasters",
+        "sources": [
+          "UN Habitat Resilient Cities Data: https://unhabitat.org/topic/urban-data",
+          "UNDRR Resilience Data: https://www.undrr.org/publications"
+        ]
+      },
+      {
+        "target": "11.c",
+        "description": "Support least developed countries, including through financial and technical assistance, in building sustainable and resilient buildings utilizing local materials",
+        "sources": [
+          "UN Habitat Sustainable Building Data: https://unhabitat.org/topic/urban-data",
+          "World Bank Construction and Building Data: https://databank.worldbank.org/source/world-development-indicators"
+        ]
+      },
+{
+    "id": 12,
+    "slug": "responsible-consumption",
+    "name": "Responsible Consumption and Production",
+    "description": "Ensure sustainable consumption and production patterns",
+    "icon": "https://open-sdg.github.io/sdg-translations/assets/img/goals/en/12.png",
+    "targets": [
+      {
+        "target": "12.1",
+        "description": "Implement the 10-Year Framework of Programmes on sustainable consumption and production, all countries taking action, with developed countries taking the lead",
+        "sources": [
+          "UN Environment Programme (UNEP) SCP Data: https://www.unep.org/resources",
+          "UN SDG Indicators: https://sdgdata.gov.uk/12/"
+        ]
+      },
+      {
+        "target": "12.2",
+        "description": "By 2030, achieve the sustainable management and efficient use of natural resources",
+        "sources": [
+          "UNEP Resource Efficiency Data: https://www.unep.org/resources",
+          "FAO Natural resources Data: http://www.fao.org/faostat/en/"
+        ]
+      },
+      {
+        "target": "12.3",
+        "description": "By 2030, halve per capita global food waste at the retail and consumer levels and reduce food losses along production and supply chains, including post-harvest losses",
+        "sources": [
+          "FAO Food Loss and Waste Data: http://www.fao.org/food-loss-and-food-waste/en/",
+          "UN SDG Indicators: https://sdgdata.gov.uk/12/"
+        ]
+      },
+      {
+        "target": "12.4",
+        "description": "By 2020, achieve the environmentally sound management of chemicals and all wastes throughout their life cycle, in accordance with agreed international frameworks, and significantly reduce their release to air, water and soil to minimize their adverse impacts on human health and the environment",
+        "sources": [
+          "UNEP Chemicals and Waste Data: https://www.unep.org/resources",
+          "World Bank Environment Data: https://databank.worldbank.org/source/environment"
+        ]
+      },
+      {
+        "target": "12.5",
+        "description": "By 2030, substantially reduce waste generation through prevention, reduction, recycling and reuse",
+        "sources": [
+          "UNEP Waste Management Data: https://www.unep.org/resources",
+          "World Bank Solid Waste Data: https://databank.worldbank.org/source/world-development-indicators"
+        ]
+      },
+      {
+        "target": "12.6",
+        "description": "Encourage companies, especially large and transnational companies, to adopt sustainable practices and to integrate sustainability information into their reporting cycle",
+        "sources": [
+          "UN Global Compact Corporate Sustainability Data: https://www.unglobalcompact.org/what-is-gc/participants",
+          "GRI Sustainability Reporting Database: https://www.globalreporting.org/"
+        ]
+      },
+      {
+        "target": "12.7",
+        "description": "Promote public procurement practices that are sustainable, in accordance with national policies and priorities",
+        "sources": [
+          "UNEP Sustainable Procurement Data: https://www.unep.org/resources",
+          "OECD Sustainable Public Procurement Data: https://www.oecd.org/gov/public-procurement/"
+        ]
+      },
+      {
+        "target": "12.8",
+        "description": "By 2030, ensure that people everywhere have the relevant information and awareness for sustainable development and lifestyles in harmony with nature",
+        "sources": [
+          "UNESCO Education for Sustainable Development Data: https://unesco.org/education-for-sustainable-development",
+          "UN SDG Indicators: https://sdgdata.gov.uk/12/"
+        ]
+      },
+      {
+        "target": "12.a",
+        "description": "Support developing countries to strengthen their scientific and technological capacity to move towards more sustainable patterns of consumption and production",
+        "sources": [
+          "UNEP SCP Data: https://www.unep.org/resources",
+          "UNCTAD Technology and Innovation Data: https://unctad.org/statistics"
+        ]
+      },
+      {
+        "target": "12.b",
+        "description": "Develop and implement tools to monitor sustainable development impacts for sustainable tourism that creates jobs and promotes local culture and products",
+        "sources": [
+          "UNWTO Tourism Statistics: https://www.unwto.org/statistics",
+          "OECD Sustainable Tourism Data: https://www.oecd.org/tourism/"
+        ]
+      },
+      {
+        "target": "12.c",
+        "description": "Rationalize inefficient fossil-fuel subsidies that encourage wasteful consumption by removing market distortions, in accordance with national circumstances, including by restructuring taxation and phasing out those harmful subsidies, where they exist, to reflect their environmental impacts",
+        "sources": [
+          "IEA Fossil Fuel Subsidy Data: https://www.iea.org/data-and-statistics",
+          "OECD Fossil Fuel Subsidy Data: https://www.oecd.org/fossil-fuels/"
+        ]
+      },
+{
+    "id": 13,
+    "slug": "climate-action",
+    "name": "Climate Action",
+    "description": "Take urgent action to combat climate change and its impacts",
+    "icon": "https://open-sdg.github.io/sdg-translations/assets/img/goals/en/13.png",
+    "targets": [
+      {
+        "target": "13.1",
+        "description": "Strengthen resilience and adaptive capacity to climate-related hazards and natural disasters in all countries",
+        "sources": [
+          "UNDRR Disaster Risk Reduction Data: https://www.undrr.org/publications",
+          "EM-DAT International Disaster Database: https://www.emdat.be/"
+        ]
+      },
+      {
+        "target": "13.2",
+        "description": "Integrate climate change measures into national policies, strategies and planning",
+        "sources": [
+          "UNFCCC Climate Policy Data: https://unfccc.int/process-and-meetings/transparency-and-reporting",
+          "UN SDG Indicators: https://sdgdata.gov.uk/13/"
+        ]
+      },
+      {
+        "target": "13.3",
+        "description": "Improve education, awareness-raising and human and institutional capacity on climate change mitigation, adaptation, impact reduction and early warning",
+        "sources": [
+          "UNESCO Climate Change Education Data: https://en.unesco.org/themes/education-sustainable-development",
+          "UNFCCC Capacity Building Data: https://unfccc.int/topics/capacity-building/the-big-picture"
+        ]
+      },
+      {
+        "target": "13.a",
+        "description": "Implement the commitment undertaken by developed-country parties to the United Nations Framework Convention on Climate Change to a goal of mobilizing jointly $100 billion annually by 2020 from all "sources" to address the needs of developing countries",
+        "sources": [
+          "UNFCCC Climate Finance Data: https://unfccc.int/topics/climate-finance/the-big-picture/climate-finance-in-the-negotiations",
+          "OECD Climate Finance Data: https://www.oecd.org/environment/climate-finance/"
+        ]
+      },
+      {
+        "target": "13.b",
+        "description": "Promote mechanisms for raising capacity for effective climate change-related planning and management in least developed countries and small island developing States, including focusing on women, youth and local and marginalized communities",
+        "sources": [
+          "UNFCCC Capacity-Building Data: https://unfccc.int/topics/capacity-building/the-big-picture",
+          "UN SDG Indicators: https://sdgdata.gov.uk/13/"
+        ]
+      },
+{
+    "id": 14,
+    "slug": "life-below-water",
+    "name": "Life Below Water",
+    "description": "Conserve and sustainably use the oceans, seas and marine resources",
+    "icon": "https://open-sdg.github.io/sdg-translations/assets/img/goals/en/14.png",
+    "targets": [
+      {
+        "target": "14.1",
+        "description": "By 2025, prevent and significantly reduce marine pollution of all kinds, in particular from land-based activities, including marine debris and nutrient pollution",
+        "sources": [
+          "UN Environment Programme (UNEP) Marine Litter Data: https://www.unep.org/resources",
+          "FAO Fisheries and Aquaculture Data: http://www.fao.org/fishery/statistics/en"
+        ]
+      },
+      {
+        "target": "14.2",
+        "description": "By 2020, sustainably manage and protect marine and coastal ecosystems to avoid significant adverse impacts, and take action for their restoration in order to achieve healthy and productive oceans",
+        "sources": [
+          "UNEP Marine Ecosystem Data: https://www.unep.org/resources",
+          "World Bank Ocean and Coastal Resources Data: https://databank.worldbank.org/source/world-development-indicators"
+        ]
+      },
+      {
+        "target": "14.3",
+        "description": "Minimize and address the impacts of ocean acidification, including through enhanced scientific cooperation at all levels",
+        "sources": [
+          "NOAA Ocean Acidification Data: https://www.noaa.gov/education/resource-collections/ocean-coasts/ocean-acidification",
+          "UN SDG Indicators: https://sdgdata.gov.uk/14/"
+        ]
+      },
+      {
+        "target": "14.4",
+        "description": "By 2020, effectively regulate harvesting and end overfishing, illegal, unreported and unregulated fishing and destructive fishing practices, and implement science-based management plans",
+        "sources": [
+          "FAO Fisheries Statistics: http://www.fao.org/fishery/statistics/en",
+          "Sea Around Us Fisheries Data: http://www.seaaroundus.org/data/#/eez"
+        ]
+      },
+      {
+        "target": "14.5",
+        "description": "By 2020, conserve at least 10 per cent of coastal and marine areas, consistent with national and international law and based on the best available scientific information",
+        "sources": [
+          "Protected Planet Marine Protected Areas Data: https://www.protectedplanet.net/",
+          "UNEP Marine Protected Areas Data: https://www.unep.org/resources"
+        ]
+      },
+      {
+        "target": "14.6",
+        "description": "By 2020, prohibit certain forms of fisheries subsidies which contribute to overcapacity and overfishing, eliminate subsidies that contribute to illegal, unreported and unregulated fishing and refrain from introducing new such subsidies",
+        "sources": [
+          "WTO Fisheries Subsidy Data: https://www.wto.org/english/tratop_e/rulesneg_e/fish_e/fish_e.htm",
+          "FAO Fisheries Economics Data: http://www.fao.org/fishery/statistics/en"
+        ]
+      },
+      {
+        "target": "14.7",
+        "description": "By 2030, increase the economic benefits to Small Island developing States and least developed countries from the sustainable use of marine resources, including through sustainable management of fisheries, aquaculture and tourism",
+        "sources": [
+          "UNCTAD Ocean Economy Data: https://unctad.org/statistics",
+          "FAO Fisheries and Aquaculture Data: http://www.fao.org/fishery/statistics/en"
+        ]
+      },
+      {
+        "target": "14.a",
+        "description": "Enhance scientific knowledge, develop research capacity and transfer marine technology, taking into account the Intergovernmental Oceanographic Commission Criteria and Guidelines on the Transfer of Marine Technology",
+        "sources": [
+          "IOC-UNESCO Ocean Science Data: https://ioc.unesco.org/",
+          "UN SDG Indicators: https://sdgdata.gov.uk/14/"
+        ]
+      },
+      {
+        "target": "14.b",
+        "description": "Provide access for small-scale artisanal fishers to marine resources and markets",
+        "sources": [
+          "FAO Small-Scale Fisheries Data: http://www.fao.org/fishery/statistics/en",
+          "UN SDG Indicators: https://sdgdata.gov.uk/14/"
+        ]
+      },
+      {
+        "target": "14.c",
+        "description": "Enhance the conservation and sustainable use of oceans and their resources by implementing international law as reflected in UNCLOS",
+        "sources": [
+          "United Nations Convention on the Law of the Sea (UNCLOS): https://www.un.org/Depts/los/convention_agreements/texts/unclos/unclos_e.pdf",
+          "UN SDG Indicators: https://sdgdata.gov.uk/14/"
+        ]
+      },
+{
+    "id": 15,
+    "slug": "life-on-land",
+    "name": "Life on Land",
+    "description": "Protect, restore and promote sustainable use of terrestrial ecosystems",
+    "icon": "https://open-sdg.github.io/sdg-translations/assets/img/goals/en/15.png",
+    "targets": [
+      {
+        "target": "15.1",
+        "description": "By 2020, ensure the conservation, restoration and sustainable use of terrestrial and inland freshwater ecosystems and their services, in particular forests, wetlands, mountains and drylands, in line with obligations under international agreements",
+        "sources": [
+          "UNEP Terrestrial Ecosystems Data: https://www.unep.org/resources",
+          "FAO Forest resources Assessment: http://www.fao.org/forest-resources-assessment/en/"
+        ]
+      },
+      {
+        "target": "15.2",
+        "description": "By 2020, promote the implementation of sustainable management of all types of forests, halt deforestation, restore degraded forests and substantially increase afforestation and reforestation globally",
+        "sources": [
+          "FAO Global Forest resources Assessment: http://www.fao.org/forest-resources-assessment/en/",
+          "World Bank Forest Area Data: https://databank.worldbank.org/source/world-development-indicators"
+        ]
+      },
+      {
+        "target": "15.3",
+        "description": "By 2030, combat desertification, restore degraded land and soil, including land affected by desertification, drought and floods, and strive to achieve a land degradation-neutral world",
+        "sources": [
+          "UNCCD Land Degradation Data: https://www.unccd.int/",
+          "World Bank Land Use and Degradation Data: https://databank.worldbank.org/source/world-development-indicators"
+        ]
+      },
+      {
+        "target": "15.4",
+        "description": "By 2030, ensure the conservation of mountain ecosystems, including their biodiversity, to enhance their capacity to provide benefits that are essential for sustainable development",
+        "sources": [
+          "UNEP Mountain Biodiversity Data: https://www.unep.org/resources",
+          "Mountain Research Initiative Data: https://www.mountainresearchinitiative.org/"
+        ]
+      },
+      {
+        "target": "15.5",
+        "description": "Take urgent and significant action to reduce the degradation of natural habitats, halt the loss of biodiversity and, by 2020, protect and prevent the extinction of threatened species",
+        "sources": [
+          "IUCN Red List of Threatened Species: https://www.iucnredlist.org/",
+          "UNEP Biodiversity Data: https://www.unep.org/resources"
+        ]
+      },
+      {
+        "target": "15.6",
+        "description": "Promote fair and equitable sharing of the benefits arising from the utilization of genetic resources and promote appropriate access to such resources",
+        "sources": [
+          "Convention on Biological Diversity (CBD) Data: https://www.cbd.int/",
+          "UN SDG Indicators: https://sdgdata.gov.uk/15/"
+        ]
+      },
+      {
+        "target": "15.7",
+        "description": "Take urgent action to end poaching and trafficking of protected species of flora and fauna and address both demand and supply of illegal wildlife products",
+        "sources": [
+          "CITES Trade Database: https://trade.cites.org/",
+          "UNEP Wildlife Crime Data: https://www.unep.org/resources"
+        ]
+      },
+      {
+        "target": "15.8",
+        "description": "By 2020, introduce measures to prevent the introduction and significantly reduce the impact of invasive alien species on land and water ecosystems",
+        "sources": [
+          "Global Invasive Species Database: http://www.iucngisd.org/gisd/",
+          "UNEP Biodiversity Data: https://www.unep.org/resources"
+        ]
+      },
+      {
+        "target": "15.9",
+        "description": "Integrate ecosystem and biodiversity values into national and local planning, development processes, poverty reduction strategies and accounts",
+        "sources": [
+          "World Bank Natural Capital Accounting Data: https://databank.worldbank.org/source/natural-capital-accounting",
+          "UNEP Ecosystem Services Data: https://www.unep.org/resources"
+        ]
+      },
+      {
+        "target": "15.a",
+        "description": "Mobilize significant resources from all sources and at all levels to finance sustainable forest management and provide adequate incentives to developing countries to advance such management",
+        "sources": [
+          "FAO Forest Finance Data: http://www.fao.org/forest-finance/en/",
+          "UNEP Sustainable Finance Data: https://www.unep.org/resources"
+        ]
+      },
+      {
+        "target": "15.b",
+        "description": "Mobilize financial resources to conserve and sustainably use biodiversity and ecosystems",
+        "sources": [
+          "UNEP Biodiversity Finance Data: https://www.unep.org/resources",
+          "World Bank Biodiversity and Ecosystem Services Data: https://databank.worldbank.org/source/world-development-indicators"
+        ]
+      },
+      {
+        "target": "15.c",
+        "description": "Enhance global support for efforts to combat poaching and trafficking of protected species, including by increasing the capacity of local communities to pursue sustainable livelihood opportunities",
+        "sources": [
+          "CITES Wildlife Crime Data: https://trade.cites.org/",
+          "UNEP Wildlife Crime Reports: https://www.unep.org/resources"
+        ]
+      },
+{
+    "id": 16,
+    "slug": "peace-justice",
+    "name": "Peace, Justice and Strong Institutions",
+    "description": "Promote peaceful and inclusive societies, provide access to justice for all and build effective, accountable institutions",
+    "icon": "https://open-sdg.github.io/sdg-translations/assets/img/goals/en/16.png",
+    "targets": [
+      {
+        "target": "16.1",
+        "description": "Significantly reduce all forms of violence and related death rates everywhere",
+        "sources": [
+          "UNODC Crime and Violence Data: https://dataunodc.un.org/",
+          "World Bank Governance and Violence Data: https://databank.worldbank.org/source/world-development-indicators"
+        ]
+      },
+      {
+        "target": "16.2",
+        "description": "End abuse, exploitation, trafficking and all forms of violence against and torture of children",
+        "sources": [
+          "UNICEF Child Protection Data: https://data.unicef.org/topic/child-protection/",
+          "UNODC Human Trafficking Data: https://www.unodc.org/unodc/en/data-and-analysis/statistics.html"
+        ]
+      },
+      {
+        "target": "16.3",
+        "description": "Promote the rule of law at the national and international levels and ensure equal access to justice for all",
+        "sources": [
+          "World Justice Project Rule of Law Data: https://worldjusticeproject.org/",
+          "UNODC Justice Data: https://dataunodc.un.org/"
+        ]
+      },
+      {
+        "target": "16.4",
+        "description": "By 2030, significantly reduce illicit financial and arms flows, strengthen the recovery and return of stolen assets and combat all forms of organized crime",
+        "sources": [
+          "UNODC Financial Crime Data: https://dataunodc.un.org/",
+          "OECD Illicit Financial Flows Data: https://www.oecd.org/ctp/illicit-financial-flows.htm"
+        ]
+      },
+      {
+        "target": "16.5",
+        "description": "Substantially reduce corruption and bribery in all their forms",
+        "sources": [
+          "Transparency International Corruption Perceptions Index: https://www.transparency.org/en/cpi/",
+          "World Bank Governance Indicators: https://databank.worldbank.org/source/worldwide-governance-indicators"
+        ]
+      },
+      {
+        "target": "16.6",
+        "description": "Develop effective, accountable and transparent institutions at all levels",
+        "sources": [
+          "World Bank Governance Indicators: https://databank.worldbank.org/source/worldwide-governance-indicators",
+          "UN DESA Governance Data: https://sdgs.un.org/goals/goal16"
+        ]
+      },
+      {
+        "target": "16.7",
+        "description": "Ensure responsive, inclusive, participatory and representative decision-making at all levels",
+        "sources": [
+          "UNDP Governance Data: https://www.undp.org/governance",
+          "World Bank World Governance Indicators: https://databank.worldbank.org/source/worldwide-governance-indicators"
+        ]
+      },
+      {
+        "target": "16.8",
+        "description": "Broaden and strengthen the participation of developing countries in the institutions of global governance",
+        "sources": [
+          "UN DESA Global Governance Data: https://sdgs.un.org/goals/goal16",
+          "World Bank International Institutions Participation Data: https://databank.worldbank.org/source/world-development-indicators"
+        ]
+      },
+      {
+        "target": "16.9",
+        "description": "By 2030, provide legal identity for all, including birth registration",
+        "sources": [
+          "UNICEF Birth Registration Data: https://data.unicef.org/topic/child-protection/birth-registration/",
+          "World Bank Legal Identity Data: https://databank.worldbank.org/source/world-development-indicators"
+        ]
+      },
+      {
+        "target": "16.10",
+        "description": "Ensure public access to information and protect fundamental freedoms, in accordance with national legislation and international agreements",
+        "sources": [
+          "UNESCO Access to Information Data: https://en.unesco.org/",
+          "World Bank Governance Indicators: https://databank.worldbank.org/source/worldwide-governance-indicators"
+        ]
+      },
+      {
+        "target": "16.a",
+        "description": "Strengthen relevant national institutions, including through international cooperation, for building capacity at all levels, in particular in developing countries, to prevent violence and combat terrorism and crime",
+        "sources": [
+          "UNODC Capacity Building Data: https://www.unodc.org/unodc/en/data-and-analysis/statistics.html",
+          "UNDP Capacity Development Data: https://www.undp.org/governance"
+        ]
+      },
+      {
+        "target": "16.b",
+        "description": "Promote and enforce non-discriminatory laws and policies for sustainable development",
+        "sources": [
+          "World Bank Governance and Law Data: https://databank.worldbank.org/source/worldwide-governance-indicators",
+          "UN DESA SDG Indicators: https://sdgdata.gov.uk/16/"
+        ]
+      },
+{
+    "id": 17,
+    "slug": "partnerships",
+    "name": "Partnerships for the Goals",
+    "description": "Strengthen the means of implementation and revitalize the global partnership for sustainable development",
+    "icon": "https://open-sdg.github.io/sdg-translations/assets/img/goals/en/17.png",
+    "targets": [
+      {
+        "target": "17.1",
+        "description": "Strengthen domestic resource mobilization, including through international support to developing countries, to improve domestic capacity for tax and other revenue collection",
+        "sources": [
+          "OECD Domestic Resource Mobilization Data: https://www.oecd.org/tax/",
+          "World Bank Tax Revenue Data: https://databank.worldbank.org/source/world-development-indicators"
+        ]
+      },
+      {
+        "target": "17.2",
+        "description": "Developed countries to implement fully their official development assistance commitments, including the target of 0.7% of gross national income to developing countries",
+        "sources": [
+          "OECD Development Assistance Committee Data: https://www.oecd.org/dac/financing-sustainable-development/development-finance-data/",
+          "UN DESA ODA Data: https://sdgs.un.org/goals/goal17"
+        ]
+      },
+      {
+        "target": "17.3",
+        "description": "Mobilize additional financial resources for developing countries from multiple sources",
+        "sources": [
+          "World Bank Global Finance Data: https://databank.worldbank.org/source/world-development-indicators",
+          "UNCTAD FDI and Financial Flows Data: https://unctad.org/statistics"
+        ]
+      },
+      {
+        "target": "17.4",
+        "description": "Assist developing countries in attaining long-term debt sustainability through coordinated policies",
+        "sources": [
+          "IMF Debt Sustainability Data: https://www.imf.org/en/Data",
+          "World Bank Debt Data: https://databank.worldbank.org/source/world-development-indicators"
+        ]
+      },
+      {
+        "target": "17.5",
+        "description": "Adopt and implement investment promotion regimes for least developed countries",
+        "sources": [
+          "UNCTAD Investment Policy Data: https://unctad.org/statistics",
+          "World Bank Investment Climate Data: https://databank.worldbank.org/source/world-development-indicators"
+        ]
+      },
+      {
+        "target": "17.6",
+        "description": "Enhance North-South, South-South and triangular regional and international cooperation on and access to science, technology and innovation",
+        "sources": [
+          "UNESCO Science, Technology and Innovation Data: https://en.unesco.org/themes/education-sustainable-development",
+          "UNCTAD STI Data: https://unctad.org/statistics"
+        ]
+      },
+      {
+        "target": "17.7",
+        "description": "Promote the development, transfer, dissemination and diffusion of environmentally sound technologies to developing countries on favourable terms",
+        "sources": [
+          "UNEP Technology Transfer Data: https://www.unep.org/resources",
+          "UNCTAD Technology and Innovation Data: https://unctad.org/statistics"
+        ]
+      },
+      {
+        "target": "17.8",
+        "description": "Fully operationalize the technology bank and science, technology and innovation capacity-building mechanism for least developed countries",
+        "sources": [
+          "UN Technology Bank Data: https://www.un.org/technologybank/",
+          "UNCTAD STI Capacity Data: https://unctad.org/statistics"
+        ]
+      },
+      {
+        "target": "17.9",
+        "description": "Enhance international support for implementing effective and targeted capacity-building in developing countries",
+        "sources": [
+          "UNDP Capacity Development Data: https://www.undp.org/governance",
+          "UN DESA Capacity Building Data: https://sdgs.un.org/goals/goal17"
+        ]
+      },
+      {
+        "target": "17.10",
+        "description": "Promote a universal, rules-based, open, non-discriminatory and equitable multilateral trading system under the WTO",
+        "sources": [
+          "WTO Trade Data: https://www.wto.org/english/res_e/statis_e/statis_e.htm",
+          "UNCTAD Trade Statistics: https://unctad.org/statistics"
+        ]
+      },
+      {
+        "target": "17.11",
+        "description": "Increase the exports of developing countries, in particular with a view to doubling the least developed countries' share of global exports by 2020",
+        "sources": [
+          "UNCTAD Export Data: https://unctad.org/statistics",
+          "World Bank Trade Data: https://databank.worldbank.org/source/world-development-indicators"
+        ]
+      },
+      {
+        "target": "17.12",
+        "description": "Realize timely implementation of duty-free and quota-free market access for least developed countries",
+        "sources": [
+          "WTO Market Access Data: https://www.wto.org/english/res_e/statis_e/statis_e.htm",
+          "UNCTAD Trade Preferences Data: https://unctad.org/statistics"
+        ]
+      },
+      {
+        "target": "17.13",
+        "description": "Enhance global macroeconomic stability, including through policy coordination and policy coherence",
+        "sources": [
+          "IMF Macroeconomic Data: https://www.imf.org/en/Data",
+          "World Bank Global Economic Monitoring: https://databank.worldbank.org/source/world-development-indicators"
+        ]
+      },
+      {
+        "target": "17.14",
+        "description": "Enhance policy coherence for sustainable development",
+        "sources": [
+          "UN DESA Policy Coherence Data: https://sdgs.un.org/goals/goal17",
+          "OECD Policy Coherence for SD Data: https://www.oecd.org/development/pcsd/"
+        ]
+      },
+      {
+        "target": "17.15",
+        "description": "Respect each country’s policy space and leadership to establish and implement policies for poverty eradication and sustainable development",
+        "sources": [
+          "UN DESA National Policy Data: https://sdgs.un.org/goals/goal17",
+          "World Bank Governance Indicators: https://databank.worldbank.org/source/worldwide-governance-indicators"
+        ]
+      },
+      {
+        "target": "17.16",
+        "description": "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources",
+        "sources": [
+          "UN Global Partnership Data: https://www.un.org/development/desa/partnerships/",
+          "OECD Multi-Stakeholder Partnerships Data: https://www.oecd.org/development/pcsd/"
+        ]
+      },
+      {
+        "target": "17.17",
+        "description": "Encourage and promote effective public, public-private and civil society partnerships",
+        "sources": [
+          "UN Global Partnership Data: https://www.un.org/development/desa/partnerships/",
+          "OECD Multi-Stakeholder Partnerships Data: https://www.oecd.org/development/pcsd/"
+        ]
+      },
+      {
+        "target": "17.18",
+        "description": "By 2020, enhance capacity-building support to developing countries to increase significantly the availability of high-quality, timely and reliable data",
+        "sources": [
+          "UNSD Statistical Capacity Data: https://unstats.un.org/home/",
+          "World Bank Data Quality Indicators: https://databank.worldbank.org/source/world-development-indicators"
+        ]
+      },
+      {
+        "target": "17.19",
+        "description": "By 2030, build on existing initiatives to develop measurements of progress on sustainable development that complement GDP",
+        "sources": [
+          "UNSD SDG Progress Data: https://unstats.un.org/sdgs/",
+          "OECD Beyond GDP Indicators: https://www.oecd.org/statistics/beyond-gdp/"
+        ]
+      }

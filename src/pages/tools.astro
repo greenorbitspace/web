@@ -10,22 +10,28 @@ import tools from '../data/tools.js'; // Adjust path as needed
 const sortedTools = tools.slice().sort((a, b) => a.name.localeCompare(b.name));
 ---
 
-<Layout title="Tools" description="Explore the digital tools, platforms, and resources we use and recommend for sustainable marketing and space industry innovation.">
+<Layout title="Tools">
   <Header />
 
-  <main class="py-12 max-w-6xl mx-auto px-4">
-    <HeroSection 
-      title="Tools" 
-      description="Explore the digital tools, platforms, and resources we use and recommend for sustainable marketing and space industry innovation." 
-    />
+  <main class="py-12">
+    <!-- Hero Section -->
+    <div class="max-w-6xl mx-auto px-4">
+      <HeroSection 
+        title="Tools" 
+        description="Explore the digital tools, platforms, and resources we use and recommend for sustainable marketing and space industry innovation."  
+      />
+    </div>
 
-    <section>
-      <ToolsList client:load tools={sortedTools} />
+    <!-- Full-width section with inner container -->
+    <section class="py-12 bg-white dark:bg-secondary-500">
+      <div class="max-w-6xl mx-auto px-4">
+        <ToolsList client:load tools={sortedTools} />
+      </div>
     </section>
-  </main>
 
-
-        <!-- API Developer Section -->
+     <!-- API Developer Section -->
+    <section class="py-16 bg-white dark:bg-secondary-500">
+      <div class="max-w-6xl mx-auto px-4">
         <div class="border-t border-gray-200 dark:border-gray-700 pt-16">
           <div class="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -36,6 +42,8 @@ const sortedTools = tools.slice().sort((a, b) => a.name.localeCompare(b.name));
               <p class="text-gray-600 dark:text-white mb-6">
                 Whether you're building your own dashboards or integrating with legacy tools, our secure, documented API helps you connect to what matters.
               </p>
+
+              <!-- Features -->
               <div class="space-y-4 mb-8">
                 <div class="flex items-start">
                   <svg class="w-5 h-5 text-green-500 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -56,11 +64,15 @@ const sortedTools = tools.slice().sort((a, b) => a.name.localeCompare(b.name));
                   <p class="text-gray-600 dark:text-white">Developer sandbox and testing environment</p>
                 </div>
               </div>
+
+              <!-- Buttons -->
               <div class="flex flex-col sm:flex-row gap-4">
                 <a href="#" class="btn-primary">API Docs</a>
                 <a href="#" class="btn-secondary">Contact Support</a>
               </div>
             </div>
+
+            <!-- Example Code Block -->
             <div class="rounded-lg overflow-hidden shadow-xl">
               <div class="bg-gray-900 text-white p-4 font-mono text-sm">
                 <div class="flex items-center mb-4">
@@ -80,6 +92,3 @@ curl -X GET \
         </div>
       </div>
     </section>
-  </main>
-  <Footer />
-</Layout>

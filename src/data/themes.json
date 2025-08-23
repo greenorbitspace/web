@@ -1,12 +1,236 @@
-[
-  { "name": "dark and quiet skies", "subArea": "for space" },
-  { "name": "disaster risk management", "subArea": "from space" },
-  { "name": "environmental monitoring", "subArea": "from space" },
-  { "name": "green propulsion", "subArea": "for space" },
-  { "name": "in-orbit servicing", "subArea": "for space" },
-  { "name": "space applications", "subArea": "from space" },
-  { "name": "space environment", "subArea": "for space" },
-  { "name": "space resource utilisation", "subArea": "for space" },
-  { "name": "space tourism", "subArea": "for space" },
-  { "name": "telecommunications", "subArea": "from space" }
-]
+{
+  "forSpace": [
+    {
+      "name": "dark and quiet skies",
+      "subArea": "space operations and observation",
+      "sdgs": [13, 15, 17],
+      "markets": [],
+      "space4sdgs": [
+        {
+          "initiative": "Promoting the safe and sustainable use of space, and preserving the space environment for future generations.",
+          "description": "Minimizing light and radio pollution to preserve astronomical observations and satellite operations."
+        }
+      ]
+    },
+    {
+      "name": "green propulsion",
+      "subArea": "sustainable spacecraft technologies",
+      "sdgs": [7, 12, 13],
+      "markets": ["renewable-energies", "oil-and-gas"],
+      "space4sdgs": [
+        {
+          "initiative": "Promoting the safe and sustainable use of space, and preserving the space environment for future generations.",
+          "description": "Development of environmentally friendly propulsion technologies for satellites and spacecraft."
+        }
+      ]
+    },
+    {
+      "name": "in-orbit servicing",
+      "subArea": "satellite maintenance and life extension",
+      "sdgs": [9, 12, 17],
+      "markets": ["oil-and-gas", "urban-monitoring", "renewable-energies"],
+      "space4sdgs": [
+        {
+          "initiative": "Promoting the safe and sustainable use of space, and preserving the space environment for future generations.",
+          "description": "Repairing, refueling, or upgrading satellites to extend operational life and reduce debris."
+        }
+      ]
+    },
+    {
+      "name": "space environment",
+      "subArea": "orbital and space condition monitoring",
+      "sdgs": [12, 13, 17],
+      "markets": [],
+      "space4sdgs": [
+        {
+          "initiative": "Promoting the safe and sustainable use of space, and preserving the space environment for future generations.",
+          "description": "Monitoring orbital debris, radiation, and other hazards to maintain sustainable operations in space."
+        }
+      ]
+    },
+    {
+      "name": "space resource utilisation",
+      "subArea": "in-space resource extraction and use",
+      "sdgs": [7, 9, 12],
+      "markets": ["renewable-energies", "oil-and-gas"],
+      "space4sdgs": [
+        {
+          "initiative": "Access to Space for All provides hands-on opportunities including small satellite deployment and space experiments.",
+          "description": "Utilizing in-space resources like asteroids and lunar materials to support manufacturing, energy, and exploration."
+        }
+      ]
+    },
+    {
+      "name": "space tourism",
+      "subArea": "commercial human spaceflight",
+      "sdgs": [8, 9, 17],
+      "markets": [],
+      "space4sdgs": [
+        {
+          "initiative": "Offering unique fellowships and opportunities to launch satellites and conduct experiments in outer space.",
+          "description": "Promoting commercial space flight for education, research, and economic growth."
+        }
+      ]
+    },
+    {
+      "name": "space situational awareness",
+      "subArea": "tracking satellites and debris",
+      "sdgs": [9, 12, 17],
+      "markets": [],
+      "space4sdgs": [
+        {
+          "initiative": "Promoting the safe and sustainable use of space, and preserving the space environment for future generations.",
+          "description": "Monitoring satellites, debris, and other space objects to ensure safe operations in orbit."
+        }
+      ]
+    },
+    {
+      "name": "satellite constellations",
+      "subArea": "networked satellite systems",
+      "sdgs": [9, 12, 17],
+      "markets": ["urban-monitoring", "telecommunications", "oil-and-gas"],
+      "space4sdgs": [
+        {
+          "initiative": "Promoting the safe and sustainable use of space, and preserving the space environment for future generations.",
+          "description": "Designing networks of satellites to provide global coverage for communications, observation, and navigation."
+        }
+      ]
+    }
+  ],
+  "fromSpace": [
+    {
+      "name": "disaster risk management",
+      "subArea": "Earth observation for resilience",
+      "sdgs": [1, 11, 13],
+      "markets": ["natural-disaster-insurance", "urban-monitoring", "agriculture", "forestry"],
+      "space4sdgs": [
+        {
+          "initiative": "Promoting space data for census mapping, aid provision, and sustainable utilisation of natural resources.",
+          "description": "Using EO satellites to build institutional resilience and improve disaster preparedness and response."
+        }
+      ]
+    },
+    {
+      "name": "environmental monitoring",
+      "subArea": "EO for air, water, and land ecosystems",
+      "sdgs": [6, 13, 14, 15],
+      "markets": ["air-quality-monitoring", "ocean-monitoring", "agriculture", "forestry"],
+      "space4sdgs": [
+        {
+          "initiative": "Fostering awareness in using space applications to protect marine life, and addressing coral bleaching and oil spills.",
+          "description": "Using EO data for monitoring air, water, and land ecosystems."
+        }
+      ]
+    },
+    {
+      "name": "space applications",
+      "subArea": "satellite-enabled solutions",
+      "sdgs": [2, 3, 6, 7, 8, 9, 11, 13],
+      "markets": ["agriculture", "forestry", "urban-monitoring", "ocean-monitoring", "air-quality-monitoring", "renewable-energies", "oil-and-gas", "natural-disaster-insurance"],
+      "space4sdgs": [
+        {
+          "initiative": "Offering unique fellowships and opportunities to launch satellites and conduct experiments in outer space.",
+          "description": "Supporting education, research, and applied science via space-based platforms."
+        }
+      ]
+    },
+    {
+      "name": "telecommunications",
+      "subArea": "satellite communications services",
+      "sdgs": [4, 8, 9, 10],
+      "markets": ["urban-monitoring", "oil-and-gas", "renewable-energies"],
+      "space4sdgs": [
+        {
+          "initiative": "Supporting trade, transport, and security through global navigation satellite systems.",
+          "description": "Satellite-based broadband, broadcasting, and emergency communication services."
+        }
+      ]
+    },
+    {
+      "name": "satellite navigation",
+      "subArea": "global positioning and timing",
+      "sdgs": [2, 3, 9, 10],
+      "markets": ["agriculture", "urban-monitoring", "oil-and-gas"],
+      "space4sdgs": [
+        {
+          "initiative": "Supporting trade, transport, and security through global navigation satellite systems.",
+          "description": "Providing positioning, navigation, and timing services worldwide for economic and safety benefits."
+        }
+      ]
+    },
+    {
+      "name": "space-based climate monitoring",
+      "subArea": "climate and environmental EO",
+      "sdgs": [13, 14, 15],
+      "markets": ["agriculture", "forestry", "ocean-monitoring", "air-quality-monitoring"],
+      "space4sdgs": [
+        {
+          "initiative": "Coordinating international efforts for climate monitoring, adaptation, mitigation, and resilience.",
+          "description": "Using satellite data to measure greenhouse gases, sea levels, and ecosystem changes."
+        }
+      ]
+    },
+    {
+      "name": "space-based emergency response",
+      "subArea": "EO for disaster relief",
+      "sdgs": [1, 3, 11, 13],
+      "markets": ["natural-disaster-insurance", "urban-monitoring"],
+      "space4sdgs": [
+        {
+          "initiative": "Promoting space data for census mapping, aid provision, and sustainable utilisation of natural resources.",
+          "description": "Using satellite services to support disaster response, humanitarian aid, and crisis management."
+        }
+      ]
+    },
+    {
+      "name": "satellite imaging for agriculture",
+      "subArea": "precision farming EO",
+      "sdgs": [2, 8, 12],
+      "markets": ["agriculture"],
+      "space4sdgs": [
+        {
+          "initiative": "Improving food security and supporting the use of remote sensing for agriculture, forestry, fishing, and irrigation.",
+          "description": "Monitoring crop health, irrigation needs, and precision farming using satellite imagery."
+        }
+      ]
+    }
+  ],
+  "inSpace": [
+    {
+      "name": "space-based research labs",
+      "subArea": "microgravity and in-orbit experiments",
+      "sdgs": [4, 8, 9],
+      "markets": [],
+      "space4sdgs": [
+        {
+          "initiative": "Offering unique fellowships and opportunities to launch satellites and conduct experiments in outer space.",
+          "description": "Microgravity and space environment research to advance science, technology, and education."
+        }
+      ]
+    },
+    {
+      "name": "space debris removal",
+      "subArea": "orbital debris mitigation",
+      "sdgs": [12, 13, 17],
+      "markets": [],
+      "space4sdgs": [
+        {
+          "initiative": "Promoting the safe and sustainable use of space, and preserving the space environment for future generations.",
+          "description": "Developing technologies to actively remove orbital debris to maintain sustainable space operations."
+        }
+      ]
+    },
+    {
+      "name": "asteroid deflection and planetary defense",
+      "subArea": "impact prevention and mitigation",
+      "sdgs": [9, 13, 17],
+      "markets": [],
+      "space4sdgs": [
+        {
+          "initiative": "Promoting the safe and sustainable use of space, and preserving the space environment for future generations.",
+          "description": "Developing technologies to prevent or mitigate asteroid impacts on Earth."
+        }
+      ]
+    }
+  ]
+}

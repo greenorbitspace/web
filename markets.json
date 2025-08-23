@@ -1,0 +1,179 @@
+[
+  {
+    "id": "agriculture",
+    "name": "Agriculture",
+    "description": "Historically one of the first domains to exploit Earth Observation (EO), agriculture is the most promising market in terms of the impact of Copernicus.",
+    "intermediate_users": ["start-ups", "SMEs", "large companies", "scientific players"],
+    "end_users": ["farmers", "agriculture cooperatives", "public bodies"],
+    "copernicus_penetration": "13%",
+    "notes": "Highest penetration rate of Copernicus; substantial impact on revenues of sector.",
+    "sdgs": [
+      {
+        "id": 2,
+        "targets": ["2.3", "2.4"]
+      },
+      {
+        "id": 12,
+        "targets": ["12.2", "12.4"]
+      },
+      {
+        "id": 13,
+        "targets": ["13.1", "13.3"]
+      },
+      {
+        "id": 15,
+        "targets": ["15.1", "15.3", "15.5"]
+      }
+    ]
+  },
+  {
+    "id": "forestry",
+    "name": "Forestry",
+    "description": "Forest ownership varies by country between public and private entities. EO supports revenue generation for VAS providers.",
+    "intermediate_users": ["VAS providers", "private and public companies"],
+    "end_users": ["public bodies"],
+    "copernicus_penetration": "12%",
+    "notes": "Few commercial applications exploit forestry EO products, making benefits to end users difficult to quantify.",
+    "sdgs": [
+      {
+        "id": 13,
+        "targets": ["13.1", "13.2"]
+      },
+      {
+        "id": 15,
+        "targets": ["15.1", "15.2", "15.3"]
+      }
+    ]
+  },
+  {
+    "id": "urban-monitoring",
+    "name": "Urban Monitoring",
+    "description": "Offers a wide span of EO applications, benefiting smart city development.",
+    "intermediate_users": ["SMEs"],
+    "end_users": ["local authorities", "municipal planners"],
+    "copernicus_penetration": "10%",
+    "notes": "Market expected to grow with smart city applications; end users face budget constraints but show encouraging trends.",
+    "sdgs": [
+      {
+        "id": 11,
+        "targets": ["11.3", "11.6", "11.7"]
+      },
+      {
+        "id": 9,
+        "targets": ["9.1", "9.4"]
+      },
+      {
+        "id": 13,
+        "targets": ["13.1", "13.3"]
+      }
+    ]
+  },
+  {
+    "id": "ocean-monitoring",
+    "name": "Ocean Monitoring",
+    "description": "EO applications involve diverse stakeholders including private companies, public authorities, and research centres.",
+    "intermediate_users": ["micro-companies", "large companies", "public authorities", "research centres"],
+    "end_users": ["public entities", "fish farmers", "cooperatives"],
+    "copernicus_penetration": "6%",
+    "notes": "Rapidly changing environment requires near-real-time EO data; Sentinel-3 expected to increase Copernicus benefits.",
+    "sdgs": [
+      {
+        "id": 14,
+        "targets": ["14.1", "14.2", "14.4"]
+      },
+      {
+        "id": 13,
+        "targets": ["13.1", "13.3"]
+      },
+      {
+        "id": 12,
+        "targets": ["12.2", "12.4"]
+      }
+    ]
+  },
+  {
+    "id": "air-quality-monitoring",
+    "name": "Air Quality Monitoring",
+    "description": "EO data applications are recent; historically based on meteorological data, statistics, and measurements.",
+    "intermediate_users": ["environmental agencies", "meteorological agencies", "publicly funded organizations"],
+    "end_users": ["general public", "local authorities"],
+    "copernicus_penetration": "Low",
+    "notes": "Individuals demonstrate low willingness to pay for air quality information, so end users’ needs are mostly addressed by public authorities.",
+    "sdgs": [
+      {
+        "id": 3,
+        "targets": ["3.9"]
+      },
+      {
+        "id": 11,
+        "targets": ["11.6"]
+      },
+      {
+        "id": 13,
+        "targets": ["13.1", "13.3"]
+      }
+    ]
+  },
+  {
+    "id": "renewable-energies",
+    "name": "Renewable Energies",
+    "description": "Sector exploits EO for biomass and solar energy applications.",
+    "intermediate_users": ["energy companies", "biomass and solar project developers"],
+    "end_users": ["energy producers", "grid operators"],
+    "copernicus_penetration": "10%",
+    "market_size": "€23 million total EO market",
+    "notes": "Commercial applications are relatively new.",
+    "sdgs": [
+      {
+        "id": 7,
+        "targets": ["7.2", "7.3"]
+      },
+      {
+        "id": 13,
+        "targets": ["13.1", "13.3"]
+      },
+      {
+        "id": 9,
+        "targets": ["9.4"]
+      }
+    ]
+  },
+  {
+    "id": "natural-disaster-insurance",
+    "name": "Natural Disaster Insurance",
+    "description": "Copernicus benefits to intermediate users are low due to gaps between insurer needs and available EO products.",
+    "intermediate_users": ["insurance companies", "reinsurers"],
+    "end_users": ["policyholders", "governments"],
+    "copernicus_penetration": "Low",
+    "notes": "End users’ potential benefits are higher considering high financial stakes; EO data often handled in-house or ignored by some insurers.",
+    "sdgs": [
+      {
+        "id": 11,
+        "targets": ["11.5", "11.6"]
+      },
+      {
+        "id": 13,
+        "targets": ["13.1", "13.3"]
+      }
+    ]
+  },
+  {
+    "id": "oil-and-gas",
+    "name": "Oil and Gas",
+    "description": "EO is mostly exploited in upstream activities. Copernicus data contributes via GIS products.",
+    "intermediate_users": ["upstream oil & gas companies", "GIS service providers"],
+    "end_users": ["oil & gas operators", "industry analysts"],
+    "copernicus_penetration": "Moderate",
+    "notes": "End users’ benefits expected to be much higher given the scale of the markets.",
+    "sdgs": [
+      {
+        "id": 9,
+        "targets": ["9.4"]
+      },
+      {
+        "id": 13,
+        "targets": ["13.1", "13.3"]
+      }
+    ]
+  }
+]

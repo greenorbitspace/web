@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.astro';
+import EmissionsForm from '../components/EmissionsForm.astro';
+---
+
+<Layout title="Scope 1 & 2 Emissions Calculator">
+  <Header />
+
+  <main class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <HeroSection 
+      title="Scope 1 & 2 Emissions Calculator" 
+      description="Measure your organisation's Scope 1 & 2 emissions with our interactive calculator."
+    />
+
+    <section class="content py-12 max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-semibold mb-4">What Are Scope 1 & 2 Emissions?</h2>
+      <p class="mb-2"><strong>Scope 1:</strong> Direct emissions from owned or controlled sources, such as company vehicles or onsite fuel combustion.</p>
+      <p><strong>Scope 2:</strong> Indirect emissions from purchased electricity, heating, or cooling consumed by your organisation.</p>
+    </section>
+
+    <EmissionsForm />
+
+    <section class="tips py-12 max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-semibold mb-4">Tips to Reduce Your Emissions</h2>
+      <ul class="list-disc ml-6 space-y-2">
+        <li>Switch to renewable electricity providers to reduce Scope 2 emissions.</li>
+        <li>Electrify fleet vehicles or improve fuel efficiency.</li>
+        <li>Optimise heating, cooling, and onsite energy usage.</li>
+        <li>Implement building energy management systems (BEMS).</li>
+      </ul>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

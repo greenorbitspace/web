@@ -1,5 +1,6 @@
 ---
-import Logo from '../assets/greenorbit-long.svg'; // Ensure this path matches your project structure
+import Logo from '../assets/greenorbit-long.svg';
+import GlobalSchema from '../components/Schema/GlobalSchema.astro';
 
 const allPages = [
   { text: "Blog", url: "/blog" },
@@ -8,6 +9,8 @@ const allPages = [
   { text: "Case Studies", url: "/case-studies" },
 ];
 ---
+<GlobalSchema />
+
 <header class="fixed w-full bg-white/90 dark:bg-secondary-500 backdrop-blur-xs z-50 py-4 transition-colors duration-300">
   <div class="container-custom flex items-center justify-between">
     <a href="/" class="flex items-center" aria-label="Go to homepage">

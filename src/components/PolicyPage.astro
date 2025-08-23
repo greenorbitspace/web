@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.astro';
+import TOC from '../components/TOC.astro';
+import { fetchMarkdown } from '../utils/fetchMarkdown.js';
+
+// Require a raw Markdown URL
+const { url } = Astro.props;
+if (!url) throw new Error('PolicyPage requires a "url" prop.');
+
+// Fetch Markdown and frontmatter on the server
+const { frontmatter, content } = await fetchMarkdown(url);
+---
+
+<Layout title={frontmatter.title}>
+  <Header />
+
+  <main class="py-8 scroll-smooth">
+    <HeroSection 
+      title={frontmatter.title} 
+      description={frontmatter.description} 
+    />
+
+    <section class="py-16 bg-white dark:bg-secondary-500">
+      <div class="max-w-6xl mx-auto px-4 prose prose-lg dark:prose-invert">
+        <!-- TOC handles heading IDs and Markdown rendering internally -->
+        <TOC content={content} />
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
