@@ -1,0 +1,44 @@
+[
+  {
+    "@type": "WebPage",
+    "url": "https://greenorbit.space/",
+    "name": "Home",
+    "description": "Green Orbit Digital – Sustainable marketing for the space sector."
+  },
+  {
+    "@type": "WebPage",
+    "url": "https://greenorbit.space/about",
+    "name": "About Us",
+    "description": "Learn about Green Orbit Digital, our mission, team, and sustainable marketing approach."
+  },
+  {
+    "@type": "WebPage",
+    "url": "https://greenorbit.space/services",
+    "name": "Services",
+    "description": "Explore the full range of sustainable marketing and digital strategy services offered by Green Orbit Digital."
+  },
+  {
+    "@type": "WebPage",
+    "url": "https://greenorbit.space/blog",
+    "name": "Blog",
+    "description": "Insights on sustainable marketing, digital strategy, and the space industry."
+  },
+  {
+    "@type": "WebPage",
+    "url": "https://greenorbit.space/contact",
+    "name": "Contact",
+    "description": "Get in touch with Green Orbit Digital for enquiries or collaborations."
+  },
+  {
+    "@type": "WebPage",
+    "url": "https://greenorbit.space/privacy-policy",
+    "name": "Privacy Policy",
+    "description": "Read our privacy policy and how we handle data responsibly."
+  },
+  {
+    "@type": "WebPage",
+    "url": "https://greenorbit.space/terms-of-use",
+    "name": "Terms of Use",
+    "description": "Our website terms of use for visitors and clients."
+  }
+]
