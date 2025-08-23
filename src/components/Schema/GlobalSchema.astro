@@ -8,6 +8,13 @@ import areas from "../../data/schema/areas.json";
 import knowledge from "../../data/schema/knowledge.json";
 import profiles from "../../data/schema/profiles.json";
 
+// --- Safe JSON copies ---
+const safeFounders = JSON.parse(JSON.stringify(founders));
+const safeContact = JSON.parse(JSON.stringify(contact));
+const safeAreas = JSON.parse(JSON.stringify(areas));
+const safeKnowledge = JSON.parse(JSON.stringify(knowledge));
+const safeBrands = JSON.parse(JSON.stringify(brands));
+
 // --- Filter member or partner organisations ---
 const memberOfOrgs = organisations
   .filter(org => ["member", "partner"].includes(org.Type))
@@ -19,19 +26,18 @@ const memberOfOrgs = organisations
     logo: org.logo || ""
   }));
 
-// --- Flatten all profile categories into a single array ---
+// --- Flatten profiles ---
 const flattenedProfiles = Object.values(profiles.profiles || {}).flat();
 
-// --- Collect sameAs links from socials.json + flattened profiles ---
-const sameAsRaw = [
-  ...socials.map(s => (typeof s === "string" ? s : s.url)),
-  ...flattenedProfiles.map(p => (typeof p === "string" ? p : p.url))
-];
+// --- sameAs links ---
+const sameAsLinks = Array.from(
+  new Set([
+    ...socials.map(s => (typeof s === "string" ? s : s.url)),
+    ...flattenedProfiles.map(p => (typeof p === "string" ? p : p.url))
+  ])
+);
 
-// --- Deduplicate links ---
-const sameAsLinks = Array.from(new Set(sameAsRaw));
-
-// --- Build the Organization schema ---
+// --- Build orgSchema ---
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -41,18 +47,17 @@ const orgSchema = {
   logo: "https://greenorbit.space/images/logo.png",
   foundingDate: "2023-10-12",
   description: "Green Orbit Digital is a Leicester-based agency specialising in sustainable marketing for the space sector. We help space organisations grow through strategic SEO, content, PR, and digital sustainability practices.",
-  founder: founders,
-  contactPoint: contact.contactPoint || [],
-  address: contact.address || {},
+  founder: safeFounders,
+  contactPoint: safeContact.contactPoint || [],
+  address: safeContact.address || {},
   sameAs: sameAsLinks,
-  areaServed: areas || [],
+  areaServed: safeAreas || [],
   memberOf: memberOfOrgs,
-  knowsAbout: knowledge || [],
-  brand: brands || []
+  knowsAbout: safeKnowledge || [],
+  brand: safeBrands || []
 };
 ---
 
-<!-- JSON-LD for SEO / structured data -->
 <script type="application/ld+json" is:inline>
 {JSON.stringify(orgSchema, null, 2)}
 </script>
