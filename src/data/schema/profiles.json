@@ -211,6 +211,13 @@
         "last_verified": "2025-08-13"
       },
       {
+        "name": "Space Training Catalogue",
+        "url": "https://training.spaceskills.org/providers/391-green-orbit-digital",
+        "description": "Listing of training providers for the UK and European space sectors, curated by the Space Skills Alliance.",
+        "status": "active",
+        "last_verified": "2025-08-13"
+      },
+      {
         "name": "Sustainable Business Alliance",
         "url": "https://sustainablebusinessalliance.org/members/green-orbit-digital",
         "description": "Profile as a member of the Sustainable Business Alliance, showcasing our sustainability commitments.",
@@ -375,4 +382,3 @@
     ]
   }
 }
-

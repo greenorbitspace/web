@@ -1,0 +1,40 @@
+{
+  "forms": [
+    {
+      "name": "General Feedback Form",
+      "url": "https://www.greenorbit.space/forms/feedback",
+      "type": "feedback",
+      "description": "Submit general feedback or suggestions about Green Orbit Digital services and content."
+    },
+    {
+      "name": "Event Registration Form",
+      "url": "https://www.greenorbit.space/forms/event-registration",
+      "type": "registration",
+      "description": "Register for upcoming webinars, workshops, and industry events hosted by Green Orbit Digital."
+    },
+    {
+      "name": "Newsletter Subscription Form",
+      "url": "https://www.greenorbit.space/forms/newsletter-signup",
+      "type": "subscription",
+      "description": "Sign up to receive our newsletter and stay updated on sustainability initiatives in the space sector."
+    },
+    {
+      "name": "Partnership Inquiry Form",
+      "url": "https://www.greenorbit.space/forms/partnership-inquiry",
+      "type": "contact",
+      "description": "Submit inquiries about potential partnerships, collaborations, or sponsorship opportunities."
+    },
+    {
+      "name": "Job Application Form",
+      "url": "https://www.greenorbit.space/forms/careers",
+      "type": "application",
+      "description": "Apply for career opportunities at Green Orbit Digital."
+    },
+    {
+      "name": "Consultation Request Form",
+      "url": "https://www.greenorbit.space/forms/consultation-request",
+      "type": "contact",
+      "description": "Request a consultation for digital marketing or sustainability strategy services."
+    }
+  ]
+}
