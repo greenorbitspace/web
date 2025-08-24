@@ -1,0 +1,41 @@
+[
+  {
+    "id": "S2A_MSIL1C_20250810T110701_N0511_R137_T30UXD_20250810T134221.SAFE",
+    "name": "S2A_MSIL1C_20250810T110701_N0511_R137_T30UXD_20250810T134221.SAFE",
+    "size": "823MB",
+    "sensingDate": "2025-08-10T11:07:01.024000Z",
+    "platform": "SENTINEL-2",
+    "instrument": "MSI",
+    "absoluteOrbitNumber": 52930,
+    "beginningDateTime": "2025-08-10T11:07:01.024000Z",
+    "endingDateTime": "2025-08-10T11:07:01.024000Z",
+    "cloudCoverage": 28.04944907283,
+    "datastripId": "S2A_OPER_MSI_L1C_DS_2APS_20250810T134221_S20250810T111159_N05.11",
+    "granuleId": "S2A_OPER_MSI_L1C_TL_2APS_20250810T134221_A052930_T30UXD_N05.11",
+    "modificationDate": "2025-08-10T15:19:05.065498Z",
+    "operationalMode": "INS-NOBS",
+    "origin": "ESA",
+    "originDate": "2025-08-10T15:13:34.000000Z",
+    "processingDate": "2025-08-10T13:42:21.000000Z",
+    "processingLevel": "S2MSI1C",
+    "processorVersion": "05.11",
+    "productGroupId": "GS2A_20250810T110701_052930_N05.11",
+    "productType": "S2MSI1C",
+    "publicationDate": "2025-08-10T15:19:05.065498Z",
+    "relativeOrbitNumber": 137,
+    "s3Path": "/eodata/Sentinel-2/MSI/L1C/2025/08/10/S2A_MSIL1C_20250810T110701_N0511_R137_T30UXD_20250810T134221.SAFE",
+    "sourceProduct": [
+      "S2A_OPER_MSI_L1C_TL_2APS_20250810T134221_A052930_T30UXD_N05.11",
+      "S2A_OPER_MSI_L1C_DS_2APS_20250810T134221_S20250810T111159_N05.11",
+      "S2A_OPER_MSI_L1C_TC_2APS_20250810T134221_A052930_T30UXD_N05.11.jp2"
+    ],
+    "sourceProductOriginDate": [
+      "2025-08-10T15:13:27Z",
+      "2025-08-10T15:13:34Z",
+      "2025-08-10T15:13:28Z"
+    ],
+    "tileId": "30UXD",
+    "lat": 52.63688,
+    "lng": -1.13976
+    }
+]

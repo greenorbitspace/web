@@ -1,0 +1,63 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import HeroSection from "../components/HeroSection.astro";
+import CopernicusMap from "../components/CopernicusMap.jsx";
+import rawProductsData from "../data/CopernicusData.json";
+
+// Ensure productsData is always an array
+const productsData = Array.isArray(rawProductsData)
+  ? rawProductsData
+  : Array.isArray(rawProductsData.default)
+  ? rawProductsData.default
+  : [];
+
+// Predefined Copernicus WMS layers
+const leicesterLayers = {
+  "True Color": "TRUE_COLOR",
+  "NDVI": "NDVI",
+  "Urban Areas": "FALSE_COLOR_URBAN",
+  "Sentinel-2 Cloudless": "RGB_8_11_12",
+  "SWIR": "SWIR_8_11_12", // example extra layer
+  "Vegetation Index": "VI_8_11_12",
+};
+
+// Default selected WMS layer
+const defaultLayer = "True Color";
+---
+
+<Layout title="Copernicus Map Test">
+  <Header />
+
+  <HeroSection
+    title="Copernicus + Leaflet Integration"
+    subtitle="Interactive map displaying Copernicus WMS layers and product overlays"
+  />
+
+  <main class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Interactive Map</h2>
+      <p class="text-white mb-6">
+        Select Copernicus products from the dropdown, toggle multiple WMS layers, and always see the plain OSM base map.
+      </p>
+
+      {/* Copernicus Map */}
+      <div class="flex flex-col md:flex-row gap-4">
+        <div class="flex-1 h-[600px] border border-gray-300 relative">
+          <CopernicusMap
+            client:load
+            productsData={productsData}
+            defaultLayer={defaultLayer}
+            layers={leicesterLayers}
+            wmsUrl="https://sh.dataspace.copernicus.eu/ogc/wms/024d2cf0-7b3b-430e-a45f-c667d950af7f"
+            minZoom={5}
+            maxZoom={20}
+          />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
