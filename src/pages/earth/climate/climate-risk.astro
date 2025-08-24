@@ -1,0 +1,34 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import HeroSection from '../../../components/HeroSection.astro';
+import ClimateRiskContent from '../../../content/earth/climate/climate-risk.md';
+
+const pageData = {
+  title: "Climate Risk | Green Orbit Digital",
+  description: "Assessment and monitoring of climate-related risks and vulnerabilities.",
+  ogImage: "/images/climate-risk-cover.jpg",
+  canonical: "https://greenorbit.space/earth/climate/climate-risk"
+};
+---
+
+<Layout
+  title={pageData.title}
+  description={pageData.description}
+  ogImage={pageData.ogImage}
+  canonical={pageData.canonical}
+>
+  <Header />
+  <HeroSection 
+    title="Climate Risk"
+    subtitle="Monitoring and assessing climate hazards and vulnerabilities for adaptation and mitigation."
+  />
+
+  <main class="prose lg:prose-xl mx-auto p-8 text-white">
+    <!-- Embed Markdown content -->
+    <ClimateRiskContent />
+  </main>
+
+  <Footer />
+</Layout>

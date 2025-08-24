@@ -1,0 +1,66 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import HeroSection from '../../../components/HeroSection.astro';
+import CardGrid from '../../../components/CardGrid.astro';
+
+const environmentCards = [
+  {
+    title: "Land",
+    description: "Monitoring terrestrial ecosystems, forests, agriculture, and urban development for sustainable management.",
+    link: "/earth/environment/land",
+    color: "bg-green-500"
+  },
+  {
+    title: "Ocean",
+    description: "Observing ocean currents, marine biodiversity, and sustainable fisheries management.",
+    link: "/earth/environment/ocean",
+    color: "bg-blue-500"
+  },
+  {
+    title: "Atmosphere",
+    description: "Tracking air quality, greenhouse gases, and climate indicators for environmental health.",
+    link: "/earth/environment/atmosphere",
+    color: "bg-cyan-500"
+  }
+];
+---
+
+<Layout title="Environment | Green Orbit Digital">
+  <Header />
+  <main class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <HeroSection 
+      title="Environment" 
+      highlightText="Environment" 
+      description="Exploring Earth's land, oceans, and atmosphere to support sustainable ecosystems and climate resilience."
+    />
+
+    <section title="Key Environment Domains" class="mb-12">
+      <CardGrid cards={environmentCards} />
+    </section>
+
+    <section title="Why Environment Matters" class="mb-12">
+      <ul class="list-disc ml-6 space-y-2">
+        <li><strong>Land Stewardship:</strong> Sustainable management of forests, agriculture, and urban areas protects ecosystems and biodiversity.</li>
+        <li><strong>Ocean Health:</strong> Monitoring marine ecosystems and fisheries supports the blue economy and SDG 14.</li>
+        <li><strong>Atmospheric Quality:</strong> Tracking air quality and greenhouse gases informs climate mitigation and public health measures.</li>
+      </ul>
+    </section>
+
+    <section title="How We Support Environmental Monitoring" class="mb-12">
+      <ul class="list-disc ml-6 space-y-2">
+        <li>Integrating satellite EO data to monitor land, ocean, and atmosphere.</li>
+        <li>Providing actionable insights for ecosystem management and restoration.</li>
+        <li>Mapping environmental projects to SDGs and sustainability frameworks.</li>
+        <li>Supporting predictive modeling for climate resilience and resource optimisation.</li>
+      </ul>
+    </section>
+
+    <section title="Get Started">
+      <p>Green Orbit Digital helps organisations leverage environmental data for informed decision-making and sustainable operations.</p>
+      <p><a href="/contact" class="text-green-600 font-semibold hover:underline">Contact us</a> to start your environmental monitoring journey.</p>
+    </section>
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,34 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import HeroSection from '../../../components/HeroSection.astro';
+import CryosphereContent from '../../../content/earth/climate/cryosphere.md';
+
+const pageData = {
+  title: "Cryosphere | Green Orbit Digital",
+  description: "Monitoring ice sheets, glaciers, sea ice, and permafrost as key components of the Earth's cryosphere.",
+  ogImage: "/images/cryosphere-cover.jpg",
+  canonical: "https://greenorbit.space/earth/climate/cryosphere"
+};
+---
+
+<Layout
+  title={pageData.title}
+  description={pageData.description}
+  ogImage={pageData.ogImage}
+  canonical={pageData.canonical}
+>
+  <Header />
+  <HeroSection 
+    title="Cryosphere"
+    subtitle="Tracking glaciers, ice sheets, sea ice, and permafrost for climate monitoring and research."
+  />
+
+  <main class="prose lg:prose-xl mx-auto p-8 text-white">
+    <!-- Embed Markdown content -->
+    <CryosphereContent />
+  </main>
+
+  <Footer />
+</Layout>

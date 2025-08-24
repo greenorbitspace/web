@@ -1,0 +1,34 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import HeroSection from '../../../components/HeroSection.astro';
+import RenewableEnergyContent from '../../../content/earth/climate/renewable-energy.md';
+
+const pageData = {
+  title: "Renewable Energy | Green Orbit Digital",
+  description: "Monitoring and promoting renewable energy sources and their role in climate mitigation.",
+  ogImage: "/images/renewable-energy-cover.jpg",
+  canonical: "https://greenorbit.space/earth/climate/renewable-energy"
+};
+---
+
+<Layout
+  title={pageData.title}
+  description={pageData.description}
+  ogImage={pageData.ogImage}
+  canonical={pageData.canonical}
+>
+  <Header />
+  <HeroSection 
+    title="Renewable Energy"
+    subtitle="Exploring solar, wind, hydro, bio, geothermal, and ocean energy solutions for sustainability."
+  />
+
+  <main class="prose lg:prose-xl mx-auto p-8 text-white">
+    <!-- Embed Markdown content -->
+    <RenewableEnergyContent />
+  </main>
+
+  <Footer />
+</Layout>

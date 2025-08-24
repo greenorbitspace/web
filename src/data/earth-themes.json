@@ -1,0 +1,72 @@
+{
+  "Environment": {
+    "Atmosphere": {
+      "AirQuality": "Monitoring pollutant levels and overall atmospheric composition.",
+      "Ozone": "Tracking ozone layer health and UV radiation levels.",
+      "Emissions": "Measuring greenhouse gas emissions, aerosols, and surface fluxes.",
+      "SolarRadiation": "Recording solar irradiance and UV index.",
+      "ClimateForcing": "Assessing radiative forcing and anthropogenic climate impacts."
+    },
+    "Ocean": {
+      "BlueOcean": "Monitoring physical properties: temperature, salinity, currents, sea level.",
+      "WhiteOcean": "Tracking sea ice extent, thickness, and seasonal variability.",
+      "GreenOcean": "Measuring biogeochemical properties: chlorophyll, nutrients, primary productivity."
+    },
+    "Land": {
+      "SpatialPlanning": "Mapping urban areas and land use for sustainable planning.",
+      "ForestManagement": "Tracking forest cover, deforestation, reforestation, and management practices.",
+      "WaterAndAgriculture": "Monitoring water resources, irrigation, agricultural productivity, and food security.",
+      "NatureConservation": "Protecting biodiversity, managing protected areas, and restoring ecosystems.",
+      "RuralDevelopment": "Supporting socio-economic development and infrastructure in rural regions.",
+      "EcosystemAccounting": "Assessing natural capital and ecosystem services.",
+      "ClimateAdaptation": "Implementing mitigation and adaptation strategies for climate change."
+    }
+  },
+  "Security": {
+    "BorderSurveillance": "Monitoring and control of national borders using EO data.",
+    "MaritimeSurveillance": "Tracking maritime zones, shipping, and activities.",
+    "SupportToExternalActions": "Providing support to international security missions.",
+    "RAndDForEOSecurity": "Developing research and tools for EO-based security applications."
+  },
+  "Climate": {
+    "Temperature": {
+      "GlobalTrends": "Monitoring global and regional temperature trends.",
+      "UrbanHeatIslands": "Assessing and mitigating urban heat effects."
+    },
+    "Precipitation": {
+      "RainfallPatterns": "Tracking seasonal and annual rainfall changes.",
+      "ExtremeEvents": "Monitoring floods, storms, and droughts."
+    },
+    "GreenhouseGases": {
+      "CO2": "Tracking carbon dioxide concentrations and fluxes.",
+      "CH4": "Monitoring methane emissions.",
+      "N2O": "Tracking nitrous oxide emissions.",
+      "OtherGHGs": "Monitoring additional greenhouse gases."
+    },
+    "Cryosphere": {
+      "Glaciers": "Monitoring glacier mass balance and retreat.",
+      "SnowCover": "Tracking seasonal snow extent and depth.",
+      "Permafrost": "Assessing permafrost conditions and thaw rates."
+    },
+    "CarbonCycle": {
+      "TerrestrialCarbon": "Measuring carbon storage in soils, forests, and vegetation.",
+      "OceanCarbon": "Monitoring ocean carbon uptake and fluxes.",
+      "AtmosphericCarbon": "Tracking atmospheric CO2 and CH4 levels."
+    },
+    "RenewableEnergy": {
+      "SolarPotential": "Mapping solar energy potential.",
+      "WindPotential": "Mapping wind energy potential.",
+      "HydroPotential": "Mapping hydropower potential."
+    },
+    "ClimateRisk": {
+      "VulnerabilityMapping": "Identifying areas at high risk for climate hazards.",
+      "AdaptationPlanning": "Developing strategies for mitigation and resilience.",
+      "PolicySupport": "Supporting climate-related policy and decision-making."
+    }
+  },
+  "Emergency": {
+    "FloodAwareness": "Flood forecasting, early warning, and floodplain mapping.",
+    "ForestFires": "Detecting fires, mapping fire risk, and planning prevention.",
+    "Drought": "Monitoring droughts, issuing early warnings, and managing water scarcity."
+  }
+}

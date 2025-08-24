@@ -1,0 +1,34 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import HeroSection from '../../../components/HeroSection.astro';
+import PrecipitationContent from '../../../content/earth/climate/precipitation.md';
+
+const pageData = {
+  title: "Precipitation | Green Orbit Digital",
+  description: "Monitoring precipitation patterns, trends, and impacts on climate and ecosystems.",
+  ogImage: "/images/precipitation-cover.jpg",
+  canonical: "https://greenorbit.space/earth/climate/precipitation"
+};
+---
+
+<Layout
+  title={pageData.title}
+  description={pageData.description}
+  ogImage={pageData.ogImage}
+  canonical={pageData.canonical}
+>
+  <Header />
+  <HeroSection 
+    title="Precipitation"
+    subtitle="Tracking rainfall, snowfall, and seasonal precipitation patterns and their impacts."
+  />
+
+  <main class="prose lg:prose-xl mx-auto p-8 text-white">
+    <!-- Embed Markdown content -->
+    <PrecipitationContent />
+  </main>
+
+  <Footer />
+</Layout>

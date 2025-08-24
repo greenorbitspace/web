@@ -1,0 +1,34 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import HeroSection from '../../../components/HeroSection.astro';
+import AtmosphereContent from '../../../content/earth/environment/atmosphere.md';
+
+const pageData = {
+  title: "Atmosphere | Green Orbit Digital",
+  description: "Monitoring air quality, ozone, emissions, solar radiation, and climate forcing.",
+  ogImage: "/images/atmosphere-cover.jpg",
+  canonical: "https://greenorbit.space/earth/atmosphere"
+};
+---
+
+<Layout
+  title={pageData.title}
+  description={pageData.description}
+  ogImage={pageData.ogImage}
+  canonical={pageData.canonical}
+>
+  <Header />
+  <HeroSection 
+    title="Atmosphere"
+    subtitle="Monitoring air quality, ozone, emissions, solar radiation, and climate forcing."
+  />
+
+  <main class="prose lg:prose-xl mx-auto p-8 text-white">
+    <!-- Embed Markdown content -->
+    <AtmosphereContent />
+  </main>
+
+  <Footer />
+</Layout>
