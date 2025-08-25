@@ -3,6 +3,7 @@ import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import HeroSection from '../../../components/HeroSection.astro';
+import CardGrid from '../../../components/CardGrid.astro';
 
 const pageData = {
   title: "Climate | Green Orbit Digital",
@@ -10,16 +11,6 @@ const pageData = {
   ogImage: "/images/climate-cover.jpg",
   canonical: "https://greenorbit.space/earth/climate"
 };
-
-const climatePages = [
-  { title: "Temperature", slug: "/earth/climate/temperature" },
-  { title: "Precipitation", slug: "/earth/climate/precipitation" },
-  { title: "Carbon Cycle", slug: "/earth/climate/carbon-cycle" },
-  { title: "Greenhouse Gases", slug: "/earth/climate/greenhouse-gases" },
-  { title: "Cryosphere", slug: "/earth/climate/cryosphere" },
-  { title: "Climate Risk", slug: "/earth/climate/climate-risk" },
-  { title: "Renewable Energy", slug: "/earth/climate/renewable-energy" }
-];
 ---
 
 <Layout
@@ -29,26 +20,48 @@ const climatePages = [
   canonical={pageData.canonical}
 >
   <Header />
+
+  <main class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- Hero Section -->
   <HeroSection 
     title="Climate"
+    highlightText="Climate"
     subtitle="Monitoring climate variables, risks, and renewable energy solutions."
   />
 
-  <main class="prose lg:prose-xl mx-auto p-8">
-    <section class="mb-8">
-      <p>
-        The Climate section covers key environmental variables, climate risks, and mitigation strategies.
-        Explore the topics below to understand our planet’s climate system:
-      </p>
+  <!-- Key Climate Domains -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-semibold mb-6">Key Climate Domains</h2>
+      <CardGrid cards={[
+        { title: "Temperature", description: "Tracking global and regional temperature variations.", link: "/earth/climate/temperature", color: "bg-red-500" },
+        { title: "Precipitation", description: "Monitoring rainfall, snow, and drought patterns.", link: "/earth/climate/precipitation", color: "bg-blue-500" },
+        { title: "Carbon Cycle", description: "Analyzing carbon flows and greenhouse gas impacts.", link: "/earth/climate/carbon-cycle", color: "bg-green-500" },
+        { title: "Greenhouse Gases", description: "Monitoring CO₂, CH₄, N₂O, and other emissions.", link: "/earth/climate/greenhouse-gases", color: "bg-yellow-500" },
+        { title: "Cryosphere", description: "Observing ice sheets, glaciers, and polar regions.", link: "/earth/climate/cryosphere", color: "bg-cyan-500" },
+        { title: "Climate Risk", description: "Assessing hazards, vulnerabilities, and adaptation strategies.", link: "/earth/climate/climate-risk", color: "bg-orange-500" },
+        { title: "Renewable Energy", description: "Tracking solar, wind, and other clean energy developments.", link: "/earth/climate/renewable-energy", color: "bg-indigo-500" }
+      ]} />
     </section>
 
-    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {climatePages.map(page => (
-        <a href={page.slug} class="block p-6 border rounded-lg hover:shadow-lg transition">
-          <h3 class="text-xl font-semibold">{page.title}</h3>
-          <p>Learn more about {page.title.toLowerCase()}.</p>
-        </a>
-      ))}
+    <!-- Why Climate Matters -->
+    <section class="mb-12 text-white">
+      <h2 class="text-3xl font-semibold mb-4">Why Climate Monitoring Matters</h2>
+      <ul class="list-disc ml-6 space-y-2">
+        <li><strong>Temperature & Precipitation:</strong> Track global climate trends and extreme weather events.</li>
+        <li><strong>Carbon Cycle & GHGs:</strong> Understand emissions and inform mitigation strategies.</li>
+        <li><strong>Cryosphere:</strong> Monitor polar ice and sea-level rise.</li>
+        <li><strong>Climate Risk:</strong> Identify vulnerabilities and support adaptation planning.</li>
+        <li><strong>Renewable Energy:</strong> Promote clean energy solutions and reduce dependency on fossil fuels.</li>
+      </ul>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="text-white">
+      <h2 class="text-3xl font-semibold mb-4">Get Started</h2>
+      <p>
+        Green Orbit Digital integrates climate monitoring and digital analytics into your operations. 
+        <a href="/contact" class="text-green-400 font-semibold hover:underline">Contact us</a> to start your sustainability journey.
+      </p>
     </section>
   </main>
 

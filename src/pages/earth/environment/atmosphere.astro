@@ -3,31 +3,28 @@ import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import HeroSection from '../../../components/HeroSection.astro';
-import AtmosphereContent from '../../../content/earth/environment/atmosphere.md';
+import EarthInfo from '../../../components/EarthInfo.astro';
+import grayMatter from 'gray-matter';
+import EarthContentRaw from '../../../content/earth/environment/atmosphere.md?raw';
 
-const pageData = {
-  title: "Atmosphere | Green Orbit Digital",
-  description: "Monitoring air quality, ozone, emissions, solar radiation, and climate forcing.",
-  ogImage: "/images/atmosphere-cover.jpg",
-  canonical: "https://greenorbit.space/earth/atmosphere"
-};
+// Parse Markdown frontmatter and content
+const { content, data: frontmatter } = grayMatter(EarthContentRaw);
 ---
 
-<Layout
-  title={pageData.title}
-  description={pageData.description}
-  ogImage={pageData.ogImage}
-  canonical={pageData.canonical}
->
+<Layout title={`${frontmatter.title ?? 'Earth Sustainability'} - Green Orbit Digital`}>
   <Header />
-  <HeroSection 
-    title="Atmosphere"
-    subtitle="Monitoring air quality, ozone, emissions, solar radiation, and climate forcing."
-  />
 
-  <main class="prose lg:prose-xl mx-auto p-8 text-white">
-    <!-- Embed Markdown content -->
-    <AtmosphereContent />
+  <main class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Hero Section -->
+    <HeroSection 
+      title={frontmatter.title ?? "Earth Sustainability"} 
+      description={frontmatter.description ?? ""}
+    />
+
+    <!-- Content Section -->
+    <EarthInfo content={content} frontmatter={frontmatter} />
+
   </main>
 
   <Footer />

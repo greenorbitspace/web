@@ -3,31 +3,28 @@ import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import HeroSection from '../../../components/HeroSection.astro';
-import OceanContent from '../../../content/earth/environment/ocean.md';
+import EarthInfo from '../../../components/EarthInfo.astro';
+import grayMatter from 'gray-matter';
+import EarthContentRaw from '../../../content/earth/environment/ocean.md?raw';
 
-const pageData = {
-  title: "Ocean | Green Orbit Digital",
-  description: "Exploring the role of oceans in sustainability, from blue economy innovation to green ocean restoration and climate resilience.",
-  ogImage: "/images/ocean-cover.jpg",
-  canonical: "https://greenorbit.space/earth/ocean"
-};
+// Parse Markdown frontmatter and content
+const { content, data: frontmatter } = grayMatter(EarthContentRaw);
 ---
 
-<Layout
-  title={pageData.title}
-  description={pageData.description}
-  ogImage={pageData.ogImage}
-  canonical={pageData.canonical}
->
+<Layout title={`${frontmatter.title ?? 'Earth Sustainability'} - Green Orbit Digital`}>
   <Header />
-  <HeroSection 
-    title="Ocean"
-    subtitle="Exploring the oceans' role in sustainability and climate resilience."
-  />
 
-  <main class="prose lg:prose-xl mx-auto p-8 text-white">
-    <!-- Embed Markdown content -->
-    <OceanContent />
+  <main class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Hero Section -->
+    <HeroSection 
+      title={frontmatter.title ?? "Earth Sustainability"} 
+      description={frontmatter.description ?? ""}
+    />
+
+    <!-- Content Section -->
+    <EarthInfo content={content} frontmatter={frontmatter} />
+
   </main>
 
   <Footer />

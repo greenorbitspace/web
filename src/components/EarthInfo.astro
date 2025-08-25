@@ -1,0 +1,23 @@
+---
+/*
+  Props:
+  - content: Markdown content string
+  - frontmatter: Parsed frontmatter object
+*/
+const { content, frontmatter } = Astro.props;
+---
+
+<section class="earth-info prose lg:prose-xl mx-auto p-8 text-white prose-headings:text-white prose-p:text-white prose-li:text-white prose-a:text-white prose-strong:text-white">
+  {frontmatter.areas?.map(area => (
+    <section>
+      <h2>{area.title}</h2>
+      <ul>
+        {area['sub-areas']?.map(sub => (
+          <li>{sub}</li>
+        ))}
+      </ul>
+    </section>
+  ))}
+
+  <div class="mt-8" innerHTML={content} />
+</section>
