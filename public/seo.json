@@ -1,0 +1,898 @@
+[
+  {
+    "route": "/",
+    "title": "Green Orbit Digital – Sustainable Marketing for the Space Sector",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space",
+    "priority": "1.0"
+  },
+  {
+    "route": "/your-project",
+    "title": "Your Project – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/your-project",
+    "priority": "0.5"
+  },
+  {
+    "route": "/workshops",
+    "title": "Workshops – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/workshops",
+    "priority": "0.5"
+  },
+  {
+    "route": "/work",
+    "title": "Work – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/work",
+    "priority": "0.5"
+  },
+  {
+    "route": "/why-green-orbit-digital",
+    "title": "Why Green Orbit Digital – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/why-green-orbit-digital",
+    "priority": "0.5"
+  },
+  {
+    "route": "/what-we-do",
+    "title": "What We Do – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/what-we-do",
+    "priority": "0.5"
+  },
+  {
+    "route": "/webinars",
+    "title": "Webinars – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/webinars",
+    "priority": "0.5"
+  },
+  {
+    "route": "/training",
+    "title": "Training – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/training",
+    "priority": "0.5"
+  },
+  {
+    "route": "/tools",
+    "title": "Tools – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/tools",
+    "priority": "0.5"
+  },
+  {
+    "route": "/thank-you",
+    "title": "Thank You – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/thank-you",
+    "priority": "0.5"
+  },
+  {
+    "route": "/terms-of-use",
+    "title": "Terms Of Use – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/terms-of-use",
+    "priority": "0.5"
+  },
+  {
+    "route": "/terms-of-service",
+    "title": "Terms Of Service – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/terms-of-service",
+    "priority": "0.5"
+  },
+  {
+    "route": "/sustainability-policy",
+    "title": "Sustainability Policy – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/sustainability-policy",
+    "priority": "0.5"
+  },
+  {
+    "route": "/suppliers",
+    "title": "Suppliers – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/suppliers",
+    "priority": "0.5"
+  },
+  {
+    "route": "/success",
+    "title": "Success – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/success",
+    "priority": "0.5"
+  },
+  {
+    "route": "/strategy",
+    "title": "Strategy – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/strategy",
+    "priority": "0.5"
+  },
+  {
+    "route": "/space4sdgs",
+    "title": "Space4sdgs – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/space4sdgs",
+    "priority": "0.5"
+  },
+  {
+    "route": "/space-applications",
+    "title": "Space Applications – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/space-applications",
+    "priority": "0.5"
+  },
+  {
+    "route": "/service-catalogue",
+    "title": "Service Catalogue – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/service-catalogue",
+    "priority": "0.5"
+  },
+  {
+    "route": "/sdgs",
+    "title": "Sdgs – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/sdgs",
+    "priority": "0.5"
+  },
+  {
+    "route": "/scope-emissions",
+    "title": "Scope Emissions – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/scope-emissions",
+    "priority": "0.5"
+  },
+  {
+    "route": "/reviews",
+    "title": "Reviews – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/reviews",
+    "priority": "0.5"
+  },
+  {
+    "route": "/returns-policy",
+    "title": "Returns Policy – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/returns-policy",
+    "priority": "0.5"
+  },
+  {
+    "route": "/reporting",
+    "title": "Reporting – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/reporting",
+    "priority": "0.5"
+  },
+  {
+    "route": "/recruitment-privacy-policy",
+    "title": "Recruitment Privacy Policy – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/recruitment-privacy-policy",
+    "priority": "0.5"
+  },
+  {
+    "route": "/public-relations",
+    "title": "Public Relations – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/public-relations",
+    "priority": "0.5"
+  },
+  {
+    "route": "/privacy-policy",
+    "title": "Privacy Policy – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/privacy-policy",
+    "priority": "0.5"
+  },
+  {
+    "route": "/pricing",
+    "title": "Pricing – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/pricing",
+    "priority": "0.5"
+  },
+  {
+    "route": "/portal",
+    "title": "Portal – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/portal",
+    "priority": "0.5"
+  },
+  {
+    "route": "/podcast",
+    "title": "Podcast – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/podcast",
+    "priority": "0.5"
+  },
+  {
+    "route": "/partnerships",
+    "title": "Partnerships – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/partnerships",
+    "priority": "0.5"
+  },
+  {
+    "route": "/partners",
+    "title": "Partners – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/partners",
+    "priority": "0.5"
+  },
+  {
+    "route": "/packages",
+    "title": "Packages – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/packages",
+    "priority": "0.5"
+  },
+  {
+    "route": "/our-recruitment-process",
+    "title": "Our Recruitment Process – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/our-recruitment-process",
+    "priority": "0.5"
+  },
+  {
+    "route": "/organisations",
+    "title": "Organisations – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/organisations",
+    "priority": "0.5"
+  },
+  {
+    "route": "/newsletter",
+    "title": "Newsletter – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/newsletter",
+    "priority": "0.5"
+  },
+  {
+    "route": "/memberships",
+    "title": "Memberships – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/memberships",
+    "priority": "0.5"
+  },
+  {
+    "route": "/media",
+    "title": "Media – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/media",
+    "priority": "0.5"
+  },
+  {
+    "route": "/materiality",
+    "title": "Materiality – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/materiality",
+    "priority": "0.5"
+  },
+  {
+    "route": "/masterclasses",
+    "title": "Masterclasses – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/masterclasses",
+    "priority": "0.5"
+  },
+  {
+    "route": "/map-test",
+    "title": "Map Test – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/map-test",
+    "priority": "0.5"
+  },
+  {
+    "route": "/library",
+    "title": "Library – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/library",
+    "priority": "0.5"
+  },
+  {
+    "route": "/legal",
+    "title": "Legal – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/legal",
+    "priority": "0.5"
+  },
+  {
+    "route": "/labs",
+    "title": "Labs – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/labs",
+    "priority": "0.5"
+  },
+  {
+    "route": "/insights",
+    "title": "Insights – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/insights",
+    "priority": "0.5"
+  },
+  {
+    "route": "/impressum",
+    "title": "Impressum – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/impressum",
+    "priority": "0.5"
+  },
+  {
+    "route": "/impact",
+    "title": "Impact – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/impact",
+    "priority": "0.5"
+  },
+  {
+    "route": "/how-we-work",
+    "title": "How We Work – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/how-we-work",
+    "priority": "0.5"
+  },
+  {
+    "route": "/flexi-support",
+    "title": "Flexi Support – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/flexi-support",
+    "priority": "0.5"
+  },
+  {
+    "route": "/feedback",
+    "title": "Feedback – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/feedback",
+    "priority": "0.5"
+  },
+  {
+    "route": "/faqs",
+    "title": "Faqs – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/faqs",
+    "priority": "0.5"
+  },
+  {
+    "route": "/experience",
+    "title": "Experience – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/experience",
+    "priority": "0.5"
+  },
+  {
+    "route": "/equal-opportunities-policy",
+    "title": "Equal Opportunities Policy – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/equal-opportunities-policy",
+    "priority": "0.5"
+  },
+  {
+    "route": "/earth-observation",
+    "title": "Earth Observation – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/earth-observation",
+    "priority": "0.5"
+  },
+  {
+    "route": "/data-protection",
+    "title": "Data Protection – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/data-protection",
+    "priority": "0.5"
+  },
+  {
+    "route": "/data-processing-agreement",
+    "title": "Data Processing Agreement – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/data-processing-agreement",
+    "priority": "0.5"
+  },
+  {
+    "route": "/dashboards",
+    "title": "Dashboards – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/dashboards",
+    "priority": "0.5"
+  },
+  {
+    "route": "/dark-quiet-skies",
+    "title": "Dark Quiet Skies – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/dark-quiet-skies",
+    "priority": "0.5"
+  },
+  {
+    "route": "/cyber-essentials",
+    "title": "Cyber Essentials – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/cyber-essentials",
+    "priority": "0.5"
+  },
+  {
+    "route": "/cookie-policy",
+    "title": "Cookie Policy – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/cookie-policy",
+    "priority": "0.5"
+  },
+  {
+    "route": "/content",
+    "title": "Content – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/content",
+    "priority": "0.5"
+  },
+  {
+    "route": "/contact",
+    "title": "Contact – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/contact",
+    "priority": "0.5"
+  },
+  {
+    "route": "/conferences",
+    "title": "Conferences – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/conferences",
+    "priority": "0.5"
+  },
+  {
+    "route": "/climate-emergency",
+    "title": "Climate Emergency – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/climate-emergency",
+    "priority": "0.5"
+  },
+  {
+    "route": "/clients",
+    "title": "Clients – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/clients",
+    "priority": "0.5"
+  },
+  {
+    "route": "/checkout",
+    "title": "Checkout – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/checkout",
+    "priority": "0.5"
+  },
+  {
+    "route": "/checkout-success",
+    "title": "Checkout Success – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/checkout-success",
+    "priority": "0.5"
+  },
+  {
+    "route": "/changelog",
+    "title": "Changelog – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/changelog",
+    "priority": "0.5"
+  },
+  {
+    "route": "/case-studies",
+    "title": "Case Studies – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/case-studies",
+    "priority": "0.5"
+  },
+  {
+    "route": "/cancel",
+    "title": "Cancel – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/cancel",
+    "priority": "0.5"
+  },
+  {
+    "route": "/awards",
+    "title": "Awards – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/awards",
+    "priority": "0.5"
+  },
+  {
+    "route": "/audits",
+    "title": "Audits – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/audits",
+    "priority": "0.5"
+  },
+  {
+    "route": "/accessibility",
+    "title": "Accessibility – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/accessibility",
+    "priority": "0.5"
+  },
+  {
+    "route": "/accessibility-test",
+    "title": "Accessibility Test – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/accessibility-test",
+    "priority": "0.5"
+  },
+  {
+    "route": "/academy",
+    "title": "Academy – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/academy",
+    "priority": "0.5"
+  },
+  {
+    "route": "/team/",
+    "title": "Team/ – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/team/",
+    "priority": "0.5"
+  },
+  {
+    "route": "/space-sustainability/",
+    "title": "Space Sustainability/ – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/space-sustainability/",
+    "priority": "0.5"
+  },
+  {
+    "route": "/sustainability/space4sdgs",
+    "title": "Sustainability/Space4sdgs – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/sustainability/space4sdgs",
+    "priority": "0.5"
+  },
+  {
+    "route": "/sustainability/sdgs",
+    "title": "Sustainability/Sdgs – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/sustainability/sdgs",
+    "priority": "0.5"
+  },
+  {
+    "route": "/sustainability/ppp",
+    "title": "Sustainability/Ppp – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/sustainability/ppp",
+    "priority": "0.5"
+  },
+  {
+    "route": "/sustainability/",
+    "title": "Sustainability/ – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/sustainability/",
+    "priority": "0.5"
+  },
+  {
+    "route": "/sustainability/hub",
+    "title": "Sustainability/Hub – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/sustainability/hub",
+    "priority": "0.5"
+  },
+  {
+    "route": "/sustainability/esg",
+    "title": "Sustainability/Esg – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/sustainability/esg",
+    "priority": "0.5"
+  },
+  {
+    "route": "/sustainability/digital-sustainability",
+    "title": "Sustainability/Digital Sustainability – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/sustainability/digital-sustainability",
+    "priority": "0.5"
+  },
+  {
+    "route": "/sustainability/csr",
+    "title": "Sustainability/Csr – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/sustainability/csr",
+    "priority": "0.5"
+  },
+  {
+    "route": "/space/space-data",
+    "title": "Space/Space Data – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/space/space-data",
+    "priority": "0.5"
+  },
+  {
+    "route": "/space/satellites",
+    "title": "Space/Satellites – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/space/satellites",
+    "priority": "0.5"
+  },
+  {
+    "route": "/space/",
+    "title": "Space/ – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/space/",
+    "priority": "0.5"
+  },
+  {
+    "route": "/services/",
+    "title": "Services/ – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/services/",
+    "priority": "0.9"
+  },
+  {
+    "route": "/services/events",
+    "title": "Services/Events – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/services/events",
+    "priority": "0.9"
+  },
+  {
+    "route": "/services/digital",
+    "title": "Services/Digital – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/services/digital",
+    "priority": "0.9"
+  },
+  {
+    "route": "/services/creative",
+    "title": "Services/Creative – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/services/creative",
+    "priority": "0.9"
+  },
+  {
+    "route": "/services/consulting",
+    "title": "Services/Consulting – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/services/consulting",
+    "priority": "0.9"
+  },
+  {
+    "route": "/sectors/",
+    "title": "Sectors/ – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/sectors/",
+    "priority": "0.5"
+  },
+  {
+    "route": "/resources/",
+    "title": "Resources/ – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/resources/",
+    "priority": "0.5"
+  },
+  {
+    "route": "/press-releases/",
+    "title": "Press Releases/ – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/press-releases/",
+    "priority": "0.5"
+  },
+  {
+    "route": "/pledges/",
+    "title": "Pledges/ – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/pledges/",
+    "priority": "0.5"
+  },
+  {
+    "route": "/news/",
+    "title": "News/ – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/news/",
+    "priority": "0.5"
+  },
+  {
+    "route": "/events/our-events",
+    "title": "Events/Our Events – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/events/our-events",
+    "priority": "0.5"
+  },
+  {
+    "route": "/events/",
+    "title": "Events/ – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/events/",
+    "priority": "0.5"
+  },
+  {
+    "route": "/events/attending",
+    "title": "Events/Attending – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/events/attending",
+    "priority": "0.5"
+  },
+  {
+    "route": "/careers/",
+    "title": "Careers/ – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/careers/",
+    "priority": "0.5"
+  },
+  {
+    "route": "/campaigns/",
+    "title": "Campaigns/ – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/campaigns/",
+    "priority": "0.5"
+  },
+  {
+    "route": "/blog/",
+    "title": "Blog/ – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/blog/",
+    "priority": "0.7"
+  },
+  {
+    "route": "/earth/weather",
+    "title": "Earth/Weather – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/earth/weather",
+    "priority": "0.5"
+  },
+  {
+    "route": "/earth/",
+    "title": "Earth/ – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/earth/",
+    "priority": "0.5"
+  },
+  {
+    "route": "/authors/",
+    "title": "Authors/ – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/authors/",
+    "priority": "0.5"
+  },
+  {
+    "route": "/about/vision",
+    "title": "About/Vision – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/about/vision",
+    "priority": "0.5"
+  },
+  {
+    "route": "/about/values",
+    "title": "About/Values – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/about/values",
+    "priority": "0.5"
+  },
+  {
+    "route": "/about/mission",
+    "title": "About/Mission – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/about/mission",
+    "priority": "0.5"
+  },
+  {
+    "route": "/about/",
+    "title": "About/ – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/about/",
+    "priority": "0.5"
+  },
+  {
+    "route": "/space-sustainability/in-space/",
+    "title": "Space Sustainability/In Space/ – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/space-sustainability/in-space/",
+    "priority": "0.5"
+  },
+  {
+    "route": "/space-sustainability/from-space/",
+    "title": "Space Sustainability/From Space/ – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/space-sustainability/from-space/",
+    "priority": "0.5"
+  },
+  {
+    "route": "/space-sustainability/for-space/",
+    "title": "Space Sustainability/For Space/ – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/space-sustainability/for-space/",
+    "priority": "0.5"
+  },
+  {
+    "route": "/earth/security/",
+    "title": "Earth/Security/ – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/earth/security/",
+    "priority": "0.5"
+  },
+  {
+    "route": "/earth/environment/ocean",
+    "title": "Earth/Environment/Ocean – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/earth/environment/ocean",
+    "priority": "0.5"
+  },
+  {
+    "route": "/earth/environment/land",
+    "title": "Earth/Environment/Land – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/earth/environment/land",
+    "priority": "0.5"
+  },
+  {
+    "route": "/earth/environment/",
+    "title": "Earth/Environment/ – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/earth/environment/",
+    "priority": "0.5"
+  },
+  {
+    "route": "/earth/environment/atmosphere",
+    "title": "Earth/Environment/Atmosphere – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/earth/environment/atmosphere",
+    "priority": "0.5"
+  },
+  {
+    "route": "/earth/climate/temperature",
+    "title": "Earth/Climate/Temperature – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/earth/climate/temperature",
+    "priority": "0.5"
+  },
+  {
+    "route": "/earth/climate/renewable-energy",
+    "title": "Earth/Climate/Renewable Energy – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/earth/climate/renewable-energy",
+    "priority": "0.5"
+  },
+  {
+    "route": "/earth/climate/precipitation",
+    "title": "Earth/Climate/Precipitation – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/earth/climate/precipitation",
+    "priority": "0.5"
+  },
+  {
+    "route": "/earth/climate/",
+    "title": "Earth/Climate/ – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/earth/climate/",
+    "priority": "0.5"
+  },
+  {
+    "route": "/earth/climate/greenhouse-gases",
+    "title": "Earth/Climate/Greenhouse Gases – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/earth/climate/greenhouse-gases",
+    "priority": "0.5"
+  },
+  {
+    "route": "/earth/climate/cryosphere",
+    "title": "Earth/Climate/Cryosphere – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/earth/climate/cryosphere",
+    "priority": "0.5"
+  },
+  {
+    "route": "/earth/climate/climate-risk",
+    "title": "Earth/Climate/Climate Risk – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/earth/climate/climate-risk",
+    "priority": "0.5"
+  },
+  {
+    "route": "/earth/climate/carbon-cycle",
+    "title": "Earth/Climate/Carbon Cycle – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/earth/climate/carbon-cycle",
+    "priority": "0.5"
+  },
+  {
+    "route": "/earth/emergency/",
+    "title": "Earth/Emergency/ – Green Orbit Digital",
+    "description": "Visit Green Orbit Digital – sustainability meets innovation.",
+    "canonical": "https://greenorbit.space/earth/emergency/",
+    "priority": "0.5"
+  }
+]
