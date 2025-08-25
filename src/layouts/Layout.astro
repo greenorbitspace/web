@@ -3,6 +3,8 @@ import '../styles/global.css';
 import '../styles/transitions.css';
 import GlobalSchema from '../components/Schema/GlobalSchema.astro';
 import Seo from '../components/Seo.astro';
+import Analytics from '../components/Analytics.astro';
+import CookieBanner from '../components/CookieBanner.astro'; // optional
 
 export interface Props {
   title: string;
@@ -50,5 +52,18 @@ const {
 
     <!-- Global structured data -->
     <GlobalSchema />
+
+    <!-- Cookie consent banner (optional) -->
+    <CookieBanner />
+
+    <!-- Analytics tracking (consent-aware) -->
+    <Analytics
+      googleAnalyticsId={import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID}
+      hubspotId={import.meta.env.PUBLIC_HUBSPOT_ID}
+      hotjarId={import.meta.env.PUBLIC_HOTJAR_ID}
+      hotjarVersion={import.meta.env.PUBLIC_HOTJAR_VERSION}
+      brevoSiteId={import.meta.env.PUBLIC_BREVO_SITE_ID}
+      ticketTailorTracking={import.meta.env.PUBLIC_TICKET_TAILOR}
+    />
   </body>
 </html>

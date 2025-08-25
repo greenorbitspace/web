@@ -1,0 +1,25 @@
+---
+// src/components/CookieBanner.astro
+---
+
+<script is:inline>
+  // Listen for CookieYes consent events
+  document.addEventListener('CookieYesConsentChanged', function(e) {
+    const consent = e.detail; // e.g., { analytics: true, marketing: true }
+
+    // Only enable analytics if user accepted
+    if (consent.analytics) {
+      const event = new Event('cookies:analytics-accepted');
+      window.dispatchEvent(event);
+      console.log('✅ Analytics consent granted by user');
+    }
+  });
+</script>
+
+<!-- CookieYes Banner -->
+<script
+  id="cookieyes"
+  type="text/javascript"
+  src="https://cdn-cookieyes.com/client_data/58366b5b83a0075b30699f8a/script.js"
+  async
+></script>
