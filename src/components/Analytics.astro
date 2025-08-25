@@ -3,13 +3,14 @@ const { ga4Id = import.meta.env.PUBLIC_GA4_ID } = Astro.props;
 ---
 
 <script is:inline>
-if (window.CookieYes?.consent?.analytics && ga4Id && ga4Id.trim() !== "") {
-  // Load gtag.js
-  const existing = document.querySelector(`script[src*="${ga4Id.trim()}"]`);
-  if (!existing) {
+function initGA4(id) {
+  if (!id) return;
+
+  // Avoid duplicate script
+  if (!document.querySelector(`script[src*="${id}"]`)) {
     const gtagScript = document.createElement('script');
     gtagScript.async = true;
-    gtagScript.src = `https://www.googletagmanager.com/gtag/js?id=${ga4Id.trim()}`;
+    gtagScript.src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
     document.head.appendChild(gtagScript);
   }
 
@@ -17,16 +18,16 @@ if (window.CookieYes?.consent?.analytics && ga4Id && ga4Id.trim() !== "") {
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', ga4Id.trim());
+  gtag('config', id);
 }
 
-// Optional: Listen for consent if given later
+// Load GA4 if analytics consent exists
+if (window.CookieYes?.consent?.analytics) {
+  initGA4(ga4Id?.trim());
+}
+
+// Listen for consent given later
 window.addEventListener('cookies:analytics-accepted', () => {
-  if (ga4Id && ga4Id.trim() !== "") {
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', ga4Id.trim());
-  }
+  initGA4(ga4Id?.trim());
 });
 </script>
