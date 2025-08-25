@@ -30,13 +30,13 @@ const isValidRoute = route => !route.includes('[') && !route.includes('404');
     const route = getRoute(file);
     if (!isValidRoute(route)) continue;
 
-    let lastmod = today; // default to today
+    let lastmod = today;
     let frontTitle = null;
     let frontDescription = null;
 
     if (file.endsWith('.md') || file.endsWith('.mdx')) {
       try {
-        const content = fs.readFileSync(file, 'utf-8');
+        const content = fs.readFileSync(file, 'utf8');
         const { data } = matter(content);
         if (data.date) lastmod = new Date(data.date).toISOString().split('T')[0];
         frontTitle = data.title || null;
@@ -57,9 +57,10 @@ const isValidRoute = route => !route.includes('[') && !route.includes('404');
 
     seoEntries.push({
       route,
-      title: frontTitle || (route === '/' 
+      title: frontTitle || (route === '/'
         ? 'Green Orbit Digital – Sustainable Marketing for the Space Sector'
-        : route.replace(/^\//, '').replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()) + ' – Green Orbit Digital'),
+        : route.replace(/^\//, '').replace(/-/g, ' ')
+          .replace(/\b\w/g, c => c.toUpperCase()) + ' – Green Orbit Digital'),
       description: frontDescription || 'Visit Green Orbit Digital – sustainability meets innovation.',
       canonical: url,
       priority
@@ -68,6 +69,7 @@ const isValidRoute = route => !route.includes('[') && !route.includes('404');
 
   sitemapEntries.sort((a, b) => (a.url === siteUrl ? -1 : b.url === siteUrl ? 1 : 0));
 
+  // Build sitemap XML with guaranteed no BOM and no leading whitespace
   const sitemapXml = [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
@@ -83,7 +85,7 @@ const isValidRoute = route => !route.includes('[') && !route.includes('404');
 
   fs.mkdirSync(distDir, { recursive: true });
   fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemapXml, { encoding: 'utf8', flag: 'w' });
-  fs.writeFileSync(path.join(distDir, 'seo.json'), JSON.stringify(seoEntries, null, 2));
+  fs.writeFileSync(path.join(distDir, 'seo.json'), JSON.stringify(seoEntries, null, 2), { encoding: 'utf8' });
 
   console.log(`✅ Sitemap generated at ${distDir}/sitemap.xml`);
   console.log(`✅ SEO JSON generated at ${distDir}/seo.json`);
