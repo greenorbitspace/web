@@ -11,100 +11,53 @@ import HeroSection from '../components/HeroSection.astro';
   <main class="py-8">
     <HeroSection 
       title="Cookie Policy" 
-      description="Learn about the cookies used on Green Orbit Digital, how they work, and how to manage your preferences."
+      description="Learn how Green Orbit Digital uses cookies and manages your privacy." 
     />
 
     <section class="py-12 bg-white dark:bg-secondary-500">
-      <div class="max-w-6xl mx-auto px-4 space-y-6">
-
-        <p><strong>Effective date:</strong> August 25, 2025</p>
-        <p><strong>Last updated:</strong> August 25, 2025</p>
-
-        <h2 class="text-2xl font-semibold">What are cookies?</h2>
-        <p>
-          Cookies are small text files stored on your device when a website loads. They help ensure proper website function, enhance security, improve user experience, and analyse performance to identify areas for improvement.
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="overflow-x-auto">
+          <table class="min-w-full border border-gray-200 dark:border-gray-700 divide-y divide-gray-200 dark:divide-gray-700">
+            <thead class="bg-gray-100 dark:bg-gray-800">
+              <tr>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-700 dark:text-gray-300 uppercase tracking-wider">Cookie Name</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-700 dark:text-gray-300 uppercase tracking-wider">Purpose</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-700 dark:text-gray-300 uppercase tracking-wider">Duration</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-700 dark:text-gray-300 uppercase tracking-wider">More Info</th>
+              </tr>
+            </thead>
+            <tbody class="bg-white dark:bg-secondary-500 divide-y divide-gray-200 dark:divide-gray-700">
+              <tr>
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">cookieyes-policy</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-200">Stores your cookie consent preferences</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-200">1 year</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-accent-500 dark:text-accent-400">
+                  <a href="https://www.cookieyes.com" target="_blank" rel="noopener noreferrer">Learn More</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">analytics_cookie</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-200">Collects anonymous site usage data for analytics</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-200">2 years</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-accent-500 dark:text-accent-400">
+                  <a href="https://www.google.com/analytics/" target="_blank" rel="noopener noreferrer">Learn More</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">marketing_cookie</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-200">Tracks user interactions for marketing campaigns</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-200">6 months</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-accent-500 dark:text-accent-400">
+                  <a href="#" target="_blank" rel="noopener noreferrer">Learn More</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-6 text-sm text-gray-600 dark:text-gray-300">
+          You can control or disable cookies via your browser settings. For more details, please visit our 
+          <a href="/privacy-policy" class="text-accent-500 dark:text-accent-400 hover:underline">Privacy Policy</a>.
         </p>
-
-        <h2 class="text-2xl font-semibold">How do we use cookies?</h2>
-        <p>
-          Our website uses both first-party and third-party cookies. First-party cookies are essential for site functionality and do not collect personally identifiable data. Third-party cookies help us monitor performance, track interaction, secure services, deliver relevant content, and enhance user experience.
-        </p>
-
-        <h2 class="text-2xl font-semibold">Types of cookies we use</h2>
-        <h3 class="text-xl font-semibold">Necessary</h3>
-        <p>
-          Necessary cookies enable basic site features like secure login and consent preferences. They do not store personally identifiable data.
-        </p>
-
-        <table class="w-full border-collapse border border-gray-300 dark:border-gray-600">
-          <thead>
-            <tr class="bg-gray-100 dark:bg-gray-700">
-              <th class="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left">Cookie</th>
-              <th class="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left">Duration</th>
-              <th class="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left">Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">cookieyes-consent</td>
-              <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">1 year</td>
-              <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Remembers users' consent preferences; no personal information stored.</td>
-            </tr>
-            <tr>
-              <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">__cf_bm</td>
-              <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">1 hour</td>
-              <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Cloudflare Bot Management support.</td>
-            </tr>
-            <tr>
-              <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">_GRECAPTCHA</td>
-              <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">6 months</td>
-              <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Google Recaptcha bot identification.</td>
-            </tr>
-            <tr>
-              <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">_cfuvid</td>
-              <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">session</td>
-              <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Calendly session tracking for consistent experience.</td>
-            </tr>
-            <tr>
-              <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">rc::a, rc::b, rc::c, rc::f</td>
-              <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">session / never expires</td>
-              <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Google Recaptcha bot detection.</td>
-            </tr>
-            <tr>
-              <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">m</td>
-              <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">1 year 1 month 4 days</td>
-              <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Stripe fraud prevention.</td>
-            </tr>
-            <tr>
-              <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">__stripe_mid</td>
-              <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">1 year</td>
-              <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Stripe unique session identifier.</td>
-            </tr>
-            <tr>
-              <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">__stripe_sid</td>
-              <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">1 hour</td>
-              <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Stripe session identifier for single session.</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h2 class="text-2xl font-semibold">Manage cookie preferences</h2>
-        <p>
-          You can modify your cookie settings anytime via the <strong>Consent Preferences</strong> button above. You may revisit the cookie banner, update your preferences, or withdraw consent immediately.
-        </p>
-        <p>
-          Browsers also provide ways to block or delete cookies. For guidance:
-        </p>
-        <ul class="list-disc pl-6 space-y-2">
-          <li><strong>Chrome:</strong> <a href="https://support.google.com/accounts/answer/32050" target="_blank">https://support.google.com/accounts/answer/32050</a></li>
-          <li><strong>Safari:</strong> <a href="https://support.apple.com/en-in/guide/safari/sfri11471/mac" target="_blank">https://support.apple.com/en-in/guide/safari/sfri11471/mac</a></li>
-          <li><strong>Firefox:</strong> <a href="https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox?redirectslug=delete-cookies-remove-info-websites-stored&redirectlocale=en-US" target="_blank">https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox</a></li>
-          <li><strong>Internet Explorer:</strong> <a href="https://support.microsoft.com/en-us/topic/how-to-delete-cookie-files-in-internet-explorer-bca9446f-d873-78de-77ba-d42645fa52fc" target="_blank">https://support.microsoft.com/en-us/topic/how-to-delete-cookie-files-in-internet-explorer-bca9446f-d873-78de-77ba-d42645fa52fc</a></li>
-        </ul>
-
-        <p>If you use a different browser, refer to its official support documentation.</p>
-
-        <p><em>Cookie Policy generated by CookieYes - Cookie Policy Generator</em></p>
       </div>
     </section>
   </main>
