@@ -7,8 +7,8 @@
     "last_verified": "2025-08-23"
   },
   {
-    "name": "Twitter",
-    "url": "https://twitter.com/greenorbitspace",
+    "name": "X",
+    "url": "https://x.com/greenorbitspace",
     "description": "Real-time updates and commentary from Green Orbit Digital on sustainability and space sector news.",
     "status": "active",
     "last_verified": "2025-08-23"
@@ -26,5 +26,68 @@
     "description": "Visual storytelling, behind-the-scenes content, and highlights of our sustainable marketing campaigns for the space sector.",
     "status": "active",
     "last_verified": "2025-08-23"
+  },
+  {
+    "name": "Patreon",
+    "url": "https://www.patreon.com/greenorbitspace",
+    "description": "Support Green Orbit Digital’s sustainable space projects and gain access to exclusive content and insights.",
+    "status": "active",
+    "last_verified": "2025-08-25"
+  },
+  {
+    "name": "Bluesky",
+    "url": "https://bsky.app/profile/greenorbitspace",
+    "description": "Follow us on Bluesky for alternative social updates and discussions on space sustainability.",
+    "status": "active",
+    "last_verified": "2025-08-25"
+  },
+  {
+    "name": "Reddit",
+    "url": "https://www.reddit.com/r/greenorbitspace",
+    "description": "Community discussions, updates, and insights from Green Orbit Digital on sustainability in the space sector.",
+    "status": "active",
+    "last_verified": "2025-08-25"
+  },
+  {
+    "name": "LinkTree",
+    "url": "https://linktr.ee/greenorbitspace",
+    "description": "A centralized hub linking all of Green Orbit Digital’s social platforms, campaigns, and content.",
+    "status": "active",
+    "last_verified": "2025-08-25"
+  },
+  {
+    "name": "Mastodon",
+    "url": "https://mastodon.social/@greenorbitspace",
+    "description": "Join Green Orbit Digital on Mastodon for decentralized social updates focused on space sustainability.",
+    "status": "active",
+    "last_verified": "2025-08-25"
+  },
+  {
+    "name": "Vimeo",
+    "url": "https://vimeo.com/greenorbitspace",
+    "description": "Video content, presentations, and visual storytelling by Green Orbit Digital on sustainable marketing in the space sector.",
+    "status": "active",
+    "last_verified": "2025-08-25"
+  },
+  {
+    "name": "Issuu",
+    "url": "https://issuu.com/greenorbitspace",
+    "description": "Digital publications, brochures, and reports from Green Orbit Digital on sustainability and space industry topics.",
+    "status": "active",
+    "last_verified": "2025-08-25"
+  },
+  {
+    "name": "Flickr",
+    "url": "https://www.flickr.com/people/greenorbitspace",
+    "description": "Photo collections highlighting Green Orbit Digital’s projects, events, and space sustainability initiatives.",
+    "status": "active",
+    "last_verified": "2025-08-25"
+  },
+  {
+    "name": "WhatsApp",
+    "url": "https://chat.whatsapp.com/invite/greenorbitspace",
+    "description": "Direct community engagement and updates from Green Orbit Digital via WhatsApp.",
+    "status": "active",
+    "last_verified": "2025-08-25"
   }
 ]

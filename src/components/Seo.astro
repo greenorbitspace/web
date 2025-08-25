@@ -1,5 +1,8 @@
 ---
 // src/components/Seo.astro
+import Breadcrumbs from './Breadcrumbs.astro';
+const { frontmatter, filePath } = Astro.props;
+
 export interface Props {
   title: string;
   description?: string;

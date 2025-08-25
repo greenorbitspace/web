@@ -1,0 +1,37 @@
+---
+const { filePath, siteUrl = "https://greenorbit.space", frontmatter } = Astro.props;
+
+// Derive route segments from file path
+const segments = filePath
+  .replace('./src/pages', '')
+  .replace(/\.(astro|md|mdx)$/, '')
+  .replace(/\/index$/, '')
+  .split('/')
+  .filter(Boolean);
+
+const crumbs = segments.map((seg, index) => {
+  const name = seg.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+  const url = `${siteUrl}/${segments.slice(0, index + 1).join('/')}/`;
+  return { name, url };
+});
+
+// Include home as first breadcrumb
+crumbs.unshift({ name: 'Home', url: siteUrl });
+---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {%- for (let i = 0; i < crumbs.length; i++) { -%}
+      {
+        "@type": "ListItem",
+        "position": {{ i + 1 }},
+        "name": "{{ crumbs[i].name }}",
+        "item": "{{ crumbs[i].url }}"
+      }{{ i < crumbs.length - 1 ? ',' : '' }}
+    {%- } -%}
+  ]
+}
+</script>
