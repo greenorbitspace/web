@@ -1,7 +1,5 @@
 ---
 // src/components/Seo.astro
-import Breadcrumbs from './Breadcrumbs.astro';
-const { frontmatter, filePath } = Astro.props;
 
 export interface Props {
   title: string;
@@ -22,7 +20,13 @@ const {
   canonical = "https://greenorbit.space",
   twitter = {}
 } = Astro.props;
+
+const siteName = "Green Orbit Digital";
+const fullTitle = title ? `${title} | ${siteName}` : siteName;
 ---
+
+<!-- Browser Tab Title -->
+<title>{fullTitle}</title>
 
 <!-- Standard Meta -->
 <meta charset="UTF-8" />
@@ -34,13 +38,13 @@ const {
 
 <!-- OpenGraph -->
 <meta property="og:type" content="website" />
-<meta property="og:title" content={title} />
+<meta property="og:title" content={fullTitle} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={ogImage} />
 <meta property="og:url" content={canonical} />
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content={twitter.title ?? title} />
+<meta name="twitter:title" content={twitter.title ?? fullTitle} />
 <meta name="twitter:description" content={twitter.description ?? description} />
 <meta name="twitter:image" content={twitter.image ?? ogImage} />

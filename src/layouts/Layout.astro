@@ -4,7 +4,7 @@ import '../styles/transitions.css';
 import GlobalSchema from '../components/Schema/GlobalSchema.astro';
 import Seo from '../components/Seo.astro';
 import Analytics from '../components/Analytics.astro';
-import CookieBanner from '../components/CookieBanner.astro'; // optional
+import CookieBanner from '../components/CookieBanner.astro';
 
 export interface Props {
   title: string;
@@ -32,6 +32,7 @@ const {
       x-bind:class="{ 'dark': darkMode }">
 
   <head>
+    <!-- Seo handles proper <title> and meta tags -->
     <Seo 
       title={title} 
       description={description} 
@@ -53,12 +54,12 @@ const {
     <!-- Global structured data -->
     <GlobalSchema />
 
-    <!-- Cookie consent banner (optional) -->
+    <!-- Cookie consent banner -->
     <CookieBanner />
 
-    <!-- Analytics tracking (consent-aware) -->
+    <!-- Analytics tracking -->
     <Analytics
-      googleAnalyticsId={import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID}
+      gtmId={import.meta.env.PUBLIC_GTM_ID}
       hubspotId={import.meta.env.PUBLIC_HUBSPOT_ID}
       hotjarId={import.meta.env.PUBLIC_HOTJAR_ID}
       hotjarVersion={import.meta.env.PUBLIC_HOTJAR_VERSION}
