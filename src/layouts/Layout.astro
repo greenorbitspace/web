@@ -42,6 +42,17 @@ const {
     />
     {Astro.head}
 
+    <!-- Analytics tracking (GA4, HubSpot, etc.) -->
+    <Analytics
+      gtmId={import.meta.env.PUBLIC_GTM_ID}
+      ga4Id={import.meta.env.PUBLIC_GA4_ID}
+      hubspotId={import.meta.env.PUBLIC_HUBSPOT_ID}
+      hotjarId={import.meta.env.PUBLIC_HOTJAR_ID}
+      hotjarVersion={import.meta.env.PUBLIC_HOTJAR_VERSION}
+      brevoSiteId={import.meta.env.PUBLIC_BREVO_SITE_ID}
+      ticketTailorTracking={import.meta.env.PUBLIC_TICKET_TAILOR}
+    />
+
     <!-- Alpine.js for dark mode toggle -->
     <script type="module" src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
@@ -56,15 +67,5 @@ const {
 
     <!-- Cookie consent banner -->
     <CookieBanner />
-
-    <!-- Analytics tracking -->
-    <Analytics
-      gtmId={import.meta.env.PUBLIC_GTM_ID}
-      hubspotId={import.meta.env.PUBLIC_HUBSPOT_ID}
-      hotjarId={import.meta.env.PUBLIC_HOTJAR_ID}
-      hotjarVersion={import.meta.env.PUBLIC_HOTJAR_VERSION}
-      brevoSiteId={import.meta.env.PUBLIC_BREVO_SITE_ID}
-      ticketTailorTracking={import.meta.env.PUBLIC_TICKET_TAILOR}
-    />
   </body>
 </html>

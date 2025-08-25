@@ -1,53 +1,125 @@
 ---
 const {
   ga4Id = import.meta.env.PUBLIC_GA4_ID,
-  hubspotId = import.meta.env.PUBLIC_HUBSPOT_ID
+  gtmId = import.meta.env.PUBLIC_GTM_ID,
+  hubspotId = import.meta.env.PUBLIC_HUBSPOT_ID,
+  hotjarId = import.meta.env.PUBLIC_HOTJAR_ID,
+  hotjarVersion = import.meta.env.PUBLIC_HOTJAR_VERSION || "6",
+  brevoSiteId = import.meta.env.PUBLIC_BREVO_SITE_ID,
+  ticketTailorTracking = import.meta.env.PUBLIC_TICKET_TAILOR || "false"
 } = Astro.props;
 ---
 
-<!-- Google Analytics 4 -->
-{ga4Id && ga4Id.trim() !== "" && (
-  <script async src={`https://www.googletagmanager.com/gtag/js?id=${ga4Id.trim()}`}></script>
-)}
-
-<!-- HubSpot -->
-{hubspotId && hubspotId.trim() !== "" && (
-  <script
-    type="text/javascript"
-    id="hs-script-loader"
-    async
-    defer
-    src={`//js-eu1.hs-scripts.com/${hubspotId.trim()}.js`}
-  ></script>
-)}
-
 <script is:inline>
-window.dataLayer = window.dataLayer || [];
-window._hsq = window._hsq || [];
+function loadAnalytics() {
+  // -------- GA4 --------
+  if (ga4Id && ga4Id.trim() !== "") {
+    if (!document.querySelector(`script[src*="${ga4Id.trim()}"]`)) {
+      const gtagScript = document.createElement('script');
+      gtagScript.async = true;
+      gtagScript.src = `https://www.googletagmanager.com/gtag/js?id=${ga4Id.trim()}`;
+      document.head.appendChild(gtagScript);
+    }
 
-// GA4 initialization
-function initGA4() {
-  if (!ga4Id || ga4Id.trim() === "") return;
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', ga4Id.trim());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', ga4Id.trim());
+  } else {
+    console.warn("⚠️ GA4 Measurement ID missing:", ga4Id);
+  }
+
+  // -------- GTM --------
+  if (gtmId && gtmId.trim() !== "") {
+    if (!document.querySelector(`script[src*="${gtmId.trim()}"]`)) {
+      (function(w,d,s,l,i){
+        w[l]=w[l]||[];
+        w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+        const f=d.getElementsByTagName(s)[0];
+        const j=d.createElement(s);
+        const dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+        f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer', gtmId.trim());
+    }
+  } else {
+    console.warn("⚠️ GTM ID missing:", gtmId);
+  }
+
+  // -------- HubSpot --------
+  if (hubspotId && hubspotId.trim() !== "") {
+    if (!document.getElementById('hs-script-loader')) {
+      const hsScript = document.createElement('script');
+      hsScript.type = 'text/javascript';
+      hsScript.id = 'hs-script-loader';
+      hsScript.async = true;
+      hsScript.defer = true;
+      hsScript.src = `https://js-eu1.hs-scripts.com/${hubspotId.trim()}.js`;
+      document.head.appendChild(hsScript);
+    }
+  } else {
+    console.warn("⚠️ HubSpot ID missing or invalid:", hubspotId);
+  }
+
+  // -------- Hotjar --------
+  if (hotjarId) {
+    if (!window.hj) {
+      (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:hotjarId,hjsv:hotjarVersion};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script'); r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    }
+  }
+
+  // -------- Brevo (Sendinblue) --------
+  if (brevoSiteId) {
+    if (!window.Brevo) {
+      const brevoScript = document.createElement('script');
+      brevoScript.src = 'https://cdn.brevo.com/js/sdk-loader.js';
+      brevoScript.async = true;
+      document.head.appendChild(brevoScript);
+
+      window.Brevo = window.Brevo || [];
+      Brevo.push(["init",{client_key: brevoSiteId}]);
+
+      window.addEventListener("brevo:conversion", function(e){
+        const {id="newsletter_signup",value=1} = e.detail || {};
+        Brevo.push(["track","conversion",{id,value}]);
+        if (typeof dataLayer !== "undefined") dataLayer.push({event:"BrevoConversion",id,value});
+        if (window._hsq) window._hsq.push(["trackEvent",{id:"brevo_signup",value,eventName:id}]);
+        console.log("📝 Brevo Conversion Sent:", {id,value});
+      });
+    }
+  }
+
+  // -------- Ticket Tailor --------
+  if (ticketTailorTracking === "true" && window.location.pathname.includes("thank-you")) {
+    if (!window.ttq) {
+      const ttScript = document.createElement('script');
+      ttScript.src = 'https://cdn.tickettailor.com/js/analytics.js';
+      ttScript.async = true;
+      document.head.appendChild(ttScript);
+
+      window.ttq = window.ttq || [];
+      const params = new URLSearchParams(window.location.search);
+      const amount = parseFloat(params.get("amount")) || 0;
+      const currency = params.get("currency") || "GBP";
+      const event = params.get("event") || "TicketPurchase";
+      const orderId = params.get("order_id") || Date.now().toString();
+
+      window.ttq.push(['track','Purchase',{value:amount,currency,event_id:event+"_"+orderId}]);
+      if (typeof dataLayer !== "undefined") dataLayer.push({event:"TicketPurchase",transaction_id:orderId,value:amount,currency,event});
+      if (window._hsq) window._hsq.push(["trackEvent",{id:"ticket_purchase",value:amount,currency,orderId,eventName:event}]);
+      console.log("🎟️ Ticket Tailor Conversion Sent:", {amount,currency,event,orderId});
+    }
+  }
 }
 
-// HubSpot initialization
-function initHubSpot() {
-  if (!hubspotId || hubspotId.trim() === "") return;
-  // _hsq queue already initialized above
-}
-
-// Run on page load if consent already given
-if (window.CookieYes?.consent?.analytics) {
-  initGA4();
-  initHubSpot();
-}
-
-// Listen for consent given later
-window.addEventListener('cookies:analytics-accepted', () => {
-  initGA4();
-  initHubSpot();
-});
+// -------- Initialize only if analytics consent exists --------
+if (window.CookieYes?.consent?.analytics) loadAnalytics();
+window.addEventListener('cookies:analytics-accepted', loadAnalytics);
 </script>
