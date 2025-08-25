@@ -2,32 +2,29 @@
 const { ga4Id = import.meta.env.PUBLIC_GA4_ID } = Astro.props;
 ---
 
+<!-- Load GA4 script statically so Google can detect it -->
+{ga4Id && ga4Id.trim() !== "" && (
+  <script async src={`https://www.googletagmanager.com/gtag/js?id=${ga4Id.trim()}`}></script>
+)}
+
 <script is:inline>
-function initGA4(id) {
-  if (!id) return;
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
 
-  // Avoid duplicate script
-  if (!document.querySelector(`script[src*="${id}"]`)) {
-    const gtagScript = document.createElement('script');
-    gtagScript.async = true;
-    gtagScript.src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
-    document.head.appendChild(gtagScript);
-  }
-
-  // Initialize GA4
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+// Only configure GA4 after analytics consent
+function configureGA4() {
+  if (!ga4Id || ga4Id.trim() === "") return;
   gtag('js', new Date());
-  gtag('config', id);
+  gtag('config', ga4Id.trim());
 }
 
-// Load GA4 if analytics consent exists
+// Load immediately if consent already given
 if (window.CookieYes?.consent?.analytics) {
-  initGA4(ga4Id?.trim());
+  configureGA4();
 }
 
 // Listen for consent given later
 window.addEventListener('cookies:analytics-accepted', () => {
-  initGA4(ga4Id?.trim());
+  configureGA4();
 });
 </script>
