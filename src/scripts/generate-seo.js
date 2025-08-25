@@ -26,11 +26,26 @@ const isValidRoute = route => !route.includes('[') && !route.includes('404');
   const sitemapEntries = [];
   const seoEntries = [];
 
+  // Ensure homepage is first
+  sitemapEntries.push({
+    url: siteUrl,
+    lastmod: today,
+    priority: '1.0'
+  });
+
+  seoEntries.push({
+    route: '/',
+    title: 'Green Orbit Digital – Sustainable Marketing for the Space Sector',
+    description: 'Visit Green Orbit Digital – sustainability meets innovation.',
+    canonical: siteUrl,
+    priority: '1.0'
+  });
+
   for (const file of files) {
     const route = getRoute(file);
-    if (!isValidRoute(route)) continue;
+    if (!isValidRoute(route) || route === '/') continue; // skip homepage (already added)
 
-    let lastmod = today; // default to today
+    let lastmod = today;
     let frontTitle = null;
     let frontDescription = null;
 
@@ -49,25 +64,19 @@ const isValidRoute = route => !route.includes('[') && !route.includes('404');
     const url = getFullUrl(route);
 
     let priority = '0.5';
-    if (route === '/') priority = '1.0';
-    else if (route.startsWith('/services')) priority = '0.9';
+    if (route.startsWith('/services')) priority = '0.9';
     else if (route.startsWith('/blog')) priority = '0.7';
 
     sitemapEntries.push({ url, lastmod, priority });
 
     seoEntries.push({
       route,
-      title: frontTitle || (route === '/' 
-        ? 'Green Orbit Digital – Sustainable Marketing for the Space Sector'
-        : route.replace(/^\//, '').replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()) + ' – Green Orbit Digital'),
+      title: frontTitle || route.replace(/^\//, '').replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()) + ' – Green Orbit Digital',
       description: frontDescription || 'Visit Green Orbit Digital – sustainability meets innovation.',
       canonical: url,
       priority
     });
   }
-
-  // Ensure homepage comes first
-  sitemapEntries.sort((a, b) => (a.url === siteUrl ? -1 : b.url === siteUrl ? 1 : 0));
 
   const sitemapXml = [
     '<?xml version="1.0" encoding="UTF-8"?>',
