@@ -34,11 +34,15 @@ const distDir = './dist';
     let frontDescription = null;
 
     if (file.endsWith('.md') || file.endsWith('.mdx')) {
-      const content = fs.readFileSync(file, 'utf-8');
-      const { data: frontmatter } = matter(content);
-      lastmod = frontmatter.date || null;
-      frontTitle = frontmatter.title || null;
-      frontDescription = frontmatter.description || null;
+      try {
+        const content = fs.readFileSync(file, 'utf-8');
+        const { data: frontmatter } = matter(content);
+        lastmod = frontmatter.date || null;
+        frontTitle = frontmatter.title || null;
+        frontDescription = frontmatter.description || null;
+      } catch (err) {
+        console.warn(`⚠️ Could not parse frontmatter in ${file}: ${err.message}`);
+      }
     }
 
     const route = getRoute(file);
@@ -61,7 +65,10 @@ const distDir = './dist';
 
     seoEntries.push({
       route,
-      title: frontTitle || route.replace(/^\//, '').replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()) + ' – Green Orbit Digital',
+      title: frontTitle || 
+        (route === '/' 
+          ? 'Green Orbit Digital – Sustainable Marketing for the Space Sector' 
+          : route.replace(/^\//, '').replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()) + ' – Green Orbit Digital'),
       description: frontDescription || 'Visit Green Orbit Digital – sustainability meets innovation.',
       canonical: url,
       changefreq,
@@ -69,19 +76,21 @@ const distDir = './dist';
     });
   }
 
-  // Write sitemap.xml
+  // Build valid sitemap.xml
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapEntries.map(e => `  <url>
-  <loc>${e.url}</loc>
-  ${e.lastmod ? `<lastmod>${e.lastmod}</lastmod>` : ''}
-  <changefreq>${e.changefreq}</changefreq>
-  <priority>${e.priority}</priority>
-</url>`).join('\n')}
+${sitemapEntries.map(e => {
+  return `  <url>
+    <loc>${e.url}</loc>
+    ${e.lastmod ? `<lastmod>${e.lastmod}</lastmod>` : ''}
+    <changefreq>${e.changefreq}</changefreq>
+    <priority>${e.priority}</priority>
+  </url>`;
+}).join('\n')}
 </urlset>`;
 
   fs.mkdirSync(distDir, { recursive: true });
-  fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemapXml);
+  fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemapXml.trim() + '\n');
   fs.writeFileSync(path.join(distDir, 'seo.json'), JSON.stringify(seoEntries, null, 2));
 
   console.log(`✅ Sitemap generated at ${distDir}/sitemap.xml`);
