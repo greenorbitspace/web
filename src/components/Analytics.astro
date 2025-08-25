@@ -2,7 +2,7 @@
 // src/components/Analytics.astro
 
 const {
-  googleAnalyticsId = import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID,
+  gtmId = import.meta.env.PUBLIC_GTM_ID, // GTM container ID (e.g., G-XXXXXXX)
   hubspotId = import.meta.env.PUBLIC_HUBSPOT_ID,
   hotjarId = import.meta.env.PUBLIC_HOTJAR_ID,
   hotjarVersion = import.meta.env.PUBLIC_HOTJAR_VERSION || "6",
@@ -13,17 +13,12 @@ const {
 
 <script is:inline>
   function loadAnalytics() {
-    // Google Analytics
-    {googleAnalyticsId && `
-      const gtagScript = document.createElement('script');
-      gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}";
-      gtagScript.async = true;
-      document.head.appendChild(gtagScript);
-
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '${googleAnalyticsId}');
+    // Google Tag Manager
+    {gtmId && `
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${gtmId}');
     `}
 
     // HubSpot
@@ -47,20 +42,20 @@ const {
       })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     `}
 
-    // Brevo
+    // Brevo (Sendinblue)
     {brevoSiteId && `
       const brevoScript = document.createElement('script');
       brevoScript.src = "https://cdn.brevo.com/js/sdk-loader.js";
       brevoScript.async = true;
       document.head.appendChild(brevoScript);
       window.Brevo = window.Brevo || [];
-      Brevo.push(["init", { client_key: "${brevoSiteId}" }]);
-      window.addEventListener("brevo:conversion", function(e){
-        const { id="newsletter_signup", value=1 } = e.detail || {};
-        Brevo.push(["track", "conversion", { id, value }]);
-        if(typeof gtag!=="undefined") gtag('event','sign_up',{method:'Brevo',event_id:id,value});
+      Brevo.push(["init",{client_key:"${brevoSiteId}"}]);
+      window.addEventListener("brevo:conversion",function(e){
+        const {id="newsletter_signup",value=1}=e.detail||{};
+        Brevo.push(["track","conversion",{id,value}]);
+        if(typeof dataLayer!=="undefined") dataLayer.push({event:"BrevoConversion",id,value});
         if(window._hsq) window._hsq.push(["trackEvent",{id:"brevo_signup",value,eventName:id}]);
-        console.log("📝 Brevo Conversion Sent:", {id,value});
+        console.log("📝 Brevo Conversion Sent:",{id,value});
       });
     `}
 
@@ -77,17 +72,13 @@ const {
       const event = params.get("event") || "TicketPurchase";
       const orderId = params.get("order_id") || Date.now().toString();
       window.ttq.push(['track','Purchase',{value:amount,currency,event_id:event+"_"+orderId}]);
-      if(typeof gtag!=="undefined") gtag('event','purchase',{transaction_id:orderId,value:amount,currency,items:[{item_name:event}]});
+      if(typeof dataLayer!=="undefined") dataLayer.push({event:"TicketPurchase",transaction_id:orderId,value:amount,currency,event});
       if(window._hsq) window._hsq.push(["trackEvent",{id:"ticket_purchase",value:amount,currency,orderId,eventName:event}]);
       console.log("🎟️ Ticket Tailor Conversion Sent:",{amount,currency,event,orderId});
     }
   }
 
-  // Initialize only if consent already exists
-  if (window.CookieYes?.consent?.analytics) {
-    loadAnalytics();
-  }
-
-  // Listen for user consent
+  // Initialize only if user consented
+  if (window.CookieYes?.consent?.analytics) loadAnalytics();
   window.addEventListener('cookies:analytics-accepted', loadAnalytics);
 </script>
