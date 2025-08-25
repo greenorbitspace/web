@@ -1,30 +1,53 @@
 ---
-const { ga4Id = import.meta.env.PUBLIC_GA4_ID } = Astro.props;
+const {
+  ga4Id = import.meta.env.PUBLIC_GA4_ID,
+  hubspotId = import.meta.env.PUBLIC_HUBSPOT_ID
+} = Astro.props;
 ---
 
-<!-- Load GA4 script statically so Google can detect it -->
+<!-- Google Analytics 4 -->
 {ga4Id && ga4Id.trim() !== "" && (
   <script async src={`https://www.googletagmanager.com/gtag/js?id=${ga4Id.trim()}`}></script>
 )}
 
+<!-- HubSpot -->
+{hubspotId && hubspotId.trim() !== "" && (
+  <script
+    type="text/javascript"
+    id="hs-script-loader"
+    async
+    defer
+    src={`//js-eu1.hs-scripts.com/${hubspotId.trim()}.js`}
+  ></script>
+)}
+
 <script is:inline>
 window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
+window._hsq = window._hsq || [];
 
-// Only configure GA4 after analytics consent
-function configureGA4() {
+// GA4 initialization
+function initGA4() {
   if (!ga4Id || ga4Id.trim() === "") return;
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', ga4Id.trim());
 }
 
-// Load immediately if consent already given
+// HubSpot initialization
+function initHubSpot() {
+  if (!hubspotId || hubspotId.trim() === "") return;
+  // _hsq queue already initialized above
+}
+
+// Run on page load if consent already given
 if (window.CookieYes?.consent?.analytics) {
-  configureGA4();
+  initGA4();
+  initHubSpot();
 }
 
 // Listen for consent given later
 window.addEventListener('cookies:analytics-accepted', () => {
-  configureGA4();
+  initGA4();
+  initHubSpot();
 });
 </script>
