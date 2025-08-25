@@ -76,23 +76,30 @@ const distDir = './dist';
     });
   }
 
-  // Build valid sitemap.xml
-  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapEntries.map(e => {
-  return `  <url>
+  // Write sitemap.xml
+const sitemapXml = [
+  '<?xml version="1.0" encoding="UTF-8"?>',
+  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+]
+  .concat(
+    sitemapEntries.map(e => {
+      return `  <url>
     <loc>${e.url}</loc>
-    ${e.lastmod ? `<lastmod>${e.lastmod}</lastmod>` : ''}
+    ${e.lastmod ? `<lastmod>${new Date(e.lastmod).toISOString().split('T')[0]}</lastmod>` : ''}
     <changefreq>${e.changefreq}</changefreq>
     <priority>${e.priority}</priority>
   </url>`;
-}).join('\n')}
-</urlset>`;
+    })
+  )
+  .concat('</urlset>')
+  .join('\n');
 
-  fs.mkdirSync(distDir, { recursive: true });
-  fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemapXml.trim() + '\n');
-  fs.writeFileSync(path.join(distDir, 'seo.json'), JSON.stringify(seoEntries, null, 2));
+// Write files
+fs.mkdirSync(distDir, { recursive: true });
+// Ensure UTF-8 without BOM
+fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemapXml, { encoding: 'utf8', flag: 'w' });
+fs.writeFileSync(path.join(distDir, 'seo.json'), JSON.stringify(seoEntries, null, 2));
 
-  console.log(`✅ Sitemap generated at ${distDir}/sitemap.xml`);
-  console.log(`✅ SEO JSON generated at ${distDir}/seo.json`);
+console.log(`✅ Sitemap generated at ${distDir}/sitemap.xml`);
+console.log(`✅ SEO JSON generated at ${distDir}/seo.json`);
 })();
