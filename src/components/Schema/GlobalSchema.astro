@@ -11,39 +11,37 @@ import services from "../../data/schema/services.json";
 import webpages from "../../data/schema/webpages.json";
 import blog from "../../data/schema/blog.json";
 
-// --- Safe JSON copies ---
-const safeFounders = JSON.parse(JSON.stringify(founders));
-const safeContact = JSON.parse(JSON.stringify(contact));
-const safeAreas = JSON.parse(JSON.stringify(areas));
-const safeKnowledge = JSON.parse(JSON.stringify(knowledge));
-const safeBrands = JSON.parse(JSON.stringify(brands));
-const safeServices = JSON.parse(JSON.stringify(services));
-const safeWebpages = JSON.parse(JSON.stringify(webpages));
-const safeBlog = JSON.parse(JSON.stringify(blog));
+// --- Safe JSON defaults ---
+const safeFounders = founders || [];
+const safeContact = contact || {};
+const safeAreas = areas || [];
+const safeKnowledge = knowledge || [];
+const safeBrands = brands || [];
+const safeServices = services || [];
+const safeWebpages = webpages || [];
+const safeBlog = blog || [];
 
 // --- Filter member or partner organisations ---
-const memberOfOrgs = organisations
+const memberOrgs = organisations
   .filter(org => ["member", "partner"].includes(org.Type))
   .map(org => ({
     "@type": "Organization",
     name: org.Organisation,
     url: org.URL,
-    description: org.Description || "",
-    logo: org.logo || ""
+    description: org.Description || undefined,
+    logo: org.logo || undefined
   }));
 
-// --- Flatten profiles ---
+// --- Flatten profiles and build unique sameAs links ---
 const flattenedProfiles = Object.values(profiles.profiles || {}).flat();
-
-// --- sameAs links ---
 const sameAsLinks = Array.from(
   new Set([
-    ...socials.map(s => (typeof s === "string" ? s : s.url)),
-    ...flattenedProfiles.map(p => (typeof p === "string" ? p : p.url))
+    ...socials.map(s => s?.url).filter(Boolean),
+    ...flattenedProfiles.map(p => p?.url).filter(Boolean)
   ])
 );
 
-// --- Build orgSchema ---
+// --- Build Organization schema ---
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -68,15 +66,15 @@ const orgSchema = {
     "content marketing",
     "space industry branding"
   ],
-  founder: safeFounders,
-  contactPoint: safeContact.contactPoint || [],
-  address: safeContact.address || {},
-  geo: safeContact.geo || {},
-  sameAs: sameAsLinks,
-  areaServed: safeAreas || [],
-  memberOf: memberOfOrgs,
-  knowsAbout: safeKnowledge || [],
-  brand: safeBrands || [],
+  founder: safeFounders.length ? safeFounders : undefined,
+  contactPoint: safeContact.contactPoint?.length ? safeContact.contactPoint : undefined,
+  address: Object.keys(safeContact.address || {}).length ? safeContact.address : undefined,
+  geo: Object.keys(safeContact.geo || {}).length ? safeContact.geo : undefined,
+  sameAs: sameAsLinks.length ? sameAsLinks : undefined,
+  areaServed: safeAreas.length ? safeAreas : undefined,
+  memberOf: memberOrgs.length ? memberOrgs : undefined,
+  knowsAbout: safeKnowledge.length ? safeKnowledge : undefined,
+  brand: safeBrands.length ? safeBrands : undefined,
   awards: [
     "Shortlisted: Best Sustainable Campaign – UK Space Marketing Awards 2024",
     "Nominee: Ethical Digital Agency of the Year – Tech for Good Awards 2023"
@@ -89,9 +87,9 @@ const orgSchema = {
       url: "https://www.bcorporation.net/"
     }
   ],
-  makesOffer: safeServices,
-  hasPart: safeWebpages,
-  publishes: safeBlog,
+  makesOffer: safeServices.length ? safeServices : undefined,
+  hasPart: safeWebpages.length ? safeWebpages : undefined,
+  publishes: safeBlog.length ? safeBlog : undefined,
   publishingPrinciples: "https://greenorbit.space/",
   isAccessibleForFree: true,
   hasPOS: {
@@ -112,5 +110,5 @@ const orgSchema = {
 ---
 
 <script type="application/ld+json" is:inline>
-{JSON.stringify(orgSchema, null, 2)}
+{JSON.stringify(orgSchema)}
 </script>

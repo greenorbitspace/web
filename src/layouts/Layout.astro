@@ -18,21 +18,16 @@ export interface Props {
   };
 }
 
-const {
-  title,
-  description,
-  ogImage,
-  canonical,
-  twitter
-} = Astro.props;
+const { title, description, ogImage, canonical, twitter } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth" x-data="{ darkMode: localStorage.theme === 'dark' || (!localStorage.theme && window.matchMedia('(prefers-color-scheme: dark)').matches) }"
+<html lang="en" class="scroll-smooth" 
+      x-data="{ darkMode: localStorage.theme === 'dark' || (!localStorage.theme && window.matchMedia('(prefers-color-scheme: dark)').matches) }"
       x-bind:class="{ 'dark': darkMode }">
 
   <head>
-    <!-- Seo handles proper <title> and meta tags -->
+    <!-- SEO meta tags -->
     <Seo 
       title={title} 
       description={description} 
@@ -42,7 +37,7 @@ const {
     />
     {Astro.head}
 
-    <!-- Analytics tracking (GA4, HubSpot, etc.) -->
+    <!-- Analytics tracking -->
     <Analytics
       gtmId={import.meta.env.PUBLIC_GTM_ID}
       ga4Id={import.meta.env.PUBLIC_GA4_ID}
@@ -53,16 +48,22 @@ const {
       ticketTailorTracking={import.meta.env.PUBLIC_TICKET_TAILOR}
     />
 
-    <!-- Alpine.js for dark mode toggle -->
-    <script type="module" src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/143471159.js"></script>
+  <!-- End of HubSpot Embed Code -->
+
+    <!-- Alpine.js for interactivity and dark mode -->
+    <script type="module" src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   </head>
 
   <body class="antialiased bg-white dark:bg-primary-500 text-secondary-900 dark:text-secondary-100 transition-colors duration-300">
+    
+    <!-- Main page content -->
     <main id="page-wrapper" class="page-wrapper" role="main" tabindex="-1">
       <slot />
     </main>
 
-    <!-- Global structured data -->
+    <!-- Global structured data / JSON-LD -->
     <GlobalSchema />
 
     <!-- Cookie consent banner -->

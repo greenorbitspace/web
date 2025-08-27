@@ -67,26 +67,29 @@ const tooltipId = "satellite-tooltip";
     Satellite: GeoX-1
   </div>
 
-  <script>
-    const satellite = document.getElementById(`${satelliteId}`);
-    const tooltip = document.getElementById(`${tooltipId}`);
+<script>
+  const satelliteId = "satellite-icon";
+  const tooltipId = "satellite-tooltip";
 
-    satellite.addEventListener('mousemove', e => {
-      tooltip.style.left = e.offsetX + 20 + 'px';
-      tooltip.style.top = e.offsetY + 20 + 'px';
-      tooltip.style.opacity = '1';
-    });
+  const satellite = document.getElementById(satelliteId);
+  const tooltip = document.getElementById(tooltipId);
 
-    satellite.addEventListener('mouseleave', () => { tooltip.style.opacity = '0'; });
+  satellite.addEventListener('mousemove', e => {
+    tooltip.style.left = e.offsetX + 20 + 'px';
+    tooltip.style.top = e.offsetY + 20 + 'px';
+    tooltip.style.opacity = '1';
+  });
 
-    satellite.addEventListener('mouseover', () => {
-      satellite.querySelector('rect').setAttribute('width', 16);
-      satellite.querySelector('rect').setAttribute('height', 16);
-    });
+  satellite.addEventListener('mouseleave', () => { tooltip.style.opacity = '0'; });
 
-    satellite.addEventListener('mouseout', () => {
-      satellite.querySelector('rect').setAttribute('width', 14);
-      satellite.querySelector('rect').setAttribute('height', 14);
-    });
-  </script>
+  satellite.addEventListener('mouseover', () => {
+    satellite.querySelector('rect').setAttribute('width', 16);
+    satellite.querySelector('rect').setAttribute('height', 16);
+  });
+
+  satellite.addEventListener('mouseout', () => {
+    satellite.querySelector('rect').setAttribute('width', 14);
+    satellite.querySelector('rect').setAttribute('height', 14);
+  });
+</script>
 </div>

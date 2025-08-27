@@ -56,6 +56,11 @@
       "@type": "Report",
       "name": "Digital Carbon Emissions Report 2024",
       "url": "https://example.org/reports/digital-carbon-2024"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "IPCC Climate Change Report 2023",
+      "url": "https://www.ipcc.ch/report/ar6/wg1/"
     }
   ],
   "hasPart": [
@@ -78,13 +83,6 @@
       "@type": "CreativeWork",
       "name": "Recommendations",
       "url": "https://greenorbit.digital/reports/sustainable-marketing-2025#recommendations"
-    }
-  ],
-  "citation": [
-    {
-      "@type": "CreativeWork",
-      "name": "IPCC Climate Change Report 2023",
-      "url": "https://www.ipcc.ch/report/ar6/wg1/"
     }
   ],
   "audience": {

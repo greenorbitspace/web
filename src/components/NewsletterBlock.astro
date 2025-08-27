@@ -1,0 +1,42 @@
+---
+import HubspotForm from "../components/HubspotForm.astro";
+
+interface NewsletterBlockProps {
+  title?: string
+  paragraphs?: string[]
+  portalId: string
+  formId: string
+  region?: string
+  domId?: string
+}
+
+const {
+  title = "Subscribe to The Sustainable Space Newsletter",
+  paragraphs = [
+    "Stay ahead of the curve in sustainable marketing and the space sector. Each month we share insights from industry leaders, case studies, and practical strategies to help your organisation grow responsibly.",
+    "Get exclusive access to expert commentary, early updates on events and workshops, and actionable resources designed to help you deliver measurable, planet-positive impact.",
+    "Join a community of professionals across the space and science sectors who are shaping the future with innovation, sustainability, and purpose."
+  ],
+  portalId,
+  formId,
+  region = "eu1",
+  domId
+} = Astro.props;
+---
+
+<div class="card p-8 md:p-12 border border-gray-200 dark:bg-secondary-500">
+  <div class="grid md:grid-cols-2 gap-8 items-center">
+    <!-- Left Column: Text -->
+    <div class="text-left">
+      <h2 class="mb-4 text-white dark:text-white text-3xl font-semibold">{title}</h2>
+      {paragraphs.map((para) => (
+        <p class="text-gray-300 dark:text-white max-w-lg mb-4">{para}</p>
+      ))}
+    </div>
+
+    <!-- Right Column: HubSpot Form -->
+    <div>
+      <HubspotForm portalId={portalId} formId={formId} region={region} domId={domId} />
+    </div>
+  </div>
+</div>

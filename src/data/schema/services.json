@@ -2,13 +2,13 @@
   {
     "@type": "Service",
     "name": "Sustainable Marketing Strategy",
-    "url": "/services/sustainable-marketing-strategy",
+    "url": "https://greenorbit.space/services/sustainable-marketing-strategy",
     "description": "Strategic marketing plans aligned with the UN Sustainable Development Goals (SDGs), tailored for the space sector.",
     "serviceType": "Marketing Strategy",
     "provider": {
       "@type": "Organization",
       "name": "Green Orbit Digital",
-      "url": "https://greenorbit.digital"
+      "url": "https://greenorbit.space"
     },
     "category": "Strategy",
     "keywords": ["marketing strategy", "sustainability", "SDG alignment", "space marketing"],
@@ -18,12 +18,12 @@
       "audienceType": "Space sector organizations"
     },
     "sdgs": ["SDG 9", "SDG 12", "SDG 13"],
-    "icon": "icons/strategy.svg",
+    "icon": "https://greenorbit.space/icons/strategy.svg",
     "offers": {
       "@type": "Offer",
       "priceCurrency": "GBP",
       "availability": "https://schema.org/InStock",
-      "url": "/contact",
+      "url": "https://greenorbit.space/contact",
       "priceSpecification": {
         "@type": "PriceSpecification",
         "priceCurrency": "GBP",
@@ -36,199 +36,208 @@
   {
     "@type": "Service",
     "name": "Digital Carbon Auditing",
-    "url": "/services/digital-carbon-auditing",
+    "url": "https://greenorbit.space/services/digital-carbon-auditing",
     "description": "Measure and reduce the carbon footprint of your digital assets using eco-audit.js and best practice analysis.",
     "serviceType": "Carbon Auditing",
     "provider": {
       "@type": "Organization",
-      "name": "Green Orbit Digital"
+      "name": "Green Orbit Digital",
+      "url": "https://greenorbit.space"
     },
     "category": "Sustainability",
     "keywords": ["carbon audit", "eco audit", "digital emissions", "sustainability"],
     "areaServed": "Global",
     "sdgs": ["SDG 13", "SDG 12"],
-    "icon": "icons/carbon.svg",
+    "icon": "https://greenorbit.space/icons/carbon.svg",
     "offers": {
       "@type": "Offer",
       "priceCurrency": "GBP",
       "availability": "https://schema.org/InStock",
-      "url": "/contact"
+      "url": "https://greenorbit.space/contact"
     }
   },
   {
     "@type": "Service",
     "name": "ESG and B Corp Reporting Support",
-    "url": "/services/esg-bcorp-reporting",
+    "url": "https://greenorbit.space/services/esg-bcorp-reporting",
     "description": "Framework alignment for ESG metrics, B Impact Assessment, SDG Action Manager, and Open SDG reporting.",
     "serviceType": "ESG Reporting",
     "provider": {
       "@type": "Organization",
-      "name": "Green Orbit Digital"
+      "name": "Green Orbit Digital",
+      "url": "https://greenorbit.space"
     },
     "category": "Reporting",
     "keywords": ["esg", "b corp", "impact reporting", "open sdg"],
     "areaServed": "Global",
     "sdgs": ["SDG 17", "SDG 12"],
-    "icon": "icons/esg.svg",
+    "icon": "https://greenorbit.space/icons/esg.svg",
     "offers": {
       "@type": "Offer",
       "priceCurrency": "GBP",
       "availability": "https://schema.org/InStock",
-      "url": "/contact"
+      "url": "https://greenorbit.space/contact"
     }
   },
   {
     "@type": "Service",
     "name": "Space Industry SEO",
-    "url": "/services/space-seo",
+    "url": "https://greenorbit.space/services/space-seo",
     "description": "Technical and content SEO optimised for space agencies, suppliers, and startups targeting a niche global audience.",
     "serviceType": "SEO",
     "provider": {
       "@type": "Organization",
-      "name": "Green Orbit Digital"
+      "name": "Green Orbit Digital",
+      "url": "https://greenorbit.space"
     },
     "category": "Digital Marketing",
     "keywords": ["seo", "space sector", "technical seo", "seo audit"],
     "areaServed": "Global",
     "sdgs": ["SDG 9"],
-    "icon": "icons/seo.svg",
+    "icon": "https://greenorbit.space/icons/seo.svg",
     "offers": {
       "@type": "Offer",
       "priceCurrency": "GBP",
       "availability": "https://schema.org/InStock",
-      "url": "/contact"
+      "url": "https://greenorbit.space/contact"
     }
   },
   {
     "@type": "Service",
     "name": "Sustainable Web Design",
-    "url": "/services/sustainable-web-design",
+    "url": "https://greenorbit.space/services/sustainable-web-design",
     "description": "Lightweight, accessible, low-carbon websites built with Astro, Bootstrap, and headless CMS architecture.",
     "serviceType": "Web Design",
     "provider": {
       "@type": "Organization",
-      "name": "Green Orbit Digital"
+      "name": "Green Orbit Digital",
+      "url": "https://greenorbit.space"
     },
     "category": "Web",
     "keywords": ["web design", "astro", "low carbon", "sustainable ux"],
     "areaServed": "Global",
     "sdgs": ["SDG 12", "SDG 13"],
-    "icon": "icons/web.svg",
+    "icon": "https://greenorbit.space/icons/web.svg",
     "offers": {
       "@type": "Offer",
       "priceCurrency": "GBP",
       "availability": "https://schema.org/InStock",
-      "url": "/contact"
+      "url": "https://greenorbit.space/contact"
     }
   },
   {
     "@type": "Service",
     "name": "Ethical Analytics and Insights",
-    "url": "/services/ethical-analytics",
+    "url": "https://greenorbit.space/services/ethical-analytics",
     "description": "GDPR-compliant, privacy-first analytics powered by tools like Plausible or Matomo with sustainability insights.",
     "serviceType": "Analytics",
     "provider": {
       "@type": "Organization",
-      "name": "Green Orbit Digital"
+      "name": "Green Orbit Digital",
+      "url": "https://greenorbit.space"
     },
     "category": "Data & Insights",
     "keywords": ["ethical analytics", "gdpr", "plausible", "privacy"],
     "areaServed": "Global",
     "sdgs": ["SDG 16", "SDG 13"],
-    "icon": "icons/analytics.svg",
+    "icon": "https://greenorbit.space/icons/analytics.svg",
     "offers": {
       "@type": "Offer",
       "priceCurrency": "GBP",
       "availability": "https://schema.org/InStock",
-      "url": "/contact"
+      "url": "https://greenorbit.space/contact"
     }
   },
   {
     "@type": "Service",
     "name": "Email Campaigns & Automation",
-    "url": "/services/email-automation",
+    "url": "https://greenorbit.space/services/email-automation",
     "description": "Eco-conscious email marketing with clean design, automation flows, and deliverability optimisation.",
     "serviceType": "Email Marketing",
     "provider": {
       "@type": "Organization",
-      "name": "Green Orbit Digital"
+      "name": "Green Orbit Digital",
+      "url": "https://greenorbit.space"
     },
     "category": "Digital Marketing",
     "keywords": ["email marketing", "automation", "deliverability", "sustainable email"],
     "areaServed": "Global",
     "sdgs": ["SDG 12"],
-    "icon": "icons/email.svg",
+    "icon": "https://greenorbit.space/icons/email.svg",
     "offers": {
       "@type": "Offer",
       "priceCurrency": "GBP",
       "availability": "https://schema.org/InStock",
-      "url": "/contact"
+      "url": "https://greenorbit.space/contact"
     }
   },
   {
     "@type": "Service",
     "name": "Social Media for Science & Space",
-    "url": "/services/space-social-media",
+    "url": "https://greenorbit.space/services/space-social-media",
     "description": "Social media content and campaigns that demystify space, inspire public engagement, and meet STEM objectives.",
     "serviceType": "Social Media Marketing",
     "provider": {
       "@type": "Organization",
-      "name": "Green Orbit Digital"
+      "name": "Green Orbit Digital",
+      "url": "https://greenorbit.space"
     },
     "category": "Content & Outreach",
     "keywords": ["social media", "science communication", "space outreach"],
     "areaServed": "Global",
     "sdgs": ["SDG 4", "SDG 9"],
-    "icon": "icons/social.svg",
+    "icon": "https://greenorbit.space/icons/social.svg",
     "offers": {
       "@type": "Offer",
       "priceCurrency": "GBP",
       "availability": "https://schema.org/InStock",
-      "url": "/contact"
+      "url": "https://greenorbit.space/contact"
     }
   },
   {
     "@type": "Service",
     "name": "Sustainable Brand Development",
-    "url": "/services/sustainable-branding",
+    "url": "https://greenorbit.space/services/sustainable-branding",
     "description": "Brand identity, positioning, and visual storytelling with planetary boundaries and SDG narratives in mind.",
     "serviceType": "Brand Development",
     "provider": {
       "@type": "Organization",
-      "name": "Green Orbit Digital"
+      "name": "Green Orbit Digital",
+      "url": "https://greenorbit.space"
     },
     "category": "Strategy",
     "keywords": ["brand identity", "sustainability", "storytelling", "branding"],
     "areaServed": "Global",
     "sdgs": ["SDG 12"],
-    "icon": "icons/branding.svg",
+    "icon": "https://greenorbit.space/icons/branding.svg",
     "offers": {
       "@type": "Offer",
       "priceCurrency": "GBP",
       "availability": "https://schema.org/InStock",
-      "url": "/contact"
+      "url": "https://greenorbit.space/contact"
     }
   },
   {
     "@type": "Service",
     "name": "Workshops and Keynotes",
-    "url": "/services/workshops-keynotes",
+    "url": "https://greenorbit.space/services/workshops-keynotes",
     "description": "Training sessions and talks on sustainability in the space sector, ethical marketing, and responsible digital practice.",
     "serviceType": "Training & Speaking",
     "provider": {
       "@type": "Organization",
-      "name": "Green Orbit Digital"
+      "name": "Green Orbit Digital",
+      "url": "https://greenorbit.space"
     },
     "category": "Outreach",
     "keywords": ["training", "keynote", "workshops", "speaking"],
     "areaServed": "Global",
     "sdgs": ["SDG 4", "SDG 13", "SDG 17"],
-    "icon": "icons/workshop.svg",
+    "icon": "https://greenorbit.space/icons/workshop.svg",
     "offers": {
       "@type": "Offer",
       "priceCurrency": "GBP",
       "availability": "https://schema.org/InStock",
-      "url": "/contact"
+      "url": "https://greenorbit.space/contact"
     }
   }
 ]
