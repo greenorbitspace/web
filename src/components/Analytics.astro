@@ -3,82 +3,85 @@ const {
   hotjarId = import.meta.env.PUBLIC_HOTJAR_ID,
   hotjarVersion = import.meta.env.PUBLIC_HOTJAR_VERSION || "6",
   brevoSiteId = import.meta.env.PUBLIC_BREVO_SITE_ID,
-  ticketTailorTracking = import.meta.env.PUBLIC_TICKET_TAILOR || "false"
+  ticketTailorTracking = import.meta.env.PUBLIC_TICKET_TAILOR || "false",
+  hubspotPortalId = "143471159"
 } = Astro.props;
 ---
 
-<script is:inline>
-function loadAnalytics() {
-  // -------- GTM --------
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3Q08HGJQD7"></script>
-<script>
+<script is:inline client:load>
+(() => {
+  // -------- Google Tag Manager (gtag.js) --------
+  const gtagScript = document.createElement('script');
+  gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-3Q08HGJQD7";
+  gtagScript.async = true;
+  document.head.appendChild(gtagScript);
+
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  window.gtag = gtag;
   gtag('js', new Date());
-
   gtag('config', 'G-3Q08HGJQD7');
-</script>
 
   // -------- Hotjar --------
-  if (hotjarId) {
-    if (!window.hj) {
-      (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:hotjarId,hjsv:hotjarVersion};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script'); r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-    }
+  if (hotjarId && !window.hj) {
+    (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:hotjarId,hjsv:hotjarVersion};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script'); r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
   }
 
   // -------- Brevo (Sendinblue) --------
-  if (brevoSiteId) {
-    if (!window.Brevo) {
-      const brevoScript = document.createElement('script');
-      brevoScript.src = 'https://cdn.brevo.com/js/sdk-loader.js';
-      brevoScript.async = true;
-      document.head.appendChild(brevoScript);
+  if (brevoSiteId && !window.Brevo) {
+    const brevoScript = document.createElement('script');
+    brevoScript.src = 'https://cdn.brevo.com/js/sdk-loader.js';
+    brevoScript.async = true;
+    document.head.appendChild(brevoScript);
 
-      window.Brevo = window.Brevo || [];
-      Brevo.push(["init",{client_key: brevoSiteId}]);
+    window.Brevo = window.Brevo || [];
+    Brevo.push(["init",{client_key: brevoSiteId}]);
 
-      window.addEventListener("brevo:conversion", function(e){
-        const {id="newsletter_signup",value=1} = e.detail || {};
-        Brevo.push(["track","conversion",{id,value}]);
-        if (typeof dataLayer !== "undefined") dataLayer.push({event:"BrevoConversion",id,value});
-        if (window._hsq) window._hsq.push(["trackEvent",{id:"brevo_signup",value,eventName:id}]);
-        console.log("📝 Brevo Conversion Sent:", {id,value});
-      });
-    }
+    window.addEventListener("brevo:conversion", function(e){
+      const {id="newsletter_signup", value=1} = e.detail || {};
+      Brevo.push(["track","conversion",{id,value}]);
+      if (window.dataLayer) window.dataLayer.push({event:"BrevoConversion",id,value});
+      if (window._hsq) window._hsq.push(["trackEvent",{id:"brevo_signup",value,eventName:id}]);
+      console.log("📝 Brevo Conversion Sent:", {id,value});
+    });
   }
 
   // -------- Ticket Tailor --------
-  if (ticketTailorTracking === "true" && window.location.pathname.includes("thank-you")) {
-    if (!window.ttq) {
-      const ttScript = document.createElement('script');
-      ttScript.src = 'https://cdn.tickettailor.com/js/analytics.js';
-      ttScript.async = true;
-      document.head.appendChild(ttScript);
+  if (ticketTailorTracking === "true" && window.location.pathname.includes("thank-you") && !window.ttq) {
+    const ttScript = document.createElement('script');
+    ttScript.src = 'https://cdn.tickettailor.com/js/analytics.js';
+    ttScript.async = true;
+    document.head.appendChild(ttScript);
 
-      window.ttq = window.ttq || [];
-      const params = new URLSearchParams(window.location.search);
-      const amount = parseFloat(params.get("amount")) || 0;
-      const currency = params.get("currency") || "GBP";
-      const event = params.get("event") || "TicketPurchase";
-      const orderId = params.get("order_id") || Date.now().toString();
+    window.ttq = window.ttq || [];
+    const params = new URLSearchParams(window.location.search);
+    const amount = parseFloat(params.get("amount")) || 0;
+    const currency = params.get("currency") || "GBP";
+    const event = params.get("event") || "TicketPurchase";
+    const orderId = params.get("order_id") || Date.now().toString();
 
-      window.ttq.push(['track','Purchase',{value:amount,currency,event_id:event+"_"+orderId}]);
-      if (typeof dataLayer !== "undefined") dataLayer.push({event:"TicketPurchase",transaction_id:orderId,value:amount,currency,event});
-      if (window._hsq) window._hsq.push(["trackEvent",{id:"ticket_purchase",value:amount,currency,orderId,eventName:event}]);
-      console.log("🎟️ Ticket Tailor Conversion Sent:", {amount,currency,event,orderId});
-    }
+    window.ttq.push(['track','Purchase',{value:amount,currency,event_id:event+"_"+orderId}]);
+    if (window.dataLayer) window.dataLayer.push({event:"TicketPurchase",transaction_id:orderId,value:amount,currency,event});
+    if (window._hsq) window._hsq.push(["trackEvent",{id:"ticket_purchase",value:amount,currency,orderId,eventName:event}]);
+    console.log("🎟️ Ticket Tailor Conversion Sent:", {amount,currency,event,orderId});
   }
-}
 
-// -------- Initialize only if analytics consent exists --------
-if (window.CookieYes?.consent?.analytics) loadAnalytics();
-window.addEventListener('cookies:analytics-accepted', loadAnalytics);
+  // -------- HubSpot Embed --------
+  if (!document.getElementById("hs-script-loader")) {
+    const hsScript = document.createElement('script');
+    hsScript.id = "hs-script-loader";
+    hsScript.src = "//js-eu1.hs-scripts.com/" + hubspotPortalId + ".js";
+    hsScript.async = true;
+    hsScript.defer = true;
+    document.head.appendChild(hsScript);
+    console.log("💚 HubSpot script loaded:", hubspotPortalId);
+  }
+})();
 </script>

@@ -22,10 +22,15 @@ const { title, description, ogImage, canonical, twitter } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth" 
-      x-data="{ darkMode: localStorage.theme === 'dark' || (!localStorage.theme && window.matchMedia('(prefers-color-scheme: dark)').matches) }"
-      x-bind:class="{ 'dark': darkMode }">
-
+<html 
+  lang="en" 
+  class="scroll-smooth" 
+  x-data="{ 
+    darkMode: localStorage.theme === 'dark' || 
+              (!localStorage.theme && window.matchMedia('(prefers-color-scheme: dark)').matches) 
+  }"
+  x-bind:class="{ 'dark': darkMode }"
+>
   <head>
     <!-- SEO meta tags -->
     <Seo 
@@ -35,9 +40,11 @@ const { title, description, ogImage, canonical, twitter } = Astro.props;
       canonical={canonical} 
       twitter={twitter} 
     />
+
+    <!-- Inject additional head elements -->
     {Astro.head}
 
-    <!-- Analytics tracking -->
+    <!-- Analytics tracking (client-side only) -->
     <Analytics
       gtmId={import.meta.env.PUBLIC_GTM_ID}
       ga4Id={import.meta.env.PUBLIC_GA4_ID}
@@ -48,17 +55,13 @@ const { title, description, ogImage, canonical, twitter } = Astro.props;
       ticketTailorTracking={import.meta.env.PUBLIC_TICKET_TAILOR}
     />
 
-    <!-- Start of HubSpot Embed Code -->
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/143471159.js"></script>
-  <!-- End of HubSpot Embed Code -->
-
     <!-- Alpine.js for interactivity and dark mode -->
     <script type="module" src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   </head>
 
   <body class="antialiased bg-white dark:bg-primary-500 text-secondary-900 dark:text-secondary-100 transition-colors duration-300">
     
-    <!-- Main page content -->
+    <!-- Main content -->
     <main id="page-wrapper" class="page-wrapper" role="main" tabindex="-1">
       <slot />
     </main>
