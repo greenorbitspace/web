@@ -2,7 +2,6 @@
 const {
   ga4Id = import.meta.env.PUBLIC_GA4_ID,
   gtmId = import.meta.env.PUBLIC_GTM_ID,
-  hubspotId = import.meta.env.PUBLIC_HUBSPOT_ID,
   hotjarId = import.meta.env.PUBLIC_HOTJAR_ID,
   hotjarVersion = import.meta.env.PUBLIC_HOTJAR_VERSION || "6",
   brevoSiteId = import.meta.env.PUBLIC_BREVO_SITE_ID,
@@ -44,21 +43,6 @@ function loadAnalytics() {
     }
   } else {
     console.warn("⚠️ GTM ID missing:", gtmId);
-  }
-
-  // -------- HubSpot --------
-  if (hubspotId && hubspotId.trim() !== "") {
-    if (!document.getElementById('hs-script-loader')) {
-      const hsScript = document.createElement('script');
-      hsScript.type = 'text/javascript';
-      hsScript.id = 'hs-script-loader';
-      hsScript.async = true;
-      hsScript.defer = true;
-      hsScript.src = `https://js-eu1.hs-scripts.com/${hubspotId.trim()}.js`;
-      document.head.appendChild(hsScript);
-    }
-  } else {
-    console.warn("⚠️ HubSpot ID missing or invalid:", hubspotId);
   }
 
   // -------- Hotjar --------
