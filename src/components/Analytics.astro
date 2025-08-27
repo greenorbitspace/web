@@ -1,7 +1,5 @@
 ---
 const {
-  ga4Id = import.meta.env.PUBLIC_GA4_ID,
-  gtmId = import.meta.env.PUBLIC_GTM_ID,
   hotjarId = import.meta.env.PUBLIC_HOTJAR_ID,
   hotjarVersion = import.meta.env.PUBLIC_HOTJAR_VERSION || "6",
   brevoSiteId = import.meta.env.PUBLIC_BREVO_SITE_ID,
@@ -11,39 +9,16 @@ const {
 
 <script is:inline>
 function loadAnalytics() {
-  // -------- GA4 --------
-  if (ga4Id && ga4Id.trim() !== "") {
-    if (!document.querySelector(`script[src*="${ga4Id.trim()}"]`)) {
-      const gtagScript = document.createElement('script');
-      gtagScript.async = true;
-      gtagScript.src = `https://www.googletagmanager.com/gtag/js?id=${ga4Id.trim()}`;
-      document.head.appendChild(gtagScript);
-    }
-
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', ga4Id.trim());
-  } else {
-    console.warn("⚠️ GA4 Measurement ID missing:", ga4Id);
-  }
-
   // -------- GTM --------
-  if (gtmId && gtmId.trim() !== "") {
-    if (!document.querySelector(`script[src*="${gtmId.trim()}"]`)) {
-      (function(w,d,s,l,i){
-        w[l]=w[l]||[];
-        w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-        const f=d.getElementsByTagName(s)[0];
-        const j=d.createElement(s);
-        const dl=l!='dataLayer'?'&l='+l:'';
-        j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-        f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer', gtmId.trim());
-    }
-  } else {
-    console.warn("⚠️ GTM ID missing:", gtmId);
-  }
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3Q08HGJQD7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3Q08HGJQD7');
+</script>
 
   // -------- Hotjar --------
   if (hotjarId) {
