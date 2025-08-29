@@ -3,6 +3,7 @@ name: "The Ethical Move"
 description: "A commitment to promoting sustainable and ethical business practices that prioritize transparency, inclusivity, and social responsibility in alignment with the Sustainable Development Goals (SDGs)."
 organisations:
   - The Ethical Move
+URL: "https://theethicalmove.org/"
 logo: "/logos/pledges/tem.png"
 values: 
   - responsibility

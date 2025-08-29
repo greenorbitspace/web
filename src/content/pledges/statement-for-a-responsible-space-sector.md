@@ -3,6 +3,7 @@ name: "Statement for a Responsible Space Sector"
 description: "A commitment to advancing sustainable, ethical, and collaborative practices in the space sector that ensure the long-term viability and peaceful use of outer space."
 organisations: 
   - European Space Agency
+URL: "https://www.responsiblespacesector.com/"
 logo: "/logos/pledges/sfrss.png"
 values: 
   - responsibility

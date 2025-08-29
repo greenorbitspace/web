@@ -3,7 +3,7 @@ name: "The Sustainable Creatives Charter"
 description: "A commitment to responsible, ethical, and sustainable practices within the creative industry that promotes environmental stewardship, transparency, and community impact."
 organisations: 
   - LEAP
-url: "https://sustainablecreativecharter.com"
+URL: "https://sustainablecreativecharter.com"
 logo: "/logos/pledges/ssc.png"
 values: 
   - continuous improvement

@@ -3,6 +3,7 @@ name: "SME Climate Hub"
 description: "The SME Climate Hub empowers small and medium-sized enterprises (SMEs) to take meaningful climate action by providing practical resources, guidance, and a collaborative community. It supports SMEs in measuring, reducing, and reporting their carbon emissions, enabling collective progress toward a sustainable future."
 organisations: 
   - SME Climate Hub
+URL: "https://smeclimatehub.org"
 logo: "/logos/pledges/sme-climate-hub.png"
 values: 
   - responsibility

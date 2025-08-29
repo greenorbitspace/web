@@ -6,6 +6,15 @@ import HeroSection from '../../components/HeroSection.astro';
 import EventDescription from '../../components/EventDescription.jsx';
 import events from '../../data/events.json';
 import slugify from '../../utils/slugify.js';
+import { SDGs } from '../../data/sdgs'; // SDG metadata including id, name, icon
+
+const fallbackIcon = '/sdgs/default.svg';
+
+// Map SDG IDs to metadata
+const sdgMap = SDGs.reduce((acc, sdg) => {
+  acc[sdg.id] = sdg;
+  return acc;
+}, {});
 
 // Generate static paths
 export async function getStaticPaths() {
@@ -43,6 +52,7 @@ const normalizedEvent = {
   url: event.url || '',
   image: event.image || event.image_url || '',
   calendar_links: event.calendar_links || [],
+  sdgs: event.sdgs || [], // SDG IDs
 };
 
 // Previous / next events
@@ -93,6 +103,28 @@ function getEventSlug(e) {
               {cat}
             </button>
           ))}
+        </div>
+      </div>
+    )}
+
+    <!-- SDG Icons -->
+    {normalizedEvent.sdgs.length > 0 && (
+      <div>
+        <strong>Relevant SDGs:</strong>
+        <div class="flex flex-wrap gap-2 mt-2">
+          {normalizedEvent.sdgs.sort((a, b) => a - b).map(id => {
+            const sdg = sdgMap[id];
+            return (
+              <img
+                key={id}
+                src={sdg?.icon || fallbackIcon}
+                alt={sdg?.name || `SDG ${id}`}
+                class="w-6 h-6 rounded-sm cursor-pointer"
+                title={sdg?.name || `SDG ${id}`}
+                onClick={`window.location='/events/?sdg=${id}'`}
+              />
+            );
+          })}
         </div>
       </div>
     )}

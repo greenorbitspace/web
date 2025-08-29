@@ -3,6 +3,7 @@ name: "A Good Thing"
 description: "A Good Thing is a community-driven initiative focused on fostering collaboration, innovation, and positive social impact through shared values and open communication."
 organisations:
   - A Good Thing
+URL: "https://www.agoodthing.org.uk"
 logo: "/logos/pledges/a-good-thing.png"
 values: 
   - responsibility

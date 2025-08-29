@@ -2,7 +2,8 @@
 name: "Pledge to Net Zero"
 description: "A commitment by organisations to achieve net zero greenhouse gas emissions by adopting sustainable practices, reducing carbon footprints, and fostering collaboration to address climate change."
 organisations: 
-  - Pledge to Net Zero
+  - WSP
+URL: "https://www.pledgetonetzero.org/"
 logo: "/logos/pledges/pledge-to-net-zero.png"
 values: 
   - responsibility
@@ -17,5 +18,5 @@ commitments:
   - Publicly disclose greenhouse gas emissions annually, tracking progress towards net zero.
   - Set science-based targets aligned with the 1.5°C climate goal, covering emissions from operations, travel, and supply chains.
   - Publish at least one research paper or thought leadership piece annually on practical approaches to achieving a net zero economy, or alternatively, provide mentoring and support to smaller organisations in setting and meeting their net zero commitments.
-CSR: ""
+CSR: "responsibility"
 ---

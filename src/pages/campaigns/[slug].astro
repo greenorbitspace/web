@@ -5,8 +5,8 @@ import Footer from '../../components/Footer.astro';
 import HeroSection from '../../components/HeroSection.astro';
 import { getCollection } from 'astro:content';
 import { SDGs } from '../../data/sdgs';
-import { slug as slugify } from 'github-slugger';
 
+// Get campaign paths
 export async function getStaticPaths() {
   const campaigns = await getCollection('campaigns');
   return campaigns.map(c => ({
@@ -14,24 +14,29 @@ export async function getStaticPaths() {
   }));
 }
 
+// Current campaign
 const { slug } = Astro.params;
 const campaigns = await getCollection('campaigns');
-const campaign = campaigns.find(c => c.slug === slug || c.id === slug);
+const campaignEntry = campaigns.find(c => c.slug === slug || c.id === slug);
 
-if (!campaign) throw new Error(`No campaign found for slug: "${slug}"`);
+if (!campaignEntry) throw new Error(`No campaign found for slug: "${slug}"`);
 
-const { Content } = await campaign.render();
-const data = campaign.data;
+const { Content } = await campaignEntry.render();
+const data = campaignEntry.data;
 
+// Frontmatter defaults
 const formattedMonth = data.month ?? null;
 const campaignUrl = data.url ?? null;
-const unResolution = data.unResolution ?? null;
+
+// Full support for UN Resolution field
+const unResolution = data.unResolution ?? data['un-resolution'] ?? null;
 
 const pageTitle = data.seoTitle || data.title || 'Campaign';
 const pageDescription = data.seoDescription || data.description || data.title;
 const pageURL = `https://greenorbit.space/campaigns/${slug}`;
 const pageImage = data.featuredImage || '/default-og-image.jpg';
 
+// JSON-LD structured data
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Event",
@@ -39,11 +44,9 @@ const jsonLd = {
   description: pageDescription,
   url: campaignUrl || pageURL,
   ...(formattedMonth && { startDate: formattedMonth }),
-  ...(pageImage && {
-    image: [pageImage]
-  }),
-  ...(unResolution && { 
-    "legislation": {
+  ...(pageImage && { image: [pageImage] }),
+  ...(unResolution && {
+    legislation: {
       "@type": "Legislation",
       name: `UN Resolution ${unResolution}`,
       legislationIdentifier: unResolution
@@ -59,12 +62,14 @@ const jsonLd = {
   }
 };
 
+// SDG map
 const sdgMap = SDGs.reduce((acc, sdg) => {
   const code = `SDG ${String(sdg.id).padStart(2, '0')}`;
   acc[code.toUpperCase()] = sdg;
   return acc;
 }, {});
 
+// SDG normalization
 let sdgCodes = [];
 if (Array.isArray(data.SDGs)) {
   sdgCodes = data.SDGs
@@ -84,38 +89,33 @@ if (Array.isArray(data.SDGs)) {
       description="Explore space-themed campaigns and sustainability outreach events."
     />
 
-    <main class="prose dark:prose-invert max-w-4xl mx-auto px-4 py-12">
+    <section class="prose dark:prose-invert max-w-4xl mx-auto px-4 py-12">
       <article>
         <header class="mb-8">
-          <!-- Plain title (no link) -->
           <h1 class="text-4xl font-bold text-accent-500 mb-2">{data.title}</h1>
 
-          {formattedMonth && (
-            <p class="text-sm text-white mt-2">📅 {formattedMonth}</p>
-          )}
+          {formattedMonth && <p class="text-sm text-gray-400 mt-2">📅 {formattedMonth}</p>}
 
-          <!-- Show URL link separately -->
-          {campaignUrl && (
-            <p class="mt-2">
-              🔗 <a href={campaignUrl} class="underline text-accent-400" target="_blank" rel="noopener noreferrer">
-                Visit Campaign Site
-              </a>
-            </p>
-          )}
-
-          <!-- Show UN Resolution if available -->
-          {unResolution && (
-            <p class="mt-2 text-sm text-gray-400">
-              <strong>UN Resolution:</strong> {unResolution}
-            </p>
-          )}
+            {unResolution && (
+              <p class="mt-2 text-sm text-gray-400">
+                <strong>UN Resolution:</strong>{' '}
+                <a
+                  href={`https://undocs.org/${encodeURIComponent(unResolution.replace(/\s+/g, '').replace(/$begin:math:text$/g,'%28').replace(/$end:math:text$/g,'%29'))}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-accent-500 hover:underline"
+                >
+                  {unResolution}
+                </a>
+              </p>
+            )}
 
           {data.organisations?.length > 0 && (
             <div class="mt-4 flex flex-wrap gap-2">
-              {data.organisations.map((org) => (
+              {data.organisations.map(org => (
                 <span
                   key={org}
-                  class="bg-gray-300 dark:bg-accent-500 text-white rounded-full px-3 py-1 text-xs font-medium capitalize"
+                  class="inline-block bg-gray-300 dark:bg-accent-500 text-white rounded px-2 py-1 text-xs font-medium cursor-default"
                 >
                   {org}
                 </span>
@@ -125,7 +125,7 @@ if (Array.isArray(data.SDGs)) {
 
           {data.tags?.length > 0 && (
             <div class="mt-4 flex flex-wrap gap-2">
-              {data.tags.map((tag) => (
+              {data.tags.map(tag => (
                 <a
                   key={tag}
                   href={`/campaigns?tag=${encodeURIComponent(tag)}`}
@@ -139,7 +139,7 @@ if (Array.isArray(data.SDGs)) {
 
           {sdgCodes.length > 0 && (
             <div class="mt-4 flex flex-wrap gap-2">
-              {sdgCodes.map((code) => {
+              {sdgCodes.map(code => {
                 const sdg = sdgMap[code];
                 if (!sdg) return null;
                 return (
@@ -154,7 +154,7 @@ if (Array.isArray(data.SDGs)) {
                     <img
                       src={sdg.icon}
                       alt={sdg.name}
-                      class="w-10 h-10 rounded-sm border border-gray-300 dark:border-gray-600"
+                      class="w-12 h-12 rounded-sm border border-gray-300 dark:border-gray-600"
                     />
                   </a>
                 );
@@ -166,8 +166,22 @@ if (Array.isArray(data.SDGs)) {
         <section class="prose prose-invert max-w-none">
           <Content />
         </section>
+
+        {campaignUrl && (
+          <div class="mt-8 text-center">
+            <a
+              href={campaignUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primary no-underline"
+              aria-label={`Learn more about ${data.title}`}
+            >
+              View Campaign
+            </a>
+          </div>
+        )}
       </article>
-    </main>
+    </section>
 
     <Footer />
 

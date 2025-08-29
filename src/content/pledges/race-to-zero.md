@@ -3,6 +3,7 @@ name: "Race to Zero"
 description: "A global campaign that mobilizes leadership and support from businesses, cities, regions, and investors committed to achieving net-zero greenhouse gas emissions by 2050 at the latest."
 organisations: 
   - Race to Zero
+URL: "https://www.climatechampions.net/campaigns/race-to-zero/"
 logo: "/logos/pledges/race-to-zero.png"
 values: 
   - innovation

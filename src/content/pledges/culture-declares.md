@@ -3,7 +3,7 @@ name: "Culture Declares Emergency"
 description: "Green Orbit Digital has declared a Climate and Ecological Emergency as part of the Culture Declares movement, uniting with creatives worldwide to take urgent action for a just and sustainable future."
 organisations:
   - Culture Declares Emergency
-URL: https://www.culturedeclares.org
+URL: "https://www.culturedeclares.org"
 logo: "/logos/pledges/culture-declares.png"
 values: 
   - environmental justice

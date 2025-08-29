@@ -5,7 +5,7 @@ exported_at: '2025-08-07T15:42:55.341171+00:00'
 month: October
 name: World Space Week
 un-resolution: A/RES/54/68
-url: worldspaceweek.org
+url: https://worldspaceweek.org
 organisations:
 - United Nations
 SDGs:

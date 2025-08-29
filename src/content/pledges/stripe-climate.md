@@ -3,6 +3,7 @@ name: "Stripe Climate"
 description: "Stripe Climate is an initiative that enables businesses to contribute directly to carbon removal projects. By integrating support for effective carbon removal technologies into their operations, Stripe Climate empowers companies to take measurable action against climate change."
 organisations: 
   - Stripe
+URL: "https://stripe.com/gb/climate"
 logo: "/logos/pledges/stripe-climate.png"
 values: 
   - responsibility

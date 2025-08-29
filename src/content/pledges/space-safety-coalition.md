@@ -3,7 +3,7 @@ name: "Best Practices for the Sustainability of Space Operations"
 description: "A global initiative to promote safe, responsible, and sustainable space operations through collaboration, knowledge sharing, and advocacy, ensuring the long-term preservation of the space environment."
 organisations: 
   - Space Safety Coalition
-url: "https://spacesafety.org/endorsees/"
+URL: "https://spacesafety.org/endorsees/"
 logo: "/logos/pledges/space-safety.png"
 values: 
   - responsibility

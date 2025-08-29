@@ -2,7 +2,7 @@
 name: "LEAD statement"
 description: "A commitment to responsible leadership and climate action, promoting accountability, collaboration, and integrity to drive the transition to a sustainable future."
 organisations: 
-  - LEAD statement
+  - Climate Voice
 URL: "https://climatevoice.org/lead-statement-signatures/"
 logo: "/logos/pledges/lead.png"
 values: 

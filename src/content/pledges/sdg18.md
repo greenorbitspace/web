@@ -4,6 +4,7 @@ description: "Expanding life into space is essential to achieving the 17 SDGs on
 organisations: 
   - Space Renaissance International
   - National Space Society
+URL: "https://space18thsdg.space"
 logo: "/logos/pledges/sdg18.png"
 values: 
   - responsibility

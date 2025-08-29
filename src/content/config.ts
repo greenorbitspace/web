@@ -6,7 +6,7 @@ import { z, defineCollection } from 'astro:content';
 const baseSchema = z.object({
   title: z.string().min(5),
   description: z.string().max(160).optional(),
-  summary: z.string().max(300).optional(), // Short summary for cards
+  summary: z.string().max(300).optional(),
   pubdate: z.string().optional().refine(
     val => !val || !isNaN(Date.parse(val)),
     { message: 'pubdate must be a valid ISO 8601 date string' }
@@ -15,15 +15,13 @@ const baseSchema = z.object({
   author: z.string().optional(),
   tags: z.array(z.string()).optional(),
   category: z.enum(['for space', 'from space', 'in space']).optional(),
-  url: z.string().url().optional(),
+  url: z.string().url().optional().nullable(),
   notion_page_id: z.string().optional(),
   exported_at: z.string().optional(),
   featuredImage: z.string().url().optional(),
   seoTitle: z.string().max(70).optional(),
   seoDescription: z.string().max(160).optional(),
   featured: z.boolean().optional(),
-
-  // Sustainability classification
   sustainableFocus: z.enum([
     'energy',
     'emissions',
@@ -32,14 +30,19 @@ const baseSchema = z.object({
     'education',
     'policy',
   ]).optional(),
-
-  // Linked metadata
   pledges: z.array(z.string()).optional(),
   organisations: z.array(z.string()).optional(),
   SDGs: z.array(z.number()).optional(),
+});
 
-  // UN Resolution metadata
-  un_resolution: z.string().optional(),
+/** 
+ * Campaign schema
+ */
+const campaignSchema = baseSchema.extend({
+  name: z.string().optional(),
+  month: z.string().optional().nullable(),
+  un_resolution: z.string().optional().nullable(),
+  'un-resolution': z.string().optional().nullable(), // allow dash-key
 });
 
 /** 
@@ -48,7 +51,7 @@ const baseSchema = z.object({
 const organisationSchema = baseSchema.extend({
   Organisation: z.string().min(2),
   Description: z.string().optional(),
-  URL: z.string().url().optional(),
+  URL: z.string().url().optional().nullable(),
   'HubSpot Company ID': z.string().optional(),
   Industry: z.string().optional(),
   Category: z.string().optional(),
@@ -71,12 +74,10 @@ const pledgeSchema = z.object({
   SDGs: z.array(z.number()).optional(),
   commitments: z.array(z.string()).optional(),
   CSR: z.string().optional(),
-
   logo: z.string()
     .regex(/^(https?:\/\/|\/)/, { message: 'Logo must be a full URL or start with / for public assets' })
     .optional(),
-
-  URL: z.string().url().optional(),
+  URL: z.string().url().optional().nullable(),
 });
 
 /** 
@@ -98,7 +99,7 @@ const careerSchema = z.object({
   requirements: z.array(z.string()).optional(),
   benefits: z.array(z.string()).optional(),
   skills: z.array(z.string()).optional(),
-  apply_url: z.string().url().optional(),
+  apply_url: z.string().url().optional().nullable(),
   contact_email: z.string().email().optional(),
   seoTitle: z.string().max(70).optional(),
   seoDescription: z.string().max(160).optional(),
@@ -115,11 +116,9 @@ export const collections = {
   'press-releases': defineCollection({ schema: baseSchema }),
   tools: defineCollection({ schema: baseSchema }),
   insights: defineCollection({ schema: baseSchema }),
-
-  // Renamed from "themes" → "space-sustainability"
   'space-sustainability': defineCollection({ schema: baseSchema }),
-
   organisations: defineCollection({ schema: organisationSchema }),
   pledges: defineCollection({ schema: pledgeSchema }),
   careers: defineCollection({ schema: careerSchema }),
+  campaigns: defineCollection({ schema: campaignSchema }),
 };

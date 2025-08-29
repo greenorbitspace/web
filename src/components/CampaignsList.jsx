@@ -5,7 +5,7 @@ const fallbackIcon = '/sdgs/default.svg';
 
 const sdgMap = SDGs.reduce((acc, sdg) => {
   const code = `SDG ${String(sdg.id).padStart(2, '0')}`;
-  acc[code] = sdg;
+  acc[code.toUpperCase()] = sdg;
   return acc;
 }, {});
 
@@ -19,44 +19,37 @@ export default function Campaigns({ campaigns = [] }) {
   const [activeSDG, setActiveSDG] = useState('All');
   const [activeOrg, setActiveOrg] = useState('All');
 
-  // Unique SDG codes for filter
+  const toggleFilter = (current, value, setter) =>
+    setter(current === value ? 'All' : value);
+
+  // SDG categories
   const sdgCategories = useMemo(() => {
     const codes = new Set();
     campaigns.forEach(({ data }) => {
       const ids = Array.isArray(data?.SDGs) ? data.SDGs : [data?.SDGs];
       ids.forEach(id => {
-        if (typeof id === 'number') {
-          codes.add(`SDG ${String(id).padStart(2, '0')}`);
-        }
+        if (typeof id === 'number') codes.add(`SDG ${String(id).padStart(2, '0')}`);
       });
     });
     return ['All', ...Array.from(codes).sort()];
   }, [campaigns]);
 
-  // Unique organisations for dropdown
+  // Organisation categories
   const orgCategories = useMemo(() => {
     const orgs = new Set();
     campaigns.forEach(({ data }) => {
       (data?.organisations || []).forEach(org => {
-        if (org && typeof org === 'string') {
-          orgs.add(org);
-        }
+        if (org && typeof org === 'string') orgs.add(org);
       });
     });
     return ['All', ...Array.from(orgs).sort()];
   }, [campaigns]);
 
-  // Filter campaigns
+  // Filtered campaigns
   const filteredCampaigns = useMemo(() => {
     const term = searchTerm.toLowerCase();
     return campaigns.filter(({ data }) => {
-      const {
-        title = '',
-        excerpt = '',
-        tags = [],
-        SDGs = [],
-        organisations = [],
-      } = data;
+      const { title = '', excerpt = '', tags = [], SDGs = [], organisations = [] } = data;
 
       const sdgCodes = Array.isArray(SDGs)
         ? SDGs.map(id => `SDG ${String(id).padStart(2, '0')}`)
@@ -75,12 +68,10 @@ export default function Campaigns({ campaigns = [] }) {
     });
   }, [campaigns, searchTerm, activeSDG, activeOrg]);
 
-  // Group by month
+  // Group campaigns by month
   const campaignsByMonth = useMemo(() => {
     const groups = {};
-    MONTHS.forEach(month => {
-      groups[month] = [];
-    });
+    MONTHS.forEach(month => (groups[month] = []));
     filteredCampaigns.forEach(campaign => {
       const month = campaign.data.month || 'Other';
       if (!groups[month]) groups[month] = [];
@@ -93,49 +84,56 @@ export default function Campaigns({ campaigns = [] }) {
     <div className="space-y-6">
       {/* SDG Filter */}
       <nav className="flex flex-wrap gap-2 border-b pb-3 border-gray-300 dark:border-gray-600">
-        {sdgCategories.map(code => {
-          const isActive = activeSDG === code;
-          const sdg = sdgMap[code];
-          return (
-            <button
-              key={code}
-              onClick={() => setActiveSDG(code)}
-              className={`flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-t-md transition ${
-                isActive
-                  ? 'bg-accent-600 text-white shadow'
-                  : 'text-gray-700 dark:text-gray-200 hover:bg-accent-100 dark:hover:bg-accent-700'
-              }`}
-            >
-              {code !== 'All' && (
+        <button
+          onClick={() => setActiveSDG('All')}
+          className={`px-4 py-2 text-sm font-medium rounded-t-md transition ${
+            activeSDG === 'All'
+              ? 'bg-accent-600 text-white shadow'
+              : 'text-gray-700 dark:text-gray-200 hover:bg-accent-100 dark:hover:bg-accent-700'
+          }`}
+        >
+          All SDGs
+        </button>
+        {sdgCategories
+          .filter(code => code !== 'All')
+          .map(code => {
+            const sdg = sdgMap[code.toUpperCase()];
+            return (
+              <button
+                key={code}
+                onClick={() => setActiveSDG(code)}
+                className={`flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-t-md transition ${
+                  activeSDG === code
+                    ? 'bg-accent-600 text-white shadow'
+                    : 'text-gray-700 dark:text-gray-200 hover:bg-accent-100 dark:hover:bg-accent-700'
+                }`}
+              >
                 <img
                   src={sdg?.icon || fallbackIcon}
                   alt={sdg?.name || code}
-                  className="w-10 h-10 rounded-sm border border-gray-300 dark:border-gray-600"
+                  className="w-10 h-10 rounded-sm"
                 />
-              )}
-              {code === 'All' && <span>All SDGs</span>}
-            </button>
-          );
-        })}
+                <span className="sr-only">{sdg?.name}</span>
+              </button>
+            );
+          })}
       </nav>
 
-      {/* Organisation Dropdown Filter */}
-      <div className="mb-4">
-        <label htmlFor="org-filter" className="block text-sm font-medium mb-1">
-          Filter by Organisation
-        </label>
-        <select
-          id="org-filter"
-          value={activeOrg}
-          onChange={(e) => setActiveOrg(e.target.value)}
-          className="border rounded px-3 py-2 w-full max-w-xs text-primary-500"
-        >
-          {orgCategories.map(org => (
-            <option key={org} value={org}>
-              {org === 'All' ? 'All Organisations' : org}
-            </option>
-          ))}
-        </select>
+      {/* Organisation Filter */}
+      <div className="mb-4 flex flex-wrap gap-2">
+        {orgCategories.map(org => (
+          <button
+            key={org}
+            onClick={() => toggleFilter(activeOrg, org, setActiveOrg)}
+            className={`px-3 py-1 rounded text-xs font-medium ${
+              activeOrg === org
+                ? 'bg-accent-600 text-white'
+                : 'bg-gray-300 dark:bg-accent-500 text-white'
+            }`}
+          >
+            {org === 'All' ? 'All Organisations' : org}
+          </button>
+        ))}
       </div>
 
       {/* Search */}
@@ -151,26 +149,24 @@ export default function Campaigns({ campaigns = [] }) {
       </div>
 
       {/* Campaigns grouped by month */}
-      {MONTHS.map(month => {
-        const monthCampaigns = campaignsByMonth[month] || [];
-        if (monthCampaigns.length === 0) return null;
+      {Object.entries(campaignsByMonth).map(([month, monthCampaigns]) => {
+        if (!monthCampaigns.length) return null;
 
         return (
           <section key={month} className="space-y-4">
             <h3 className="text-xl font-semibold text-accent-500">{month}</h3>
             <ul className="grid gap-6 md:grid-cols-2" role="list">
               {monthCampaigns.map(({ data, slug, collection }) => {
-                const {
-                  title,
-                  organisations = [],
-                  SDGs = [],
-                  unResolution,
-                } = data;
+                const { title, url = null, organisations = [], SDGs = [], excerpt = '' } = data;
+
+                // Handle both snake_case and kebab-case frontmatter
+                const unResolution =
+                  data.un_resolution ?? data['un-resolution'] ?? null;
 
                 const sdgIcons = Array.isArray(SDGs)
                   ? SDGs.map(id => {
                       const code = `SDG ${String(id).padStart(2, '0')}`;
-                      const sdg = sdgMap[code];
+                      const sdg = sdgMap[code.toUpperCase()];
                       return (
                         <a
                           key={code}
@@ -181,7 +177,7 @@ export default function Campaigns({ campaigns = [] }) {
                           <img
                             src={sdg?.icon || fallbackIcon}
                             alt={sdg?.name || code}
-                            className="w-8 h-8 rounded-sm border border-gray-300 dark:border-gray-600"
+                            className="w-8 h-8 rounded-sm"
                           />
                         </a>
                       );
@@ -191,21 +187,22 @@ export default function Campaigns({ campaigns = [] }) {
                 return (
                   <li
                     key={slug}
-                    className="border border-accent-500 p-4 rounded hover:shadow-md transition"
+                    className="bg-white border border-accent-500 rounded overflow-hidden hover:shadow-md transition"
                   >
-                    <div className="space-y-2">
-                      <a href={`/${collection}/${slug}`}>
-                        <h4 className="text-lg font-semibold text-accent-500 hover:underline">
-                          {title}
-                        </h4>
+                    <div className="p-4 space-y-2">
+                      <a href={`/${collection}/${slug}`} className="block">
+                        <h3 className="text-xl text-primary-500 font-semibold hover:underline">{title}</h3>
                       </a>
 
+                      {excerpt && <p className="text-gray-700 dark:text-gray-300 text-sm">{excerpt}</p>}
+
                       {organisations.length > 0 && (
-                        <div className="flex flex-wrap gap-2">
+                        <div className="mt-2 flex flex-wrap gap-2">
                           {organisations.map(org => (
                             <span
                               key={org}
-                              className="bg-gray-300 dark:bg-accent-500 text-white rounded-full px-3 py-1 text-xs font-medium capitalize"
+                              onClick={() => setActiveOrg(org)}
+                              className="bg-gray-300 dark:bg-accent-500 text-white rounded-full px-3 py-1 text-xs font-medium capitalize cursor-pointer"
                             >
                               {org}
                             </span>
@@ -213,15 +210,33 @@ export default function Campaigns({ campaigns = [] }) {
                         </div>
                       )}
 
-                      {/* Show unResolution below organisations */}
                       {unResolution && (
-                        <p className="text-sm text-gray-500">
-                          <strong>UN Resolution:</strong> {unResolution}
+                        <p class="mt-2 text-sm text-gray-400">
+                          <strong>UN Resolution:</strong>{' '}
+                          <a
+                            href={`https://undocs.org/${encodeURIComponent(unResolution.replace(/\s+/g, '').replace(/$begin:math:text$/g,'%28').replace(/$end:math:text$/g,'%29'))}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-accent-500 hover:underline"
+                          >
+                            {unResolution}
+                          </a>
                         </p>
                       )}
 
-                      {sdgIcons.length > 0 && (
-                        <div className="flex flex-wrap gap-2">{sdgIcons}</div>
+                      {sdgIcons.length > 0 && <div className="mt-2 flex flex-wrap gap-2">{sdgIcons}</div>}
+
+                      {url && (
+                        <div className="mt-4">
+                          <a
+                            href={url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block bg-accent-500 text-white px-4 py-2 rounded hover:bg-accent-600 transition"
+                          >
+                            View Campaign
+                          </a>
+                        </div>
                       )}
                     </div>
                   </li>

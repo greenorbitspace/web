@@ -3,6 +3,7 @@ name: "Tech Talent Charter"
 description: "An initiative dedicated to improving diversity and inclusion across the UK tech sector by fostering equitable representation and opportunities for underrepresented groups."
 organisations: 
   - techUK
+URL: "https://www.techtalentcharter.co.uk/"
 logo: "/logos/pledges/ttc.png"
 values: 
   - continuous improvement
