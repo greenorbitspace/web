@@ -40,6 +40,7 @@
     "bibtex-parse-js": "^0.0.23",
     "chrome-launcher": "^1.2.0",
     "date-fns": "^4.1.0",
+    "devalue": ">=5.3.2",
     "gray-matter": "^4.0.3",
     "leaflet": "^1.9.4",
     "leaflet.heat": "^0.2.0",
@@ -64,6 +65,7 @@
   "devDependencies": {
     "astro": "^5.13.2",
     "autoprefixer": "^10.4.21",
+    "devalue": ">=5.3.2",
     "dotenv": "^17.2.1",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "gh-pages": "^6.3.0",
