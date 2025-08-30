@@ -40,27 +40,17 @@ const extractPublishers = (input) => {
 const cleanKeyword = (kw) =>
   (kw || "").toString().replace(/[{}\"]/g, "").replace(/\[\d+\]/g, "").trim();
 
-// --- Robust URL extractor ---
 const extractUrl = (input) => {
   if (!input) return "";
-
-  // Handle \url{...} or url{...}
   const match = input.match(/\\?url\{(.+?)\}/i);
   let url = match ? match[1] : input;
-
   url = url.replace(/^url[:\s]*?/i, "").trim();
-
-  // Fix common malformed http/https
-  url = url.replace(/^https?:\/\/\//i, "https://");
-  url = url.replace(/^http:\/\/\//i, "http://");
-
-  // Prepend http:// if no protocol present
+  url = url.replace(/^https?:\/\/\//i, "https://").replace(/^http:\/\/\//i, "http://");
   if (!/^https?:\/\//i.test(url)) url = "http://" + url;
-
   return url;
 };
 
-// --- Main PaperCard component ---
+// --- PaperCard Component ---
 export default function PaperCard({
   id,
   type = "misc",
@@ -68,6 +58,7 @@ export default function PaperCard({
   author = "",
   year = "",
   journal = "",
+  booktitle = "",
   publisher = "",
   doi = "",
   url = "",
@@ -76,18 +67,21 @@ export default function PaperCard({
   keywords = [],
   note = "",
   abstract = "",
+  sdgIcons = [], // SDG icon array
   onKeywordClick = () => {},
   onPublisherClick = () => {},
   onJournalClick = () => {},
   activeKeywords = [],
   activePublisher = "",
   activeJournal = "",
+  cardBg = "bg-white",
+  titleClass = "text-primary-500",
 }) {
   const [showAbstract, setShowAbstract] = useState(false);
 
   const formattedAuthor = useMemo(() => formatAuthors(author), [author]);
-  const safeJournal = (journal || "").trim();
   const safeYear = (year || "").trim();
+  const venue = (journal || booktitle || "").trim();
 
   const publishers = useMemo(() => {
     const list = extractPublishers(publisher);
@@ -99,9 +93,7 @@ export default function PaperCard({
     [keywords]
   );
 
-  // --- Resolve links separately ---
   const doiUrl = useMemo(() => (doi ? `https://doi.org/${doi}` : ""), [doi]);
-
   const pdfUrl = useMemo(() => {
     if (pdf) return extractUrl(pdf);
     if (howpublished && howpublished.toLowerCase().endsWith(".pdf")) return extractUrl(howpublished);
@@ -119,37 +111,33 @@ export default function PaperCard({
       `  title     = {${title}}`,
       author && `  author    = {${author}}`,
       safeYear && `  year      = {${safeYear}}`,
-      safeJournal && `  journal   = {${safeJournal}}`,
+      venue && `  journal/booktitle = {${venue}}`,
       publishers.length > 0 && `  publisher = {${publishers.join(" and ")}}`,
       doi && `  doi       = {${doi}}`,
       pdfUrl && `  pdf       = {${pdfUrl}}`,
       linkUrl && `  url       = {${linkUrl}}`,
       note && `  note      = {${note}}`,
       cleanedKeywords.length > 0 && `  keywords  = {${cleanedKeywords.join(", ")}}`,
-    ]
-      .filter(Boolean)
-      .join(",\n");
-
+    ].filter(Boolean).join(",\n");
     return `@${type}{${id},\n${fields}\n}`;
-  }, [id, type, title, author, safeYear, safeJournal, publishers, doi, pdfUrl, linkUrl, note, cleanedKeywords]);
+  }, [id, type, title, author, safeYear, venue, publishers, doi, pdfUrl, linkUrl, note, cleanedKeywords]);
 
-  const handleCopyBibtex = () =>
-    navigator.clipboard.writeText(bibtex).then(() => alert("BibTeX copied!"));
+  const handleCopyBibtex = () => navigator.clipboard.writeText(bibtex).then(() => alert("BibTeX copied!"));
 
   return (
-    <article className="bg-primary-500 shadow rounded-2xl p-6 hover:shadow-lg transition flex flex-col">
-      <h3 className="text-lg font-semibold text-white">{title}</h3>
+    <article className={`${cardBg} shadow rounded-2xl p-6 hover:shadow-lg transition flex flex-col`}>
+      <h3 className={`text-lg font-semibold ${titleClass}`}>{title}</h3>
       <p className="text-sm text-accent-500">
         {formattedAuthor} {safeYear && `(${safeYear})`}
       </p>
 
-      {safeJournal && (
-        <div className="mt-1 italic text-purple-300">
+      {venue && (
+        <div className="mt-1 italic text-gray-500">
           <span
-            onClick={() => onJournalClick(safeJournal)}
-            className={`cursor-pointer ${safeJournal === activeJournal ? "underline font-bold" : ""}`}
+            onClick={() => onJournalClick(venue)}
+            className={`cursor-pointer ${venue === activeJournal ? "underline font-bold" : ""}`}
           >
-            {safeJournal.toUpperCase()}
+            {venue.toUpperCase()}
           </span>
         </div>
       )}
@@ -174,79 +162,61 @@ export default function PaperCard({
 
       {cleanedKeywords.length > 0 && (
         <div className="mt-3 flex flex-wrap gap-2">
-          {cleanedKeywords.map((tag, index) => {
-            const isActive = activeKeywords.includes(tag.toLowerCase());
-            return (
-              <span
-                key={index}
-                onClick={() => onKeywordClick(tag.toLowerCase())}
-                className={`text-xs px-2 py-1 rounded cursor-pointer ${
-                  isActive
-                    ? "bg-accent-500 text-white"
-                    : "bg-blue-100 text-blue-700 hover:bg-blue-200"
-                }`}
-              >
-                {tag}
-              </span>
-            );
-          })}
+          {cleanedKeywords.map((kw, idx) => (
+            <span
+              key={idx}
+              onClick={() => onKeywordClick(kw.toLowerCase())}
+              className={`text-xs px-2 py-1 rounded cursor-pointer ${
+                activeKeywords.includes(kw.toLowerCase())
+                  ? "bg-accent-500 text-white"
+                  : "bg-blue-100 text-blue-700 hover:bg-blue-200"
+              }`}
+            >
+              {kw}
+            </span>
+          ))}
         </div>
+      )}
+
+      {sdgIcons.length > 0 && (
+        <div className="mt-3 flex flex-wrap gap-2">{sdgIcons}</div>
       )}
 
       {abstract && (
         <div className="mt-3">
           <button
-            onClick={() => setShowAbstract((prev) => !prev)}
-            className="text-sm text-yellow-300 underline cursor-pointer mb-1"
+            onClick={() => setShowAbstract(prev => !prev)}
+            className="text-sm text-yellow-500 underline cursor-pointer mb-1"
           >
             {showAbstract ? "Hide Abstract" : "Show Abstract"}
           </button>
-          {showAbstract && (
-            <p className="text-sm text-gray-200 whitespace-pre-line">{abstract}</p>
-          )}
+          {showAbstract && <p className="text-sm text-gray-700 whitespace-pre-line">{abstract}</p>}
         </div>
       )}
 
-      {note && <p className="mt-2 text-sm text-gray-200">{note}</p>}
+      {note && <p className="mt-2 text-sm text-gray-600">{note}</p>}
 
       <div className="mt-4 flex gap-3 flex-wrap">
         {doiUrl && (
-          <a
-            href={doiUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-3 py-1 text-sm bg-blue-600 text-white rounded hover:bg-blue-700 transition"
-          >
+          <a href={doiUrl} target="_blank" rel="noopener noreferrer"
+             className="px-3 py-1 text-sm bg-blue-600 text-white rounded hover:bg-blue-700 transition">
             View DOI
           </a>
         )}
-
         {pdfUrl && (
-          <a
-            href={pdfUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-3 py-1 text-sm bg-green-600 text-white rounded hover:bg-green-700 transition"
-          >
+          <a href={pdfUrl} target="_blank" rel="noopener noreferrer"
+             className="px-3 py-1 text-sm bg-green-600 text-white rounded hover:bg-green-700 transition">
             View PDF
           </a>
         )}
-
         {linkUrl && (
-          <a
-            href={linkUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-3 py-1 text-sm bg-gray-600 text-white rounded hover:bg-gray-700 transition"
-          >
+          <a href={linkUrl} target="_blank" rel="noopener noreferrer"
+             className="px-3 py-1 text-sm bg-gray-600 text-white rounded hover:bg-gray-700 transition">
             View Link
           </a>
         )}
-
-        <button
-          onClick={handleCopyBibtex}
-          className="px-3 py-1 text-sm bg-accent-500 text-white rounded hover:bg-accent-700 transition"
-        >
+        <button onClick={handleCopyBibtex}
+                className="px-3 py-1 text-sm bg-accent-500 text-white rounded hover:bg-accent-700 transition">
           Copy BibTeX
         </button>
       </div>

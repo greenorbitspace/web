@@ -1,280 +1,209 @@
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo } from "react";
 import PaperCard from "./PaperCard.jsx";
-import bibtexParse from "bibtex-parse-js";
+import { SDGs } from "../data/sdgs";
+import papersJson from "../data/papers.json";
 
-// --- Helpers ---
-const strip = (str) => (str || "").toString().replace(/[{}\"]/g, "").trim();
-const normalize = (str) => (str || "").toString().trim().toLowerCase();
+const fallbackIcon = "/sdgs/default.svg";
 
-const cleanAuthorName = (name) =>
-  (name || "")
-    .trim()
-    .split(/\s+/)
-    .map((p) =>
-      /^[A-Za-z]$/.test(p) ? p.toUpperCase() + "." : p[0].toUpperCase() + p.slice(1)
-    )
-    .join(" ");
+// Map SDG code to SDG metadata
+const sdgMap = SDGs.reduce((acc, sdg) => {
+  const code = `SDG ${String(sdg.id).padStart(2, "0")}`;
+  acc[code.toUpperCase()] = sdg;
+  return acc;
+}, {});
 
-const formatAuthors = (authorStr) => {
-  if (!authorStr) return "";
-  const authors = authorStr.split(/\s+and\s+/).map((a) => cleanAuthorName(a.trim()));
-  if (authors.length === 1) return authors[0];
-  if (authors.length === 2) return authors.join(" & ");
-  const last = authors.pop();
-  return authors.join(", ") + " & " + last;
-};
+const SORT_OPTIONS = ["Year", "Author", "Title"];
 
-const normalizePublisher = (pub) => {
-  if (!pub) return "";
-  return String(pub)
-    .trim()
-    .replace(/\bLTD\.?$/i, "Ltd")
-    .replace(/\bBV\b/i, "B.V.")
-    .replace(/\bINC\.?$/i, "Inc.")
-    .replace(/\bLLC\b/i, "LLC");
-};
-
-const extractPublishers = (input) => {
-  if (!input) return [];
-  if (Array.isArray(input)) return input.map(normalizePublisher).filter(Boolean);
-  if (typeof input === "string")
-    return input.split(/[,;|]+/).map(normalizePublisher).filter(Boolean);
-  return [normalizePublisher(input)].filter(Boolean);
-};
-
-const cleanKeyword = (kw) => strip(kw).replace(/\[\d+\]/g, "").trim();
-
-// --- Robust URL extractor ---
-const extractUrl = (str) => {
-  if (!str) return "";
-  let url = str;
-
-  const match = str.match(/\\?url\{(.+?)\}/i);
-  if (match) url = match[1];
-
-  url = url.replace(/^url[:\s]*/i, "").trim();
-
-  // Fix malformed https:// or http//
-  url = url.replace(/^(https?:)\/\/+/i, "$1//");
-
-  if (!/^https?:\/\//i.test(url)) url = "http://" + url;
-
-  return url;
-};
-
-// --- Smart link resolver ---
-const resolveLinks = ({ doi, pdf, url, howpublished }) => {
-  let doiUrl = doi ? `https://doi.org/${doi}` : "";
-  let pdfUrl = pdf ? extractUrl(pdf) : "";
-  let linkUrl = url ? extractUrl(url) : "";
-
-  if (howpublished) {
-    const hp = howpublished.trim();
-
-    const doiMatch = hp.match(/doi\.org\/(10\.\d{4,9}\/[-._;()\/:A-Z0-9]+)/i);
-    if (doiMatch && !doiUrl) doiUrl = `https://doi.org/${doiMatch[1]}`;
-
-    const pdfMatch = hp.match(/https?:\/\/\S+\.pdf/i);
-    if (pdfMatch && !pdfUrl) pdfUrl = pdfMatch[0];
-
-    if (!pdfUrl && !doiUrl && !linkUrl) {
-      linkUrl = extractUrl(hp);
-    }
-  }
-
-  if (linkUrl === pdfUrl || linkUrl === doiUrl) linkUrl = "";
-
-  return { doiUrl, pdfUrl, linkUrl };
-};
-
-// --- Main Component ---
-export default function SearchableLibrary() {
-  const [papers, setPapers] = useState([]);
-  const [query, setQuery] = useState("");
+export default function Library() {
+  const [searchTerm, setSearchTerm] = useState("");
   const [selectedKeyword, setSelectedKeyword] = useState("");
   const [selectedPublisher, setSelectedPublisher] = useState("");
   const [selectedJournal, setSelectedJournal] = useState("");
   const [selectedYear, setSelectedYear] = useState("");
-  const [sortBy, setSortBy] = useState("year");
+  const [activeSDG, setActiveSDG] = useState("All SDGs");
+  const [sortBy, setSortBy] = useState("Year");
   const [sortAsc, setSortAsc] = useState(false);
 
-  // --- Load BibTeX ---
-  useEffect(() => {
-    fetch("/data/export.bib")
-      .then((res) => res.text())
-      .then((text) => {
-        const entries = bibtexParse.toJSON(text).map((e, idx) => {
-          const tags = Object.fromEntries(
-            Object.entries(e.entryTags || {}).map(([k, v]) => [k.toLowerCase(), v])
-          );
-
-          const id = e.citationKey?.trim() || `entry-${idx}`;
-          const title = strip(tags.title) || "Untitled";
-          const author = strip(tags.author) || "";
-          const year = strip(tags.year) || "";
-          const journal = strip(tags.journal) || "";
-          const publisher = strip(tags.publisher) || "";
-          const doi = strip(tags.doi) || "";
-          const howpublished = strip(tags.howpublished) || "";
-          const urlRaw = strip(tags.url) || howpublished;
-
-          const { doiUrl, pdfUrl, linkUrl } = resolveLinks({
-            doi,
-            pdf: urlRaw.toLowerCase().endsWith(".pdf") ? urlRaw : "",
-            url: urlRaw,
-            howpublished,
-          });
-
-          const keywords = tags.keywords
-            ? tags.keywords.split(/[,;]+/).map(cleanKeyword).filter(Boolean)
-            : [];
-          const note = strip(tags.note) || "";
-
-          return {
-            id,
-            type: e.entryType || "misc",
-            title,
-            author,
-            year,
-            journal,
-            publisher,
-            doi,
-            pdf: pdfUrl,
-            url: linkUrl,
-            howpublished,
-            keywords,
-            note,
-          };
-        });
-        setPapers(entries);
-      })
-      .catch((err) => console.error("Error loading BibTeX:", err));
+  // Generate SDG filter options
+  const sdgCategories = useMemo(() => {
+    const set = new Set();
+    papersJson.forEach(p =>
+      (p.sdgs ?? []).forEach(id => set.add(`SDG ${String(id).padStart(2, "0")}`))
+    );
+    return ["All SDGs", ...Array.from(set).sort()];
   }, []);
 
-  // --- Dropdown options ---
-  const allKeywords = useMemo(
-    () => [...new Set(papers.flatMap((p) => p.keywords || []))].sort(),
-    [papers]
-  );
-  const allPublishers = useMemo(
-    () => [...new Set(papers.flatMap((p) => extractPublishers(p.publisher)))].sort(),
-    [papers]
-  );
-  const allJournals = useMemo(
-    () => [...new Set(papers.map((p) => p.journal).filter(Boolean))].sort(),
-    [papers]
-  );
-  const allYears = useMemo(
-    () => [...new Set(papers.map((p) => p.year).filter(Boolean))].sort(),
-    [papers]
-  );
-
-  const filters = [
-    { label: "Keyword", value: selectedKeyword, setter: setSelectedKeyword, options: allKeywords },
-    { label: "Publisher", value: selectedPublisher, setter: setSelectedPublisher, options: allPublishers },
-    { label: "Journal", value: selectedJournal, setter: setSelectedJournal, options: allJournals },
-    { label: "Year", value: selectedYear, setter: setSelectedYear, options: allYears },
-  ];
-
-  // --- Filtering ---
+  // Filter papers
   const filteredPapers = useMemo(() => {
-    const q = normalize(query);
-    return papers.filter((p) => {
-      const authors = formatAuthors(p.author);
-      const keywords = (p.keywords || []).map(normalize);
-      const publishers = extractPublishers(p.publisher).map(normalize);
-      const journal = normalize(p.journal);
-      const year = normalize(p.year);
+    const term = searchTerm.toLowerCase();
+    return papersJson.filter(p => {
+      const title = (p.title ?? "").toLowerCase();
+      const authors = (p.author ?? "").toLowerCase();
+      const keywords = (p.keywords ?? []).map(k => k.toLowerCase());
+      const publisher = (p.publisher ?? "").toLowerCase();
+      const journal = (p.journal ?? "").toLowerCase();
+      const booktitle = (p.booktitle ?? "").toLowerCase();
+      const year = (p.year ?? "").toLowerCase();
+      const sdgCodes = (p.sdgs ?? []).map(id => `SDG ${String(id).padStart(2, "0")}`);
 
-      return (
-        (!q || normalize(p.title).includes(q) || normalize(authors).includes(q)) &&
-        (!selectedKeyword || keywords.includes(normalize(selectedKeyword))) &&
-        (!selectedPublisher || publishers.includes(normalize(selectedPublisher))) &&
-        (!selectedJournal || journal.includes(normalize(selectedJournal))) &&
-        (!selectedYear || year === normalize(selectedYear))
-      );
+      const venue = journal || booktitle; // Use journal first, then booktitle
+
+      const matchSearch =
+        title.includes(term) || authors.includes(term) || keywords.some(k => k.includes(term));
+      const matchKeyword = !selectedKeyword || keywords.includes(selectedKeyword.toLowerCase());
+      const matchPublisher = !selectedPublisher || publisher.includes(selectedPublisher.toLowerCase());
+      const matchJournal = !selectedJournal || venue.includes(selectedJournal.toLowerCase());
+      const matchYear = !selectedYear || year === selectedYear.toLowerCase();
+      const matchSDG = activeSDG === "All SDGs" || sdgCodes.includes(activeSDG);
+
+      return matchSearch && matchKeyword && matchPublisher && matchJournal && matchYear && matchSDG;
     });
-  }, [papers, query, selectedKeyword, selectedPublisher, selectedJournal, selectedYear]);
+  }, [searchTerm, selectedKeyword, selectedPublisher, selectedJournal, selectedYear, activeSDG]);
 
-  // --- Sorting ---
+  // Sort papers
   const sortedPapers = useMemo(() => {
-    return [...filteredPapers].sort((a, b) => {
+    const papers = [...filteredPapers];
+    papers.sort((a, b) => {
       let cmp = 0;
       switch (sortBy) {
-        case "year":
+        case "Year":
           cmp = (parseInt(a.year) || 0) - (parseInt(b.year) || 0);
           break;
-        case "author":
-          cmp = normalize(formatAuthors(a.author)).localeCompare(
-            normalize(formatAuthors(b.author))
-          );
+        case "Author":
+          cmp = (a.author ?? "").localeCompare(b.author ?? "");
           break;
-        case "title":
-          cmp = normalize(a.title).localeCompare(normalize(b.title));
-          break;
-        case "publisher":
-          cmp = normalize(extractPublishers(a.publisher)[0] || "").localeCompare(
-            normalize(extractPublishers(b.publisher)[0] || "")
-          );
-          break;
-        case "journal":
-          cmp = normalize(a.journal).localeCompare(normalize(b.journal));
+        case "Title":
+          cmp = (a.title ?? "").localeCompare(b.title ?? "");
           break;
         default:
           cmp = 0;
       }
       return sortAsc ? cmp : -cmp;
     });
+    return papers;
   }, [filteredPapers, sortBy, sortAsc]);
 
+  // Generate filter dropdown options
+  const keywordOptions = Array.from(new Set(papersJson.flatMap(p => p.keywords ?? [])));
+  const publisherOptions = Array.from(new Set(papersJson.map(p => p.publisher).filter(Boolean)));
+  const journalOptions = Array.from(
+    new Set(papersJson.map(p => p.journal || p.booktitle).filter(Boolean))
+  );
+  const yearOptions = Array.from(new Set(papersJson.map(p => p.year).filter(Boolean)));
+
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold mb-6 text-white">Library</h1>
+    <div className="space-y-6">
+      {/* SDG Filter */}
+      <nav className="flex flex-wrap gap-2 border-b pb-3 border-gray-300">
+        {sdgCategories.map(code => {
+          const sdg = sdgMap[code.toUpperCase()];
+          const isAll = code === "All SDGs";
 
-      <input
-        type="text"
-        placeholder="Search by title or author..."
-        className="border p-2 rounded w-full mb-4 bg-gray-800 text-white"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-      />
-
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-        {filters.map(({ label, value, setter, options }) => (
-          <div key={label}>
-            <label className="text-white block mb-1">{label}</label>
-            <select
-              value={value}
-              onChange={(e) => setter(normalize(e.target.value))}
-              className="w-full border rounded p-2 bg-gray-800 text-white"
+          return (
+            <button
+              key={code}
+              onClick={() => setActiveSDG(code)}
+              className={`flex items-center gap-2 px-3 py-2 text-sm font-medium rounded ${
+                activeSDG === code
+                  ? "bg-accent-500 text-white shadow"
+                  : "text-gray-200 hover:bg-gray-600"
+              }`}
             >
-              <option value="">All</option>
-              {options.map((opt) => (
-                <option key={opt} value={normalize(opt)}>
-                  {opt}
-                </option>
-              ))}
-            </select>
+              {!isAll && sdg && (
+                <img
+                  src={sdg.icon || fallbackIcon}
+                  alt={sdg.name || code}
+                  className="w-6 h-6"
+                />
+              )}
+              <span>{isAll ? "All SDGs" : <span className="sr-only">{sdg?.name}</span>}</span>
+            </button>
+          );
+        })}
+      </nav>
+
+      {/* Filters */}
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-6">
+        {[
+          { label: "Keyword", value: selectedKeyword, setter: setSelectedKeyword, options: keywordOptions },
+          { label: "Publisher", value: selectedPublisher, setter: setSelectedPublisher, options: publisherOptions },
+          { label: "Journal / Booktitle", value: selectedJournal, setter: setSelectedJournal, options: journalOptions },
+          { label: "Year", value: selectedYear, setter: setSelectedYear, options: yearOptions },
+          { label: "Sort By", value: sortBy, setter: setSortBy, options: SORT_OPTIONS },
+        ].map(f => (
+          <div key={f.label}>
+            <label className="text-white block mb-1">{f.label}</label>
+            {f.label === "Sort By" ? (
+              <div className="flex gap-2">
+                <select
+                  value={f.value}
+                  onChange={e => f.setter(e.target.value)}
+                  className="w-full border rounded p-2 bg-gray-800 text-white"
+                >
+                  {f.options.map(opt => <option key={opt} value={opt}>{opt}</option>)}
+                </select>
+                <button
+                  onClick={() => setSortAsc(!sortAsc)}
+                  className="px-2 py-2 bg-gray-700 text-white rounded"
+                >
+                  {sortAsc ? "↑" : "↓"}
+                </button>
+              </div>
+            ) : (
+              <select
+                value={f.value}
+                onChange={e => f.setter(e.target.value)}
+                className="w-full border rounded p-2 bg-gray-800 text-white"
+              >
+                <option value="">All</option>
+                {f.options.map(opt => <option key={opt} value={opt}>{opt}</option>)}
+              </select>
+            )}
           </div>
         ))}
       </div>
 
-      {sortedPapers.length === 0 ? (
-        <p className="text-white">No papers match your filters.</p>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {sortedPapers.map((p) => (
-            <PaperCard
-              key={p.id || p.title}
-              {...p}
-              onKeywordClick={(tag) => setSelectedKeyword(normalize(tag))}
-              activeKeywords={selectedKeyword ? [selectedKeyword] : []}
-              activePublisher={selectedPublisher}
-              activeJournal={selectedJournal}
-            />
-          ))}
-        </div>
-      )}
+      {/* Papers Grid */}
+      <ul className="grid gap-6 md:grid-cols-2" role="list">
+        {sortedPapers.length === 0 ? (
+          <li className="text-accent-500 italic">No papers found.</li>
+        ) : (
+          sortedPapers.map(p => {
+            const sdgIcons = (p.sdgs ?? []).map(id => {
+              const code = `SDG ${String(id).padStart(2, "0")}`;
+              const sdg = sdgMap[code.toUpperCase()];
+              return (
+                <button
+                  key={code}
+                  onClick={() => setActiveSDG(code)}
+                  className={`inline-flex items-center p-1 rounded hover:bg-accent-600 transition ${
+                    activeSDG === code ? "bg-accent-700" : ""
+                  }`}
+                  title={sdg?.name}
+                >
+                  <img src={sdg?.icon || fallbackIcon} alt={sdg?.name || code} className="w-6 h-6"/>
+                </button>
+              );
+            });
+
+            return (
+              <PaperCard
+                key={p.id || p.title}
+                {...p}
+                sdgIcons={sdgIcons}
+                onKeywordClick={setSelectedKeyword}
+                onPublisherClick={setSelectedPublisher}
+                onJournalClick={setSelectedJournal}
+                activeKeywords={[selectedKeyword.toLowerCase()]}
+                activePublisher={selectedPublisher}
+                activeJournal={selectedJournal}
+                cardBg="bg-white"
+                titleClass="text-primary-500"
+              />
+            );
+          })
+        )}
+      </ul>
     </div>
   );
 }

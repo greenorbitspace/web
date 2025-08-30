@@ -1,0 +1,6773 @@
+[
+  {
+    "id": "report1",
+    "title": "Size & Health of the UK Space Industry 2023",
+    "author": "",
+    "year": "2024",
+    "publisher": "UK Space Agency & London Economics",
+    "journal": "",
+    "keywords": [
+      "Economic stats & forecasts"
+    ],
+    "note": "The annual survey of the state of the UK space industry.",
+    "howpublished": "https://www.gov.uk/government/publications/the-size-and-health-of-the-uk-space-industry-2023",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      14
+    ]
+  },
+  {
+    "id": "report2",
+    "title": "What is the government doing about space skills?",
+    "author": "",
+    "year": "2024",
+    "publisher": "Space Skills Alliance",
+    "journal": "",
+    "keywords": [
+      "Policy & strategy"
+    ],
+    "note": "A summary of everything we know that the government is doing to tackle the space skills gap, focusing on activities conducted by the UK Space Agency, the MOD, and the Satellite Applications Catapult since the National Space Strategy was published in 2021.",
+    "howpublished": "https://spaceskills.org/what-is-government-doing",
+    "url": "",
+    "sdgs": [
+      17,
+      13,
+      9
+    ]
+  },
+  {
+    "id": "report3",
+    "title": "Space Sector Skills Survey 2023 results",
+    "author": "",
+    "year": "2023",
+    "publisher": "Space Skills Alliance & know.space",
+    "journal": "",
+    "keywords": [
+      "Technical skills",
+      "Transferable skills"
+    ],
+    "note": "The findings of the Space Sector Skills Survey 2023, a major national survey to understand space skills gaps and recruitment challenges.",
+    "howpublished": "https://www.gov.uk/government/publications/space-sector-skills-survey-2023",
+    "url": "",
+    "sdgs": [
+      9,
+      11,
+      8
+    ]
+  },
+  {
+    "id": "report4",
+    "title": "AGI Skills Survey 2023",
+    "author": "",
+    "year": "2023",
+    "publisher": "Association for Geographic Information (AGI)",
+    "journal": "",
+    "keywords": [
+      "Technical skills"
+    ],
+    "note": "The first AGI skills survey addressed issues such as recruitment, skills and retention, asking questions about barriers to employment, specific skills that are missing from existing or potential recruits and what makes people move on to new opportunities.",
+    "howpublished": "https://www.agi.org.uk/skills-survey/",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      4
+    ]
+  },
+  {
+    "id": "report5",
+    "title": "The National Space Strategy in Action",
+    "author": "",
+    "year": "2023",
+    "publisher": "\"Department for Science &  Innovation and Technology\"",
+    "journal": "",
+    "keywords": [
+      "Policy & strategy"
+    ],
+    "note": "This policy paper sets out how the government is delivering on the ambitions set out in the National Space Strategy and summarises the government's achievements so far.",
+    "howpublished": "https://www.gov.uk/government/publications/national-space-strategy-in-action",
+    "url": "",
+    "sdgs": [
+      13,
+      17,
+      12
+    ]
+  },
+  {
+    "id": "report6",
+    "title": "Size & Health of the UK Space Industry 2022",
+    "author": "",
+    "year": "2023",
+    "publisher": "UK Space Agency & know.space",
+    "journal": "",
+    "keywords": [
+      "Economic stats & forecasts"
+    ],
+    "note": "The annual survey of the state of the UK space industry.",
+    "howpublished": "https://www.gov.uk/government/publications/the-size-and-health-of-the-uk-space-industry-2022/size-health-of-the-uk-space-industry-2022",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      14
+    ]
+  },
+  {
+    "id": "report7",
+    "title": "UK space strategy and UK satellite infrastructure",
+    "author": "",
+    "year": "2022",
+    "publisher": "House of Commons",
+    "journal": "",
+    "keywords": [
+      "Policy & strategy"
+    ],
+    "note": "A House of Commons Committee report, with recommendations to government, covering technology and skills.",
+    "howpublished": "https://publications.parliament.uk/pa/cm5803/cmselect/cmsctech/100/report.html",
+    "url": "",
+    "sdgs": [
+      9,
+      6,
+      12
+    ]
+  },
+  {
+    "id": "report8",
+    "title": "Interagency Roadmap to Support Space-Related STEM Education and Workforce",
+    "author": "",
+    "year": "2022",
+    "publisher": "National Science and Technology Council",
+    "journal": "",
+    "keywords": [
+      "Policy & strategy"
+    ],
+    "note": "A roadmap for US federal departments and agencies to grow, diversify, and strengthen the US space STEM workforce.",
+    "howpublished": "https://www.whitehouse.gov/ostp/news-updates/2022/09/30/nstc-interagency-roadmap-to-support-space-related-stem-education-and-workforce/",
+    "url": "",
+    "sdgs": [
+      9,
+      11,
+      2
+    ]
+  },
+  {
+    "id": "report9",
+    "title": "UK Space Agency Corporate Plan 2022-25",
+    "author": "",
+    "year": "2022",
+    "publisher": "UK Space Agency",
+    "journal": "",
+    "keywords": [
+      "Policy & strategy"
+    ],
+    "note": "The Corporate Plan sets out the work the UK Space Agency will deliver in 2022 to 2025.",
+    "howpublished": "https://www.gov.uk/government/publications/uk-space-agency-corporate-plan-2022-25",
+    "url": "",
+    "sdgs": [
+      9,
+      12,
+      13
+    ]
+  },
+  {
+    "id": "report10",
+    "title": "Our Space Our Future - Final Evaluation Report",
+    "author": "",
+    "year": "2022",
+    "publisher": "Our Space Our Future",
+    "journal": "",
+    "keywords": [
+      "Education",
+      "Careers"
+    ],
+    "note": "The evaluation report for Our Space Our Future, a European Project that brings space science to the classroom, boosting the interest of students in space-related careers.",
+    "howpublished": "https://ourspaceourfuture.eu/deliverables/",
+    "url": "",
+    "sdgs": [
+      14,
+      11,
+      9
+    ]
+  },
+  {
+    "id": "report11",
+    "title": "Demand for Geospatial Skills",
+    "author": "",
+    "year": "2022",
+    "publisher": "Geospatial Commission",
+    "journal": "",
+    "keywords": [
+      "Technical skills"
+    ],
+    "note": "Report by Frontier Economics analysing the demand for geospatial skills in the UK",
+    "howpublished": "https://www.gov.uk/government/publications/demand-for-geospatial-skills-report-for-the-geospatial-commission",
+    "url": "",
+    "sdgs": [
+      11,
+      9,
+      4
+    ]
+  },
+  {
+    "id": "report12",
+    "title": "Size & Health of the UK Space Industry 2021",
+    "author": "",
+    "year": "2022",
+    "publisher": "UK Space Agency & BryceTech",
+    "journal": "",
+    "keywords": [
+      "Economic stats & forecasts"
+    ],
+    "note": "The seventh biennial survey of the state of the UK space industry.",
+    "howpublished": "https://www.gov.uk/government/publications/the-size-and-health-of-the-uk-space-industry-2021/size-and-health-of-the-uk-space-industry-2021",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      14
+    ]
+  },
+  {
+    "id": "report13",
+    "title": "Space Education in Europe",
+    "author": "",
+    "year": "2022",
+    "publisher": "European Space Policy Institute (ESPI)",
+    "journal": "",
+    "keywords": [
+      "Education"
+    ],
+    "note": "An overview of the European space education landscape including an analysis of trends and challenges and a view from students and young professionals of space education in Europe.",
+    "howpublished": "https://www.espi.or.at/reports/space-education-in-europe/",
+    "url": "",
+    "sdgs": [
+      4,
+      9,
+      11
+    ]
+  },
+  {
+    "id": "report14",
+    "title": "2020 State of the Canadian Space Sector Report - Facts and Figures 2019",
+    "author": "",
+    "year": "2022",
+    "publisher": "Canadian Space Agency",
+    "journal": "",
+    "keywords": [
+      "Economic stats & forecasts"
+    ],
+    "note": "A report of the state of the Canadian space industry.",
+    "howpublished": "https://www.asc-csa.gc.ca/eng/publications/2020-state-canadian-space-sector-facts-figures-2019.asp",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      12
+    ]
+  },
+  {
+    "id": "report15",
+    "title": "Space/Geoinformation sector Skills Strategy report",
+    "author": "",
+    "year": "2021",
+    "publisher": "EO4GEO",
+    "journal": "",
+    "keywords": [
+      "Technical skills"
+    ],
+    "note": "This high level and strategic document set out eight goals for a long-term action plan to provide the skills needed by the European EO sector.",
+    "howpublished": "http://www.eo4geo.eu/sector-skills-strategy-report/",
+    "url": "",
+    "sdgs": [
+      9,
+      17,
+      13
+    ]
+  },
+  {
+    "id": "report16",
+    "title": "Women in the UK Space Sector",
+    "author": "",
+    "year": "2021",
+    "publisher": "Space Skills Alliance",
+    "journal": "",
+    "keywords": [
+      "Diversity"
+    ],
+    "note": "A report on the experiences of women in the UK space sector, drawn from the findings of the 2020 Space Census.",
+    "howpublished": "https://spaceskills.org/census-women",
+    "url": "",
+    "sdgs": [
+      5,
+      9,
+      11
+    ]
+  },
+  {
+    "id": "report17",
+    "title": "Skills Gap in the Aerospace Sector",
+    "author": "",
+    "year": "2021",
+    "publisher": "Women in Aerospace - Europe",
+    "journal": "",
+    "keywords": [
+      "Technical skills",
+      "Transferable skills"
+    ],
+    "note": "A report analysing the current skills deficit in the European aerospace sector, how well graduates are meeting those needs, and the key challenges that space sector stakeholders need to overcome.",
+    "howpublished": "https://www.wia-europe.org/wia-e-working-groups/white-paper-skills-gap-in-the-aerospace-sector/",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      4
+    ]
+  },
+  {
+    "id": "report18",
+    "title": "STEM Education In Europe",
+    "author": "",
+    "year": "2021",
+    "publisher": "Women in Aerospace - Europe",
+    "journal": "",
+    "keywords": [
+      "Education",
+      "Diversity"
+    ],
+    "note": "A concise summary of the main issues in European STEM education focusing on early inspiration, retention of young women, the contribution and influence of peers/family, and the perception of women in STEM careers.",
+    "howpublished": "https://www.wia-europe.org/wia-e-working-groups/white-paper-stem-education/",
+    "url": "",
+    "sdgs": [
+      5,
+      4,
+      1
+    ]
+  },
+  {
+    "id": "report19",
+    "title": "Women in the C-Suite",
+    "author": "",
+    "year": "2021",
+    "publisher": "Women in Aerospace - Europe",
+    "journal": "",
+    "keywords": [
+      "Diversity"
+    ],
+    "note": "A summary of the “leaky pipeline” and the issues facing women looking to advance to the C-suite which explores how governments and organisations can contribute to accelerating progress and develop and retain their top female talent.",
+    "howpublished": "https://www.wia-europe.org/wia-e-working-groups/white-paper-women-in-the-c-suite/",
+    "url": "",
+    "sdgs": [
+      5,
+      9,
+      8
+    ]
+  },
+  {
+    "id": "report20",
+    "title": "Pay in the UK Space Sector",
+    "author": "",
+    "year": "2021",
+    "publisher": "Space Skills Alliance",
+    "journal": "",
+    "keywords": [
+      "Pay"
+    ],
+    "note": "The first statistics on pay for the UK space sector, drawn from the findings of the 2020 Space Census.",
+    "howpublished": "https://spaceskills.org/census-pay",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      11
+    ]
+  },
+  {
+    "id": "report21",
+    "title": "National Space Strategy",
+    "author": "",
+    "year": "2021",
+    "publisher": "\"Department for Business &  Energy & Industrial Strategy\"",
+    "journal": "",
+    "keywords": [
+      "Policy & strategy"
+    ],
+    "note": "A strategy setting out the UK government’s ambitions for the UK in space, bringing together civil and defence policy for the first time.",
+    "howpublished": "https://www.gov.uk/government/publications/national-space-strategy",
+    "url": "",
+    "sdgs": [
+      13,
+      17,
+      9
+    ]
+  },
+  {
+    "id": "report22",
+    "title": "Size & Health of the UK Space Industry 2020",
+    "author": "",
+    "year": "2021",
+    "publisher": "UK Space Agency & know.space",
+    "journal": "",
+    "keywords": [
+      "Economic stats & forecasts"
+    ],
+    "note": "The sixth biennial survey of the state of the UK space industry.",
+    "howpublished": "https://www.gov.uk/government/publications/uk-space-industry-size-and-health-report-2020",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      14
+    ]
+  },
+  {
+    "id": "report23",
+    "title": "Space Industry Skills Gap Analysis",
+    "author": "",
+    "year": "2021",
+    "publisher": "SmartSat",
+    "journal": "",
+    "keywords": [
+      "Technical skills",
+      "Transferable skills"
+    ],
+    "note": "A report for the Australian space sector identifying 319 space-related skills needed to support future needs of the sector.",
+    "howpublished": "https://smartsatcrc.com/space-industry-skills-gap-analysis-report-released/",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      11
+    ]
+  },
+  {
+    "id": "report24",
+    "title": "Demographics of the UK Space Sector",
+    "author": "",
+    "year": "2021",
+    "publisher": "Space Skills Alliance",
+    "journal": "",
+    "keywords": [
+      "Diversity"
+    ],
+    "note": "The first comprehensive demographic statistics for the UK space sector, drawn from the findings of the 2020 Space Census.",
+    "howpublished": "https://spaceskills.org/census-demographics",
+    "url": "",
+    "sdgs": [
+      11,
+      9,
+      8
+    ]
+  },
+  {
+    "id": "report25",
+    "title": "Space Sector Skills Survey 2020: Research Report",
+    "author": "",
+    "year": "2021",
+    "publisher": "UK Space Agency & BMG",
+    "journal": "",
+    "keywords": [
+      "Technical skills",
+      "Transferable skills"
+    ],
+    "note": "A research report into the space industry’s recruitment and training practices.",
+    "howpublished": "https://www.gov.uk/government/publications/space-sector-skills-survey-2020-research-report",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      11
+    ]
+  },
+  {
+    "id": "report26",
+    "title": "Assessing the quality of space job adverts",
+    "author": "",
+    "year": "2020",
+    "publisher": "Space Skills Alliance",
+    "journal": "",
+    "keywords": [
+      "Recruitment"
+    ],
+    "note": "An assessment of 50 job adverts from 50 space companies scored against 10 criteria based on recruitment best practice, and recommendations for improvements.",
+    "howpublished": "https://spaceskills.org/job-advert-quality",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      11
+    ]
+  },
+  {
+    "id": "report27",
+    "title": "Towards a space competencies taxonomy",
+    "author": "",
+    "year": "2020",
+    "publisher": "Space Skills Alliance",
+    "journal": "",
+    "keywords": [
+      "Technical skills",
+      "Transferable skills"
+    ],
+    "note": "The first competencies taxonomy to be developed specifically for the space sector, comprising about 250 competencies across five categories.",
+    "howpublished": "https://spaceskills.org/towards-a-space-competencies-taxonomy",
+    "url": "",
+    "sdgs": [
+      9,
+      11,
+      8
+    ]
+  },
+  {
+    "id": "report28",
+    "title": "Skills demand for early career space jobs",
+    "author": "",
+    "year": "2020",
+    "publisher": "Space Skills Alliance",
+    "journal": "",
+    "keywords": [
+      "Technical skills",
+      "Transferable skills"
+    ],
+    "note": "The first quantitative assessment of skills demand in the UK space sector, analysing 812 early career job adverts to identify competencies in highest demand.",
+    "howpublished": "https://spaceskills.org/skills-demand-for-early-career-space-jobs",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      4
+    ]
+  },
+  {
+    "id": "report29",
+    "title": "2019 Career Trends",
+    "author": "",
+    "year": "2019",
+    "publisher": "Space Talent",
+    "journal": "",
+    "keywords": [
+      "Economic stats & forecasts",
+      "Recruitment"
+    ],
+    "note": "A summary of space job trends in the USA based on an analysis of almost 8000 jobs.",
+    "howpublished": "https://www.spacetalent.org/resources/2019-career-trends",
+    "url": "",
+    "sdgs": [
+      8,
+      9,
+      14
+    ]
+  },
+  {
+    "id": "report30",
+    "title": "2019 Hiring Trends",
+    "author": "",
+    "year": "2019",
+    "publisher": "Space Talent",
+    "journal": "",
+    "keywords": [
+      "Economic stats & forecasts",
+      "Recruitment"
+    ],
+    "note": "An analysis of hiring trends at 34 space companies from around the world.",
+    "howpublished": "https://www.spacetalent.org/resources/2019-hiring-trends",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      14
+    ]
+  },
+  {
+    "id": "report31",
+    "title": "Space / Geospatial Sector Skills Strategy",
+    "author": "",
+    "year": "2019",
+    "publisher": "EO4GEO",
+    "journal": "",
+    "keywords": [
+      "Policy & strategy",
+      "Technical skills"
+    ],
+    "note": "A strategy for the EU to reduce the skills gap in the space and geospatial sectors and eliminate the mismatch between the supply of and the demand for education and training.",
+    "howpublished": "https://www.eomag.eu/release-of-the-space-geospatial-sector-skills-strategy/",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      4
+    ]
+  },
+  {
+    "id": "report32",
+    "title": "The Definitive Career Guide to Entrepreneurial Space",
+    "author": "",
+    "year": "2019",
+    "publisher": "Space Angels",
+    "journal": "",
+    "keywords": [
+      "Careers"
+    ],
+    "note": "A guide on how to start a career in space based on advice from companies and leaders across the space sector.",
+    "howpublished": "https://www.spacetalent.org/resources/the-definitive-career-guide-for-entrepreneurial-space",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      14
+    ]
+  },
+  {
+    "id": "report33",
+    "title": "Size & Health of the UK Space Industry 2018",
+    "author": "",
+    "year": "2019",
+    "publisher": "UK Space Agency & London Economics",
+    "journal": "",
+    "keywords": [
+      "Economic stats & forecasts"
+    ],
+    "note": "The fifth biennial survey of the state of the UK space industry.",
+    "howpublished": "https://www.gov.uk/government/publications/uk-space-industry-size-and-health-report-2018",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      14
+    ]
+  },
+  {
+    "id": "report34",
+    "title": "Demand for space-geospatial education and training and priority occupational profiles",
+    "author": "",
+    "year": "2018",
+    "publisher": "EO4GEO",
+    "journal": "",
+    "keywords": [
+      "Training"
+    ],
+    "note": "A summary of demand for skills in the space/geospatial sector in the EU.",
+    "howpublished": "http://www.eo4geo.eu/download/d-1-3-demand-for-space-geospatial-education-and-training-and-priority-occupational-profiles_v2-0/",
+    "url": "",
+    "sdgs": [
+      9,
+      11,
+      4
+    ]
+  },
+  {
+    "id": "report35",
+    "title": "Current supply of space/geospatial education and training",
+    "author": "",
+    "year": "2018",
+    "publisher": "EO4GEO",
+    "journal": "",
+    "keywords": [
+      "Training"
+    ],
+    "note": "A summary of analysis of the supply of space and geospatial education and training opportunities in the EU.",
+    "howpublished": "http://www.eo4geo.eu/download/eo4geo_d1-1_current-supply-of-space-geospatial-education-and-training_v1-1/",
+    "url": "",
+    "sdgs": [
+      4,
+      9,
+      11
+    ]
+  },
+  {
+    "id": "report36",
+    "title": "Prosperity from Space: A partnership strategy for the UK",
+    "author": "",
+    "year": "2018",
+    "publisher": "Space Growth Partnership",
+    "journal": "",
+    "keywords": [
+      "Policy & strategy"
+    ],
+    "note": "This report sets out a vision for enhanced growth in the UK space sector over the next decade.",
+    "howpublished": "https://www.ukspace.org/uk-space-industry-sets-out-vision-for-growth/",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      11
+    ]
+  },
+  {
+    "id": "report37",
+    "title": "Growing the Space Economy: The Downstream Segment as a Driver",
+    "author": "",
+    "year": "2018",
+    "publisher": "South Australia Space Industry Centre",
+    "journal": "",
+    "keywords": [
+      "Economic stats & forecasts"
+    ],
+    "note": "An analysis of the downstream space economy with a focus on South Australia.",
+    "howpublished": "http://www.piar.it/report09today/Strada2018.pdf",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      14
+    ]
+  },
+  {
+    "id": "report38",
+    "title": "Removing Roadblocks from the UK space skills pipeline: A student and young professional perspective",
+    "author": "",
+    "year": "2018",
+    "publisher": "UKSEDS",
+    "journal": "",
+    "keywords": [
+      "Technical skills"
+    ],
+    "note": "A student and young professional perspective on how to develop the space skills pipeline.",
+    "howpublished": "https://spaceskills.org/public/docs/Removing%20Roadblocks%20from%20the%20UK%20space%20skills%20pipeline.pdf",
+    "url": "",
+    "sdgs": [
+      9,
+      11,
+      4
+    ]
+  },
+  {
+    "id": "report39",
+    "title": "The impact of Brexit on the aerospace sector: Sixth Report of Session 2017–19",
+    "author": "",
+    "year": "2018",
+    "publisher": "House of Commons",
+    "journal": "",
+    "keywords": [
+      "Brexit",
+      "Economic stats & forecasts"
+    ],
+    "note": "A parliamentary report on the impact of Brexit on the aerospace sector.",
+    "howpublished": "https://publications.parliament.uk/pa/cm201719/cmselect/cmbeis/380/380.pdf",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      14
+    ]
+  },
+  {
+    "id": "report40",
+    "title": "Prosperity from Space: A global partnership strategy for the UK",
+    "author": "",
+    "year": "2018",
+    "publisher": "Space Growth Partnership",
+    "journal": "",
+    "keywords": [
+      "Policy & strategy"
+    ],
+    "note": "This report sets out a vision for enhanced growth in the UK space sector over the next decade.",
+    "howpublished": "https://www.ukspace.org/wp-content/uploads/2020/04/Prosperity-from-Space-document-Space-Sector-Deal-Proposal-1-March-2018.pdf",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      17
+    ]
+  },
+  {
+    "id": "report41",
+    "title": "Size & Health of the UK Space Industry 2016",
+    "author": "",
+    "year": "2016",
+    "publisher": "UK Space Agency & London Economics",
+    "journal": "",
+    "keywords": [
+      "Economic stats & forecasts"
+    ],
+    "note": "The fourth biennial survey of the state of the UK space industry.",
+    "howpublished": "https://www.gov.uk/government/publications/uk-space-industry-size-and-health-report-2016",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      14
+    ]
+  },
+  {
+    "id": "report42",
+    "title": "Importance and Challenges of Hands-On Experience in Astronautical Education",
+    "author": "",
+    "year": "2016",
+    "publisher": "International Astronautical Federation",
+    "journal": "",
+    "keywords": [
+      "Education"
+    ],
+    "note": "A discussion of the role of hands-on-activities in tertiary education with particular focus on the space sector in Europe.",
+    "howpublished": "https://www.researchgate.net/publication/323295511_Importance_and_Challenges_of_Hands-On_Experience_in_Astronautical_Education",
+    "url": "",
+    "sdgs": [
+      4,
+      9,
+      11
+    ]
+  },
+  {
+    "id": "report43",
+    "title": "UK Space Agency Education, Skills and Outreach Strategy",
+    "author": "",
+    "year": "2016",
+    "publisher": "UK Space Agency",
+    "journal": "",
+    "keywords": [
+      "Policy & strategy",
+      "Education"
+    ],
+    "note": "The strategy aims to ensure that as many young people as possible are inspired by space to study, and keep studying, STEM subjects to tertiary level ensuring a skilled and enthusiastic workforce for high tech industries (including space) in the future.",
+    "howpublished": "https://www.gov.uk/government/publications/uk-space-agency-education-skills-and-outreach-strategy-2016",
+    "url": "",
+    "sdgs": [
+      9,
+      4,
+      8
+    ]
+  },
+  {
+    "id": "report44",
+    "title": "The impact of human spaceflight on young people’s attitudes to STEM subjects",
+    "author": "",
+    "year": "2016",
+    "publisher": "University of York",
+    "journal": "",
+    "keywords": [
+      "Education"
+    ],
+    "note": "A report on the impact of the education campaign linked to Tim Peake's Principia mission on young people’s attitudes to STEM subjects.",
+    "howpublished": "https://pure.york.ac.uk/portal/en/publications/the-impact-of-human-spaceflight-on-young-peoples-attitudes-to-stem-subjects(9a53e2a8-8626-400c-8bcb-bb39d85e8643).html",
+    "url": "",
+    "sdgs": [
+      3,
+      16,
+      11
+    ]
+  },
+  {
+    "id": "report45",
+    "title": "Space tech and services: Big Data in Earth Observation",
+    "author": "",
+    "year": "2016",
+    "publisher": "Business Innovation Observatory",
+    "journal": "",
+    "keywords": [
+      "Policy & strategy"
+    ],
+    "note": "An analysis of the use of 'big data' in Earth Observation and policy recommendations for improving the availability of data.",
+    "howpublished": "https://ec.europa.eu/docsroom/documents/16592/attachments/1/translations/en/renditions/native",
+    "url": "",
+    "sdgs": [
+      9,
+      13,
+      14
+    ]
+  },
+  {
+    "id": "report46",
+    "title": "Growing the skills pool for the UK space sector",
+    "author": "",
+    "year": "2016",
+    "publisher": "National Space Academy",
+    "journal": "",
+    "keywords": [
+      "Economic stats & forecasts"
+    ],
+    "note": "A summary presentation on actions being taken to build space skills, particularly through the National Space Academy and SPIN programme.",
+    "howpublished": "http://www.yourmoray.org.uk/PartnershipGroups/MorayEconomicPartnership/SpaceportWorkingGroupDocs/NSA-AnuOjha.pdf",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      11
+    ]
+  },
+  {
+    "id": "report47",
+    "title": "National Space Policy",
+    "author": "",
+    "year": "2015",
+    "publisher": "UK Space Agency",
+    "journal": "",
+    "keywords": [
+      "Policy & strategy"
+    ],
+    "note": "A statement of the Government’s vision to capture a greater share of the global space market.",
+    "howpublished": "https://www.gov.uk/government/publications/national-space-policy",
+    "url": "",
+    "sdgs": [
+      13,
+      17,
+      14
+    ]
+  },
+  {
+    "id": "report48",
+    "title": "Seeking Resolution: Growing The UK Small Satellite Industry",
+    "author": "",
+    "year": "2015",
+    "publisher": "Institute of Mechanical Engineers",
+    "journal": "",
+    "keywords": [
+      "Economic stats & forecasts",
+      "Policy & strategy"
+    ],
+    "note": "A summary of the market for Earth Observation satellites, highlighting some of the barriers and opportunities facing the industry.",
+    "howpublished": "https://www.imeche.org/policy-and-press/reports/detail/seeking-resolution-growing-the-uk-small-satellite-industry",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      12
+    ]
+  },
+  {
+    "id": "report49",
+    "title": "The Case for Space 2015: The impact of space on the UK economy",
+    "author": "",
+    "year": "2015",
+    "publisher": "London Economics",
+    "journal": "",
+    "keywords": [
+      "Economic stats & forecasts"
+    ],
+    "note": "As study of the impacts of the space sector on the economy, including consumer, commercial, public sector, and national critical infrastructure applications.",
+    "howpublished": "https://londoneconomics.co.uk/blog/publication/the-case-for-space-2015/",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      11
+    ]
+  },
+  {
+    "id": "report50",
+    "title": "UK Space Innovation and Growth Strategy: 2015 Update Report",
+    "author": "",
+    "year": "2015",
+    "publisher": "Space IGS",
+    "journal": "",
+    "keywords": [
+      "Policy & strategy"
+    ],
+    "note": "A summary of progress against the goals set out in the 2010 Innovation and Growth Strategy, and an outline of plans for the next phase of the programme.",
+    "howpublished": "https://www.gov.uk/government/publications/update-report-uk-space-innovation-and-growth-strategy-2015",
+    "url": "",
+    "sdgs": [
+      8,
+      9,
+      12
+    ]
+  },
+  {
+    "id": "report51",
+    "title": "Size & Health of the UK Space Industry 2014",
+    "author": "",
+    "year": "2014",
+    "publisher": "UK Space Agency",
+    "journal": "",
+    "keywords": [
+      "Economic stats & forecasts"
+    ],
+    "note": "The third biennial survey of the state of the UK space industry.",
+    "howpublished": "https://www.gov.uk/government/publications/uk-space-industry-size-and-health-report-2014",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      14
+    ]
+  },
+  {
+    "id": "report52",
+    "title": "Government Response to the UK Space Innovation and Growth Strategy 2014 – 2030",
+    "author": "",
+    "year": "2014",
+    "publisher": "UK Space Agency",
+    "journal": "",
+    "keywords": [
+      "Policy & strategy"
+    ],
+    "note": "The government response to the pace innovation and growth strategy (IGS) action plan.",
+    "howpublished": "https://www.gov.uk/government/publications/government-response-space-growth-action-plan",
+    "url": "",
+    "sdgs": [
+      8,
+      9,
+      12
+    ]
+  },
+  {
+    "id": "report53",
+    "title": "IGS Skills Theme Report",
+    "author": "",
+    "year": "2014",
+    "publisher": "Space IGS",
+    "journal": "",
+    "keywords": [
+      "Technical skills",
+      "Transferable skills"
+    ],
+    "note": "A skills-focused contribution to the Space Growth Action Plan outlining the skills landscape and current challenges, along with recommended actions for addressing these.",
+    "howpublished": "https://spaceskills.org/public/docs/IGS%20Skills%20Theme%20Report.pdf",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      11
+    ]
+  },
+  {
+    "id": "report54",
+    "title": "Space Innovation and Growth Strategy 2014 to 2030: Space Growth Action Plan",
+    "author": "",
+    "year": "2013",
+    "publisher": "Space IGS",
+    "journal": "",
+    "keywords": [
+      "Policy & strategy"
+    ],
+    "note": "An executive summary of the updated Space Innovation and Growth Strategy report (2015).",
+    "howpublished": "https://www.gov.uk/government/publications/space-growth-action-plan",
+    "url": "",
+    "sdgs": [
+      8,
+      9,
+      14
+    ]
+  },
+  {
+    "id": "report55",
+    "title": "Space & Aerospace Technicians",
+    "author": "",
+    "year": "2013",
+    "publisher": "Gatsby Charitable Foundation",
+    "journal": "",
+    "keywords": [
+      "Technicians"
+    ],
+    "note": "Report of a seminar to  explore how the supply and quality of apprenticeship training in the space and aerospace sectors could be improved.",
+    "howpublished": "https://www.gatsby.org.uk/education/reports",
+    "url": "",
+    "sdgs": [
+      9,
+      4,
+      8
+    ]
+  },
+  {
+    "id": "report56",
+    "title": "Size & Health of the UK Space Industry 2012",
+    "author": "",
+    "year": "2012",
+    "publisher": "UK Space Agency & Oxford Economics",
+    "journal": "",
+    "keywords": [
+      "Economic stats & forecasts"
+    ],
+    "note": "The second biennial survey of the state of the UK space industry.",
+    "howpublished": "https://www.gov.uk/government/publications/uk-space-industry-size-and-health-report-2012",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      12
+    ]
+  },
+  {
+    "id": "report57",
+    "title": "UK Space Agency Civil Space Strategy 2012-2016",
+    "author": "",
+    "year": "2012",
+    "publisher": "UK Space Agency",
+    "journal": "",
+    "keywords": [
+      "Policy & strategy"
+    ],
+    "note": "A strategy setting out aims and objectives to strengthen the UK's position in the space sector.",
+    "howpublished": "https://www.gov.uk/government/publications/civil-space-strategy-2012-to-2016",
+    "url": "",
+    "sdgs": [
+      13,
+      9,
+      12
+    ]
+  },
+  {
+    "id": "report58",
+    "title": "Space for Technicians: An analysis for technician duties, skills, and training in the UK space industry",
+    "author": "",
+    "year": "2012",
+    "publisher": "Gatsby Charitable Foundation",
+    "journal": "",
+    "keywords": [
+      "Technicians",
+      "Technical skills"
+    ],
+    "note": "A study of the roles of technicians in the space sector and how employers ensure they have the technician staff they require.",
+    "howpublished": "https://www.gatsby.org.uk/education/reports",
+    "url": "",
+    "sdgs": [
+      9,
+      11,
+      8
+    ]
+  },
+  {
+    "id": "report59",
+    "title": "Employer Engagement – enhancing HEI engagement with the Satellite Industry for workforce upskilling and informing policy makers",
+    "author": "",
+    "year": "2012",
+    "publisher": "University of Reading & National HE STEM Programme",
+    "journal": "",
+    "keywords": [
+      "Technical skills",
+      "Transferable skills"
+    ],
+    "note": "A review of the skill levels of graduates and apprentices entering the space sector, and the destinations of graduates from key courses compared with the skills requirements that employers report.",
+    "howpublished": "https://spaceskills.org/public/docs/Employer%20Engagement%20-%20enhancing%20HEI%20engagement%20with%20the%20Satellite%20Industry%20for%20workforce%20upskilling%20and%20informing%20policy%20makers.pdf",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      4
+    ]
+  },
+  {
+    "id": "report60",
+    "title": "UK Space Agency Education, Skills and Outreach Strategy",
+    "author": "",
+    "year": "2011",
+    "publisher": "UK Space Agency",
+    "journal": "",
+    "keywords": [
+      "Policy & strategy",
+      "Education"
+    ],
+    "note": "The strategy aims to ensure that as many young people as possible are inspired by space to study, and keep studying, STEM subjects to tertiary level ensuring a skilled and enthusiastic workforce for high tech industries (including space) in the future.",
+    "howpublished": "https://www.gov.uk/government/publications/uk-space-agency-education-skills-and-outreach-strategy",
+    "url": "",
+    "sdgs": [
+      9,
+      4,
+      8
+    ]
+  },
+  {
+    "id": "report61",
+    "title": "Size & Health of the UK Space Industry 2010",
+    "author": "",
+    "year": "2010",
+    "publisher": "UK Space Agency & Oxford Economics",
+    "journal": "",
+    "keywords": [
+      "Economic stats & forecasts"
+    ],
+    "note": "The first biennial survey of the state of the UK space industry.",
+    "howpublished": "https://www.gov.uk/government/publications/uk-space-industry-size-and-health-report-2010",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      14
+    ]
+  },
+  {
+    "id": "report62",
+    "title": "The Space Innovation and Growth Strategy Main Report",
+    "author": "",
+    "year": "2010",
+    "publisher": "Space IGS",
+    "journal": "",
+    "keywords": [
+      "Policy & strategy"
+    ],
+    "note": "A 2020 year strategy for the space sector which identifies key trends and recommends actions industry and government need to take.",
+    "howpublished": "https://www.ukspace.org/wp-content/uploads/2020/04/Space-IGS-Main-Report_Feb2010.pdf",
+    "url": "",
+    "sdgs": [
+      8,
+      9,
+      12
+    ]
+  },
+  {
+    "id": "report63",
+    "title": "A UK Space Innovation and Growth Strategy 2010 to 2030",
+    "author": "",
+    "year": "2010",
+    "publisher": "Space IGS",
+    "journal": "",
+    "keywords": [
+      "Policy & strategy"
+    ],
+    "note": "An executive summary of the Space Innovation and Growth Strategy report.",
+    "howpublished": "https://spaceskills.org/public/docs/Space%20Innovation%20and%20Growth%20Strategy%202010.pdf",
+    "url": "",
+    "sdgs": [
+      8,
+      9,
+      14
+    ]
+  },
+  {
+    "id": "report64",
+    "title": "The Case for Space: The Impact of Space Derived Services and Data",
+    "author": "",
+    "year": "2009",
+    "publisher": "Oxford Economics",
+    "journal": "",
+    "keywords": [
+      "Economic stats & forecasts"
+    ],
+    "note": "An overview of the significant growth of space sector since 2000.",
+    "howpublished": "https://www.ukspace.org/wp-content/uploads/2020/04/The-Case-for-Space-Final-Report-July-2009.pdf",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      11
+    ]
+  },
+  {
+    "id": "report65",
+    "title": "The Education and Skills Case for Space",
+    "author": "",
+    "year": "2006",
+    "publisher": "PPARC",
+    "journal": "",
+    "keywords": [
+      "Policy & strategy",
+      "Education"
+    ],
+    "note": "",
+    "howpublished": "https://www.stem.org.uk/resources/physical/resource/203871/education-and-skills-case-space",
+    "url": "",
+    "sdgs": [
+      4,
+      13,
+      9
+    ]
+  },
+  {
+    "id": "report66",
+    "title": "Bringing Space into School Science",
+    "author": "",
+    "year": "2005",
+    "publisher": "PPARC",
+    "journal": "",
+    "keywords": [
+      "Policy & strategy",
+      "Education"
+    ],
+    "note": "",
+    "howpublished": "https://www.stem.org.uk/resources/physical/resource/201032/bringing-space-school-science",
+    "url": "",
+    "sdgs": [
+      4,
+      13,
+      14
+    ]
+  },
+  {
+    "id": "LightFieldStudios2021",
+    "title": "A CLIMATE DISCLOSURE FRAMEWORK FOR SMALL AND MEDIUM-SIZED ENTERPRISES (SMEs) NOVEMBER 2021",
+    "author": "LightFieldStudios",
+    "year": "2021",
+    "publisher": "",
+    "journal": "",
+    "keywords": [
+      "reflecting windows"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      8,
+      9,
+      13
+    ]
+  },
+  {
+    "id": "Canny1986",
+    "title": "A Computational Approach to Edge Detection",
+    "author": "John Canny",
+    "year": "1986",
+    "publisher": "",
+    "journal": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+    "keywords": [
+      "Edge detection",
+      "feature extraction",
+      "image processing",
+      "machine vision",
+      "multiscale image analysis"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      15,
+      9,
+      8
+    ]
+  },
+  {
+    "id": "Variath2025",
+    "title": "A Critical Review of the Guidelines for the Long-Term Sustainability in Outer Space",
+    "author": "Adithya Variath",
+    "year": "2025",
+    "publisher": "",
+    "journal": "Lex ad Coelum",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      14,
+      13
+    ]
+  },
+  {
+    "id": "Szolucha2024",
+    "title": "A disappearing frontier?: An ethnographic study of the labour of imagination of SpaceX fans and space creators in South Texas",
+    "author": "Anna Szolucha",
+    "year": "2024",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Ethnography",
+      "Fandom",
+      "Frontier",
+      "Imagination",
+      "Labour",
+      "Space enthusiasts",
+      "SpaceX"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      11,
+      9,
+      14
+    ]
+  },
+  {
+    "id": "Atek2022",
+    "title": "A Geospatial Artificial Intelligence and satellite-based earth observation cognitive system in response to COVID-19",
+    "author": "Sofiane Atek and Cristiano Pesaresi and Marco Eugeni and Corrado De Vito and Vincenzo Cardinale and Massimo Mecella and Antonello Rescio and Luca Petronzio and Aldo Vincenzi and Pasquale Pistillo and Filippo Bianchini and Gianfranco Giusto and Giorgio Pasquali and Paolo Gaudenzi",
+    "year": "2022",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Business intelligence",
+      "COVID-19",
+      "Decision support system",
+      "Earth observation",
+      "Geospatial artificial intelligence"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      15,
+      13,
+      16
+    ]
+  },
+  {
+    "id": "Alberti2025",
+    "title": "A holistic approach to space sustainability: Closing the loop between global space health indicators and life cycle assessment",
+    "author": "Cecilia Lanfredi Alberti and Yirui Wang and Andrew R Wilson and Massimiliano Vasile",
+    "year": "2025",
+    "publisher": "",
+    "journal": "",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      13,
+      12
+    ]
+  },
+  {
+    "id": "Perks2024",
+    "title": "A holistic systems thinking approach to space sustainability via space debris management",
+    "author": "Megan E. Perks and Hugh G. Lewis and Nina Vaidya",
+    "year": "2024",
+    "publisher": "Elsevier Ltd",
+    "journal": "Journal of Space Safety Engineering",
+    "keywords": [
+      "Atmosphere",
+      "CO2",
+      "Causal loop diagram",
+      "Circular Economy",
+      "Feedbacks",
+      "Launch",
+      "Models",
+      "Re-entry",
+      "Space sustainability",
+      "Systems thinking"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      14,
+      13
+    ]
+  },
+  {
+    "id": "Bencivenga2025",
+    "title": "A Neural Network analysis of single-channel Light Curves for the characterization of Resident Space Objects",
+    "author": "Pasquale Bencivenga and Matteo Anton Matacera and Giorgio Isoletta and Roberto Opromolla and Giancarmine Fasano",
+    "year": "2025",
+    "publisher": "",
+    "journal": "",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      6,
+      17,
+      14
+    ]
+  },
+  {
+    "id": "Pasco2003",
+    "title": "A new role for a new millenium? The changing nature of space activities",
+    "author": "Xavier Pasco",
+    "year": "2003",
+    "publisher": "Elsevier BV",
+    "journal": "Space Policy",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      11,
+      9,
+      14
+    ]
+  },
+  {
+    "id": "Fuchs2024",
+    "title": "A primer to new space business - Beyond “Business in space: The new frontier” (Goodrich, Kitmacher and Amtey, 1987)",
+    "author": "Sebastian H. Fuchs and Tim Vorley and Marc J. Ventresca",
+    "year": "2024",
+    "publisher": "Elsevier Inc.",
+    "journal": "Journal of Business Venturing Insights",
+    "keywords": [
+      "Low Earth Orbit",
+      "New Space",
+      "Space business",
+      "Space management"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      14
+    ]
+  },
+  {
+    "id": "Bo2025",
+    "title": "A review of oxygen generation through renewable hydrogen production",
+    "author": "Zhang Bo and Mohd Farid Muhamad Said and Erdiwansyah Erdiwansyah and Rizalman Mamat and Jiang Xiaoxia",
+    "year": "2025",
+    "publisher": "Elsevier B.V.",
+    "journal": "Sustainable Chemistry for Climate Action",
+    "keywords": [
+      "Environmental impact",
+      "High purity oxygen",
+      "Renewable energy",
+      "System efficiency",
+      "Water electrolysis"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      7,
+      12,
+      14
+    ]
+  },
+  {
+    "id": "Hein2020",
+    "title": "A techno-economic analysis of asteroid mining",
+    "author": "Andreas M. Hein and Robert Matheson and Dan Fries",
+    "year": "2020",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Asteroid mining",
+      "Platinum",
+      "Space economics",
+      "Techno-economic analysis"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      9,
+      17
+    ]
+  },
+  {
+    "id": "Maiwald2024",
+    "title": "About feasibility of SpaceX's human exploration Mars mission scenario with Starship",
+    "author": "Volker Maiwald and Mika Bauerfeind and Svenja Fälker and Bjarne Westphal and Christian Bach",
+    "year": "2024",
+    "publisher": "Nature Research",
+    "journal": "Scientific Reports",
+    "keywords": [
+      "Future space missions",
+      "Human spaceflight",
+      "Mars",
+      "Mission feasibility"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      11,
+      3
+    ]
+  },
+  {
+    "id": "London2015",
+    "title": "About London Economics",
+    "author": "London",
+    "year": "2015",
+    "publisher": "",
+    "journal": "",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "http://www.satnews.com/story.php?number=102772070",
+    "sdgs": [
+      11,
+      8,
+      10
+    ]
+  },
+  {
+    "id": "Baker2010",
+    "title": "Achieving forest carbon information with higher certainty: A five-part plan",
+    "author": "D. James Baker and Gary Richards and Alan Grainger and Patrick Gonzalez and Sandra Brown and Ruth DeFries and Alexander Held and Josef Kellndorfer and Peter Ndunda and Dennis Ojima and Per Erik Skrovseth and Carlos Souza and Fred Stolle",
+    "year": "2010",
+    "publisher": "",
+    "journal": "Environmental Science and Policy",
+    "keywords": [
+      "Deforestation",
+      "Forest Carbon Measurement",
+      "Reporting",
+      "and Verification (MRV)",
+      "Forest carbon assessment",
+      "Forest degradation",
+      "International coordination",
+      "National forest carbon accounting",
+      "Reducing Emissions from Deforestation and forest Degradation (REDD)",
+      "Satellite data access",
+      "Standards and verification"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      15,
+      13,
+      12
+    ]
+  },
+  {
+    "id": "Hu2025",
+    "title": "AI-Driven Collaborative Satellite Object Detection for Space Sustainability",
+    "author": "Peng Hu and Wenxuan Zhang",
+    "year": "2025",
+    "publisher": "",
+    "journal": "arXiv preprint arXiv:2508.00755",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      17,
+      15,
+      14
+    ]
+  },
+  {
+    "id": "Astsatryan2021",
+    "title": "Air temperature forecasting using artificial neural network for Ararat valley",
+    "author": "Hrachya Astsatryan and Hayk Grigoryan and Aghasi Poghosyan and Rita Abrahamyan and Shushanik Asmaryan and Vahagn Muradyan and Garegin Tepanosyan and Yaniss Guigoz and Gregory Giuliani",
+    "year": "2021",
+    "publisher": "Springer Science and Business Media Deutschland GmbH",
+    "journal": "Earth Science Informatics",
+    "keywords": [
+      "Armenian data cube",
+      "Big earth data",
+      "High-performance computing",
+      "Neural networks",
+      "Swiss data cube",
+      "Weather forecast"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      8,
+      7
+    ]
+  },
+  {
+    "id": "Naesset2007",
+    "title": "Airborne laser scanning as a method in operational forest inventory: Status of accuracy assessments accomplished in Scandinavia",
+    "author": "Erik Naesset",
+    "year": "2007",
+    "publisher": "",
+    "journal": "Scandinavian Journal of Forest Research",
+    "keywords": [
+      "Biophysical stand properties",
+      "Forest inventory",
+      "Forest planning",
+      "Laser scanning"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      15,
+      9,
+      13
+    ]
+  },
+  {
+    "id": "Liou2011",
+    "title": "An active debris removal parametric study for LEO environment remediation",
+    "author": "J. C. Liou",
+    "year": "2011",
+    "publisher": "Elsevier Ltd",
+    "journal": "Advances in Space Research",
+    "keywords": [
+      "Active debris removal",
+      "Modeling",
+      "Orbital debris"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      14,
+      15
+    ]
+  },
+  {
+    "id": "Do2016",
+    "title": "An independent assessment of the technical feasibility of the Mars One mission plan - Updated analysis",
+    "author": "Sydney Do and Andrew Owens and Koki Ho and Samuel Schreiner and Olivier De Weck",
+    "year": "2016",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Colonization",
+      "Habitation",
+      "ISRU",
+      "Life support",
+      "Mars",
+      "Supportability"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      15,
+      11
+    ]
+  },
+  {
+    "id": "Som2010",
+    "title": "An international symbol for the sustained exploration of space",
+    "author": "Sanjoy Som",
+    "year": "2010",
+    "publisher": "Elsevier BV",
+    "journal": "Space Policy",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      13,
+      11
+    ]
+  },
+  {
+    "id": "Wilkerson2010",
+    "title": "Analysis of emission data from global commercial aviation: 2004 and 2006",
+    "author": "J. T. Wilkerson and M. Z. Jacobson and A. Malwitz and S. Balasubramanian and R. Wayson and G. Fleming and A. D. Naiman and S. K. Lele",
+    "year": "2010",
+    "publisher": "",
+    "journal": "Atmospheric Chemistry and Physics",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      9,
+      7
+    ]
+  },
+  {
+    "id": "Scir2015",
+    "title": "Analysis of orbit determination for space based optical space surveillance system",
+    "author": "Gioacchino Sciré and Fabio Santoni and Fabrizio Piergentili",
+    "year": "2015",
+    "publisher": "Elsevier Ltd",
+    "journal": "Advances in Space Research",
+    "keywords": [
+      "Orbit determination",
+      "Space based optical observation",
+      "Space debris monitoring"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      16,
+      14,
+      12
+    ]
+  },
+  {
+    "id": "Walker2001",
+    "title": "Analysis of the effectiveness of space debris mitigation measures using the DELTA model",
+    "author": "R. Walker and C. E. Martin and P. H. Stokes and J. E. Wilkinson and H. Klinkrad",
+    "year": "2001",
+    "publisher": "Elsevier Ltd",
+    "journal": "Advances in Space Research",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      13,
+      11
+    ]
+  },
+  {
+    "id": "Artemyeva2016",
+    "title": "Analytical chemistry in water quality monitoring during manned space missions",
+    "author": "Anastasia A. Artemyeva",
+    "year": "2016",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      6,
+      14,
+      13
+    ]
+  },
+  {
+    "id": "Saunders2015",
+    "title": "Anonymising interview data: challenges and compromise in practice",
+    "author": "Benjamin Saunders and Jenny Kitzinger and Celia Kitzinger",
+    "year": "2015",
+    "publisher": "SAGE Publications Ltd",
+    "journal": "Qualitative Research",
+    "keywords": [
+      "anonymity",
+      "coma",
+      "confidentiality",
+      "minimally conscious",
+      "research ethics",
+      "serious brain injury",
+      "vegetative"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      10,
+      1,
+      13
+    ]
+  },
+  {
+    "id": "Maury2020",
+    "title": "Application of environmental life cycle assessment (LCA) within the space sector: A state of the art",
+    "author": "Thibaut Maury and Philippe Loubet and Sara Morales Serrano and Aurélie Gallice and Guido Sonnemann",
+    "year": "2020",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "ecodesign",
+      "environmental impact",
+      "life cycle assessment",
+      "space industry",
+      "space sustainability",
+      "space systems"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      12,
+      9
+    ]
+  },
+  {
+    "id": "Kwak2023",
+    "title": "Assessing the potential toxicity of hazardous material released from Pb-based perovskite solar cells to crop plants",
+    "author": "Jin Il Kwak and Tae Yang Lee and Youn Joo An",
+    "year": "2023",
+    "publisher": "Elsevier Ltd",
+    "journal": "Journal of Cleaner Production",
+    "keywords": [
+      "Akagare",
+      "Crop plant",
+      "Lead iodide",
+      "Perovskite",
+      "Phytotoxicity"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      6,
+      12,
+      7
+    ]
+  },
+  {
+    "id": "Pardini2009",
+    "title": "Assessment of the consequences of the Fengyun-1C breakup in low Earth orbit",
+    "author": "C. Pardini and L. Anselmo",
+    "year": "2009",
+    "publisher": "Elsevier Ltd",
+    "journal": "Advances in Space Research",
+    "keywords": [
+      "Anti-satellite test",
+      "Ballistic parameters estimation",
+      "Collision risk evaluation",
+      "Fengyun-1C breakup",
+      "Fragments cloud evolution",
+      "Orbital debris"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      16,
+      4
+    ]
+  },
+  {
+    "id": "Allouis2010",
+    "title": "Assessment of tree and crown heights of a maritime pine forest at plot level using a fullwaveform ultraviolet lidar prototype",
+    "author": "Tristan Allouis and Sylvie Durrieu and Juan Cuesta and Patrick Chazette and Pierre H. Flamant and Pierre Couteron",
+    "year": "2010",
+    "publisher": "Institute of Electrical and Electronics Engineers Inc.",
+    "journal": "International Geoscience and Remote Sensing Symposium (IGARSS)",
+    "keywords": [
+      "Aerosols",
+      "Forestry",
+      "Lidar",
+      "Sampling methods",
+      "Signal analysis"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      15,
+      14,
+      13
+    ]
+  },
+  {
+    "id": "Williamson2012",
+    "title": "Assuring the sustainability of space activities",
+    "author": "Ray A. Williamson",
+    "year": "2012",
+    "publisher": "Elsevier Ltd",
+    "journal": "Space Policy",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      14,
+      9
+    ]
+  },
+  {
+    "id": "Morin2021",
+    "title": "Astro-Environmentalism: Towards a Polycentric Governance of Space Debris",
+    "author": "Jean Frédéric Morin and Benjamin Richard",
+    "year": "2021",
+    "publisher": "John Wiley and Sons Inc",
+    "journal": "Global Policy",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      14,
+      11
+    ]
+  },
+  {
+    "id": "Piergentili2017",
+    "title": "Attitude Determination of Orbiting Objects from Lightcurve Measurements",
+    "author": "Fabrizio Piergentili and Fabio Santoni and Patrick Seitzer",
+    "year": "2017",
+    "publisher": "Institute of Electrical and Electronics Engineers Inc.",
+    "journal": "IEEE Transactions on Aerospace and Electronic Systems",
+    "keywords": [
+      "Attitude determination",
+      "bistatic photometric observations",
+      "genetic algorithm",
+      "lightcurve analysis",
+      "space debris",
+      "three-dimensional (3-D) virtual model"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      4,
+      14,
+      5
+    ]
+  },
+  {
+    "id": "Piattoni2014",
+    "title": "Automated image analysis for space debris identification and astrometric measurements",
+    "author": "Jacopo Piattoni and Alessandro Ceruti and Fabrizio Piergentili",
+    "year": "2014",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Automated image analysis",
+      "Object detection",
+      "Space debris",
+      "Star field"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      4,
+      6,
+      14
+    ]
+  },
+  {
+    "id": "Mefteh2025",
+    "title": "Balancing the Space Economy and Sustainability: Legal Frameworks and Policy Initiatives for Responsible Space Activities",
+    "author": "Boudour Mefteh",
+    "year": "2025",
+    "publisher": "",
+    "journal": "Essays of Faculty of Law University of Pécs, Yearbook of [year]",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      9,
+      12,
+      14
+    ]
+  },
+  {
+    "id": "delaFuenteMarcos2025",
+    "title": "Basaltic quasi-mini-moon: Characterizing 2024 PT5 with the 10.4 m Gran Telescopio Canarias and the Two-meter Twin Telescope",
+    "author": "R. de la Fuente Marcos and J. De León and M. Serra-Ricart and C. de la Fuente Marcos and M. R. Alarcon and J. Licandro and S. Geier and A. Tejero and A. Perez Romero and F. Perez-Toledo and A. Cabrera-Lavers",
+    "year": "2025",
+    "publisher": "EDP Sciences",
+    "journal": "Astronomy and Astrophysics",
+    "keywords": [
+      "Asteroids: general",
+      "Asteroids: individual: 2024 PT5",
+      "Celestial mechanics",
+      "Methods: numerical",
+      "Minor planets",
+      "Techniques: spectroscopic"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      17,
+      13,
+      9
+    ]
+  },
+  {
+    "id": "Galli2019",
+    "title": "Beyond planetary protection: What is planetary sustainability and what are its implications for space research?",
+    "author": "André Galli and Andreas Losch",
+    "year": "2019",
+    "publisher": "Elsevier Ltd",
+    "journal": "Life Sciences in Space Research",
+    "keywords": [
+      "Ethics",
+      "Space exploration",
+      "Sustainability",
+      "UN sustainable development goals"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      17,
+      14,
+      16
+    ]
+  },
+  {
+    "id": "Figueira2025",
+    "title": "Biomining of lunar regolith simulant EAC-1 A with the fungus Penicillium simplicissimum",
+    "author": "João Figueira and Stella Koch and Daniel W. Müller and Sebastian Slawik and Aidan Cowley and Ralf Moeller and Marta Cortesão",
+    "year": "2025",
+    "publisher": "BioMed Central Ltd",
+    "journal": "Fungal Biology and Biotechnology",
+    "keywords": [
+      "Fungal biotechnology4",
+      "ISRU1",
+      "LUNA10",
+      "Lunar habitat9",
+      "Lunar regolith6",
+      "Space exploration8",
+      "bioleaching7",
+      "biomining2",
+      "moon3",
+      "penicillium5"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      15,
+      14,
+      6
+    ]
+  },
+  {
+    "id": "Davison1997",
+    "title": "Bootstrap Methods and their Application",
+    "author": "A. C. Davison and D. V. Hinkley",
+    "year": "1997",
+    "publisher": "Cambridge University Press",
+    "journal": "Bootstrap Methods and their Application",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      17,
+      1,
+      15
+    ]
+  },
+  {
+    "id": "Aripin2023",
+    "title": "BRAND SUSTAINABILITY STRATEGY DEVELOPMENT: THE ROLE OF SOCIAL MEDIA MARKETING AND MARKETING MANAGEMENT",
+    "author": "Zaenal Aripin and Wawan Ichwanudin and Ijang Faisal",
+    "year": "2023",
+    "publisher": "",
+    "journal": "Kriez Academy",
+    "keywords": [
+      "Strategy development",
+      "brand sustainability",
+      "social media marketing"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "www.Kriezacademy.com",
+    "sdgs": [
+      12,
+      9,
+      14
+    ]
+  },
+  {
+    "id": "Howarth2020",
+    "title": "Building a Social Mandate for Climate Action: Lessons from COVID-19",
+    "author": "Candice Howarth and Peter Bryant and Adam Corner and Sam Fankhauser and Andy Gouldson and Lorraine Whitmarsh and Rebecca Willis",
+    "year": "2020",
+    "publisher": "Springer",
+    "journal": "Environmental and Resource Economics",
+    "keywords": [
+      "Behaviour change",
+      "COVID-19",
+      "Climate change",
+      "Deliberative governance",
+      "Social mandate"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      15,
+      12
+    ]
+  },
+  {
+    "id": "Shah2006",
+    "title": "Building better theory by bridging the quantitative-qualitative divide",
+    "author": "Sonali K. Shah and Kevin G. Corley",
+    "year": "2006",
+    "publisher": "",
+    "journal": "Journal of Management Studies",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      5,
+      10,
+      11
+    ]
+  },
+  {
+    "id": "Katz2024",
+    "title": "Can a satellite dodge space debris?",
+    "author": "J. I. Katz",
+    "year": "2024",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Collision avoidance",
+      "Manœuvering satellites",
+      "Space debris",
+      "Space situational awareness"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      13,
+      16
+    ]
+  },
+  {
+    "id": "Kellner2009",
+    "title": "Canopy height and ground elevation in a mixed-land-use lowland Neotropical rain forest landscape",
+    "author": "James R. Kellner and David B. Clark and Michelle A. Hofton",
+    "year": "2009",
+    "publisher": "",
+    "journal": "Ecology",
+    "keywords": [
+      "Biomass",
+      "Carbon",
+      "Costa Rica",
+      "Forest structure",
+      "La Selva Biological Station",
+      "Landscape",
+      "LiDAR",
+      "Light detection and ranging",
+      "Neotropics",
+      "Remote sensing",
+      "Sustainability"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      15,
+      13,
+      14
+    ]
+  },
+  {
+    "id": "Hall2011",
+    "title": "Characterizing 3D vegetation structure from space: Mission requirements",
+    "author": "Forrest G. Hall and Kathleen Bergen and James B. Blair and Ralph Dubayah and Richard Houghton and George Hurtt and Josef Kellndorfer and Michael Lefsky and Jon Ranson and Sasan Saatchi and H. H. Shugart and Diane Wickland",
+    "year": "2011",
+    "publisher": "",
+    "journal": "Remote Sensing of Environment",
+    "keywords": [
+      "3D vegetation tructure",
+      "Biomass",
+      "Carbon cycle",
+      "DESDynI",
+      "Lidar",
+      "Radar",
+      "Remote sensing"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      15,
+      13,
+      14
+    ]
+  },
+  {
+    "id": "Tiwari2024",
+    "title": "Charging of space debris in the LEO and GEO regions",
+    "author": "Sanat Kumar Tiwari and Sachin Sharma and Sanjay Mishra and Abhijit Sen",
+    "year": "2024",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Debris charging",
+      "SPIS",
+      "Space debris"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      9,
+      17
+    ]
+  },
+  {
+    "id": "Du2017",
+    "title": "China's approach to space sustainability: Legal and policy analysis",
+    "author": "Rong Du",
+    "year": "2017",
+    "publisher": "Elsevier Ltd",
+    "journal": "Space Policy",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      9,
+      17
+    ]
+  },
+  {
+    "id": "Aversano2024",
+    "title": "Circular and sustainable space: Findings from hyperspectral imaging",
+    "author": "N. Aversano and G. Bonifazi and I. D'Adamo and R. Palmieri and S. Serranti and A. Simone",
+    "year": "2024",
+    "publisher": "Elsevier Ltd",
+    "journal": "Journal of Cleaner Production",
+    "keywords": [
+      "Hyperspectral imaging",
+      "Material sorting",
+      "Space waste management",
+      "Space waste recycling",
+      "Sustainable procedures"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      15,
+      6
+    ]
+  },
+  {
+    "id": "Zardo2025",
+    "title": "Circular supply chain and circular practices: An analysis from the perspective of sustainability and Industry 4.0",
+    "author": "Duane Jaqueline Zardo and Ana Paula Granela and Simone Sehnem and Dulcimar Jose Julkovski",
+    "year": "2025",
+    "publisher": "John Wiley and Sons Ltd",
+    "journal": "Corporate Social Responsibility and Environmental Management",
+    "keywords": [
+      "Industry 4.0",
+      "circular economy",
+      "supply chain",
+      "sustainability"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      9,
+      8
+    ]
+  },
+  {
+    "id": "Cziczo2013",
+    "title": "Clarifying the dominant sources and mechanisms of cirrus cloud formation",
+    "author": "Daniel J. Cziczo and Karl D. Froyd and Corinna Hoose and Eric J. Jensen and Minghui Diao and Mark A. Zondlo and Jessica B. Smith and Cynthia H. Twohy and Daniel M. Murphy",
+    "year": "2013",
+    "publisher": "American Association for the Advancement of Science",
+    "journal": "Science",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      8,
+      15,
+      14
+    ]
+  },
+  {
+    "id": "Dwivedi2022",
+    "title": "Climate change and COP26: Are digital technologies and information management part of the problem or the solution? An editorial reflection and call to action",
+    "author": "Yogesh K. Dwivedi and Laurie Hughes and Arpan Kumar Kar and Abdullah M. Baabdullah and Purva Grover and Roba Abbas and Daniela Andreini and Iyad Abumoghli and Yves Barlette and Deborah Bunker and Leona Chandra Kruse and Ioanna Constantiou and Robert M. Davison and Rahul De and Rameshwar Dubey and Henry Fenby-Taylor and Babita Gupta and Wu He and Mitsuru Kodama and Matti Mäntymäki and Bhimaraya Metri and Katina Michael and Johan Olaisen and Niki Panteli and Samuli Pekkola and Rohit Nishant and Ramakrishnan Raman and Nripendra P. Rana and Frantz Rowe and Suprateek Sarker and Brenda Scholtz and Maung Sein and Jeel Dharmeshkumar Shah and Thompson S.H. Teo and Manoj Kumar Tiwari and Morten Thanning Vendelø and Michael Wade",
+    "year": "2022",
+    "publisher": "Elsevier Ltd",
+    "journal": "International Journal of Information Management",
+    "keywords": [
+      "COP26",
+      "Climate change",
+      "Digital world",
+      "Information management",
+      "Information systems",
+      "Information technology",
+      "Sustainability",
+      "Sustainable Development Goals (SDGs)"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      12,
+      14
+    ]
+  },
+  {
+    "id": "Omaly2023",
+    "title": "CNES space sustainability index",
+    "author": "Pierre Omaly and Nicolas Pillet and Vincent Ruch and Bruno Revelin",
+    "year": "2023",
+    "publisher": "Elsevier Ltd",
+    "journal": "Advances in Space Research",
+    "keywords": [
+      "INDEX sustainability cnes"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      9,
+      11
+    ]
+  },
+  {
+    "id": "OfficeoftheEuropeanUnion2023",
+    "title": "Commission Delegated Regulation (EU) 2023/2772 of 31 July 2023 supplementing Directive 2013/34/EU of the European Parliament and of the Council as regards sustainability reporting standards",
+    "author": "Publications Office of the European Union",
+    "year": "2023",
+    "publisher": "",
+    "journal": "",
+    "keywords": [
+      "ISSN 1977-0677"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "http://data.europa.eu/eli/reg_del/2023/2772/oj",
+    "sdgs": [
+      12,
+      13,
+      9
+    ]
+  },
+  {
+    "id": "Drigani2020",
+    "title": "Communicating Space Exploration",
+    "author": "Fulvio Drigani",
+    "year": "2020",
+    "publisher": "Springer International Publishing",
+    "journal": "",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      13,
+      11
+    ]
+  },
+  {
+    "id": "Drigani2020",
+    "title": "Communicating Space Exploration",
+    "author": "Fulvio Drigani",
+    "year": "2020",
+    "publisher": "Springer International Publishing",
+    "journal": "",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      13,
+      11
+    ]
+  },
+  {
+    "id": "Shapiro1996",
+    "title": "Connected Component Labeling and Adjacency Graph Construction",
+    "author": "Linda G. Shapiro",
+    "year": "1996",
+    "publisher": "",
+    "journal": "Machine Intelligence and Pattern Recognition",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      11,
+      9,
+      7
+    ]
+  },
+  {
+    "id": "Wiedemann2004",
+    "title": "Cost and benefit analysis of space debris mitigation measures",
+    "author": "Carsten Wiedemann and Michael Oswald and Jörg Bendisch and Holger Sdunnus and Peter Vörsmann",
+    "year": "2004",
+    "publisher": "",
+    "journal": "Acta Astronautica",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      13,
+      6
+    ]
+  },
+  {
+    "id": "Rao2025",
+    "title": "Cost-Benefit Analysis of Debris Risk Reduction Portfolios",
+    "author": "Akhil Rao and Jericho Locke and Thomas J Colvin",
+    "year": "2025",
+    "publisher": "",
+    "journal": "",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      13,
+      15
+    ]
+  },
+  {
+    "id": "Bergen2001",
+    "title": "Design principles for ecological engineering",
+    "author": "Scott D. Bergen and Susan M. Bolton and James L. Fridley",
+    "year": "2001",
+    "publisher": "",
+    "journal": "Ecological Engineering",
+    "keywords": [
+      "Design principles",
+      "Ecological design",
+      "Ecological engineering"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      15,
+      13
+    ]
+  },
+  {
+    "id": "Arena2017",
+    "title": "Design, Manufacturing, and Ground Testing of a Control-Moment Gyro for Agile Microsatellites",
+    "author": "Lorenzo Arena and Fabrizio Piergentili and Fabio Santoni",
+    "year": "2017",
+    "publisher": "American Society of Civil Engineers (ASCE)",
+    "journal": "Journal of Aerospace Engineering",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      9,
+      2,
+      13
+    ]
+  },
+  {
+    "id": "Simiyu2017",
+    "title": "Determinants of quality of shared sanitation facilities in informal settlements: Case study of Kisumu, Kenya",
+    "author": "Sheillah Simiyu and Mark Swilling and Sandy Cairncross and Richard Rheingans",
+    "year": "2017",
+    "publisher": "BioMed Central Ltd.",
+    "journal": "BMC Public Health",
+    "keywords": [
+      "Behaviour",
+      "Collective action",
+      "Common pool resources",
+      "Management principles",
+      "Sanitation quality"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      6,
+      11,
+      17
+    ]
+  },
+  {
+    "id": "Martinez2018",
+    "title": "Development of an international compendium of guidelines for the long-term sustainability of outer space activities",
+    "author": "Peter Martinez",
+    "year": "2018",
+    "publisher": "Elsevier Ltd",
+    "journal": "Space Policy",
+    "keywords": [
+      "Space diplomacy",
+      "Space security",
+      "Space sustainability"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      17,
+      14
+    ]
+  },
+  {
+    "id": "Santoni2015",
+    "title": "Dynamics of Spring-Deployed Solar Panels for Agile Nanospacecraft",
+    "author": "Fabio Santoni",
+    "year": "2015",
+    "publisher": "American Society of Civil Engineers (ASCE)",
+    "journal": "Journal of Aerospace Engineering",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      7,
+      13,
+      9
+    ]
+  },
+  {
+    "id": "Durrieu2013",
+    "title": "Earth observation from space–The issue of environmental sustainability",
+    "author": "Sylvie Durrieu and Ross F Nelson",
+    "year": "2013",
+    "publisher": "Elsevier",
+    "journal": "Space Policy",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      12,
+      15
+    ]
+  },
+  {
+    "id": "Anderson2017",
+    "title": "Earth observation in service of the 2030 Agenda for Sustainable Development",
+    "author": "Katherine Anderson and Barbara Ryan and William Sonntag and Argyro Kavvada and Lawrence Friedl",
+    "year": "2017",
+    "publisher": "Taylor and Francis Ltd.",
+    "journal": "Geo-Spatial Information Science",
+    "keywords": [
+      "Earth observation",
+      "Group on Earth Observations (GEO)",
+      "Sustainable Development Goal (SDG)",
+      "the 2030 Agenda"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      15,
+      13
+    ]
+  },
+  {
+    "id": "Lewis2011",
+    "title": "Effect of thermospheric contraction on remediation of the near-Earth space debris environment",
+    "author": "Hugh G. Lewis and Arrun Saunders and Graham Swinerd and Rebecca J. Newland",
+    "year": "2011",
+    "publisher": "Blackwell Publishing Ltd",
+    "journal": "Journal of Geophysical Research: Space Physics",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      14,
+      12
+    ]
+  },
+  {
+    "id": "Sun2016",
+    "title": "Effects of gas temperature on nozzle damping experiments on cold-flow rocket motors",
+    "author": "Bing Bing Sun and Shi Peng Li and Wan Xing Su and Jun Wei Li and Ning Fei Wang",
+    "year": "2016",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Cold flow test",
+      "Gas temperature",
+      "Nozzle damping",
+      "Solid rocket motor"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      10,
+      13,
+      8
+    ]
+  },
+  {
+    "id": "Bolis2025",
+    "title": "End-Of-Life Disposal Parametric Analysis in Cislunar Space: Earth-Moon L2 Escape No-Return Trajectories",
+    "author": "Mathilda Bolis and Elisa Maria Alessi and Camilla Colombo and others",
+    "year": "2025",
+    "publisher": "",
+    "journal": "",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      13,
+      15
+    ]
+  },
+  {
+    "id": "Paravano2024",
+    "title": "End-Users Engagement for Enacting Value of Complex Projects: An Ecological Perspective",
+    "author": "Alessandro Paravano and Giorgio Locatelli and Paolo Trucco",
+    "year": "2024",
+    "publisher": "American Society of Civil Engineers (ASCE)",
+    "journal": "Journal of Management in Engineering",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      15,
+      11
+    ]
+  },
+  {
+    "id": "Claret2025",
+    "title": "Enhancing Space Resilience: An Integrated Maintenance and Routing Optimization Framework for On-Orbit Servicing Missions",
+    "author": "Nathan Claret and Adam Abdin",
+    "year": "2025",
+    "publisher": "",
+    "journal": "",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      9,
+      11
+    ]
+  },
+  {
+    "id": "Letizia2020",
+    "title": "Environment capacity as an early mission design driver",
+    "author": "Francesca Letizia and Stijn Lemmens and Holger Krag",
+    "year": "2020",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Mitigation guidelines",
+      "Space debris environment",
+      "Space debris index",
+      "Space traffic management"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      6,
+      13
+    ]
+  },
+  {
+    "id": "Klinger2021",
+    "title": "Environmental Geopolitics and Outer Space",
+    "author": "Julie Michelle Klinger",
+    "year": "2021",
+    "publisher": "Routledge",
+    "journal": "Geopolitics",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      13,
+      15
+    ]
+  },
+  {
+    "id": "Dinda2004",
+    "title": "Environmental Kuznets Curve hypothesis: A survey",
+    "author": "Soumyananda Dinda",
+    "year": "2004",
+    "publisher": "Elsevier",
+    "journal": "Ecological Economics",
+    "keywords": [
+      "EKC",
+      "Economic growth",
+      "Environmental Kuznets Curve",
+      "Environmental protection",
+      "Environmental quality",
+      "Inverted-U-shape",
+      "N50",
+      "O13",
+      "Pollution",
+      "Q20",
+      "Turning point"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      14,
+      8
+    ]
+  },
+  {
+    "id": "Miraux2022",
+    "title": "Environmental limits to the space sector's growth",
+    "author": "Loïs Miraux",
+    "year": "2022",
+    "publisher": "Elsevier B.V.",
+    "journal": "Science of the Total Environment",
+    "keywords": [
+      "Environmental impact",
+      "Limits to growth",
+      "NewSpace",
+      "Planetary boundaries",
+      "Regulatory risk",
+      "Space sustainability"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      14,
+      8
+    ]
+  },
+  {
+    "id": "Miraux2022",
+    "title": "Environmental sustainability of future proposed space activities",
+    "author": "Loïs Miraux and Andrew Ross Wilson and Guillermo J. Dominguez Calabuig",
+    "year": "2022",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Environmental impact",
+      "Future",
+      "Life Cycle Assessment",
+      "Scenario",
+      "Space sustainability",
+      "Space system"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      14,
+      6
+    ]
+  },
+  {
+    "id": "Pardini2020",
+    "title": "Environmental sustainability of large satellite constellations in low earth orbit",
+    "author": "Carmen Pardini and Luciano Anselmo",
+    "year": "2020",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Collision rate percentage increase",
+      "Criticality index",
+      "Environmental sustainability",
+      "Large constellations",
+      "Low earth orbit",
+      "Space debris"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      14,
+      12
+    ]
+  },
+  {
+    "id": "Hewett2020",
+    "title": "Erratum to “Infrared absorption cross sections of isobutane with hydrogen and nitrogen as broadening gases” J Quant Spectrosc Radiat Transf 227 (2019) 226–229",
+    "author": "D. M. Hewett and P. F. Bernath and B. E. Billinghurst",
+    "year": "2020",
+    "publisher": "Elsevier Ltd",
+    "journal": "Journal of Quantitative Spectroscopy and Radiative Transfer",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      13,
+      10
+    ]
+  },
+  {
+    "id": "Flohrer2009",
+    "title": "ESA's process for the identification and assessment of high-risk conjunction events",
+    "author": "T. Flohrer and H. Krag and H. Klinkrad",
+    "year": "2009",
+    "publisher": "Elsevier Ltd",
+    "journal": "Advances in Space Research",
+    "keywords": [
+      "COSMOS",
+      "Collision avoidance",
+      "ENIVSAT",
+      "Orbit improvement",
+      "Radar tracking",
+      "Space debris",
+      "Space surveillance"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      16,
+      14
+    ]
+  },
+  {
+    "id": "Nelson2009",
+    "title": "Estimating Siberian timber volume using MODIS and ICESat/GLAS",
+    "author": "R. Nelson and K. J. Ranson and G. Sun and D. S. Kimes and V. Kharuk and P. Montesano",
+    "year": "2009",
+    "publisher": "",
+    "journal": "Remote Sensing of Environment",
+    "keywords": [
+      "Boreal forest",
+      "GLAS",
+      "LiDAR",
+      "MODIS",
+      "Multispectral",
+      "Siberia",
+      "Timber volume"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      15,
+      9,
+      2
+    ]
+  },
+  {
+    "id": "Wilson2022",
+    "title": "Estimating the CO2 intensity of the space sector",
+    "author": "Andrew Ross Wilson",
+    "year": "2022",
+    "publisher": "Nature Research",
+    "journal": "Nature Astronomy",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      12,
+      7
+    ]
+  },
+  {
+    "id": "Mesalles-Ripoll2025",
+    "title": "Estimating the environmental impacts of a derelict object on current and future operational spacecraft",
+    "author": "Pol Mesalles-Ripoll and Georgy Trubnikov and Matthew Duncan and Mike Lindsay",
+    "year": "2025",
+    "publisher": "Elsevier",
+    "journal": "Acta Astronautica",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      13,
+      12
+    ]
+  },
+  {
+    "id": "Nsset2008",
+    "title": "Estimation of above- and below-ground biomass across regions of the boreal forest zone using airborne laser",
+    "author": "Erik Næsset and Terje Gobakken",
+    "year": "2008",
+    "publisher": "",
+    "journal": "Remote Sensing of Environment",
+    "keywords": [
+      "Above-ground biomass",
+      "Airborne laser scanning",
+      "Below-ground biomass",
+      "Carbon accounting",
+      "Forest monitoring",
+      "Regional forest inventory"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      15,
+      9,
+      12
+    ]
+  },
+  {
+    "id": "Holmgren2003",
+    "title": "Estimation of tree height and stem volume on plots using airborne laser scanning",
+    "author": "Johan Holmgren and Mats Nilsson and Håkan Olsson",
+    "year": "2003",
+    "publisher": "Society of American Foresters",
+    "journal": "Forest Science",
+    "keywords": [
+      "Forest inventory",
+      "LIDAR",
+      "Scanning angle"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      15,
+      4,
+      2
+    ]
+  },
+  {
+    "id": "Rosa2013",
+    "title": "European space research in support of international partnership",
+    "author": "P. Rosa and P. Ehrenfreund and G. Horneck and G. Thiele",
+    "year": "2013",
+    "publisher": "Elsevier Ltd",
+    "journal": "Space Policy",
+    "keywords": [
+      "Climate change",
+      "European Commission",
+      "International Space Station",
+      "International cooperation",
+      "Space exploration",
+      "Space policy"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      14,
+      9
+    ]
+  },
+  {
+    "id": "Marzioli2020",
+    "title": "Evaluation of time difference of arrival (Tdoa) networks performance for launcher vehicles and spacecraft tracking",
+    "author": "Paolo Marzioli and Fabio Santoni and Fabrizio Piergentili",
+    "year": "2020",
+    "publisher": "MDPI AG",
+    "journal": "Aerospace",
+    "keywords": [
+      "Hyperbolic",
+      "Launchers",
+      "Orbit determination",
+      "Satellite",
+      "Suborbital",
+      "TDOA",
+      "Time Difference of Arrival",
+      "Tracking"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      4,
+      13,
+      17
+    ]
+  },
+  {
+    "id": "Robinson2022",
+    "title": "Evidence base for policy makers Derbyshire Spatial Energy Study",
+    "author": "Sandy Robinson",
+    "year": "2022",
+    "publisher": "",
+    "journal": "",
+    "keywords": [
+      "Derbyshire",
+      "Energy",
+      "Low Carbon",
+      "Renewable"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      7,
+      12,
+      9
+    ]
+  },
+  {
+    "id": "Ribeiro2018",
+    "title": "Evolution of Policies and Technologies for Space Debris Mitigation Based on Bibliometric and Patent Analyses",
+    "author": "Joana Ramos Ribeiro and Luciele Cristina Pelicioni and Ilmo Caldas and Carlos Lahoz and Mischel Carmen Neyra Belderrain",
+    "year": "2018",
+    "publisher": "Elsevier Ltd",
+    "journal": "Space Policy",
+    "keywords": [
+      "Bibliometric analysis",
+      "Future scenario",
+      "Patent analysis",
+      "Space debris"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      14,
+      12
+    ]
+  },
+  {
+    "id": "Palmroth2025",
+    "title": "Expanding use of space is an opportunity for sustainability but a threat to resilience",
+    "author": "Minna Palmroth and Janne I. Hukkinen",
+    "year": "2025",
+    "publisher": "Resilience Alliance",
+    "journal": "Ecology and Society",
+    "keywords": [
+      "green and digital transition",
+      "reliability",
+      "resilience",
+      "sustainable use of space"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      11,
+      13,
+      9
+    ]
+  },
+  {
+    "id": "Olivieri2020",
+    "title": "Experimental characterization of multi-layer 3D-printed shields for microsatellites",
+    "author": "Lorenzo Olivieri and Cinzia Giacomuzzo and Alessandro Francesconi and Hedley Stokes and Alessandro Rossi",
+    "year": "2020",
+    "publisher": "Elsevier Ltd",
+    "journal": "Journal of Space Safety Engineering",
+    "keywords": [
+      "Additive manufacturing",
+      "Hypervelocity impact test",
+      "Shields"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      9,
+      10,
+      8
+    ]
+  },
+  {
+    "id": "Almonacid2017",
+    "title": "Extending the coverage of the internet of things with low-cost nanosatellite networks",
+    "author": "Vicente Almonacid and Laurent Franck",
+    "year": "2017",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Cubesat applications",
+      "Energy-efficiency",
+      "Internet of things",
+      "M2M",
+      "Multiple-access",
+      "Random access"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      5,
+      7,
+      1
+    ]
+  },
+  {
+    "id": "Kramer2014",
+    "title": "Extraterrestrial environmental impact assessments - A foreseeable prerequisite for wise decisions regarding outer space exploration, research and development",
+    "author": "William R. Kramer",
+    "year": "2014",
+    "publisher": "Elsevier Ltd",
+    "journal": "Space Policy",
+    "keywords": [
+      "Environmental assessment",
+      "Environmental impact statement",
+      "Environmental policy",
+      "Extraterrestrial environmental impact",
+      "Futures studies",
+      "Moon agreement",
+      "National environmental policy act",
+      "Outer space treaty",
+      "Space policy"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      14,
+      12
+    ]
+  },
+  {
+    "id": "Maiwald2023",
+    "title": "Frameworks of sustainability and sustainable development in a spaceflight context: A systematic review and critical analysis",
+    "author": "Volker Maiwald",
+    "year": "2023",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "ISRU",
+      "Space treaty",
+      "Sustainable development",
+      "planetary Sustainability"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      14,
+      13
+    ]
+  },
+  {
+    "id": "Delmas2024",
+    "title": "Future evolutions of EUSST collision avoidance service",
+    "author": "Florian Delmas and Cristina Perez and Paulo Nunes",
+    "year": "2024",
+    "publisher": "Elsevier Ltd",
+    "journal": "Journal of Space Safety Engineering",
+    "keywords": [
+      "CDM",
+      "Conjunction assessment",
+      "Conjunction data message",
+      "EUSST",
+      "Space traffic"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      11,
+      4,
+      13
+    ]
+  },
+  {
+    "id": "Zhang2022",
+    "title": "Geopolitical risk and the returns and volatility of global defense companies: A new race to arms?",
+    "author": "Zhengyong Zhang and Elie Bouri and Tony Klein and Naji Jalkh",
+    "year": "2022",
+    "publisher": "Elsevier Inc.",
+    "journal": "International Review of Financial Analysis",
+    "keywords": [
+      "Co-movements via wavelets",
+      "Defense and aerospace companies",
+      "Geopolitical risk (GPR) index",
+      "Russia",
+      "War in Ukraine"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      17,
+      16
+    ]
+  },
+  {
+    "id": "Hese2005",
+    "title": "Global biomass mapping for an improved understanding of the CO 2 balance - The Earth observation mission Carbon-3D",
+    "author": "S. Hese and W. Lucht and C. Schmullius and M. Barnsley and R. Dubayah and D. Knorr and K. Neumann and T. Riedel and K. Schröter",
+    "year": "2005",
+    "publisher": "",
+    "journal": "Remote Sensing of Environment",
+    "keywords": [
+      "BRDF",
+      "Biomass",
+      "Biosphere models",
+      "CO 2",
+      "Carbon",
+      "Carbon-3D",
+      "Global change",
+      "LIDAR"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      15,
+      13,
+      14
+    ]
+  },
+  {
+    "id": "Garcia2021",
+    "title": "Global commons law: norms to safeguard the planet and humanity’s heritage",
+    "author": "Denise Garcia",
+    "year": "2021",
+    "publisher": "SAGE Publications Ltd",
+    "journal": "International Relations",
+    "keywords": [
+      "Antarctica",
+      "arctic",
+      "climate change",
+      "global commons",
+      "global commons law",
+      "international law"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      16,
+      14
+    ]
+  },
+  {
+    "id": "Vogler2012",
+    "title": "Global Commons Revisited",
+    "author": "John Vogler",
+    "year": "2012",
+    "publisher": "",
+    "journal": "Global Policy",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      17,
+      14,
+      13
+    ]
+  },
+  {
+    "id": "Palar2024",
+    "title": "Global sensitivity analysis of stochastic re-entry trajectory using explainable surrogate models",
+    "author": "Pramudita Satria Palar and Rafael Stevenson and Muhammad Ridho Alhafiz and Muhammad Daffa Robani and Koji Shimoyama and Lavi Rizki Zuhal",
+    "year": "2024",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Explainable surrogate model",
+      "Global sensitivity analysis",
+      "Re-entry trajectory analysis",
+      "Stochastic"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      11,
+      14
+    ]
+  },
+  {
+    "id": "Wilson2015",
+    "title": "Global waste management outlook",
+    "author": "David C.. Wilson",
+    "year": "2015",
+    "publisher": "United Nations Environment Programme",
+    "journal": "",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      6,
+      14
+    ]
+  },
+  {
+    "id": "Trur2021",
+    "title": "Governance aspects of space sustainability: The role of epistemic actors as enablers of progress",
+    "author": "Aurélie Trur",
+    "year": "2021",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Epistemic communities",
+      "Global governance",
+      "International cooperation",
+      "Space debris",
+      "Space sustainability"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      14,
+      11
+    ]
+  },
+  {
+    "id": "Mohanty2025",
+    "title": "Guardians of the Galaxy: Preserving Space for Future Generations",
+    "author": "Patita Paban Mohanty and Subhankar Das",
+    "year": "2025",
+    "publisher": "Springer",
+    "journal": "",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      16,
+      11
+    ]
+  },
+  {
+    "id": "Cruz2025",
+    "title": "Holistic Renovation of Single-Family Homes in Hawaiʻi: A Context-Sensitive Approach to Balancing Functionality, Space, Sustainability, and Architectural Identity",
+    "author": "Jannah Lyn Dela Cruz",
+    "year": "2025",
+    "publisher": "",
+    "journal": "",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      11,
+      6,
+      14
+    ]
+  },
+  {
+    "id": "Froehlich2022",
+    "title": "How space can support African civil societies: Security, peace, and development through Efficient Governance Supported by space applications",
+    "author": "Annette Froehlich and Nicolas Ringas and James Wilson",
+    "year": "2022",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Africa",
+      "Agenda 2063",
+      "E-governance",
+      "Outer space",
+      "Primary needs",
+      "Sustainable development goals"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      17,
+      11,
+      16
+    ]
+  },
+  {
+    "id": "Minster2020",
+    "title": "Hyperion: Artificial gravity reusable crewed deep space transport",
+    "author": "Gedi Minster and Alexander Chang and Jacob Banner Inouye and Sriram Narayanan and Austin Carter and Jialing Tong and David A. Barnhart",
+    "year": "2020",
+    "publisher": "Elsevier Ltd",
+    "journal": "Journal of Space Safety Engineering",
+    "keywords": [
+      "Artificial gravity",
+      "Crewed transport",
+      "Mars",
+      "Reusable"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      11,
+      6,
+      13
+    ]
+  },
+  {
+    "id": "Ehresmann2024",
+    "title": "Impactful Marketing and Outreach Activities of German Student Space Associations",
+    "author": "Manfred Ehresmann and Nicolas Heinz and Bahar Karahan and Paul Nehlich and Clemens Riegler",
+    "year": "2024",
+    "publisher": "",
+    "journal": "75 th International Astronautical Congress (IAC)",
+    "keywords": [
+      "Outreach",
+      "marketing",
+      "public relations",
+      "student societies"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      9,
+      11,
+      2
+    ]
+  },
+  {
+    "id": "Gleason2025",
+    "title": "Implementing Design Principles to Improve Scientific Communication and Modeling Via Game Board Development",
+    "author": "Robert Gleason and Rehman Qureshi and Davide Guzzetti and Devon Ward",
+    "year": "2025",
+    "publisher": "Auburn University",
+    "journal": "Auburn University Journal of Undergraduate Scholarship",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      13,
+      7
+    ]
+  },
+  {
+    "id": "Wilson2023",
+    "title": "Implementing life cycle sustainability assessment for improved space mission design",
+    "author": "Andrew R. Wilson and Massimiliano Vasile and Christie Maddock and Keith Baker",
+    "year": "2023",
+    "publisher": "",
+    "journal": "Integrated Environmental Assessment and Management",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      13,
+      14
+    ]
+  },
+  {
+    "id": "Ross2022",
+    "title": "Implications of a growing spaceflight industry: Climate change",
+    "author": "Martin N. Ross and Karen L. Jones",
+    "year": "2022",
+    "publisher": "Elsevier Ltd",
+    "journal": "Journal of Space Safety Engineering",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      8,
+      9
+    ]
+  },
+  {
+    "id": "Yang2023",
+    "title": "Improving international governance of space debris in the era of large constellations of small satellites and China's response",
+    "author": "Kuan Yang and Yulin Wu",
+    "year": "2023",
+    "publisher": "Elsevier Ltd",
+    "journal": "Advances in Space Research",
+    "keywords": [
+      "Active debris removal",
+      "International governance",
+      "Small satellite constellation",
+      "Space debris",
+      "Space debris mitigation"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      17,
+      14
+    ]
+  },
+  {
+    "id": "Trushlyakov2017",
+    "title": "Improving of technical characteristics of launch vehicles with liquid rocket engines using active onboard de-orbiting systems",
+    "author": "V. Trushlyakov and Ya Shatrov",
+    "year": "2017",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Active onboard de-orbiting system",
+      "Gasification",
+      "Impact zone",
+      "Launch vehicle",
+      "Liquid propellant residues",
+      "Payload mass",
+      "Re-entry",
+      "Worked-off stages"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      9,
+      14
+    ]
+  },
+  {
+    "id": "VenturaGargioni2025",
+    "title": "In Space Reverse Logistics",
+    "author": "Gustavo Ventura Gargioni",
+    "year": "2025",
+    "publisher": "Virginia Tech",
+    "journal": "",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      9,
+      14,
+      11
+    ]
+  },
+  {
+    "id": "Zarcone2025",
+    "title": "Innovative space debris surveillance systems for circumterrestrial space sustainability and space traffic management",
+    "author": "Gaetano Zarcone and others",
+    "year": "2025",
+    "publisher": "Università degli Studi di Roma\" La Sapienza\"",
+    "journal": "",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      15,
+      12
+    ]
+  },
+  {
+    "id": "Santos2024",
+    "title": "Integrated architecture for navigation and attitude control of low-cost suborbital launch vehicles",
+    "author": "Pedro dos Santos and Paulo Oliveira",
+    "year": "2024",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Attitude control",
+      "Kinematic filters",
+      "LQR",
+      "Navigation",
+      "Suborbital launch vehicles",
+      "TVC"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      5,
+      3
+    ]
+  },
+  {
+    "id": "vanNes2025",
+    "title": "Integrating space, sustainability, and regionalism as a framework for cooperative space programmes",
+    "author": "Pieter van Nes",
+    "year": "2025",
+    "publisher": "Elsevier",
+    "journal": "Space Policy",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      11,
+      9,
+      17
+    ]
+  },
+  {
+    "id": "Radtke2017",
+    "title": "Interactions of the space debris environment with mega constellations—Using the example of the OneWeb constellation",
+    "author": "Jonas Radtke and Christopher Kebschull and Enrico Stoll",
+    "year": "2017",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Constellation",
+      "OneWeb",
+      "Space Debris"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      14,
+      15
+    ]
+  },
+  {
+    "id": "Barato2024",
+    "title": "Investigation of different strategies for access to space of small satellites on a defined LEO orbit",
+    "author": "Francesco Barato and Elena Toson and Fabiana Milza and Daniele Pavarin",
+    "year": "2024",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Constellations deployment",
+      "Dedicated launch",
+      "LEO",
+      "Sat carrier",
+      "Self-propelled dispenser",
+      "Small sats"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      9,
+      2,
+      11
+    ]
+  },
+  {
+    "id": "Holste2020",
+    "title": "Ion thrusters for electric propulsion: Scientific issues developing a niche technology into a game changer",
+    "author": "K. Holste and P. Dietz and S. Scharmann and K. Keil and T. Henning and D. Zschätzsch and M. Reitemeyer and B. Nauschütt and F. Kiefer and F. Kunze and J. Zorn and C. Heiliger and N. Joshi and U. Probst and R. Thüringer and C. Volkmar and D. Packan and S. Peterschmitt and K. T. Brinkmann and H. G. Zaunick and M. H. Thoma and M. Kretschmer and H. J. Leiter and S. Schippers and K. Hannemann and P. J. Klar",
+    "year": "2020",
+    "publisher": "American Institute of Physics Inc.",
+    "journal": "Review of Scientific Instruments",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      7,
+      9,
+      13
+    ]
+  },
+  {
+    "id": "Martinez2012",
+    "title": "Is there a need for an African space agency?",
+    "author": "Peter Martinez",
+    "year": "2012",
+    "publisher": "Elsevier Ltd",
+    "journal": "Space Policy",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      17,
+      9,
+      8
+    ]
+  },
+  {
+    "id": "Borowski2021",
+    "title": "Key Technologies, Systems, and Infrastructure Enabling the Commercialization and Human Settlement of Low Earth Orbit, the Moon, and Cislunar Space",
+    "author": "Stanley K. Borowski and Stephen W. Ryan and David R. McCurdy and Bob G. Sauls",
+    "year": "2021",
+    "publisher": "Mary Ann Liebert Inc.",
+    "journal": "New Space",
+    "keywords": [
+      "LPI",
+      "LUNOX",
+      "STN",
+      "cargo transport",
+      "commuter shuttle",
+      "lunar commerce"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      11,
+      9,
+      14
+    ]
+  },
+  {
+    "id": "Li2019",
+    "title": "LEO constellation-augmented multi-GNSS for rapid PPP convergence",
+    "author": "Xingxing Li and Fujian Ma and Xin Li and Hongbo Lv and Lang Bian and Zihao Jiang and Xiaohong Zhang",
+    "year": "2019",
+    "publisher": "Springer Verlag",
+    "journal": "Journal of Geodesy",
+    "keywords": [
+      "LEO constellation",
+      "LEO-augmented multi-GNSS",
+      "Precise orbit determination (POD)",
+      "Precise point positioning (PPP)",
+      "Rapid convergence"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      17,
+      4,
+      13
+    ]
+  },
+  {
+    "id": "Piergentili2021",
+    "title": "LEO object’s light-curve acquisition system and their inversion for attitude reconstruction",
+    "author": "Fabrizio Piergentili and Gaetano Zarcone and Leonardo Parisi and Lorenzo Mariani and Shariar Hadji Hossein and Fabio Santoni",
+    "year": "2021",
+    "publisher": "MDPI AG",
+    "journal": "Aerospace",
+    "keywords": [
+      "3D position and attitude reconstruction",
+      "Light-curve inversion",
+      "Space debris",
+      "Space situational awareness",
+      "Space surveillance"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      4,
+      6
+    ]
+  },
+  {
+    "id": "Wulder2012",
+    "title": "Lidar sampling for large-area forest characterization: A review",
+    "author": "Michael A. Wulder and Joanne C. White and Ross F. Nelson and Erik Næsset and Hans Ole Ørka and Nicholas C. Coops and Thomas Hilker and Christopher W. Bater and Terje Gobakken",
+    "year": "2012",
+    "publisher": "",
+    "journal": "Remote Sensing of Environment",
+    "keywords": [
+      "Extrapolation",
+      "Forest",
+      "Large area",
+      "Lidar",
+      "Light detection and ranging",
+      "Monitoring",
+      "Sampling",
+      "Satellite",
+      "Stratification"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      15,
+      2,
+      13
+    ]
+  },
+  {
+    "id": "Guine2011",
+    "title": "Life cycle assessment: Past, present, and future",
+    "author": "Jeroen B. Guinée and Reinout Heijungs and Gjalt Huppes and Alessandra Zamagni and Paolo Masoni and Roberto Buonamici and Tomas Ekvall and Tomas Rydberg",
+    "year": "2011",
+    "publisher": "",
+    "journal": "Environmental Science and Technology",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      3,
+      12,
+      2
+    ]
+  },
+  {
+    "id": "Wilson2023",
+    "title": "Life cycle engineering of space systems: Preliminary findings",
+    "author": "Andrew Ross Wilson and Massimiliano Vasile",
+    "year": "2023",
+    "publisher": "Elsevier Ltd",
+    "journal": "Advances in Space Research",
+    "keywords": [
+      "Concurrent engineering",
+      "Ecodesign",
+      "Life cycle assessment",
+      "Life cycle engineering",
+      "SmallSats",
+      "Space systems",
+      "Sustainable design"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      9,
+      14
+    ]
+  },
+  {
+    "id": "Ross2009",
+    "title": "Limits on the space launch market related to stratospheric ozone depletion",
+    "author": "Martin Ross and Darin Toohey and Manfred Peinemann and Patrick Ross",
+    "year": "2009",
+    "publisher": "",
+    "journal": "Astropolitics",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      14,
+      12
+    ]
+  },
+  {
+    "id": "Liu2009",
+    "title": "Long-term forest management and timely transfer of carbon into wood products help reduce atmospheric carbon",
+    "author": "Guoliang Liu and Shijie Han",
+    "year": "2009",
+    "publisher": "",
+    "journal": "Ecological Modelling",
+    "keywords": [
+      "Carbon",
+      "Climate change",
+      "Forest management",
+      "Modelling",
+      "Sustainable carbon storage capacity",
+      "Wood products"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      15,
+      12,
+      13
+    ]
+  },
+  {
+    "id": "Peters2016",
+    "title": "Mission concept and autonomy considerations for active Debris removal",
+    "author": "Susanne Peters and Christoph Pirzkall and Hauke Fiedler and Roger Förstner",
+    "year": "2016",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      6,
+      11
+    ]
+  },
+  {
+    "id": "Nelson2010",
+    "title": "Model effects on GLAS-based regional estimates of forest biomass and carbon",
+    "author": "Ross Nelson",
+    "year": "2010",
+    "publisher": "Taylor and Francis Ltd.",
+    "journal": "International Journal of Remote Sensing",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      15,
+      12,
+      7
+    ]
+  },
+  {
+    "id": "Nwankwo2025",
+    "title": "Model-Driven Assessment of Space Weather Impact Levels on The Trajectory of Floating Debris in Low Earth Orbit",
+    "author": "Victor U J Nwankwo and Jens Berdermann and Frank Heymann and Timothy Kodikara and Isabel Fernandez Gomez",
+    "year": "2025",
+    "publisher": "",
+    "journal": "",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      14,
+      4
+    ]
+  },
+  {
+    "id": "Yoon2023",
+    "title": "Navigating a large satellite constellation in the new space era: An operational perspective",
+    "author": "Yoke T. Yoon and Paolo Ghezzo and Calum Hervieu and Ignacio Dominguez Adame Palomo",
+    "year": "2023",
+    "publisher": "Elsevier Ltd",
+    "journal": "Journal of Space Safety Engineering",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      9,
+      11,
+      17
+    ]
+  },
+  {
+    "id": "Grazieschi2020",
+    "title": "Neighbourhood sustainability: State of the art, critical review and space-temporal analysis",
+    "author": "Gianluca Grazieschi and Francesco Asdrubali and Claudia Guattari",
+    "year": "2020",
+    "publisher": "Elsevier Ltd",
+    "journal": "Sustainable Cities and Society",
+    "keywords": [
+      "Climate change",
+      "Neighbourhood sustainability",
+      "Sustainability protocols",
+      "Sustainable urban development",
+      "Urban planning"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      11,
+      13,
+      9
+    ]
+  },
+  {
+    "id": "Tsalis2020",
+    "title": "New challenges for corporate sustainability reporting: United Nations' 2030 Agenda for sustainable development and the sustainable development goals",
+    "author": "Thomas A. Tsalis and Kyveli E. Malamateniou and Dimitrios Koulouriotis and Ioannis E. Nikolaou",
+    "year": "2020",
+    "publisher": "John Wiley and Sons Ltd",
+    "journal": "Corporate Social Responsibility and Environmental Management",
+    "keywords": [
+      "2030 AgendaGlobal Reporting Initiative (GRI) guidelinessustainability reporting and accountingSustainable Development Goals (SDGs)",
+      "corporate social responsibility"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      17,
+      13
+    ]
+  },
+  {
+    "id": "Finn1984",
+    "title": "Nuclear satellites: why has the government downplayed their risks?",
+    "author": "D. P. Finn",
+    "year": "1984",
+    "publisher": "",
+    "journal": "Environment",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      3,
+      2
+    ]
+  },
+  {
+    "id": "Liu2010",
+    "title": "Numerical investigation on atomic oxygen undercutting of the protective polymer film using Monte Carlo approach",
+    "author": "Yang Liu and Xue Liu and Guohui Li and Tao Li",
+    "year": "2010",
+    "publisher": "Elsevier B.V.",
+    "journal": "Applied Surface Science",
+    "keywords": [
+      "Atomic oxygen undercutting",
+      "Monte Carlo",
+      "Numerical simulation",
+      "Polymer film"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      4,
+      10,
+      13
+    ]
+  },
+  {
+    "id": "Hao2016",
+    "title": "Numerical study of hypersonic flows over reentry configurations with different chemical nonequilibrium models",
+    "author": "Jiaao Hao and Jingying Wang and Chunhian Lee",
+    "year": "2016",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Chemical reaction model",
+      "Hypersonic",
+      "Thermal nonequilibrium"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      10,
+      11
+    ]
+  },
+  {
+    "id": "Cuesta2010",
+    "title": "Observing the forest canopy with a new ultra-violet compact airborne lidar",
+    "author": "Juan Cuesta and Patrick Chazette and Tristan Allouis and Pierre H. Flamant and Sylvie Durrieu and Joseph Sanak and Pascal Genau and Dominique Guyon and Denis Loustau and Cyrille Flamant",
+    "year": "2010",
+    "publisher": "",
+    "journal": "Sensors",
+    "keywords": [
+      "Airborne lidar",
+      "Canopy lidar",
+      "Laser",
+      "Ultra-light airplane",
+      "Ultra-violet emission",
+      "Vegetation active remote sensing"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      15,
+      16,
+      1
+    ]
+  },
+  {
+    "id": "Schulz2021",
+    "title": "On the anthropogenic and natural injection of matter into Earth's atmosphere",
+    "author": "Leonard Schulz and Karl Heinz Glassmeier",
+    "year": "2021",
+    "publisher": "Elsevier Ltd",
+    "journal": "Advances in Space Research",
+    "keywords": [
+      "Ablation",
+      "Anthropogenic effect",
+      "Atmosphere",
+      "Human-made injection",
+      "Mass influx",
+      "Meteorite composition",
+      "Meteoroids",
+      "Satellite constellations"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      12,
+      4
+    ]
+  },
+  {
+    "id": "Davidian2022",
+    "title": "Operationalizing the definition of “Commercial Space”",
+    "author": "Ken Davidian",
+    "year": "2022",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Commercial",
+      "Definition",
+      "Evolution",
+      "Market organization",
+      "Teleology"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      9,
+      14,
+      11
+    ]
+  },
+  {
+    "id": "Wooten2018",
+    "title": "Operations in Space: Exploring a New Industry",
+    "author": "Joel O. Wooten and Christopher S. Tang",
+    "year": "2018",
+    "publisher": "Blackwell Publishing Ltd",
+    "journal": "Decision Sciences",
+    "keywords": [
+      "Operations Management",
+      "Research",
+      "Space Industry",
+      "Supply Chain"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      14
+    ]
+  },
+  {
+    "id": "Santoni2015",
+    "title": "Optimal geometry and materials for nanospacecraft magnetic damping systems",
+    "author": "F. Santoni and M. L. Battagliere and F. Fiorillo and E. Ferrara",
+    "year": "2015",
+    "publisher": "Institute of Electrical and Electronics Engineers Inc.",
+    "journal": "IEEE Transactions on Aerospace and Electronic Systems",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      7,
+      17,
+      8
+    ]
+  },
+  {
+    "id": "Bennett2025",
+    "title": "Orbital debris requires prevention and mitigation across the satellite life cycle",
+    "author": "Mia M Bennett",
+    "year": "2025",
+    "publisher": "Nature Publishing Group UK London",
+    "journal": "Communications Engineering",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      13,
+      12
+    ]
+  },
+  {
+    "id": "Murtaza2020",
+    "title": "Orbital debris threat for space sustainability and way forward",
+    "author": "Abid Murtaza and Syed Jahanzeb Hussain Pirzada and Tongge Xu and Liu Jianwei",
+    "year": "2020",
+    "publisher": "IEEE",
+    "journal": "IEEE access",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      14,
+      12
+    ]
+  },
+  {
+    "id": "Murtaza2020",
+    "title": "Orbital debris threat for space sustainability and way forward",
+    "author": "Abid Murtaza and Syed Jahanzeb Hussain Pirzada and Tongge Xu and Liu Jianwei",
+    "year": "2020",
+    "publisher": "IEEE",
+    "journal": "IEEE access",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      14,
+      12
+    ]
+  },
+  {
+    "id": "DeGeest2022",
+    "title": "Ours, not yours: Property rights, poaching and deterrence in common-pool resources",
+    "author": "Lawrence R. De Geest and Abdul H. Kidwai and Javier E. Portillo",
+    "year": "2022",
+    "publisher": "Elsevier B.V.",
+    "journal": "Journal of Economic Psychology",
+    "keywords": [
+      "Common-pool resource",
+      "Deterrence",
+      "Poaching",
+      "Property rights"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      6,
+      15
+    ]
+  },
+  {
+    "id": "Weeden2011",
+    "title": "Overview of the legal and policy challenges of orbital debris removal",
+    "author": "Brian Weeden",
+    "year": "2011",
+    "publisher": "Elsevier Ltd",
+    "journal": "Space Policy",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      14,
+      12
+    ]
+  },
+  {
+    "id": "Ostendorf2011",
+    "title": "Overview: Spatial information and indicators for sustainable management of natural resources",
+    "author": "Bertram Ostendorf",
+    "year": "2011",
+    "publisher": "Elsevier B.V.",
+    "journal": "Ecological Indicators",
+    "keywords": [
+      "DSS",
+      "Decision support",
+      "GIS",
+      "Remote sensing",
+      "Space-time"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      15,
+      14,
+      12
+    ]
+  },
+  {
+    "id": "Irons2023",
+    "title": "Pancosmorio (world limit) theory of the sustainability of human migration and settlement in space",
+    "author": "Lee G. Irons and Morgan A. Irons",
+    "year": "2023",
+    "publisher": "Frontiers Media S.A.",
+    "journal": "Frontiers in Astronomy and Space Sciences",
+    "keywords": [
+      "Fermi paradox",
+      "ecology",
+      "resilience",
+      "space habitation",
+      "sustainability",
+      "sustainable development",
+      "terraform",
+      "thermodynamics"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      11,
+      13,
+      15
+    ]
+  },
+  {
+    "id": "Oh2023",
+    "title": "Patterns of Skill Sets for Multiskilled Laborers Based on Construction Job Advertisements Using Web Scraping and Text Analytics",
+    "author": "Heung Jin Oh and Soowon Chang and Baabak Ashuri",
+    "year": "2023",
+    "publisher": "American Society of Civil Engineers (ASCE)",
+    "journal": "Journal of Management in Engineering",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      8,
+      9,
+      11
+    ]
+  },
+  {
+    "id": "Spall1998",
+    "title": "Peer debriefing in qualitative research: Emerging operational models",
+    "author": "Sharon Spall",
+    "year": "1998",
+    "publisher": "",
+    "journal": "Qualitative Inquiry",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      5,
+      13,
+      11
+    ]
+  },
+  {
+    "id": "HadjiHossein2023",
+    "title": "Photometric characterization of Starlink satellite tracklets using RGB filters",
+    "author": "Shariar Hadji Hossein and Lorenzo Cimino and Matteo Rossetti and Gaetano Zarcone and Lorenzo Mariani and Federico Curianò and Mascia Bucciarelli and Patrick Seitzer and Fabio Santoni and Alessandra Di Cecco and Fabrizio Piergentili",
+    "year": "2023",
+    "publisher": "Elsevier Ltd",
+    "journal": "Advances in Space Research",
+    "keywords": [
+      "Astronomy",
+      "Large constellations",
+      "Photometry",
+      "Space debris",
+      "Space situational awareness",
+      "Starlink"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      12,
+      6
+    ]
+  },
+  {
+    "id": "Cheney2020",
+    "title": "Planetary Protection in the New Space Era: Science and Governance",
+    "author": "Thomas Cheney and Christopher Newman and Karen Olsson-Francis and Scott Steele and Victoria Pearson and Simon Lee",
+    "year": "2020",
+    "publisher": "Frontiers Media S.A.",
+    "journal": "Frontiers in Astronomy and Space Sciences",
+    "keywords": [
+      "COSPAR",
+      "astrobiology",
+      "enforcement",
+      "environment",
+      "planetary protection",
+      "space governance",
+      "space law"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      15,
+      14
+    ]
+  },
+  {
+    "id": "Bahadorestani2020",
+    "title": "Planning for sustainable stakeholder engagement based on the assessment of conflicting interests in projects",
+    "author": "Amir Bahadorestani and Nader Naderpajouh and Rehan Sadiq",
+    "year": "2020",
+    "publisher": "Elsevier Ltd",
+    "journal": "Journal of Cleaner Production",
+    "keywords": [
+      "Conflicts",
+      "Green building",
+      "Management for stakeholder",
+      "Management of stakeholder",
+      "Projects",
+      "Quality Function Deployment",
+      "Stakeholder engagement",
+      "Sustainability"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      12,
+      15
+    ]
+  },
+  {
+    "id": "Bao2025",
+    "title": "Politeconometrics: The regulatory confluence theory as a mathematical framework for measuring the impact of regulations relative to other factors and externalities in the space industry",
+    "author": "Dexter Baño",
+    "year": "2025",
+    "publisher": "Elsevier Ltd",
+    "journal": "Advances in Space Research",
+    "keywords": [
+      "Econometrics",
+      "Economics",
+      "Econophysics",
+      "Politeconometrics",
+      "Space law",
+      "Space policy"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      9,
+      14,
+      13
+    ]
+  },
+  {
+    "id": "Gibbings2012",
+    "title": "Potential of laser-induced ablation for future space applications",
+    "author": "Alison Gibbings and Massimiliano Vasile and John Mark Hopkins and David Burns and Ian Watson",
+    "year": "2012",
+    "publisher": "Elsevier Ltd",
+    "journal": "Space Policy",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      16,
+      4,
+      17
+    ]
+  },
+  {
+    "id": "Banks2011",
+    "title": "Prediction of atomic oxygen erosion yield for spacecraft polymers",
+    "author": "Bruce A. Banks and Jane A. Backus and Michael V. Manno and Deborah L. Waters and Kevin C. Cameron and Kim K. De Groh",
+    "year": "2011",
+    "publisher": "American Institute of Aeronautics and Astronautics Inc.",
+    "journal": "Journal of Spacecraft and Rockets",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      17,
+      14
+    ]
+  },
+  {
+    "id": "Vasile2016",
+    "title": "Preface: Advances in asteroid and space debris science and technology - Part 2",
+    "author": "Massimiliano Vasile",
+    "year": "2016",
+    "publisher": "Elsevier Ltd",
+    "journal": "Advances in Space Research",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      13,
+      16
+    ]
+  },
+  {
+    "id": "Hall2011",
+    "title": "Preface: DESDynI VEG-3D Special Issue",
+    "author": "Forrest Hall and Sassan Saatchi and Ralph Dubayah",
+    "year": "2011",
+    "publisher": "",
+    "journal": "Remote Sensing of Environment",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      10,
+      17,
+      12
+    ]
+  },
+  {
+    "id": "DAnniballe2025",
+    "title": "Preliminary analysis and design of an optical space surveillance and tracking constellation for LEO coverage",
+    "author": "A. D'Anniballe and L. Felicetti and S. Hobbs",
+    "year": "2025",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Constellation design",
+      "Orbit determination",
+      "Space debris",
+      "Space surveillance"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      12,
+      14
+    ]
+  },
+  {
+    "id": "Paravano2025",
+    "title": "Projects benefit realisation through sustainable innovation: drivers and challenges",
+    "author": "Alessandro Paravano and Giorgio Locatelli and Paolo Trucco",
+    "year": "2025",
+    "publisher": "Emerald Publishing",
+    "journal": "Management Decision",
+    "keywords": [
+      "Complex projects",
+      "Corporate social responsibility",
+      "Project benefits",
+      "Satellite",
+      "Sustainability",
+      "Value"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      9,
+      8
+    ]
+  },
+  {
+    "id": "Migaud2020",
+    "title": "Protecting Earth's Orbital Environment: Policy Tools for Combating Space Debris",
+    "author": "Michael R. Migaud",
+    "year": "2020",
+    "publisher": "Elsevier Ltd",
+    "journal": "Space Policy",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      14,
+      15
+    ]
+  },
+  {
+    "id": "Williamson2004",
+    "title": "Protection of the space environment: The first small steps",
+    "author": "Mark Williamson",
+    "year": "2004",
+    "publisher": "Elsevier Ltd",
+    "journal": "Advances in Space Research",
+    "keywords": [
+      "Planetary protection",
+      "Space environment"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      14,
+      15
+    ]
+  },
+  {
+    "id": "Pesmaa2021",
+    "title": "Publishing quantitative papers with rigor and transparency",
+    "author": "Ossi Pesämaa and Ofer Zwikael and Joe F. Hair and Martina Huemann",
+    "year": "2021",
+    "publisher": "Elsevier Ltd",
+    "journal": "International Journal of Project Management",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      5,
+      3,
+      16
+    ]
+  },
+  {
+    "id": "Palinkas2014",
+    "title": "Qualitative and Mixed Methods in Mental Health Services and Implementation Research",
+    "author": "Lawrence A. Palinkas",
+    "year": "2014",
+    "publisher": "Routledge",
+    "journal": "Journal of Clinical Child and Adolescent Psychology",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      10,
+      1,
+      5
+    ]
+  },
+  {
+    "id": "Anselmo2016",
+    "title": "Ranking upper stages in low Earth orbit for active removal",
+    "author": "L. Anselmo and C. Pardini",
+    "year": "2016",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Active removal",
+      "Environment criticality",
+      "Ranking",
+      "Rocket bodies",
+      "Space debris",
+      "Upper stages"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      4,
+      14,
+      13
+    ]
+  },
+  {
+    "id": "Palit2025",
+    "title": "Rebalancing space governance: a global south perspective on outer space as a global commons",
+    "author": "Sibsankar Palit and Thiago S Dias and Subhajit Hazra",
+    "year": "2025",
+    "publisher": "Frontiers",
+    "journal": "Frontiers in Space Technologies",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      17,
+      11
+    ]
+  },
+  {
+    "id": "Boudreau2008",
+    "title": "Regional aboveground forest biomass using airborne and spaceborne LiDAR in Québec",
+    "author": "Jonathan Boudreau and Ross F. Nelson and Hank A. Margolis and André Beaudoin and Luc Guindon and Daniel S. Kimes",
+    "year": "2008",
+    "publisher": "",
+    "journal": "Remote Sensing of Environment",
+    "keywords": [
+      "Biomass estimation",
+      "Forest carbon stocks",
+      "Geoscience Laser Altimeter System (GLAS)",
+      "ICESat",
+      "LiDAR",
+      "Portable Airborne Laser Systems (PALS)"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      15,
+      13,
+      12
+    ]
+  },
+  {
+    "id": "Wang2010",
+    "title": "Remote sensing of ecology, biodiversity and conservation: A review from the perspective of remote sensing specialists",
+    "author": "Kai Wang and Steven E. Franklin and Xulin Guo and Marc Cattet",
+    "year": "2010",
+    "publisher": "",
+    "journal": "Sensors",
+    "keywords": [
+      "Biodiversity and conservation)",
+      "Data fusion",
+      "EBC (ecology",
+      "Image classification",
+      "Integration of remote sensing (RS) and geographic information system (GIS)",
+      "LIDAR",
+      "Remote sensing",
+      "Small-satellite constellation",
+      "Thermal infrared"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      15,
+      14,
+      13
+    ]
+  },
+  {
+    "id": "Melesse2007",
+    "title": "Remote sensing sensors and applications in environmental resources mapping and modelling",
+    "author": "Assefa M. Melesse and Qihao Weng and Prasad S. Thenkabail and Gabriel B. Senay",
+    "year": "2007",
+    "publisher": "MDPI AG",
+    "journal": "Sensors",
+    "keywords": [
+      "Early warning",
+      "Environment",
+      "Hydrology",
+      "Remote sensing",
+      "Sensors",
+      "Urban"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      15,
+      14
+    ]
+  },
+  {
+    "id": "Phipps2012",
+    "title": "Removing orbital debris with lasers",
+    "author": "Claude R. Phipps and Kevin L. Baker and Stephen B. Libby and Duane A. Liedahl and Scot S. Olivier and Lyn D. Pleasance and Alexander Rubenchik and James E. Trebes and E. Victor George and Bogdan Marcovici and James P. Reilly and Michael T. Valley",
+    "year": "2012",
+    "publisher": "Elsevier Ltd",
+    "journal": "Advances in Space Research",
+    "keywords": [
+      "Adaptive optics",
+      "Laser ablation",
+      "Orbital debris removal",
+      "Phase conjugation",
+      "Segmented mirror design",
+      "Space debris"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      13,
+      14
+    ]
+  },
+  {
+    "id": "Hyypp2008",
+    "title": "Review of methods of small-footprint airborne laser scanning for extracting forest inventory data in boreal forests",
+    "author": "J. Hyyppä and H. Hyyppä and D. Leckie and F. Gougeon and X. Yu and M. Maltamo",
+    "year": "2008",
+    "publisher": "Taylor and Francis Ltd.",
+    "journal": "International Journal of Remote Sensing",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      15,
+      9,
+      8
+    ]
+  },
+  {
+    "id": "Virgili2016",
+    "title": "Risk to space sustainability from large constellations of satellites",
+    "author": "B Bastida Virgili and Juan Carlos Dolado and Hugh G Lewis and J Radtke and H Krag and B Revelin and C Cazaux and CAMILLA Colombo and R Crowther and M Metz",
+    "year": "2016",
+    "publisher": "Elsevier",
+    "journal": "Acta Astronautica",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      14,
+      9
+    ]
+  },
+  {
+    "id": "Liou2006",
+    "title": "Risks in space from orbiting debris",
+    "author": "J. C. Liou and N. L. Johnson",
+    "year": "2006",
+    "publisher": "",
+    "journal": "Science",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      14,
+      3
+    ]
+  },
+  {
+    "id": "HadjiHossein2020",
+    "title": "Sapienza Space debris Observatory Network (SSON): A high coverage infrastructure for space debris monitoring",
+    "author": "Shariar Hadji Hossein and Marco Acernese and Tommaso Cardona and Giammarco Cialone and Federico Curianò and Lorenzo Mariani and Veronica Marini and Paolo Marzioli and Leonardo Parisi and Fabrizio Piergentili and Fabio Santoni",
+    "year": "2020",
+    "publisher": "Elsevier",
+    "journal": "Journal of Space Safety Engineering",
+    "keywords": [
+      "Astronomy",
+      "Observatory network",
+      "Space debris",
+      "Space situational awareness",
+      "Space surveillance"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "https://www.sciencedirect.com/science/article/abs/pii/S2468896719301429",
+    "sdgs": [
+      9,
+      14,
+      15
+    ]
+  },
+  {
+    "id": "Piergentili2022",
+    "title": "Satellite early identification through LED observations: First in-orbit results from WildTrackCube-SIMBA",
+    "author": "Fabrizio Piergentili and Paolo Marzioli and Lorenzo Frezza and Federico Curianò and Gaetano Zarcone and Lorenzo Mariani and Diego Amadio and Andrea Gianfermo and Niccolò Picci and Emanuele Bedetti and Shariar Hadji Hossein and Daniel Kiarie Kabutha and Paola Celesti and Matteo Rossetti and Lorenzo Cimino and Mascia Bucciarelli and Patrick Seitzer and James Cutler and Charles Mwaniki and Maurizio Toninelli and Munzer Jahjah and Fabio Santoni",
+    "year": "2022",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      15,
+      16,
+      4
+    ]
+  },
+  {
+    "id": "Boley2021",
+    "title": "Satellite mega-constellations create risks in Low Earth Orbit, the atmosphere and on Earth",
+    "author": "Aaron C. Boley and Michael Byers",
+    "year": "2021",
+    "publisher": "Nature Research",
+    "journal": "Scientific Reports",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      14,
+      11
+    ]
+  },
+  {
+    "id": "Sadlier2015",
+    "title": "Satellite technologies in UK agriculture About London Economics About the Satellite Applications Catapult",
+    "author": "Greg Sadlier and Karen Hope and Neha Varma and Alexander SA Joshi Catapult and Vladimir Stoiljkovic and Estel Blay",
+    "year": "2015",
+    "publisher": "",
+    "journal": "",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      2,
+      9,
+      12
+    ]
+  },
+  {
+    "id": "Newman2015",
+    "title": "Seeking tranquillity: Embedding sustainability in lunar exploration policy",
+    "author": "Christopher J. Newman",
+    "year": "2015",
+    "publisher": "Elsevier Ltd",
+    "journal": "Space Policy",
+    "keywords": [
+      "Commercial mining",
+      "Lunar exploration",
+      "Lunar regulation",
+      "Space sustainability"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      13,
+      14
+    ]
+  },
+  {
+    "id": "Szocik2019",
+    "title": "Should and could humans go to Mars? Yes, but not now and not in the near future",
+    "author": "Konrad Szocik",
+    "year": "2019",
+    "publisher": "Elsevier Ltd",
+    "journal": "Futures",
+    "keywords": [
+      "Existential threats",
+      "Human mission to Mars",
+      "Rationale for human space program",
+      "Social objections",
+      "Space refuge"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      16,
+      11,
+      3
+    ]
+  },
+  {
+    "id": "Hofmann2024",
+    "title": "Simulating exoplanetary atmospheres in the laboratory: Current capabilities of the Berlin atmospheric simulation experimental chamber (BASE)",
+    "author": "Florence Hofmann and Paul Mabey and Egemen Yüzbasi and Benjamin Taysum and John Lee Grenfell and Heike Rauer and Andreas Elsaesser",
+    "year": "2024",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Atmospheric modeling",
+      "Atmospheric simulation chamber",
+      "Biosignatures",
+      "Exoplanets",
+      "Gas-phase reactions",
+      "Photochemistry"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      4,
+      17
+    ]
+  },
+  {
+    "id": "Kebschull2017",
+    "title": "Simulation of the space debris environment in LEO using a simplified approach",
+    "author": "Christopher Kebschull and Philipp Scheidemann and Sebastian Hesselbach and Jonas Radtke and Vitali Braun and H. Krag and Enrico Stoll",
+    "year": "2017",
+    "publisher": "Elsevier Ltd",
+    "journal": "Advances in Space Research",
+    "keywords": [
+      "Environmental Criticality",
+      "Evolution",
+      "Space debris environment"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      14,
+      6
+    ]
+  },
+  {
+    "id": "Guillo2014",
+    "title": "Small is the new Big White Paper Nano/Micro-Satellite Missions for Earth Observation and Remote Sensing Technology Strategy Board",
+    "author": "Corentin Guillo",
+    "year": "2014",
+    "publisher": "",
+    "journal": "",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "http://www.crunchbase.com/organization/planet-labs",
+    "sdgs": [
+      9,
+      14,
+      15
+    ]
+  },
+  {
+    "id": "Guerster2022",
+    "title": "So many beams, so little time: Revenue Management in the next generation of flexible communication satellites",
+    "author": "Markus Guerster and Edward Crawley and Sergi Aliaga and Bruce Cameron",
+    "year": "2022",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Flexible payloads",
+      "Resource allocation",
+      "Revenue management",
+      "Satellite communications"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      9,
+      17,
+      12
+    ]
+  },
+  {
+    "id": "Swarr2009",
+    "title": "Societal life cycle assessment-could you repeat the question?",
+    "author": "Thomas E. Swarr",
+    "year": "2009",
+    "publisher": "",
+    "journal": "International Journal of Life Cycle Assessment",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      3,
+      12,
+      2
+    ]
+  },
+  {
+    "id": "Goh2023",
+    "title": "Solving carbon tax challenges with a holistic approach: Integrating evolutionary game theory and life cycle energy solutions",
+    "author": "Hui Hwang Goh and Zhaoyang Xu and Xue Liang and Dongdong Zhang and Wei Dai and Hui Liu and Tonni Agustiono Kurniawan and Shen Yuong Wong and Kai Chen Goh",
+    "year": "2023",
+    "publisher": "Elsevier Ltd",
+    "journal": "Journal of Cleaner Production",
+    "keywords": [
+      "Carbon emission",
+      "Carbon tax",
+      "Evolutionary game",
+      "Fossil fuel",
+      "Life cycle assessment",
+      "Renewable energy"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      7,
+      13
+    ]
+  },
+  {
+    "id": "Vengerova2024",
+    "title": "Space bioprocess engineering as a potential catalyst for sustainability",
+    "author": "Gretchen Vengerova and Isaac Lipsky and Gwyneth A. Hutchinson and Nils J.H. Averesch and Aaron J. Berliner",
+    "year": "2024",
+    "publisher": "Nature Research",
+    "journal": "Nature Sustainability",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      14,
+      9
+    ]
+  },
+  {
+    "id": "Johnson2020",
+    "title": "Space cultures and space imaginaries in Mexico: Anthropological dialogues with the Mexican Space Agency",
+    "author": "Anne W. Johnson",
+    "year": "2020",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Anthropology",
+      "Mexican space agency",
+      "Social studies of science",
+      "Space culture"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      11,
+      14,
+      16
+    ]
+  },
+  {
+    "id": "LeMay2018",
+    "title": "Space debris collision probability analysis for proposed global broadband constellations",
+    "author": "S. Le May and S. Gehly and B. A. Carter and S. Flegel",
+    "year": "2018",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Collision probability",
+      "MASTER-2009",
+      "Satellite constellation"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      11,
+      14
+    ]
+  },
+  {
+    "id": "Piergentili2014",
+    "title": "Space debris measurement using joint mid-latitude and equatorial optical observations",
+    "author": "F. Piergentili and A. Ceruti and F. Rizzitelli and T. Cardona and M. L. Battagliere and F. Santoni",
+    "year": "2014",
+    "publisher": "Institute of Electrical and Electronics Engineers Inc.",
+    "journal": "IEEE Transactions on Aerospace and Electronic Systems",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      13,
+      4
+    ]
+  },
+  {
+    "id": "AnilKumar2025",
+    "title": "Space Debris Mitigation Activities of Indian Space Research Organisation: Ongoing Efforts and Future Roadmap",
+    "author": "A K Anil Kumar and Bulbul Mukherjee",
+    "year": "2025",
+    "publisher": "Springer",
+    "journal": "Transactions of the Indian National Academy of Engineering",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      9,
+      6
+    ]
+  },
+  {
+    "id": "Bradley2009",
+    "title": "Space debris: Assessing risk and responsibility",
+    "author": "Andrew M. Bradley and Lawrence M. Wein",
+    "year": "2009",
+    "publisher": "Elsevier Ltd",
+    "journal": "Advances in Space Research",
+    "keywords": [
+      "Antisatellite weapon test",
+      "Low Earth orbit",
+      "Mitigation",
+      "Space debris"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      16,
+      14
+    ]
+  },
+  {
+    "id": "Valente2025",
+    "title": "Space Economy and Sustainability: A Systematic Review",
+    "author": "Marianna Valente and Federico Caviggioli and Lara Agostini",
+    "year": "2025",
+    "publisher": "John Wiley and Sons Ltd",
+    "journal": "Sustainable Development",
+    "keywords": [
+      "literature review",
+      "space economy",
+      "sustainability",
+      "sustainable development goals"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      9,
+      8
+    ]
+  },
+  {
+    "id": "Maclay2021",
+    "title": "Space environment management: Framing the objective and setting priorities for controlling orbital debris risk",
+    "author": "T. Maclay and D. McKnight",
+    "year": "2021",
+    "publisher": "Elsevier Ltd",
+    "journal": "Journal of Space Safety Engineering",
+    "keywords": [
+      "Debris Mitigation",
+      "Debris Remediation",
+      "Space Environment Management",
+      "Space Safety",
+      "Space Situational Awareness",
+      "Space Traffic Management"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      14,
+      11
+    ]
+  },
+  {
+    "id": "Williamson2003",
+    "title": "Space ethics and protection of the space environment",
+    "author": "Mark Williamson",
+    "year": "2003",
+    "publisher": "Elsevier BV",
+    "journal": "Space Policy",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      16,
+      5
+    ]
+  },
+  {
+    "id": "Budd2023",
+    "title": "Space exploration as a propulsive industry in levelling up",
+    "author": "Leslie Budd and Stefania Paladini",
+    "year": "2023",
+    "publisher": "Routledge",
+    "journal": "Contemporary Social Science",
+    "keywords": [
+      "Industry 4.0",
+      "Levelling Up",
+      "Space 4.0",
+      "Space exploration",
+      "agglomeration economies",
+      "regional policy",
+      "space economy"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      12
+    ]
+  },
+  {
+    "id": "Baumgart2021",
+    "title": "Space for the Sustainable Development Goals: mapping the contributions of space-based projects and technologies to the achievement of the 2030 Agenda for Sustainable Development",
+    "author": "André Baumgart and Eirini Ioanna Vlachopoulou and Jorge Del Rio Vera and Simonetta Di Pippo",
+    "year": "2021",
+    "publisher": "Springer",
+    "journal": "Sustainable Earth",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      11,
+      17
+    ]
+  },
+  {
+    "id": "Baumgart2021",
+    "title": "Space for the Sustainable Development Goals: mapping the contributions of space-based projects and technologies to the achievement of the 2030 Agenda for Sustainable Development",
+    "author": "André Baumgart and Eirini Ioanna Vlachopoulou and Jorge Del Rio Vera and Simonetta Di Pippo",
+    "year": "2021",
+    "publisher": "Springer Science and Business Media LLC",
+    "journal": "Sustainable Earth",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      11,
+      17
+    ]
+  },
+  {
+    "id": "Crowther2002",
+    "title": "Space junk - Protecting space for future generations",
+    "author": "Richard Crowther",
+    "year": "2002",
+    "publisher": "",
+    "journal": "Science",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      7,
+      11
+    ]
+  },
+  {
+    "id": "Sawik2023",
+    "title": "Space Mission Risk, Sustainability and Supply Chain: Review, Multi-Objective Optimization Model and Practical Approach",
+    "author": "Bartosz Sawik",
+    "year": "2023",
+    "publisher": "Multidisciplinary Digital Publishing Institute (MDPI)",
+    "journal": "Sustainability (Switzerland)",
+    "keywords": [
+      "environmental impact",
+      "ethical considerations",
+      "multi-objective optimization",
+      "risk",
+      "space mission",
+      "supply chain",
+      "sustainability"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      14,
+      9
+    ]
+  },
+  {
+    "id": "Martinez2020",
+    "title": "Space sustainability",
+    "author": "Peter Martinez",
+    "year": "2020",
+    "publisher": "Springer",
+    "journal": "Handbook of Space Security",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      12,
+      9
+    ]
+  },
+  {
+    "id": "Undseth2020",
+    "title": "Space sustainability",
+    "author": "Marit Undseth and Claire Jolly and Mattia Olivari",
+    "year": "2020",
+    "publisher": "Organisation for Economic Cooperation and Development (OECD)",
+    "journal": "OECD Science, Technology and Industry Policy Papers",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      12,
+      9
+    ]
+  },
+  {
+    "id": "Napier2025",
+    "title": "Space sustainability",
+    "author": "J Lauren Napier",
+    "year": "2025",
+    "publisher": "Edward Elgar Publishing",
+    "journal": "",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      12,
+      9
+    ]
+  },
+  {
+    "id": "Lpez2016",
+    "title": "Space sustainability approaches of emerging space nations: Brazil, Colombia, and Mexico",
+    "author": "Laura Delgado López",
+    "year": "2016",
+    "publisher": "Elsevier Ltd",
+    "journal": "Space Policy",
+    "keywords": [
+      "Emerging space nations",
+      "Norms of behavior",
+      "Space sustainability"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      17,
+      12,
+      11
+    ]
+  },
+  {
+    "id": "Udriot2025",
+    "title": "Space sustainability in systems engineering and design processes-Industry overview and case study at EPFL",
+    "author": "Mathieu Udriot and Marnix Verkammen and Martin Lemaire and Emmanuelle David",
+    "year": "2025",
+    "publisher": "",
+    "journal": "",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      9,
+      12,
+      14
+    ]
+  },
+  {
+    "id": "Sirieys2022",
+    "title": "Space sustainability isn’t just about space debris: On the atmospheric impact of space launches",
+    "author": "Elwyn Sirieys and Chloe Gentgen and Asha Jain and Julia Milton and Olivier L de Weck",
+    "year": "2022",
+    "publisher": "",
+    "journal": "MIT Science Policy Review",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      13,
+      12
+    ]
+  },
+  {
+    "id": "Rathnasabapathy2020",
+    "title": "Space sustainability rating: Designing a composite indicator to incentivise satellite operators to pursue long-term sustainability of the space environment",
+    "author": "Minoo Rathnasabapathy and Danielle Wood and F Letizia and S Lemmens and M Jah and A Schiller and C Christensen and S Potter and N Khlystov and M Soshkin and others",
+    "year": "2020",
+    "publisher": "International Astronautical Federation",
+    "journal": "",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      9,
+      12
+    ]
+  },
+  {
+    "id": "Rathnasabapathya2019",
+    "title": "Space sustainability rating: towards an assessment tool to assuring the long-term sustainability of the space environment",
+    "author": "Minoo Rathnasabapathya and Danielle Wood and Moriba Jah and Diane Howard and Carissa Christensen and Aschley Schiller and F Letizia and H Krag and S Lemmens and N Khlystov and others",
+    "year": "2019",
+    "publisher": "",
+    "journal": "",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      12,
+      9
+    ]
+  },
+  {
+    "id": "Newman2018",
+    "title": "Space sustainability: reframing the debate",
+    "author": "Christopher J Newman and Mark Williamson",
+    "year": "2018",
+    "publisher": "Elsevier",
+    "journal": "Space Policy",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      14,
+      9
+    ]
+  },
+  {
+    "id": "Spector2019",
+    "title": "Space tourism in the Anthropocene",
+    "author": "Sam Spector and James E.S. Higham",
+    "year": "2019",
+    "publisher": "Elsevier Ltd",
+    "journal": "Annals of Tourism Research",
+    "keywords": [
+      "Anthropocene",
+      "Capitalocene",
+      "Space tourism",
+      "Space travel",
+      "Spaceflight"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      11,
+      14,
+      9
+    ]
+  },
+  {
+    "id": "Muelhaupt2019",
+    "title": "Space traffic management in the new space era",
+    "author": "Theodore J. Muelhaupt and Marlon E. Sorge and J. Morin and Robert S. Wilson",
+    "year": "2019",
+    "publisher": "Elsevier Ltd",
+    "journal": "Journal of Space Safety Engineering",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      11,
+      9,
+      14
+    ]
+  },
+  {
+    "id": "Tamaoki2022",
+    "title": "Space weather casters and space weather interpreters confronting space weather hazard",
+    "author": "Susumu Tamaoki and Kimiharu Saita and Ryosuke Hoshi and Sachiko Arvelius and Yukari Fukumi and Satoshi Nozawa and Kazunari Shibata",
+    "year": "2022",
+    "publisher": "Elsevier Ltd",
+    "journal": "Journal of Space Safety Engineering",
+    "keywords": [
+      "Space Weather Caster",
+      "Space Weather Hazard",
+      "Space Weather Interpreter"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      14,
+      11
+    ]
+  },
+  {
+    "id": "Weinzierl2018",
+    "title": "Space, the final economic frontier",
+    "author": "Matthew Weinzierl",
+    "year": "2018",
+    "publisher": "American Economic Association",
+    "journal": "Journal of Economic Perspectives",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      12
+    ]
+  },
+  {
+    "id": "Wulder2008",
+    "title": "Spatially explicit large area biomass estimation: Three approaches using forest inventory and remotely sensed imagery in a GIS",
+    "author": "Michael A. Wulder and Joanne C. White and Richard A. Fournier and Joan E. Luther and Steen Magnussen",
+    "year": "2008",
+    "publisher": "MDPI AG",
+    "journal": "Sensors",
+    "keywords": [
+      "Above-ground biomass",
+      "Forest",
+      "GIS",
+      "Landsat",
+      "Remote sensing"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      15,
+      9,
+      12
+    ]
+  },
+  {
+    "id": "Brennan2023",
+    "title": "Standing on the Shoulders of Giants: The Evolution of the Irish Space Sector from an Institutional Perspective",
+    "author": "Louis Brennan and Alessandra Vecchi",
+    "year": "2023",
+    "publisher": "Elsevier Ltd",
+    "journal": "Space Policy",
+    "keywords": [
+      "Case study",
+      "Economic development",
+      "Ireland",
+      "National space strategy"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      12
+    ]
+  },
+  {
+    "id": "Leib2015",
+    "title": "State sovereignty in space: Current models and possible futures",
+    "author": "Karl Leib",
+    "year": "2015",
+    "publisher": "Routledge",
+    "journal": "Astropolitics",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      17,
+      16,
+      14
+    ]
+  },
+  {
+    "id": "Wulder2013",
+    "title": "Status and prospects for LiDAR remote sensing of forested ecosystems",
+    "author": "M. A. Wulder and N. C. Coops and A. T. Hudak and F. Morsdorf and R. Nelson and G. Newnham and M. Vastaranta",
+    "year": "2013",
+    "publisher": "",
+    "journal": "Canadian Journal of Remote Sensing",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      15,
+      13,
+      14
+    ]
+  },
+  {
+    "id": "Petroni2013",
+    "title": "Strategies and determinants for successful space technology transfer",
+    "author": "Giorgio Petroni and Chiara Verbano and Barbara Bigliardi and Francesco Galati",
+    "year": "2013",
+    "publisher": "Elsevier Ltd",
+    "journal": "Space Policy",
+    "keywords": [
+      "Determinants",
+      "Space agency",
+      "Space industry",
+      "Strategy",
+      "Technology transfer"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      14
+    ]
+  },
+  {
+    "id": "Tepper2019",
+    "title": "Structuring the Discourse on the Exploitation of Space Resources: Between Economic and Legal Commons",
+    "author": "Eytan Tepper",
+    "year": "2019",
+    "publisher": "Elsevier Ltd",
+    "journal": "Space Policy",
+    "keywords": [
+      "Common heritage",
+      "Common-pool resources",
+      "Commons",
+      "Global commons",
+      "Space law",
+      "Space mining",
+      "Space resources"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      9,
+      11
+    ]
+  },
+  {
+    "id": "Mackintosh2025",
+    "title": "Sustainability Challenges of the Space Industry and the Role of Life Cycle Assessment",
+    "author": "John Mackintosh and Ian Muirhead and Nicholas H. Crisp and Katharine Smith and Ciara McGrath",
+    "year": "2025",
+    "publisher": "Elsevier B.V.",
+    "journal": "Procedia CIRP",
+    "keywords": [
+      "Circular Economy",
+      "Life Cycle Assessment",
+      "Life Cycle Sustainability Assessment",
+      "Orbital Capacity",
+      "Space Debris",
+      "Terrestrial Impact"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      14,
+      9
+    ]
+  },
+  {
+    "id": "Toivonen2022",
+    "title": "Sustainability dimensions in space tourism: the case of Finland",
+    "author": "Annette Toivonen",
+    "year": "2022",
+    "publisher": "",
+    "journal": "Journal of Sustainable Tourism",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      9,
+      12,
+      14
+    ]
+  },
+  {
+    "id": "Friend1996",
+    "title": "Sustainable development indicators: Exploring the objective function",
+    "author": "Anthony M. Friend",
+    "year": "1996",
+    "publisher": "Elsevier Ltd",
+    "journal": "Chemosphere",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      17,
+      2
+    ]
+  },
+  {
+    "id": "Paladini2021",
+    "title": "Sustainable space for a sustainable Earth? Circular economy insights from the space sector",
+    "author": "Stefania Paladini and Krish Saha and Xavier Pierron",
+    "year": "2021",
+    "publisher": "Academic Press",
+    "journal": "Journal of Environmental Management",
+    "keywords": [
+      "CE",
+      "Closed-loop system",
+      "ESA-MELiSSA",
+      "Industry 4.0",
+      "Space sector",
+      "Spaceship Earth",
+      "Sustainability"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      9,
+      12,
+      14
+    ]
+  },
+  {
+    "id": "David2025",
+    "title": "SWISS SPACE SUSTAINABILITY RESEARCH DAYS 2025: OUTCOMES AND STRATEGIC ROADMAP",
+    "author": "Emmanuelle David and Merve Erdem Burger and Chris Finnlay and Benjamin Guyot and Stephan Hellmich and Lucia Kleint and Andreas Losch and Deborah Mueller and Clemence Poirier and Karin Treyer and others",
+    "year": "2025",
+    "publisher": "",
+    "journal": "",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      12,
+      14
+    ]
+  },
+  {
+    "id": "Abdul-Hamid2025",
+    "title": "Systems Methodologies for Predicting, Mitigating, and Remediating Orbital Debris",
+    "author": "Asaad Shahid Abdul-Hamid",
+    "year": "2025",
+    "publisher": "",
+    "journal": "",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      14,
+      6
+    ]
+  },
+  {
+    "id": "Weeden2012",
+    "title": "Taking a common-pool resources approach to space sustainability: A framework and potential policies",
+    "author": "Brian C Weeden and Tiffany Chow",
+    "year": "2012",
+    "publisher": "Elsevier",
+    "journal": "Space Policy",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      12,
+      9
+    ]
+  },
+  {
+    "id": "Aglietti2020",
+    "title": "The active space debris removal mission RemoveDebris. Part 2: In orbit operations",
+    "author": "Guglielmo S. Aglietti and Ben Taylor and Simon Fellowes and Thierry Salmon and Ingo Retat and Alexander Hall and Thomas Chabot and Aurélien Pisseloup and C. Cox and A. Zarkesh and A. Mafficini and N. Vinkoff and K. Bashford and Cesar Bernal and François Chaumette and Alexandre Pollini and Willem H. Steyn",
+    "year": "2020",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "ADR",
+      "Debris removal",
+      "Deorbiting",
+      "Dragsail",
+      "Harpoon",
+      "Net",
+      "Space debris",
+      "Vision-based navigation"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      15,
+      6
+    ]
+  },
+  {
+    "id": "Gates2015",
+    "title": "The Asteroid Redirect Mission and sustainable human exploration",
+    "author": "Michele Gates and Steve Stich and Mark McDonald and Brian Muirhead and Dan Mazanek and Paul Abell and Pedro Lopez",
+    "year": "2015",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Asteroid Redirect Mission",
+      "Human Space Exploration",
+      "Human exploration"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      13,
+      11
+    ]
+  },
+  {
+    "id": "Detsis2013",
+    "title": "The benefits brought by space - General public versus space agencies perspectives",
+    "author": "Bianca Detsis and Emmanouil Detsis",
+    "year": "2013",
+    "publisher": "",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Awareness",
+      "Problems",
+      "Public perception",
+      "Space agency",
+      "Space benefits",
+      "Space technology"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      11,
+      14,
+      6
+    ]
+  },
+  {
+    "id": "Lawrence2022",
+    "title": "The case for space environmentalism",
+    "author": "Andy Lawrence and Meredith L. Rawls and Moriba Jah and Aaron Boley and Federico Di Vruno and Simon Garrington and Michael Kramer and Samantha Lawler and James Lowenthal and Jonathan McDowell and Mark McCaughrean",
+    "year": "2022",
+    "publisher": "Nature Research",
+    "journal": "Nature Astronomy",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      13,
+      6
+    ]
+  },
+  {
+    "id": "Boensch2025",
+    "title": "The Commercial Satellite Industry: Key Indicators and Global Trends in the Context of Expanding Capabilities",
+    "author": "Nickolas J Boensch and Carissa Christensen and Carie Mullins and Tom Stroup and Anton Dolgopolov and Ryan Puleo",
+    "year": "2025",
+    "publisher": "",
+    "journal": "",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      9,
+      8,
+      14
+    ]
+  },
+  {
+    "id": "Martin-Lawson2024",
+    "title": "The cost of (Un)regulation: Shrinking Earth's orbits and the need for sustainable space governance",
+    "author": "Darrell Martin-Lawson and Stefania Paladini and Krishnendu Saha and Erez Yerushalmi",
+    "year": "2024",
+    "publisher": "Academic Press",
+    "journal": "Journal of Environmental Management",
+    "keywords": [
+      "Active debris removal",
+      "Areas beyond national jurisdiction",
+      "Space debris",
+      "Space sustainability"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      14,
+      12
+    ]
+  },
+  {
+    "id": "Lindsay2022",
+    "title": "The efficacy of managing space environmental risk by regulating probability of collision with large objects",
+    "author": "Mike Lindsay and Toby Harris and Sam Cox and Matt Duncan",
+    "year": "2022",
+    "publisher": "Elsevier Ltd",
+    "journal": "Journal of Space Safety Engineering",
+    "keywords": [
+      "Active debris removal",
+      "Catastrophic fragmentation",
+      "Environmental risk",
+      "Regulations",
+      "Space policy"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      14,
+      15
+    ]
+  },
+  {
+    "id": "Denis2016",
+    "title": "The evolution of Earth Observation satellites in Europe and its impact on the performance of emergency response services",
+    "author": "Gil Denis and Hélène de Boissezon and Steven Hosford and Xavier Pasco and Bruno Montfort and Franck Ranera",
+    "year": "2016",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Copernicus",
+      "Disaster management",
+      "Earth Observation",
+      "Emergency response",
+      "International Charter",
+      "Rapid mapping",
+      "Reactive imagery"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      16,
+      15
+    ]
+  },
+  {
+    "id": "Lazare2013",
+    "title": "The french space operations act: Technical regulations",
+    "author": "B. Lazare",
+    "year": "2013",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Authorisation",
+      "Safety",
+      "Space access",
+      "Space debris",
+      "Space law"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      9,
+      14
+    ]
+  },
+  {
+    "id": "Pulsiri2024",
+    "title": "The green path to space sustainability: Twenty years of research",
+    "author": "Nonthapat Pulsiri and Victor Dos Santos Paulino",
+    "year": "2024",
+    "publisher": "Intellect Ltd.",
+    "journal": "International Journal of Technology Management and Sustainable Development",
+    "keywords": [
+      "circular economy",
+      "environment",
+      "governance",
+      "high technology",
+      "outer space",
+      "regime",
+      "space debris",
+      "space ecosystem"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      9,
+      12
+    ]
+  },
+  {
+    "id": "Pulsiri2024",
+    "title": "The green path to space sustainability: Twenty years of research",
+    "author": "Nonthapat Pulsiri and Victor Dos Santos Paulino",
+    "year": "2024",
+    "publisher": "Intellect",
+    "journal": "International Journal of technology management \\& sustainable development",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      12,
+      9
+    ]
+  },
+  {
+    "id": "Paravano2024",
+    "title": "The impact of the new space economy on sustainability: an overview",
+    "author": "Alessandro Paravano and Matteo Patrizi and Elena Razzano and Giorgio Locatelli and Francesco Feliciani and Paolo Trucco",
+    "year": "2024",
+    "publisher": "Elsevier",
+    "journal": "Acta Astronautica",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      9,
+      8
+    ]
+  },
+  {
+    "id": "Paravano2024",
+    "title": "The impact of the new space economy on sustainability: an overview",
+    "author": "Alessandro Paravano and Matteo Patrizi and Elena Razzano and Giorgio Locatelli and Francesco Feliciani and Paolo Trucco",
+    "year": "2024",
+    "publisher": "Elsevier",
+    "journal": "Acta Astronautica",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      9,
+      8
+    ]
+  },
+  {
+    "id": "Varughese2023",
+    "title": "The intersection of space and sustainability: The need for a transdisciplinary and bi-cultural approach",
+    "author": "Carolle Varughese and Lena Henry and Adam Morris and Sarah Bickerton and Nicholas Rattenbury and Cody Mankelow and Alice Gorman and Stevie Katavich-Barton and Priyanka Dhopade",
+    "year": "2023",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Indigenous sustainability",
+      "Max of six for acta astronautica",
+      "Space debris",
+      "Space sustainability",
+      "Terrestrial sustainability",
+      "Transdisciplinary"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      12,
+      11
+    ]
+  },
+  {
+    "id": "Seremetakis2014",
+    "title": "The Memory of the Senses Historical Perception, Commensal Exchange, and Modernity",
+    "author": "C Nadia Seremetakis",
+    "year": "2014",
+    "publisher": "Routledge",
+    "journal": "",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      11,
+      14,
+      12
+    ]
+  },
+  {
+    "id": "Newman2010",
+    "title": "The NASA robotic conjunction assessment process: Overview and operational experiences",
+    "author": "Lauri Kraft Newman",
+    "year": "2010",
+    "publisher": "",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Collision avoidance",
+      "Conjunction assessment"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      4,
+      6,
+      13
+    ]
+  },
+  {
+    "id": "Smith2024",
+    "title": "The political and legal landscape of space debris mitigation in emerging space nations",
+    "author": "Jacqueline H. Smith and Minoo Rathnasabapathy and Danielle Wood",
+    "year": "2024",
+    "publisher": "Elsevier Ltd",
+    "journal": "Journal of Space Safety Engineering",
+    "keywords": [
+      "Emerging space nations",
+      "LTS 2.0",
+      "Long-term space sustainability",
+      "Space sustainability rating"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      13,
+      12
+    ]
+  },
+  {
+    "id": "Broniatowski2008",
+    "title": "The political sustainability of space exploration",
+    "author": "David A. Broniatowski and Annalisa L. Weigel",
+    "year": "2008",
+    "publisher": "Elsevier BV",
+    "journal": "Space Policy",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      13,
+      11
+    ]
+  },
+  {
+    "id": "Paladini2023",
+    "title": "The quest for sustainability in lower orbit: Conceptual models for space tourism",
+    "author": "Stefania Paladini and Krishnendu Saha",
+    "year": "2023",
+    "publisher": "John Wiley and Sons Ltd",
+    "journal": "International Journal of Tourism Research",
+    "keywords": [
+      "Industry 4.0",
+      "space",
+      "space tourism",
+      "sustainability",
+      "technology"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      9,
+      12,
+      14
+    ]
+  },
+  {
+    "id": "Argentiero2020",
+    "title": "The role of earth observation satellites in maximizing renewable energy production: Case studies analysis for renewable power plants",
+    "author": "Mariarosa Argentiero and Pasquale Marcello Falcone",
+    "year": "2020",
+    "publisher": "MDPI",
+    "journal": "Sustainability (Switzerland)",
+    "keywords": [
+      "RETScreen",
+      "Renewable energy",
+      "Space industry"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      7,
+      12,
+      14
+    ]
+  },
+  {
+    "id": "Wilson2023",
+    "title": "The space sustainability paradox",
+    "author": "Andrew Ross Wilson and Massimiliano Vasile",
+    "year": "2023",
+    "publisher": "Elsevier Ltd",
+    "journal": "Journal of Cleaner Production",
+    "keywords": [
+      "Global commons",
+      "Outer space",
+      "Space sustainability",
+      "Space sustainability paradox",
+      "Sustainable development"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      11,
+      12
+    ]
+  },
+  {
+    "id": "Wilson2023",
+    "title": "The space sustainability paradox",
+    "author": "Andrew Ross Wilson and Massimiliano Vasile",
+    "year": "2023",
+    "publisher": "Elsevier Ltd",
+    "journal": "Journal of Cleaner Production",
+    "keywords": [
+      "Global commons",
+      "Outer space",
+      "Space sustainability",
+      "Space sustainability paradox",
+      "Sustainable development"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      11,
+      12
+    ]
+  },
+  {
+    "id": "Mostapa2025",
+    "title": "The Space Technology Paradigm: A Revolutionary Role in Subsidence Monitoring",
+    "author": "M Ferdaos Mostapa and S A Al Ameri and F Alawadhi and R Al-Ali and R Nachiappan and B Bernadi and M Mubarak Albadi",
+    "year": "2025",
+    "publisher": "",
+    "journal": "",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      6,
+      14,
+      7
+    ]
+  },
+  {
+    "id": "Hardin1968",
+    "title": "The tragedy of the commons",
+    "author": "Garrett Hardin",
+    "year": "1968",
+    "publisher": "",
+    "journal": "Science",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      11,
+      16,
+      6
+    ]
+  },
+  {
+    "id": "Martinez2021",
+    "title": "The UN COPUOS Guidelines for the Long-term Sustainability of Outer Space Activities",
+    "author": "Peter Martinez",
+    "year": "2021",
+    "publisher": "Elsevier Ltd",
+    "journal": "Journal of Space Safety Engineering",
+    "keywords": [
+      "COPUOS",
+      "LTS",
+      "LTS Guidelines",
+      "Space sustainability",
+      "space governance"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      13,
+      12
+    ]
+  },
+  {
+    "id": "Donaldson2016",
+    "title": "The view from above: Applications of satellite data in economics",
+    "author": "Dave Donaldson and Adam Storeygard",
+    "year": "2016",
+    "publisher": "American Economic Association",
+    "journal": "Journal of Economic Perspectives",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      8,
+      9
+    ]
+  },
+  {
+    "id": "Ehrenfreund2009",
+    "title": "Toward a paradigm shift in managing future global space exploration endeavors",
+    "author": "P. Ehrenfreund and N. Peter",
+    "year": "2009",
+    "publisher": "Elsevier BV",
+    "journal": "Space Policy",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      14,
+      9
+    ]
+  },
+  {
+    "id": "Santomartino2023",
+    "title": "Toward sustainable space exploration: a roadmap for harnessing the power of microorganisms",
+    "author": "Rosa Santomartino and Nils J.H. Averesch and Marufa Bhuiyan and Charles S. Cockell and Jesse Colangelo and Yosephine Gumulya and Benjamin Lehner and Ivanna Lopez-Ayala and Sean McMahon and Anurup Mohanty and Sergio R. Santa Maria and Camilla Urbaniak and Rik Volger and Jiseon Yang and Luis Zea",
+    "year": "2023",
+    "publisher": "Nature Research",
+    "journal": "Nature Communications",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      12,
+      9
+    ]
+  },
+  {
+    "id": "Palmroth2021",
+    "title": "Toward Sustainable Use of Space: Economic, Technological, and Legal Perspectives",
+    "author": "M. Palmroth and J. Tapio and A. Soucek and A. Perrels and M. Jah and M. Lönnqvist and M. Nikulainen and V. Piaulokaite and T. Seppälä and J. Virtanen",
+    "year": "2021",
+    "publisher": "Elsevier Ltd",
+    "journal": "Space Policy",
+    "keywords": [
+      "Economy",
+      "Satellite technology",
+      "Space debris",
+      "Space law",
+      "Space physics",
+      "Space regulation",
+      "Spaceflight",
+      "Sustainability"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      12,
+      9
+    ]
+  },
+  {
+    "id": "Paravano2025",
+    "title": "Toward the LEO economy: A value assessment of commercial space stations for space and non-space users",
+    "author": "Alessandro Paravano and Brendan Rosseau and Giorgio Locatelli and Mathew Weinzierl and Paolo Trucco",
+    "year": "2025",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "Astronauts",
+      "In orbit servicing",
+      "Low Earth Orbit (LEO) economy",
+      "Lunar Economy",
+      "Microgravity",
+      "Space debris"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      9,
+      14,
+      12
+    ]
+  },
+  {
+    "id": "Maury2017",
+    "title": "Towards the integration of orbital space use in Life Cycle Impact Assessment",
+    "author": "Thibaut Maury and Philippe Loubet and Jonathan Ouziel and Maud Saint-Amand and Ludovic Dariol and Guido Sonnemann",
+    "year": "2017",
+    "publisher": "Elsevier B.V.",
+    "journal": "Science of the Total Environment",
+    "keywords": [
+      "Impact pathway",
+      "Life Cycle Assessment",
+      "Outer space",
+      "Resource use",
+      "Space debris"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      14,
+      12
+    ]
+  },
+  {
+    "id": "Aguinis2019",
+    "title": "Transparency and replicability in qualitative research: The case of interviews with elite informants",
+    "author": "Herman Aguinis and Angelo M. Solarino",
+    "year": "2019",
+    "publisher": "John Wiley and Sons Ltd",
+    "journal": "Strategic Management Journal",
+    "keywords": [
+      "credibility of science",
+      "methodology",
+      "repeatability",
+      "research transparency",
+      "research trustworthiness"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      5,
+      3,
+      13
+    ]
+  },
+  {
+    "id": "Porfilio2006",
+    "title": "Two-site orbit determination: The 2003 GEO observation campaign from Collepardo and Mallorca",
+    "author": "Manfredi Porfilio and Fabrizio Piergentili and Filippo Graziani",
+    "year": "2006",
+    "publisher": "Elsevier Ltd",
+    "journal": "Advances in Space Research",
+    "keywords": [
+      "Geosynchronous orbit",
+      "Joint observations",
+      "Optical space debris detection",
+      "Orbit determination",
+      "Space surveillance",
+      "Two-telescope observations"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      15,
+      14
+    ]
+  },
+  {
+    "id": "BritneyLeather2022",
+    "title": "UK Space Command Capability Management Plan",
+    "author": "Sac Britney Leather",
+    "year": "2022",
+    "publisher": "",
+    "journal": "",
+    "keywords": [
+      "patch",
+      "raf",
+      "raf fylingdales",
+      "space",
+      "space command",
+      "uk space command",
+      "uniform"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      13,
+      15,
+      6
+    ]
+  },
+  {
+    "id": "Metcalfe2023",
+    "title": "UK space strategy and UK satellite infrastructure: reviewing the licencing regime for launch Seventh Report of Session 2022-23 Report, together with formal minutes relating to the report",
+    "author": "Stephen MP Metcalfe and Graham MP Stringer Labour and Broughton MP Christian Wakeford",
+    "year": "2023",
+    "publisher": "",
+    "journal": "",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "www.parliament.uk/science",
+    "sdgs": [
+      9,
+      17,
+      13
+    ]
+  },
+  {
+    "id": "Yu2012",
+    "title": "UNCOPUOS 50 years on: Assessing current dynamics and exploring its future role",
+    "author": "Xu Yu",
+    "year": "2012",
+    "publisher": "Elsevier Ltd",
+    "journal": "Space Policy",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      11,
+      12
+    ]
+  },
+  {
+    "id": "Marzioli2021",
+    "title": "Usage of Light Emitting Diodes (LEDs) for improved satellite tracking",
+    "author": "Paolo Marzioli and Andrea Gianfermo and Lorenzo Frezza and Diego Amadio and Niccolò Picci and Federico Curianò and Maria Giulia Pancalli and Eleonora Vestito and Justin Schachter and Matt Szczerba and Daniel Gu and Anny Lin and James Cutler and Simone Pirrotta and Fabio Santoni and Patrick Seitzer and Fabrizio Piergentili",
+    "year": "2021",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "CubeSat",
+      "Identification",
+      "LED",
+      "Optical",
+      "Satellites",
+      "Tracking"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      12,
+      4,
+      2
+    ]
+  },
+  {
+    "id": "Arora2016",
+    "title": "Using the wayback machine to mine websites in the social sciences: A methodological resource",
+    "author": "Sanjay K. Arora and Yin Li and Jan Youtie and Philip Shapira",
+    "year": "2016",
+    "publisher": "John Wiley and Sons Inc.",
+    "journal": "Journal of the Association for Information Science and Technology",
+    "keywords": [
+      "bibliometrics",
+      "web mining",
+      "webometrics"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      15,
+      14,
+      8
+    ]
+  },
+  {
+    "id": "Hroux-Vaillancourt2020",
+    "title": "Using web content analysis to create innovation indicators—what do we really measure?",
+    "author": "Mikaël Héroux-Vaillancourt and Catherine Beaudry and Constant Rietsch",
+    "year": "2020",
+    "publisher": "MIT Press Journals",
+    "journal": "Quantitative Science Studies",
+    "keywords": [
+      "Construct validity",
+      "Innovation measurement",
+      "Multitraits multimethods",
+      "Web content analysis",
+      "Web-mining",
+      "Word frequency analysis"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      8,
+      14,
+      9
+    ]
+  },
+  {
+    "id": "Los2012",
+    "title": "Vegetation height and cover fraction between 60° S and 60° N from ICESat GLAS data",
+    "author": "S. O. Los and J. A.B. Rosette and N. Kljun and P. R.J. North and L. Chasmer and J. C. Suárez and C. Hopkinson and R. A. Hill and E. Van Gorsel and C. Mahoney and J. A.J. Berni",
+    "year": "2012",
+    "publisher": "",
+    "journal": "Geoscientific Model Development",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      15,
+      10,
+      13
+    ]
+  },
+  {
+    "id": "Gobakken2005",
+    "title": "Weibull and percentile models for lidar-based estimation of basal area distribution",
+    "author": "Terje Gobakken and Erik Næsset",
+    "year": "2005",
+    "publisher": "",
+    "journal": "Scandinavian Journal of Forest Research",
+    "keywords": [
+      "Airborne laser scanner",
+      "Basal area distribution",
+      "Diameter distribution"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      4,
+      15,
+      11
+    ]
+  },
+  {
+    "id": "Paravano2023",
+    "title": "What is value in the New Space Economy? The end-users’ perspective on satellite data and solutions",
+    "author": "Alessandro Paravano and Giorgio Locatelli and Paolo Trucco",
+    "year": "2023",
+    "publisher": "Elsevier Ltd",
+    "journal": "Acta Astronautica",
+    "keywords": [
+      "ESG",
+      "Economic value",
+      "Environmental value",
+      "SDGs",
+      "Social value",
+      "Value management"
+    ],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      14,
+      9,
+      12
+    ]
+  },
+  {
+    "id": "Christensen2025",
+    "title": "Workshop Outcomes Summary Paper-Space Sustainability: Bridging Initiatives and Perspectives",
+    "author": "Ian Christensen and Emmanuelle David and Florian Rabitz and Johannes Schmied and Xiao-Shan Yap",
+    "year": "2025",
+    "publisher": "",
+    "journal": "",
+    "keywords": [],
+    "note": "",
+    "howpublished": "",
+    "url": "",
+    "sdgs": [
+      11,
+      13,
+      14
+    ]
+  }
+]
