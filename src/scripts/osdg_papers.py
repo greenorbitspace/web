@@ -30,6 +30,9 @@ for entry in bib_database.entries:
     elif entry_type == "inproceedings":
         journal = ""
         booktitle = entry.get("booktitle", "")
+    elif entry_type == "report":
+        journal = ""
+        booktitle = ""
     else:
         journal = entry.get("journal", "")
         booktitle = entry.get("booktitle", "")
@@ -102,4 +105,4 @@ shutil.copyfile(OUTPUT_JSON, BACKUP_FILE)
 with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
     json.dump(papers, f, ensure_ascii=False, indent=2)
 
-print(f"✅ Papers JSON updated with top {TOP_N} SDGs per paper, handling articles and inproceedings correctly!")
+print(f"✅ Papers JSON updated with top {TOP_N} SDGs per paper, including @report entries!")
