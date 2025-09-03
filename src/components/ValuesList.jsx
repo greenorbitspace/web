@@ -31,7 +31,7 @@ export default function ValuesList() {
           filteredValues.map(({ title, tagline, description, icon }, index) => (
             <li
               key={`${title}-${index}`}
-              className="border border-accent-500 rounded-lg p-6 bg-white dark:bg-secondary-700 hover:shadow-lg transition"
+              className="border border-accent-500 rounded-lg p-6 bg-white dark:bg-secondary-500 hover:shadow-lg transition text-accent-500"
               role="listitem"
             >
               <article aria-labelledby={`value-title-${index}`} className="flex flex-col h-full">
@@ -47,14 +47,14 @@ export default function ValuesList() {
                   />
                   <h3
                     id={`value-title-${index}`}
-                    className="text-xl font-semibold text-accent-600"
+                    className="text-xl font-semibold text-accent-500"
                     tabIndex={0}
                   >
                     {title}
                   </h3>
                 </div>
-                <p className="text-sm text-gray-500 dark:text-gray-400 mb-2 italic">{tagline}</p>
-                <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed">{description}</p>
+                <p className="text-sm text-gray-500 dark:text-white mb-2 italic">{tagline}</p>
+                <p className="text-gray-700 dark:text-white text-base leading-relaxed">{description}</p>
               </article>
             </li>
           ))

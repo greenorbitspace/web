@@ -15,20 +15,22 @@ const sortedSuppliers = suppliers.slice().sort((a, b) =>
 );
 ---
 
-<Layout title="suppliers" description="Explore our strategic and delivery suppliers in the space sector.">
+<Layout title="Suppliers" description="Explore our strategic and delivery suppliers in the space sector.">
   <Header />
 
-  <main class="py-12 max-w-6xl mx-auto px-4">
+  <main class="py-12 max-w-6xl mx-auto">
     <HeroSection 
       title="Suppliers" 
       description="Explore our strategic and delivery suppliers in the space sector." 
     />
-
-    <!-- Hydrated client-side component -->
-    <section class="py-16 bg-white dark:bg-secondary-500">
-      <OrganisationsList organisations={sortedSuppliers} client:load />
-    </section>
   </main>
+
+  <!-- Full-width section -->
+  <section class="py-16 bg-white dark:bg-secondary-500 w-full">
+    <div class="max-w-6xl mx-auto px-4">
+      <OrganisationsList organisations={sortedSuppliers} client:load />
+    </div>
+  </section>
 
   <Footer />
 </Layout>

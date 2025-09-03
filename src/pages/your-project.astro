@@ -8,23 +8,53 @@ import HeroSection from '../components/HeroSection.astro';
 <Layout title="Your Project">
   <Header />
 
-  <main class="py-8">
+  <main>
+    <!-- Hero Section -->
     <HeroSection 
       title="Your Project" 
-      description="Your privacy matters. Here's how we handle your data at Green Orbit Digital."
+      description="Help us understand your project so we can craft the right solution for you."
     />
 
-    <section class="py-16 bg-white dark:bg-secondary-500">
-          <div class="max-w-6xl mx-auto px-4">
-<script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
-<script>
-  hbspt.forms.create({
-    portalId: "143471159",
-    formId: "9a5d2ee9-4027-4986-ab87-03aefdd5b2bc",
-    region: "eu1"
-  });
-</script>
-<div/>
+    <!-- Full-width Section with Background -->
+    <section class="py-20 bg-white dark:bg-secondary-500">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-16 items-start md:items-center">
+          
+          <!-- Left: Image -->
+          <div>
+            <img 
+              src="/images/community.png" 
+              alt="Illustration of a project workflow" 
+              class="w-full rounded-lg shadow-xl"
+            />
+          </div>
+
+          <!-- Right: Text -->
+          <div class="prose dark:prose-invert text-gray-900 dark:text-white px-2 md:px-0">
+            <h2>Let's Talk About Your Project</h2>
+            <p>Take a moment, get comfortable, and tell us everything you can about your project. The more detail you provide, the better we can tailor a solution for you.</p>
+            <p>We recommend discussing these questions with your team so everyone’s perspective is captured. Keep each answer clear and concise, but include as much context as needed.</p>
+            <p>Once you’re happy with your responses, submit the form and we’ll get back to you with the next steps.</p>
+          </div>
+        </div>
+
+      <!-- HubSpot Form -->
+      <div class="mt-12">
+        <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
+          Getting to Know You
+        </h2>
+        <div id="your-project-form">
+          <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
+          <script>
+            hbspt.forms.create({
+              portalId: "143471159",
+              formId: "9a5d2ee9-4027-4986-ab87-03aefdd5b2bc",
+              region: "eu1",
+              target: '#your-project-form'
+            });
+          </script>
+        </div>
+      </div>
     </section>
   </main>
 

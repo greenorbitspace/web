@@ -3,18 +3,16 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import HeroSection from '../../components/HeroSection.astro';
-import EventFilters from '../../components/EventFilters.jsx';
-import slugify from '../../utils/slugify.js';
+import EventsList from '../../components/EventFilters.jsx';
 
 import attendingList from '../../data/eventsAttending.json';
 import eventsData from '../../data/events.json';
 
-// Create a set of slugs from attending list
-const attendingSet = new Set(attendingList.map(slug => slugify(slug)));
-
-// Filter events based on attending list and sort by start date
+// Filter events by slug
+import slugify from '../../utils/slugify.js';
+const attendingSlugs = attendingList.map(slugify);
 const attendingEvents = eventsData
-  .filter(e => attendingSet.has(slugify(e.title)))
+  .filter(event => attendingSlugs.includes(slugify(event.title)))
   .sort((a, b) => new Date(a.start || 0) - new Date(b.start || 0));
 ---
 
@@ -31,7 +29,7 @@ const attendingEvents = eventsData
       ctaHref="/contact#book-us"
     />
 
-    <!-- Concise Full-width Intro Block -->
+    <!-- Full-width Intro Block -->
     <section class="w-full py-12 bg-secondary-500 dark:bg-secondary-500 mt-12">
       <div class="max-w-6xl mx-auto px-4 text-center">
         <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
@@ -45,7 +43,11 @@ const attendingEvents = eventsData
 
     <!-- Attending Events List (flat cards) -->
     <section class="mt-12 max-w-6xl mx-auto px-4">
-      <EventFilters events={attendingEvents} batchSize={6} flatList={true} client:load />
+      <EventsList 
+        preRenderedEvents={attendingEvents} 
+        flatList={true} 
+        client:load 
+      />
     </section>
 
     <!-- Secondary CTA -->

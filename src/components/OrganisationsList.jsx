@@ -99,7 +99,7 @@ export default function OrganisationsList({ organisations = [] }) {
             return (
               <li
                 key={`${Organisation}-${index}`}
-                className="border border-accent-500 rounded-lg p-6 bg-white dark:bg-secondary-700 hover:shadow-lg transition"
+                className="text-primary-500 rounded-lg p-6 bg-white dark:bg-white hover:shadow-lg transition"
                 role="listitem"
               >
                 <article className="flex flex-col h-full" aria-labelledby={`org-title-${index}`}>
@@ -115,7 +115,7 @@ export default function OrganisationsList({ organisations = [] }) {
                     />
                     <h3
                       id={`org-title-${index}`}
-                      className="text-xl font-semibold text-accent-600"
+                      className="text-xl font-semibold text-primary-500"
                       tabIndex={0}
                     >
                       {URL ? (
@@ -134,14 +134,14 @@ export default function OrganisationsList({ organisations = [] }) {
                   </div>
 
                   {Description && (
-                    <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed mb-2">
+                    <p className="text-gray-700 dark:text-gray text-base leading-relaxed mb-2">
                       {Description}
                     </p>
                   )}
 
                   <div className="flex flex-wrap gap-2 mt-auto">
                     {Industry && (
-                      <span className="bg-gray-300 dark:bg-gray-600 text-gray-800 dark:text-gray-200 rounded-full px-3 py-1 text-xs font-medium">
+                      <span className="bg-gray-300 dark:bg-accent-500 text-gray-800 dark:text-white rounded-full px-3 py-1 text-xs font-medium">
                         {Industry}
                       </span>
                     )}

@@ -18,18 +18,19 @@ const sortedPartners = partners.slice().sort((a, b) =>
 <Layout title="Partners" description="Explore our strategic and delivery partners in the space sector.">
   <Header />
 
-  <main class="py-12 max-w-6xl mx-auto px-4">
+  <main class="py-12 max-w-6xl mx-auto">
     <HeroSection 
       title="Partners" 
       description="Explore our strategic and delivery partners in the space sector." 
     />
-
-    <!-- Hydrated client-side component -->
-    <section class="py-16 bg-white dark:bg-secondary-500">
-    
-      <OrganisationsList organisations={sortedPartners} client:load />
-    </section>
   </main>
+
+  <!-- Full-width section -->
+  <section class="py-16 bg-secondary-500 w-full">
+    <div class="max-w-6xl mx-auto px-4">
+      <OrganisationsList organisations={sortedPartners} client:load />
+    </div>
+  </section>
 
   <Footer />
 </Layout>

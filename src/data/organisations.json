@@ -19,6 +19,16 @@
         "Type": "partner",
         "logo": "/logos/organisations/unoosa.png"
     },
+        {
+        "Organisation": "Organisation for Responsible Businesses",
+        "Description": "ORB leads the responsible business movement for solo, micro & small businesses.",
+        "URL": "https://www.orbuk.org.uk",
+        "HubSpot Company ID": "",
+        "Industry": "environmental services",
+        "Category": "organisation",
+        "Type": "partner",
+        "logo": "https://www.orbuk.org.uk/wp-content/uploads/2019/10/Strap30cmHigh-Res.jpg"
+    },
     {
         "Organisation": "Rainforest Foundation UK",
         "Description": "Rainforest Foundation UK works alongside Indigenous peoples and local communities to protect rainforests, safeguard biodiversity, and address the climate crisis through rights-based approaches.",
@@ -688,16 +698,6 @@
         "Category": "education",
         "Type": "partner",
         "logo": "/logos/organisations/ecodemy.png"
-    },
-    {
-        "Organisation": "GreenerFuture Leicestershire",
-        "Description": "GreenerFuture Leicestershire supports local businesses and communities in adopting sustainable practices, tools, and technologies to achieve net zero goals.",
-        "URL": "https://greenerfutureleicestershire.co.uk",
-        "HubSpot Company ID": "",
-        "Industry": "environmental services",
-        "Category": "tools",
-        "Type": "supplier",
-        "logo": "/logos/organisations/greenerfuture.png"
     },
     {
         "Organisation": "Locality",
