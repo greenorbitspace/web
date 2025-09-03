@@ -1,5 +1,674 @@
 [
   {
+    "title": "Satuccino: Monthly Space Networking Event - October 2025",
+    "description": "Join us at Satuccino, our monthly networking event at the Satellite Applications Catapult. Connect with like-minded professionals, exchange ideas, and hear dynamic one-minute pitches from guest speakers. Hosted by the Satellite Applications Catapult in Harwell, the event provides insights into the latest industry news, funding opportunities, and business pitches from across the space sector. Space for the in-person event is limited, but online attendees are welcome for the pitch presentations from 2:30pm.",
+    "start": "2025-10-01T14:00:00+01:00",
+    "end": "2025-10-01T16:00:00+01:00",
+    "url": "https://www.spaceenterprise.uk/",
+    "location": "Electron Building, Fermi Avenue, Didcot, OX11 0QR, United Kingdom",
+    "organizer": "Satellite Applications Catapult",
+    "status": "CONFIRMED",
+    "recurrence": "monthly",
+    "sequence": "0",
+    "created": "2025-08-01T00:00:00",
+    "last_modified": "2025-08-01T00:00:00",
+    "attendees": [],
+    "priority": "",
+    "image_url": "https://satellite-applications.s3.amazonaws.com/uploads/2023/03/Satuccino-Cup-Image.webp",
+    "source_url": "https://www.spaceenterprise.uk/",
+    "categories": [
+      "Networking",
+      "Space Industry",
+      "Business Pitches",
+      "Professional Development"
+    ],
+    "year": 2025,
+    "month_name": "October",
+    "day_of_week": "Wednesday",
+    "iso_week": 40,
+    "all_day": false,
+    "duration_hours": 2,
+    "category_string": "Networking, Space Industry, Business Pitches, Professional Development",
+    "timestamp_epoch": 1751791200,
+    "google_maps_link": "https://www.google.com/maps/dir/?api=1&destination=Electron+Building,+Fermi+Avenue,+Didcot,+OX11+0QR,+United+Kingdom",
+    "registration_links": {
+      "in_person": "https://www.spaceenterprise.uk/",
+      "online": "https://www.spaceenterprise.uk/"
+    },
+    "contact": {
+      "email": "info@sa.catapult.org.uk"
+    },
+    "working_language": "English",
+    "online_broadcast_platform": "Online via Space Enterprise Community",
+    "audience": [
+      "Space sector professionals",
+      "Entrepreneurs",
+      "Startups",
+      "Investors",
+      "Researchers"
+    ],
+    "consent_notes": "By attending, participants consent to photography and video recording for promotional purposes.",
+    "sdgs": [
+      9,
+      17
+    ]
+  },
+  {
+    "title": "Satuccino: Monthly Space Networking Event - November 2025",
+    "description": "Join us at Satuccino, our monthly networking event at the Satellite Applications Catapult. Connect with like-minded professionals, exchange ideas, and hear dynamic one-minute pitches from guest speakers. Hosted by the Satellite Applications Catapult in Harwell, the event provides insights into the latest industry news, funding opportunities, and business pitches from across the space sector. Space for the in-person event is limited, but online attendees are welcome for the pitch presentations from 2:30pm.",
+    "start": "2025-11-05T14:00:00+01:00",
+    "end": "2025-11-05T16:00:00+01:00",
+    "url": "https://www.spaceenterprise.uk/",
+    "location": "Electron Building, Fermi Avenue, Didcot, OX11 0QR, United Kingdom",
+    "organizer": "Satellite Applications Catapult",
+    "status": "CONFIRMED",
+    "recurrence": "monthly",
+    "sequence": "0",
+    "created": "2025-08-01T00:00:00",
+    "last_modified": "2025-08-01T00:00:00",
+    "attendees": [],
+    "priority": "",
+    "image_url": "https://satellite-applications.s3.amazonaws.com/uploads/2023/03/Satuccino-Cup-Image.webp",
+    "source_url": "https://www.spaceenterprise.uk/",
+    "categories": [
+      "Networking",
+      "Space Industry",
+      "Business Pitches",
+      "Professional Development"
+    ],
+    "year": 2025,
+    "month_name": "November",
+    "day_of_week": "Wednesday",
+    "iso_week": 40,
+    "all_day": false,
+    "duration_hours": 2,
+    "category_string": "Networking, Space Industry, Business Pitches, Professional Development",
+    "timestamp_epoch": 1751791200,
+    "google_maps_link": "https://www.google.com/maps/dir/?api=1&destination=Electron+Building,+Fermi+Avenue,+Didcot,+OX11+0QR,+United+Kingdom",
+    "registration_links": {
+      "in_person": "https://www.spaceenterprise.uk/",
+      "online": "https://www.spaceenterprise.uk/"
+    },
+    "contact": {
+      "email": "info@sa.catapult.org.uk"
+    },
+    "working_language": "English",
+    "online_broadcast_platform": "Online via Space Enterprise Community",
+    "audience": [
+      "Space sector professionals",
+      "Entrepreneurs",
+      "Startups",
+      "Investors",
+      "Researchers"
+    ],
+    "consent_notes": "By attending, participants consent to photography and video recording for promotional purposes.",
+    "sdgs": [
+      9,
+      17
+    ]
+  },
+  {
+    "title": "Satuccino: Monthly Space Networking Event - December 2025",
+    "description": "Join us at Satuccino, our monthly networking event at the Satellite Applications Catapult. Connect with like-minded professionals, exchange ideas, and hear dynamic one-minute pitches from guest speakers. Hosted by the Satellite Applications Catapult in Harwell, the event provides insights into the latest industry news, funding opportunities, and business pitches from across the space sector. Space for the in-person event is limited, but online attendees are welcome for the pitch presentations from 2:30pm.",
+    "start": "2025-12-03T14:00:00+01:00",
+    "end": "2025-12-03T16:00:00+01:00",
+    "url": "https://www.spaceenterprise.uk/",
+    "location": "Electron Building, Fermi Avenue, Didcot, OX11 0QR, United Kingdom",
+    "organizer": "Satellite Applications Catapult",
+    "status": "CONFIRMED",
+    "recurrence": "monthly",
+    "sequence": "0",
+    "created": "2025-08-01T00:00:00",
+    "last_modified": "2025-08-01T00:00:00",
+    "attendees": [],
+    "priority": "",
+    "image_url": "https://satellite-applications.s3.amazonaws.com/uploads/2023/03/Satuccino-Cup-Image.webp",
+    "source_url": "https://www.spaceenterprise.uk/",
+    "categories": [
+      "Networking",
+      "Space Industry",
+      "Business Pitches",
+      "Professional Development"
+    ],
+    "year": 2025,
+    "month_name": "December",
+    "day_of_week": "Wednesday",
+    "iso_week": 40,
+    "all_day": false,
+    "duration_hours": 2,
+    "category_string": "Networking, Space Industry, Business Pitches, Professional Development",
+    "timestamp_epoch": 1751791200,
+    "google_maps_link": "https://www.google.com/maps/dir/?api=1&destination=Electron+Building,+Fermi+Avenue,+Didcot,+OX11+0QR,+United+Kingdom",
+    "registration_links": {
+      "in_person": "https://www.spaceenterprise.uk/",
+      "online": "https://www.spaceenterprise.uk/"
+    },
+    "contact": {
+      "email": "info@sa.catapult.org.uk"
+    },
+    "working_language": "English",
+    "online_broadcast_platform": "Online via Space Enterprise Community",
+    "audience": [
+      "Space sector professionals",
+      "Entrepreneurs",
+      "Startups",
+      "Investors",
+      "Researchers"
+    ],
+    "consent_notes": "By attending, participants consent to photography and video recording for promotional purposes.",
+    "sdgs": [
+      9,
+      17
+    ]
+  },
+  {
+  "title": "Highways UK 2025",
+  "description": "Highways UK 2025 is the UK's flagship event for roads and infrastructure, bringing together professionals responsible for planning, developing, managing, maintaining, and future-proofing the nation's road networks. The event features over 360 exhibitors, 250+ expert speakers, and nine dedicated conference theatres, covering topics such as sustainability, digital roads, network resilience, and local authority challenges.",
+  "start": "2025-10-15T09:00:00+01:00",
+  "end": "2025-10-16T17:00:00+01:00",
+  "url": "https://www.terrapinn.com/exhibition/highways-uk/index.stm",
+  "location": "NEC Birmingham, Hall 5, Birmingham, United Kingdom",
+  "organizer": "Terrapinn Limited",
+  "status": "CONFIRMED",
+  "recurrence": "",
+  "sequence": "0",
+  "created": "2025-06-01T00:00:00",
+  "last_modified": "2025-06-01T00:00:00",
+  "attendees": [],
+  "priority": "",
+  "image_url": "https://drj3rsukp5yio.cloudfront.net/uploads/2025/09/shutterstock_2213933635-2048x1365.webp",
+  "source_url": "https://www.terrapinn.com/exhibition/highways-uk/index.stm",
+  "categories": [
+    "Road Infrastructure",
+    "Sustainability",
+    "Digital Roads",
+    "Network Resilience",
+    "Local Authority Challenges"
+  ],
+  "year": 2025,
+  "month_name": "October",
+  "day_of_week": "Wednesday",
+  "iso_week": 42,
+  "all_day": false,
+  "duration_hours": 16,
+  "category_string": "Road Infrastructure, Sustainability, Digital Roads, Network Resilience, Local Authority Challenges",
+  "timestamp_epoch": 1750291200,
+  "google_maps_link": "https://www.google.com/maps/dir/?api=1&destination=NEC+Birmingham,+Hall+5,+Birmingham,+United+Kingdom",
+  "registration_links": {
+    "in_person": "https://www.terrapinn.com/exhibition/highways-uk/index.stm",
+    "online": ""
+  },
+  "contact": {
+    "email": "info@terrapinn.com"
+  },
+  "working_language": "English",
+  "online_broadcast_platform": "",
+  "audience": [
+    "Infrastructure professionals",
+    "Local authority representatives",
+    "Sustainability experts",
+    "Digital road innovators",
+    "Network resilience specialists"
+  ],
+  "consent_notes": "By attending, participants consent to photography and video recording for promotional purposes.",
+  "sdgs": [
+    9,
+    11,
+    13,
+    17
+  ]
+},
+  {
+  "title": "DroneX Expo 2025",
+  "description": "DroneX Expo 2025 is Europe's leading drone technology event, uniting professionals from commercial, military, and emergency services sectors. Taking place on 30 September & 1 October 2025 at ExCeL London, the event offers over 50 hours of content, featuring keynote speakers, live demonstrations, and networking opportunities. Attendees can explore advancements in BVLOS operations, airspace integration, and green drone technologies.",
+  "start": "2025-09-30T09:00:00+01:00",
+  "end": "2025-10-01T17:00:00+01:00",
+  "url": "https://www.dronexpo.co.uk/",
+  "location": "ExCeL London, Royal Victoria Dock, 1 Western Gateway, London E16 1XL, United Kingdom",
+  "organizer": "Fortem International",
+  "status": "CONFIRMED",
+  "recurrence": "",
+  "sequence": "0",
+  "created": "2025-06-01T00:00:00",
+  "last_modified": "2025-06-01T00:00:00",
+  "attendees": [],
+  "priority": "",
+  "image_url": "https://drj3rsukp5yio.cloudfront.net/uploads/2024/05/shutterstock_2274954531-2048x1365.webp",
+  "source_url": "https://www.dronexpo.co.uk/",
+  "categories": [
+    "Commercial Drones",
+    "Military & Defence",
+    "Emergency Services",
+    "Drone Technology",
+    "Aerospace Innovation"
+  ],
+  "year": 2025,
+  "month_name": "September",
+  "day_of_week": "Tuesday",
+  "iso_week": 40,
+  "all_day": false,
+  "duration_hours": 16,
+  "category_string": "Commercial Drones, Military & Defence, Emergency Services, Drone Technology, Aerospace Innovation",
+  "timestamp_epoch": 1759305600,
+  "google_maps_link": "https://www.google.com/maps/dir/?api=1&destination=ExCeL+London,+Royal+Victoria+Dock,+London,+E16+1XL,+United+Kingdom",
+  "registration_links": {
+    "in_person": "https://www.dronexpo.co.uk/register-your-interest-to-attend",
+    "online": ""
+  },
+  "contact": {
+    "email": "enquiries.drx@fortem-international.com"
+  },
+  "working_language": "English",
+  "online_broadcast_platform": "",
+  "audience": [
+    "Drone operators",
+    "Military personnel",
+    "Emergency responders",
+    "Aerospace engineers",
+    "Technology innovators"
+  ],
+  "consent_notes": "By attending, participants consent to photography and video recording for promotional purposes.",
+  "sdgs": [
+    9,
+    11,
+    13,
+    17
+  ]
+},
+  {
+  "title": "Cenex Expo 2025",
+  "description": "Cenex Expo 2025 is the UK's premier event dedicated to accelerating innovation in low-carbon transport and Connected Automated Mobility (CAM). Taking place on 3–4 September 2025 at UTAC Millbrook in Bedfordshire, the event brings together over 200 expert speakers, policymakers, technologists, and commercial leaders to showcase advancements in transportation and energy innovation.",
+  "start": "2025-09-03T09:00:00+01:00",
+  "end": "2025-09-04T17:00:00+01:00",
+  "url": "https://cenex-expo.com/",
+  "location": "UTAC Millbrook, Station Lane, Bedford, MK45 2JQ, United Kingdom",
+  "organizer": "Cenex",
+  "status": "CONFIRMED",
+  "recurrence": "",
+  "sequence": "0",
+  "created": "2025-06-01T00:00:00",
+  "last_modified": "2025-06-01T00:00:00",
+  "attendees": [],
+  "priority": "",
+  "image_url": "https://cenex-expo.com/media/news/cenex-expo-event-to-feature-major-government-programme-updates",
+  "source_url": "https://cenex-expo.com/",
+  "categories": [
+    "Low-Carbon Transport",
+    "Connected Automated Mobility",
+    "Innovation",
+    "Seminars",
+    "Networking"
+  ],
+  "year": 2025,
+  "month_name": "September",
+  "day_of_week": "Wednesday",
+  "iso_week": 36,
+  "all_day": false,
+  "duration_hours": 16,
+  "category_string": "Low-Carbon Transport, Connected Automated Mobility, Innovation, Seminars, Networking",
+  "timestamp_epoch": 1756675200,
+  "google_maps_link": "https://www.google.com/maps/dir/?api=1&destination=UTAC+Millbrook,+Station+Lane,+Bedford,+MK45+2JQ,+United+Kingdom",
+  "registration_links": {
+    "in_person": "https://cenex-expo.com/registration/",
+    "online": ""
+  },
+  "contact": {
+    "email": "info@cenex.co.uk"
+  },
+  "working_language": "English",
+  "online_broadcast_platform": "",
+  "audience": [
+    "Automotive manufacturers",
+    "Technology innovators",
+    "Policy makers",
+    "Researchers",
+    "Industry professionals"
+  ],
+  "consent_notes": "By attending, participants consent to photography and video recording for promotional purposes.",
+  "sdgs": [
+    9,
+    11,
+    13,
+    17
+  ]
+},
+  {
+  "title": "Connected Britain 2025",
+  "description": "Connected Britain 2025 is the UK's premier digital economy event, bringing together over 8,000 industry experts, innovators, and policymakers to shape the future of the UK's digital infrastructure. The event features over 400 speakers, 350+ exhibitors, and covers 12 key content themes, including full-fibre and 5G rollout, digital inclusion, smart cities, and public sector innovation.",
+  "start": "2025-09-24T08:00:00+01:00",
+  "end": "2025-09-25T16:00:00+01:00",
+  "url": "https://www.terrapinn.com/conference/connected-britain/index.stm",
+  "location": "ExCeL London, Royal Victoria Dock, 1 Western Gateway, London, E16 1XL, United Kingdom",
+  "organizer": "Terrapinn Limited",
+  "status": "CONFIRMED",
+  "recurrence": "",
+  "sequence": "0",
+  "created": "2025-06-01T00:00:00",
+  "last_modified": "2025-06-01T00:00:00",
+  "attendees": [],
+  "priority": "",
+  "image_url": "https://drj3rsukp5yio.cloudfront.net/uploads/2025/08/cb-2048x2048.webp",
+  "source_url": "https://www.terrapinn.com/conference/connected-britain/index.stm",
+  "categories": [
+    "Telecommunications",
+    "Digital Infrastructure",
+    "Smart Cities",
+    "Public Sector Innovation",
+    "Digital Inclusion"
+  ],
+  "year": 2025,
+  "month_name": "September",
+  "day_of_week": "Wednesday",
+  "iso_week": 39,
+  "all_day": false,
+  "duration_hours": 16,
+  "category_string": "Telecommunications, Digital Infrastructure, Smart Cities, Public Sector Innovation, Digital Inclusion",
+  "timestamp_epoch": 1754064000,
+  "google_maps_link": "https://www.google.com/maps/dir/?api=1&destination=ExCeL+London,+Royal+Victoria+Dock,+London,+E16+1XL,+United+Kingdom",
+  "registration_links": {
+    "in_person": "https://www.terrapinn.com/conference/connected-britain/register.stm",
+    "online": ""
+  },
+  "contact": {
+    "email": "info@totaltele.com"
+  },
+  "working_language": "English",
+  "online_broadcast_platform": "",
+  "audience": [
+    "Telecom operators",
+    "Government officials",
+    "Tech innovators",
+    "Policy makers",
+    "Smart city developers"
+  ],
+  "consent_notes": "By attending, participants consent to photography and video recording for promotional purposes.",
+  "sdgs": [
+    9,
+    11,
+    17
+  ]
+},
+  {
+  "title": "Microelectronics UK 2025",
+  "description": "Microelectronics UK 2025 is the premier event uniting the entire value chain across the microelectronics, semiconductor, and photonics industries. Taking place on 24–25 September 2025 at ExCeL London, the event showcases the UK's world-class expertise in R&D, design innovation, and advanced manufacturing. Attendees will explore the future of intelligent systems and advanced electronics through dedicated conference stages and networking opportunities.",
+  "start": "2025-09-24T09:00:00+01:00",
+  "end": "2025-09-25T17:00:00+01:00",
+  "url": "https://microelectronicsuk.com/",
+  "location": "ExCeL London, London, United Kingdom",
+  "organizer": "IQPC Exhibitions Ltd.",
+  "status": "CONFIRMED",
+  "recurrence": "",
+  "sequence": "0",
+  "created": "2025-06-01T00:00:00",
+  "last_modified": "2025-06-01T00:00:00",
+  "attendees": [],
+  "priority": "",
+  "image_url": "https://drj3rsukp5yio.cloudfront.net/uploads/2025/08/microelectronics_sm.webp",
+  "source_url": "https://microelectronicsuk.com/",
+  "categories": [
+    "Microelectronics",
+    "Semiconductors",
+    "Photonics",
+    "Embedded Systems",
+    "Innovation",
+    "Advanced Manufacturing"
+  ],
+  "year": 2025,
+  "month_name": "September",
+  "day_of_week": "Wednesday",
+  "iso_week": 39,
+  "all_day": false,
+  "duration_hours": 16,
+  "category_string": "Microelectronics, Semiconductors, Photonics, Embedded Systems, Innovation, Advanced Manufacturing",
+  "timestamp_epoch": 1754064000,
+  "google_maps_link": "https://www.google.com/maps/dir/?api=1&destination=ExCeL+London,+London,+UK",
+  "registration_links": {
+    "in_person": "https://microelectronicsuk.com/",
+    "online": ""
+  },
+  "contact": {
+    "email": "enquires@microelectronicsuk.com"
+  },
+  "working_language": "English",
+  "online_broadcast_platform": "",
+  "audience": [
+    "Engineers",
+    "Developers",
+    "Decision-makers",
+    "Researchers",
+    "Industry professionals"
+  ],
+  "consent_notes": "By attending, participants consent to photography and video recording for promotional purposes.",
+  "sdgs": [
+    9,
+    4,
+    17
+  ]
+},
+  {
+  "title": "The Emergency Services Show 2025",
+  "description": "Europe’s leading event for the emergency services sector returns for its 19th edition on 17–18 September 2025 at the NEC Birmingham. Engage with groundbreaking innovations where technology and learning drive the future of emergency response and public safety. Connect with over 16,000 blue light professionals, discover cutting-edge solutions from 500+ exhibitors, and exchange vital skills and knowledge to enhance emergency response.",
+  "start": "2025-09-17T09:00:00+01:00",
+  "end": "2025-09-18T17:00:00+01:00",
+  "url": "https://www.emergencyuk.com/",
+  "location": "NEC Birmingham, Birmingham, United Kingdom",
+  "organizer": "Emergency Services Show",
+  "status": "CONFIRMED",
+  "recurrence": "",
+  "sequence": "0",
+  "created": "2025-06-01T00:00:00",
+  "last_modified": "2025-06-01T00:00:00",
+  "attendees": [],
+  "priority": "",
+  "image_url": "https://drj3rsukp5yio.cloudfront.net/uploads/2025/08/ess-2048x1173.webp",
+  "source_url": "https://www.emergencyuk.com/",
+  "categories": [
+    "Emergency Services",
+    "Public Safety",
+    "Technology Innovation",
+    "Exhibitions",
+    "Networking"
+  ],
+  "year": 2025,
+  "month_name": "September",
+  "day_of_week": "Wednesday",
+  "iso_week": 38,
+  "all_day": false,
+  "duration_hours": 16,
+  "category_string": "Emergency Services, Public Safety, Technology Innovation, Exhibitions, Networking",
+  "timestamp_epoch": 1747468800,
+  "google_maps_link": "https://www.google.com/maps/dir/?api=1&destination=NEC+Birmingham,+Birmingham,+UK",
+  "registration_links": {
+    "in_person": "https://www.emergencyuk.com/",
+    "online": ""
+  },
+  "contact": {
+    "email": "info@emergencyuk.com"
+  },
+  "working_language": "English",
+  "online_broadcast_platform": "",
+  "audience": [
+    "Emergency services professionals",
+    "Public safety experts",
+    "Technology innovators",
+    "Exhibitors",
+    "Industry leaders"
+  ],
+  "consent_notes": "By attending, participants consent to photography and video recording for promotional purposes.",
+  "sdgs": [
+    9,
+    11,
+    17
+  ]
+},
+  {
+  "title": "Roundtable Summit: How Space Tech is Transforming Rail Operations",
+  "description": "An invitation-only roundtable summit exploring how space-based assets, including satellite data, AI, and IoT, can enhance operational efficiency, resilience, and sustainability in rail operations. Co-hosted by Ovinto and the European Space Agency's Space4Rail programme, this summit will delve into intermodal intelligence, infrastructure monitoring, predictive maintenance, and the development of necessary skills for innovation in the rail sector.",
+  "start": "2025-09-11T13:00:00+01:00",
+  "end": "2025-09-11T16:30:00+01:00",
+  "url": "https://www.eventbrite.co.uk/e/roundtable-summit-how-space-tech-is-transforming-rail-operations-tickets-1389549613299",
+  "location": "To be announced, United Kingdom",
+  "organizer": "The Rail Innovation Group",
+  "status": "CONFIRMED",
+  "recurrence": "",
+  "sequence": "0",
+  "created": "2025-07-01T00:00:00",
+  "last_modified": "2025-07-01T00:00:00",
+  "attendees": [],
+  "priority": "",
+  "image_url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1071668303%2F188541087318%2F1%2Foriginal.20250711-163526?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C38%2C2940%2C1470&s=1c13edec80448766ff9f63e2d7badf35",
+  "source_url": "https://www.eventbrite.co.uk/e/roundtable-summit-how-space-tech-is-transforming-rail-operations-tickets-1389549613299",
+  "categories": [
+    "Rail Innovation",
+    "Space Technology",
+    "Digital Transformation",
+    "Infrastructure Monitoring",
+    "Predictive Maintenance"
+  ],
+  "year": 2025,
+  "month_name": "September",
+  "day_of_week": "Thursday",
+  "iso_week": 37,
+  "all_day": false,
+  "duration_hours": 3.5,
+  "category_string": "Rail Innovation, Space Technology, Digital Transformation, Infrastructure Monitoring, Predictive Maintenance",
+  "timestamp_epoch": 1747350000,
+  "google_maps_link": "https://www.google.com/maps/dir/?api=1&destination=To+be+announced,+United+Kingdom",
+  "registration_links": {
+    "in_person": "https://www.eventbrite.co.uk/e/roundtable-summit-how-space-tech-is-transforming-rail-operations-tickets-1389549613299",
+    "online": ""
+  },
+  "contact": {
+    "email": "info@railinnovationgroup.org"
+  },
+  "working_language": "English",
+  "online_broadcast_platform": "",
+  "audience": [
+    "Rail industry professionals",
+    "Space technology experts",
+    "Digital transformation specialists",
+    "Infrastructure managers",
+    "Predictive maintenance engineers"
+  ],
+  "consent_notes": "By attending, participants consent to photography and video recording for promotional purposes.",
+  "sdgs": [
+    9,
+    11,
+    13
+  ]
+},
+  {
+  "title": "ROSCon UK 2025",
+  "description": "ROSCon UK 2025 is the annual conference for ROS (Robot Operating System) developers of all levels, featuring technical talks, workshops, tutorials, and networking. Hosted by the National Robotarium at Heriot-Watt University, the event showcases UK contributions to the ROS ecosystem and encourages inclusivity for women, minority, and under-represented groups.",
+  "start": "2025-09-15T09:00:00+01:00",
+  "end": "2025-09-17T18:00:00+01:00",
+  "url": "https://roscon.uk/2025",
+  "location": "University of Edinburgh, Informatics Forum, Edinburgh, United Kingdom",
+  "organizer": "Heriot-Watt University",
+  "status": "CONFIRMED",
+  "recurrence": "",
+  "sequence": "0",
+  "created": "2025-06-01T00:00:00",
+  "last_modified": "2025-06-01T00:00:00",
+  "attendees": [],
+  "priority": "",
+  "image_url": "https://roscon.org.uk/2025/img/ROSCon2025.png",
+  "source_url": "https://roscon.uk/2025",
+  "categories": [
+    "Robotics",
+    "ROS",
+    "Software Development",
+    "Networking",
+    "Workshops"
+  ],
+  "year": 2025,
+  "month_name": "September",
+  "day_of_week": "Monday",
+  "iso_week": 38,
+  "all_day": false,
+  "duration_hours": 27,
+  "category_string": "Robotics, ROS, Software Development, Networking, Workshops",
+  "timestamp_epoch": 1747494000,
+  "google_maps_link": "https://www.google.com/maps/dir/?api=1&destination=University+of+Edinburgh,+Informatics+Forum,+Edinburgh,+UK",
+  "registration_links": {
+    "in_person": "mailto:rosconuk25registration@ed.ac.uk",
+    "online": ""
+  },
+  "contact": {
+    "email": "rosconuk25registration@ed.ac.uk"
+  },
+  "working_language": "English",
+  "online_broadcast_platform": "",
+  "audience": [
+    "ROS developers",
+    "Robotics researchers",
+    "Software engineers",
+    "Industry and academia professionals",
+    "Students"
+  ],
+  "consent_notes": "By attending, participants consent to photography and video recording for promotional purposes.",
+  "sdgs": [
+    9,
+    4,
+    17
+  ]
+},
+  {
+  "title": "Mission Critical: Project Management at the Heart of Civil and Defence Space",
+  "description": "An exclusive, high-level event hosted by the Association for Project Management (APM) and the APM Space Interest Network. The conference explores the critical role of project and programme management in delivering civil and defence space capabilities. Senior stakeholders from government, industry, and the project profession will share insights, collaboration, and thought leadership.",
+  "start": "2025-09-04T10:00:00+00:00",
+  "end": "2025-09-04T16:30:00+00:00",
+  "url": "https://event.apm.org.uk/event/c47b2a1c-e959-477e-b0e8-40fd1fe2d87b/regProcessStep1",
+  "location": "Royal Aeronautical Society, No.4 Hamilton Place, Mayfair, London, W1J 7BQ, United Kingdom",
+  "organizer": "Association for Project Management (APM)",
+  "status": "CONFIRMED",
+  "recurrence": "",
+  "sequence": "0",
+  "created": "2025-08-01T00:00:00",
+  "last_modified": "2025-08-01T00:00:00",
+  "attendees": [],
+  "priority": "",
+  "image_url": "https://images-eur.cvent.com/pr53/9e412a6da1cc4437b7eac43a16312b9c/pix/2ac6d963fcf14176875cc9bdab1fee77!_!f4e43963c6b6023072be4b8e4838f91b.png?f=webp",
+  "source_url": "https://event.apm.org.uk/event/c47b2a1c-e959-477e-b0e8-40fd1fe2d87b/regProcessStep1",
+  "categories": [
+    "Project Management",
+    "Programme Management",
+    "Civil Space",
+    "Defence Space",
+    "Leadership"
+  ],
+  "year": 2025,
+  "month_name": "September",
+  "day_of_week": "Thursday",
+  "iso_week": 36,
+  "all_day": false,
+  "duration_hours": 6.5,
+  "category_string": "Project Management, Programme Management, Civil Space, Defence Space, Leadership",
+  "timestamp_epoch": 1746640800,
+  "google_maps_link": "https://www.google.com/maps/dir/?api=1&destination=Royal+Aeronautical+Society,+No.4+Hamilton+Place,+London,+UK",
+  "registration_links": {
+    "in_person": "https://event.apm.org.uk/event/c47b2a1c-e959-477e-b0e8-40fd1fe2d87b/regProcessStep1",
+    "online": ""
+  },
+  "contact": {
+    "email": "info@apm.org.uk"
+  },
+  "working_language": "English",
+  "online_broadcast_platform": "",
+  "audience": [
+    "Government officials",
+    "Industry leaders",
+    "Project and programme managers",
+    "Space sector professionals"
+  ],
+  "consent_notes": "By attending, participants consent to photography and video recording for promotional purposes.",
+  "sdgs": [
+    9,
+    16,
+    17
+  ]
+},
+  {
   "title": "International Conference 2025: Towards Resilient and Sustainable Cities and Communities",
   "description": "A two-day international conference organised by the Institute for Sustainable Futures at De Montfort University. The event will explore global challenges to urban sustainability and resilience, focusing on building future-proof cities amid climate, economic and social vulnerabilities. Format includes plenary keynotes, parallel sessions, a stakeholder workshop, and poster sessions by doctoral students.",
   "start": "2025-09-04T09:00:00+01:00",
@@ -5253,39 +5922,6 @@
     ]
   },
   {
-    "title": "EDHPC 2025 - 2nd European Data Handling & Data Processing Conference",
-    "description": "EDHPC 2025\nThe second European Data Handling & Data Processing Conference – EDHPC 2025 – will be held from the 13th to the 17th of October 2025 in Elche, Spain. It is organised by the European Space Agency, with the support of the local tourist office. Find the latest information on the official website.\n\nThe full paper submission is now open, please find instructions here. The deadline for final paper, filled copyright form and presentation submission is the 15th of September. The deadline for the presenter conference registration is the 30th of June, please follow the instructions on the official website.\n\n\nhttps://indico.esa.int/event/552/",
-    "start": "2025-10-12T16:00:00+00:00",
-    "end": "2025-10-17T15:00:00+00:00",
-    "url": "https://indico.esa.int/event/552/",
-    "location": "Elche, Spain",
-    "organizer": "European Space Agency",
-    "status": "CONFIRMED",
-    "recurrence": "",
-    "sequence": "0",
-    "created": "2025-08-30T22:10:00+00:00",
-    "last_modified": "2025-08-30T22:10:00+00:00",
-    "attendees": [],
-    "priority": "",
-    "image_url": "https://indico.esa.int/event/552/logo-969543879.png",
-    "source_url": "https://indico.esa.int/event/552/",
-    "categories": [],
-    "year": 2025,
-    "month_name": "October",
-    "day_of_week": "Sunday",
-    "iso_week": 41,
-    "all_day": false,
-    "duration_hours": 119.0,
-    "category_string": "",
-    "timestamp_epoch": 1760284800,
-    "google_maps_link": "https://www.google.com/maps/dir/?api=1&destination=None",
-    "sdgs": [
-      13,
-      5,
-      10
-    ]
-  },
-  {
     "title": "25 years of operational surveys for small-sized space debris in higher altitudes",
     "description": "Speakers: Tim Flohrer (ESA/ESOC)\n\nESA has been running optical surveys for space debris via the Optical Ground Station (OGS) at Tenerife from the mid 1990ies. The surveys  became operational in 1999.\nThese ESA surveys have been regarded as highly successful, and the many successes and first discoveries (small debris in GEO, small debris in GTO, monitoring of related clouds, discovery of HAMR, and their characterisation via spectra, photometry, and long-term monitoring, etc.) deserve a symposium as the leader of these activities, Prof. Thomas Schildknecht, is retiring from the University of Bern. \nThis symposiums aims to revisit the scientific results, and to connect the findings to the emerging future needs, such as the “Zero Debris Approach” that a community of like-minded actors have defined recently.\nCelebrating the successes should also leave room for discussing the main challenges and how they have been solved, what we learned from the surveys, and maybe also sharing so far untold stories. \nThe symposium is planned to take place at the „Space Eye“, the largest publicly accessible telescope in Switzerland and planetarium, which is located just outside of Bern. On-site and virtual participation in the planned symposium will be possible, subject to a confirmed registration for logistical reasons.",
     "start": "2025-10-13T08:00:00+00:00",
@@ -5622,7 +6258,7 @@
     "end": "2025-09-17T11:00:00+01:00",
     "url": "https://events.teams.microsoft.com/event/65d52f39-16a9-4929-b776-063e873da808@a3b20c00-1663-4ee1-8af7-7863d423ee0a",
     "location": "Online",
-    "organizer": "Monika Dankova",
+    "organizer": "Satellite Applications Catapult",
     "status": "CONFIRMED",
     "recurrence": "",
     "sequence": "0",
@@ -5900,7 +6536,7 @@
     "last_modified": "2025-08-30T20:42:00.326151",
     "attendees": [],
     "priority": "",
-    "image_url": "https://d102smnvqbot52.cloudfront.net/shrine_store/uploads/networks/1112/events/91730/large-b2aa969d80b47fd7a0020999fbf448a3.webp?Expires=1756593715&Signature=KuwxaIsF-R9bg1Zmu3HYSWW1mlh8~ETZk-~BTz5bjTRa6BvscgdFi5uN8NjW3JmK4pPOkLvaV2Gdon7oTZSt9XbaN8bswLeXtDfTvali-GBlCo3qgHKSIGPMMU0gTvSGARiRlxUQAj8H-rnaXPex-9F-XgUKl~GiWkjzmIoMj698LE94WtCWk5M-IJhxUYirDFFUuJKB1~-Clx3JVGb5EzZ4E8AMfdtyT9OXgmBNUMAt1nR~Dg5Tyi9~DDcvk50gbOlDcSKiTz87nCI7-YkYj8v03HM8q1-gDcbekN1rwHI1yXuJB5oIek2YLLJ9LSJ~1EWbLF66SaPfus40i48msQ__&Key-Pair-Id=K2FGAUSZJ303Q5",
+    "image_url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1084323073%2F2836328115831%2F1%2Foriginal.20250730-091243?crop=focalpoint&fit=crop&w=940&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.0246212121212&fp-y=0.0541044776119&s=d77ae7764f808a8166e7df9240e6b6ae",
     "source_url": "https://spaceenterprise.uk/events/p/91730",
     "categories": [
       "Professional Development",
