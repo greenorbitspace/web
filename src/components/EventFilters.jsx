@@ -191,7 +191,6 @@ export default function EventFilters({ preRenderedEvents = [], batchSize = 6, fl
     <div className="space-y-8">
       {/* Filters */}
       <div className="grid grid-cols-1 md:grid-cols-6 gap-4 mb-6">
-        {/* Categories grouped */}
         <select value={selectedCategory} onChange={e => setSelectedCategory(e.target.value)} className="border rounded px-2 py-1 text-gray-700">
           <option value="">All Categories</option>
           {Object.entries(categoryGroups).map(([group, cats]) => (
@@ -217,8 +216,21 @@ export default function EventFilters({ preRenderedEvents = [], batchSize = 6, fl
           <option value="online">Online</option>
         </select>
 
-        <input type="date" value={startFilter} onChange={e => setStartFilter(e.target.value)} className="border rounded px-2 py-1 text-gray-700" />
-        <input type="date" value={endFilter} onChange={e => setEndFilter(e.target.value)} className="border rounded px-2 py-1 text-gray-700" />
+        {/* Mobile-visible date inputs */}
+        <div className="flex flex-col sm:flex-row gap-2 col-span-2">
+          <input
+            type="date"
+            value={startFilter}
+            onChange={e => setStartFilter(e.target.value)}
+            className="border rounded px-3 py-2 w-full text-gray-800 bg-white placeholder-gray-400 focus:ring-2 focus:ring-accent-500"
+          />
+          <input
+            type="date"
+            value={endFilter}
+            onChange={e => setEndFilter(e.target.value)}
+            className="border rounded px-3 py-2 w-full text-gray-800 bg-white placeholder-gray-400 focus:ring-2 focus:ring-accent-500"
+          />
+        </div>
       </div>
 
       {/* SDG Filter */}
