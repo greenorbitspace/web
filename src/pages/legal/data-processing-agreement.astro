@@ -1,0 +1,142 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+---
+
+<Layout title="Data Processing Agreement">
+  <Header />
+
+  <main class="py-8">
+    <HeroSection 
+      title="Data Processing Agreement" 
+      description="Your privacy matters. Here's how we handle your data at Green Orbit Digital."
+    />
+
+    <section class="py-16 bg-white dark:bg-secondary-500">
+      <div class="max-w-6xl mx-auto px-4 prose prose-lg dark:prose-invert">
+        
+        <p>
+          In short – We promise to look after your data, and have in place clear policies to ensure 
+          that our processes comply with our legal obligations, and our obligations to you, as our client. 
+          The necessary legal blurb follows below. If it’s too legal jargon-y, please let us know!
+        </p>
+
+        <h2>The Details</h2>
+
+        <h3>Parties</h3>
+        <ol>
+          <li>
+            Green Orbit Digital Ltd, incorporated and registered in England and Wales 
+            (Processor)
+          </li>
+          <li>
+            Client Company – details as per those given on this quote (Controller)
+          </li>
+        </ol>
+        <p>
+          From this point onwards, collectively referred to as ‘Parties’ and individually as a ‘Party’.
+        </p>
+
+        <h3>Background</h3>
+        <p>
+          References to the term “Data Processing Agreement” means this Agreement and the schedules 
+          outlined at the end of this agreement.
+        </p>
+
+        <ul>
+          <li><strong>Schedule 1</strong> – Services, Processing, Personal Data and Data Subjects</li>
+          <li><strong>Schedule 2</strong> – Security Measures</li>
+        </ul>
+
+        <p>
+          The Parties have agreed to enter into this Agreement to ensure compliance with the 
+          applicable data protection legislation (“Data Protection Legislation”) relating to the 
+          processing of Personal Data by the Processor for the Controller.
+        </p>
+
+        <h2>1. Agreed Terms</h2>
+        <p>
+          The terms and expressions set out in this Agreement shall have the following meanings:
+        </p>
+
+        <dl>
+          <dt>1.1 Data Protection Legislation</dt>
+          <dd>
+            (i) unless and until the GDPR is no longer directly applicable in the UK, the General Data Protection 
+            Regulation ((EU) 2016/679) and any national implementing laws, regulations and secondary legislation, 
+            as amended or updated from time to time, in the UK and then (ii) any successor legislation.
+          </dd>
+
+          <dt>1.2 Controller / Processor / Processing / Data Subject</dt>
+          <dd>Shall have the meanings given to them in the Data Protection Legislation.</dd>
+
+          <dt>1.3 ICO</dt>
+          <dd>The Information Commissioner’s Office.</dd>
+
+          <dt>1.4 Personal Data</dt>
+          <dd>All such “personal data” as defined in the Data Protection Legislation processed by the Processor on behalf of the Controller.</dd>
+
+          <dt>1.5 Services</dt>
+          <dd>Those services described in Schedule 1 provided by the Processor to the Controller.</dd>
+
+          <dt>1.6 Security Measures</dt>
+          <dd>The security measures set out in Schedule 2.</dd>
+        </dl>
+
+        <p>
+          … (retain full agreement text: Scope of Processing, Security Measures, 
+          Breach Notification, Sub-Processing, Warranties, Confidentiality, Termination, General).
+        </p>
+
+        <h2>Schedule 1 – Services, Processing, Personal Data and Data Subjects</h2>
+        <h3>1. Services</h3>
+        <p>
+          The services as outlined in this quote, plus any additional services agreed by both parties 
+          as necessary for project completion.
+        </p>
+
+        <h3>2. Processing</h3>
+        <p>
+          Personal Data will only be used in the manner the Controller instructs, and as required to 
+          provide the agreed services.
+        </p>
+
+        <h3>3. Personal Data</h3>
+        <ul>
+          <li>Company accounts information</li>
+          <li>Website credentials</li>
+          <li>Names and email addresses</li>
+          <li>Other special categories of data</li>
+        </ul>
+
+        <h3>4. Data Subjects</h3>
+        <ul>
+          <li>Controller’s employees</li>
+          <li>Customer contacts</li>
+          <li>Subcontractor employees</li>
+        </ul>
+
+        <h2>Schedule 2 – Security Measures</h2>
+        <ol>
+          <li>
+            Maintain security measures appropriate to the harm that might result from unlawful 
+            processing or accidental loss, and to the nature of the data.
+          </li>
+          <li>
+            Security policy with risk assessment, responsibilities, staff dissemination, and feedback loop.
+          </li>
+          <li>Safeguards and virus protection in line with best practice.</li>
+          <li>Prevent unauthorised access to Personal Data.</li>
+          <li>Secure storage and transfer of Personal Data (encryption, couriers, password protection).</li>
+          <li>Confidentiality and reliability requirements for all personnel with access to Personal Data.</li>
+          <li>Secure backup, disposal, and breach detection procedures.</li>
+          <li>Adherence to ISO/IEC 27001:2013 standards as appropriate.</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
