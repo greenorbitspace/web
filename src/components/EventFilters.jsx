@@ -6,13 +6,11 @@ import { SDGs } from '../data/sdgs';
 
 const fallbackIcon = '/sdgs/default.svg';
 
-// Map SDG IDs to metadata
 const sdgMap = SDGs.reduce((acc, sdg) => {
   acc[sdg.id] = sdg;
   return acc;
 }, {});
 
-// Parse date string to Date object
 const parseEventDate = dateStr => {
   if (!dateStr) return null;
   let date = new Date(dateStr);
@@ -29,7 +27,6 @@ const parseEventDate = dateStr => {
   return isNaN(date) ? null : new Date(date);
 };
 
-// Format date for display
 const formatEventDate = (startDate, endDate) => {
   if (!startDate) return '';
   if (!endDate || startDate.getTime() === endDate.getTime()) {
@@ -38,7 +35,6 @@ const formatEventDate = (startDate, endDate) => {
   return `${startDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })} - ${endDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}`;
 };
 
-// Detect country from location
 const detectCountry = location => {
   if (!location) return '';
   const countryAliases = {
@@ -60,7 +56,6 @@ const detectCountry = location => {
   return '';
 };
 
-// Optional: define category groups
 const CATEGORY_GROUPS = {
   'sustainability': ['climate', 'energy', 'environment', 'sustainable development'],
   'health & wellbeing': ['health', 'wellbeing', 'mental health', 'adhd', 'medical'],
@@ -83,7 +78,6 @@ export default function EventFilters({ preRenderedEvents = [], batchSize = 6, fl
 
   const events = Array.isArray(preRenderedEvents) ? preRenderedEvents : [];
 
-  // Process events
   const processedEvents = useMemo(() => {
     return events
       .map(e => {
@@ -93,6 +87,8 @@ export default function EventFilters({ preRenderedEvents = [], batchSize = 6, fl
         if (e.mode) mode = /online|virtual/i.test(e.mode) ? 'online' : 'in-person';
         else if (e.location && /(online|virtual|zoom|teams|webinar)/i.test(e.location)) mode = 'online';
 
+        const organizers = (e.organizer || 'TBD').split(',').map(o => o.trim());
+
         return {
           ...e,
           slug: e.slug || slugify(e.title),
@@ -100,7 +96,7 @@ export default function EventFilters({ preRenderedEvents = [], batchSize = 6, fl
           endDate,
           location: e.location && e.location !== '-' ? e.location : 'TBD',
           country: detectCountry(e.location),
-          organizer: e.organizer || 'TBD',
+          organizers,
           categories: (e.categories || []).map(c => c.toLowerCase().trim()),
           url: e.url || '',
           image: e.image || e.image_url || '',
@@ -112,7 +108,6 @@ export default function EventFilters({ preRenderedEvents = [], batchSize = 6, fl
       .sort((a, b) => a.startDate - b.startDate);
   }, [events]);
 
-  // Filter options
   const categories = useMemo(() => {
     const allCats = processedEvents.flatMap(e => e.categories);
     return Array.from(new Set(allCats)).sort();
@@ -128,15 +123,19 @@ export default function EventFilters({ preRenderedEvents = [], batchSize = 6, fl
     return grouped;
   }, [categories]);
 
-  const organizers = useMemo(() => Array.from(new Set(processedEvents.map(e => e.organizer))).sort(), [processedEvents]);
+  const organizers = useMemo(() => {
+    const allOrgs = processedEvents.flatMap(e => e.organizers);
+    return Array.from(new Set(allOrgs)).sort();
+  }, [processedEvents]);
+
   const countries = useMemo(() => Array.from(new Set(processedEvents.map(e => e.country).filter(Boolean))).sort(), [processedEvents]);
+
   const sdgCategories = useMemo(() => {
     const set = new Set();
     processedEvents.forEach(e => e.sdgs.forEach(id => set.add(id)));
     return ['All', ...Array.from(set).sort((a, b) => a - b)];
   }, [processedEvents]);
 
-  // State
   const [selectedCategory, setSelectedCategory] = useState('');
   const [selectedOrganizer, setSelectedOrganizer] = useState('');
   const [selectedCountry, setSelectedCountry] = useState('');
@@ -147,18 +146,15 @@ export default function EventFilters({ preRenderedEvents = [], batchSize = 6, fl
 
   const toggleFilter = (current, value, setter) => setter(current === value ? '' : value);
 
-  // Apply filters
   const filteredEvents = useMemo(() => {
     return processedEvents.filter(e => {
       const matchCategory = !selectedCategory || e.categories.includes(selectedCategory);
-      const matchOrganizer = !selectedOrganizer || e.organizer.toLowerCase() === selectedOrganizer.toLowerCase();
+      const matchOrganizer = !selectedOrganizer || e.organizers.some(o => o.toLowerCase() === selectedOrganizer.toLowerCase());
       const matchCountry = !selectedCountry || e.country.toLowerCase() === selectedCountry.toLowerCase();
       const matchMode = selectedMode === 'both' || e.mode === selectedMode;
       const matchSDG = selectedSDG === 'All' || e.sdgs.includes(selectedSDG);
-
       const matchStart = !startFilter || e.startDate >= new Date(startFilter);
       const matchEnd = !endFilter || e.endDate <= new Date(endFilter);
-
       return matchCategory && matchOrganizer && matchCountry && matchMode && matchSDG && matchStart && matchEnd;
     });
   }, [processedEvents, selectedCategory, selectedOrganizer, selectedCountry, selectedMode, selectedSDG, startFilter, endFilter]);
@@ -191,7 +187,6 @@ export default function EventFilters({ preRenderedEvents = [], batchSize = 6, fl
     <div className="space-y-8">
       {/* Filters */}
       <div className="grid grid-cols-1 md:grid-cols-6 gap-4 mb-6">
-        {/* Categories grouped */}
         <select value={selectedCategory} onChange={e => setSelectedCategory(e.target.value)} className="border rounded px-2 py-1 text-gray-700">
           <option value="">All Categories</option>
           {Object.entries(categoryGroups).map(([group, cats]) => (
@@ -202,7 +197,7 @@ export default function EventFilters({ preRenderedEvents = [], batchSize = 6, fl
         </select>
 
         <select value={selectedOrganizer} onChange={e => setSelectedOrganizer(e.target.value)} className="border rounded px-2 py-1 text-gray-700">
-          <option value="">All Organisers</option>
+          <option value="">All Organizers</option>
           {organizers.map(o => <option key={o} value={o.toLowerCase()}>{o}</option>)}
         </select>
 
@@ -217,18 +212,8 @@ export default function EventFilters({ preRenderedEvents = [], batchSize = 6, fl
           <option value="online">Online</option>
         </select>
 
-       <input
-        type="date"
-        value={startFilter}
-        onChange={e => setStartFilter(e.target.value)}
-        className="border rounded px-2 py-1 text-gray-800 bg-white"
-      />
-      <input
-        type="date"
-        value={endFilter}
-        onChange={e => setEndFilter(e.target.value)}
-        className="border rounded px-2 py-1 text-gray-800 bg-white"
-      />
+        <input type="date" value={startFilter} onChange={e => setStartFilter(e.target.value)} className="border rounded px-2 py-1 text-gray-800 bg-white" />
+        <input type="date" value={endFilter} onChange={e => setEndFilter(e.target.value)} className="border rounded px-2 py-1 text-gray-800 bg-white" />
       </div>
 
       {/* SDG Filter */}
@@ -260,7 +245,9 @@ export default function EventFilters({ preRenderedEvents = [], batchSize = 6, fl
                   {e.categories.map(cat => (
                     <span key={cat} className="inline-block bg-accent-500 text-white text-xs px-2 py-1 rounded cursor-pointer" onClick={() => toggleFilter(selectedCategory, cat, setSelectedCategory)}>{cat}</span>
                   ))}
-                  {e.organizer && <span className="inline-block bg-blue-500 text-white text-xs px-2 py-1 rounded cursor-pointer" onClick={() => toggleFilter(selectedOrganizer, e.organizer.toLowerCase(), setSelectedOrganizer)}>{e.organizer}</span>}
+                  {e.organizers.map(org => (
+                    <span key={org} className="inline-block bg-blue-500 text-white text-xs px-2 py-1 rounded cursor-pointer" onClick={() => toggleFilter(selectedOrganizer, org.toLowerCase(), setSelectedOrganizer)}>{org}</span>
+                  ))}
                   {e.country && <span className="inline-block bg-green-500 text-white text-xs px-2 py-1 rounded cursor-pointer" onClick={() => toggleFilter(selectedCountry, e.country.toLowerCase(), setSelectedCountry)}>{e.country}</span>}
                   {e.mode && <span className="inline-block bg-purple-500 text-white text-xs px-2 py-1 rounded cursor-pointer" onClick={() => toggleFilter(selectedMode, e.mode, setSelectedMode)}>{e.mode === 'online' ? 'Online' : 'In-person'}</span>}
                 </div>
