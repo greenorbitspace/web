@@ -1,0 +1,198 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import { getCollection } from 'astro:content';
+import { SDGs } from '../../data/sdgs';
+import facilitators from '../../data/facilitators.js';
+import crypto from 'crypto';
+
+// Static paths for Astro
+export async function getStaticPaths() {
+  const trainings = await getCollection('training');
+  return trainings.map((training) => ({
+    params: { slug: training.slug ?? training.id },
+  }));
+}
+
+// Get current training entry
+const { slug } = Astro.params;
+const trainings = await getCollection('training');
+const trainingEntry = trainings.find((t) => t.slug === slug || t.id === slug);
+if (!trainingEntry) throw new Error(`No training found for slug: "${slug}"`);
+
+const { Content } = await trainingEntry.render();
+const data = trainingEntry.data;
+
+// SEO
+const pageTitle = data.seoTitle || data.title || 'Training Workshop';
+const pageDescription = data.seoDescription || data.description || data.title;
+const pageURL = `https://greenorbit.space/training/${slug}`;
+const pageImage = data.featuredImage || '/default-og-image.jpg';
+
+// JSON-LD
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  name: pageTitle,
+  description: pageDescription,
+  provider: {
+    "@type": "Organization",
+    name: "Green Orbit Digital",
+    url: "https://greenorbit.space",
+  },
+  url: pageURL,
+  ...(pageImage && { image: pageImage }),
+};
+
+// SDG mapping
+const sdgMap = SDGs.reduce((acc, sdg) => {
+  const code = `SDG${String(sdg.id).padStart(2, '0')}`;
+  acc[code.toUpperCase()] = sdg;
+  return acc;
+}, {});
+
+let sdgCodes = [];
+if (Array.isArray(data.SDGs)) {
+  sdgCodes = data.SDGs.filter((n) => typeof n === 'number').map((n) => `SDG${String(n).padStart(2, '0')}`);
+} else if (typeof data.SDGs === 'number') {
+  sdgCodes = [`SDG${String(data.SDGs).padStart(2, '0')}`];
+}
+
+// Stripe checkout
+const stripeUrl = data.stripePriceId ? `https://buy.stripe.com/${data.stripePriceId}` : null;
+
+// Facilitators
+let workshopFacilitators = [];
+if (Array.isArray(data.facilitators)) {
+  workshopFacilitators = facilitators
+    .filter((f) => data.facilitators.includes(f.name))
+    .map((f) => {
+      let avatar = '/images/avatar-placeholder.png';
+      if (f.gravatar && f.email) {
+        const hash = crypto.createHash('md5').update(f.email.trim().toLowerCase()).digest('hex');
+        avatar = `https://www.gravatar.com/avatar/${hash}?s=200&d=identicon`;
+      }
+      return { ...f, avatar };
+    });
+}
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Header />
+
+  <main class="py-12">
+    <HeroSection title="Training Workshops"
+      description="Explore our training offerings and workshops."
+    />
+
+    <article class="prose dark:prose-invert max-w-4xl mx-auto px-4 py-12">
+      <!-- Header Info -->
+      <header class="mb-8">
+        <h1 class="text-4xl font-bold text-accent-500 mb-4">{data.title}</h1>
+
+        {data.organisations?.length > 0 && (
+          <div class="mt-4 flex flex-wrap gap-2">
+            {data.organisations.map((org) => (
+              <span key={org} class="bg-gray-300 dark:bg-accent-500 text-white rounded-full px-3 py-1 text-xs font-medium capitalize">{org}</span>
+            ))}
+          </div>
+        )}
+
+        {data.tags?.length > 0 && (
+          <div class="mt-4 flex flex-wrap gap-2">
+            {data.tags.map((tag) => (
+              <a
+                key={tag}
+                href={`/training?tag=${encodeURIComponent(tag)}`}
+                class="text-xs bg-accent-600 text-white px-2 py-1 rounded hover:bg-accent-700 transition"
+              >
+                #{tag}
+              </a>
+            ))}
+          </div>
+        )}
+
+        {sdgCodes.length > 0 && (
+          <div class="mt-4 flex flex-wrap gap-2">
+            {sdgCodes.map((code) => {
+              const sdg = sdgMap[code];
+              if (!sdg) return null;
+              return (
+                <a
+                  key={code}
+                  href={`https://sdgs.greenorbit.space/${sdg.id}/`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group"
+                  aria-label={`View details about ${sdg.name}`}
+                >
+                  <img
+                    src={sdg.icon}
+                    alt={sdg.name}
+                    class="w-10 h-10 rounded-sm border border-gray-300 dark:border-gray-600"
+                  />
+                </a>
+              );
+            })}
+          </div>
+        )}
+      </header>
+
+      <!-- Workshop Content -->
+      <section class="prose prose-invert max-w-none">
+        <Content />
+      </section>
+
+      <!-- Facilitators -->
+      {workshopFacilitators.length > 0 && (
+        <section class="mt-16">
+          <h2 class="text-2xl font-bold mb-6">Facilitators</h2>
+          <div class="flex flex-col gap-6">
+            {workshopFacilitators.map((f) => (
+              <div key={f.name} class="p-6 bg-gray-100 dark:bg-secondary-500 rounded-lg shadow flex flex-col md:flex-row items-start gap-4 w-full">
+                <img
+                  src={f.avatar}
+                  alt={f.name}
+                  class="w-20 h-20 rounded-full object-cover border border-gray-300 dark:border-gray-600 flex-shrink-0"
+                  loading="lazy"
+                />
+                <div class="flex-1 space-y-2">
+                  <h3 class="text-xl font-semibold">{f.name}</h3>
+                  <p class="text-sm text-white">{f.bio}</p>
+                  <div class="mt-2 flex flex-wrap gap-3 text-sm">
+                    {f.website && <a href={f.website} target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">Website</a>}
+                    {f.twitter && <a href={`https://twitter.com/${f.twitter}`} target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">Twitter/X</a>}
+                    {f.linkedin && <a href={`https://linkedin.com/in/${f.linkedin}`} target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">LinkedIn</a>}
+                    {f.github && <a href={`https://github.com/${f.github}`} target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline">GitHub</a>}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <!-- Stripe Registration -->
+      {stripeUrl && (
+        <div class="mt-6 text-center">
+          <a
+            href={stripeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block bg-accent-600 text-white px-6 py-3 rounded hover:bg-accent-700 transition"
+          >
+            Register via Stripe
+          </a>
+        </div>
+      )}
+    </article>
+  </main>
+
+  <Footer />
+
+  <script type="application/ld+json">
+    {JSON.stringify(jsonLd)}
+  </script>
+</Layout>

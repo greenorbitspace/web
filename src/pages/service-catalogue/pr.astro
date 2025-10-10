@@ -1,0 +1,79 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+
+const stripeHTML = `
+  <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+  <stripe-pricing-table
+    pricing-table-id="prctbl_1RjhPKE9V0wpcpD5V81ngB1H"
+    publishable-key="pk_live_51RZOfOE9V0wpcpD5X5hZuiXbtRoCa2cMhcILadCbF63npB6O4NdpjKVTqsSBnqx9vrOTWHbgven6dUnGVoVDuhMT00TO8eklxX">
+  </stripe-pricing-table>
+`;
+---
+
+<Layout title="PR Pricing">
+  <Header />
+
+  <main class="py-16">
+
+    <!-- Hero / Introduction -->
+    <HeroSection
+      title="PR That Builds Influence"
+      description="Select a plan that elevates your reputation. Our PR services combine strategic communications, media engagement, and storytelling to shape perceptions and drive impact."
+      class="bg-primary-500 text-white py-24"
+    />
+
+    <!-- Background / Value Proposition -->
+    <section class="my-16 bg-secondary-500 text-white py-16">
+      <div class="max-w-3xl mx-auto px-4 text-center">
+        <h2 class="text-2xl font-semibold mb-6">Why Choose Our PR Services?</h2>
+        <p class="mb-8">
+          Effective PR builds trust, credibility, and visibility. Our team crafts tailored strategies, engages the right audiences, and ensures your messages resonate with clarity, authority, and sustainability in mind.
+        </p>
+        <ul class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+          <li class="flex items-start gap-3">
+            <span class="text-white text-2xl">📰</span>
+            <span><strong>Media Engagement:</strong> Connect with journalists and industry influencers to amplify your message.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white text-2xl">💬</span>
+            <span><strong>Strategic Messaging:</strong> Communicate with clarity, consistency, and impact across all channels.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white text-2xl">🌱</span>
+            <span><strong>Reputation & Sustainability:</strong> Position your brand responsibly, aligning PR with ESG and sustainability goals.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Pricing Table (Full Width) -->
+    <section class="my-16 bg-primary-500 text-white w-full py-16">
+      <h2 class="text-2xl font-semibold text-center mb-8">Plans & Pricing</h2>
+      <div class="px-4" set:html={stripeHTML} />
+    </section>
+
+    <!-- Call-to-Action -->
+    <section class="bg-accent-500 py-16 text-white">
+      <div class="max-w-3xl mx-auto px-4 text-center">
+        <h2 class="text-2xl font-semibold mb-6">Shape Perception, Drive Impact</h2>
+        <p class="mb-8">
+          Partner with us to create PR strategies that strengthen your reputation, reach the right audiences, and make a measurable difference. Let’s build influence that lasts.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="/contact" class="bg-white text-primary-500 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+            Get in Touch
+          </a>
+          <a href="/faq" class="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-accent-500 transition">
+            Learn More
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>

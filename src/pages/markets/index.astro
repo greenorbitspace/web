@@ -1,0 +1,35 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import MarketList from '../../components/MarketList.jsx';
+
+import marketsJson from '../../data/markets.json';
+
+// Ensure the markets array exists
+const markets = Array.isArray(marketsJson.sectors) ? marketsJson.sectors : [];
+
+// Page metadata
+const pageTitle = 'Markets and Sectors';
+const pageDescription = 'Explore the markets and sectors Green Orbit Digital is involved with.';
+const pageURL = 'https://greenorbit.space/markets';
+---
+
+<Layout title={pageTitle} description={pageDescription} url={pageURL}>
+  <Header></Header>
+
+  <main class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Hero Section -->
+    <HeroSection title="Our Markets"
+      description="Discover the industries and sectors where Green Orbit Digital drives sustainable impact."
+    ></HeroSection>
+
+    <!-- Market List -->
+    <section class="mt-12">
+      <MarketList markets={markets} client:load />
+    </section>
+  </main>
+
+  <Footer></Footer>
+</Layout>

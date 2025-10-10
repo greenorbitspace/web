@@ -1,0 +1,79 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+
+const stripeHTML = `
+  <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+  <stripe-pricing-table
+    pricing-table-id="prctbl_1RjhQQE9V0wpcpD5utEyy6nA"
+    publishable-key="pk_live_51RZOfOE9V0wpcpD5X5hZuiXbtRoCa2cMhcILadCbF63npB6O4NdpjKVTqsSBnqx9vrOTWHbgven6dUnGVoVDuhMT00TO8eklxX">
+  </stripe-pricing-table>
+`;
+---
+
+<Layout title="Materiality Pricing">
+  <Header />
+
+  <main class="py-16">
+
+    <!-- Hero / Introduction -->
+    <HeroSection
+      title="Materiality That Guides Decisions"
+      description="Select a plan that provides clarity and focus. Our Materiality services help you identify what truly matters, aligning strategy with impact and sustainability goals."
+      class="bg-primary-500 text-white py-24"
+    />
+
+    <!-- Background / Value Proposition -->
+    <section class="my-16 bg-secondary-500 text-white py-16">
+      <div class="max-w-3xl mx-auto px-4 text-center">
+        <h2 class="text-2xl font-semibold mb-6">Why Choose Materiality Services?</h2>
+        <p class="mb-8">
+          Understanding what matters most allows your organisation to prioritise actions, measure impact, and communicate effectively. Our Materiality assessments provide actionable insights, guiding decision-making and strategy across sustainability, operations, and stakeholder engagement.
+        </p>
+        <ul class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+          <li class="flex items-start gap-3">
+            <span class="text-white text-2xl">🎯</span>
+            <span><strong>Strategic Focus:</strong> Identify and prioritise the issues that have the greatest impact on your organisation and stakeholders.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white text-2xl">📊</span>
+            <span><strong>Actionable Insights:</strong> Translate materiality findings into clear, measurable steps for improvement.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white text-2xl">🌱</span>
+            <span><strong>Sustainability Integration:</strong> Align decisions with environmental, social, and governance priorities for meaningful impact.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Pricing Table (Full Width) -->
+    <section class="my-16 bg-primary-500 text-white w-full py-16">
+      <h2 class="text-2xl font-semibold text-center mb-8">Plans & Pricing</h2>
+      <div class="px-4" set:html={stripeHTML} />
+    </section>
+
+    <!-- Call-to-Action -->
+    <section class="bg-accent-500 py-16 text-white">
+      <div class="max-w-3xl mx-auto px-4 text-center">
+        <h2 class="text-2xl font-semibold mb-6">Prioritise What Matters Most</h2>
+        <p class="mb-8">
+          Partner with us to identify the most critical areas for action. Our Materiality services provide clarity, strategic insight, and guidance for organisations seeking to maximise impact and sustainability performance.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="/contact" class="bg-white text-primary-500 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+            Get in Touch
+          </a>
+          <a href="/faq" class="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-accent-500 transition">
+            Learn More
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>

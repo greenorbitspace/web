@@ -1,0 +1,141 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import { SDGs as sdgsData } from '../../data/sdgs.js';
+import marketsJson from '../../data/markets.json';
+import slugify from '../../utils/slugify.js';
+
+// Static paths for dynamic routing
+export async function getStaticPaths() {
+  const markets = Array.isArray(marketsJson.sectors) ? marketsJson.sectors : [];
+  return markets.map((market) => ({
+    params: { slug: slugify(market.name, { lower: true, strict: true }) },
+  }));
+}
+
+// Load current market based on slug
+const { slug } = Astro.params;
+const markets = Array.isArray(marketsJson.sectors) ? marketsJson.sectors : [];
+const market = markets.find(
+  (m) => slugify(m.name, { lower: true, strict: true }) === slug
+);
+
+if (!market) {
+  throw new Error(`Market not found for slug: ${slug}`);
+}
+
+// SDG lookup map
+const sdgMap = sdgsData.reduce((acc, sdg) => {
+  acc[sdg.id] = sdg;
+  return acc;
+}, {});
+
+// Group services by domain
+const servicesByDomain = {};
+(market.services || []).forEach((service) => {
+  const domain = service.Domains || 'Other';
+  if (!servicesByDomain[domain]) servicesByDomain[domain] = [];
+  servicesByDomain[domain].push(service);
+});
+
+// SEO meta
+const pageTitle = market.name;
+const pageDescription = market.intro || `Explore services and opportunities in the ${market.name} sector.`;
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Header />
+
+  <main class="py-12 max-w-6xl mx-auto px-4 space-y-12">
+
+    <!-- Hero Section -->
+    <HeroSection 
+      title={market.name}
+      description={market.intro || 'Explore our sustainable space sector services.'}
+    />
+
+    <!-- Market support text -->
+    {market.support && (
+      <section class="mb-10">
+        <p class="text-white text-base">{market.support}</p>
+      </section>
+    )}
+
+    <!-- Services grouped by domain -->
+    {Object.entries(servicesByDomain).length > 0 && (
+      <>
+        {Object.entries(servicesByDomain).map(([domain, services]) => (
+          <section key={domain} class="mb-10">
+            <h2 class="text-xl font-semibold mb-4">{domain}</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              {services.map((service) => {
+                const serviceSDGs = Array.isArray(service.SDGs)
+                  ? service.SDGs
+                  : service.SDGs ? [service.SDGs] : [];
+                const serviceSlug = service.slug || slugify(service.name, { lower: true, strict: true });
+
+                return (
+                  <div
+                    key={service.id ?? serviceSlug}
+                    class="border rounded-lg p-4 shadow-sm flex flex-col h-full bg-white hover:shadow-md transition"
+                  >
+                    <a
+                      href={`/services/${serviceSlug}`}
+                      class="text-lg font-semibold mb-2 hover:underline text-primary-500"
+                    >
+                      {service.name}
+                    </a>
+
+                    <p class="text-gray-700 text-sm flex-grow">{service.description}</p>
+
+                    {serviceSDGs.length > 0 && (
+                      <div class="flex flex-wrap gap-2 mt-3">
+                        {serviceSDGs.filter(Boolean).map((num) => {
+                          const sdg = sdgMap[num];
+                          if (!sdg) return null;
+                          return (
+                            <a
+                              key={sdg.id}
+                              href={`/sdgs/${sdg.id}/`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="group"
+                              aria-label={`View details about ${sdg.name}`}
+                            >
+                              <img
+                                src={sdg.icon}
+                                alt={sdg.name}
+                                class="w-6 h-6 rounded-sm border border-gray-300 dark:border-gray-600 cursor-pointer"
+                              />
+                            </a>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        ))}
+      </>
+    )}
+
+    <!-- Space4SDGs link -->
+    <section class="mt-12">
+      <h2 class="text-xl font-semibold mb-2">Discover Space4SDGs</h2>
+      <p class="text-white text-base mb-2">
+        Discover how space data and technologies drive progress on the UN Sustainable Development Goals — from eradicating poverty to tackling climate change.
+      </p>
+      <p class="text-white text-base">
+        At Green Orbit Digital, we see space as more than a realm for exploration — it’s a catalyst for sustainable development on Earth. The Space4SDGs initiative aligns with the United Nations’ 2030 Agenda, showcasing how space-based data, services, and innovation accelerate progress on all 17 Sustainable Development Goals (SDGs).
+        <a href="https://www.space4sdgs.org/" target="_blank" rel="noopener noreferrer" class="text-accent-500 underline ml-1">Learn more</a>.
+      </p>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>

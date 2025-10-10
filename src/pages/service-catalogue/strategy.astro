@@ -1,0 +1,79 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+
+const stripeHTML = `
+  <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+  <stripe-pricing-table
+    pricing-table-id="prctbl_1S6bxZE9V0wpcpD52lSDLiA3"
+    publishable-key="pk_live_51RZOfOE9V0wpcpD5X5hZuiXbtRoCa2cMhcILadCbF63npB6O4NdpjKVTqsSBnqx9vrOTWHbgven6dUnGVoVDuhMT00TO8eklxX">
+  </stripe-pricing-table>
+`;
+---
+
+<Layout title="Strategy Pricing">
+  <Header />
+
+  <main class="py-16">
+
+    <!-- Hero / Introduction -->
+    <HeroSection
+      title="Strategy That Shapes Success"
+      description="Select a plan that aligns mission and impact. Our Strategy services provide clarity, foresight, and actionable frameworks to drive organisational growth and sustainability."
+      class="bg-primary-500 text-white py-24"
+    />
+
+    <!-- Background / Value Proposition -->
+    <section class="my-16 bg-secondary-500 text-white py-16">
+      <div class="max-w-3xl mx-auto px-4 text-center">
+        <h2 class="text-2xl font-semibold mb-6">Why Choose Our Strategy Services?</h2>
+        <p class="mb-8">
+          A strong strategy ensures that your organisation acts with purpose and agility. We help define objectives, identify opportunities, and integrate sustainability considerations into every aspect of your planning.
+        </p>
+        <ul class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+          <li class="flex items-start gap-3">
+            <span class="text-white text-2xl">🧭</span>
+            <span><strong>Clear Direction:</strong> Establish priorities and focus resources where they matter most.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white text-2xl">📈</span>
+            <span><strong>Growth & Opportunity:</strong> Identify actionable pathways for organisational success.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white text-2xl">🌱</span>
+            <span><strong>Sustainability-Aligned:</strong> Integrate ESG considerations into your strategy for long-term impact.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Pricing Table (Full Width) -->
+    <section class="my-16 bg-primary-500 text-white w-full py-16">
+      <h2 class="text-2xl font-semibold text-center mb-8">Plans & Pricing</h2>
+      <div class="px-4" set:html={stripeHTML} />
+    </section>
+
+    <!-- Call-to-Action -->
+    <section class="bg-accent-500 py-16 text-white">
+      <div class="max-w-3xl mx-auto px-4 text-center">
+        <h2 class="text-2xl font-semibold mb-6">Turn Vision into Action</h2>
+        <p class="mb-8">
+          Work with our team to craft strategies that drive results, enhance impact, and align with your mission. Together, we turn insights into measurable outcomes.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="/contact" class="bg-white text-primary-500 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+            Get in Touch
+          </a>
+          <a href="/faq" class="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-accent-500 transition">
+            Learn More
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>

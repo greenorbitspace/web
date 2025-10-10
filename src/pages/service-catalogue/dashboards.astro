@@ -1,0 +1,79 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+
+const stripeHTML = `
+  <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+  <stripe-pricing-table
+    pricing-table-id="prctbl_1RjOWUE9V0wpcpD5IvJ6s2yK"
+    publishable-key="pk_live_51RZOfOE9V0wpcpD5X5hZuiXbtRoCa2cMhcILadCbF63npB6O4NdpjKVTqsSBnqx9vrOTWHbgven6dUnGVoVDuhMT00TO8eklxX">
+  </stripe-pricing-table>
+`;
+---
+
+<Layout title="Dashboards Pricing">
+  <Header />
+
+  <main class="py-16">
+
+    <!-- Hero / Introduction -->
+    <HeroSection
+      title="Dashboards That Deliver Insights"
+      description="Select a plan that empowers your team with actionable data. Our dashboards provide clarity, visual storytelling, and real-time analytics to drive strategic decisions."
+      class="bg-primary-500 text-white py-24"
+    />
+
+    <!-- Background / Value Proposition -->
+    <section class="my-16 bg-secondary-500 text-white py-16">
+      <div class="max-w-3xl mx-auto px-4 text-center">
+        <h2 class="text-2xl font-semibold mb-6">Why Choose Our Dashboards?</h2>
+        <p class="mb-8">
+          Our dashboards are designed to transform complex data into intuitive insights. Whether it’s for sustainability tracking, marketing performance, or operational efficiency, every dashboard is tailored to support informed decision-making and measurable impact.
+        </p>
+        <ul class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+          <li class="flex items-start gap-3">
+            <span class="text-white text-2xl">📊</span>
+            <span><strong>Custom Analytics:</strong> Tailored dashboards that visualise your key metrics clearly and efficiently.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white text-2xl">⚡</span>
+            <span><strong>Real-Time Data:</strong> Make decisions based on live insights, not static reports.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white text-2xl">🌍</span>
+            <span><strong>Sustainability Metrics:</strong> Integrate environmental and operational data for holistic performance tracking.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Pricing Table (Full Width) -->
+    <section class="my-16 bg-primary-500 text-white w-full py-16">
+      <h2 class="text-2xl font-semibold text-center mb-8">Plans & Pricing</h2>
+      <div class="px-4" set:html={stripeHTML} />
+    </section>
+
+    <!-- Call-to-Action -->
+    <section class="bg-accent-500 py-16 text-white">
+      <div class="max-w-3xl mx-auto px-4 text-center">
+        <h2 class="text-2xl font-semibold mb-6">Unlock the Power of Your Data</h2>
+        <p class="mb-8">
+          Partner with us to create dashboards that not only visualise your data but also tell a story. Drive better decisions, track progress, and achieve measurable outcomes.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="/contact" class="bg-white text-primary-500 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+            Get in Touch
+          </a>
+          <a href="/faq" class="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-accent-500 transition">
+            Learn More
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
