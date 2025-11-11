@@ -4,7 +4,7 @@ notion_page_id: 217d6625-c679-811b-9c2e-d876f8649ddf
 exported_at: '2025-07-31T23:19:39.845538+00:00'
 slug: celebrating-the-13th-global-accessibility-awareness-day-gaad
 url: https://greenorbit.space/blog/celebrating-the-13th-global-accessibility-awareness-day-gaad/
-featuredImage: https://greenorbit.space/public/images/campaigns/gaad-map.webp
+featuredImage: https://greenorbit.space/images/campaigns/gaad-map.webp
 featured: false
 author: Ryan Laird
 tags:

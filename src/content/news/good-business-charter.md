@@ -4,7 +4,7 @@ notion_page_id: 217d6625-c679-81ba-b6f2-fa421a0511a0
 exported_at: '2025-07-31T23:19:47.036925+00:00'
 slug: good-business-charter
 url: https://greenorbit.space/news/good-business-charter/
-featuredImage: https://greenorbit.space/logos/organisations/gbc.png
+featuredImage: https://greenorbit.space/logos/accreditations/gbc-accredited.png
 featured: false
 author: Ryan Laird
 pubdate: '2024-12-05T14:00:00.000+00:00'
