@@ -4,7 +4,7 @@ notion_page_id: 217d6625-c679-81be-b7d5-c36485a0439e
 exported_at: '2025-07-31T23:19:40.649553+00:00'
 slug: lead-statement
 url: https://greenorbit.space/news/lead-statement/
-featuredImage: ttps://greenorbit.space/logos/pledges/lead.png
+featuredImage: https://greenorbit.space/logos/pledges/lead.png
 featured: false
 author: Ryan Laird
 tags:

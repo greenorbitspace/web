@@ -1,8 +1,8 @@
 ---
-title: 'From Awareness to Action: Green Orbit Digital Completes the University of Leicester’s Carbon Literacy and Net Zero Growth Programme'
+title: 'From Awareness to Action: Green Orbit Digital Completes Carbon Literacy and Net Zero Growth Programme'
 slug: climate-leadership-action-programme
 url: https://greenorbit.space/news/climate-leadership-action-programme
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F905142f0-9b62-438a-8616-5455d6484e81%2F900x426.png/size/w=2000?exp=1762521138&sig=UzXOSr30yq9X3qYZ9jpEZCUknjuopGmL7vpx_hgaVNQ&id=29dd6625-c679-806f-8bca-c17d7acf1358&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
+featuredImage: https://greenorbit.space/images/events/clap.webp
 featured: false
 author: Ryan Laird
 tags:

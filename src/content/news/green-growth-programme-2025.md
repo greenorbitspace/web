@@ -2,7 +2,7 @@
 title: 'How Green Orbit Digital Turned Sustainability Into Growth: Insights from the 2025 Green Growth Programme'
 slug: green-growth-programme-2025
 url: https://greenorbit.space/news/green-growth-programme-2025/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2Fd3017229-6c2f-4e57-8c76-f6091b2d6692%2FSmall-Business-Britain-Header-Green-Growth-Programme-2400-2004826651.jpg/size/w=2000?exp=1762520358&sig=Ru9CX6Q5VEuEXVBA8-tCVCrRRNGeTdEA5KUPGfai3Uc&id=29ed6625-c679-80c6-93e0-eb04415d89c0&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
+featuredImage: https://greenorbit.space/images/events/Small-Business-Britain-Header-Green-Growth-Programme-2400-2004826651.webp
 featured: false
 author: Ryan Laird
 pubdate: '2025-11-06T19:26:00.000+00:00'

@@ -5,7 +5,7 @@ notion_page_id: 217d6625-c679-81cf-aa76-fa35e027967a
 exported_at: '2025-07-31T23:19:44.431511+00:00'
 slug: green-orbit-space-18th-sdg-un-workshop
 url: https://greenorbit.space/news/green-orbit-space-18th-sdg-un-workshop/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F7e25db32-2f8f-4bcf-ab29-adde70ec8779%2F18thsdg-snw.jpg/size/w=2000?exp=1762512742&sig=dgu4nhMlwD6WzbwQ0F261IsIrfXP5cZmtKpHOhA7mKM&id=217d6625-c679-817c-952c-fca090d8eb02&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
+featuredImage: https://greenorbit.space/images/events/18thsdg-snw.webp
 featured: false
 author: Ryan Laird
 tags:

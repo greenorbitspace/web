@@ -2,7 +2,7 @@
 title: 'Space Sustainability Forum 2025: The Critical Role of Communication in Responsible Space'
 slug: space-sustainability-forum-2025
 url: https://greenorbit.space/blog/space-sustainability-forum-2025/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2Ff73f2ed1-650e-4ca2-9d79-ddca46fe144d%2Fspace-sustainability-forum-2025-4281456581.jpg/size/w=2000?exp=1762512431&sig=0_wNqzlYs80ZHitW7xZ1JwWmlCituSUMp1NUr5CjXlE&id=29ed6625-c679-804c-97a2-d0448593cf93&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
+featuredImage: https://greenorbit.space/images/events/space-sustainability-forum-2025-4281456581.webp
 featured: false
 author: Ryan Laird
 pubdate: '2025-11-03T19:26:00.000+00:00'

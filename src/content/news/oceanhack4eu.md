@@ -4,7 +4,7 @@ notion_page_id: 217d6625-c679-811e-bdd0-f85e465ee3dc
 exported_at: '2025-07-31T23:19:41.882026+00:00'
 slug: oceanhack4eu
 url: https://greenorbit.space/news/oceanhack4eu/
-featuredImage: hhttps://greenorbit.space/images/events/general_visual_OceanHack4EU.webp
+featuredImage: https://greenorbit.space/images/events/general_visual_OceanHack4EU.webp
 featured: false
 author: Ryan Laird
 tags:

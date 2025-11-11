@@ -4,7 +4,7 @@ notion_page_id: 217d6625-c679-8163-8d17-c66af22054cd
 exported_at: '2025-07-31T23:19:33.889563+00:00'
 slug: ejis-workshop
 url: https://greenorbit.space/news/ejis-workshop/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F6b5c2d67-4e37-4f79-a58f-b23adefc0d02%2Fplanetb-jpg.webp/size/w=2000?exp=1762450238&sig=i99gkbeDN0cMoeeAHMHOrzZb_YnnRXDFl36-19hNLuM&wasReauthorized=true
+featuredImage: https://greenorbit.space/images/events/planetb-jpg.webp
 featured: false
 author: Ryan Laird
 tags:
