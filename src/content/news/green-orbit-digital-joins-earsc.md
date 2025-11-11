@@ -5,7 +5,7 @@ notion_page_id: 217d6625-c679-8101-8fb3-c695908beebd
 exported_at: '2025-07-31T23:19:27.644650+00:00'
 slug: green-orbit-digital-joins-earsc
 url: https://greenorbit.space/news/green-orbit-digital-joins-earsc/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F52a375ab-4553-42fd-a9c3-d5d14718986c%2Fearsc.jpeg/size/w=2000?exp=1762858740&sig=MF9Bp-fFR15u5Xirlee0Dx89oLH8wZ2GjL_-HsLXZx4&id=217d6625-c679-81f2-9fc5-c91669333fc0&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
+featuredImage: https://greenorbit.space/images/news/earsc.webp
 featured: false
 author: Ryan Laird
 tags:

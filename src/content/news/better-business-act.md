@@ -2,7 +2,7 @@
 title: 'Redefining Success: The Better Business Act Paves the Way for a New Era'
 slug: better-business-act
 url: https://greenorbit.space/news/better-business-act/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F123a7343-2817-456d-9ede-e983f0599d58%2Fbba.png/size/w=2000?exp=1762509719&sig=_nWEvDucg0thBCYygUJ4ZAQrwiauzCoddwqJgQCjZRo&id=217d6625-c679-81b0-bd6c-e541d15d019d&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
+featuredImage: https://greenorbit.space/images/news/bba.webp
 featured: false
 author: Ryan Laird
 tags:

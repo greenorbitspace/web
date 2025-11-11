@@ -4,7 +4,7 @@ notion_page_id: 217d6625-c679-8175-9a48-e0e6ca1903b6
 exported_at: '2025-07-31T23:19:29.488588+00:00'
 slug: ecosend-podcast
 url: https://greenorbit.space/news/ecosend-podcast/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F587d4ae4-4294-46bc-a4ac-7852a0ed8531%2F1711558370-artwork-jpg.webp/size/w=2000?exp=1762450250&sig=CmCb8Ojlb3fwcvY89TWy2Q-V4z6aaFQL7mHq9aBIvfY&wasReauthorized=true
+featuredImage: https://greenorbit.space/images/news/ecosend-podcast.webp
 featured: false
 author: Ryan Laird
 tags:

@@ -4,7 +4,7 @@ notion_page_id: 217d6625-c679-8164-bc32-e73b3db91189
 exported_at: '2025-07-31T23:19:34.813636+00:00'
 slug: explore-programme
 url: https://greenorbit.space/news/explore-programme/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F354952ac-0ebd-4cfe-a361-095e0f5bbb0e%2Fuksa-accel-jpg.webp/size/w=2000?exp=1762451656&sig=glPQWzaP9KKjDhXlO-eBJGBpHpKd9qeq-1sHKhP_c3w&id=1bad6625-c679-81ec-94c8-cc68784499c5&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
+featuredImage: https://greenorbit.space/images/news/uksa-accel-jpg.webp
 featured: false
 author: Ryan Laird
 pubdate: '2024-04-23T16:10:00.000+00:00'

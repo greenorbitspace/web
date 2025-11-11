@@ -4,7 +4,7 @@ notion_page_id: 217d6625-c679-8140-b88f-fddf522780c3
 exported_at: '2025-07-31T23:19:28.668312+00:00'
 slug: asat-statement
 url: https://greenorbit.space/news/asat-statement/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F68b9b6eb-82ac-4378-9eb9-c0d8b501f7cd%2Funnamed-jpg.webp/size/w=2000?exp=1762858851&sig=r79o2CMAB2uJwlkw86QgAzH6wZnmBcMkhLoyREUEJg0&id=217d6625-c679-81ac-a8e9-c2792840e559&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
+featuredImage: https://greenorbit.space/images/news/asat.webp
 featured: false
 author: Ryan Laird
 tags:

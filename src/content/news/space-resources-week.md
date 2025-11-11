@@ -4,7 +4,7 @@ notion_page_id: 217d6625-c679-8166-a416-ecc49eff6390
 exported_at: '2025-07-31T23:19:28.054278+00:00'
 slug: space-resources-week
 url: https://greenorbit.space/news/space-resources-week/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2Fad4effbe-962a-47d4-bc93-259ebdf00ff0%2Fthumb-xxhdpi-1866218780.png/size/w=2000?exp=1762517133&sig=BUqo5uTuBWuIqu4w7aJ_4HctFssgEyS3lFassLIOIFw&id=217d6625-c679-8176-a337-d65a04c0b41c&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
+featuredImage: https://greenorbit.space/images/news/spaceresweek2024.webp
 featured: false
 author: Ryan Laird
 tags:
