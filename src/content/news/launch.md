@@ -4,7 +4,7 @@ notion_page_id: 217d6625-c679-815d-a242-fd0c400c1efa
 exported_at: '2025-07-31T23:19:26.533150+00:00'
 slug: launch
 url: https://greenorbit.space/news/launch/
-featuredImage: https://greenorbit.space/images/esg.png
+featuredImage: https://greenorbit.space/logos/organisations/greenorbit.png
 featured: false
 author: Ryan Laird
 pubdate: '2023-10-16T12:49:00.000+00:00'

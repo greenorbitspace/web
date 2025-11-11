@@ -2,7 +2,7 @@
 title: 'Small and Mighty 2025'
 slug: small-and-mighty-2025
 url: https://greenorbit.space/news/small-and-mighty-2025/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F7eb49f4f-d6e6-4978-a042-72e788f9c382%2FSmall-Business-Britain-Header-Small-And-Mighty-March-2024-2400.jpg/size/w=2000?exp=1762521890&sig=RMfIsX1MfWz5pOQ04pFPvkswhnmg94sO176ofkmcgWg&id=2a4d6625-c679-807a-a22b-dda3778bab56&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
+featuredImage: https://greenorbit.space/images/events/Small-Business-Britain-Header-Small-And-Mighty-July-2024-V3-2400.jpg
 featured: false
 author: Ryan Laird
 pubdate: '2025-11-24T19:26:00.000+00:00'

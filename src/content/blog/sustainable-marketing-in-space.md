@@ -3,7 +3,7 @@ title: 'Sustainable Marketing in Space: Paving the Way to a Greener Future'
 notion_page_id: 217d6625-c679-8183-a864-fed59c0d2056
 exported_at: '2025-07-31T23:19:26.929023+00:00'
 slug: sustainable-marketing-in-space
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2Facdca6e7-48ac-4b46-aed4-ae5b4470bb40%2Fearth.jpg/size/w=2000?exp=1762449578&sig=h6x797ExD5n1_oz02JHEO3O1Sk2dIHug70XCxuFsJNY&wasReauthorized=true
+featuredImage: https://images.unsplash.com/photo-1739968035881-231297cbb5ec?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=6000
 url: https://greenorbit.space/blog/sustainable-marketing-in-space/
 featured: false
 author: Ryan Laird

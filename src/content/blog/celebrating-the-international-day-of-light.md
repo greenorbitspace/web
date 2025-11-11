@@ -4,7 +4,7 @@ notion_page_id: 217d6625-c679-81ec-811b-f59fb25b6a67
 exported_at: '2025-07-31T23:19:40.240120+00:00'
 slug: celebrating-the-international-day-of-light
 url: https://greenorbit.space/blog/celebrating-the-international-day-of-light/
-featuredImage: https://greenorbit.space/images/campaigns/idsw.webp
+featuredImage: https://greenorbit.space/images/campaigns/idl169.webp 
 featured: false
 author: Ryan Laird
 tags:
