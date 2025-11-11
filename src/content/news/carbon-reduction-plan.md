@@ -8,7 +8,6 @@ seo-title: 'Green Orbit Digital''s Comprehensive Carbon Reduction Plan: A Commit
 featuredImage: https://greenorbit.space/images/esg.png
 websites:
 - Green Orbit Digital
-publishing-date: '2025-05-13'
 top-keyword: Carbon Reduction Plan
 archive: false
 excerpt: 'Title: Green Orbit Digital Commits to Achieving Net Zero Emissions
@@ -42,7 +41,7 @@ ai-summary: Green Orbit Digital commits to achieving Net Zero emissions by 2050,
   will track progress, with a focus on reducing business travel and enhancing digital
   sustainability. The plan will be reviewed annually to ensure compliance and progress.
 author: Ryan Laird
-pubdate: '2024-08-12T16:10:00.000+00:00'
+pubdate: '2025-11-30T16:10:00.000+00:00'
 SDGs:
   - 12
   - 13

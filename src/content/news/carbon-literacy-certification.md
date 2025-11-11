@@ -2,7 +2,7 @@
 title: 'Green Orbit Digital Achieves Carbon Literacy Certification: Turning Awareness into Action'
 slug: carbon-literacy-certification
 url: https://greenorbit.space/news/carbon-literacy-certification/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2Fa77d6ea3-8050-4ba0-b224-524bac6c9257%2FCertified-Carbon-Literate.png/size/w=2000?exp=1762521285&sig=kcGUoGaq2Ug9H60pyD4wMshO9Mg9AERf3QUuAgxhmOM&id=29dd6625-c679-8097-bd24-fd5e814cf820&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
+featuredImage: https://greenorbit.space/logos/organisations/carbon-literacy-project.png
 featured: false
 author: Ryan Laird
 pubdate: '2025-11-24T19:26:00.000+00:00'

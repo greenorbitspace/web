@@ -5,7 +5,7 @@ url: https://greenorbit.space/blog/carbon-reduction-plans/
 featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F44f8788f-f663-4d1d-a2f4-0c4f30f32175%2Fidsw.jpg/size/w=2000?exp=1762449360&sig=r0qEnNfBf6yx0epOWpNRN8W7OIhBAm5VsXc8cAEqa8E&wasReauthorized=true
 featured: false
 author: Ryan Laird
-pubdate: '2025-11-03T19:26:00.000+00:00'
+pubdate: '2025-11-30T19:26:00.000+00:00'
 tags:
   - space sustainability
 categories:
