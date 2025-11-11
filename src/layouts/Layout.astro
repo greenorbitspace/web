@@ -6,6 +6,7 @@ import Seo from '../components/Seo.astro';
 import Analytics from '../components/Analytics.astro';
 import CookieBanner from '../components/CookieBanner.astro';
 
+// Props interface for type safety
 export interface Props {
   title: string;
   description?: string;
@@ -16,9 +17,11 @@ export interface Props {
     description?: string;
     image?: string;
   };
+  schema?: Record<string, any>;
 }
 
-const { title, description, ogImage, canonical, twitter } = Astro.props;
+// Destructure incoming props
+const { title, description, ogImage, canonical, twitter, schema } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -32,6 +35,9 @@ const { title, description, ogImage, canonical, twitter } = Astro.props;
   x-bind:class="{ 'dark': darkMode }"
 >
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <!-- SEO meta tags -->
     <Seo 
       title={title} 
@@ -40,6 +46,14 @@ const { title, description, ogImage, canonical, twitter } = Astro.props;
       canonical={canonical} 
       twitter={twitter} 
     />
+
+    <!-- Canonical fallback -->
+    {canonical && <link rel="canonical" href={canonical} />}
+
+    <!-- Structured data (JSON-LD) -->
+    {schema && (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    )}
 
     <!-- Inject additional head elements -->
     {Astro.head}
@@ -55,13 +69,18 @@ const { title, description, ogImage, canonical, twitter } = Astro.props;
       ticketTailorTracking={import.meta.env.PUBLIC_TICKET_TAILOR}
     />
 
-    <!-- Alpine.js for interactivity and dark mode -->
-    <script type="module" src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <!-- Alpine.js (pinned stable version) -->
+    <script 
+      type="module" 
+      src="https://unpkg.com/alpinejs@3.14.2/dist/cdn.min.js" 
+      defer
+    ></script>
   </head>
 
-  <body class="antialiased bg-white dark:bg-primary-500 text-secondary-900 dark:text-secondary-100 transition-colors duration-300">
-    
-    <!-- Main content -->
+  <body 
+    class="antialiased bg-white dark:bg-primary-500 text-secondary-900 dark:text-secondary-100 transition-colors duration-300"
+  >
+    <!-- Main content area -->
     <main id="page-wrapper" class="page-wrapper" role="main" tabindex="-1">
       <slot />
     </main>

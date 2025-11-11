@@ -18,26 +18,23 @@ import FAQSearch from '../components/FAQSearch.jsx';
       description="Find answers to common questions about Sassify and our services."
     />
 
-    <!-- Insert React FAQ component here -->
+    <!-- Full-width FAQ section -->
     <section class="py-16 bg-white dark:bg-secondary-500">
-      <div class="container-custom">
-        <div class="max-w-4xl mx-auto">
-          <FAQSearch client:load />
-        </div>
+      <div class="px-6 md:px-12 lg:px-24">
+        <FAQSearch client:load />
       </div>
     </section>
 
-    <section class="py-16 bg-white dark:bg-secondary-500">
-      <div class="container-custom">
-        <div class="max-w-4xl mx-auto">
-          <div class="text-center mt-16">
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Still have questions?</h3>
-            <p class="text-gray-600 dark:text-white mb-8">
-              Our team is here to help. Contact us and we'll get back to you as soon as possible.
-            </p>
-            <a href="/contact" class="btn-primary">Contact Support</a>
-          </div>
-        </div>
+    <!-- Full-width contact call-to-action -->
+    <section class="py-16 bg-gray-50 dark:bg-secondary-600">
+      <div class="px-6 md:px-12 lg:px-24 text-center">
+        <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+          Still have questions?
+        </h3>
+        <p class="text-gray-700 dark:text-gray-200 mb-8 max-w-2xl mx-auto">
+          Our team is here to help. Contact us and we'll get back to you as soon as possible.
+        </p>
+        <a href="/contact" class="inline-block btn-primary">Contact Support</a>
       </div>
     </section>
   </main>
