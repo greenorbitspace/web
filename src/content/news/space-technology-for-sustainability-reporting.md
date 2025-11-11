@@ -5,14 +5,14 @@ notion_page_id: 217d6625-c679-81a4-8091-d5447314e10f
 exported_at: '2025-07-31T23:19:57.517777+00:00'
 slug: space-technology-for-sustainability-reporting
 url: https://greenorbit.space/news/space-technology-for-sustainability-reporting/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2Fc7ffc3ea-850c-4c7e-a083-9edc7056c542%2Fgeneral_visual_OceanHack4EU.png/size/w=2000?exp=1755005197&sig=Iy-24i9xRBZRPJgwzrC7ADaTVpMBGCMZj0_qP9bLGdM&id=338c92b2-c6e7-48cc-b8f6-5d4a267fd3bc&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
+featuredImage: https://greenorbit.space/logos/organisations/tnfd.png
 featured: false
 author: Ryan Laird
 pubdate: '2025-05-17T11:44:00.000+00:00'
 categories:
 - news
 organisations:
-  - TNFD Forum
+  - TNFD
 SDGs:
   - 13
   - 14

@@ -1,0 +1,107 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTA from '../../components/CTA.jsx';
+
+const pageTitle = "Audits | Green Orbit Digital";
+const pageDescription = "Diagnose. Prioritise. Optimise. Our audits uncover performance blockers, opportunity areas, and sustainability blind spots across your digital channels.";
+const pageURL = "https://greenorbit.space/services/audits";
+const pageImage = "/images/services/audit.png"; // Replace with a relevant hero image
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={pageURL}>
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="relative w-full h-[500px] sm:h-[600px] lg:h-[700px] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center" style={`background-image: url(${pageImage});`} aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-black/50" aria-hidden="true"></div>
+    <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl space-y-6">
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white drop-shadow-lg">Audits</h1>
+      <p class="text-2xl sm:text-3xl text-gray-200 drop-shadow">Diagnose. Prioritise. Optimise.</p>
+      <p class="text-gray-200 max-w-3xl mx-auto">Our audit process uncovers performance blockers, opportunity areas, and sustainability blind spots across your digital channels. From SEO to carbon-aware content, we help you grow responsibly.</p>
+    </div>
+  </section>
+
+  <main class="py-16 w-full container-custom bg-secondary-500 space-y-16">
+
+    <!-- What is an Audit -->
+    <section class="space-y-4">
+      <h2 class="text-3xl font-bold text-accent-500">What is a Digital Audit?</h2>
+      <p class="text-gray-700 dark:text-gray-300">A digital audit is a systematic review of your digital channels, campaigns, and content to uncover strengths, weaknesses, and opportunities. We examine technical, strategic, and sustainability dimensions to help your business grow responsibly.</p>
+      <p class="text-gray-700 dark:text-gray-300">Audits are essential for: optimising performance, improving carbon efficiency, ensuring brand alignment, and generating actionable insights for leadership and marketing teams.</p>
+    </section>
+
+    <!-- Step-by-Step Process -->
+    <section class="space-y-8">
+      <h2 class="text-3xl font-bold text-accent-500">Our Audit Process</h2>
+      <ol class="list-decimal pl-5 space-y-4 text-gray-700 dark:text-gray-300">
+        <li>
+          <strong>Discovery & Scope Definition:</strong> We identify which channels, campaigns, or assets to audit, understanding your goals, KPIs, and sustainability objectives.
+        </li>
+        <li>
+          <strong>Data Collection & Analysis:</strong> Using analytics, technical audits, carbon calculators, and brand reviews, we uncover performance blockers and inefficiencies.
+        </li>
+        <li>
+          <strong>Benchmarking & Assessment:</strong> We compare findings against industry best practices, SDG-aligned targets, and competitor standards.
+        </li>
+        <li>
+          <strong>Prioritisation:</strong> Audit results are mapped into actionable recommendations, highlighting high-impact opportunities first.
+        </li>
+        <li>
+          <strong>Reporting & Roadmap:</strong> A clear report summarises insights, KPIs, sustainability gaps, and step-by-step recommendations for optimisation.
+        </li>
+        <li>
+          <strong>Follow-Up Support:</strong> Optional advisory or training sessions to implement recommendations, embed sustainable marketing practices, and track progress.
+        </li>
+      </ol>
+    </section>
+
+    <!-- Types of Audits -->
+    <section class="space-y-8">
+      <h2 class="text-3xl font-bold text-accent-500">Types of Audits</h2>
+
+      <!-- SEO & Website Carbon -->
+      <div class="border border-accent-500 rounded-lg p-6 hover:shadow-xl transition bg-white dark:bg-gray-800/40">
+        <h3 class="text-2xl font-semibold mb-4 text-accent-500">SEO & Website Carbon Footprint Audits</h3>
+        <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-1">
+          <li>Technical SEO review (site structure, indexing, crawlability)</li>
+          <li>Content optimisation for search visibility and relevance</li>
+          <li>Carbon footprint analysis of hosting, page load, and content delivery</li>
+          <li>Recommendations for low-carbon content and eco-friendly hosting</li>
+        </ul>
+      </div>
+
+      <!-- Brand & Messaging -->
+      <div class="border border-accent-500 rounded-lg p-6 hover:shadow-xl transition bg-white dark:bg-gray-800/40">
+        <h3 class="text-2xl font-semibold mb-4 text-accent-500">Brand & Messaging Sustainability Alignment</h3>
+        <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-1">
+          <li>Audit of brand messaging against sustainability and ESG commitments</li>
+          <li>Alignment review with SDGs and sector expectations</li>
+          <li>Identification of internal/external messaging gaps</li>
+        </ul>
+      </div>
+
+      <!-- Campaign & Funnel -->
+      <div class="border border-accent-500 rounded-lg p-6 hover:shadow-xl transition bg-white dark:bg-gray-800/40">
+        <h3 class="text-2xl font-semibold mb-4 text-accent-500">Campaign & Funnel Performance Diagnostics</h3>
+        <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-1">
+          <li>Channel performance analysis (email, social, search)</li>
+          <li>Conversion funnel assessment to detect bottlenecks</li>
+          <li>Prioritisation of optimisation opportunities based on impact and sustainability</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Request Audit CTA -->
+    <section class="text-center max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold text-accent-500 mb-4">Request Your Audit</h2>
+      <p class="text-gray-700 dark:text-gray-300 mb-6">Take the next step in diagnosing and optimising your digital presence sustainably. Explore options and book an audit tailored to your business needs.</p>
+      <CTA text="Explore Audit Options" link="/service-catalogue#audits" client:load />
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>

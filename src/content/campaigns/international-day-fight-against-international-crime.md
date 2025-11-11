@@ -3,7 +3,7 @@ title: International Day for the Prevention of and Fight against All Forms of Tr
 month: November
 name: International Day for the Prevention of and Fight against All Forms of Transnational Organized Crime
 un-resolution: A/RES/78/267
-url: 
+url: https://www.unodc.org/unodc/TOCday/
 organisations:
 - United Nations
 SDGs:

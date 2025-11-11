@@ -5,6 +5,7 @@ exported_at: '2025-08-07T15:42:02.182215+00:00'
 name: International Day for Disaster Risk Reduction
 month: October
 un-resolution: A/RES/64/200
+url: https://www.un.org/en/observances/disaster-reduction-day
 organisations:
 - United Nations
 SDGs:

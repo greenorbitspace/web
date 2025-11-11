@@ -10,21 +10,21 @@ export default function OrganisationsList({ organisations = [] }) {
   const categories = useMemo(() => {
     const catSet = new Set();
     organisations.forEach((org) => {
-      if (org.Category) {
-        catSet.add(org.Category.trim().toLowerCase());
+      if (org.category) {
+        catSet.add(org.category.trim().toLowerCase());
       }
     });
     return ['all', ...Array.from(catSet).sort()];
   }, [organisations]);
 
-  // Filtered result
+  // Filtered results
   const filteredOrganisations = useMemo(() => {
     const term = searchTerm.toLowerCase();
     return organisations.filter((org) => {
-      const category = org.Category?.trim().toLowerCase() || '';
-      const industry = org.Industry?.toLowerCase() || '';
-      const name = org.Organisation?.toLowerCase() || '';
-      const description = org.Description?.toLowerCase() || '';
+      const category = org.category?.trim().toLowerCase() || '';
+      const industry = org.industry?.toLowerCase() || '';
+      const name = org.organisation?.toLowerCase() || '';
+      const description = org.description?.toLowerCase() || '';
 
       const matchesCategory = activeCategory === 'all' || category === activeCategory;
       const matchesSearch =
@@ -50,8 +50,8 @@ export default function OrganisationsList({ organisations = [] }) {
             onClick={() => setActiveCategory(cat)}
             className={`px-4 py-2 text-sm font-medium rounded-t-md transition ${
               activeCategory === cat
-                ? 'bg-accent-600 text-white shadow'
-                : 'text-gray-700 dark:text-gray-200 hover:bg-accent-100 dark:hover:bg-accent-700'
+                ? 'bg-accent-500 text-white shadow'
+                : 'text-gray-700 dark:text-gray-200 hover:bg-accent-500 dark:hover:bg-accent-500'
             }`}
           >
             {cat.charAt(0).toUpperCase() + cat.slice(1)}
@@ -88,25 +88,27 @@ export default function OrganisationsList({ organisations = [] }) {
         ) : (
           filteredOrganisations.map((org, index) => {
             const {
-              Organisation,
-              Description,
-              URL,
-              Category,
-              Industry,
-              logo, // <-- New logo field
+              slug,
+              organisation: name,
+              description,
+              category,
+              industry,
+              logo,
             } = org;
+
+            const logoSrc = logo || fallbackLogo;
 
             return (
               <li
-                key={`${Organisation}-${index}`}
+                key={`${slug}-${index}`}
                 className="text-primary-500 rounded-lg p-6 bg-white dark:bg-white hover:shadow-lg transition"
                 role="listitem"
               >
                 <article className="flex flex-col h-full" aria-labelledby={`org-title-${index}`}>
                   <div className="flex items-center gap-4 mb-4">
                     <img
-                      src={logo || fallbackLogo}
-                      alt={`${Organisation} logo`}
+                      src={logoSrc}
+                      alt={`${name} logo`}
                       className="w-16 h-16 object-contain flex-shrink-0"
                       onError={(e) => {
                         e.currentTarget.onerror = null;
@@ -118,36 +120,30 @@ export default function OrganisationsList({ organisations = [] }) {
                       className="text-xl font-semibold text-primary-500"
                       tabIndex={0}
                     >
-                      {URL ? (
-                        <a
-                          href={URL}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="hover:underline"
-                        >
-                          {Organisation}
-                        </a>
-                      ) : (
-                        Organisation
-                      )}
+                      <a
+                        href={`/organisations/${slug}`}
+                        className="hover:underline focus:outline-none focus:ring-2 focus:ring-accent-500 rounded-sm"
+                      >
+                        {name}
+                      </a>
                     </h3>
                   </div>
 
-                  {Description && (
-                    <p className="text-gray-700 dark:text-gray text-base leading-relaxed mb-2">
-                      {Description}
+                  {description && (
+                    <p className="text-gray-700 dark:text-black text-base leading-relaxed mb-3">
+                      {description}
                     </p>
                   )}
 
                   <div className="flex flex-wrap gap-2 mt-auto">
-                    {Industry && (
-                      <span className="bg-gray-300 dark:bg-accent-500 text-gray-800 dark:text-white rounded-full px-3 py-1 text-xs font-medium">
-                        {Industry}
+                    {industry && (
+                      <span className="bg-gray-200 dark:bg-accent-500 text-gray-800 dark:text-white rounded-full px-3 py-1 text-xs font-medium">
+                        {industry}
                       </span>
                     )}
-                    {Category && (
-                      <span className="bg-gray-300 dark:bg-gray-600 text-gray-800 dark:text-gray-200 rounded-full px-3 py-1 text-xs font-medium capitalize">
-                        {Category}
+                    {category && (
+                      <span className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 rounded-full px-3 py-1 text-xs font-medium capitalize">
+                        {category}
                       </span>
                     )}
                   </div>

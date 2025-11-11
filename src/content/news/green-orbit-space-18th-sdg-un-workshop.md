@@ -5,7 +5,7 @@ notion_page_id: 217d6625-c679-81cf-aa76-fa35e027967a
 exported_at: '2025-07-31T23:19:44.431511+00:00'
 slug: green-orbit-space-18th-sdg-un-workshop
 url: https://greenorbit.space/news/green-orbit-space-18th-sdg-un-workshop/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2Fc7ffc3ea-850c-4c7e-a083-9edc7056c542%2Fgeneral_visual_OceanHack4EU.png/size/w=2000?exp=1755005197&sig=Iy-24i9xRBZRPJgwzrC7ADaTVpMBGCMZj0_qP9bLGdM&id=338c92b2-c6e7-48cc-b8f6-5d4a267fd3bc&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
+featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F7e25db32-2f8f-4bcf-ab29-adde70ec8779%2F18thsdg-snw.jpg/size/w=2000?exp=1762512742&sig=dgu4nhMlwD6WzbwQ0F261IsIrfXP5cZmtKpHOhA7mKM&id=217d6625-c679-817c-952c-fca090d8eb02&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
 featured: false
 author: Ryan Laird
 tags:
@@ -17,7 +17,7 @@ categories:
 pledges:
   - SDG18
 organisations:
-  - Space Renaissance Society
+  - Space Renaissance International
   - United Nations
 SDGs:
   - 16

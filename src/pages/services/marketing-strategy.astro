@@ -1,0 +1,95 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTA from '../../components/CTA.jsx';
+
+const pageTitle = "Strategy | Green Orbit Digital";
+const pageDescription = "Co-create sustainable marketing strategies that align with business growth, stakeholder priorities, and planetary limits.";
+const pageURL = "https://greenorbit.space/services/strategy";
+const pageImage = "/images/services/strategy.png"; // Replace with your hero image
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={pageURL}>
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="relative w-full h-[500px] sm:h-[600px] lg:h-[700px] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center" style={`background-image: url(${pageImage});`} aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-black/50" aria-hidden="true"></div>
+    <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl space-y-6">
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white drop-shadow-lg">Strategy</h1>
+      <p class="text-2xl sm:text-3xl text-gray-200 drop-shadow">Sustainable Marketing by Design</p>
+      <p class="text-gray-200 max-w-3xl mx-auto">We co-create robust, mission-aligned marketing strategies that integrate growth objectives with sustainable and responsible practices, helping your team achieve measurable impact.</p>
+    </div>
+  </section>
+
+  <main class="py-16 w-full container-custom bg-secondary-500 space-y-16">
+
+    <!-- What is Strategy -->
+    <section class="space-y-4">
+      <h2 class="text-3xl font-bold text-accent-500">What is Sustainable Marketing Strategy?</h2>
+      <p class="text-gray-700 dark:text-gray-300">A sustainable marketing strategy provides a roadmap for growth that balances business objectives with environmental, social, and governance (ESG) considerations. It ensures campaigns, content, and messaging are purpose-driven, measurable, and aligned with planetary limits.</p>
+    </section>
+
+    <!-- Step-by-Step Strategy Process -->
+    <section class="space-y-8">
+      <h2 class="text-3xl font-bold text-accent-500">Our Strategy Process</h2>
+      <ol class="list-decimal pl-5 space-y-4 text-gray-700 dark:text-gray-300">
+        <li>
+          <strong>Discovery & Assessment:</strong> Analyse current marketing performance, audience behaviour, and sustainability metrics.
+        </li>
+        <li>
+          <strong>Audience & Messaging Framework:</strong> Define target audiences, stakeholder priorities, and key messaging pillars.
+        </li>
+        <li>
+          <strong>Channel & Campaign Planning:</strong> Identify optimal channels, content types, and campaign structures that maximise impact while minimising digital carbon footprint.
+        </li>
+        <li>
+          <strong>Strategy Alignment & OKRs:</strong> Set measurable objectives, key results, and sustainability-aligned KPIs.
+        </li>
+        <li>
+          <strong>Execution Roadmap:</strong> Provide a tactical plan for content, campaigns, and communications with clear timelines and responsibilities.
+        </li>
+        <li>
+          <strong>Review & Optimisation:</strong> Continuously monitor performance, refine messaging, and improve outcomes across channels.
+        </li>
+      </ol>
+    </section>
+
+    <!-- Types of Strategic Services -->
+    <section class="space-y-8">
+      <h2 class="text-3xl font-bold text-accent-500">Strategic Services We Offer</h2>
+
+      <div class="border border-accent-500 rounded-lg p-6 hover:shadow-xl transition bg-white dark:bg-gray-800/40">
+        <h3 class="text-2xl font-semibold mb-4 text-accent-500">OKR-Focused Planning</h3>
+        <p class="text-gray-700 dark:text-gray-300">We help you define Objectives and Key Results that integrate growth ambitions with ESG and SDG priorities.</p>
+      </div>
+
+      <div class="border border-accent-500 rounded-lg p-6 hover:shadow-xl transition bg-white dark:bg-gray-800/40">
+        <h3 class="text-2xl font-semibold mb-4 text-accent-500">Audience & Messaging Frameworks</h3>
+        <p class="text-gray-700 dark:text-gray-300">Tailored frameworks to clarify audience segments, pain points, messaging pillars, and brand tone — ensuring consistency across campaigns.</p>
+      </div>
+
+      <div class="border border-accent-500 rounded-lg p-6 hover:shadow-xl transition bg-white dark:bg-gray-800/40">
+        <h3 class="text-2xl font-semibold mb-4 text-accent-500">Channel Mix & Budget Guidance</h3>
+        <p class="text-gray-700 dark:text-gray-300">Strategic recommendations on which digital and traditional channels to prioritise, balancing cost-efficiency, reach, and sustainability impact.</p>
+      </div>
+
+      <div class="border border-accent-500 rounded-lg p-6 hover:shadow-xl transition bg-white dark:bg-gray-800/40">
+        <h3 class="text-2xl font-semibold mb-4 text-accent-500">Campaign Roadmaps</h3>
+        <p class="text-gray-700 dark:text-gray-300">Detailed tactical plans outlining campaign sequencing, key deliverables, timelines, and performance metrics aligned with your mission.</p>
+      </div>
+    </section>
+
+    <!-- Request Strategy Session CTA -->
+    <section class="text-center max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold text-accent-500 mb-4">Book a Strategy Session</h2>
+      <p class="text-gray-700 dark:text-gray-300 mb-6">Let’s co-create a roadmap that drives growth, engages stakeholders, and maximises sustainability impact.</p>
+      <CTA text="Request a Strategy Session" link="/service-catalogue#strategy" client:load />
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>

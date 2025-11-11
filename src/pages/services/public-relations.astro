@@ -1,0 +1,102 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTA from '../../components/CTA.jsx';
+
+const pageTitle = "Public Relations | Green Orbit Digital";
+const pageDescription = "Raise your profile sustainably. From media outreach to thought leadership, we help space and sustainability-focused brands get their message heard by the right audiences.";
+const pageURL = "https://greenorbit.space/services/public-relations";
+const pageImage = "/images/services/pr-hero.jpg"; // Replace with a suitable hero image
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={pageURL}>
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="relative w-full h-[500px] sm:h-[600px] lg:h-[700px] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center" style={`background-image: url(${pageImage});`} aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-black/50" aria-hidden="true"></div>
+    <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl space-y-6">
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white drop-shadow-lg">Public Relations</h1>
+      <p class="text-2xl sm:text-3xl text-gray-200 drop-shadow">Raise Your Profile, Sustainably</p>
+      <p class="text-gray-200 max-w-3xl mx-auto">Whether launching a product, publishing a report, or scaling your brand, we get your message in front of the right people — from tier-one publications to niche space media.</p>
+    </div>
+  </section>
+
+  <main class="py-16 w-full container-custom bg-secondary-500 space-y-16">
+
+    <!-- What is PR -->
+    <section class="space-y-4">
+      <h2 class="text-3xl font-bold text-accent-500">What is Strategic Public Relations?</h2>
+      <p class="text-gray-700 dark:text-gray-300">Public Relations (PR) is about crafting and communicating your story effectively to your target audience. Good PR builds credibility, strengthens brand perception, and supports sustainable growth. We combine traditional media, niche industry outlets, and digital channels to amplify your voice with measurable impact.</p>
+    </section>
+
+    <!-- Step-by-Step PR Process -->
+    <section class="space-y-8">
+      <h2 class="text-3xl font-bold text-accent-500">Our PR Process</h2>
+      <ol class="list-decimal pl-5 space-y-4 text-gray-700 dark:text-gray-300">
+        <li>
+          <strong>Discovery & Messaging:</strong> We understand your brand, mission, and sustainability goals to craft authentic stories.
+        </li>
+        <li>
+          <strong>Media Mapping & Targeting:</strong> Identify journalists, publications, and influencers that align with your audience and ESG focus.
+        </li>
+        <li>
+          <strong>Content Creation:</strong> Develop press releases, thought leadership articles, op-eds, and multimedia assets.
+        </li>
+        <li>
+          <strong>Outreach & Engagement:</strong> Proactively pitch stories to the right channels and nurture media relationships.
+        </li>
+        <li>
+          <strong>Monitoring & Reporting:</strong> Track coverage, measure engagement, and refine campaigns for maximum impact.
+        </li>
+      </ol>
+    </section>
+
+    <!-- Types of PR Services -->
+    <section class="space-y-8">
+      <h2 class="text-3xl font-bold text-accent-500">PR Services We Offer</h2>
+
+      <!-- Story Development & Messaging -->
+      <div class="border border-accent-500 rounded-lg p-6 hover:shadow-xl transition bg-white dark:bg-gray-800/40">
+        <h3 class="text-2xl font-semibold mb-4 text-accent-500">Story Development & Messaging</h3>
+        <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-1">
+          <li>Craft compelling, sustainability-focused narratives for campaigns or product launches</li>
+          <li>Align messaging with ESG, SDG, and sector-specific priorities</li>
+          <li>Create content for multiple channels: press, web, and social media</li>
+        </ul>
+      </div>
+
+      <!-- Media Relations & Outreach -->
+      <div class="border border-accent-500 rounded-lg p-6 hover:shadow-xl transition bg-white dark:bg-gray-800/40">
+        <h3 class="text-2xl font-semibold mb-4 text-accent-500">Media Relations & Outreach</h3>
+        <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-1">
+          <li>Targeted media pitching to journalists and industry-specific outlets</li>
+          <li>Relationship management with reporters, editors, and analysts</li>
+          <li>Tracking media coverage and evaluating reach and impact</li>
+        </ul>
+      </div>
+
+      <!-- Speaking & Thought Leadership Placement -->
+      <div class="border border-accent-500 rounded-lg p-6 hover:shadow-xl transition bg-white dark:bg-gray-800/40">
+        <h3 class="text-2xl font-semibold mb-4 text-accent-500">Speaking & Thought Leadership Placement</h3>
+        <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-1">
+          <li>Position executives and experts as thought leaders in sustainability and space sectors</li>
+          <li>Secure speaking slots, panels, and webinar opportunities</li>
+          <li>Amplify research, reports, or innovations through public engagements</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Request PR Service CTA -->
+    <section class="text-center max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold text-accent-500 mb-4">Plan Your PR Campaign</h2>
+      <p class="text-gray-700 dark:text-gray-300 mb-6">Elevate your brand visibility while staying aligned with sustainable and responsible practices. Explore our PR services tailored for your mission-driven organisation.</p>
+      <CTA text="View PR Services" link="/service-catalogue#public-relations" client:load />
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>

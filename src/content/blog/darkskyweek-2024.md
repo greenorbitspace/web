@@ -4,7 +4,7 @@ notion_page_id: 217d6625-c679-81c3-ae99-fb0c22b91ce8
 exported_at: '2025-07-31T23:19:29.180993+00:00'
 slug: darkskyweek-2024
 url: https://greenorbit.space/blog/darkskyweek-2024/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F44f8788f-f663-4d1d-a2f4-0c4f30f32175%2Fidsw.jpg/size/w=2000?exp=1755008861&sig=LGViIlhc3wJ2Bdk-e6TAVUUI49RI5aQeC2BedPydfvc&id=2b1934bd-2137-436d-a8c8-96d0e35a3402&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
+featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F44f8788f-f663-4d1d-a2f4-0c4f30f32175%2Fidsw.jpg/size/w=2000?exp=1762449449&sig=KXSz6jrS_thGAKDPEdNjsmLonpkJSBEM3WEzAOtYEPA&wasReauthorized=true
 featured: false
 author: Ryan Laird
 tags:
@@ -13,7 +13,7 @@ pubdate: '2024-04-03T19:26:00.000+00:00'
 categories:
 - blog
 organisations:
-  - Dark Sky International
+  - DarkSky International
 SDGs:
   - 3
   - 7

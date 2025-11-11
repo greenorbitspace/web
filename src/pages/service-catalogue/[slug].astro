@@ -1,0 +1,226 @@
+---
+import fs from 'fs';
+import path from 'path';
+import { slug as slugify } from 'github-slugger';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTA from '../../components/CTA.jsx';
+
+// --- getStaticPaths for dynamic route ---
+export async function getStaticPaths() {
+  const pricingFile = path.resolve('./src/data/pricing.json');
+  const rawData = fs.readFileSync(pricingFile, 'utf-8');
+  const services = JSON.parse(rawData);
+
+  // Ensure all services have a slug
+  services.forEach(s => {
+    if (!s.slug) {
+      let slugBase = slugify(s.product_name).toLowerCase();
+      if (s.category) slugBase += `-${slugify(s.category).toLowerCase()}`;
+      if (s.prices?.length > 1) slugBase += '-multi-tier';
+      s.slug = slugBase;
+    }
+  });
+
+  return services.map(s => ({
+    params: { slug: s.slug }
+  }));
+}
+
+// --- prerender explicitly ---
+export const prerender = true;
+
+// --- Load services ---
+const pricingFile = path.resolve('./src/data/pricing.json');
+const rawData = fs.readFileSync(pricingFile, 'utf-8');
+const services = JSON.parse(rawData).map(s => {
+  let slugBase = slugify(s.product_name).toLowerCase();
+  if (s.category) slugBase += `-${slugify(s.category).toLowerCase()}`;
+  if (s.prices?.length > 1) slugBase += '-multi-tier';
+  return { ...s, slug: s.slug || slugBase };
+});
+
+// --- Find current service ---
+const { slug: paramSlug } = Astro.params;
+let service = services.find(s => s.slug === paramSlug);
+if (!service) {
+  service = services.find(s => slugify(s.product_name).toLowerCase() === paramSlug?.toLowerCase());
+}
+if (!service) throw new Error(`Service not found: "${paramSlug}"`);
+
+// --- Safe defaults ---
+const marketingFeatures = service.marketing_features || [];
+service.prices = service.prices || [];
+
+// --- Helper functions ---
+const formatPrice = (price) => {
+  const amount = (price.unit_amount / 100).toLocaleString('en-GB', { style: 'currency', currency: price.currency });
+  const interval = price.interval ? ` / ${price.interval}` : '';
+  return `${amount}${interval}`;
+};
+
+const getCardDescription = (s) => s.summary || (s.description?.slice(0, 120) + '…') || 'No description';
+
+// --- Page metadata ---
+const pageTitle = service.product_name;
+const pageDescription = service.description;
+const pageURL = `https://greenorbit.space/service-catalogue/${service.slug}`;
+const pageImage = service.featuredImage || '/images/default-og-image.jpg';
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={pageURL}>
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="relative w-full h-[500px] sm:h-[600px] lg:h-[700px] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500" style={`background-image: url(${pageImage});`} aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-black/50" aria-hidden="true"></div>
+    <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl space-y-4">
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white drop-shadow-lg">{service.product_name}</h1>
+      {service.summary && <p class="text-2xl sm:text-3xl text-gray-200 drop-shadow">{service.summary}</p>}
+
+      <!-- Metadata buttons -->
+      <div class="flex flex-wrap justify-center gap-2 mt-4">
+        {service.created && <span class="bg-accent-500 text-white text-xs px-2 py-1 rounded">Created: {service.created}</span>}
+        {service.updated && <span class="bg-accent-500 text-white text-xs px-2 py-1 rounded">Updated: {service.updated}</span>}
+        {service.statement_descriptor && <span class="bg-accent-500 text-white text-xs px-2 py-1 rounded">Descriptor: {service.statement_descriptor}</span>}
+        {service.product_id && <span class="bg-accent-500 text-white text-xs px-2 py-1 rounded">Product ID: {service.product_id}</span>}
+        {service.product_tax_code && <span class="bg-accent-500 text-white text-xs px-2 py-1 rounded">Tax Code: {service.product_tax_code}</span>}
+      </div>
+
+      {service.tags?.length > 0 && (
+        <div class="flex flex-wrap justify-center gap-2 mt-4">
+          {service.tags.map(tag => (
+            <a key={tag} href={`/service-catalogue?tag=${encodeURIComponent(tag)}`} class="bg-accent-500 text-white text-xs px-2 py-1 rounded hover:bg-accent-600 transition">#{tag}</a>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="py-16 w-full container-custom bg-secondary-500 space-y-16">
+    <div class="container-custom space-y-12">
+      <a href="/service-catalogue" class="text-accent-500 hover:underline">&larr; Back to Catalogue</a>
+
+      <!-- Full Description & Marketing Features -->
+      <section class="mt-8 space-y-4 text-white text-sm">
+        {service.description && (
+          <>
+            <h2 class="text-2xl font-semibold">About This Service</h2>
+            <p>{service.description}</p>
+          </>
+        )}
+        {service.typical_delivery && <p>Typical Delivery: {service.typical_delivery}</p>}
+
+        {marketingFeatures.length > 0 && (
+          <>
+            <h3 class="text-xl font-semibold mt-6">Marketing Features</h3>
+            <ul class="list-disc list-inside space-y-2">
+              {marketingFeatures.map((feature, i) => (
+                <li key={i}>{feature}</li>
+              ))}
+            </ul>
+          </>
+        )}
+
+        {service.attributes && (
+          <>
+            <h3 class="text-xl font-semibold mt-6">Attributes</h3>
+            <p>{service.attributes}</p>
+          </>
+        )}
+      </section>
+
+      <!-- CTA -->
+      <section class="mt-12">
+        <CTA text="Get in Touch About This Service" link="/contact" client:load />
+      </section>
+
+      <!-- Pricing Table -->
+      {service.prices.length > 0 && (
+        <section class="mt-8">
+          <h2 class="text-2xl text-white font-semibold mb-4">Pricing</h2>
+          <div class="overflow-x-auto border border-accent-500 dark:border-accent-500 rounded-lg">
+            <table class="w-full text-left border-collapse">
+              <thead class="bg-accent-500 dark:bg-accent-500">
+                <tr>
+                  <th class="px-4 py-2 font-medium text-gray-700 dark:text-white">Client Type</th>
+                  <th class="px-4 py-2 font-medium text-gray-700 dark:text-white">Price</th>
+                  <th class="px-4 py-2 font-medium text-gray-700 dark:text-white">Description</th>
+                  <th class="px-4 py-2 font-medium text-gray-700 dark:text-white">Buy</th>
+                </tr>
+              </thead>
+              <tbody>
+                {service.prices.map((price, i) => (
+                  <tr key={i} class="border-t border-accent-500 dark:border-accent-500">
+                    <td class="px-4 py-2">{price.client_type}</td>
+                    <td class="px-4 py-2">{formatPrice(price)}</td>
+                    <td class="px-4 py-2">{price.description || '—'}</td>
+                    <td class="px-4 py-2">
+                      {price.payment_link && (
+                        <a href={price.payment_link} target="_blank" rel="noopener noreferrer" class="inline-block px-4 py-2 bg-accent-500 text-white rounded hover:bg-accent-600 transition text-sm">
+                          Buy
+                        </a>
+                      )}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Terms & Disclaimer -->
+          <p class="mt-4 text-white text-sm">
+            Please review our <a href="/terms" class="text-accent-500 underline">Terms & Conditions</a> before purchasing.
+          </p>
+          <p class="mt-2 text-white text-sm">
+            Disclaimer: <a href="/disclaimer" class="text-accent-500 underline">Read here</a>.
+          </p>
+
+          <!-- Stripe Climate Badge Centered -->
+          <div class="flex justify-center mt-6 mb-6">
+            <iframe width="380" height="38" style="border:0;" src="https://climate.stripe.com/badge/iOaWSQ?theme=light&size=small&locale=en-GB"></iframe>
+          </div>
+        </section>
+      )}
+
+      <!-- Related Services -->
+      <section class="mt-12">
+        <h2 class="text-2xl text-white font-semibold mb-4">Related Services</h2>
+        <ul class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          {services
+            .filter(s => s.slug !== service.slug && s.category === service.category)
+            .slice(0, 3)
+            .map((rel, idx) => (
+              <li key={idx} class="border border-accent-500 rounded-lg bg-white dark:bg-primary-500 hover:shadow-lg transition flex flex-col overflow-hidden">
+                <a href={`/service-catalogue/${rel.slug}`} class="flex flex-col h-full">
+                  {rel.featuredImage && <div class="h-40 w-full bg-cover bg-center" style={`background-image: url(${rel.featuredImage});`}></div>}
+                  <div class="p-6 flex flex-col flex-1 justify-between space-y-4">
+                    <div>
+                      <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{rel.product_name}</h3>
+                      <p class="text-gray-700 dark:text-white text-sm mt-2">{getCardDescription(rel)}</p>
+                    </div>
+                    {rel.prices?.length > 0 && (
+                      <div class="mt-4 flex flex-wrap gap-2">
+                        {rel.prices.map((p, j) =>
+                          p.payment_link && (
+                            <a key={j} href={p.payment_link} target="_blank" rel="noopener noreferrer" class="inline-block px-3 py-1 bg-accent-500 text-white rounded hover:bg-accent-600 transition text-sm">
+                              Buy for {formatPrice(p)}
+                            </a>
+                          )
+                        )}
+                      </div>
+                    )}
+                  </div>
+                </a>
+              </li>
+            ))}
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

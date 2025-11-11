@@ -6,6 +6,8 @@ month: July
 organisations:
 - United Nations
 - World Health Organization
+- World Hepatitis Alliance
+url: https://www.worldhepatitisday.org/
 SDGs:
 - 3
 - 16

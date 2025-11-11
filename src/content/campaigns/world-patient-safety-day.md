@@ -2,8 +2,7 @@
 title: World Patient Safety Day
 month: September
 name: World Patient Safety Day
-un-resolution:
-url: 
+url: https://patient-safety-day.org/
 organisations:
 - United Nations
 - World Health Organization

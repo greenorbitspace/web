@@ -7,6 +7,7 @@ month: July
 un-resolution: A/RES/45/216
 organisations:
 - United Nations
+url: https://www.un.org/en/observances/world-population-day
 SDGs:
 - 8
 - 11

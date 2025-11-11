@@ -1,9 +1,9 @@
 ---
 title: International Day of Charity
-month: September
 name: International Day of Charity
 un-resolution: A/RES/67/105
-url: 
+url: https://www.un.org/en/observances/charity-day
+month: September
 organisations:
 - United Nations
 SDGs:

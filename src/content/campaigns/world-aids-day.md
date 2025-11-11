@@ -3,7 +3,7 @@ title: World AIDS Day
 month: December
 name: World AIDS Day
 un-resolution:
-url: 
+url: https://worldaidsday.org
 organisations:
 - United Nations
 SDGs:

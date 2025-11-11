@@ -5,6 +5,7 @@ exported_at: '2025-08-07T15:42:14.061474+00:00'
 name: World Food Day
 month: October
 un-resolution: A/RES/35/70
+url: https://www.fao.org/world-food-day/en/
 organisations:
 - United Nations
 - FAO

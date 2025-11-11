@@ -4,7 +4,7 @@ notion_page_id: 217d6625-c679-81ad-b92e-e778ba1b296f
 exported_at: '2025-07-31T23:19:35.634229+00:00'
 slug: green-orbit-digital-joins-space4climate-to-drive-climate-action
 url: https://greenorbit.space/news/green-orbit-digital-joins-space4climate-to-drive-climate-action/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2Fd9ef9024-8f6c-42e0-b352-7b8ac4a6c555%2Fspace4c.png/size/w=2000?exp=1755009386&sig=0uD64ATTNVaWY_l3Mn0wUokbDUr34q5fduLNR_84iP4&id=5e8d040b-b8f4-4c1c-a7ca-2fd2eef5dde6&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
+featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2Fd9ef9024-8f6c-42e0-b352-7b8ac4a6c555%2Fspace4c.png/size/w=2000?exp=1762450084&sig=TO_0NUr5uaTudAzZb3tTJhQHc9oynbsuDCQSr_U1qj8&wasReauthorized=true
 featured: false
 author: Ryan Laird
 tags:

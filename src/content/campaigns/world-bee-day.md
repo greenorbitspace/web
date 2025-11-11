@@ -5,6 +5,7 @@ exported_at: '2025-08-07T15:42:12.422715+00:00'
 month: May
 name: World Bee Day
 un-resolution: A/RES/72/211
+url: https://www.fao.org/world-bee-day/en
 organisations:
 - United Nations
 SDGs:

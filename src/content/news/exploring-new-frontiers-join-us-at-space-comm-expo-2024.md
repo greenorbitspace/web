@@ -4,7 +4,7 @@ notion_page_id: 217d6625-c679-8181-bc83-c221460fda65
 exported_at: '2025-07-31T23:19:28.359100+00:00'
 slug: exploring-new-frontiers-join-us-at-space-comm-expo-2024
 url: https://greenorbit.space/news/exploring-new-frontiers-join-us-at-space-comm-expo-2024/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2Fc7ffc3ea-850c-4c7e-a083-9edc7056c542%2Fgeneral_visual_OceanHack4EU.png/size/w=2000?exp=1755005197&sig=Iy-24i9xRBZRPJgwzrC7ADaTVpMBGCMZj0_qP9bLGdM&id=338c92b2-c6e7-48cc-b8f6-5d4a267fd3bc&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
+featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F3719fd05-abee-4c04-bee2-c5ca0f659711%2Fnews-20241902-spacecomm-1024x475-2737697789.jpg/size/w=2000?exp=1762516975&sig=LeKiEDPK0fvkvQmZzsvYjVbr0T6r-9-RpwBcz-iNOII&id=217d6625-c679-817e-9fe1-f95c22150047&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
 featured: false
 author: Ryan Laird
 tags:
@@ -14,7 +14,7 @@ pubdate: '2024-02-27T15:53:00.000+00:00'
 categories:
 - news
 organisations:
-  - Space-Comm Expo
+  - Hub Exhibitions
 SDGs:
   - 8
   - 9

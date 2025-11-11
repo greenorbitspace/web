@@ -4,6 +4,7 @@ notion_page_id: 217d6625-c679-8100-9c08-c03355b5dd85
 exported_at: '2025-07-31T23:19:49.151287+00:00'
 slug: top-24-books
 url: https://greenorbit.space/resources/top-24-books/
+featuredImage: https://images.unsplash.com/photo-1476275466078-4007374efbbe?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=6000
 featured: false
 author: Ryan Laird
 pubdate: '2024-12-30T16:45:00.000+00:00'

@@ -1,0 +1,103 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTA from '../../components/CTA.jsx';
+
+const pageTitle = "Reporting | Green Orbit Digital";
+const pageDescription = "Make your impact visible. From internal dashboards to investor-grade sustainability reports, we transform raw data into actionable insights aligned with SDGs, ISSB, and GRI.";
+const pageURL = "https://greenorbit.space/services/reporting";
+const pageImage = "/images/services/reporting-hero.jpg"; // Replace with a relevant hero image
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={pageURL}>
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="relative w-full h-[500px] sm:h-[600px] lg:h-[700px] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center" style={`background-image: url(${pageImage});`} aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-black/50" aria-hidden="true"></div>
+    <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl space-y-6">
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white drop-shadow-lg">Reporting</h1>
+      <p class="text-2xl sm:text-3xl text-gray-200 drop-shadow">Make Your Impact Visible</p>
+      <p class="text-gray-200 max-w-3xl mx-auto">From internal dashboards to investor-grade sustainability reports, we turn raw data into actionable insights and compelling narratives — aligned to frameworks like SDGs, ISSB, and GRI.</p>
+    </div>
+  </section>
+
+  <main class="py-16 w-full container-custom bg-secondary-500 space-y-16">
+
+    <!-- What is Reporting -->
+    <section class="space-y-4">
+      <h2 class="text-3xl font-bold text-accent-500">What is Sustainability Reporting?</h2>
+      <p class="text-gray-700 dark:text-gray-300">Sustainability reporting is the process of collecting, analysing, and communicating data on your organisation’s environmental, social, and governance (ESG) performance. It helps teams make informed decisions, stakeholders understand your impact, and investors evaluate ESG risks and opportunities.</p>
+      <p class="text-gray-700 dark:text-gray-300">Our reporting approach integrates measurable carbon, energy, and operational data with narrative insights to deliver reports that are credible, accessible, and aligned with leading global frameworks.</p>
+    </section>
+
+    <!-- Step-by-Step Process -->
+    <section class="space-y-8">
+      <h2 class="text-3xl font-bold text-accent-500">Our Reporting Process</h2>
+      <ol class="list-decimal pl-5 space-y-4 text-gray-700 dark:text-gray-300">
+        <li>
+          <strong>Data Collection:</strong> We gather quantitative and qualitative data across your digital platforms, campaigns, and operational activities.
+        </li>
+        <li>
+          <strong>Analysis & Benchmarking:</strong> Data is evaluated against KPIs, industry benchmarks, and ESG frameworks (SDGs, ISSB, GRI).
+        </li>
+        <li>
+          <strong>Dashboard & Visualisation:</strong> Insights are visualised in intuitive dashboards for internal stakeholders, including carbon and performance metrics.
+        </li>
+        <li>
+          <strong>Report Generation:</strong> We produce formal reports suitable for investors, partners, or public disclosure — combining narrative, visualisations, and key takeaways.
+        </li>
+        <li>
+          <strong>Review & Recommendations:</strong> Recommendations highlight areas for improvement, optimisation, and strategic focus for future cycles.
+        </li>
+      </ol>
+    </section>
+
+    <!-- Types of Reporting -->
+    <section class="space-y-8">
+      <h2 class="text-3xl font-bold text-accent-500">Types of Reporting</h2>
+
+      <!-- Custom ESG & SDG Dashboards -->
+      <div class="border border-accent-500 rounded-lg p-6 hover:shadow-xl transition bg-white dark:bg-gray-800/40">
+        <h3 class="text-2xl font-semibold mb-4 text-accent-500">Custom ESG & SDG Dashboards</h3>
+        <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-1">
+          <li>Live dashboards visualising sustainability KPIs and carbon metrics</li>
+          <li>SDG alignment tracking for initiatives and campaigns</li>
+          <li>Accessible for team leaders, investors, and reporting obligations</li>
+        </ul>
+      </div>
+
+      <!-- Quarterly Impact Reports -->
+      <div class="border border-accent-500 rounded-lg p-6 hover:shadow-xl transition bg-white dark:bg-gray-800/40">
+        <h3 class="text-2xl font-semibold mb-4 text-accent-500">Quarterly Impact Reports</h3>
+        <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-1">
+          <li>Formal reports summarising sustainability performance and initiatives</li>
+          <li>KPIs, carbon metrics, and stakeholder insights presented clearly</li>
+          <li>Designed for internal and external audiences including investors</li>
+        </ul>
+      </div>
+
+      <!-- Data Visualisation & Carbon Literacy Metrics -->
+      <div class="border border-accent-500 rounded-lg p-6 hover:shadow-xl transition bg-white dark:bg-gray-800/40">
+        <h3 class="text-2xl font-semibold mb-4 text-accent-500">Data Visualisation & Carbon Literacy Metrics</h3>
+        <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-1">
+          <li>Interactive charts and graphs to illustrate performance trends</li>
+          <li>Carbon literacy metrics for teams and campaigns</li>
+          <li>Insights that support evidence-based decision-making and stakeholder communication</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Request Reporting CTA -->
+    <section class="text-center max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold text-accent-500 mb-4">Start Reporting Smarter</h2>
+      <p class="text-gray-700 dark:text-gray-300 mb-6">Turn your data into actionable insights and credible reports. Explore our reporting services and dashboards tailored for your team and stakeholders.</p>
+      <CTA text="View Reporting Services" link="/service-catalogue#reporting" client:load />
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>

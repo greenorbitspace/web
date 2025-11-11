@@ -5,6 +5,7 @@ exported_at: '2025-08-07T15:42:18.591336+00:00'
 month: September
 name: International Day of Clean Air and Blue Skies
 un-resolution: A/RES/74/212
+url: https://www.cleanairblueskies.org/
 organisations:
 - United Nations
 SDGs:

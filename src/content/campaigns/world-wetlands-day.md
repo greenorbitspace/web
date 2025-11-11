@@ -5,6 +5,7 @@ exported_at: '2025-08-07T15:42:43.758435+00:00'
 month: February
 name: World Wetlands Day
 un-resolution: A/RES/75/317
+url: https://www.worldwetlandsday.org/
 organisations:
 - United Nations
 SDGs:

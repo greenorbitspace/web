@@ -3,7 +3,7 @@ title: International Day of Sign Languages
 month: September
 name: International Day of Sign Languages
 un-resolution: A/RES/72/161
-url: 
+url: https://www.un.org/en/observances/sign-languages-day
 organisations:
 - United Nations
 SDGs:

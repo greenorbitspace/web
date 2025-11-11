@@ -4,7 +4,7 @@ notion_page_id: 217d6625-c679-8163-9d9a-ca04d38dd9c5
 exported_at: '2025-07-31T23:19:50.892650+00:00'
 slug: tackling-climate-anxiety-communicating-hope-and-action-in-a-time-of-urgency
 url: https://greenorbit.space/blog/tackling-climate-anxiety-communicating-hope-and-action-in-a-time-of-urgency/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F7debce4d-cb58-4eca-b012-4a2e09f2dc30%2FcoverImg.png/size/w=2000?exp=1755008197&sig=n2_9urysB6UdCbQJDdaPjd7D3FjLvpDSCFLfYQLwRgo&id=557741da-b759-4c9c-8e05-54e3e2060288&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
+featuredImage: https://images.unsplash.com/photo-1552799446-159ba9523315?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=6000
 featured: false
 author: Ryan Laird
 tags:

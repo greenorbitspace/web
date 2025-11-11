@@ -5,7 +5,7 @@ notion_page_id: 217d6625-c679-8188-872c-e6591c92392a
 exported_at: '2025-07-31T23:19:58.875488+00:00'
 slug: green-orbit-digital-joins-the-rainforest-foundation-uk-community-to-champion-indigenous-rights-and-climate-action
 url: https://greenorbit.space/news/green-orbit-digital-joins-the-rainforest-foundation-uk-community-to-champion-indigenous-rights-and-climate-action/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2Fc7ffc3ea-850c-4c7e-a083-9edc7056c542%2Fgeneral_visual_OceanHack4EU.png/size/w=2000?exp=1755005197&sig=Iy-24i9xRBZRPJgwzrC7ADaTVpMBGCMZj0_qP9bLGdM&id=338c92b2-c6e7-48cc-b8f6-5d4a267fd3bc&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
+featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F697c03fe-274a-44f5-8bdf-74df5945aa6f%2Frfuk.png/size/w=2000?exp=1762513172&sig=7Sk9AskThi6unMJzIrXjFFQ0_g2epfRq8ekI_IG4Fps&id=217d6625-c679-818a-918b-ea703bba8062&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
 featured: false
 author: Ryan Laird
 pubdate: '2025-05-19T14:30:00.000+00:00'
@@ -18,8 +18,7 @@ SDGs:
   - 15
   - 16
   - 17
-name: Green Orbit Digital Joins the Rainforest Foundation UK Community to Champion
-  Indigenous Rights and Climate Action
+name: Green Orbit Digital Joins the Rainforest Foundation UK Community to Champion Indigenous Rights and Climate Action
 ---
 
 Green Orbit Digital is proud to announce that we have joined the Rainforest Foundation UK (RFUK) community, uniting with a global network of changemakers to protect rainforests, uphold indigenous rights, […]

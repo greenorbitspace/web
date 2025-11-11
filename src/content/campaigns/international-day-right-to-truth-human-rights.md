@@ -3,7 +3,7 @@ title: International Day for the Right to the Truth concerning Gross Human Right
 month: March
 name: International Day for the Right to the Truth concerning Gross Human Rights Violations and for the Dignity of Victims
 un-resolution: A/RES/65/196
-url: 
+url: https://www.un.org/en/observances/right-to-truth-day
 organisations:
 - United Nations
 SDGs:

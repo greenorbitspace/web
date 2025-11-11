@@ -5,6 +5,7 @@ exported_at: '2025-08-12T16:03:24.182486+00:00'
 slug: carbon-reduction-plan
 seo-title: 'Green Orbit Digital''s Comprehensive Carbon Reduction Plan: A Commitment
   to Achieve Net Zero Emissions by 2050'
+featuredImage: https://greenorbit.space/images/esg.png
 websites:
 - Green Orbit Digital
 publishing-date: '2025-05-13'

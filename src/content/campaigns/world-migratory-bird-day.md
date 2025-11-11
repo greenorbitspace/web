@@ -3,7 +3,7 @@ title: World Migratory Bird Day
 month: October
 name: World Migratory Bird Day
 un-resolution:
-url: 
+url: https://www.worldmigratorybirdday.org/
 organisations:
 - United Nations
 - UNEP

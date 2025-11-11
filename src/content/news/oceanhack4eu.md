@@ -4,7 +4,7 @@ notion_page_id: 217d6625-c679-811e-bdd0-f85e465ee3dc
 exported_at: '2025-07-31T23:19:41.882026+00:00'
 slug: oceanhack4eu
 url: https://greenorbit.space/news/oceanhack4eu/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2Fc7ffc3ea-850c-4c7e-a083-9edc7056c542%2Fgeneral_visual_OceanHack4EU.png/size/w=2000?exp=1755009884&sig=82mvAgys3EBesWQIAjjfQfgL3DvaOp5UaGe66zdz-SE&id=338c92b2-c6e7-48cc-b8f6-5d4a267fd3bc&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
+featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2Fc7ffc3ea-850c-4c7e-a083-9edc7056c542%2Fgeneral_visual_OceanHack4EU.png/size/w=2000?exp=1762449912&sig=QFI_IPybx5h8YfsmZp7EKqojWRNU49m8fJXHY-QlrZA&wasReauthorized=true
 featured: false
 author: Ryan Laird
 tags:

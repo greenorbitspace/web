@@ -6,7 +6,7 @@ url: https://fsc.org/en/fsc-forest-week
 month: September
 name: FSC Forest Week
 organisations:
-- FSC
+- Forestry Stewardship Council UK
 SDGs:
 - 11
 - 12

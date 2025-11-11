@@ -6,6 +6,7 @@ month: May
 name: Better Business Day
 organisations:
 - Better Business Act
+url: https://bcorporation.uk/act-and-learn/campaigns/better-business-day-press-release/
 SDGs:
 - 8
 - 9

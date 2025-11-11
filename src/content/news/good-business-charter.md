@@ -4,6 +4,7 @@ notion_page_id: 217d6625-c679-81ba-b6f2-fa421a0511a0
 exported_at: '2025-07-31T23:19:47.036925+00:00'
 slug: good-business-charter
 url: https://greenorbit.space/news/good-business-charter/
+featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F66786338-28ac-4657-b95d-76f905753b97%2Fgbc.png/size/w=2000?exp=1762517285&sig=u-vQDdL1f_rcHmhS7xASHa9_Ch08Vh_lHfjm73rLMdI&id=217d6625-c679-810b-bedc-c3ef746b7621&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
 featured: false
 author: Ryan Laird
 pubdate: '2024-12-05T14:00:00.000+00:00'

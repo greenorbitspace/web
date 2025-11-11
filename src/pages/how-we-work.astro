@@ -3,127 +3,122 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import HeroSection from '../components/HeroSection.astro';
+import CTA from '../components/CTA.jsx';
 ---
 
-<Layout title="How We Work">
+<Layout 
+  title="How We Work | Green Orbit Digital" 
+  description="Discover how Green Orbit Digital delivers agile, transparent, and secure ESG marketing solutions using modern tools, customer feedback, and measurable ROI.">
   <Header />
 
   <main class="py-8">
     <HeroSection 
-      title="How We Work" 
-      description="Discover how Green Orbit Digital partners with space sector organisations to deliver sustainable, measurable marketing impact."
+      title="How We Work"
+      description="We combine agile methodology, modern tools, and transparent practices to deliver measurable sustainability impact and marketing ROI for space organisations."
     />
 
+    <section class="py-16 bg-white dark:bg-secondary-500">
+      <div class="container-custom space-y-24">
 
+        <!-- AGILE METHODOLOGY -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+              Agile & Adaptive
+            </span>
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Flexible, Iterative Delivery</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+              We use agile principles to ensure your projects evolve as your needs do. Short cycles, frequent check-ins, and iterative planning mean we can pivot quickly without compromising quality or sustainability.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
+              <li>Rapid sprint cycles and milestone reviews</li>
+              <li>Continuous prioritisation of tasks and deliverables</li>
+              <li>Transparent project boards in <a href="https://www.notion.so/" class="underline text-accent-500 dark:text-accent-500">Notion</a></li>
+              <li>Regular client feedback loops for optimisation</li>
+            </ul>
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/how-we-work/agile.jpeg" alt="Agile methodology illustration" class="w-full h-auto" />
+          </div>
+        </div>
 
-<section class="py-16 bg-white dark:bg-secondary-500">
-  <h2>We deliver on our purpose by helping you deliver on yours.</h2>
-  <p>At Green Orbit Digital, we accelerate sustainable growth in the space sector through purpose-driven, data-led marketing. We reinvest our knowledge and resources to help space organisations define, measure, and communicate their sustainability impact — while growing their brand responsibly.</p>
-  <p>For over a decade, we’ve championed sustainable marketing practices that support a cleaner, more responsible future for space exploration.</p>
-</section>
+        <!-- TECH STACK & TOOLS -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1 rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/how-we-work/tools.jpeg" alt="Tech stack illustration" class="w-full h-auto" />
+          </div>
+          <div class="order-1 md:order-2">
+            <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+              Modern Tools
+            </span>
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Secure, Transparent, Collaborative</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+              We leverage modern, secure platforms to keep projects organised, collaborative, and transparent. Your data is always protected, and you can track progress and outcomes in real time.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
+              <li>Project management & collaboration via <a href="https://www.notion.so/" class="underline text-accent-500 dark:text-accent-500">Notion</a></li>
+              <li>Secure file storage with <a href="https://proton.me/drive" class="underline text-accent-500 dark:text-accent-500">Proton Drive</a></li>
+              <li>Transparent payments and invoicing through <a href="https://stripe.com/" class="underline text-accent-500 dark:text-accent-500">Stripe</a></li>
+              <li>Integrated dashboards for marketing performance and ROI</li>
+            </ul>
+          </div>
+        </div>
 
-<hr />
+        <!-- TRUST, SECURITY & ROI -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+              Trust & ROI
+            </span>
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Measurable Impact You Can Rely On</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+              Every project is designed to deliver tangible results. We align marketing campaigns with sustainability objectives and track performance with clear KPIs, demonstrating a real return on investment.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
+              <li>Transparent reporting and analytics dashboards</li>
+              <li>Client-accessible progress tracking and metrics</li>
+              <li>Security-first approach to all data and communications</li>
+              <li>Optimisation based on measurable outcomes</li>
+            </ul>
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/how-we-work/roi.jpeg" alt="ROI and impact illustration" class="w-full h-auto" />
+          </div>
+        </div>
 
-<section>
-  <h2>Capabilities</h2>
-  <p>The whole is greater than the sum of the parts.</p>
-  <ul>
-    <li><strong>Sustainable Digital Strategy & Consultancy</strong> — Aligned with global goals and tailored to the space sector.</li>
-    <li><strong>SEO & Content Marketing</strong> — Educational, authoritative content that promotes responsible innovation.</li>
-    <li><strong>Social Media & Community Engagement</strong> — Building purpose-led audiences around your space mission.</li>
-    <li><strong>Email Marketing & Lead Nurturing</strong> — Efficient, targeted campaigns with minimal environmental impact.</li>
-    <li><strong>Brand Positioning & Development</strong> — Authentic brands that resonate with sustainability-conscious stakeholders.</li>
-    <li><strong>Impact Measurement & Reporting</strong> — KPIs and environmental metrics transparently tracked.</li>
-  </ul>
-  <a href="/services">Explore our Services</a>
-</section>
+        <!-- FEEDBACK & CUSTOMER SUCCESS -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1 rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/how-we-work/feedback.jpeg" alt="Customer feedback illustration" class="w-full h-auto" />
+          </div>
+          <div class="order-1 md:order-2">
+            <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+              Feedback & Success
+            </span>
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Collaborative Growth and Continuous Improvement</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+              Client feedback is central to our process. We continuously refine strategies based on input, market trends, and measurable outcomes to ensure every engagement maximises success.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
+              <li>Structured client feedback sessions</li>
+              <li>Accessible <a href="/faq" class="underline text-accent-500 dark:text-accent-500">FAQs</a> and guides</li>
+              <li>Customer success tracking and reporting</li>
+              <li>Iterative improvement of campaigns, content, and impact measurement</li>
+            </ul>
+          </div>
+        </div>
 
-<hr />
+        <!-- CTA -->
+        <div class="text-center">
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Partner With Us</h2>
+          <p class="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+            Experience transparent, secure, and agile ESG marketing solutions that deliver measurable sustainability impact and ROI for your organisation.
+          </p>
+          <CTA text="Book a Discovery Call" link="/contact" client:load />
+        </div>
 
-<section>
-  <h2>Services</h2>
-  <p>Delivering measurable impact through tailored solutions.</p>
-  <ul>
-    <li><strong>Marketing Strategy Development</strong> — Sustainability-led roadmaps aligned with organisational goals.</li>
-    <li><strong>Content Creation & SEO Optimisation</strong> — Blogs, whitepapers, and media that elevate green messaging.</li>
-    <li><strong>Social Media Campaigns</strong> — Engaging campaigns that raise awareness of green space innovation.</li>
-    <li><strong>Email Marketing & Automation</strong> — Personalised workflows that nurture leads and reduce waste.</li>
-    <li><strong>Brand Identity Workshops</strong> — Define brand positioning aligned with sustainability and stakeholder needs.</li>
-    <li><strong>Impact Reporting & Analytics</strong> — Dashboards linking marketing with SDG progress.</li>
-  </ul>
-  <a href="/capabilities">See how our capabilities support these services</a>
-</section>
-
-<hr />
-
-<section>
-  <h2>Solving Critical Challenges Together</h2>
-  <ul>
-    <li>Aligning marketing with sustainability standards and regulations.</li>
-    <li>Engaging stakeholders around responsible space innovation.</li>
-    <li>Demonstrating credible environmental impact to investors and audiences.</li>
-    <li>Navigating complex markets with adaptive, data-led strategies.</li>
-  </ul>
-</section>
-
-<hr />
-
-<section>
-  <h2>Partners in Progress</h2>
-  <p>From pioneering startups to space industry leaders, we:</p>
-  <ul>
-    <li>Tailor scalable marketing solutions that grow with your mission.</li>
-    <li>Embed sustainability into your communications strategy.</li>
-    <li>Deliver business and environmental outcomes you can measure.</li>
-  </ul>
-</section>
-
-<hr />
-
-<section>
-  <h2>Innovative Tools and Technologies</h2>
-  <p>We combine green tech with advanced digital tools to optimise campaign performance while minimising carbon impact.</p>
-</section>
-
-<hr />
-
-<section>
-  <h2>Global Reach, Local Insight</h2>
-  <p>Based in Leicester, we work with clients globally, adapting strategies to diverse markets and regulations.</p>
-</section>
-
-<hr />
-
-<section>
-  <h2>Where We Can Help</h2>
-  <p>Whether you’re just starting your sustainability journey or scaling your impact, we offer flexible solutions to meet you where you are.</p>
-</section>
-
-<hr />
-
-<section>
-  <h2>Who We Work With</h2>
-  <ul>
-    <li>Space startups prioritising sustainability from the start.</li>
-    <li>Established players improving marketing accountability.</li>
-    <li>Global space companies needing coordinated sustainability comms.</li>
-  </ul>
-</section>
-
-<hr />
-
-<section>
-  <h2>Shaping Industry Thought Leadership</h2>
-  <p>Via The Sustainable Space Podcast, workshops, and strategic collaborations, we influence the conversations defining sustainable marketing in space.</p>
-</section>
-
-<hr />
-
-<section>
-  <h2>Partner With Us to Grow Responsibly</h2>
-  <p>Make marketing your vehicle for sustainable growth and impact.</p>
-  <a href="/contact">Get in touch</a> or <a href="/podcast">explore The Sustainable Space Podcast</a>
-</section>
+      </div>
+    </section>
   </main>
 
   <Footer />

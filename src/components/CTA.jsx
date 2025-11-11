@@ -1,19 +1,41 @@
 import React from "react";
-import { useNavigate } from "@astrojs/react";
 
-// Props: text, link, icon, bgColor, hoverColor, textColor
-const CTA = ({ text, link, Icon, bgColor = "bg-green-600", hoverColor = "hover:bg-green-700", textColor = "text-white" }) => {
-  const navigate = useNavigate();
+/**
+ * CTA Component
+ * A reusable call-to-action button for the Green Orbit website.
+ *
+ * Props:
+ * - text: string — button label
+ * - link: string — destination URL
+ * - icon: React component (optional) — e.g. from lucide-react
+ * - bgColor: string (optional) — Tailwind background class
+ * - hoverColor: string (optional) — Tailwind hover state
+ * - textColor: string (optional) — Tailwind text color
+ * - fullWidth: boolean (optional) — expands CTA to full width
+ */
 
+export default function CTA({
+  text,
+  link = "#",
+  icon: Icon,
+  bgColor = "bg-accent-500",
+  hoverColor = "hover:bg-accent-700",
+  textColor = "text-white",
+  fullWidth = false,
+}) {
   return (
-    <button
-      className={`${bgColor} ${hoverColor} ${textColor} px-6 py-3 rounded-lg flex items-center gap-2 transition-all duration-200`}
-      onClick={() => navigate(link)}
+    <a
+      href={link}
+      className={`
+        inline-flex items-center justify-center gap-2
+        px-6 py-3 rounded-2xl font-semibold text-base transition-colors duration-200
+        shadow-md focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2
+        ${bgColor} ${hoverColor} ${textColor}
+        ${fullWidth ? "w-full" : ""}
+      `}
     >
       {Icon && <Icon className="w-5 h-5" />}
-      {text}
-    </button>
+      <span>{text}</span>
+    </a>
   );
-};
-
-export default CTA;
+}

@@ -1,0 +1,122 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTA from '../../components/CTA.jsx';
+
+const pageTitle = "Training | Green Orbit Digital";
+const pageDescription = "Empower your team with bespoke workshops and masterclasses on sustainability, digital strategy, and communication for the space and tech sectors.";
+const pageURL = "https://greenorbit.space/services/training";
+const pageImage = "/images/services/training.png"; // Replace with your hero image
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={pageURL}>
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="relative w-full h-[500px] sm:h-[600px] lg:h-[700px] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center" style={`background-image: url(${pageImage});`} aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-black/50" aria-hidden="true"></div>
+    <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl space-y-6">
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white drop-shadow-lg">Training</h1>
+      <p class="text-2xl sm:text-3xl text-gray-200 drop-shadow">Upskill Your Team for a Sustainable Future</p>
+      <p class="text-gray-200 max-w-3xl mx-auto">Bespoke workshops and masterclasses designed to elevate your team’s understanding of sustainable marketing, digital strategy, and space sector communications — delivered live or virtually, tailored to your goals.</p>
+    </div>
+  </section>
+
+  <main class="py-16 w-full container-custom bg-secondary-500 space-y-16">
+
+    <!-- What is Sustainable Training -->
+    <section class="space-y-4">
+      <h2 class="text-3xl font-bold text-accent-500">What Our Training Covers</h2>
+      <p class="text-gray-700 dark:text-gray-300">Our training programmes empower marketing, communications, and technical teams to integrate sustainability into every aspect of their digital operations. We combine industry expertise with actionable learning to build capability and confidence in sustainable strategy, communication, and impact measurement.</p>
+    </section>
+
+    <!-- Workshops vs Masterclasses -->
+    <section class="space-y-8">
+      <h2 class="text-3xl font-bold text-accent-500">Workshops vs Masterclasses</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Workshops -->
+        <div class="border border-accent-500 rounded-lg p-6 bg-white dark:bg-gray-800/40 hover:shadow-xl transition">
+          <h3 class="text-2xl font-semibold text-accent-500 mb-4">Interactive Workshops</h3>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">Workshops are hands-on, collaborative sessions where teams co-create strategies, explore sustainability challenges, and design practical solutions tailored to your business.</p>
+          <ul class="list-disc pl-5 space-y-1 text-gray-700 dark:text-gray-300">
+            <li>Ideal for small to mid-sized teams</li>
+            <li>Includes breakout activities and live exercises</li>
+            <li>Custom templates and frameworks provided</li>
+            <li>Available in half-day or full-day formats</li>
+          </ul>
+        </div>
+
+        <!-- Masterclasses -->
+        <div class="border border-accent-500 rounded-lg p-6 bg-white dark:bg-gray-800/40 hover:shadow-xl transition">
+          <h3 class="text-2xl font-semibold text-accent-500 mb-4">Expert-Led Masterclasses</h3>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">Masterclasses offer deeper learning for professionals seeking to lead on sustainability, strategy, and communications in their organisation — blending theory, case studies, and global best practice.</p>
+          <ul class="list-disc pl-5 space-y-1 text-gray-700 dark:text-gray-300">
+            <li>Ideal for leadership and strategy teams</li>
+            <li>Delivered live or recorded for self-paced learning</li>
+            <li>Includes post-session resources and Q&A</li>
+            <li>Available as single sessions or multi-part series</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Training Formats -->
+    <section class="space-y-8">
+      <h2 class="text-3xl font-bold text-accent-500">Flexible Training Formats</h2>
+      <p class="text-gray-700 dark:text-gray-300">We design our sessions to fit your team’s structure, schedules, and learning preferences — ensuring meaningful engagement and lasting results.</p>
+      <ul class="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+        <li><strong>Live Virtual Sessions:</strong> Interactive and collaborative, perfect for remote and hybrid teams.</li>
+        <li><strong>In-Person Workshops:</strong> Immersive sessions with tailored activities and group collaboration.</li>
+        <li><strong>Hybrid Learning:</strong> Combine live teaching with asynchronous materials for flexible team engagement.</li>
+        <li><strong>On-Demand Masterclasses:</strong> Pre-recorded sessions with accompanying toolkits and reference guides.</li>
+      </ul>
+    </section>
+
+    <!-- Training Topics -->
+    <section class="space-y-8">
+      <h2 class="text-3xl font-bold text-accent-500">Key Training Topics</h2>
+
+      <!-- Sustainable Marketing -->
+      <div class="border border-accent-500 rounded-lg p-6 hover:shadow-xl transition bg-white dark:bg-gray-800/40">
+        <h3 class="text-2xl font-semibold mb-4 text-accent-500">Sustainable Digital Marketing</h3>
+        <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-1">
+          <li>Carbon-aware campaign design</li>
+          <li>Measuring and reducing digital emissions</li>
+          <li>Integrating sustainability metrics into KPIs</li>
+        </ul>
+      </div>
+
+      <!-- Communications & Messaging -->
+      <div class="border border-accent-500 rounded-lg p-6 hover:shadow-xl transition bg-white dark:bg-gray-800/40">
+        <h3 class="text-2xl font-semibold mb-4 text-accent-500">Sustainability Communication & Storytelling</h3>
+        <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-1">
+          <li>Crafting authentic sustainability narratives</li>
+          <li>Green claims, ESG reporting, and SDG alignment</li>
+          <li>Visual storytelling for science and impact</li>
+        </ul>
+      </div>
+
+      <!-- Strategy & Innovation -->
+      <div class="border border-accent-500 rounded-lg p-6 hover:shadow-xl transition bg-white dark:bg-gray-800/40">
+        <h3 class="text-2xl font-semibold mb-4 text-accent-500">Sustainability Strategy & Innovation</h3>
+        <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-1">
+          <li>Embedding sustainability in business models</li>
+          <li>SDG-driven project planning and evaluation</li>
+          <li>Tools for circular economy and systems thinking</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="text-center max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold text-accent-500 mb-4">Book a Training Session</h2>
+      <p class="text-gray-700 dark:text-gray-300 mb-6">Whether you’re developing a new sustainability strategy or training your team on responsible marketing, our workshops and masterclasses are built to inspire action and deliver results.</p>
+      <CTA text="Explore Training Options" link="/service-catalogue#training" client:load />
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>

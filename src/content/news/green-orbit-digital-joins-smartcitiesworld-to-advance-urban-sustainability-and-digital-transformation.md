@@ -5,6 +5,7 @@ notion_page_id: 217d6625-c679-81d4-8b89-e4733363872a
 exported_at: '2025-07-31T23:20:00.147235+00:00'
 slug: green-orbit-digital-joins-smartcitiesworld-to-advance-urban-sustainability-and-digital-transformation
 url: https://greenorbit.space/news/green-orbit-digital-joins-smartcitiesworld-to-advance-urban-sustainability-and-digital-transformation/
+featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F73ce1ef2-e8d5-4c9e-801b-bf12b55840bd%2Fsmartcitiesworld.png/size/w=2000?exp=1762520668&sig=Yx4cRfJKQ2kDM_ZhCdhujxLLdOynrq4EeZ0oQFDv5Fo&id=217d6625-c679-81d4-8b89-e4733363872a&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
 featured: false
 author: Ryan Laird
 pubdate: '2025-05-22T12:00:00.000+00:00'

@@ -3,20 +3,113 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import HeroSection from '../components/HeroSection.astro';
+import CTA from '../components/CTA.jsx';
 ---
 
-<Layout title="Packages">
+<Layout
+  title="Packages | Green Orbit Digital"
+  description="Explore flexible packages designed for sustainability-focused marketing, ESG, and space industry projects — from fixed-price audits to long-term retainers."
+>
   <Header />
 
   <main class="py-8">
-    <HeroSection 
-      title="Packages" 
-      description="Your privacy matters. Here's how we handle your data at Green Orbit Digital."
+    <HeroSection
+      title="Packages"
+      description="Flexible packages to suit your goals, timelines, and budget. From fixed-price audits to bespoke retainers, we help you achieve sustainable marketing success."
     />
 
-    <section class="py-16 bg-white dark:bg-secondary-500">
+    <section class="py-16 bg-secondary-500 text-white">
+      <div class="container-custom space-y-24">
 
+        <!-- Fixed-Price Packages -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl font-bold mb-4">Fixed-Price Packages</h2>
+            <p class="mb-6">
+              For well-defined deliverables, our fixed-price packages provide clarity and confidence. Perfect for audits, sustainability reports, and workshops with a clear scope.
+            </p>
+            <ul class="list-disc list-inside mb-6">
+              <li>Digital & sustainability audits</li>
+              <li>Website carbon & performance reports</li>
+              <li>ESG, CSR, or GRI documentation</li>
+              <li>Custom workshops and training</li>
+            </ul>
+            <CTA text="View Fixed-Price Packages" link="/services/fixed-price" client:load />
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/packages/fixed-price.jpeg" alt="Fixed price services illustration" class="w-full h-auto" />
+          </div>
+        </div>
 
+        <!-- Project-Based Packages -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1 rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/packages/project-based.jpeg" alt="Project-based packages illustration" class="w-full h-auto" />
+          </div>
+          <div class="order-1 md:order-2">
+            <h2 class="text-3xl font-bold mb-4">Project-Based Packages</h2>
+            <p class="mb-6">
+              Tailored for complex or multi-phase initiatives, our project-based packages align with your sustainability goals and timelines.
+            </p>
+            <ul class="list-disc list-inside mb-6">
+              <li>Full ESG or impact communication strategies</li>
+              <li>Integrated sustainability campaigns</li>
+              <li>Materiality assessments & data integration</li>
+              <li>Support for B Corp or GRI certification</li>
+            </ul>
+            <CTA text="Request a Project Quote" link="/services/project-based" client:load />
+          </div>
+        </div>
+
+        <!-- Retainer Packages -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl font-bold mb-4">Retainer Packages</h2>
+            <p class="mb-6">
+              For ongoing support, retainers combine strategy, content, and performance management for predictable, long-term impact.
+            </p>
+            <ul class="list-disc list-inside mb-6">
+              <li>Predictable monthly investment</li>
+              <li>Priority scheduling & dedicated account lead</li>
+              <li>Rolling sustainability & performance reports</li>
+              <li>Scalable quarterly or annual options</li>
+            </ul>
+            <CTA text="Explore Retainer Options" link="/services/retainer" client:load />
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/packages/retainer.jpeg" alt="Retainer support illustration" class="w-full h-auto" />
+          </div>
+        </div>
+
+        <!-- Flexible Support Packages -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1 rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/packages/flexi-support.jpeg" alt="Flexible support illustration" class="w-full h-auto" />
+          </div>
+          <div class="order-1 md:order-2">
+            <h2 class="text-3xl font-bold mb-4">Flexible Support</h2>
+            <p class="mb-6">
+              For teams needing on-demand expertise, flexible support packages scale with your workflow and priorities.
+            </p>
+            <ul class="list-disc list-inside mb-6">
+              <li>Tailored assistance for evolving marketing & sustainability needs</li>
+              <li>Rapid response from experienced specialists</li>
+              <li>Scalable hours that grow with your team and campaigns</li>
+            </ul>
+            <CTA text="Find Out More" link="/services/flexi-support" client:load />
+          </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center max-w-3xl mx-auto space-y-6">
+          <h2 class="text-3xl font-bold">Packages That Fit Your Needs</h2>
+          <p>
+            Whether you need a one-off audit, a multi-phase project, or ongoing strategic support, our packages are designed to deliver measurable results while staying sustainable.
+          </p>
+          <CTA text="Schedule a Consultation" link="/contact" client:load />
+        </div>
+
+      </div>
     </section>
   </main>
 

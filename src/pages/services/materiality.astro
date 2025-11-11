@@ -1,0 +1,114 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import CTA from '../../components/CTA.jsx';
+---
+
+<Layout
+  title="Materiality Services"
+  description="Identify your most impactful ESG issues with double materiality assessments. Our services guide messaging, disclosures, and long-term sustainability priorities."
+>
+  <Header />
+
+  <main class="py-16 w-full container-custom bg-secondary-500 space-y-16">
+    <HeroSection
+      title="Materiality Services"
+      description="Focus on what truly matters. Through double materiality assessments, we help organisations identify the ESG issues that drive impact and strategic decisions."
+    />
+
+    <section class="py-16 bg-secondary-500 text-white">
+      <div class="container-custom space-y-24">
+
+        <!-- Focus on What Matters -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl font-bold mb-4">Focus on What Matters</h2>
+            <p class="mb-6">
+              We help you identify the ESG issues that matter most—both to your organisation and your stakeholders. Our double materiality approach ensures your sustainability efforts are aligned with long-term value creation and risk mitigation.
+            </p>
+            <ul class="list-disc list-inside mb-6">
+              <li>Assess environmental, social, and governance impacts internally and externally</li>
+              <li>Prioritise issues based on significance to stakeholders and business performance</li>
+              <li>Inform strategy, disclosures, and messaging with actionable insights</li>
+            </ul>
+            <CTA text="Learn About Our Approach" link="/services/approach" client:load />
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/services/materiality-focus.jpeg" alt="Focus on material ESG issues" class="w-full h-auto" />
+          </div>
+        </div>
+
+        <!-- Stakeholder & Sector Analysis -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1 rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/services/stakeholder-analysis.jpeg" alt="Stakeholder and sector analysis" class="w-full h-auto" />
+          </div>
+          <div class="order-1 md:order-2">
+            <h2 class="text-3xl font-bold mb-4">Stakeholder & Sector Analysis</h2>
+            <p class="mb-6">
+              Understanding the expectations of your stakeholders and the broader sector landscape is key to strategic ESG alignment. We map and evaluate stakeholder priorities, emerging trends, and regulatory requirements to inform decision-making.
+            </p>
+            <ul class="list-disc list-inside mb-6">
+              <li>Engage internal and external stakeholders for comprehensive perspectives</li>
+              <li>Analyse sector trends, benchmarks, and emerging ESG risks</li>
+              <li>Identify material topics that impact both your business and society</li>
+            </ul>
+            <CTA text="Explore Stakeholder Analysis" link="/services/stakeholder-analysis" client:load />
+          </div>
+        </div>
+
+        <!-- Materiality Matrix Creation -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl font-bold mb-4">Materiality Matrix Creation</h2>
+            <p class="mb-6">
+              We visualise your material ESG topics in a clear, actionable matrix that highlights priorities for management, reporting, and communication. This helps your team focus resources where they deliver the greatest impact.
+            </p>
+            <ul class="list-disc list-inside mb-6">
+              <li>Develop a robust double materiality framework tailored to your organisation</li>
+              <li>Visualise priority topics to inform strategy and investment decisions</li>
+              <li>Provide outputs for annual reports, disclosures, and stakeholder communications</li>
+            </ul>
+            <CTA text="See Example Matrix" link="/services/materiality-matrix" client:load />
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/services/materiality-matrix.jpeg" alt="Materiality matrix example" class="w-full h-auto" />
+          </div>
+        </div>
+
+        <!-- GRI, SFDR, ISSB Integration -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1 rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/services/esg-integration.jpeg" alt="ESG framework integration" class="w-full h-auto" />
+          </div>
+          <div class="order-1 md:order-2">
+            <h2 class="text-3xl font-bold mb-4">GRI, SFDR, and ISSB Integration</h2>
+            <p class="mb-6">
+              Align your material topics with leading ESG reporting frameworks. We ensure your disclosures meet global standards, support compliance, and strengthen your sustainability credibility.
+            </p>
+            <ul class="list-disc list-inside mb-6">
+              <li>Integrate findings with GRI standards for transparent reporting</li>
+              <li>Align with SFDR requirements for financial and sustainable disclosures</li>
+              <li>Prepare for ISSB standards for comprehensive ESG disclosure and investor communication</li>
+            </ul>
+            <CTA text="Learn About ESG Integration" link="/services/esg-integration" client:load />
+          </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center max-w-3xl mx-auto space-y-6">
+          <h2 class="text-3xl font-bold">Focus on What Truly Matters for Your Organisation</h2>
+          <p>
+            Our materiality services help you identify, prioritise, and communicate the ESG issues that drive real impact. Gain clarity, align strategy, and strengthen your sustainability reporting.
+          </p>
+          <CTA text="Schedule a Materiality Consultation" link="/contact" client:load />
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

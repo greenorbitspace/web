@@ -3,62 +3,140 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import HeroSection from '../components/HeroSection.astro';
-import PricingList from '../components/PricingList.jsx';
-
-import Stripe from 'stripe';
-
-const stripeSecretKey = import.meta.env.STRIPE_SECRET_KEY;
-
-if (!stripeSecretKey) {
-  throw new Error('STRIPE_SECRET_KEY environment variable is not set.');
-}
-
-const stripe = new Stripe(stripeSecretKey, {
-  apiVersion: '2022-11-15',
-});
-
-// Fetch prices with expanded product data
-const prices = await stripe.prices.list({
-  active: true,
-  limit: 100,
-  expand: ['data.product'],
-});
-
-// Group prices by product and include category from product metadata
-const productsMap = new Map();
-
-for (const price of prices.data) {
-  const product = price.product;
-  if (!productsMap.has(product.id)) {
-    productsMap.set(product.id, {
-      id: product.id,
-      product_name: product.name,
-      description: product.description || '',
-      images: product.images || [],
-      category: product.metadata?.category || '', // Add product category here
-      prices: [],
-    });
-  }
-  productsMap.get(product.id).prices.push(price);
-}
-
-// Convert Map to sorted array alphabetically by product_name
-const sortedProducts = Array.from(productsMap.values()).sort((a, b) =>
-  a.product_name.localeCompare(b.product_name)
-);
+import CTA from '../components/CTA.jsx';
 ---
 
-<Layout title="Pricing" description="Transparent pricing for our sustainable marketing services.">
+<Layout 
+  title="Pricing | Green Orbit Digital" 
+  description="Transparent, flexible pricing for ESG marketing, audits, sustainability reporting, workshops, retainers, and Flexi Support Packages.">
   <Header />
 
-  <main class="py-12 max-w-6xl mx-auto px-4">
+  <main class="py-8">
     <HeroSection 
-      title="Pricing" 
-      description="Transparent pricing for our sustainable marketing services — tailored to the space, smart cities, and maritime sectors." 
+      title="Pricing & Packages"
+      description="Transparent and flexible pricing for sustainable growth. From fixed-price audits and ESG reports to retainers and Flexi Support blocks — choose a structure that fits your organisation’s needs and pace."
     />
 
-<section class="py-16 bg-white dark:bg-secondary-500">
-      <PricingList products={sortedProducts} client:load />
+    <section class="py-16 bg-white dark:bg-secondary-500">
+      <div class="container-custom space-y-24">
+
+        <!-- FIXED PRICE SERVICES -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+              Fixed-Price Services
+            </span>
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Clarity. Confidence. Control.</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+              Our fixed-price services provide certainty for well-defined deliverables. Ideal for audits, workshops, and sustainability reports with a clear brief and outcome.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
+              <li>SEO, content & digital sustainability audits</li>
+              <li>Website carbon and performance reports</li>
+              <li>ESG, CSR, or GRI sustainability documentation</li>
+              <li>Custom workshops and training sessions</li>
+            </ul>
+            <CTA text="View Our Process" link="/our-process" client:load />
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/services/partnership.jpeg" alt="Fixed price services illustration" class="w-full h-auto" />
+          </div>
+        </div>
+
+        <!-- PROJECT QUOTES -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1 rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/services/grow.jpeg" alt="Project-based quote" class="w-full h-auto" />
+          </div>
+          <div class="order-1 md:order-2">
+            <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+              Project-Based Quotes
+            </span>
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Tailored to Scale and Complexity</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+              For multi-phase or cross-functional initiatives, we provide bespoke quotes aligned to your sustainability ambitions and timelines.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
+              <li>Full ESG or impact communication strategies</li>
+              <li>Integrated sustainability campaigns</li>
+              <li>Materiality assessments and data integration</li>
+              <li>Support for B Corp or GRI certification</li>
+            </ul>
+            <CTA text="Request a Project Quote" link="/your-project" client:load />
+          </div>
+        </div>
+
+        <!-- RETAINER PACKAGES -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+              Retainer Packages
+            </span>
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Consistent Partnership. Sustainable Growth.</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+              Ideal for teams seeking ongoing support. Retainers combine strategy, content, and performance management for predictable, long-term impact.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
+              <li>Predictable monthly investment</li>
+              <li>Priority scheduling and dedicated account lead</li>
+              <li>Rolling sustainability and performance reports</li>
+              <li>Scalable quarterly or annual options</li>
+            </ul>
+            <CTA text="Explore Retainer Options" link="/services/flexi-support" client:load />
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/services/monthly-planner.jpeg" alt="Monthly retainer support" class="w-full h-auto" />
+          </div>
+        </div>
+
+        <!-- FLEXI SUPPORT PACKAGES -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1 rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/services/flexible.png" alt="Flexible support illustration" class="w-full h-auto" />
+          </div>
+          <div class="order-1 md:order-2">
+            <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+              Flexi Support
+            </span>
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Flexi Support That Adapts to You</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+              For mission-driven teams seeking agility, our flexible support packages provide on-demand expertise that scales with your workflow and priorities.
+              <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
+              <li>Tailored assistance for evolving sustainability and marketing needs</li>
+              <li>Rapid response from experienced specialists to keep projects moving</li>
+              <li>Scalable hours that adjust as your team or campaigns grow</li>
+                          </ul>
+            </p>
+            <CTA text="Find out more" link="/services/flexi-support" client:load />
+          </div>
+        </div>
+
+        <!-- CUSTOM PACKAGES -->
+        <div class="text-center">
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Custom Packages & Discovery Calls</h2>
+          <p class="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+            Need a combination of services? Let’s co-design a plan that aligns with your sustainability goals, budget, and reporting requirements.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <CTA text="Book a Discovery Call" link="/contact" client:load />
+            <CTA text="Learn How We Work" link="/how-we-work" client:load />
+          </div>
+        </div>
+
+        <!-- ADDITIONAL INFO -->
+        <div class="text-center text-gray-500 dark:text-white text-sm mt-12">
+          <p>
+            For engagement details, please review our 
+            <a href="/terms" class="underline text-accent-500 dark:text-accent-500">Terms & Conditions</a>, 
+            <a href="/our-process" class="underline text-accent-500 dark:text-accent-500">Process Overview</a>, and 
+            <a href="/how-we-work" class="underline text-accent-500 dark:text-accent-500">How We Work</a>.
+          </p>
+          <p class="mt-2">
+            Green Orbit Digital maintains transparent, ethical pricing aligned with sustainability and fair labour principles.
+          </p>
+        </div>
+
+      </div>
     </section>
   </main>
 

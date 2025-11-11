@@ -4,6 +4,7 @@ notion_page_id: 217d6625-c679-8175-980e-fc3976fbdd9e
 exported_at: '2025-07-31T23:19:50.173749+00:00'
 slug: space-sustainability-in-2024
 url: https://greenorbit.space/blog/space-sustainability-in-2024/
+featuredImage: https://images.unsplash.com/photo-1620428268482-cf1851a36764?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=6000
 featured: false
 author: Ryan Laird
 tags:

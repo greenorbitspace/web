@@ -1,9 +1,8 @@
 ---
 title: Insights from the World Space Forum 2024
-notion_page_id: 217d6625-c679-8121-a634-c876b27c772b
-exported_at: '2025-07-31T23:19:46.063523+00:00'
 slug: world-space-forum-2024
 url: https://greenorbit.space/blog/world-space-forum-2024/
+featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2Ff95d0e3d-d6d0-462f-8d27-590fe9b0f894%2F2024wsf.png/size/w=2000?exp=1762516245&sig=qnr65u2b8U21I9NhuBj8EexQbWkslxhE-GswYy0HxRk&id=217d6625-c679-81ad-b8cb-c9741dcc15e0&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
 featured: false
 author: Ryan Laird
 tags:
@@ -12,7 +11,7 @@ pubdate: '2024-12-04T16:26:00.000+00:00'
 categories:
 - blog
 organisations:
-  - United Nations
+  - UNOOSA
 SDGs:
   - 13
   - 16

@@ -5,6 +5,7 @@ notion_page_id: 217d6625-c679-818e-80a7-c69c7d3b8707
 exported_at: '2025-07-31T23:19:50.469022+00:00'
 slug: celebrating-the-international-year-of-cooperatives-2025-a-vision-for-a-better-world-with-space-technology
 url: https://greenorbit.space/blog/celebrating-the-international-year-of-cooperatives-2025-a-vision-for-a-better-world-with-space-technology/
+featuredImage: https://images.unsplash.com/photo-1637094410849-96576479b731?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=6000
 featured: false
 author: Ryan Laird
 tags:

@@ -5,7 +5,7 @@ exported_at: '2025-08-07T15:42:08.121984+00:00'
 month: September
 name: World Maritime Day
 un-resolution: 
-url: 
+url: https://www.imo.org/en/about/events/pages/world-maritime-theme-2025.aspx
 organisations:
 - United Nations
 - IMO

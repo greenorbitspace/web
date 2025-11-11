@@ -1,0 +1,105 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import { slug as slugify } from 'github-slugger';
+import organisations from '../../data/organisations.json';
+
+// ✅ Make sure this is exported
+export async function getStaticPaths() {
+  return organisations.map((org) => ({
+    params: { slug: (org.slug ?? slugify(org.organisation)).toLowerCase() },
+  }));
+}
+
+const { slug } = Astro.params;
+
+const orgEntry = organisations.find(
+  (o) => ((o.slug ?? slugify(o.organisation)).toLowerCase() === slug.toLowerCase())
+);
+
+if (!orgEntry) {
+  throw new Error(`No organisation found for slug: "${slug}"`);
+}
+
+const {
+  organisation,
+  description,
+  url,
+  logo,
+  type,
+  category,
+  industry,
+  'hubspot-id': hubspotId,
+} = orgEntry;
+
+const pageTitle = organisation;
+const pageDescription = description || `Learn more about ${organisation}`;
+const pageURL = `https://greenorbit.space/organisations/${slug}`;
+const pageImage = logo || '/logos/default-placeholder.svg';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: pageTitle,
+  description: pageDescription,
+  url: url || pageURL,
+  logo: pageImage,
+  ...(type && { type }),
+  ...(industry && { industry }),
+  ...(category && { category }),
+};
+---
+<Layout title={pageTitle} description={pageDescription}>
+  <Header />
+
+  <main class="pt-24 pb-12">
+    <article class="prose max-w-4xl mx-auto px-4 text-white">
+      <header class="mb-12 text-center">
+        {logo && (
+          <img
+            src={logo}
+            alt={`${organisation} logo`}
+            class="mx-auto h-24 w-auto mb-4 rounded-lg shadow"
+            loading="lazy"
+          />
+        )}
+        <h1 class="text-accent-500 text-4xl font-bold mb-2">{organisation}</h1>
+        {type && <p class="text-lg capitalize">{type}</p>}
+        {url && (
+          <p>
+            <a 
+              href={url} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="underline text-current hover:text-accent-500 transition"
+            >
+              {url}
+            </a>
+          </p>
+        )}
+      </header>
+
+      {description && <p>{description}</p>}
+
+      <section class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {industry && (
+          <div>
+            <h2 class="text-accent-500 text-xl font-semibold">Industry</h2>
+            <p>{industry}</p>
+          </div>
+        )}
+        {category && (
+          <div>
+            <h2 class="text-accent-500 text-xl font-semibold">Category</h2>
+            <p>{category}</p>
+          </div>
+        )}
+      </section>
+    </article>
+  </main>
+
+  <Footer />
+  <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+</Layout>

@@ -1,0 +1,176 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.astro';
+import CTA from '../components/CTA.jsx';
+---
+
+<Layout
+  title="Customer Success | Green Orbit Digital"
+  description="Green Orbit Digital helps mission-driven organisations achieve sustainable growth with measurable impact, agile processes, and data-driven insights."
+>
+  <Header />
+
+  <main class="py-8">
+    <HeroSection
+      title="Your Partner in Sustainable Success"
+      description="More than a marketing agency — we are your strategic partner in building a more sustainable, data-driven, and impactful future."
+    />
+
+    <section class="py-16 bg-white dark:bg-secondary-500">
+      <div class="container-custom space-y-24">
+
+        <!-- Impact & Value -->
+        <div class="text-center max-w-3xl mx-auto space-y-6">
+          <p class="text-gray-600 dark:text-gray-300">
+            Our team combines deep expertise in digital marketing, sustainability strategy, and Earth observation data to help your organisation reach its goals — faster, smarter, and greener.
+          </p>
+          <CTA text="Join our next live demo webinar" link="https://www.notion.so/Your-Partner-in-Sustainable-Success-287d6625c679809ca059d90f241263a1?pvs=21" client:load />
+        </div>
+
+        <!-- Real Impact -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Count on Us to Deliver Real Impact</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+              From decarbonising digital campaigns to visualising Earth data, we ensure maximum reach with minimum footprint.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
+              <li>⚙️ Streamlined sustainable workflows that reduce operational waste</li>
+              <li>📊 Integrated analytics dashboards for real-time impact visibility</li>
+              <li>🌎 Science-based insights aligned with ESG and SDG frameworks</li>
+              <li>🎨 Creative storytelling connecting data with purpose</li>
+            </ul>
+            <CTA text="Explore our services" link="https://www.notion.so/Your-Partner-in-Sustainable-Success-287d6625c679809ca059d90f241263a1?pvs=21" client:load />
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/customer-success/impact.jpeg" alt="Delivering impact illustration" class="w-full h-auto" />
+          </div>
+        </div>
+
+        <!-- Empower Teams -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1 rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/customer-success/teams.jpeg" alt="Empowering teams" class="w-full h-auto" />
+          </div>
+          <div class="order-1 md:order-2">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Empowering Every Team to Drive Change</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+              We help you build internal capacity, enabling your people to lead with confidence and clarity.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
+              <li>🌿 Marketing teams transitioning to low-carbon digital infrastructure</li>
+              <li>🛰️ Space and Earth observation companies communicating climate insights</li>
+              <li>🔬 Science-driven organisations amplifying technical impact narratives</li>
+              <li>💼 Sustainability leaders reporting and visualising ESG progress</li>
+            </ul>
+            <CTA text="Meet the team" link="https://www.notion.so/Your-Partner-in-Sustainable-Success-287d6625c679809ca059d90f241263a1?pvs=21" client:load />
+          </div>
+        </div>
+
+        <!-- Sustainability Strategy -->
+        <div class="text-center max-w-3xl mx-auto space-y-6">
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Maximise the Effectiveness of Your Sustainability Strategy</h2>
+          <p class="text-gray-600 dark:text-gray-300 mb-6">
+            Using our proven frameworks and impact measurement models, we help you design campaigns, communications, and systems that deliver quantifiable sustainability returns.
+          </p>
+          <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
+            <li>🧭 Sustainable strategy mapping</li>
+            <li>📈 ESG & SDG data visualisation</li>
+            <li>⚡ Carbon and energy efficiency audits</li>
+            <li>🔗 Integration with tools like HubSpot, Notion, Google Earth Engine, and Power BI</li>
+          </ul>
+          <CTA text="Discover our frameworks" link="https://www.notion.so/Your-Partner-in-Sustainable-Success-287d6625c679809ca059d90f241263a1?pvs=21" client:load />
+        </div>
+
+        <!-- Teams -->
+        <div class="space-y-12">
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white text-center mb-8">Meet Your Green Orbit Team</h2>
+
+          <div class="grid md:grid-cols-3 gap-12">
+            <div class="text-center">
+              <h3 class="text-xl font-semibold mb-2">Impact Strategy Team</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                Roadmaps and analysis aligning marketing with measurable sustainability outcomes.
+              </p>
+              <ul class="list-disc list-inside text-gray-600 dark:text-gray-300">
+                <li>Sustainability & ESG integration</li>
+                <li>Impact communication planning</li>
+                <li>SDG-aligned performance tracking</li>
+                <li>Systems & process optimisation</li>
+              </ul>
+            </div>
+
+            <div class="text-center">
+              <h3 class="text-xl font-semibold mb-2">Digital Experience Team</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                Transforming complex data and insights into engaging, accessible digital experiences.
+              </p>
+              <ul class="list-disc list-inside text-gray-600 dark:text-gray-300">
+                <li>Web & creative development</li>
+                <li>UX/UI design & storytelling</li>
+                <li>Earth observation data visualisation</li>
+                <li>Workflow automation & integrations</li>
+              </ul>
+            </div>
+
+            <div class="text-center">
+              <h3 class="text-xl font-semibold mb-2">Insights & Reporting Team</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                Turning sustainability data into transparent, audit-ready insights.
+              </p>
+              <ul class="list-disc list-inside text-gray-600 dark:text-gray-300">
+                <li>CO₂ footprint reporting & dashboards</li>
+                <li>Impact & performance analytics</li>
+                <li>ESG benchmarking & external disclosure support</li>
+                <li>Compliance with GHG Protocol & ISO standards</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resources -->
+        <div class="text-center max-w-3xl mx-auto space-y-6">
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white">All-Access Resources, 24/7</h2>
+          <p class="text-gray-600 dark:text-gray-300">
+            Open knowledge drives sustainable change.
+          </p>
+          <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
+            <li>🌍 Learning portal with sustainable marketing courses</li>
+            <li>📘 Best practice guides for ESG & impact communication</li>
+            <li>🎥 Workshops and webinars on digital sustainability</li>
+            <li>🛰️ Templates and toolkits for reporting & workflow automation</li>
+          </ul>
+          <CTA text="Access resources" link="https://www.notion.so/Your-Partner-in-Sustainable-Success-287d6625c679809ca059d90f241263a1?pvs=21" client:load />
+        </div>
+
+        <!-- Partner Testimonials -->
+        <div class="text-center max-w-3xl mx-auto space-y-6">
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Why Our Partners Choose Green Orbit</h2>
+          <blockquote class="italic text-gray-600 dark:text-gray-300">
+            “Green Orbit helped us transform complex Earth observation data into a clear, interactive sustainability story. Our engagement metrics doubled — and so did stakeholder confidence.”  
+            <br />— <strong>TerraNova Group</strong>
+          </blockquote>
+          <blockquote class="italic text-gray-600 dark:text-gray-300">
+            “Their sustainability expertise bridges science, marketing, and impact in a way we’ve never seen before.”  
+            <br />— <strong>Orbital Analytics</strong>
+          </blockquote>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center max-w-3xl mx-auto space-y-6">
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Ready to Become Great at Sustainable Growth?</h2>
+          <p class="text-gray-600 dark:text-gray-300">
+            Whether you’re a space startup, sustainability leader, or creative innovator — we’ll help you scale responsibly and tell your impact story with clarity.
+          </p>
+          <CTA text="Request a demo" link="https://www.notion.so/Your-Partner-in-Sustainable-Success-287d6625c679809ca059d90f241263a1?pvs=21" client:load />
+          <CTA text="Join our next webinar" link="https://www.notion.so/Your-Partner-in-Sustainable-Success-287d6625c679809ca059d90f241263a1?pvs=21" client:load />
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

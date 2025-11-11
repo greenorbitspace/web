@@ -46,18 +46,18 @@ const campaignSchema = baseSchema.extend({
 });
 
 /** 
- * Organisation-specific schema
+ * Organisation-specific schema (updated to match JSON keys)
  */
-const organisationSchema = baseSchema.extend({
-  Organisation: z.string().min(2),
-  Description: z.string().optional(),
-  URL: z.string().url().optional().nullable(),
-  'HubSpot Company ID': z.string().optional(),
-  Industry: z.string().optional(),
-  Category: z.string().optional(),
-  Type: z.enum(['client', 'partner', 'member', 'supplier']).optional(),
-  listing: z.boolean().optional(),
-  entry: z.boolean().optional(),
+const organisationSchema = z.object({
+  organisation: z.string().min(2),
+  slug: z.string().min(2),
+  description: z.string().optional(),
+  url: z.string().url().optional().nullable(),
+  'hubspot-id': z.string().optional(),
+  industry: z.string().optional(),
+  category: z.string().optional(),
+  type: z.enum(['partner', 'client', 'member', 'supplier']).optional(),
+  logo: z.string().optional(),
 });
 
 /** 
@@ -77,7 +77,7 @@ const pledgeSchema = z.object({
   logo: z.string()
     .regex(/^(https?:\/\/|\/)/, { message: 'Logo must be a full URL or start with / for public assets' })
     .optional(),
-  URL: z.string().url().optional().nullable(),
+  url: z.string().url().optional().nullable(),
 });
 
 /** 

@@ -5,7 +5,7 @@ exported_at: '2025-08-07T15:42:30.087627+00:00'
 month: April
 name: World Health Day
 un-resolution: WHA/A.2/Res.35
-url: 
+url: https://www.who.int/campaigns/world-health-day/
 organisations:
 - United Nations
 - World Health Organization

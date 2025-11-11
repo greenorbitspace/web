@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+---
+
+
+<Layout title="Masterclasses">
+  <Header />
+
+  <main class="py-16 w-full container-custom bg-secondary-500 space-y-16">
+    <HeroSection 
+      title="Masterclasses" 
+      description="Choose a plan that fits your mission. All options include a 14-day free trial—no credit card required."
+    />
+
+  </main>
+  <section class="py-16 bg-white dark:bg-secondary-500">
+  </section>
+  <Footer />
+</Layout> 

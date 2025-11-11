@@ -5,7 +5,7 @@ notion_page_id: 217d6625-c679-8171-8132-d3515c0297a9
 exported_at: '2025-07-31T23:19:36.040374+00:00'
 slug: spacecommsalliance
 url: https://greenorbit.space/news/spacecommsalliance/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F03e22885-4b18-4ae9-8181-4f7c61624ad5%2Fsca-web.png/size/w=2000?exp=1755007420&sig=I9ZOMZa64J4sqrMHWN1eoN1joYp7YawDkjN6ueN_DsA&id=87146bb5-a74a-461d-bc6b-0ca8978d6969&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
+featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F03e22885-4b18-4ae9-8181-4f7c61624ad5%2Fsca-web.png/size/w=2000?exp=1762449898&sig=TJtQN63AX_2KC2oeoe6L3pu8i765x2tG__7QVWZWGWA&wasReauthorized=true
 featured: false
 author: Ryan Laird
 tags:

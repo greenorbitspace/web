@@ -3,7 +3,7 @@ title: International Day for the Remembrance of the Slave Trade and Its Abolitio
 month: August
 name: International Day for the Remembrance of the Slave Trade and Its Abolition
 un-resolution: 29 C/Resolution 40
-url: 
+url: https://www.unesco.org/en/days/slave-trade-remembrance
 organisations:
 - United Nations
 - UNESCO

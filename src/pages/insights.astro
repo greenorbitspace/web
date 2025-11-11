@@ -5,6 +5,8 @@ import Footer from '../components/Footer.astro';
 import HeroSection from '../components/HeroSection.astro';
 import InsightsList from '../components/InsightsList.jsx';
 import { getCollection } from 'astro:content';
+import { slug as slugify } from 'github-slugger';
+import organisations from '../data/organisations.json';
 
 // Fetch all collections
 const blogPosts = await getCollection('blog');
@@ -25,22 +27,43 @@ const allInsights = [
 ];
 
 // Sort by published date (latest first)
-// Note: Use `pubdate` or your actual date field consistently
 allInsights.sort(
   (a, b) => new Date(b.data.pubdate ?? 0) - new Date(a.data.pubdate ?? 0)
 );
+
+// Map organisation names to slugs for linking
+const orgSlugMap = {};
+organisations.forEach(org => {
+  orgSlugMap[org.organisation] = org.slug;
+});
+
+// Replace organisation names in insights with objects { name, slug }
+allInsights.forEach((item) => {
+  if (Array.isArray(item.data.organisations)) {
+    item.data.organisations = item.data.organisations.map((name) => ({
+      name,
+      slug: orgSlugMap[name] || slugify(name)
+    }));
+  }
+});
 ---
 
 <Layout title="Insights" description="Explore the latest blogs, news, and resources.">
   <Header />
 
-  <main class="py-12 max-w-6xl mx-auto px-4">
-    <HeroSection 
-      title="Insights" 
-      description="Explore articles, news, and knowledge resources from across our platform." 
-    />
+  <main class="py-16 w-full container-custom bg-secondary-500 space-y-16">
+    <!-- Hero section -->
+    <div class="max-w-6xl mx-auto px-4">
+      <HeroSection 
+        title="Insights" 
+        description="Explore articles, news, and knowledge resources from across our platform." 
+      />
+    </div>
 
-    <InsightsList client:load posts={allInsights} />
+    <!-- Insights list full width with some horizontal padding -->
+    <div class="w-full px-4 md:px-8 lg:px-12">
+      <InsightsList client:load posts={allInsights} />
+    </div>
   </main>
 
   <Footer />

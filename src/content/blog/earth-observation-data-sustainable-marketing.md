@@ -5,6 +5,7 @@ notion_page_id: 217d6625-c679-81b1-846c-dde79b124e8b
 exported_at: '2025-07-31T23:19:45.258211+00:00'
 slug: earth-observation-data-sustainable-marketing
 url: https://greenorbit.space/blog/earth-observation-data-sustainable-marketing/
+featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2Ffae3ed03-c2a7-4518-856f-41eed8b7211b%2FNEOC-2024-Save-the-date-image-2048x853-1-1536x640.jpeg/size/w=2000?exp=1762858289&sig=0zQTmHJPWLfQKAGbuG_KUbnstQRpVB7HyN8sGLXVB_o&wasReauthorized=true
 featured: false
 author: Ryan Laird
 tags:

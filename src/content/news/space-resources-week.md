@@ -4,7 +4,7 @@ notion_page_id: 217d6625-c679-8166-a416-ecc49eff6390
 exported_at: '2025-07-31T23:19:28.054278+00:00'
 slug: space-resources-week
 url: https://greenorbit.space/news/space-resources-week/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2Fc7ffc3ea-850c-4c7e-a083-9edc7056c542%2Fgeneral_visual_OceanHack4EU.png/size/w=2000?exp=1755005197&sig=Iy-24i9xRBZRPJgwzrC7ADaTVpMBGCMZj0_qP9bLGdM&id=338c92b2-c6e7-48cc-b8f6-5d4a267fd3bc&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
+featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2Fad4effbe-962a-47d4-bc93-259ebdf00ff0%2Fthumb-xxhdpi-1866218780.png/size/w=2000?exp=1762517133&sig=BUqo5uTuBWuIqu4w7aJ_4HctFssgEyS3lFassLIOIFw&id=217d6625-c679-8176-a337-d65a04c0b41c&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
 featured: false
 author: Ryan Laird
 tags:
@@ -14,7 +14,7 @@ categories:
 - news
 organisations:
   - Luxembourg Space Agency
-  - European Space Resources Innovation Centre
+  - ESRIC
 SDGs:
   - 9
   - 12

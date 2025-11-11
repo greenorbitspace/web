@@ -1,0 +1,98 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.astro';
+import CTA from '../components/CTA.jsx';
+---
+
+<Layout
+  title="Security & Trust | Green Orbit Digital"
+  description="Protecting your data and privacy is our priority. Discover how Green Orbit Digital combines best-in-class tools and practices to ensure security, compliance, and peace of mind."
+>
+  <Header />
+
+  <main class="py-8">
+    <HeroSection
+      title="Security & Trust"
+      description="Your data is safe with us. Green Orbit Digital uses advanced tools, rigorous processes, and transparent practices to protect your business and privacy."
+    />
+
+    <section class="py-16 bg-secondary-500 text-white">
+      <div class="container-custom space-y-24">
+
+        <!-- Our Security Philosophy -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl font-bold mb-4">Our Security Philosophy</h2>
+            <p class="mb-6">
+              Security is not an afterthought — it’s embedded in everything we do. From client communications to campaign data and analytics, we prioritise confidentiality, integrity, and availability.
+            </p>
+            <ul class="list-disc list-inside mb-6">
+              <li>Data privacy and GDPR compliance at all stages</li>
+              <li>End-to-end encryption for sensitive communications</li>
+              <li>Regular audits and vulnerability assessments</li>
+            </ul>
+            <CTA text="Learn About Our Security Approach" link="/contact" client:load />
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/security/security-philosophy.jpeg" alt="Security philosophy illustration" class="w-full h-auto" />
+          </div>
+        </div>
+
+        <!-- Tools We Use -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1 rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/security/tools.jpeg" alt="Security tools illustration" class="w-full h-auto" />
+          </div>
+          <div class="order-1 md:order-2">
+            <h2 class="text-3xl font-bold mb-4">Tools We Use</h2>
+            <p class="mb-6">
+              Our technology stack is carefully selected to maximise security, transparency, and control. These tools enable safe collaboration and seamless client engagement.
+            </p>
+            <ul class="list-disc list-inside mb-6">
+              <li><strong>Proton Drive & Proton Mail:</strong> End-to-end encrypted cloud storage and communications</li>
+              <li><strong>Notion:</strong> Secure project collaboration with granular access controls</li>
+              <li><strong>Stripe:</strong> PCI-compliant payments and subscription management</li>
+              <li><strong>Two-factor authentication (2FA):</strong> Enforced across all accounts for added protection</li>
+              <li><strong>Regular backups:</strong> Encrypted, off-site storage for critical data</li>
+            </ul>
+            <CTA text="Talk About Security" link="/contact" client:load />
+          </div>
+        </div>
+
+        <!-- Compliance & Standards -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl font-bold mb-4">Compliance & Standards</h2>
+            <p class="mb-6">
+              Our processes align with industry best practices and legal standards to ensure your organisation remains compliant and secure.
+            </p>
+            <ul class="list-disc list-inside mb-6">
+              <li>GDPR-compliant data handling</li>
+              <li>ISO 27001-informed internal controls</li>
+              <li>Regular risk assessments and mitigation plans</li>
+              <li>Secure handling of client and partner documentation</li>
+            </ul>
+            <CTA text="Understand Our Compliance" link="/contact" client:load />
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/security/compliance.jpeg" alt="Compliance and standards illustration" class="w-full h-auto" />
+          </div>
+        </div>
+
+        <!-- Peace of Mind Section -->
+        <div class="text-center max-w-3xl mx-auto space-y-6">
+          <h2 class="text-3xl font-bold">Peace of Mind for Your Business</h2>
+          <p>
+            With Green Orbit Digital, your data and privacy are never a compromise. Our combination of tools, expertise, and best-practice processes gives you confidence to focus on growth, sustainability, and impact.
+          </p>
+          <CTA text="Schedule a Security Consultation" link="/contact" client:load />
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

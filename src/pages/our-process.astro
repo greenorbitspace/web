@@ -1,0 +1,147 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.astro';
+import CTA from '../components/CTA.jsx';
+---
+
+<Layout 
+  title="Our Process | Green Orbit Digital" 
+  description="Discover the practical steps Green Orbit Digital takes to deliver sustainable, measurable marketing impact for space organisations.">
+  <Header />
+
+  <main class="py-8">
+    <HeroSection 
+      title="Our Process"
+      description="A clear, step-by-step roadmap for how we collaborate with clients to deliver impactful, sustainable marketing outcomes."
+    />
+
+    <section class="py-16 bg-white dark:bg-secondary-500">
+      <div class="container-custom space-y-24">
+
+        <!-- PHASE 1: DISCOVER -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+              Phase 1: Discover
+            </span>
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Understanding Your Mission</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+              We start by learning your organisation’s goals, sustainability priorities, and marketing challenges. This ensures every strategy we recommend is relevant and actionable.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
+              <li>Stakeholder interviews and briefings</li>
+              <li>Audit of current digital presence and communications</li>
+              <li>Gap analysis and opportunity identification</li>
+              <li>Defining KPIs and success metrics</li>
+            </ul>
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/process/discover.jpeg" alt="Discover phase illustration" class="w-full h-auto" />
+          </div>
+        </div>
+
+        <!-- PHASE 2: STRATEGISE -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1 rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/process/strategise.jpeg" alt="Strategise phase illustration" class="w-full h-auto" />
+          </div>
+          <div class="order-1 md:order-2">
+            <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+              Phase 2: Strategise
+            </span>
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Tailored Marketing Roadmaps</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+              We design a data-led strategy that aligns sustainability with measurable marketing outcomes. Each roadmap is customised to your objectives, resources, and timelines.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
+              <li>Content strategy and SEO planning</li>
+              <li>Social and email campaign mapping</li>
+              <li>Brand positioning and messaging framework</li>
+              <li>Impact metrics and reporting setup</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- PHASE 3: CREATE -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+              Phase 3: Create
+            </span>
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Execution with Purpose</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+              Our team develops and implements campaigns, content, and communications that resonate with your audience and reflect your sustainability ambitions.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
+              <li>Content creation: blogs, whitepapers, visuals, and media</li>
+              <li>Campaign execution: social, email, and digital channels</li>
+              <li>Community and stakeholder engagement</li>
+              <li>Quality control and brand consistency checks</li>
+            </ul>
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/process/create.jpeg" alt="Create phase illustration" class="w-full h-auto" />
+          </div>
+        </div>
+
+        <!-- PHASE 4: MEASURE -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1 rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/process/measure.jpeg" alt="Measure phase illustration" class="w-full h-auto" />
+          </div>
+          <div class="order-1 md:order-2">
+            <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+              Phase 4: Measure
+            </span>
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Track, Analyse, Optimise</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+              We provide transparent measurement and reporting to ensure every campaign delivers value. Insights inform continuous optimisation for future initiatives.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
+              <li>Performance dashboards linked to KPIs and SDGs</li>
+              <li>Impact reporting and sustainability tracking</li>
+              <li>Insights and recommendations for optimisation</li>
+              <li>Client review sessions and feedback loops</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- PHASE 5: SCALE -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+              Phase 5: Scale
+            </span>
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Grow with Confidence</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+              We help you expand successful campaigns and scale your sustainability communications, ensuring long-term impact and measurable growth.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
+              <li>Expansion of campaigns to new channels and audiences</li>
+              <li>Integration with broader sustainability initiatives</li>
+              <li>Continuous improvement and iterative planning</li>
+              <li>Ongoing retainer or Flexi Support engagement</li>
+            </ul>
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/process/scale.jpeg" alt="Scale phase illustration" class="w-full h-auto" />
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center">
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Ready to Get Started?</h2>
+          <p class="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+            Let’s work together to design a marketing strategy that delivers measurable sustainability impact and lasting growth.
+          </p>
+          <CTA text="Book a Discovery Call" link="/contact" client:load />
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

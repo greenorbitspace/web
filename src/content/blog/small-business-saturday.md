@@ -4,6 +4,7 @@ notion_page_id: 217d6625-c679-81bd-ad5c-c9dc5d225941
 exported_at: '2025-07-31T23:19:47.918246+00:00'
 slug: small-business-saturday
 url: https://greenorbit.space/blog/small-business-saturday/
+featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F917f61fc-a6ed-4bbd-9ca9-de06cc86b914%2FSupport-Small-Biz-Basket-Landscape.jpg/size/w=2000?exp=1762856825&sig=iLqgvd1u9c51sEcKtuk7mXfacjCnuHloP9tFjjBArnc&id=217d6625-c679-8134-915c-fa098c002aa3&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
 featured: false
 author: Ryan Laird
 tags:
@@ -12,7 +13,7 @@ pubdate: '2024-12-07T21:06:00.000+00:00'
 categories:
 - blog
 organisations:
-  - Small Business Saturday
+  - Small Business Britain
 SDGs:
   - 8
   - 9

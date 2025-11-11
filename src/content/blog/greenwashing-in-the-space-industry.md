@@ -4,6 +4,7 @@ notion_page_id: 217d6625-c679-816c-96b3-c0b93497a40c
 exported_at: '2025-07-31T23:19:27.340787+00:00'
 slug: greenwashing-in-the-space-industry
 url: https://greenorbit.space/blog/greenwashing-in-the-space-industry/
+featuredImage: https://images.unsplash.com/photo-1569310408826-6a8badde8a6b?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=6000
 featured: false
 author: Ryan Laird
 tags:

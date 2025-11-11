@@ -4,6 +4,7 @@ notion_page_id: 217d6625-c679-81f2-b9d6-f277bc118aca
 exported_at: '2025-07-31T23:19:49.559650+00:00'
 slug: 2024-in-review
 url: https://greenorbit.space/blog/2024-in-review/
+featuredImage: https://images.unsplash.com/photo-1708738793054-32b71e3fc822?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=6000
 featured: false
 author: Ryan Laird
 tags:

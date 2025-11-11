@@ -1,0 +1,102 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTA from '../../components/CTA.jsx';
+
+const pageTitle = "Content Creation | Green Orbit Digital";
+const pageDescription = "Create science-informed, SEO-optimised, and sustainability-conscious content that drives engagement and aligns with your mission.";
+const pageURL = "https://greenorbit.space/services/content-creation";
+const pageImage = "/images/services/content.png"; // Replace with your hero image
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={pageURL}>
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="relative w-full h-[500px] sm:h-[600px] lg:h-[700px] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center" style={`background-image: url(${pageImage});`} aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-black/50" aria-hidden="true"></div>
+    <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl space-y-6">
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white drop-shadow-lg">Content Creation</h1>
+      <p class="text-2xl sm:text-3xl text-gray-200 drop-shadow">Content That Informs, Inspires, and Converts</p>
+      <p class="text-gray-200 max-w-3xl mx-auto">We craft science-informed, search-optimised, and sustainability-conscious content — from website copy and whitepapers to email campaigns and landing pages.</p>
+    </div>
+  </section>
+
+  <main class="py-16 w-full container-custom bg-secondary-500 space-y-16">
+
+    <!-- What is Content Creation -->
+    <section class="space-y-4">
+      <h2 class="text-3xl font-bold text-accent-500">What is Sustainable Content Creation?</h2>
+      <p class="text-gray-700 dark:text-gray-300">Content creation is the process of producing valuable, relevant, and mission-aligned materials that engage your audience, improve discoverability, and communicate your sustainability commitments. Our approach ensures all content supports your brand, optimises digital performance, and minimises environmental impact.</p>
+    </section>
+
+    <!-- Step-by-Step Content Creation Process -->
+    <section class="space-y-8">
+      <h2 class="text-3xl font-bold text-accent-500">Our Content Creation Process</h2>
+      <ol class="list-decimal pl-5 space-y-4 text-gray-700 dark:text-gray-300">
+        <li>
+          <strong>Discovery & Strategy:</strong> Understand your brand, audience, and sustainability goals to define content objectives.
+        </li>
+        <li>
+          <strong>Content Planning & SEO Research:</strong> Identify topics, keywords, and formats that align with your business and carbon-conscious priorities.
+        </li>
+        <li>
+          <strong>Content Production:</strong> Develop written, visual, and multimedia content — optimised for accessibility, SEO, and low-carbon web practices.
+        </li>
+        <li>
+          <strong>Review & Feedback:</strong> Iterative refinement with your team to ensure brand alignment and accuracy.
+        </li>
+        <li>
+          <strong>Distribution & Tracking:</strong> Deploy content across channels and measure engagement, conversions, and environmental impact.
+        </li>
+      </ol>
+    </section>
+
+    <!-- Types of Content -->
+    <section class="space-y-8">
+      <h2 class="text-3xl font-bold text-accent-500">Content Types We Produce</h2>
+
+      <!-- Low-Carbon Web Copy -->
+      <div class="border border-accent-500 rounded-lg p-6 hover:shadow-xl transition bg-white dark:bg-gray-800/40">
+        <h3 class="text-2xl font-semibold mb-4 text-accent-500">Low-Carbon Web Copywriting</h3>
+        <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-1">
+          <li>Mission-aligned website copy that communicates your sustainability impact</li>
+          <li>Optimised for SEO, accessibility, and minimal digital emissions</li>
+          <li>Landing pages, product descriptions, and evergreen content</li>
+        </ul>
+      </div>
+
+      <!-- Campaign Content -->
+      <div class="border border-accent-500 rounded-lg p-6 hover:shadow-xl transition bg-white dark:bg-gray-800/40">
+        <h3 class="text-2xl font-semibold mb-4 text-accent-500">Campaign & Marketing Content</h3>
+        <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-1">
+          <li>Email nurture sequences, newsletters, and drip campaigns</li>
+          <li>Social media posts and micro-content for sustainability messaging</li>
+          <li>Performance-focused assets aligned with strategic objectives</li>
+        </ul>
+      </div>
+
+      <!-- Long-Form & Thought Leadership -->
+      <div class="border border-accent-500 rounded-lg p-6 hover:shadow-xl transition bg-white dark:bg-gray-800/40">
+        <h3 class="text-2xl font-semibold mb-4 text-accent-500">Whitepapers, Reports & Thought Leadership</h3>
+        <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-1">
+          <li>Science-informed whitepapers, case studies, and reports</li>
+          <li>Thought leadership articles for sector publications</li>
+          <li>Content aligned with ESG and SDG frameworks for impact storytelling</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Request Content Creation CTA -->
+    <section class="text-center max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold text-accent-500 mb-4">Plan Your Content</h2>
+      <p class="text-gray-700 dark:text-gray-300 mb-6">Let’s create content that informs, engages, and inspires action while staying aligned with sustainable practices and your mission.</p>
+      <CTA text="Explore Content Services" link="/service-catalogue#content-creation" client:load />
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
