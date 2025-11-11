@@ -1,61 +1,46 @@
 ---
 import '../styles/global.css';
 import '../styles/transitions.css';
-import GlobalSchema from '../components/Schema/GlobalSchema.astro';
+import { getGlobalSchema } from '../components/Schema/GlobalSchema';
 import Seo from '../components/Seo.astro';
 import Analytics from '../components/Analytics.astro';
 import CookieBanner from '../components/CookieBanner.astro';
 
-// Props interface for type safety
 export interface Props {
   title: string;
   description?: string;
   ogImage?: string;
   canonical?: string;
-  twitter?: {
-    title?: string;
-    description?: string;
-    image?: string;
-  };
-  schema?: Record<string, any>;
+  twitter?: { title?: string; description?: string; image?: string };
+  schema?: Record<string, any> | Record<string, any>[];
 }
 
-// Destructure incoming props
 const { title, description, ogImage, canonical, twitter, schema } = Astro.props;
+
+// Merge global schema with page-specific schema
+const mergedSchema = [...getGlobalSchema()];
+if (schema) {
+  if (Array.isArray(schema)) {
+    mergedSchema.push(...schema);
+  } else {
+    mergedSchema.push(schema);
+  }
+}
 ---
 
 <!DOCTYPE html>
-<html 
-  lang="en" 
-  class="scroll-smooth" 
-  x-data="{ 
-    darkMode: localStorage.theme === 'dark' || 
-              (!localStorage.theme && window.matchMedia('(prefers-color-scheme: dark)').matches) 
-  }"
-  x-bind:class="{ 'dark': darkMode }"
->
+<html lang="en" class="scroll-smooth" x-data="{ darkMode: localStorage.theme === 'dark' || (!localStorage.theme && window.matchMedia('(prefers-color-scheme: dark)').matches) }" x-bind:class="{ 'dark': darkMode }">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- SEO meta tags -->
-    <Seo 
-      title={title} 
-      description={description} 
-      ogImage={ogImage} 
-      canonical={canonical} 
-      twitter={twitter} 
-    />
+    <Seo title={title} description={description} ogImage={ogImage} canonical={canonical} twitter={twitter} />
 
-    <!-- Optional page-specific schema -->
-    {schema && (
-      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
-    )}
+    <!-- JSON-LD schema -->
+    <script type="application/ld+json" set:html={JSON.stringify(mergedSchema)} />
 
-    <!-- Inject additional head elements -->
     {Astro.head}
 
-    <!-- Analytics tracking (client-side only) -->
     <Analytics
       gtmId={import.meta.env.PUBLIC_GTM_ID}
       ga4Id={import.meta.env.PUBLIC_GA4_ID}
@@ -66,26 +51,14 @@ const { title, description, ogImage, canonical, twitter, schema } = Astro.props;
       ticketTailorTracking={import.meta.env.PUBLIC_TICKET_TAILOR}
     />
 
-    <!-- Alpine.js (stable pinned version) -->
-    <script 
-      type="module" 
-      src="https://unpkg.com/alpinejs@3.14.2/dist/cdn.min.js" 
-      defer
-    ></script>
+    <script type="module" src="https://unpkg.com/alpinejs@3.14.2/dist/cdn.min.js" defer></script>
   </head>
 
-  <body 
-    class="antialiased bg-white dark:bg-primary-500 text-secondary-900 dark:text-secondary-100 transition-colors duration-300"
-  >
-    <!-- Main content -->
+  <body class="antialiased bg-white dark:bg-primary-500 text-secondary-900 dark:text-secondary-100 transition-colors duration-300">
     <main id="page-wrapper" class="page-wrapper" role="main" tabindex="-1">
       <slot />
     </main>
 
-    <!-- Global structured data / JSON-LD -->
-    <GlobalSchema />
-
-    <!-- Cookie consent banner -->
     <CookieBanner />
   </body>
 </html>
