@@ -6,7 +6,8 @@ import HeroSection from '../../components/HeroSection.astro';
 import EventDescription from '../../components/EventDescription.jsx';
 import events from '../../data/events.json';
 import slugify from '../../utils/slugify.js';
-import { SDGs } from '../../data/sdgs'; // SDG metadata including id, name, icon
+import { SDGs } from '../../data/sdgs';
+import { getEventSchema } from '../../components/Schema/EventSchema.ts';
 
 const fallbackIcon = '/sdgs/default.svg';
 
@@ -29,7 +30,7 @@ const { slug } = Astro.params;
 const event = events.find(e => (e.slug || slugify(e.title)) === slug);
 if (!event) throw new Error(`No event found with slug: ${slug}`);
 
-// Format date helper
+// Helper to format dates
 function formatDate(dateStr) {
   if (!dateStr) return null;
   const date = new Date(dateStr);
@@ -52,7 +53,7 @@ const normalizedEvent = {
   url: event.url || '',
   image: event.image || event.image_url || '',
   calendar_links: event.calendar_links || [],
-  sdgs: event.sdgs || [], // SDG IDs
+  sdgs: event.sdgs || [],
 };
 
 // Previous / next events
@@ -63,9 +64,14 @@ const nextEvent = events[eventIndex + 1] || null;
 function getEventSlug(e) {
   return e.slug || slugify(e.title);
 }
+
+// JSON-LD schema for this event
+const eventSchemaData = getEventSchema().find(
+  e => e.name === normalizedEvent.title
+);
 ---
 
-<Layout title={normalizedEvent.title}>
+<Layout title={normalizedEvent.title} schema={eventSchemaData ? [eventSchemaData] : undefined}>
   <Header />
 
   <main class="py-12 max-w-4xl mx-auto px-4 space-y-8">
@@ -80,7 +86,7 @@ function getEventSlug(e) {
       }
     />
 
-    <!-- Image -->
+    <!-- Event Image -->
     {normalizedEvent.image && (
       <img
         src={normalizedEvent.image}
@@ -160,17 +166,17 @@ function getEventSlug(e) {
       )}
     </section>
 
-    <!-- Meta -->
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-primary-500 border border-accent-500 p-6 rounded text-white">
-      {normalizedEvent.organizer && (
+    <!-- Organizer -->
+    {normalizedEvent.organizer && (
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-primary-500 border border-accent-500 p-6 rounded text-white">
         <p>
           <strong>Organiser:</strong> {normalizedEvent.organizer}
           {normalizedEvent.organizer_url && (
             <> — <a href={normalizedEvent.organizer_url} target="_blank" rel="noopener noreferrer" class="underline hover:text-accent-200">Website</a></>
           )}
         </p>
-      )}
-    </section>
+      </section>
+    )}
 
     <!-- Venue -->
     {normalizedEvent.location && (

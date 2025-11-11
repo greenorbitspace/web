@@ -98,7 +98,6 @@ export default function FAQSearch() {
 
   return (
     <div className="max-w-3xl mx-auto p-8 md:p-12 dark:bg-secondary-500 rounded-md text-white">
-      <h1 className="text-3xl font-bold mb-6">Frequently Asked Questions</h1>
 
       <div className="mb-8">
         <input

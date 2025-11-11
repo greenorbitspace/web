@@ -7,15 +7,9 @@
   },
   {
     "@type": "Brand",
-    "name": "Green Orbit Earth",
-    "description": "Resources and training focused on environmental responsibility within the space sector.",
-    "url": "https://greenorbit.earth"
-  },
-  {
-    "@type": "Brand",
-    "name": "Green Orbit Live",
-    "description": "Live events, webinars, and interactive sessions for space marketing professionals.",
-    "url": "https://greenorbit.live"
+    "name": "Space for Neurodiversity",
+    "description": "Space for Neurodiversity is a supportive initiative dedicated to creating inclusive environments for neurodivergent individuals in education, work, and community. We provide resources, advocacy, and collaborative opportunities to celebrate diverse ways of thinking and enable everyone to thrive.",
+    "url": "https://spaceforneurodiversity.org"
   },
   {
     "@type": "Brand",
