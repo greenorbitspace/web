@@ -1,114 +1,68 @@
 ---
-import organisations from "../../data/organisations.json";
-import brands from "../../data/schema/brands.json";
-import socials from "../../data/schema/socials.json";
-import contact from "../../data/schema/contact.json";
-import founders from "../../data/schema/founders.json";
-import areas from "../../data/schema/areas.json";
-import knowledge from "../../data/schema/knowledge.json";
-import profiles from "../../data/schema/profiles.json";
-import services from "../../data/schema/services.json";
-import webpages from "../../data/schema/webpages.json";
-import blog from "../../data/schema/blog.json";
+import '../styles/global.css';
+import '../styles/transitions.css';
+import { getGlobalSchema } from '../components/Schema/GlobalSchema.astro';
+import Seo from '../components/Seo.astro';
+import Analytics from '../components/Analytics.astro';
+import CookieBanner from '../components/CookieBanner.astro';
 
-// --- Safe JSON defaults ---
-const safeFounders = founders || [];
-const safeContact = contact || {};
-const safeAreas = areas || [];
-const safeKnowledge = knowledge || [];
-const safeBrands = brands || [];
-const safeServices = services || [];
-const safeWebpages = webpages || [];
-const safeBlog = blog || [];
+export interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+  canonical?: string;
+  twitter?: {
+    title?: string;
+    description?: string;
+    image?: string;
+  };
+  schema?: Record<string, any>;
+}
 
-// --- Filter member or partner organisations ---
-const memberOrgs = organisations
-  .filter(org => ["member", "partner"].includes(org.Type))
-  .map(org => ({
-    "@type": "Organization",
-    name: org.Organisation,
-    url: org.URL,
-    description: org.Description || undefined,
-    logo: org.logo || undefined
-  }));
+const { title, description, ogImage, canonical, twitter, schema } = Astro.props;
 
-// --- Flatten profiles and build unique sameAs links ---
-const flattenedProfiles = Object.values(profiles.profiles || {}).flat();
-const sameAsLinks = Array.from(
-  new Set([
-    ...socials.map(s => s?.url).filter(Boolean),
-    ...flattenedProfiles.map(p => p?.url).filter(Boolean)
-  ])
-);
-
-// --- Build Organization schema ---
-const orgSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://greenorbit.space/#organization",
-  name: "Green Orbit Digital",
-  alternateName: "Green Orbit",
-  url: "https://greenorbit.space",
-  logo: "https://greenorbit.space/images/logo.png",
-  foundingDate: "2023-10-12",
-  legalName: "Green Orbit Digital Ltd",
-  description: "Green Orbit Digital is a Leicester-based agency specialising in sustainable marketing for the space sector. We help space organisations grow through strategic SEO, content, PR, and digital sustainability practices.",
-  slogan: "Sustainable marketing for the space sector.",
-  keywords: [
-    "sustainable marketing",
-    "space sector marketing",
-    "digital sustainability",
-    "ethical marketing",
-    "B2B SEO",
-    "ESG strategy",
-    "HubSpot CRM",
-    "GA4",
-    "content marketing",
-    "space industry branding"
-  ],
-  founder: safeFounders.length ? safeFounders : undefined,
-  contactPoint: safeContact.contactPoint?.length ? safeContact.contactPoint : undefined,
-  address: Object.keys(safeContact.address || {}).length ? safeContact.address : undefined,
-  geo: Object.keys(safeContact.geo || {}).length ? safeContact.geo : undefined,
-  sameAs: sameAsLinks.length ? sameAsLinks : undefined,
-  areaServed: safeAreas.length ? safeAreas : undefined,
-  memberOf: memberOrgs.length ? memberOrgs : undefined,
-  knowsAbout: safeKnowledge.length ? safeKnowledge : undefined,
-  brand: safeBrands.length ? safeBrands : undefined,
-  awards: [
-    "Shortlisted: Best Sustainable Campaign – UK Space Marketing Awards 2024",
-    "Nominee: Ethical Digital Agency of the Year – Tech for Good Awards 2023"
-  ],
-  hasCredential: [
-    {
-      "@type": "EducationalOccupationalCredential",
-      name: "B Corp Pending",
-      credentialCategory: "Sustainability",
-      url: "https://www.bcorporation.net/"
-    }
-  ],
-  makesOffer: safeServices.length ? safeServices : undefined,
-  hasPart: safeWebpages.length ? safeWebpages : undefined,
-  publishes: safeBlog.length ? safeBlog : undefined,
-  publishingPrinciples: "https://greenorbit.space/",
-  isAccessibleForFree: true,
-  hasPOS: {
-    "@type": "Place",
-    name: "Green Orbit Digital HQ",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Leicester",
-      addressCountry: "GB"
-    }
-  },
-  interactionStatistic: {
-    "@type": "InteractionCounter",
-    interactionType: "https://schema.org/SubscribeAction",
-    userInteractionCount: 2500
+// Merge global schema with page-specific schema (if provided)
+const mergedSchema = [...getGlobalSchema()];
+if (schema) {
+  if (Array.isArray(schema)) {
+    mergedSchema.push(...schema);
+  } else {
+    mergedSchema.push(schema);
   }
-};
+}
 ---
 
-<script type="application/ld+json" is:inline>
-{JSON.stringify(orgSchema)}
-</script>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" x-data="{ darkMode: localStorage.theme === 'dark' || (!localStorage.theme && window.matchMedia('(prefers-color-scheme: dark)').matches) }" x-bind:class="{ 'dark': darkMode }">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <Seo title={title} description={description} ogImage={ogImage} canonical={canonical} twitter={twitter} />
+
+    <!-- Inject merged schema -->
+    <script type="application/ld+json" set:html={JSON.stringify(mergedSchema)} />
+
+    {Astro.head}
+
+    <Analytics
+      gtmId={import.meta.env.PUBLIC_GTM_ID}
+      ga4Id={import.meta.env.PUBLIC_GA4_ID}
+      hubspotId={import.meta.env.PUBLIC_HUBSPOT_ID}
+      hotjarId={import.meta.env.PUBLIC_HOTJAR_ID}
+      hotjarVersion={import.meta.env.PUBLIC_HOTJAR_VERSION}
+      brevoSiteId={import.meta.env.PUBLIC_BREVO_SITE_ID}
+      ticketTailorTracking={import.meta.env.PUBLIC_TICKET_TAILOR}
+    />
+
+    <script type="module" src="https://unpkg.com/alpinejs@3.14.2/dist/cdn.min.js" defer></script>
+  </head>
+
+  <body class="antialiased bg-white dark:bg-primary-500 text-secondary-900 dark:text-secondary-100 transition-colors duration-300">
+    <main id="page-wrapper" class="page-wrapper" role="main" tabindex="-1">
+      <slot />
+    </main>
+
+    <CookieBanner />
+  </body>
+</html>

@@ -1,6 +1,4 @@
 ---
-// src/components/Seo.astro
-
 export interface Props {
   title: string;
   description?: string;
@@ -13,38 +11,50 @@ export interface Props {
   };
 }
 
+// Site-wide defaults
+const defaultMeta = {
+  title: "Green Orbit Digital – Sustainable Marketing for the Space Sector",
+  description: "A Leicester-based digital agency helping space organisations achieve sustainable growth through strategic SEO, content, PR, and digital sustainability practices.",
+  ogImage: "https://greenorbit.space/images/og-image.jpg",
+  url: "https://greenorbit.space"
+};
+
 const {
-  title,
-  description = "Where Sustainability Meets Innovation for and Beyond Earth.",
-  ogImage = "/og-default.png",
-  canonical = "https://greenorbit.space",
+  title = defaultMeta.title,
+  description = defaultMeta.description,
+  ogImage = defaultMeta.ogImage,
+  canonical = defaultMeta.url,
   twitter = {}
 } = Astro.props;
 
-const siteName = "Green Orbit Digital";
-const fullTitle = title ? `${title} | ${siteName}` : siteName;
+const twitterTitle = twitter.title || title;
+const twitterDescription = twitter.description || description;
+const twitterImage = twitter.image || ogImage;
 ---
 
-<!-- Browser Tab Title -->
-<title>{fullTitle}</title>
-
-<!-- Standard Meta -->
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Primary SEO -->
+<title>{title}</title>
 <meta name="description" content={description} />
-<meta name="theme-color" content="#ffffff" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="keywords" content="sustainable marketing, space sector, ESG, B2B SEO, content marketing, digital sustainability" />
+
+<!-- Canonical -->
 <link rel="canonical" href={canonical} />
 
 <!-- OpenGraph -->
-<meta property="og:type" content="website" />
-<meta property="og:title" content={fullTitle} />
+<meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={ogImage} />
+<meta property="og:type" content="website" />
 <meta property="og:url" content={canonical} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:site_name" content="Green Orbit Digital" />
 
-<!-- Twitter Cards -->
+<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content={twitter.title ?? fullTitle} />
-<meta name="twitter:description" content={twitter.description ?? description} />
-<meta name="twitter:image" content={twitter.image ?? ogImage} />
+<meta name="twitter:title" content={twitterTitle} />
+<meta name="twitter:description" content={twitterDescription} />
+<meta name="twitter:image" content={twitterImage} />
+
+<!-- Optional sustainability / green signals -->
+<meta name="theme-color" content="#003366" />
+<meta name="sustainable-web-design" content="Optimised for low carbon footprint and hosted on green infrastructure." />
+<meta name="author" content="Green Orbit Digital" />
