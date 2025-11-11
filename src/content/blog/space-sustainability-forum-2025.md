@@ -13,12 +13,10 @@ categories:
 organisations:
   - International Telecommunications Union
 SDGs:
-  - 3
-  - 7
+  - 4
   - 9
-  - 11
   - 12
-  - 15
+  - 16
   - 17
 name: 'Communicating the Future: The Essential Role of Dialogue in Sustainable Space Operations at the Space Sustainability Forum 2025'
 excerpt: "The Space Sustainability Forum 2025 explored the vital role of communication in promoting responsible space operations. Discover how effective storytelling and strategic messaging enhance sustainability initiatives, from satellite management to lunar exploration, ensuring global engagement and support."

@@ -13,6 +13,8 @@ categories:
 organisations:
   - Small Business Britain
 SDGs:
+  - 8
+  - 9
   - 13
 name: 'How Green Orbit Digital Turned Sustainability Into Growth: Insights from the 2025 Green Growth Programme'
 excerpt: "Sustainability is now a strategic imperative for businesses. At Green Orbit Digital, participation in the 2025 Green Growth Programme equipped us with the knowledge and tools to leverage sustainability for financial performance and operational efficiency. The programme emphasized the business case for sustainability, highlighting quick wins for SMEs, the role of AI and digital tools, and the importance of authentic marketing. By integrating these insights, we help clients communicate their sustainability efforts effectively, access funding, and plan for long-term impact, transforming sustainability into a growth opportunity."

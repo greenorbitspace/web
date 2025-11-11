@@ -2,12 +2,13 @@
 title: 'A Better Business Is a Better World: How Sustainability Drives Growth'
 slug: better-business-better-world
 url: https://greenorbit.space/blog/better-business-better-world/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2Facdca6e7-48ac-4b46-aed4-ae5b4470bb40%2Fearth.jpg/size/w=2000?exp=1762449578&sig=h6x797ExD5n1_oz02JHEO3O1Sk2dIHug70XCxuFsJNY&wasReauthorized=true
+featuredImage: https://greenorbit.space/images/events/GIS-Day-2025-3455364332.jpg
 featured: false
 author: Ryan Laird
-pubdate: '2025-11-05T19:26:00.000+00:00'
+pubdate: '2025-11-19T19:26:00.000+00:00'
 tags:
   - space sustainability
+  - GIS Day 2025
 categories:
   - blog
 organisations:

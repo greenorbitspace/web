@@ -11,7 +11,8 @@ tags:
 categories:
   - blog
 organisations:
-  - International Telecommunications Union
+  - United Nations
+  - Leicester City Council
 SDGs:
   - 3
   - 7

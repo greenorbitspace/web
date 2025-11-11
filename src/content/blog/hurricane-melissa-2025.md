@@ -13,12 +13,12 @@ categories:
 organisations:
   - UN-SPIDER
 SDGs:
+  - 1
   - 3
-  - 7
   - 9
   - 11
-  - 12
   - 15
+  - 16
   - 17
 name: 'Celebrating International Dark Sky Week: Embracing Dark and Quiet Skies'
 excerpt: "International Dark Sky Week is a global celebration of the dark and natural night—a time to appreciate the beauty and importance of our unadulterated skies. In a world where artificial light pervades every corner of our existence, the natural darkness of night often goes unnoticed, misunderstood, or even feared."

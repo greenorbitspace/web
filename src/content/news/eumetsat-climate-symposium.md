@@ -13,11 +13,10 @@ categories:
 organisations:
   - EUMETSAT
 SDGs:
-  - 3
-  - 7
   - 9
   - 11
-  - 12
+  - 13
+  - 14
   - 15
   - 17
 name: 'Co-Creation in Action: Reflections from the 2025 EUMETSAT Climate Symposium'
