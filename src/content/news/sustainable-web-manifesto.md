@@ -5,7 +5,7 @@ notion_page_id: 217d6625-c679-812c-8af5-d7da1b76f003
 exported_at: '2025-07-31T23:19:41.062034+00:00'
 slug: sustainable-web-manifesto
 url: https://greenorbit.space/news/sustainable-web-manifesto
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F7155a55b-0b0f-4afc-b3b8-e62497148d17%2Fswm2.jpg/size/w=2000?exp=1762449884&sig=_ORBVQNX23gmv74DoIQKUG8_gcfgt2_i0HXy4r-A1AY&wasReauthorized=true
+featuredImage: https://greenorbit.space/logos/pledges/swm.png
 featured: false
 author: Ryan Laird
 tags:

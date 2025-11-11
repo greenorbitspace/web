@@ -5,7 +5,7 @@ notion_page_id: 217d6625-c679-8188-872c-e6591c92392a
 exported_at: '2025-07-31T23:19:58.875488+00:00'
 slug: green-orbit-digital-joins-the-rainforest-foundation-uk-community-to-champion-indigenous-rights-and-climate-action
 url: https://greenorbit.space/news/green-orbit-digital-joins-the-rainforest-foundation-uk-community-to-champion-indigenous-rights-and-climate-action/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F697c03fe-274a-44f5-8bdf-74df5945aa6f%2Frfuk.png/size/w=2000?exp=1762513172&sig=7Sk9AskThi6unMJzIrXjFFQ0_g2epfRq8ekI_IG4Fps&id=217d6625-c679-818a-918b-ea703bba8062&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
+featuredImage: https://greenorbit.space/logos/organisations/rainforest-uk.png
 featured: false
 author: Ryan Laird
 pubdate: '2025-05-19T14:30:00.000+00:00'

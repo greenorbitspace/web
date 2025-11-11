@@ -5,7 +5,7 @@ notion_page_id: 217d6625-c679-81fe-874f-e0d4a45b5e90
 exported_at: '2025-07-31T23:19:45.670553+00:00'
 slug: disability-confident
 url: https://greenorbit.space/news/disability-confident/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F60311015-3e24-4a32-a1de-469213c9d9b1%2FDisability-Confident-Employer.png/size/w=2000?exp=1762516216&sig=F19F0CULYtq0JSclT-l22GHHPxtLmOp7aty-BFXF3CQ&id=217d6625-c679-8152-9a43-c1d761219adf&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
+featuredImage: https://greenorbit.space/logos/pledges/disability-confident.png
 featured: false
 author: Ryan Laird
 tags:

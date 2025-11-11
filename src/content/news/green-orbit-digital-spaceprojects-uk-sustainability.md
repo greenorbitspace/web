@@ -5,7 +5,7 @@ notion_page_id: 217d6625-c679-8117-8104-d46772fb9cdb
 exported_at: '2025-07-31T23:19:51.810906+00:00'
 slug: green-orbit-digital-spaceprojects-uk-sustainability
 url: https://greenorbit.space/news/green-orbit-digital-spaceprojects-uk-sustainability/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F6dd4b7b1-c266-48a8-a355-1b04a6dc64da%2Fspaceprojects.jpg/size/w=2000?exp=1762514904&sig=0GchQraHLoKNiTHxfoO-OdKqKPvM6FsIYGr8ga-WpVA&id=217d6625-c679-8149-8eb2-da350c9cb920&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
+featuredImage: https://greenorbit.space/logos/organisations/spaceprojects-uk.png
 featured: false
 author: Ryan Laird
 pubdate: '2025-02-14T11:33:00.000+00:00'

@@ -4,7 +4,7 @@ notion_page_id: 217d6625-c679-8154-9ee2-f7a92e9d14c9
 exported_at: '2025-07-31T23:19:51.401833+00:00'
 slug: green-orbit-digital-endorses-space-sustainability
 url: https://greenorbit.space/news/green-orbit-digital-endorses-space-sustainability/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F9d01fa94-72a1-47c4-8a6c-e20402557155%2Fspace-safety.jpg/size/w=2000?exp=1762519041&sig=-89gDJxvSXSBgqsRMhOMCtfpWtmBnkp1TCpBK11jpM4&id=217d6625-c679-8192-afea-deccf449aee5&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
+featuredImage: https://greenorbit.space/logos/pledges/asat.png
 featured: false
 author: Ryan Laird
 pubdate: '2025-02-07T11:38:00.000+00:00'
