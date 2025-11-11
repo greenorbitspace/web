@@ -4,7 +4,7 @@ notion_page_id: 217d6625-c679-81c2-a915-ea481758088d
 exported_at: '2025-07-31T23:19:33.174321+00:00'
 slug: earth-day-2024
 url: https://greenorbit.space/blog/earth-day-2024/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2Facdca6e7-48ac-4b46-aed4-ae5b4470bb40%2Fearth.jpg/size/w=2000?exp=1762449578&sig=h6x797ExD5n1_oz02JHEO3O1Sk2dIHug70XCxuFsJNY&wasReauthorized=true
+featuredImage: https://greenorbit.space/images/campaigns/earthday.webp
 featured: false
 author: Ryan Laird
 tags:

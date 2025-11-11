@@ -4,7 +4,7 @@ notion_page_id: 217d6625-c679-81c3-ae99-fb0c22b91ce8
 exported_at: '2025-07-31T23:19:29.180993+00:00'
 slug: darkskyweek-2024
 url: https://greenorbit.space/blog/darkskyweek-2024/
-featuredImage: https://greenorbit.space/public/images/blog/idsw.webp
+featuredImage: https://greenorbit.space/public/images/campaigns/idsw.webp
 featured: false
 author: Ryan Laird
 tags:

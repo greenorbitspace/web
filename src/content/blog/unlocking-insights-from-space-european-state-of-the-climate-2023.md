@@ -4,7 +4,7 @@ notion_page_id: 217d6625-c679-8187-b60b-e507db84c4d1
 exported_at: '2025-07-31T23:19:35.226640+00:00'
 slug: unlocking-insights-from-space-european-state-of-the-climate-2023
 url: https://greenorbit.space/blog/unlocking-insights-from-space-european-state-of-the-climate-2023/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F7debce4d-cb58-4eca-b012-4a2e09f2dc30%2FcoverImg.png/size/w=2000?exp=1762449740&sig=u60Ti-BIn3lU0MFzW___KPZ4WOspL4QN5G9M-oUBs0w&wasReauthorized=true
+featuredImage: https://greenorbit.space/images/blog/esc2023.webp
 featured: false
 author: Ryan Laird
 tags:
