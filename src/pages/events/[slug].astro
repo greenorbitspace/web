@@ -7,7 +7,6 @@ import EventDescription from '../../components/EventDescription.jsx';
 import events from '../../data/events.json';
 import slugify from '../../utils/slugify.js';
 import { SDGs } from '../../data/sdgs';
-import { getEventSchema } from '../../components/Schema/EventSchema.ts';
 
 const fallbackIcon = '/sdgs/default.svg';
 
@@ -54,6 +53,8 @@ const normalizedEvent = {
   image: event.image || event.image_url || '',
   calendar_links: event.calendar_links || [],
   sdgs: event.sdgs || [],
+  price: event.price || null, // optional for offers
+  currency: event.currency || 'GBP', // optional for offers
 };
 
 // Previous / next events
@@ -65,13 +66,75 @@ function getEventSlug(e) {
   return e.slug || slugify(e.title);
 }
 
-// JSON-LD schema for this event
-const eventSchemaData = getEventSchema().find(
-  e => e.name === normalizedEvent.title
-);
+// Determine location object
+let locationSchema;
+if (normalizedEvent.location === 'TBD') {
+  locationSchema = undefined;
+} else if (normalizedEvent.location.toLowerCase().includes('online')) {
+  locationSchema = {
+    "@type": "VirtualLocation",
+    url: normalizedEvent.url || window.location.href
+  };
+} else {
+  locationSchema = {
+    "@type": "Place",
+    name: normalizedEvent.location,
+    address: normalizedEvent.location
+  };
+}
+
+// Build offers (optional)
+let offersSchema = normalizedEvent.price
+  ? {
+      "@type": "Offer",
+      url: normalizedEvent.url,
+      price: normalizedEvent.price,
+      priceCurrency: normalizedEvent.currency,
+      availability: "https://schema.org/InStock",
+      validFrom: normalizedEvent.start
+    }
+  : undefined;
+
+// Build performer (optional)
+let performerSchema = normalizedEvent.organizer
+  ? {
+      "@type": "Organization",
+      name: normalizedEvent.organizer,
+      url: normalizedEvent.organizer_url || undefined
+    }
+  : undefined;
+
+// Build JSON-LD schema for this event
+const eventSchema = {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  name: normalizedEvent.title,
+  description: normalizedEvent.description,
+  startDate: normalizedEvent.start,
+  endDate: normalizedEvent.end || normalizedEvent.start,
+  eventStatus: `https://schema.org/${normalizedEvent.status}`,
+  url: normalizedEvent.url,
+  image: normalizedEvent.image,
+  location: locationSchema,
+  performer: performerSchema,
+  offers: offersSchema,
+  keywords: [
+    ...normalizedEvent.categories,
+    ...normalizedEvent.tags,
+    ...normalizedEvent.sdgs.map(id => sdgMap[id]?.name || `SDG ${id}`)
+  ].filter(Boolean),
+  about: normalizedEvent.sdgs.length
+    ? normalizedEvent.sdgs.map(id => ({
+        "@type": "Thing",
+        name: sdgMap[id]?.name || `SDG ${id}`,
+        url: `/events/?sdg=${id}`
+      }))
+    : undefined,
+  isAccessibleForFree: true
+};
 ---
 
-<Layout title={normalizedEvent.title} schema={eventSchemaData ? [eventSchemaData] : undefined}>
+<Layout title={normalizedEvent.title} schema={[eventSchema]}>
   <Header />
 
   <main class="py-12 max-w-4xl mx-auto px-4 space-y-8">
@@ -182,7 +245,7 @@ const eventSchemaData = getEventSchema().find(
     {normalizedEvent.location && (
       <section class="bg-primary-500 border border-accent-500 p-4 rounded space-y-2">
         <strong>Venue:</strong> {normalizedEvent.location}
-        {normalizedEvent.location !== 'TBD' && (
+        {normalizedEvent.location.toLowerCase() !== 'tbd' && !normalizedEvent.location.toLowerCase().includes('online') && (
           <iframe
             class="w-full h-64 mt-2 rounded"
             src={`https://www.google.com/maps?q=${encodeURIComponent(normalizedEvent.location)}&output=embed`}
