@@ -2,7 +2,7 @@
 title: 'Carbon Literacy Action Day'
 slug: carbon-literacy-action-day-2025
 url: https://greenorbit.space/blog/carbon-literacy-action-day-2025/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F2d9d11a7-7694-44b2-b61b-96d855e6b463%2Fcarbon-literacy-day-1000-540866557.jpg/size/w=2000?exp=1762521499&sig=9Q7BKfqWowPEkdj_86TlEIwCGLSoDYxLD_Vbw4BH8wM&id=29ed6625-c679-802b-bb5a-c751b7d93204&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
+featuredImage: https://greenorbit.space/public/images/blog/carbon-literacy-day-1000-540866557.webp
 featured: false
 author: Ryan Laird
 pubdate: '2025-11-19T19:26:00.000+00:00'
