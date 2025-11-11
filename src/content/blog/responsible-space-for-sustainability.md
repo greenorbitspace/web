@@ -4,7 +4,7 @@ notion_page_id: 217d6625-c679-8158-94d4-e80f6331fed8
 exported_at: '2025-07-31T23:19:42.242223+00:00'
 slug: responsible-space-for-sustainability
 url: https://greenorbit.space/blog/responsible-space-for-sustainability/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F2c6346dc-ffd4-4a8e-87d8-2116c2ce8675%2FIAC2024_cover_facebook_profile_820x312.jpg/size/w=2000?exp=1762519865&sig=k99oKmcQmEWsJR35WpFqYL2vgKVSO9UfFhT0kWubRjw&id=217d6625-c679-81f8-9823-ce9829b7dce7&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
+featuredImage: https://greenorbit.space/images/events/IAC2024_cover_facebook_profile_820x312.webp
 featured: false
 author: Ryan Laird
 tags:

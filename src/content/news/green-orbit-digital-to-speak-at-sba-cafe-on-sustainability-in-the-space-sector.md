@@ -4,7 +4,7 @@ notion_page_id: 217d6625-c679-813e-b867-f4459412115d
 exported_at: '2025-07-31T23:19:52.119062+00:00'
 slug: green-orbit-digital-to-speak-at-sba-cafe-on-sustainability-in-the-space-sector
 url: https://greenorbit.space/news/green-orbit-digital-to-speak-at-sba-cafe-on-sustainability-in-the-space-sector/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2Fd001af26-4731-4846-a904-303591013138%2Fsba-cafe.jpg/size/w=600?exp=1762857663&sig=dSpyE4ecO5P7tIzEmyHBGmPuciIHSnubhkFSvmAFGlA&wasReauthorized=true
+featuredImage: https://greenorbit.space/images/events/sba-cafe.webp
 featured: false
 author: Ryan Laird
 pubdate: '2025-02-27T11:13:00.000+00:00'

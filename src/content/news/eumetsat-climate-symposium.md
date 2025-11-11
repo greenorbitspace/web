@@ -2,7 +2,7 @@
 title: 'Co-Creation in Action: Reflections from the 2025 EUMETSAT Climate Symposium'
 slug: eumetsat-climate-symposium-2025
 url: https://greenorbit.space/blog/eumetsat-climate-symposium-2025/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F8f04c6f6-b1cc-432a-9c82-ec9d0d1c42a8%2Fcliamtesymposium.png/size/w=2000?exp=1762512565&sig=ARxx0gaZvHAl1P9UyAh0i0CnMai0OqWy3j31H1W-1jI&id=29dd6625-c679-80a3-966e-dfa809782bec&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
+featuredImage: https://greenorbit.space/images/events/cliamtesymposium.webp
 featured: true
 author: Ryan Laird
 pubdate: '2025-11-06T19:26:00.000+00:00'

@@ -2,7 +2,7 @@
 title: 'Hurricane Melissa 2025: Leveraging Space Data and Strategic Communications in Disaster Risk Management'
 slug: hurricane-melissa-2025
 url: https://greenorbit.space/blog/hurricane-melissa-2025/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F1f28de32-973c-4218-8f8f-5ff61be749cf%2F33913533.webp/size/w=2000?exp=1762856948&sig=DYA6yrBnSi47U9e72cmJbmKCTSEHj3Lpl7BqgIbIIXc&id=1bad6625-c679-816a-9236-c2a325199324&table=block&userId=6be61a03-d711-4ab6-ae5d-082d1492ba23
+featuredImage: https://greenorbit.space/images/blog/melissa.webp
 featured: false
 author: Ryan Laird
 pubdate: '2025-11-03T19:26:00.000+00:00'
