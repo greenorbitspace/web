@@ -1,14 +1,10 @@
 import { z, defineCollection } from 'astro:content';
 import slugify from 'slugify';
 
-/**
- * Default fallback image for content entries
- */
+/** Default fallback image for content entries */
 const DEFAULT_FEATURED_IMAGE = '/images/default-featured.jpg';
 
-/**
- * Base schema for general content types
- */
+/** Base schema for general content types */
 const baseSchema = z.object({
   title: z.string().min(5),
   description: z.string().max(160).optional().default(''),
@@ -42,9 +38,7 @@ const baseSchema = z.object({
   SDGs: z.array(z.number()).optional().default([]),
 });
 
-/**
- * Team / Person schema (updated to include full socialLinks)
- */
+/** Team / Person schema */
 const teamSchema = z
   .object({
     title: z.string().min(3),
@@ -72,22 +66,17 @@ const teamSchema = z
     interests: z.array(z.string()).optional().default([]),
     location: z.string().optional().default(''),
     nationality: z.string().optional().default(''),
-    socialLinks: z
-      .record(z.string().url())
-      .optional()
-      .default({}),
-        contactEmail: z.string().email().optional().default(''),
-        seoTitle: z.string().max(70).optional().default(''),
-        seoDescription: z.string().max(160).optional().default(''),
-      })
+    socialLinks: z.record(z.string().url()).optional().default({}),
+    contactEmail: z.string().email().optional().default(''),
+    seoTitle: z.string().max(70).optional().default(''),
+    seoDescription: z.string().max(160).optional().default(''),
+  })
   .transform(data => ({
     ...data,
     slug: data.slug || slugify(data.title, { lower: true, strict: true }),
   }));
 
-/**
- * Organisation schema
- */
+/** Organisation schema */
 const organisationSchema = z.object({
   organisation: z.string().min(2),
   slug: z.string().min(2),
@@ -100,9 +89,7 @@ const organisationSchema = z.object({
   logo: z.string().optional().default(DEFAULT_FEATURED_IMAGE),
 });
 
-/**
- * Pledge schema
- */
+/** Pledge schema */
 const pledgeSchema = z.object({
   name: z.string(),
   slug: z.string().optional(),
@@ -116,15 +103,13 @@ const pledgeSchema = z.object({
   CSR: z.string().optional().default(''),
   logo: z
     .string()
-    .regex(/^(https?:\/\/|\/)/, { message: 'Logo must be a full URL or start with / for public assets' })
+    .regex(/^(https?:\/\/|\/)/, { message: 'Logo must be a full URL or start with /' })
     .optional()
     .default(DEFAULT_FEATURED_IMAGE),
   url: z.string().url().optional().nullable(),
 });
 
-/**
- * Career schema
- */
+/** Career schema */
 const careerSchema = z.object({
   title: z.string().min(5),
   slug: z.string().optional(),
@@ -153,9 +138,7 @@ const careerSchema = z.object({
     .default(DEFAULT_FEATURED_IMAGE),
 });
 
-/**
- * Campaign schema
- */
+/** Campaign schema */
 const campaignSchema = baseSchema.extend({
   name: z.string().optional().default(''),
   month: z.string().optional().nullable(),
@@ -168,20 +151,24 @@ const campaignSchema = baseSchema.extend({
     .default(DEFAULT_FEATURED_IMAGE),
 });
 
-/**
- * Define all collections
- */
+/** Define all collections and make optional to suppress missing folder warnings */
 export const collections = {
-  blog: defineCollection({ schema: baseSchema }),
-  news: defineCollection({ schema: baseSchema }),
-  resources: defineCollection({ schema: baseSchema }),
-  'press-releases': defineCollection({ schema: baseSchema }),
-  tools: defineCollection({ schema: baseSchema }),
-  insights: defineCollection({ schema: baseSchema }),
-  'space-sustainability': defineCollection({ schema: baseSchema }),
-  organisations: defineCollection({ schema: organisationSchema }),
-  pledges: defineCollection({ schema: pledgeSchema }),
-  careers: defineCollection({ schema: careerSchema }),
-  campaigns: defineCollection({ schema: campaignSchema }),
-  team: defineCollection({ schema: teamSchema }),
+  blog: defineCollection({ schema: baseSchema, optional: true }),
+  news: defineCollection({ schema: baseSchema, optional: true }),
+  resources: defineCollection({ schema: baseSchema, optional: true }),
+  'press-releases': defineCollection({ schema: baseSchema, optional: true }),
+  tools: defineCollection({ schema: baseSchema, optional: true }),
+  insights: defineCollection({ schema: baseSchema, optional: true }),
+  'space-sustainability': defineCollection({ schema: baseSchema, optional: true }),
+  organisations: defineCollection({ schema: organisationSchema, optional: true }),
+  pledges: defineCollection({ schema: pledgeSchema, optional: true }),
+  careers: defineCollection({ schema: careerSchema, optional: true }),
+  campaigns: defineCollection({ schema: campaignSchema, optional: true }),
+  team: defineCollection({ schema: teamSchema, optional: true }),
 };
+
+/** 
+ * ⚠️ Important: Create the corresponding content folders even if empty:
+ * mkdir -p src/content/{blog,news,resources,press-releases,tools,insights,space-sustainability,organisations,pledges,careers,campaigns,team}
+ * Add _placeholder.md to each if needed to suppress glob-loader warnings.
+ */
