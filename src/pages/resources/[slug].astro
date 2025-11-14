@@ -2,6 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import ShareButtons from '../../components/ShareButtons.astro';
+import InsightsGrid from '../../components/InsightsGrid.jsx';
 import { getCollection } from 'astro:content';
 import { SDGs } from '../../data/sdgs';
 import crypto from 'crypto';
@@ -16,10 +18,11 @@ export async function getStaticPaths() {
   }));
 }
 
-// --- Get resources post ---
+// --- Runtime ---
 const { slug: paramSlug } = Astro.params;
 const posts = await getCollection('resources');
 
+// Find post by slug, id, or slugified title
 let postEntry = posts.find(p => p.slug === paramSlug || p.id === paramSlug);
 if (!postEntry) {
   postEntry = posts.find(p => slugify(p.data.title).toLowerCase() === paramSlug?.toLowerCase());
@@ -30,7 +33,7 @@ const slug = postEntry.slug || slugify(postEntry.data.title).toLowerCase();
 const { Content } = await postEntry.render();
 const data = postEntry.data;
 
-// --- Author info from team collection ---
+// --- Author info ---
 const team = await getCollection('team');
 const authorSlug = slugify(data.author || '').toLowerCase();
 const authorInfo = team.find(a => slugify(a.data.title || a.data.slug || '').toLowerCase() === authorSlug) || null;
@@ -55,14 +58,13 @@ const pageDescription = data.seoDescription || data.description || data.title;
 const pageURL = `https://greenorbit.space/resources/${slug}`;
 const pageImage = data.featuredImage || '/default-og-image.jpg';
 
-// --- SDG Map ---
+// --- SDG Map & Codes ---
 const sdgMap = SDGs.reduce((acc, sdg) => {
   const code = `SDG ${String(sdg.id).padStart(2, '0')}`;
   acc[code.toUpperCase()] = sdg;
   return acc;
 }, {});
 
-// --- SDG Codes ---
 let sdgCodes = [];
 if (Array.isArray(data.SDGs)) {
   sdgCodes = data.SDGs.map(n => `SDG ${String(n).padStart(2,'0')}`);
@@ -95,6 +97,18 @@ const relatedPosts = posts
   .filter(p => p.score > 0)
   .sort((a,b) => b.score - a.score)
   .slice(0, 3);
+
+// Transform for InsightsGrid
+const relatedPostsData = relatedPosts.map(post => ({
+  ...post,
+  collection: 'resources',
+  data: {
+    ...post.data,
+    contentType: 'resources',
+    organisations: post.data.organisations || [],
+    SDGs: post.data.SDGs || [],
+  }
+}));
 
 // --- Structured Data ---
 const jsonLd = {
@@ -174,7 +188,7 @@ const jsonLd = {
     </div>
   </section>
 
-  <!-- Content -->
+  <!-- Main content -->
   <main class="py-12 w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
     <article class="prose prose-lg dark:prose-invert max-w-none">
       <Content />
@@ -183,161 +197,25 @@ const jsonLd = {
     <!-- Inline CTA -->
     <section class="mt-12 bg-accent-600 rounded-lg p-8 text-center text-white shadow-lg">
       <h2 class="text-2xl sm:text-3xl font-bold mb-4">Enjoyed this insight?</h2>
-      <p class="mb-6">Subscribe to our newsletter for updates on sustainable space operations and research.</p>
+      <p class="mb-6">Subscribe to our resourcesletter for updates on sustainable space operations and research.</p>
       <a href="/subscribe" class="inline-block bg-white text-accent-600 font-semibold px-6 py-3 rounded-md hover:bg-gray-100 transition">Subscribe Now</a>
     </section>
   </main>
 
-<!-- Related posts -->
-{relatedPosts.length > 0 && (
-  <section class="w-full py-12">
-    <h2 class="text-2xl font-bold mb-6 text-center text-accent-500">Related Posts</h2>
-    <ul class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full px-4 sm:px-6 lg:px-8">
-      {relatedPosts.map(post => {
-        const {
-          title,
-          pubdate,
-          excerpt,
-          tags = [],
-          contentType,
-          organisations = [],
-          SDGs = [],
-          featuredImage,
-        } = post.data;
+  <!-- Related posts -->
+  {relatedPostsData.length > 0 && (
+    <section class="w-full py-12 bg-secondary-500">
+      <h2 class="text-2xl font-bold mb-6 text-center text-white">Related Posts</h2>
+      <div class="w-full px-4 sm:px-6 lg:px-8">
+        <InsightsGrid client:load posts={relatedPostsData} />
+      </div>
+    </section>
+  )}
 
-        const date = pubdate
-          ? new Date(pubdate).toLocaleDateString("en-GB", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })
-          : "";
-
-        const sdgIcons = Array.isArray(SDGs)
-          ? SDGs.map(id => {
-              const code = `SDG ${String(id).padStart(2, "0")}`;
-              const sdg = sdgMap[code.toUpperCase()];
-              return (
-                <a key={code} href={`https://sdgs.greenorbit.space/${id}/`} target="_blank" rel="noopener noreferrer">
-                  <img
-                    src={sdg?.icon || '/images/fallback-sdg.png'}
-                    alt={sdg?.name || code}
-                    class="w-8 h-8 rounded-sm border border-gray-300/40 transition-transform hover:scale-110"
-                  />
-                </a>
-              );
-            })
-          : [];
-
-        return (
-          <li key={post.slug} class="border border-accent-500 rounded-lg overflow-hidden hover:shadow-xl transition bg-white dark:bg-gray-800/40">
-            {/* Featured Image */}
-            <a href={`/resources/${post.slug}`} class="block overflow-hidden rounded-t-lg">
-              <img
-                src={featuredImage || '/images/placeholder.jpg'}
-                alt={title}
-                loading="lazy"
-                class="w-full h-64 md:h-72 lg:h-80 object-cover object-center transition-transform duration-300 hover:scale-105"
-              />
-            </a>
-
-            {/* Card Content */}
-            <div class="p-4 space-y-3">
-              <a href={`/resources/${post.slug}`} class="block w-full">
-                <h3 class="text-lg font-semibold bg-accent-500 text-white w-full px-3 py-2 rounded-md transition-colors">
-                  {title}
-                </h3>
-              </a>
-
-              {date && <p class="text-sm text-gray-500 dark:text-gray-300">{date}</p>}
-              {excerpt && <p class="text-gray-700 dark:text-gray-300 text-sm">{excerpt}</p>}
-
-              {tags.length > 0 && (
-                <div class="flex flex-wrap gap-2 mt-2">
-                  {tags.map(tag => (
-                    <span key={tag} class="inline-block bg-accent-500 text-white text-xs px-2 py-1 rounded">
-                      #{tag}
-                    </span>
-                  ))}
-                </div>
-              )}
-
-              {organisations?.length > 0 && (
-                <div class="mt-2 flex flex-wrap gap-2">
-                  {organisations.map(org => (
-                    <a
-                      key={org.slug}
-                      href={`/organisations/${org.slug}`}
-                      class="bg-gray-300 dark:bg-accent-500 text-white rounded-full px-3 py-1 text-xs font-medium capitalize"
-                    >
-                      {org.name}
-                    </a>
-                  ))}
-                </div>
-              )}
-
-              {contentType && (
-                <div class="mt-2">
-                  <a
-                    href={`/resources/`}
-                    class="inline-block bg-primary-600 text-white text-xs px-2 py-1 rounded uppercase hover:bg-primary-700"
-                  >
-                    {contentType}
-                  </a>
-                </div>
-              )}
-
-              {sdgIcons.length > 0 && <div class="mt-2 flex flex-wrap gap-2">{sdgIcons}</div>}
-            </div>
-          </li>
-        );
-      })}
-    </ul>
-  </section>
-)}
-
-  <!-- Sticky Floating CTA -->
-  <div id="sticky-cta" class="fixed bottom-6 right-6 z-50 bg-accent-600 text-white rounded-lg shadow-lg p-4 flex flex-col items-center space-y-2 opacity-0 translate-y-20 transition-all duration-500">
-    <p class="text-sm sm:text-base text-center font-semibold">Subscribe for latest insights!</p>
-    <a href="/subscribe" class="bg-white text-accent-600 px-4 py-2 rounded font-semibold hover:bg-gray-100 transition">Subscribe</a>
-    <button id="cta-close" class="absolute top-1 right-2 text-white hover:text-gray-200 text-sm">&times;</button>
-  </div>
+  <ShareButtons url={pageURL} title={pageTitle} />
 
   <Footer />
 
-  <!-- Hero Parallax & CTA Script -->
-  <script>
-    const hero = document.getElementById('hero-bg');
-    const cta = document.getElementById('sticky-cta');
-    const ctaClose = document.getElementById('cta-close');
-
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY;
-      hero.style.transform = `translateY(${scrollY * 0.3}px) scale(${1 + scrollY * 0.0005})`;
-      if(scrollY > 400){
-        cta.classList.add('opacity-100','translate-y-0');
-        cta.classList.remove('opacity-0','translate-y-20');
-      } else {
-        cta.classList.add('opacity-0','translate-y-20');
-        cta.classList.remove('opacity-100','translate-y-0');
-      }
-    });
-
-    ctaClose.addEventListener('click', () => {
-      cta.style.display = 'none';
-    });
-  </script>
-
   <!-- Structured Data -->
   <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-
-  <!-- Open Graph & Twitter Card -->
-  <meta property="og:title" content={pageTitle} />
-  <meta property="og:description" content={pageDescription} />
-  <meta property="og:image" content={pageImage} />
-  <meta property="og:url" content={pageURL} />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={pageTitle} />
-  <meta name="twitter:description" content={pageDescription} />
-  <meta name="twitter:image" content={pageImage} />
 </Layout>

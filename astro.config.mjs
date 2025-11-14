@@ -18,9 +18,16 @@ export default defineConfig({
     build: {
       target: 'esnext',
       minify: 'esbuild',
+      chunkSizeWarningLimit: 500, // warn only for large chunks
       rollupOptions: {
-        // Treat gray-matter as external so it's not bundled for the browser
         external: ['gray-matter', 'node-fetch'],
+        output: {
+          manualChunks(id) {
+            if (id.includes('EarthGlobe')) return 'chunk_earthglobe';
+            if (id.includes('SearchableLibrary')) return 'chunk_searchablelibrary';
+            if (id.includes('node_modules')) return 'vendor';
+          },
+        },
       },
     },
     resolve: {

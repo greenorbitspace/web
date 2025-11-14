@@ -8,196 +8,188 @@ import HeroSection from '../../components/HeroSection.astro';
 <Layout title="Services">
   <Header />
 
-  <main class="py-8">
+  <main class="py-16 w-full container-custom bg-primary-500 space-y-16">
     <HeroSection 
       title="Services"
       description="Strategic, sustainable marketing support for the space sector and climate-conscious innovators"
     />
 
-    <section class="py-16 bg-white dark:bg-secondary-500">
-      <div class="container-custom">
+    <section>
 
-        <!-- Audit Service -->
-        <div class="mb-24">
-          <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
-            <div>
-              <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
-                Audits
-              </span>
-              <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                Diagnose. Prioritise. Optimise.
-              </h2>
-              <p class="text-gray-600 dark:text-gray-300 mb-6">
-                Our audit process uncovers performance blockers, opportunity areas, and sustainability blind spots across your digital channels. From SEO to carbon-aware content, we help you grow responsibly.
-              </p>
-              <div class="flex flex-wrap gap-4 mb-6">
-                <div class="flex items-center">
-                  <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-gray-700 dark:text-gray-300">SEO & Website Carbon Audits</span>
-                </div>
-                <div class="flex items-center">
-                  <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-gray-700 dark:text-gray-300">Brand & Messaging Sustainability Alignment</span>
-                </div>
-                <div class="flex items-center">
-                  <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-gray-700 dark:text-gray-300">Campaign & Funnel Diagnostics</span>
-                </div>
+      <!-- Audit Service -->
+      <div class="mb-24">
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+          <div>
+            <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+              Audits
+            </span>
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              Diagnose. Prioritise. Optimise.
+            </h2>
+            <p class="text-gray-600 dark:text-white mb-6">
+              Our audit process uncovers performance blockers, opportunity areas, and sustainability blind spots across your digital channels. From SEO to carbon-aware content, we help you grow responsibly.
+            </p>
+            <div class="flex flex-wrap gap-4 mb-6">
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700 dark:text-white">SEO & Website Carbon Audits</span>
               </div>
-              <a href="/services/audits" class="btn-primary">Request an Audit</a>
-            </div>
-            <div class="rounded-lg overflow-hidden shadow-xl">
-              <img src="/images/services/audit.png" alt="Analytics Dashboard" class="w-full h-auto" />
-            </div>
-          </div>
-        </div>
-
-        <!-- Training Service -->
-        <div class="mb-24">
-          <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
-            <div class="order-2 md:order-1 rounded-lg overflow-hidden shadow-xl">
-              <img src="/images/services/training.png" alt="Training Session" class="w-full h-auto" />
-            </div>
-            <div class="order-1 md:order-2">
-              <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
-                Training
-              </span>
-              <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                Upskill Your Team for a Sustainable Future
-              </h2>
-              <p class="text-gray-600 dark:text-gray-300 mb-6">
-                Bespoke workshops covering digital strategy, sustainability communication, space sector messaging, and climate-aligned marketing. Delivered live or virtually, with materials you can reuse and scale.
-              </p>
-              <div class="flex flex-wrap gap-4 mb-6">
-                <div class="flex items-center">
-                  <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-gray-700 dark:text-gray-300">SDG-Compliant Course Design</span>
-                </div>
-                <div class="flex items-center">
-                  <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-gray-700 dark:text-gray-300">Practical Tools & Frameworks Provided</span>
-                </div>
-                <div class="flex items-center">
-                  <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-gray-700 dark:text-gray-300">Tailored to Teams & Tech Startups</span>
-                </div>
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700 dark:text-white">Brand & Messaging Sustainability Alignment</span>
               </div>
-              <a href="/services/training" class="btn-primary">Explore Training Options</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Content Service -->
-        <div class="mb-24">
-          <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
-            <div>
-              <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
-                Content
-              </span>
-              <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                Content That Informs and Inspires
-              </h2>
-              <p class="text-gray-600 dark:text-gray-300 mb-6">
-                We create science-informed, search-optimised, and sustainability-conscious content — from whitepapers and web copy to email nurture sequences and landing pages.
-              </p>
-              <div class="flex flex-wrap gap-4 mb-6">
-                <div class="flex items-center">
-                  <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-gray-700 dark:text-gray-300">Low-Carbon Web Copywriting</span>
-                </div>
-                <div class="flex items-center">
-                  <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-gray-700 dark:text-gray-300">SEO & Accessibility Optimised</span>
-                </div>
-                <div class="flex items-center">
-                  <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-gray-700 dark:text-gray-300">Campaign Content + Evergreen Assets</span>
-                </div>
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700 dark:text-white">Campaign & Funnel Diagnostics</span>
               </div>
-              <a href="/services/content-marketing" class="btn-primary">Plan Your Content</a>
             </div>
-            <div class="rounded-lg overflow-hidden shadow-xl">
-              <img src="/images/services/content.png" alt="Content Creation" class="w-full h-auto" />
-            </div>
+            <a href="/services/audits" class="btn-primary">Request an Audit</a>
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/services/audit.png" alt="Analytics Dashboard" class="w-full h-auto" />
           </div>
         </div>
+      </div>
 
-        <!-- Strategy Service -->
-        <div class="mb-24">
-          <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
-            <div class="order-2 md:order-1 rounded-lg overflow-hidden shadow-xl">
-              <img src="/images/services/strategy.png" alt="Strategy Workshop" class="w-full h-auto" />
-            </div>
-            <div class="order-1 md:order-2">
-              <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
-                Strategy
-              </span>
-              <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                Sustainable Marketing by Design
-              </h2>
-              <p class="text-gray-600 dark:text-gray-300 mb-6">
-                Go beyond ad hoc tactics. We co-create robust marketing strategies with your leadership — designed to align with planetary limits, business growth, and stakeholder priorities.
-              </p>
-              <div class="flex flex-wrap gap-4 mb-6">
-                <div class="flex items-center">
-                  <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-gray-700 dark:text-gray-300">OKR-Focused Strategic Planning</span>
-                </div>
-                <div class="flex items-center">
-                  <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-gray-700 dark:text-gray-300">Audience & Messaging Frameworks</span>
-                </div>
-                <div class="flex items-center">
-                  <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-gray-700 dark:text-gray-300">Channel Mix & Budget Guidance</span>
-                </div>
+      <!-- Training Service -->
+      <div class="mb-24">
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+          <div class="order-2 md:order-1 rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/services/training.png" alt="Training Session" class="w-full h-auto" />
+          </div>
+          <div class="order-1 md:order-2">
+            <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+              Training
+            </span>
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              Upskill Your Team for a Sustainable Future
+            </h2>
+            <p class="text-gray-600 dark:text-white mb-6">
+              Bespoke workshops covering digital strategy, sustainability communication, space sector messaging, and climate-aligned marketing. Delivered live or virtually, with materials you can reuse and scale.
+            </p>
+            <div class="flex flex-wrap gap-4 mb-6">
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700 dark:text-white">SDG-Compliant Course Design</span>
               </div>
-              <a href="/services/marketing-strategy" class="btn-primary">Book a Strategy Session</a>
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700 dark:text-white">Practical Tools & Frameworks Provided</span>
+              </div>
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700 dark:text-white">Tailored to Teams & Tech Startups</span>
+              </div>
             </div>
+            <a href="/services/training" class="btn-primary">Explore Training Options</a>
           </div>
         </div>
+      </div>
 
-        <!-- CTA -->
-        <div class="mt-16 text-center">
-          <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-            Ready to collaborate?
-          </h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let’s drive responsible growth for your organisation. Get in touch for a custom package or exploratory call.
-          </p>
-          <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="/contact" class="btn-primary">Contact Us</a>
-            <a href="/service-catalogue" class="btn-secondary">Download Full Catalogue</a>
+      <!-- Content Service -->
+      <div class="mb-24">
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+          <div>
+            <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+              Content
+            </span>
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              Content That Informs and Inspires
+            </h2>
+            <p class="text-gray-600 dark:text-white mb-6">
+              We create science-informed, search-optimised, and sustainability-conscious content — from whitepapers and web copy to email nurture sequences and landing pages.
+            </p>
+            <div class="flex flex-wrap gap-4 mb-6">
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700 dark:text-white">Low-Carbon Web Copywriting</span>
+              </div>
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700 dark:text-white">SEO & Accessibility Optimised</span>
+              </div>
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700 dark:text-white">Campaign Content + Evergreen Assets</span>
+              </div>
+            </div>
+            <a href="/services/content-marketing" class="btn-primary">Plan Your Content</a>
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/services/content.png" alt="Content Creation" class="w-full h-auto" />
           </div>
         </div>
+      </div>
 
+      <!-- Strategy Service -->
+      <div class="mb-24">
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+          <div class="order-2 md:order-1 rounded-lg overflow-hidden shadow-xl">
+            <img src="/images/services/strategy.png" alt="Strategy Workshop" class="w-full h-auto" />
+          </div>
+          <div class="order-1 md:order-2">
+            <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+              Strategy
+            </span>
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              Sustainable Marketing by Design
+            </h2>
+            <p class="text-gray-600 dark:text-white mb-6">
+              Go beyond ad hoc tactics. We co-create robust marketing strategies with your leadership — designed to align with planetary limits, business growth, and stakeholder priorities.
+            </p>
+            <div class="flex flex-wrap gap-4 mb-6">
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700 dark:text-white">OKR-Focused Strategic Planning</span>
+              </div>
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700 dark:text-white">Audience & Messaging Frameworks</span>
+              </div>
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700 dark:text-white">Channel Mix & Budget Guidance</span>
+              </div>
+            </div>
+            <a href="/services/marketing-strategy" class="btn-primary">Book a Strategy Session</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
+
+  <!-- Full-Width CTA Section -->
+    <section class="w-full bg-secondary-500 py-16 text-white text-center">
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to collaborate?</h2>
+      <p class="mb-8 text-lg sm:text-xl text-gray-200">Let’s drive responsible growth for your organisation. Get in touch for a custom package or exploratory call.</p>
+      <a href="/contact" class="inline-block w-full sm:w-auto px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition text-lg sm:text-xl">Contact Us</a>
+    </div>
+  </section>
 
   <Footer />
 </Layout>

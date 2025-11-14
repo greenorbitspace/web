@@ -14,7 +14,7 @@ export default function ValuesList() {
         const combined = [title, tagline, description].filter(Boolean).join(' ').toLowerCase();
         return combined.includes(term);
       })
-      .slice(0, 6); // Limit to 6 items (3 x 2 grid)
+      .slice(0, 6);
   }, [searchTerm]);
 
   return (
@@ -41,36 +41,37 @@ export default function ValuesList() {
               className="border border-accent-500 rounded-xl p-6 
                          bg-white dark:bg-secondary-500 
                          hover:shadow-lg transition text-accent-500
-                         flex flex-col justify-between"
+                         flex flex-col items-center"
               role="listitem"
             >
               <article
                 aria-labelledby={`value-title-${index}`}
-                className="flex flex-col h-full"
+                className="flex flex-col items-center h-full text-center"
               >
-                <div className="flex items-center gap-4 mb-4">
-                  <img
-                    src={icon || fallbackIcon}
-                    alt={`${title} icon`}
-                    className="w-14 h-14 object-contain flex-shrink-0 rounded-sm"
-                    onError={(e) => {
-                      e.target.onerror = null;
-                      e.target.src = fallbackIcon;
-                    }}
-                  />
-                  <h3
-                    id={`value-title-${index}`}
-                    className="text-xl font-semibold text-accent-500"
-                    tabIndex={0}
-                  >
-                    {title}
-                  </h3>
-                </div>
+                <img
+                  src={icon || fallbackIcon}
+                  alt={`${title} icon`}
+                  className="w-16 h-16 object-contain mb-4 rounded-sm"
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = fallbackIcon;
+                  }}
+                />
+
+                <h3
+                  id={`value-title-${index}`}
+                  className="text-xl font-semibold text-accent-500 mb-2"
+                  tabIndex={0}
+                >
+                  {title}
+                </h3>
+
                 {tagline && (
-                  <p className="text-sm text-gray-500 dark:text-white mb-2 italic">
+                  <span className="inline-block bg-accent-500 text-white px-3 py-1 rounded-full mb-4 text-sm font-medium">
                     {tagline}
-                  </p>
+                  </span>
                 )}
+
                 {description && (
                   <p className="text-gray-700 dark:text-white text-base leading-relaxed">
                     {description}

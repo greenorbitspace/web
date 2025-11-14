@@ -1,13 +1,14 @@
 ---
 import '../styles/global.css';
 import '../styles/transitions.css';
-import { getGlobalSchema } from '../components/Schema/GlobalSchema';
+
+import getGlobalSchema from '../components/Schema/GlobalSchema';
 import Seo from '../components/Seo.astro';
 import Analytics from '../components/Analytics.astro';
 import CookieBanner from '../components/CookieBanner.astro';
 
 export interface Props {
-  title: string;
+  title?: string;
   description?: string;
   ogImage?: string;
   canonical?: string;
@@ -17,15 +18,37 @@ export interface Props {
 
 const { title, description, ogImage, canonical, twitter, schema } = Astro.props;
 
-// Merge global schema with page-specific schema
-const mergedSchema = [...getGlobalSchema()];
-if (schema) {
-  if (Array.isArray(schema)) {
-    mergedSchema.push(...schema);
-  } else {
-    mergedSchema.push(schema);
+// Fallback values
+const fallbackTitle = 'Green Orbit Digital — Sustainable Marketing for the Space Sector';
+const fallbackDescription =
+  'Green Orbit Digital is a Leicester-based agency specialising in sustainable marketing for the space sector, delivering SEO, digital strategy, and data-driven campaigns.';
+const fallbackImage = 'https://greenorbit.space/logos/organisations/greenorbit.png';
+const pageUrl = canonical || 'https://greenorbit.space';
+
+// Merge global schema, optional schema, and dynamic WebPage schema
+let mergedSchema: Record<string, any>[] = [
+  ...getGlobalSchema({
+    url: pageUrl,
+    title: title || fallbackTitle,
+    description: description || fallbackDescription,
+    featuredImage: ogImage || fallbackImage
+  }),
+  ...(Array.isArray(schema) ? schema : schema ? [schema] : [])
+];
+
+// Remove undefined recursively
+function removeUndefined(obj: any): any {
+  if (Array.isArray(obj)) return obj.map(removeUndefined);
+  if (obj && typeof obj === 'object') {
+    return Object.fromEntries(
+      Object.entries(obj)
+        .filter(([_, v]) => v !== undefined)
+        .map(([k, v]) => [k, removeUndefined(v)])
+    );
   }
+  return obj;
 }
+mergedSchema = removeUndefined(mergedSchema);
 ---
 
 <!DOCTYPE html>
@@ -43,10 +66,11 @@ if (schema) {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="alternate icon" href="/favicon.ico" sizes="any" />
 
+    <!-- SEO Meta -->
     <Seo
-      title={title}
-      description={description}
-      ogImage={ogImage}
+      title={title || fallbackTitle}
+      description={description || fallbackDescription}
+      ogImage={ogImage || fallbackImage}
       canonical={canonical}
       twitter={twitter}
     />
@@ -56,6 +80,7 @@ if (schema) {
 
     {Astro.head}
 
+    <!-- Analytics -->
     <Analytics
       gtmId={import.meta.env.PUBLIC_GTM_ID}
       ga4Id={import.meta.env.PUBLIC_GA4_ID}
@@ -66,6 +91,7 @@ if (schema) {
       ticketTailorTracking={import.meta.env.PUBLIC_TICKET_TAILOR}
     />
 
+    <!-- Alpine.js -->
     <script
       type="module"
       src="https://unpkg.com/alpinejs@3.14.2/dist/cdn.min.js"
@@ -74,7 +100,7 @@ if (schema) {
   </head>
 
   <body
-    class="antialiased bg-white dark:bg-primary-500 text-secondary-900 dark:text-secondary-100 transition-colors duration-300"
+    class="antialiased bg-white dark:bg-primary-500 text-secondary-500 dark:text-secondary-500 transition-colors duration-300"
   >
     <main id="page-wrapper" class="page-wrapper" role="main" tabindex="-1">
       <slot />

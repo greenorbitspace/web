@@ -10,44 +10,57 @@ import services from "../../data/schema/services.json";
 import webpages from "../../data/schema/webpages.json";
 import blog from "../../data/schema/blog.json";
 
-export function getGlobalSchema() {
-  const safeFounders = founders || [];
+import getWebsiteSchemaJSON from "../Schema/WebsiteSchema";
+import getWebPageSchema, { WebPageSchemaProps } from "../Schema/WebPageSchema";
+
+/**
+ * Generate full JSON-LD global schema for site
+ * @param pageData Optional page info for WebPage schema
+ */
+export function getGlobalSchema(pageData?: WebPageSchemaProps): Record<string, any>[] {
+  // Safely fallback all imports
+  const safeFounders = Array.isArray(founders) ? founders : [];
   const safeContact = contact || {};
-  const safeAreas = areas || [];
-  const safeKnowledge = knowledge || [];
-  const safeBrands = brands || [];
-  const safeServices = services || [];
-  const safeWebpages = webpages || [];
-  const safeBlog = blog || [];
+  const safeAreas = Array.isArray(areas) ? areas : [];
+  const safeKnowledge = Array.isArray(knowledge) ? knowledge : [];
+  const safeBrands = Array.isArray(brands) ? brands : [];
+  const safeServices = Array.isArray(services) ? services : [];
+  const safeWebpages = Array.isArray(webpages) ? webpages : [];
+  const safeBlog = Array.isArray(blog) ? blog : [];
 
-  const memberOrgs = organisations
-    .filter(org => ["member", "partner"].includes(org.Type))
-    .map(org => ({
-      "@type": "Organization",
-      name: org.Organisation,
-      url: org.URL,
-      description: org.Description || undefined,
-      logo: org.logo || undefined
-    }));
+  // Member and partner organizations
+  const memberOrgs = Array.isArray(organisations)
+    ? organisations
+        .filter(org => ["member", "partner"].includes(org.Type))
+        .map(org => ({
+          "@type": "Organization",
+          name: org.Organisation,
+          url: org.URL,
+          description: org.Description || undefined,
+          logo: org.logo || undefined
+        }))
+    : [];
 
-  const flattenedProfiles = Object.values(profiles.profiles || {}).flat();
+  // Flatten all social/profile links
+  const flattenedProfiles = Object.values(profiles?.profiles || {}).flat();
   const sameAsLinks = Array.from(
     new Set([
-      ...socials.map(s => s?.url).filter(Boolean),
-      ...flattenedProfiles.map(p => p?.url).filter(Boolean)
+      ...(Array.isArray(socials) ? socials.map(s => s?.url).filter(Boolean) : []),
+      ...(flattenedProfiles.map(p => p?.url).filter(Boolean))
     ])
   );
 
-  const orgSchema = {
-    "@context": "https://schema.org",
+  // Core Organization node
+  const orgNode: Record<string, any> = {
     "@type": "Organization",
     "@id": "https://greenorbit.space/#organization",
     name: "Green Orbit Digital",
     url: "https://greenorbit.space",
-    logo: "https://greenorbit.space/images/logo.png",
+    logo: "https://greenorbit.space/logos/organisations/greenorbit.png",
     foundingDate: "2023-10-12",
     legalName: "Green Orbit Digital Ltd",
-    description: "Green Orbit Digital is a Leicester-based agency specialising in sustainable marketing for the space sector.",
+    description:
+      "Green Orbit Digital is a Leicester-based agency specialising in sustainable marketing for the space sector.",
     slogan: "Sustainable marketing for the space sector.",
     founder: safeFounders.length ? safeFounders : undefined,
     contactPoint: safeContact.contactPoint?.length ? safeContact.contactPoint : undefined,
@@ -64,17 +77,42 @@ export function getGlobalSchema() {
     isAccessibleForFree: true
   };
 
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "Green Orbit Digital",
-    url: "https://greenorbit.space",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: "https://greenorbit.space/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  };
+  // Website schema (from JSON function)
+  let websiteSchemaGraph: Record<string, any>[] = [];
+  try {
+    const websiteSchemaJSON = getWebsiteSchemaJSON({
+      url: pageData?.url || "https://greenorbit.space",
+      title: pageData?.title || "Green Orbit Digital — Sustainable Marketing for the Space Sector",
+      description: pageData?.description,
+      featuredImage: pageData?.featuredImage
+    });
 
-  return [orgSchema, websiteSchema];
+    // JSON.parse may throw if getWebsiteSchemaJSON returns invalid string
+    const parsed = typeof websiteSchemaJSON === "string" ? JSON.parse(websiteSchemaJSON) : websiteSchemaJSON;
+    if (parsed?.["@graph"]) {
+      websiteSchemaGraph = parsed["@graph"].map((node: any) => {
+        // Force logo URL consistency
+        if (node["@id"]?.includes("#logo") || node["@type"] === "ImageObject") {
+          return { ...node, url: "https://greenorbit.space/logos/organisations/greenorbit.png" };
+        }
+        return node;
+      });
+    }
+  } catch (e) {
+    console.warn("Failed to parse WebsiteSchema JSON:", e);
+  }
+
+  // Dynamic WebPage schema node
+  const webPageSchema = getWebPageSchema(
+    pageData || {
+      url: "https://greenorbit.space",
+      title: "Green Orbit Digital — Sustainable Marketing for the Space Sector",
+      featuredImage: "https://greenorbit.space/logos/organisations/greenorbit.png"
+    }
+  );
+
+  // Combine all schemas into one array
+  return [...websiteSchemaGraph, orgNode, webPageSchema];
 }
+
+export default getGlobalSchema;

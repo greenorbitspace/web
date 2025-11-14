@@ -1,154 +1,218 @@
 import React from "react";
 
-// Inline formatting parser: linked images, images, links, bold, italic
 function parseInlineFormatting(text) {
   if (!text) return null;
 
-  let elements = [text];
+  let parts = [text];
 
-  // Linked images: [![alt](src)](href)
-  const linkedImageRegex = /\[\!\[([^\]]*)\]\(([^)]+)\)\]\(([^)]+)\)/g;
-  elements = elements.flatMap((chunk, i) => {
-    if (typeof chunk !== "string") return chunk;
-    const parts = [];
+  // Images ![alt](url "title")
+  parts = parts.flatMap((part, i) => {
+    if (typeof part !== "string") return part;
+    const regex = /!\[([^\]]*)\]\((\S+?)(?:\s+"(.*?)")?\)/g;
+    const pieces = [];
     let lastIndex = 0;
     let match;
-    while ((match = linkedImageRegex.exec(chunk)) !== null) {
-      if (match.index > lastIndex) parts.push(chunk.slice(lastIndex, match.index));
-      parts.push(
-        <a key={`linked-img-${i}-${match.index}`} href={match[3]} target="_blank" rel="noopener noreferrer">
-          <img src={match[2]} alt={match[1] || ""} className="my-4 rounded shadow" />
+
+    while ((match = regex.exec(part)) !== null) {
+      const [fullMatch, alt, url, title] = match;
+      const start = match.index;
+
+      if (start > lastIndex) pieces.push(part.slice(lastIndex, start));
+
+      pieces.push(
+        <img
+          key={`img-${i}-${start}`}
+          src={url}
+          alt={alt}
+          title={title || alt}
+          className="inline-block max-w-full rounded mb-1"
+        />
+      );
+
+      lastIndex = start + fullMatch.length;
+    }
+
+    if (lastIndex < part.length) pieces.push(part.slice(lastIndex));
+
+    return pieces;
+  });
+
+  // Links [text](url "title")
+  parts = parts.flatMap((part, i) => {
+    if (typeof part !== "string") return part;
+    const regex = /\[([^\]]+)\]\((\S+?)(?:\s+"(.*?)")?\)/g;
+    const pieces = [];
+    let lastIndex = 0;
+    let match;
+
+    while ((match = regex.exec(part)) !== null) {
+      const [fullMatch, linkText, linkUrl, title] = match;
+      const start = match.index;
+
+      if (start > lastIndex) pieces.push(part.slice(lastIndex, start));
+
+      pieces.push(
+        <a
+          key={`a-${i}-${start}`}
+          href={linkUrl}
+          title={title || linkUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent-500 font-semibold underline"
+        >
+          {linkText}
         </a>
       );
-      lastIndex = match.index + match[0].length;
+
+      lastIndex = start + fullMatch.length;
     }
-    if (lastIndex < chunk.length) parts.push(chunk.slice(lastIndex));
-    return parts;
+
+    if (lastIndex < part.length) pieces.push(part.slice(lastIndex));
+
+    return pieces;
   });
 
-  // Regular images: ![alt](src)
-  const imageRegex = /!\[([^\]]*)\]\(([^)]+)\)/g;
-  elements = elements.flatMap((chunk, i) => {
-    if (typeof chunk !== "string") return chunk;
-    const parts = [];
-    let lastIndex = 0;
-    let match;
-    while ((match = imageRegex.exec(chunk)) !== null) {
-      if (match.index > lastIndex) parts.push(chunk.slice(lastIndex, match.index));
-      parts.push(
-        <img key={`img-${i}-${match.index}`} src={match[2]} alt={match[1] || ""} className="my-4 rounded shadow" />
-      );
-      lastIndex = match.index + match[0].length;
-    }
-    if (lastIndex < chunk.length) parts.push(chunk.slice(lastIndex));
-    return parts;
+  // Bold **text**
+  parts = parts.flatMap((part, i) => {
+    if (typeof part !== "string") return part;
+    return part.split(/(\*\*.*?\*\*)/g).map((p, j) =>
+      p.startsWith("**") && p.endsWith("**") ? <strong key={`b-${i}-${j}`} className="font-bold">{p.slice(2, -2)}</strong> : p
+    );
   });
 
-  // Links: [text](url)
-  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
-  elements = elements.flatMap((chunk, i) => {
-    if (typeof chunk !== "string") return chunk;
-    const parts = [];
-    let lastIndex = 0;
-    let match;
-    while ((match = linkRegex.exec(chunk)) !== null) {
-      if (match.index > lastIndex) parts.push(chunk.slice(lastIndex, match.index));
-      parts.push(
-        <a key={`link-${i}-${match.index}`} href={match[2]} target="_blank" rel="noopener noreferrer">
-          {match[1]}
-        </a>
-      );
-      lastIndex = match.index + match[0].length;
-    }
-    if (lastIndex < chunk.length) parts.push(chunk.slice(lastIndex));
-    return parts;
+  // Italic *text*
+  parts = parts.flatMap((part, i) => {
+    if (typeof part !== "string") return part;
+    return part.split(/(\*.*?\*)/g).map((p, j) =>
+      p.startsWith("*") && p.endsWith("*") ? <em key={`i-${i}-${j}`} className="italic">{p.slice(1, -1)}</em> : p
+    );
   });
 
-  // Bold: **text**
-  const boldRegex = /\*\*([^\*]+)\*\*/g;
-  elements = elements.flatMap((chunk, i) =>
-    typeof chunk === "string"
-      ? chunk.split(boldRegex).map((sub, j) => (j % 2 === 1 ? <strong key={`b-${i}-${j}`}>{sub}</strong> : sub))
-      : chunk
-  );
-
-  // Italic: *text*
-  const italicRegex = /\*([^\*]+)\*/g;
-  elements = elements.flatMap((chunk, i) =>
-    typeof chunk === "string"
-      ? chunk.split(italicRegex).map((sub, j) => (j % 2 === 1 ? <em key={`i-${i}-${j}`}>{sub}</em> : sub))
-      : chunk
-  );
-
-  return elements;
+  return parts;
 }
 
-export default function EventDescription({ summary, description, location, url, categories }) {
-  if (!summary && !description) return null;
+// Build nested lists recursively
+function renderList(items, level = 0) {
+  if (!items || items.length === 0) return null;
 
-  const lines = description ? description.split("\n") : [];
+  const Tag = items[0].type === "bullet" ? "ul" : "ol";
+  const paddingClass = `pl-${4 + level * 4}`;
+
+  return (
+    <Tag className={`mb-4 ${paddingClass}`}>
+      {items.map((item, idx) => (
+        <li key={idx} className="mb-1">
+          {parseInlineFormatting(item.content)}
+          {item.children && item.children.length > 0 && renderList(item.children, level + 1)}
+        </li>
+      ))}
+    </Tag>
+  );
+}
+
+function formatDescription(description) {
+  if (!description) return null;
+
+  const lines = description.split(/\r?\n/).map((line) => line.replace(/\t/g, "  ").trimEnd());
   const content = [];
+  const rootItems = [];
+  const stack = [{ items: rootItems, indent: -1 }];
 
-  lines.forEach((line, i) => {
-    const trimmed = line.trim();
-    if (!trimmed) return;
+  lines.forEach((line) => {
+    if (!line) return;
 
-    // Detect headings starting with ###
-    if (trimmed.startsWith("###")) {
+    const bulletMatch = /^(\s*)\*\s+(.+)$/.exec(line);
+    const numberMatch = /^(\s*)\d+\.\s+(.+)$/.exec(line);
+
+    if (bulletMatch || numberMatch) {
+      const indent = (bulletMatch ? bulletMatch[1] : numberMatch[1]).length;
+      const type = bulletMatch ? "bullet" : "number";
+      const contentText = (bulletMatch ? bulletMatch[2] : numberMatch[2]).trim();
+
+      // Find proper parent
+      while (stack.length > 0 && indent <= stack[stack.length - 1].indent) {
+        stack.pop();
+      }
+
+      const parent = stack[stack.length - 1];
+      const newItem = { type, content: contentText, children: [] };
+      parent.items.push(newItem);
+
+      stack.push({ items: newItem.children, indent });
+      return;
+    }
+
+    // Flush stack for non-list lines
+    while (stack.length > 1) stack.pop();
+
+    // Headings starting with ###
+    if (line.startsWith("###")) {
       content.push(
-        <h3 key={`h3-${i}`} className="text-xl font-semibold mt-4 mb-2">
-          {parseInlineFormatting(trimmed.replace(/^###\s*/, ""))}
+        <h3 key={content.length} className="text-xl font-semibold mt-6 mb-2">
+          {parseInlineFormatting(line.replace(/^###\s*/, ""))}
         </h3>
       );
       return;
     }
 
-    // Short headings without punctuation
-    if (trimmed.length < 60 && !/[.,]/.test(trimmed) && /^[A-Z]/.test(trimmed)) {
+    // Short headings (capitalized, no punctuation, <60 chars)
+    if (line.length < 60 && /^[A-Z]/.test(line) && !/[.,]/.test(line)) {
       content.push(
-        <h3 key={`h3-short-${i}`} className="text-xl font-semibold mt-4 mb-2">
-          {parseInlineFormatting(trimmed)}
+        <h3 key={content.length} className="text-xl font-semibold mt-4 mb-2">
+          {parseInlineFormatting(line)}
         </h3>
       );
       return;
     }
 
-    // Default paragraph
     content.push(
-      <p key={`p-${i}`} className="mb-2">
-        {parseInlineFormatting(trimmed)}
+      <p key={content.length} className="mb-2">
+        {parseInlineFormatting(line)}
       </p>
     );
   });
 
+  if (rootItems.length > 0) content.push(renderList(rootItems));
+
+  return content;
+}
+
+export default function EventDescription({ summary, description, htmlContent, location, url, categories }) {
+  if (!summary && !description && !htmlContent) return null;
+
+  const content = htmlContent ? (
+    <div className="event-description-html" dangerouslySetInnerHTML={{ __html: htmlContent }} />
+  ) : (
+    formatDescription(description)
+  );
+
   return (
     <div className="tribe-events-single-event-description tribe-events-content">
-      {/* Summary */}
-      {summary && <h2 className="mb-4 text-3xl font-bold">{summary}</h2>}
-
-      {/* Description content */}
+      {summary && <h2 className="mb-6 text-3xl font-bold">{summary}</h2>}
       {content}
-
-      {/* Location */}
-      {location && <p className="mt-4 italic">📍 {location}</p>}
-
-      {/* Event page link */}
+      {location && <p className="mt-6 italic">📍 {location}</p>}
       {url && (
         <p className="mt-2">
           <strong>
             The{" "}
-            <a href={url} target="_blank" rel="noopener noreferrer" className="underline">
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent-500 font-semibold underline"
+            >
               official event page
             </a>
           </strong>
         </p>
       )}
-
-      {/* Categories */}
       {categories && categories.length > 0 && (
         <div className="flex flex-wrap gap-2 mt-4">
           {categories.map((cat, idx) => (
-            <span key={idx} className="bg-accent-500 text-black px-3 py-1 rounded-full text-sm font-medium">
+            <span
+              key={idx}
+              className="bg-accent-500 text-black px-3 py-1 rounded-full text-sm font-medium"
+            >
               {cat}
             </span>
           ))}

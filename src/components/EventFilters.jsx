@@ -197,7 +197,7 @@ export default function EventFilters({ preRenderedEvents = [], batchSize = 6, fl
         </select>
 
         <select value={selectedOrganizer} onChange={e => setSelectedOrganizer(e.target.value)} className="border rounded px-2 py-1 text-gray-700">
-          <option value="">All Organizers</option>
+          <option value="">All Organisers</option>
           {organizers.map(o => <option key={o} value={o.toLowerCase()}>{o}</option>)}
         </select>
 
@@ -217,7 +217,7 @@ export default function EventFilters({ preRenderedEvents = [], batchSize = 6, fl
       </div>
 
       {/* SDG Filter */}
-      <nav className="flex flex-wrap gap-2 mb-4 border-b pb-3 border-gray-300 dark:border-gray-600">
+      <nav className="flex flex-wrap gap-2 mb-4 border-b pb-3 border-accent-500 dark:border-accent-500">
         <button onClick={() => setSelectedSDG('All')} className={`px-4 py-2 text-sm font-medium rounded-t-md ${selectedSDG === 'All' ? 'bg-accent-600 text-white' : 'text-gray-700 hover:bg-accent-100'}`}>All SDGs</button>
         {sdgCategories.filter(id => id !== 'All').map(id => {
           const sdg = sdgMap[id];
@@ -233,7 +233,7 @@ export default function EventFilters({ preRenderedEvents = [], batchSize = 6, fl
       {/* Event Cards */}
       {Object.entries(eventsByMonth).map(([month, monthEvents]) => (
         <section key={month} className="space-y-6">
-          {!flatList && <h2 className="text-2xl font-bold">{month}</h2>}
+          {!flatList && <h2 className="text-2xl font-bold text-white">{month}</h2>}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {monthEvents.map(e => (
               <div key={e.slug} className="border rounded-lg p-4 shadow-sm flex flex-col h-full bg-white">

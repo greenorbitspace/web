@@ -2,21 +2,11 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import HeroSection from '../../components/HeroSection.astro';
 import EventDescription from '../../components/EventDescription.jsx';
 import events from '../../data/events.json';
 import slugify from '../../utils/slugify.js';
-import { SDGs } from '../../data/sdgs';
+import { buildEventSchema, fallbackIcon, sdgMap, Event } from '../../components/Schema/EventSchema';
 
-const fallbackIcon = '/sdgs/default.svg';
-
-// Map SDG IDs to metadata
-const sdgMap = SDGs.reduce((acc, sdg) => {
-  acc[sdg.id] = sdg;
-  return acc;
-}, {});
-
-// Generate static paths
 export async function getStaticPaths() {
   return events.map(e => ({
     params: { slug: e.slug || slugify(e.title) },
@@ -24,25 +14,27 @@ export async function getStaticPaths() {
 }
 
 const { slug } = Astro.params;
-
-// Find matching event
 const event = events.find(e => (e.slug || slugify(e.title)) === slug);
 if (!event) throw new Error(`No event found with slug: ${slug}`);
 
-// Helper to format dates
-function formatDate(dateStr) {
-  if (!dateStr) return null;
+function formatDate(dateStr: string | undefined) {
+  if (!dateStr) return '';
   const date = new Date(dateStr);
-  if (isNaN(date)) return dateStr;
-  return date.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' });
+  return isNaN(date.getTime())
+    ? dateStr
+    : date.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
-// Normalize event data
-const normalizedEvent = {
+function getEventSlug(e: Event) {
+  return e.slug || slugify(e.title);
+}
+
+const normalizedEvent: Event = {
+  slug: event.slug || slugify(event.title),
   title: event.title || 'Untitled Event',
   description: event.description || '',
-  start: event.start || null,
-  end: event.end || null,
+  start: event.start,
+  end: event.end,
   location: event.location && event.location !== '-' ? event.location : 'TBD',
   organizer: event.organizer || 'TBD',
   organizer_url: event.organizer_url || '',
@@ -53,216 +45,127 @@ const normalizedEvent = {
   image: event.image || event.image_url || '',
   calendar_links: event.calendar_links || [],
   sdgs: event.sdgs || [],
-  price: event.price || null, // optional for offers
-  currency: event.currency || 'GBP', // optional for offers
+  price: event.price || null,
+  currency: event.currency || 'GBP',
 };
 
-// Previous / next events
 const eventIndex = events.findIndex(e => (e.slug || slugify(e.title)) === slug);
 const prevEvent = events[eventIndex - 1] || null;
 const nextEvent = events[eventIndex + 1] || null;
 
-function getEventSlug(e) {
-  return e.slug || slugify(e.title);
-}
-
-// Determine location object
-let locationSchema;
-if (normalizedEvent.location === 'TBD') {
-  locationSchema = undefined;
-} else if (normalizedEvent.location.toLowerCase().includes('online')) {
-  locationSchema = {
-    "@type": "VirtualLocation",
-    url: normalizedEvent.url || window.location.href
-  };
-} else {
-  locationSchema = {
-    "@type": "Place",
-    name: normalizedEvent.location,
-    address: normalizedEvent.location
-  };
-}
-
-// Build offers (optional)
-let offersSchema = normalizedEvent.price
-  ? {
-      "@type": "Offer",
-      url: normalizedEvent.url,
-      price: normalizedEvent.price,
-      priceCurrency: normalizedEvent.currency,
-      availability: "https://schema.org/InStock",
-      validFrom: normalizedEvent.start
-    }
-  : undefined;
-
-// Build performer (optional)
-let performerSchema = normalizedEvent.organizer
-  ? {
-      "@type": "Organization",
-      name: normalizedEvent.organizer,
-      url: normalizedEvent.organizer_url || undefined
-    }
-  : undefined;
-
-// Build JSON-LD schema for this event
-const eventSchema = {
-  "@context": "https://schema.org",
-  "@type": "Event",
-  name: normalizedEvent.title,
-  description: normalizedEvent.description,
-  startDate: normalizedEvent.start,
-  endDate: normalizedEvent.end || normalizedEvent.start,
-  eventStatus: `https://schema.org/${normalizedEvent.status}`,
-  url: normalizedEvent.url,
-  image: normalizedEvent.image,
-  location: locationSchema,
-  performer: performerSchema,
-  offers: offersSchema,
-  keywords: [
-    ...normalizedEvent.categories,
-    ...normalizedEvent.tags,
-    ...normalizedEvent.sdgs.map(id => sdgMap[id]?.name || `SDG ${id}`)
-  ].filter(Boolean),
-  about: normalizedEvent.sdgs.length
-    ? normalizedEvent.sdgs.map(id => ({
-        "@type": "Thing",
-        name: sdgMap[id]?.name || `SDG ${id}`,
-        url: `/events/?sdg=${id}`
-      }))
-    : undefined,
-  isAccessibleForFree: true
-};
+const eventSchema = buildEventSchema(normalizedEvent);
 ---
 
 <Layout title={normalizedEvent.title} schema={[eventSchema]}>
   <Header />
 
+  <!-- Hero Section -->
+  <section class="relative w-full h-[500px] sm:h-[600px] lg:h-[700px] flex items-center justify-center overflow-hidden">
+    <div
+      class="absolute inset-0 bg-cover bg-center"
+      style={`background-image: url(${normalizedEvent.image || '/images/default-event-hero.jpg'});`}
+      aria-hidden="true"
+    />
+    <div class="absolute inset-0 bg-black/50" aria-hidden="true"></div>
+    <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl space-y-6">
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white drop-shadow-lg">
+        {normalizedEvent.title}
+      </h1>
+      {normalizedEvent.subtitle && (
+        <p class="text-2xl sm:text-3xl text-gray-200 drop-shadow">
+          {normalizedEvent.subtitle}
+        </p>
+      )}
+      {normalizedEvent.start && (
+        <p class="text-gray-200 drop-shadow">
+          {formatDate(normalizedEvent.start)}
+          {normalizedEvent.end ? ` – ${formatDate(normalizedEvent.end)}` : ''}
+        </p>
+      )}
+    </div>
+  </section>
+
+  <!-- Meta Info -->
+  <section class="flex flex-wrap gap-4 max-w-4xl mx-auto px-4 mt-4">
+    {normalizedEvent.organizer && (
+      <span class="inline-block bg-accent-500 text-white px-4 py-2 rounded font-semibold text-sm">
+        {normalizedEvent.organizer}
+      </span>
+    )}
+    {normalizedEvent.location && (
+      <span class="inline-block bg-gray-700 text-white px-4 py-2 rounded font-semibold text-sm">
+        {normalizedEvent.location}
+      </span>
+    )}
+    {normalizedEvent.sdgs.length > 0 && (
+      <div class="flex flex-wrap gap-2">
+        {normalizedEvent.sdgs.sort((a,b)=>a-b).map(id => (
+          <img
+            key={id}
+            src={sdgMap[id]?.icon || fallbackIcon}
+            alt={sdgMap[id]?.name || `SDG ${id}`}
+            title={sdgMap[id]?.name || `SDG ${id}`}
+            class="w-10 h-10 rounded-sm cursor-pointer"
+            onClick={`window.location='/events/?sdg=${id}'`}
+          />
+        ))}
+      </div>
+    )}
+  </section>
+
   <main class="py-12 max-w-4xl mx-auto px-4 space-y-8">
 
-    <!-- Hero -->
-    <HeroSection
-      title={normalizedEvent.title}
-      description={
-        normalizedEvent.start
-          ? `${formatDate(normalizedEvent.start)}${normalizedEvent.end ? ` – ${formatDate(normalizedEvent.end)}` : ''}`
-          : ''
-      }
-    />
+    <section class="space-y-4">
+      <EventDescription description={normalizedEvent.description} />
+      {normalizedEvent.url && (
+        <a
+          href={normalizedEvent.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block bg-accent-500 hover:bg-accent-600 text-white py-2 px-4 rounded transition"
+        >
+          Event Page
+        </a>
+      )}
+    </section>
 
-    <!-- Event Image -->
-    {normalizedEvent.image && (
-      <img
-        src={normalizedEvent.image}
-        alt={normalizedEvent.title}
-        class="w-full rounded shadow-lg"
+    <!-- Venue Google Maps -->
+    {normalizedEvent.location && !['tbd','online'].includes(normalizedEvent.location.toLowerCase()) && (
+      <iframe
+        class="w-full h-64 mt-4 rounded"
+        src={`https://www.google.com/maps?q=${encodeURIComponent(normalizedEvent.location)}&output=embed`}
         loading="lazy"
       />
     )}
 
-    <!-- Categories / Tags -->
-    {normalizedEvent.categories.length > 0 && (
-      <div>
-        <strong>Categories:</strong>
-        <div class="flex flex-wrap gap-2 mt-1">
-          {normalizedEvent.categories.map(cat => (
-            <button
-              class="bg-gray-200 text-gray-800 text-xs font-medium px-3 py-1 rounded-full hover:bg-gray-300 cursor-pointer"
-              onClick={`window.location='/events/?category=${encodeURIComponent(cat.toLowerCase())}'`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-      </div>
-    )}
-
-    <!-- SDG Icons -->
-    {normalizedEvent.sdgs.length > 0 && (
-      <div>
-        <strong>Relevant SDGs:</strong>
-        <div class="flex flex-wrap gap-2 mt-2">
-          {normalizedEvent.sdgs.sort((a, b) => a - b).map(id => {
-            const sdg = sdgMap[id];
-            return (
-              <img
-                key={id}
-                src={sdg?.icon || fallbackIcon}
-                alt={sdg?.name || `SDG ${id}`}
-                class="w-6 h-6 rounded-sm cursor-pointer"
-                title={sdg?.name || `SDG ${id}`}
-                onClick={`window.location='/events/?sdg=${id}'`}
-              />
-            );
-          })}
-        </div>
-      </div>
-    )}
-
-    <!-- Description -->
-    <section class="py-12 max-w-full space-y-4">
-      <EventDescription description={normalizedEvent.description} />
-
-      {normalizedEvent.url && (
-        <p>
-          <a href={normalizedEvent.url} target="_blank" rel="noopener noreferrer" class="inline-block bg-accent-500 hover:bg-accent-600 text-white py-2 px-4 rounded transition">
-            Event Page
-          </a>
-        </p>
-      )}
-
-      {normalizedEvent.calendar_links.length > 0 && (
-        <details class="inline-block relative mt-2">
-          <summary class="btn flex items-center gap-1 cursor-pointer bg-accent-500 hover:bg-accent-600 text-white py-2 px-4 rounded">
-            Add to Calendar
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 10 7">
-              <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
-            </svg>
-          </summary>
-          <ul class="absolute bg-white border rounded shadow mt-2 right-0 min-w-[200px] z-10">
-            {normalizedEvent.calendar_links.map(link => (
-              <li key={link.label}>
-                <a href={link.url} target="_blank" rel="noopener noreferrer" class="block px-4 py-2 hover:bg-gray-100">{link.label}</a>
-              </li>
-            ))}
-          </ul>
-        </details>
-      )}
-    </section>
-
-    <!-- Organizer -->
-    {normalizedEvent.organizer && (
-      <section class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-primary-500 border border-accent-500 p-6 rounded text-white">
-        <p>
-          <strong>Organiser:</strong> {normalizedEvent.organizer}
-          {normalizedEvent.organizer_url && (
-            <> — <a href={normalizedEvent.organizer_url} target="_blank" rel="noopener noreferrer" class="underline hover:text-accent-200">Website</a></>
-          )}
-        </p>
-      </section>
-    )}
-
-    <!-- Venue -->
-    {normalizedEvent.location && (
-      <section class="bg-primary-500 border border-accent-500 p-4 rounded space-y-2">
-        <strong>Venue:</strong> {normalizedEvent.location}
-        {normalizedEvent.location.toLowerCase() !== 'tbd' && !normalizedEvent.location.toLowerCase().includes('online') && (
-          <iframe
-            class="w-full h-64 mt-2 rounded"
-            src={`https://www.google.com/maps?q=${encodeURIComponent(normalizedEvent.location)}&output=embed`}
-            loading="lazy"
-          />
-        )}
-      </section>
-    )}
-
     <!-- Navigation -->
     <section class="flex flex-col sm:flex-row justify-between gap-4 mt-8">
-      {prevEvent && <a href={`/events/${getEventSlug(prevEvent)}/`} class="btn bg-accent-500 hover:bg-accent-600 text-white py-2 px-4 rounded flex-1 text-center transition">&larr; Previous Event</a>}
-      <a href="/events/" class="btn bg-gray-500 hover:bg-accent-600 text-white py-2 px-4 rounded flex-1 text-center transition">Back to Events</a>
-      {nextEvent && <a href={`/events/${getEventSlug(nextEvent)}/`} class="btn bg-accent-500 hover:bg-accent-600 text-white py-2 px-4 rounded flex-1 text-center transition">Next Event &rarr;</a>}
+      {prevEvent && (
+        <a href={`/events/${getEventSlug(prevEvent)}/`} class="btn bg-accent-500 hover:bg-accent-600 text-white py-2 px-4 rounded flex-1 text-center transition">
+          &larr; Previous Event
+        </a>
+      )}
+      <a href="/events/" class="btn bg-gray-500 hover:bg-accent-600 text-white py-2 px-4 rounded flex-1 text-center transition">
+        Back to Events
+      </a>
+      {nextEvent && (
+        <a href={`/events/${getEventSlug(nextEvent)}/`} class="btn bg-accent-500 hover:bg-accent-600 text-white py-2 px-4 rounded flex-1 text-center transition">
+          Next Event &rarr;
+        </a>
+      )}
     </section>
-
   </main>
+
+  <!-- Full-Width CTA -->
+  <section class="w-full bg-secondary-500 py-16 text-white text-center">
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-bold mb-4">Enjoyed this insight?</h2>
+      <p class="mb-6">Subscribe to our newsletter for updates on sustainable space operations and research.</p>
+      <a href="/subscribe" class="inline-block bg-white text-accent-600 font-semibold px-6 py-3 rounded-md hover:bg-gray-100 transition">
+        Subscribe Now
+      </a>
+    </div>
+  </section>
 
   <Footer />
 </Layout>

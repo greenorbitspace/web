@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import ShareButtons from '../../components/ShareButtons.astro';
+import InsightsGrid from '../../components/InsightsGrid.jsx';
 import { getCollection } from 'astro:content';
 import { SDGs } from '../../data/sdgs';
 import crypto from 'crypto';
@@ -52,7 +53,7 @@ const formattedDate = data.pubdate
   : null;
 
 // --- Page metadata ---
-const pageTitle = data.seoTitle || data.title || 'News Post';
+const pageTitle = data.seoTitle || data.title || 'news Post';
 const pageDescription = data.seoDescription || data.description || data.title;
 const pageURL = `https://greenorbit.space/news/${slug}`;
 const pageImage = data.featuredImage || '/default-og-image.jpg';
@@ -96,6 +97,18 @@ const relatedPosts = posts
   .filter(p => p.score > 0)
   .sort((a,b) => b.score - a.score)
   .slice(0, 3);
+
+// Transform for InsightsGrid
+const relatedPostsData = relatedPosts.map(post => ({
+  ...post,
+  collection: 'news',
+  data: {
+    ...post.data,
+    contentType: 'news',
+    organisations: post.data.organisations || [],
+    SDGs: post.data.SDGs || [],
+  }
+}));
 
 // --- Structured Data ---
 const jsonLd = {
@@ -190,91 +203,12 @@ const jsonLd = {
   </main>
 
   <!-- Related posts -->
-  {relatedPosts.length > 0 && (
-    <section class="w-full py-12">
-      <h2 class="text-2xl font-bold mb-6 text-center text-accent-500">Related Posts</h2>
-      <ul class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full px-4 sm:px-6 lg:px-8">
-        {relatedPosts.map(post => {
-          const {
-            title,
-            pubdate,
-            excerpt,
-            tags = [],
-            organisations = [],
-            SDGs = [],
-            featuredImage,
-          } = post.data;
-
-          const date = pubdate
-            ? new Date(pubdate).toLocaleDateString("en-GB", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })
-            : "";
-
-          const sdgIcons = Array.isArray(SDGs)
-            ? SDGs.map(id => {
-                const code = `SDG ${String(id).padStart(2, "0")}`;
-                const sdg = sdgMap[code.toUpperCase()];
-                return (
-                  <a key={code} href={`https://sdgs.greenorbit.space/${id}/`} target="_blank" rel="noopener noreferrer">
-                    <img
-                      src={sdg?.icon || '/images/fallback-sdg.png'}
-                      alt={sdg?.name || code}
-                      class="w-8 h-8 rounded-sm border border-gray-300/40 transition-transform hover:scale-110"
-                    />
-                  </a>
-                );
-              })
-            : [];
-
-          return (
-            <li key={post.slug} class="border border-accent-500 rounded-lg overflow-hidden hover:shadow-xl transition bg-white dark:bg-gray-800/40">
-              <a href={`/news/${post.slug}`} class="block overflow-hidden rounded-t-lg">
-                <img
-                  src={featuredImage || '/images/placeholder.jpg'}
-                  alt={title}
-                  loading="lazy"
-                  class="w-full h-64 md:h-72 lg:h-80 object-cover object-center transition-transform duration-300 hover:scale-105"
-                />
-              </a>
-              <div class="p-4 space-y-3">
-                <a href={`/news/${post.slug}`} class="block w-full">
-                  <h3 class="text-lg font-semibold bg-accent-500 text-white w-full px-3 py-2 rounded-md transition-colors">
-                    {title}
-                  </h3>
-                </a>
-                {date && <p class="text-sm text-gray-500 dark:text-gray-300">{date}</p>}
-                {excerpt && <p class="text-gray-700 dark:text-gray-300 text-sm">{excerpt}</p>}
-                {tags.length > 0 && (
-                  <div class="flex flex-wrap gap-2 mt-2">
-                    {tags.map(tag => (
-                      <span key={tag} class="inline-block bg-accent-500 text-white text-xs px-2 py-1 rounded">
-                        #{tag}
-                      </span>
-                    ))}
-                  </div>
-                )}
-                {organisations?.length > 0 && (
-                  <div class="mt-2 flex flex-wrap gap-2">
-                    {organisations.map(org => (
-                      <a
-                        key={org.slug}
-                        href={`/organisations/${org.slug}`}
-                        class="bg-gray-300 dark:bg-accent-500 text-white rounded-full px-3 py-1 text-xs font-medium capitalize"
-                      >
-                        {org.name}
-                      </a>
-                    ))}
-                  </div>
-                )}
-                {sdgIcons.length > 0 && <div class="mt-2 flex flex-wrap gap-2">{sdgIcons}</div>}
-              </div>
-            </li>
-          );
-        })}
-      </ul>
+  {relatedPostsData.length > 0 && (
+    <section class="w-full py-12 bg-secondary-500">
+      <h2 class="text-2xl font-bold mb-6 text-center text-white">Related Posts</h2>
+      <div class="w-full px-4 sm:px-6 lg:px-8">
+        <InsightsGrid client:load posts={relatedPostsData} />
+      </div>
     </section>
   )}
 

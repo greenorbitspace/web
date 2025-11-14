@@ -11,29 +11,65 @@ import MissionPillars from '../../components/MissionPillars.astro';
 <Layout title="Mission">
   <Header />
 
-  <main class="py-8">
+  <main class="space-y-16">
+
     <!-- Hero Section -->
-    <HeroSection 
-      title="Mission" 
-      description="Empowering businesses to pioneer sustainable innovation through strategic marketing and space-enabled solutions." 
-    />
+    <section class="bg-white dark:bg-secondary-500">
+      <HeroSection 
+        title="Mission" 
+        description="Empowering businesses to pioneer sustainable innovation through strategic marketing and space-enabled solutions." 
+      />
+    </section>
 
-<MissionStatement/>
-
-<MissionDescription />
-
-<MissionPillars />
-
-    <!-- Careers CTA -->
-    <section class="py-16 bg-gray-50 dark:bg-secondary-600 text-center">
-      <div class="container-custom max-w-3xl mx-auto">
-        <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Join Our Team</h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-8">
-          We’re always on the lookout for passionate professionals who share our vision for a more sustainable space industry. Check out our current openings and join us on our mission.
-        </p>
-        <a href="/careers" class="btn-primary">View Open Positions</a>
+    <!-- Mission Statement -->
+    <section class="bg-gray-50 dark:bg-primary-500 py-12">
+      <div class="container-custom">
+        <MissionStatement />
       </div>
     </section>
+
+    <!-- Mission Description -->
+    <section class="bg-white dark:bg-secondary-500 text-white py-12">
+      <div class="container-custom">
+        <MissionDescription />
+      </div>
+    </section>
+
+    <!-- Mission Pillars -->
+    <section class="bg-gray-50 dark:bg-primary-500 py-12">
+      <div class="container-custom">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Our Mission Pillars</h2>
+        <MissionPillars />
+      </div>
+    </section>
+
+    <!-- Optional Supporting Story -->
+    <section class="bg-white dark:bg-accent-500 py-12">
+      <div class="container-custom grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Why We Do This</h3>
+          <p class="text-gray-600 dark:text-white mb-4">
+            Our mission is rooted in sustainability, innovation, and measurable impact. We guide organisations to grow responsibly while embracing space-enabled solutions.
+          </p>
+          <p class="text-gray-600 dark:text-white">
+            Through professional certifications, strategic partnerships, and a commitment to the UN Sustainable Development Goals, we ensure every initiative aligns with ethical and environmental standards.
+          </p>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-xl">
+          <img src="/images/mission-story.png" alt="Our Mission Story" class="w-full h-auto" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Full-Width CTA -->
+    <section class="w-full bg-secondary-500 py-16 text-white text-center">
+      <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to collaborate?</h2>
+        <p class="mb-8 text-lg sm:text-xl text-gray-200">Let’s drive responsible growth for your organisation. Get in touch for a custom package or exploratory call.</p>
+        <a href="/contact" class="inline-block w-full sm:w-auto px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition text-lg sm:text-xl">Contact Us</a>
+      </div>
+    </section>
+
   </main>
 
   <Footer />

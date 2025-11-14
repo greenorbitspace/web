@@ -24,7 +24,7 @@ export default function InsightsGrid({ posts = [] }) {
   }
 
   return (
-    <ul className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full px-4 sm:px-6 lg:px-8">
+    <ul className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full">
       {posts.map((post) => {
         const data = post.data ?? {};
         const collection = post.collection ?? "blog";
