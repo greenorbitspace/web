@@ -3,171 +3,96 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import HeroSection from '../../components/HeroSection.astro';
+import InsightsGrid from '../../components/InsightsGrid.jsx';
 import { getCollection } from 'astro:content';
+import organisations from '../../data/organisations.json';
+import { slug as slugify } from 'github-slugger';
 import { SDGs } from '../../data/sdgs';
 
+/* -------------------------------------------
+   Load news collection
+-------------------------------------------- */
 const collectionName = 'news';
 let entries = await getCollection(collectionName);
 
-// --- Normalize tags: trim only (keep original casing for display) ---
+// Normalize tags
 entries.forEach(entry => {
-  if (entry.data.tags) {
-    entry.data.tags = entry.data.tags.map(tag => tag.trim());
-  }
+  if (entry.data.tags) entry.data.tags = entry.data.tags.map(tag => tag.trim());
 });
 
-// --- Filter out entries without pubdate and future-dated entries, sort by date descending ---
-const today = new Date();
-entries = entries
-  .filter(entry => entry.data.pubdate && new Date(entry.data.pubdate) <= today)
-  .sort((a, b) => new Date(b.data.pubdate) - new Date(a.data.pubdate));
+// Sort by pubdate descending
+entries = entries.sort((a, b) => {
+  if (!a.data.pubdate) return 1;
+  if (!b.data.pubdate) return -1;
+  return new Date(b.data.pubdate) - new Date(a.data.pubdate);
+});
 
-// --- Dynamic tag library ---
-const tagLibrary = [...new Set(entries.flatMap(entry => entry.data.tags ?? []))].sort((a, b) => a.localeCompare(b));
+// Map organisations to slugs
+const orgSlugMap = {};
+organisations.forEach(org => {
+  orgSlugMap[org.organisation] = org.slug;
+});
 
-// --- Active tag filtering (case-insensitive) ---
-const url = new URL(Astro.request.url);
-const activeTagParam = url.searchParams.get('tag')?.trim().toLowerCase();
-const filteredEntries = activeTagParam
-  ? entries.filter(entry =>
-      (entry.data.tags ?? []).some(tag => tag.toLowerCase() === activeTagParam)
-    )
-  : entries;
+// Normalize entries for InsightsGrid
+const allInsights = entries.map(entry => {
+  const orgs = Array.isArray(entry.data.organisations)
+    ? entry.data.organisations.map(name => ({
+        name,
+        slug: orgSlugMap[name] || slugify(name),
+      }))
+    : [];
 
-// --- SDG Map for badges ---
+  return {
+    ...entry,
+    data: {
+      ...entry.data,
+      organisations: orgs,
+      contentType: 'news',
+      pubdate: entry.data.pubdate || null,
+      title: entry.data.title || '(Untitled)',
+    },
+    collection: collectionName,
+  };
+});
+
+// SDG map for InsightsGrid
 const sdgMap = SDGs.reduce((acc, sdg) => {
-  const code = `SDG ${String(sdg.id).padStart(2, '0')}`;
+  const code = `SDG ${String(sdg.id).padStart(2,'0')}`;
   acc[code.toUpperCase()] = sdg;
   return acc;
 }, {});
 ---
 
-<Layout title="News" description="Explore our latest news articles on sustainable space operations.">
+<Layout title="News" description="Explore our latest news posts on sustainable space operations.">
   <Header />
 
   <main class="py-12 w-full">
-    <HeroSection 
-      title="News" 
-      description="Explore our latest news posts on sustainability, space, and innovation." 
+    <HeroSection
+      title="News"
+      description="Explore our latest news posts on sustainability, space, and innovation."
     />
 
-    <!-- Tag Filter -->
-    {tagLibrary.length > 0 && (
-      <div class="flex flex-wrap gap-2 mt-6 mb-8 justify-center">
-        <a
-          href="/news"
-          class={`px-3 py-1 rounded-full text-sm font-semibold ${!activeTagParam ? 'bg-accent-500 text-white' : 'bg-gray-700 text-white/80 hover:bg-accent-500'}`}
-        >
-          All
-        </a>
-        {tagLibrary.map(tag => (
-          <a
-            key={tag}
-            href={`/news?tag=${encodeURIComponent(tag)}`}
-            class={`px-3 py-1 rounded-full text-sm font-semibold ${activeTagParam === tag.toLowerCase() ? 'bg-accent-500 text-white' : 'bg-gray-700 text-white/80 hover:bg-accent-500'}`}
-          >
-            #{tag}
-          </a>
-        ))}
-      </div>
-    )}
-
-    <!-- news Grid -->
-    <ul id="news-grid" class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full px-4 sm:px-6 lg:px-8">
-      {filteredEntries.slice(0, 6).map(entry => {
-        const { title, excerpt, pubdate, tags = [], SDGs = [], featuredImage } = entry.data;
-        const date = pubdate ? new Date(pubdate).toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' }) : '';
-        return (
-          <li key={entry.slug} class="border border-accent-500 rounded-lg overflow-hidden hover:shadow-xl transition bg-white dark:bg-gray-800/40">
-            <a href={`/news/${entry.slug}`} class="block overflow-hidden rounded-t-lg">
-              <img src={featuredImage || '/images/placeholder.jpg'} alt={title} loading="lazy" class="w-full h-48 md:h-56 lg:h-64 object-cover object-center transition-transform duration-300 hover:scale-105" />
-            </a>
-            <div class="p-4 space-y-2">
-              <a href={`/news/${entry.slug}`} class="block w-full">
-                <h3 class="text-lg font-semibold bg-accent-500 text-white w-full px-3 py-2 rounded-md">{title}</h3>
-              </a>
-              {date && <p class="text-sm text-white">{date}</p>}
-              {excerpt && <p class="text-gray-700 dark:text-gray-300 text-sm">{excerpt}</p>}
-
-              <!-- Tags -->
-              {tags.length > 0 && (
-                <div class="flex flex-wrap gap-2 mt-2">
-                  {tags.map(tag => (
-                    <a key={tag} href={`/news?tag=${encodeURIComponent(tag)}`} class="bg-accent-500 text-white text-xs px-2 py-1 rounded hover:bg-accent-600 transition">#{tag}</a>
-                  ))}
-                </div>
-              )}
-
-              <!-- SDGs -->
-              {SDGs.length > 0 && (
-                <div class="flex flex-wrap gap-2 mt-2">
-                  {SDGs.map(id => {
-                    const code = `SDG ${String(id).padStart(2,'0')}`;
-                    const sdg = sdgMap[code.toUpperCase()];
-                    return (
-                      <a key={id} href={`https://sdgs.greenorbit.space/${id}/`} target="_blank" rel="noopener noreferrer">
-                        <img src={sdg?.icon || '/sdgs/default.svg'} alt={sdg?.name || code} class="w-8 h-8 rounded-sm border border-gray-300/40 transition-transform hover:scale-110"/>
-                      </a>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
-          </li>
-        );
-      })}
-    </ul>
-
-    <!-- Load More Button -->
-    {filteredEntries.length > 6 && (
-      <div class="flex justify-center mt-8">
-        <button id="load-more" class="px-6 py-3 rounded-lg bg-accent-500 text-white font-semibold hover:bg-accent-600 transition">Load More</button>
-      </div>
-    )}
+    <div class="w-full px-4 md:px-8 lg:px-12">
+      <!-- Insights Grid with SDG filter, search, and full-width cards -->
+      <InsightsGrid client:load posts={allInsights} />
+    </div>
 
     <!-- CTA Section -->
     <section class="mt-16 py-16 bg-secondary-500 text-white text-center w-full">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl sm:text-4xl font-bold mb-4">Stay Updated on Sustainable Space</h2>
-        <p class="mb-8 text-lg sm:text-xl text-gray-200">Subscribe to our newsletter for the latest insights on space, sustainability, and innovation.</p>
-        <a href="/newsletter" class="inline-block px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition text-lg sm:text-xl">Subscribe Now</a>
+        <p class="mb-8 text-lg sm:text-xl text-gray-200">
+          Subscribe to our newsletter for the latest insights on space, sustainability, and innovation.
+        </p>
+        <a
+          href="/newsletter"
+          class="inline-block px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition text-lg sm:text-xl"
+        >
+          Subscribe Now
+        </a>
       </div>
     </section>
   </main>
 
   <Footer />
-
-  <!-- Load More Script -->
-  <script>
-    const entries = { filteredEntries: JSON.parse(JSON.stringify(filteredEntries)) };
-    let visibleCount = 6;
-    const increment = 6;
-    const loadMoreBtn = document.getElementById('load-more');
-    const grid = document.getElementById('news-grid');
-
-    if (loadMoreBtn) {
-      loadMoreBtn.addEventListener('click', () => {
-        const nextEntries = entries.filteredEntries.slice(visibleCount, visibleCount + increment);
-        nextEntries.forEach(entry => {
-          const li = document.createElement('li');
-          li.className = "border border-accent-500 rounded-lg overflow-hidden hover:shadow-xl transition bg-white dark:bg-gray-800/40";
-          li.innerHTML = `
-            <a href="/news/${entry.slug}" class="block overflow-hidden rounded-t-lg">
-              <img src="${entry.data.featuredImage || '/images/placeholder.jpg'}" alt="${entry.data.title}" loading="lazy" class="w-full h-48 md:h-56 lg:h-64 object-cover object-center transition-transform duration-300 hover:scale-105"/>
-            </a>
-            <div class="p-4 space-y-2">
-              <a href="/news/${entry.slug}" class="block w-full">
-                <h3 class="text-lg font-semibold bg-accent-500 text-white w-full px-3 py-2 rounded-md">${entry.data.title}</h3>
-              </a>
-              ${entry.data.pubdate ? `<p class="text-sm text-white">${new Date(entry.data.pubdate).toLocaleDateString('en-GB',{year:'numeric',month:'long',day:'numeric'})}</p>` : ''}
-              ${entry.data.excerpt ? `<p class="text-gray-700 dark:text-gray-300 text-sm">${entry.data.excerpt}</p>` : ''}
-            </div>
-          `;
-          grid.appendChild(li);
-        });
-        visibleCount += increment;
-        if (visibleCount >= entries.filteredEntries.length) loadMoreBtn.style.display = 'none';
-      });
-    }
-  </script>
 </Layout>

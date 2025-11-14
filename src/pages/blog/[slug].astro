@@ -3,16 +3,18 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import ShareButtons from '../../components/ShareButtons.astro';
-import InsightsGrid from '../../components/InsightsGrid.jsx';
 import { getCollection } from 'astro:content';
 import { SDGs } from '../../data/sdgs';
 import crypto from 'crypto';
 import { slug as slugify } from 'github-slugger';
+import Icon from '../../components/Icon.astro';
 
 // --- Static paths ---
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
-  return posts.map(post => ({ params: { slug: post.slug ?? post.id } }));
+  return posts.map(post => ({
+    params: { slug: post.slug ?? post.id },
+  }));
 }
 
 // --- Runtime ---
@@ -20,15 +22,17 @@ const { slug: paramSlug } = Astro.params;
 const posts = await getCollection('blog');
 
 // Find post by slug, id, or slugified title
-let postEntry = posts.find(p => p.slug === paramSlug || p.id === paramSlug)
-  ?? posts.find(p => slugify(p.data.title).toLowerCase() === paramSlug?.toLowerCase());
-if (!postEntry) throw new Error(`No blog article found for slug: "${paramSlug}"`);
+let postEntry = posts.find(p => p.slug === paramSlug || p.id === paramSlug);
+if (!postEntry) {
+  postEntry = posts.find(p => slugify(p.data.title).toLowerCase() === paramSlug?.toLowerCase());
+}
+if (!postEntry) throw new Error(`No blog articles found for slug: "${paramSlug}"`);
 
 const slug = postEntry.slug || slugify(postEntry.data.title).toLowerCase();
 const { Content } = await postEntry.render();
 const data = postEntry.data;
 
-// --- Author ---
+// --- Author info ---
 const team = await getCollection('team');
 const authorSlug = slugify(data.author || '').toLowerCase();
 const authorInfo = team.find(a => slugify(a.data.title || a.data.slug || '').toLowerCase() === authorSlug) || null;
@@ -48,79 +52,74 @@ const formattedDate = data.pubdate
   : null;
 
 // --- Page metadata ---
-const pageTitle = data.seoTitle || data.title;
+const pageTitle = data.seoTitle || data.title || 'blog Post';
 const pageDescription = data.seoDescription || data.description || data.title;
 const pageURL = `https://greenorbit.space/blog/${slug}`;
 const pageImage = data.featuredImage || '/default-og-image.jpg';
 
 // --- SDG Map & Codes ---
 const sdgMap = SDGs.reduce((acc, sdg) => {
-  acc[`SDG ${String(sdg.id).padStart(2, '0')}`.toUpperCase()] = sdg;
+  const code = `SDG ${String(sdg.id).padStart(2, '0')}`;
+  acc[code.toUpperCase()] = sdg;
   return acc;
 }, {});
 
-const sdgCodes = Array.isArray(data.SDGs)
-  ? data.SDGs.map(n => `SDG ${String(n).padStart(2,'0')}`)
-  : typeof data.SDGs === 'number'
-  ? [`SDG ${String(data.SDGs).padStart(2,'0')}`]
-  : [];
+let sdgCodes = [];
+if (Array.isArray(data.SDGs)) {
+  sdgCodes = data.SDGs.map(n => `SDG ${String(n).padStart(2,'0')}`);
+} else if (typeof data.SDGs === 'number') {
+  sdgCodes = [`SDG ${String(data.SDGs).padStart(2,'0')}`];
+}
 
 // --- Related posts ---
 const relatedPosts = posts
   .filter(p => p.slug !== slug)
   .map(p => {
-    const tags = p.data.tags ?? [];
+    const postTags = p.data.tags ?? [];
     const postSDGs = Array.isArray(p.data.SDGs)
       ? p.data.SDGs.map(n => `SDG ${String(n).padStart(2,'0')}`)
       : typeof p.data.SDGs === 'number'
       ? [`SDG ${String(p.data.SDGs).padStart(2,'0')}`]
       : [];
 
-    const tagScore = data.tags ? tags.filter(t => data.tags.includes(t)).length : 0;
-    const sdgScore = sdgCodes.filter(code => postSDGs.includes(code)).length;
+    const tagOverlap = data.tags ? postTags.filter(t => data.tags.includes(t)).length : 0;
+    const sdgOverlap = sdgCodes.filter(code => postSDGs.includes(code)).length;
 
     const authorsArray = Array.isArray(p.data.author) ? p.data.author : [p.data.author];
     const authorMatch = authorsArray.some(a => slugify(a || '').toLowerCase() === authorSlug) ? 5 : 0;
 
     const recencyScore = p.data.pubdate ? new Date(p.data.pubdate).getTime() : 0;
-    const score = tagScore * 3 + sdgScore * 2 + authorMatch + recencyScore * 1e-9;
+    const score = tagOverlap * 3 + sdgOverlap * 2 + authorMatch + recencyScore * 0.000000001;
 
-    // Map author info for related post
-    const postAuthorSlug = authorsArray[0] ? slugify(authorsArray[0]).toLowerCase() : null;
-    const postAuthorInfo = team.find(a => slugify(a.data.title || a.data.slug || '').toLowerCase() === postAuthorSlug) || null;
-    const postAvatarUrl = postAuthorInfo?.data?.contactEmail
-      ? getGravatarUrl(postAuthorInfo.data.contactEmail)
-      : postAuthorInfo?.data?.image || '/images/default-author.png';
-
-    return {
-      title: p.data.title,
-      slug: p.slug,
-      url: `/blog/${p.slug}`,
-      excerpt: p.data.excerpt,
-      date: p.data.pubdate ? new Date(p.data.pubdate).toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' }) : '',
-      tags: p.data.tags ?? [],
-      featuredImage: p.data.featuredImage || '/images/placeholder.jpg',
-      organisations: (p.data.organisations || []).map(o => ({ name: o.name, slug: o.slug, url: `/organisations/${o.slug}` })),
-      SDGs: (Array.isArray(p.data.SDGs) ? p.data.SDGs : []).map(id => sdgMap[`SDG ${String(id).padStart(2,'0')}`.toUpperCase()]).filter(Boolean),
-      author: postAuthorInfo ? { name: postAuthorInfo.data.title, slug: postAuthorInfo.slug, avatar: postAvatarUrl } : null,
-      score
-    };
+    return { ...p, score };
   })
+  .filter(p => p.score > 0)
   .sort((a,b) => b.score - a.score)
-  .slice(0,3);
+  .slice(0, 3);
 
 // --- Structured Data ---
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  mainEntityOfPage: pageURL,
-  headline: pageTitle,
-  image: [pageImage],
-  datePublished: data.pubdate || new Date().toISOString(),
-  dateModified: data.lastModified || data.pubdate || new Date().toISOString(),
-  author: authorInfo ? { "@type": "Person", name: authorInfo.data.title, url: `/authors/${authorInfo.slug}` } : undefined,
-  publisher: { "@type": "Organization", name: "Green Orbit Digital", logo: { "@type": "ImageObject", url: "https://greenorbit.space/images/logo.png" } },
-  description: pageDescription
+  "mainEntityOfPage": pageURL,
+  "headline": pageTitle,
+  "image": [pageImage],
+  "datePublished": data.pubdate || new Date().toISOString(),
+  "dateModified": data.lastModified || data.pubdate || new Date().toISOString(),
+  "author": authorInfo ? {
+    "@type": "Person",
+    "name": authorInfo.data.title,
+    "url": `/authors/${authorInfo.slug}`
+  } : undefined,
+  "publisher": {
+    "@type": "Organization",
+    "name": "Green Orbit Digital",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://greenorbit.space/images/logo.png"
+    }
+  },
+  "description": pageDescription,
 };
 ---
 
@@ -129,12 +128,13 @@ const jsonLd = {
 
   <!-- Hero Section -->
   <section class="relative w-full h-[500px] sm:h-[600px] lg:h-[700px] flex items-center justify-center overflow-hidden">
-    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500" style={`background-image: url(${pageImage});`} aria-hidden="true"></div>
+    <div id="hero-bg" class="absolute inset-0 bg-cover bg-center transition-transform duration-500" style={`background-image: url(${pageImage});`} aria-hidden="true"></div>
     <div class="absolute inset-0 bg-black/50" aria-hidden="true"></div>
     <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl space-y-6">
       <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white drop-shadow-lg">{data.title}</h1>
       {data.description && <p class="text-2xl sm:text-3xl text-gray-200 drop-shadow">{data.description}</p>}
 
+      <!-- Hero Meta -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-4 flex-wrap">
         {authorInfo && (
           <a href={`/authors/${authorInfo.slug}`} class="inline-flex items-center gap-2 bg-gray-900/60 text-white px-4 py-2 rounded-full font-semibold shadow-lg hover:bg-gray-800 transition">
@@ -142,14 +142,23 @@ const jsonLd = {
             <span>By {authorInfo.data.title}</span>
           </a>
         )}
-        {formattedDate && <span class="inline-block bg-accent-500 text-white px-4 sm:px-6 py-2 rounded-full font-semibold text-sm sm:text-base shadow-lg">{formattedDate}</span>}
+        {formattedDate && (
+          <span class="inline-block bg-accent-500 text-white px-4 sm:px-6 py-2 rounded-full font-semibold text-sm sm:text-base shadow-lg">
+            {formattedDate}
+          </span>
+        )}
         {data.tags?.length > 0 && (
           <div class="flex flex-wrap gap-2 justify-center">
-            {data.tags.map(tag => <a key={tag} href={`/blog?tag=${encodeURIComponent(tag)}`} class="inline-block bg-accent-500 text-white px-4 sm:px-6 py-2 rounded-full font-semibold text-sm sm:text-base shadow-lg hover:bg-accent-600 transition">#{tag}</a>)}
+            {data.tags.map(tag => (
+              <a key={tag} href={`/blog?tag=${encodeURIComponent(tag)}`} class="inline-block bg-accent-500 text-white px-4 sm:px-6 py-2 rounded-full font-semibold text-sm sm:text-base shadow-lg hover:bg-accent-600 transition">
+                #{tag}
+              </a>
+            ))}
           </div>
         )}
       </div>
 
+      <!-- SDGs -->
       {sdgCodes.length > 0 && (
         <div class="flex flex-wrap gap-4 mt-6 justify-center">
           {sdgCodes.map(code => {
@@ -172,23 +181,107 @@ const jsonLd = {
       <Content />
     </article>
 
+    <!-- Inline CTA -->
     <section class="mt-12 bg-accent-600 rounded-lg p-8 text-center text-white shadow-lg">
       <h2 class="text-2xl sm:text-3xl font-bold mb-4">Enjoyed this insight?</h2>
       <p class="mb-6">Subscribe to our blogletter for updates on sustainable space operations and research.</p>
       <a href="/subscribe" class="inline-block bg-white text-accent-600 font-semibold px-6 py-3 rounded-md hover:bg-gray-100 transition">Subscribe Now</a>
     </section>
-
-    <!-- Related posts -->
-    {relatedPosts.length > 0 && (
-      <section class="w-full py-12">
-        <h2 class="text-2xl font-bold mb-6 text-center text-accent-500">Related Posts</h2>
-        <InsightsGrid posts={relatedPosts} />
-      </section>
-    )}
   </main>
 
+  <!-- Related posts -->
+  {relatedPosts.length > 0 && (
+    <section class="w-full py-12">
+      <h2 class="text-2xl font-bold mb-6 text-center text-accent-500">Related Posts</h2>
+      <ul class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full px-4 sm:px-6 lg:px-8">
+        {relatedPosts.map(post => {
+          const {
+            title,
+            pubdate,
+            excerpt,
+            tags = [],
+            organisations = [],
+            SDGs = [],
+            featuredImage,
+          } = post.data;
+
+          const date = pubdate
+            ? new Date(pubdate).toLocaleDateString("en-GB", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })
+            : "";
+
+          const sdgIcons = Array.isArray(SDGs)
+            ? SDGs.map(id => {
+                const code = `SDG ${String(id).padStart(2, "0")}`;
+                const sdg = sdgMap[code.toUpperCase()];
+                return (
+                  <a key={code} href={`https://sdgs.greenorbit.space/${id}/`} target="_blank" rel="noopener noreferrer">
+                    <img
+                      src={sdg?.icon || '/images/fallback-sdg.png'}
+                      alt={sdg?.name || code}
+                      class="w-8 h-8 rounded-sm border border-gray-300/40 transition-transform hover:scale-110"
+                    />
+                  </a>
+                );
+              })
+            : [];
+
+          return (
+            <li key={post.slug} class="border border-accent-500 rounded-lg overflow-hidden hover:shadow-xl transition bg-white dark:bg-gray-800/40">
+              <a href={`/blog/${post.slug}`} class="block overflow-hidden rounded-t-lg">
+                <img
+                  src={featuredImage || '/images/placeholder.jpg'}
+                  alt={title}
+                  loading="lazy"
+                  class="w-full h-64 md:h-72 lg:h-80 object-cover object-center transition-transform duration-300 hover:scale-105"
+                />
+              </a>
+              <div class="p-4 space-y-3">
+                <a href={`/blog/${post.slug}`} class="block w-full">
+                  <h3 class="text-lg font-semibold bg-accent-500 text-white w-full px-3 py-2 rounded-md transition-colors">
+                    {title}
+                  </h3>
+                </a>
+                {date && <p class="text-sm text-gray-500 dark:text-gray-300">{date}</p>}
+                {excerpt && <p class="text-gray-700 dark:text-gray-300 text-sm">{excerpt}</p>}
+                {tags.length > 0 && (
+                  <div class="flex flex-wrap gap-2 mt-2">
+                    {tags.map(tag => (
+                      <span key={tag} class="inline-block bg-accent-500 text-white text-xs px-2 py-1 rounded">
+                        #{tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+                {organisations?.length > 0 && (
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    {organisations.map(org => (
+                      <a
+                        key={org.slug}
+                        href={`/organisations/${org.slug}`}
+                        class="bg-gray-300 dark:bg-accent-500 text-white rounded-full px-3 py-1 text-xs font-medium capitalize"
+                      >
+                        {org.name}
+                      </a>
+                    ))}
+                  </div>
+                )}
+                {sdgIcons.length > 0 && <div class="mt-2 flex flex-wrap gap-2">{sdgIcons}</div>}
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  )}
+
   <ShareButtons url={pageURL} title={pageTitle} />
+
   <Footer />
 
+  <!-- Structured Data -->
   <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
 </Layout>

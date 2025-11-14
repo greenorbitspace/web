@@ -1,5 +1,4 @@
 import React, { useState, useMemo } from "react";
-import slugify from "slugify";
 import { SDGs } from "../data/sdgs";
 import organisationsData from "../data/organisations.json";
 import InsightsGrid from "./InsightsGrid";
@@ -19,52 +18,54 @@ const orgMap = organisationsData.reduce((acc, org) => {
   return acc;
 }, {});
 
-const CATEGORIES = ["All", "Blog", "News", "Resource"];
+const CATEGORIES = [
+  { name: "All", slug: "/blog" },
+  { name: "Blog", slug: "/blog" },
+  { name: "News", slug: "/news" },
+  { name: "Resources", slug: "/resources" },
+];
 
 export default function InsightsList({ posts = [] }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [activeCategory, setActiveCategory] = useState("All");
   const [activeSDG, setActiveSDG] = useState("All");
 
-  // Build SDG filter options dynamically
+  // SDG filter options
   const sdgCategories = useMemo(() => {
     const set = new Set();
     posts.forEach((post) => {
-      const sdgs = post.data?.SDGs;
+      const fm = post.data ?? post;
+      const sdgs = fm.SDGs ?? [];
       if (Array.isArray(sdgs)) sdgs.forEach((id) => set.add(`SDG ${String(id).padStart(2, "0")}`));
-      else if (typeof sdgs === "number") set.add(`SDG ${String(sdgs).padStart(2, "0")}`);
     });
     return ["All", ...Array.from(set).sort()];
   }, [posts]);
 
-  // Filtering logic
   const filteredPosts = useMemo(() => {
     const term = searchTerm.toLowerCase();
     const cat = activeCategory.toLowerCase();
     const today = new Date();
 
     return posts.filter((post) => {
-      const fm = post.data ?? {};
+      const fm = post.data ?? post;
       const title = (fm.title ?? "").toLowerCase();
-      const excerpt = (fm.excerpt ?? "").toLowerCase();
+      const excerpt = (fm.excerpt ?? fm.description ?? "").toLowerCase();
       const tags = fm.tags ?? [];
-      const contentType = (fm.contentType ?? "").toLowerCase();
+      const collection = (post.collection ?? "blog").toLowerCase();
 
       const sdgCodes = Array.isArray(fm.SDGs)
         ? fm.SDGs.map((id) => `SDG ${String(id).padStart(2, "0")}`)
-        : typeof fm.SDGs === "number"
-        ? [`SDG ${String(fm.SDGs).padStart(2, "0")}`]
         : [];
 
       const matchSDG = activeSDG === "All" || sdgCodes.includes(activeSDG);
-      const matchCat = activeCategory === "All" || contentType === cat;
+      const matchCat = activeCategory === "All" || collection === cat;
       const matchSearch =
         title.includes(term) ||
         excerpt.includes(term) ||
         tags.some((tag) => tag.toLowerCase().includes(term));
 
       const pubdate = fm.pubdate ? new Date(fm.pubdate) : null;
-      const validDate = pubdate ? pubdate <= today : false;
+      const validDate = pubdate ? pubdate <= today : true;
 
       return matchSDG && matchCat && matchSearch && validDate;
     });
@@ -111,18 +112,19 @@ export default function InsightsList({ posts = [] }) {
 
       {/* Category Tabs */}
       <div className="flex flex-wrap gap-3 mb-4">
-        {CATEGORIES.map((category) => (
-          <button
-            key={category}
-            onClick={() => setActiveCategory(category)}
+        {CATEGORIES.map(({ name, slug }) => (
+          <a
+            key={name}
+            href={slug}
             className={`px-4 py-2 rounded font-semibold transition ${
-              activeCategory === category
+              activeCategory === name
                 ? "bg-accent-500 text-white"
                 : "bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-accent-400"
             }`}
+            onClick={() => setActiveCategory(name)}
           >
-            {category}
-          </button>
+            {name}
+          </a>
         ))}
       </div>
 
@@ -139,7 +141,7 @@ export default function InsightsList({ posts = [] }) {
       </div>
 
       {/* Render Insights Grid */}
-      <InsightsGrid entries={filteredPosts} sdgMap={sdgMap} orgMap={orgMap} />
+      <InsightsGrid posts={filteredPosts} />
     </div>
   );
 }
