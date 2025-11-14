@@ -1,5 +1,6 @@
 import React from "react";
 
+// Inline formatting parser
 function parseInlineFormatting(text) {
   if (!text) return null;
 
@@ -76,7 +77,13 @@ function parseInlineFormatting(text) {
   parts = parts.flatMap((part, i) => {
     if (typeof part !== "string") return part;
     return part.split(/(\*\*.*?\*\*)/g).map((p, j) =>
-      p.startsWith("**") && p.endsWith("**") ? <strong key={`b-${i}-${j}`} className="font-bold">{p.slice(2, -2)}</strong> : p
+      p.startsWith("**") && p.endsWith("**") ? (
+        <strong key={`b-${i}-${j}`} className="font-bold">
+          {p.slice(2, -2)}
+        </strong>
+      ) : (
+        p
+      )
     );
   });
 
@@ -84,7 +91,13 @@ function parseInlineFormatting(text) {
   parts = parts.flatMap((part, i) => {
     if (typeof part !== "string") return part;
     return part.split(/(\*.*?\*)/g).map((p, j) =>
-      p.startsWith("*") && p.endsWith("*") ? <em key={`i-${i}-${j}`} className="italic">{p.slice(1, -1)}</em> : p
+      p.startsWith("*") && p.endsWith("*") ? (
+        <em key={`i-${i}-${j}`} className="italic">
+          {p.slice(1, -1)}
+        </em>
+      ) : (
+        p
+      )
     );
   });
 
@@ -99,9 +112,9 @@ function renderList(items, level = 0) {
   const paddingClass = `pl-${4 + level * 4}`;
 
   return (
-    <Tag className={`mb-4 ${paddingClass}`}>
+    <Tag className={`mb-4 ${paddingClass} text-white`}>
       {items.map((item, idx) => (
-        <li key={idx} className="mb-1">
+        <li key={idx} className="mb-1 text-white">
           {parseInlineFormatting(item.content)}
           {item.children && item.children.length > 0 && renderList(item.children, level + 1)}
         </li>
@@ -110,6 +123,7 @@ function renderList(items, level = 0) {
   );
 }
 
+// Parse description text into formatted React elements
 function formatDescription(description) {
   if (!description) return null;
 
@@ -129,7 +143,6 @@ function formatDescription(description) {
       const type = bulletMatch ? "bullet" : "number";
       const contentText = (bulletMatch ? bulletMatch[2] : numberMatch[2]).trim();
 
-      // Find proper parent
       while (stack.length > 0 && indent <= stack[stack.length - 1].indent) {
         stack.pop();
       }
@@ -137,28 +150,24 @@ function formatDescription(description) {
       const parent = stack[stack.length - 1];
       const newItem = { type, content: contentText, children: [] };
       parent.items.push(newItem);
-
       stack.push({ items: newItem.children, indent });
       return;
     }
 
-    // Flush stack for non-list lines
     while (stack.length > 1) stack.pop();
 
-    // Headings starting with ###
     if (line.startsWith("###")) {
       content.push(
-        <h3 key={content.length} className="text-xl font-semibold mt-6 mb-2">
+        <h3 key={content.length} className="text-xl font-semibold mt-6 mb-2 text-white">
           {parseInlineFormatting(line.replace(/^###\s*/, ""))}
         </h3>
       );
       return;
     }
 
-    // Short headings (capitalized, no punctuation, <60 chars)
     if (line.length < 60 && /^[A-Z]/.test(line) && !/[.,]/.test(line)) {
       content.push(
-        <h3 key={content.length} className="text-xl font-semibold mt-4 mb-2">
+        <h3 key={content.length} className="text-xl font-semibold mt-4 mb-2 text-white">
           {parseInlineFormatting(line)}
         </h3>
       );
@@ -166,7 +175,7 @@ function formatDescription(description) {
     }
 
     content.push(
-      <p key={content.length} className="mb-2">
+      <p key={content.length} className="mb-2 text-white">
         {parseInlineFormatting(line)}
       </p>
     );
@@ -181,18 +190,18 @@ export default function EventDescription({ summary, description, htmlContent, lo
   if (!summary && !description && !htmlContent) return null;
 
   const content = htmlContent ? (
-    <div className="event-description-html" dangerouslySetInnerHTML={{ __html: htmlContent }} />
+    <div className="event-description-html text-white" dangerouslySetInnerHTML={{ __html: htmlContent }} />
   ) : (
-    formatDescription(description)
+    <div className="text-white">{formatDescription(description)}</div>
   );
 
   return (
-    <div className="tribe-events-single-event-description tribe-events-content">
-      {summary && <h2 className="mb-6 text-3xl font-bold">{summary}</h2>}
+    <div className="tribe-events-single-event-description tribe-events-content text-white">
+      {summary && <h2 className="mb-6 text-3xl font-bold text-white">{summary}</h2>}
       {content}
-      {location && <p className="mt-6 italic">📍 {location}</p>}
+      {location && <p className="mt-6 italic text-white">📍 {location}</p>}
       {url && (
-        <p className="mt-2">
+        <p className="mt-2 text-white">
           <strong>
             The{" "}
             <a
