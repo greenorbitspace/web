@@ -29,12 +29,27 @@ if (schema) {
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth" x-data="{ darkMode: localStorage.theme === 'dark' || (!localStorage.theme && window.matchMedia('(prefers-color-scheme: dark)').matches) }" x-bind:class="{ 'dark': darkMode }">
+<html
+  lang="en"
+  class="scroll-smooth"
+  x-data="{ darkMode: localStorage.theme === 'dark' || (!localStorage.theme && window.matchMedia('(prefers-color-scheme: dark)').matches) }"
+  x-bind:class="{ 'dark': darkMode }"
+>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <Seo title={title} description={description} ogImage={ogImage} canonical={canonical} twitter={twitter} />
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" href="/favicon.ico" sizes="any" />
+
+    <Seo
+      title={title}
+      description={description}
+      ogImage={ogImage}
+      canonical={canonical}
+      twitter={twitter}
+    />
 
     <!-- JSON-LD schema -->
     <script type="application/ld+json" set:html={JSON.stringify(mergedSchema)} />
@@ -51,10 +66,16 @@ if (schema) {
       ticketTailorTracking={import.meta.env.PUBLIC_TICKET_TAILOR}
     />
 
-    <script type="module" src="https://unpkg.com/alpinejs@3.14.2/dist/cdn.min.js" defer></script>
+    <script
+      type="module"
+      src="https://unpkg.com/alpinejs@3.14.2/dist/cdn.min.js"
+      defer
+    ></script>
   </head>
 
-  <body class="antialiased bg-white dark:bg-primary-500 text-secondary-900 dark:text-secondary-100 transition-colors duration-300">
+  <body
+    class="antialiased bg-white dark:bg-primary-500 text-secondary-900 dark:text-secondary-100 transition-colors duration-300"
+  >
     <main id="page-wrapper" class="page-wrapper" role="main" tabindex="-1">
       <slot />
     </main>

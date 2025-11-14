@@ -4,7 +4,7 @@ category: "from space"
 tags: ["communication", "satellite"]
 summary: "Enabling broadband, IoT, and mobile communication from space."
 description: "Satellite-based telecommunications for global connectivity."
-#featuredImage: "/images/telecommunications.jpg"
+featuredImage: "/images/telecommunications.jpg"
 organisations: ["ESA", "Intelsat", "SpaceX"]
 SDGs: [9, 17]
 ---

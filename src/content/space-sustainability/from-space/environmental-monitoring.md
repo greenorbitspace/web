@@ -3,7 +3,7 @@ title: "Environmental Monitoring"
 category: "from space"
 tags: ["earth observation", "satellite"]
 description: "Observing Earth's environment using satellite technology."
-#featuredImage: "/images/environmental-monitoring.jpg"
+featuredImage: "/images/environmental-monitoring.jpg"
 summary: "Tracking pollution, deforestation, and climate change indicators."
 organisations: ["ESA", "NASA", "NOAA"]
 SDGs: [13, 15]

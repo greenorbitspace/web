@@ -4,7 +4,7 @@ category: "in space"
 tags: ["satellite servicing", "space infrastructure", "on-orbit manufacturing"]
 summary: "Extending satellite lifespans through refueling, repair, and on-orbit manufacturing."
 description: "In-orbit servicing involves repairing, refueling, upgrading, and assembling satellites while they are in orbit."
-#featuredImage: "/images/in-orbit-servicing.jpg"
+featuredImage: "/images/in-orbit-servicing.jpg"
 organisations: ["ESA", "NASA", "Northrop Grumman"]
 SDGs: [9, 12, 13]
 ---

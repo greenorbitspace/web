@@ -1,0 +1,91 @@
+---
+// ContactSchema.astro
+export interface ContactSchemaProps {
+  siteUrl: string;
+  contactPageUrl: string;
+  name: string;
+  description: string;
+  lastReviewed: string;
+  mainContentSelector: string;
+  primaryImageUrl: string;
+  primaryImageCaption: string;
+  contactPersonName: string;
+  contactPersonTitle: string;
+  contactPersonUrl: string;
+  contactPersonSocials: string[];
+  contactEmail: string;
+  contactPhone: string;
+  address: {
+    street: string;
+    locality: string;
+    region: string;
+    postalCode: string;
+    country: string;
+  };
+  socials: string[];
+  mapUrl?: string;
+}
+
+const props: ContactSchemaProps = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": props.name,
+  "url": props.contactPageUrl,
+  "headline": props.name,
+  "description": props.description,
+  "lastReviewed": props.lastReviewed,
+  "mainContentOfPage": {
+    "@type": "WebPageElement",
+    "cssSelector": props.mainContentSelector
+  },
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": props.primaryImageUrl,
+    "caption": props.primaryImageCaption
+  },
+  "about": {
+    "@type": "Organization",
+    "name": props.name,
+    "url": props.siteUrl,
+    "logo": `${props.siteUrl}/images/logo.svg`,
+    "email": props.contactEmail,
+    "telephone": props.contactPhone,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": props.address.street,
+      "addressLocality": props.address.locality,
+      "addressRegion": props.address.region,
+      "postalCode": props.address.postalCode,
+      "addressCountry": props.address.country
+    },
+    "sameAs": props.socials,
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "United Kingdom and Europe"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "name": props.contactPersonName,
+      "email": props.contactEmail,
+      "telephone": props.contactPhone,
+      "url": props.contactPersonUrl
+    },
+    "founder": {
+      "@type": "Person",
+      "name": props.contactPersonName,
+      "jobTitle": props.contactPersonTitle,
+      "url": props.contactPersonUrl,
+      "sameAs": props.contactPersonSocials
+    }
+  },
+  "isAccessibleForFree": true,
+  "hasMap": props.mapUrl
+};
+---
+
+<script type="application/ld+json">
+{JSON.stringify(schema)}
+</script>

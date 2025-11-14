@@ -1,0 +1,81 @@
+---
+import Icon from './Icon.astro';
+
+export interface Props {
+  profiles?: { name: string; url: string; description?: string }[]; // Social profile links
+  share?: string[]; // Socials to show as share buttons
+  shareUrl?: string; // URL to share
+  shareTitle?: string; // Title/description for share
+  size?: string;
+  gap?: string;
+}
+
+const {
+  profiles = [],
+  share = [],
+  shareUrl = typeof window !== 'undefined' ? window.location.href : '',
+  shareTitle = '',
+  size = 'w-6 h-6',
+  gap = 'gap-4',
+} = Astro.props;
+
+// Icon mapping
+const ICONS: Record<string, string> = {
+  Twitter: 'Twitter',
+  LinkedIn: 'LinkedIn',
+  Facebook: 'Facebook',
+  GitHub: 'GitHub',
+  Instagram: 'Instagram',
+  Discord: 'Discord',
+  Threads: 'Threads',
+  X: 'X',
+  YouTube: 'YouTube',
+  Patreon: 'Patreon',
+  Bluesky: 'Bluesky',
+  Mastodon: 'Mastodon',
+  WhatsApp: 'WhatsApp',
+  WAchannel: 'WAchannel',
+};
+
+// Share URLs
+const SHARE_URLS: Record<string, (url: string, title: string) => string> = {
+  Twitter: (u, t) => `https://twitter.com/intent/tweet?url=${encodeURIComponent(u)}&text=${encodeURIComponent(t)}`,
+  LinkedIn: (u, t) => `https://www.linkedin.com/shareArticle?url=${encodeURIComponent(u)}&title=${encodeURIComponent(t)}`,
+  Facebook: (u) => `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(u)}`,
+  X: (u, t) => `https://x.com/intent/tweet?url=${encodeURIComponent(u)}&text=${encodeURIComponent(t)}`,
+};
+
+// Filter valid items
+const activeProfiles = profiles.filter(p => p.url && ICONS[p.name]);
+const activeShare = share.filter(s => SHARE_URLS[s]);
+---
+
+<div class={`flex flex-wrap ${gap}`}>
+  {/* Profile Links */}
+  {activeProfiles.map(p => (
+    <a
+      key={p.name}
+      href={p.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      title={p.description || p.name}
+      class="text-white dark:text-white hover:text-accent-500"
+    >
+      <Icon name={ICONS[p.name]} class={size} ariaLabel={p.name} />
+    </a>
+  ))}
+
+  {/* Share Buttons */}
+  {activeShare.map(name => (
+    <a
+      key={name}
+      href={SHARE_URLS[name](shareUrl, shareTitle)}
+      target="_blank"
+      rel="noopener noreferrer"
+      title={`Share on ${name}`}
+      class="text-white dark:text-white hover:text-accent-500"
+    >
+      <Icon name={ICONS[name]} class={size} ariaLabel={`Share on ${name}`} />
+    </a>
+  ))}
+</div>

@@ -2,7 +2,7 @@
 title: 'Communicating Impact: Sustainability Messaging That Resonates'
 slug: communicating-impact
 url: https://greenorbit.space/blog/communicating-impact/
-featuredImage: https://img.notionusercontent.com/s3/prod-files-secure%2F46d85076-9cc9-4816-b22e-3f6e1ee2434d%2F44f8788f-f663-4d1d-a2f4-0c4f30f32175%2Fidsw.jpg/size/w=2000?exp=1762449449&sig=KXSz6jrS_thGAKDPEdNjsmLonpkJSBEM3WEzAOtYEPA&wasReauthorized=true
+featuredImage: https://images.unsplash.com/photo-1637179709448-e03199d05f6e?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=6000
 featured: false
 author: Ryan Laird
 pubdate: '2025-11-12T19:26:00.000+00:00'

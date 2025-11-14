@@ -3,7 +3,7 @@ title: "Space Resource Utilisation"
 category: "in space"
 tags: ["asteroid mining", "in-orbit resources"]
 description: "Extracting and using resources from space for sustainable exploration."
-#featuredImage: "/images/space-resource-utilisation.jpg"
+featuredImage: "/images/space-resource-utilisation.jpg"
 summary: "Developing technologies for asteroid mining and in-space resource use."
 organisations: ["ESA", "NASA", "Planetary Resources"]
 SDGs: [9, 12, 13]

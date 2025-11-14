@@ -1,0 +1,47 @@
+---
+import Icon from './Icon.astro';
+
+export interface Props {
+  socials: { name: string; url: string; description?: string }[];
+  size?: string;
+  gap?: string;
+}
+
+const { socials = [], size = 'w-6 h-6', gap = 'gap-4' } = Astro.props;
+
+// Map names to Icon.astro names
+const ICON_NAME_MAP: Record<string, string> = {
+  Twitter: 'Twitter',
+  LinkedIn: 'LinkedIn',
+  Facebook: 'Facebook',
+  GitHub: 'GitHub',
+  Instagram: 'Instagram',
+  Discord: 'Discord',
+  Threads: 'Threads',
+  X: 'X',
+  YouTube: 'YouTube',
+  Patreon: 'Patreon',
+  Bluesky: 'Bluesky',
+  Mastodon: 'Mastodon',
+  WhatsApp: 'WhatsApp',
+  WAchannel: 'WAchannel'
+};
+
+// Filter only valid socials with mapped icons
+const activeSocials = socials.filter(s => s.url && ICON_NAME_MAP[s.name]);
+---
+
+<div class={`flex flex-wrap ${gap}`}>
+  {activeSocials.map(s => (
+    <a
+      key={s.name}
+      href={s.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      title={s.description || s.name}
+      class="text-white dark:text-white hover:text-accent-500"
+    >
+      <Icon name={ICON_NAME_MAP[s.name]} class={size} ariaLabel={s.name} />
+    </a>
+  ))}
+</div>

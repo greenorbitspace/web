@@ -3,7 +3,7 @@ title: "Green Propulsion"
 category: "for space"
 tags: ["space propulsion", "satellite"]
 description: "Developing environmentally friendly satellite propulsion systems."
-#featuredImage: "/images/green-propulsion.jpg"
+featuredImage: "/images/green-propulsion.jpg"
 summary: "Reducing emissions and debris from satellite launches."
 organisations: ["ESA", "NASA", "Blue Origin"]
 SDGs: [7, 12, 13]

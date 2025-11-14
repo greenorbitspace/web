@@ -5,6 +5,7 @@ employment_type: "Full-time"
 department: "Engineering"
 slug: test
 pubdate: '2024-12-30T16:45:00.000+00:00'
+featuredImage: "/images/space-environment.jpg"
 seniority_level: "Senior"
 description: >
   We're looking for an experienced frontend developer to help us build

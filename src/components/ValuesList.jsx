@@ -9,37 +9,50 @@ export default function ValuesList() {
 
   const filteredValues = useMemo(() => {
     const term = searchTerm.toLowerCase();
-    return valuesData.filter(({ title, tagline, description }) => {
-      const combined = [title, tagline, description].filter(Boolean).join(' ').toLowerCase();
-      return combined.includes(term);
-    });
+    return valuesData
+      .filter(({ title, tagline, description }) => {
+        const combined = [title, tagline, description].filter(Boolean).join(' ').toLowerCase();
+        return combined.includes(term);
+      })
+      .slice(0, 6); // Limit to 6 items (3 x 2 grid)
   }, [searchTerm]);
 
   return (
-    <section className="space-y-8" aria-label="Company Values">
+    <section className="w-full py-12" aria-label="Company Values">
       <ul
-        className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
+        className="grid gap-8 px-4 sm:px-6 md:px-8 
+                   grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 
+                   auto-rows-fr"
         role="list"
         aria-live="polite"
         aria-relevant="additions removals"
       >
         {filteredValues.length === 0 ? (
-          <li className="italic text-accent-500" role="alert">
+          <li
+            className="italic text-accent-500 col-span-full text-center"
+            role="alert"
+          >
             No values found.
           </li>
         ) : (
           filteredValues.map(({ title, tagline, description, icon }, index) => (
             <li
               key={`${title}-${index}`}
-              className="border border-accent-500 rounded-lg p-6 bg-white dark:bg-secondary-500 hover:shadow-lg transition text-accent-500"
+              className="border border-accent-500 rounded-xl p-6 
+                         bg-white dark:bg-secondary-500 
+                         hover:shadow-lg transition text-accent-500
+                         flex flex-col justify-between"
               role="listitem"
             >
-              <article aria-labelledby={`value-title-${index}`} className="flex flex-col h-full">
+              <article
+                aria-labelledby={`value-title-${index}`}
+                className="flex flex-col h-full"
+              >
                 <div className="flex items-center gap-4 mb-4">
                   <img
                     src={icon || fallbackIcon}
                     alt={`${title} icon`}
-                    className="w-16 h-16 object-contain flex-shrink-0 rounded-sm"
+                    className="w-14 h-14 object-contain flex-shrink-0 rounded-sm"
                     onError={(e) => {
                       e.target.onerror = null;
                       e.target.src = fallbackIcon;
@@ -53,8 +66,16 @@ export default function ValuesList() {
                     {title}
                   </h3>
                 </div>
-                <p className="text-sm text-gray-500 dark:text-white mb-2 italic">{tagline}</p>
-                <p className="text-gray-700 dark:text-white text-base leading-relaxed">{description}</p>
+                {tagline && (
+                  <p className="text-sm text-gray-500 dark:text-white mb-2 italic">
+                    {tagline}
+                  </p>
+                )}
+                {description && (
+                  <p className="text-gray-700 dark:text-white text-base leading-relaxed">
+                    {description}
+                  </p>
+                )}
               </article>
             </li>
           ))

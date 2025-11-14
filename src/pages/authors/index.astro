@@ -2,52 +2,51 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import TeamsList from '../../components/TeamsList.jsx';
 import { getCollection } from 'astro:content';
 
-const collectionName = 'news';
-const entries = await getCollection(collectionName);
+// Fetch all team members (authors)
+let authors = await getCollection('team');
 
-const uniqueTags = [...new Set(entries.flatMap((entry) => entry.data.tags ?? []))];
-
-const url = new URL(Astro.request.url);
-const activeTag = url.searchParams.get('tag');
-
-const filteredEntries = activeTag
-  ? entries.filter((entry) => entry.data.tags?.includes(activeTag))
-  : entries;
+// Sort alphabetically by title
+authors.sort((a, b) => (a.data.title || '').localeCompare(b.data.title || ''));
 ---
 
-<Layout title="News">
+<Layout title="Our Authors" description="Meet the thought leaders and content creators shaping sustainable marketing for the space sector at Green Orbit Digital.">
   <Header />
+
   <main class="py-12 max-w-6xl mx-auto px-4">
-    <h1 class="text-4xl font-bold mb-4">News</h1>
-    <p class="text-gray-600 mb-6">Explore our latest news.</p>
+    <HeroSection 
+      title="Our Authors" 
+      description="Explore the expertise, insights, and passions of the authors who contribute to Green Orbit Digital’s knowledge base." 
+    />
 
-    <!-- Optional: TagFilter component -->
-    <!-- <TagFilter tags={uniqueTags} activeTag={activeTag} /> -->
+    <!-- Authors Grid -->
+    <section class="my-12">
+      <TeamsList teamMembers={authors} showLinks={true} />
+    </section>
 
-    {filteredEntries.length === 0 ? (
-      <p class="text-gray-500 mt-6">No posts found for selected tag.</p>
-    ) : (
-      <ul class="space-y-4">
-        {filteredEntries.map((entry) => (
-          <li key={entry.slug}>
-            <a href={`/news/${entry.slug}`} class="text-blue-600 hover:underline text-lg font-semibold">
-              {entry.data.title}
-            </a>
-            {entry.data.pubdate && (
-              <time class="block text-sm text-gray-500" dateTime={entry.data.pubdate}>
-                {new Date(entry.data.pubdate).toLocaleDateString('en-GB', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric',
-                })}
-              </time>
-            )}
-          </li>
-        ))}
+    <!-- About Our Authors -->
+    <section class="mt-16">
+      <h2 class="text-2xl font-semibold mb-4">About Our Authors</h2>
+      <p class="text-gray-200 max-w-3xl leading-relaxed">
+        Our authors are experts in sustainable marketing, space industry communications, and digital strategy. Each author brings unique insights, practical experience, and a passion for driving measurable impact while supporting responsible growth in the space sector.
+      </p>
+    </section>
+
+    <!-- Author Values & Approach -->
+    <section class="mt-12">
+      <h2 class="text-2xl font-semibold mb-4">Our Approach</h2>
+      <ul class="list-disc list-inside text-gray-200 max-w-3xl space-y-2">
+        <li>Sharing actionable knowledge and expertise in sustainable marketing for space-focused organisations</li>
+        <li>Fostering transparency and trust through clear, data-driven insights</li>
+        <li>Promoting innovation and creativity in content strategy and storytelling</li>
+        <li>Collaborating with clients and peers to drive responsible growth</li>
+        <li>Encouraging continuous learning and thought leadership in the space community</li>
       </ul>
-    )}
+    </section>
   </main>
+
   <Footer />
 </Layout>

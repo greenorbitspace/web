@@ -4,112 +4,138 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import HeroSection from '../../components/HeroSection.astro';
 import InsightsList from '../../components/InsightsList.jsx';
+import SocialLinks from '../../components/SocialLinks.astro';
 import { getCollection } from 'astro:content';
-import authors from '../../data/authors.js';
 import crypto from 'crypto';
-import { slug as slugify } from 'github-slugger';
+import slugify from 'slugify';
 
+// 1️⃣ Generate static paths for all team members
 export async function getStaticPaths() {
-  return authors.map(author => ({
-    params: { author: author.slug }
+  const team = await getCollection('team');
+  return team.map(member => ({
+    params: { author: slugify(member.data.title || member.data.slug || '', { lower: true }) },
   }));
 }
 
+// 2️⃣ Extract author slug from URL params
 const { author } = Astro.params;
 
-const authorData = authors.find(a => a.slug.toLowerCase() === author.toLowerCase());
-if (!authorData) throw new Error(`Author not found: ${author}`);
+// 3️⃣ Fetch team member info
+const teamMembers = await getCollection('team');
+const member = teamMembers.find(
+  m => slugify(m.data.title || m.data.slug || '', { lower: true }) === author.toLowerCase()
+);
+if (!member) throw new Error(`Author not found: ${author}`);
+const authorData = member.data;
 
-const blogPosts = await getCollection('blog');
-const newsItems = await getCollection('news');
-const resourceItems = await getCollection('resources');
+// 4️⃣ Avatar fallback
+const gravatarUrl = authorData.contactEmail
+  ? `https://www.gravatar.com/avatar/${crypto
+      .createHash('md5')
+      .update(authorData.contactEmail.trim().toLowerCase())
+      .digest('hex')}?s=160&d=identicon`
+  : authorData.image || '/images/default-author.png';
 
-function annotateWithType(posts, type) {
-  return posts.map(post => ({
-    ...post,
-    data: { ...post.data, contentType: type }
-  }));
+// 5️⃣ Collect posts from multiple collections
+const collections = ['blog', 'news', 'resources'];
+let allPosts: any[] = [];
+
+for (const c of collections) {
+  try {
+    const posts = await getCollection(c);
+    allPosts.push(...posts);
+  } catch (err) {
+    console.warn(`Collection ${c} could not be loaded:`, err);
+  }
 }
 
-const allPosts = [
-  ...annotateWithType(blogPosts, 'blog'),
-  ...annotateWithType(newsItems, 'news'),
-  ...annotateWithType(resourceItems, 'resource'),
-];
-
-// Filter posts by author slug (case-insensitive)
+// 6️⃣ Filter posts by author (handle string, object, reference)
+const normalisedAuthor = slugify(authorData.title, { lower: true });
 const authorPosts = allPosts.filter(post => {
   if (!post.data.author) return false;
-  return slugify(post.data.author) === author.toLowerCase();
+
+  const authors = Array.isArray(post.data.author) ? post.data.author : [post.data.author];
+
+  return authors.some(a => {
+    // String author
+    if (typeof a === 'string') return slugify(a, { lower: true }) === normalisedAuthor;
+
+    // Object or reference
+    if (typeof a === 'object') {
+      // Astro content reference to team member
+      if (a.id && a.collection === 'team') return a.id === member.id;
+
+      // Inline object with title
+      if (a.title) return slugify(a.title, { lower: true }) === normalisedAuthor;
+
+      // Inline object with slug
+      if (a.slug) return slugify(a.slug, { lower: true }) === slugify(authorData.slug || authorData.title, { lower: true });
+    }
+
+    return false;
+  });
 });
 
-// Sort by pubdate descending (newest first)
-authorPosts.sort((a, b) => {
-  const dateA = new Date(a.data.pubdate ?? 0);
-  const dateB = new Date(b.data.pubdate ?? 0);
-  return dateB - dateA;
-});
+// 7️⃣ Sort posts descending by pubdate
+authorPosts.sort((a, b) => new Date(b.data.pubdate ?? 0).getTime() - new Date(a.data.pubdate ?? 0).getTime());
 
-function getGravatarUrl(email) {
-  if (!email) return null;
-  const hash = crypto.createHash('md5').update(email.trim().toLowerCase()).digest('hex');
-  return `https://www.gravatar.com/avatar/${hash}?s=80&d=identicon`;
-}
+// 8️⃣ Prepare social links
+const socials = Object.entries(authorData.socialLinks || {})
+  .filter(([_, url]) => url)
+  .map(([name, url]) => ({ name, url }));
 
-const gravatarUrl = authorData.gravatar
-  ? getGravatarUrl(authorData.email)
-  : authorData.avatar || '/images/default-author.png';
+// ✅ Assign allInsights
+const allInsights = authorPosts;
 ---
 
-<Layout title={`Insights by ${authorData.name}`} description={`Articles by ${authorData.name}`}>
+<Layout
+  title={`Insights by ${authorData.title}`}
+  description={`All articles, news, and resources by ${authorData.title}`}
+>
   <Header />
 
-  <main class="py-12 max-w-6xl mx-auto px-4">
-    <HeroSection 
-      title={`Insights by ${authorData.name}`} 
-      description="Explore our latest insights across blog posts, news, and resources." 
+  <!-- Hero + Profile -->
+  <main class="py-10 max-w-6xl mx-auto px-4">
+    <HeroSection
+      title={`Insights by ${authorData.title}`}
+      description="Explore all articles, news, and resources from our team."
     />
 
-    <section class="flex items-center space-x-6 my-8">
+    <section class="flex flex-col sm:flex-row sm:items-center sm:space-x-6 my-8">
       <img
         src={gravatarUrl}
-        alt={authorData.name}
-        class="w-20 h-20 rounded-full border border-gray-300"
+        alt={authorData.title}
+        class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border border-gray-300 mb-4 sm:mb-0 object-cover"
       />
       <div>
-        <h1 class="text-3xl font-bold">{authorData.name}</h1>
-        {authorData.role && <p class="text-white">{authorData.role}</p>}
-        {authorData.bio && <p class="mt-2 max-w-xl">{authorData.bio}</p>}
-
-        <div class="flex space-x-4 mt-4">
-          {authorData.twitter && (
-            <a href={`https://twitter.com/${authorData.twitter}`} target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="text-primary-600 hover:text-primary-800">
-              {/* Twitter SVG omitted for brevity */}
-            </a>
-          )}
-          {authorData.github && (
-            <a href={`https://github.com/${authorData.github}`} target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-primary-600 hover:text-primary-800">
-              {/* GitHub SVG omitted for brevity */}
-            </a>
-          )}
-          {authorData.linkedin && (
-            <a href={`https://www.linkedin.com/in/${authorData.linkedin}`} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-primary-600 hover:text-primary-800">
-              {/* LinkedIn SVG omitted for brevity */}
-            </a>
-          )}
-          {authorData.website && (
-            <a href={authorData.website} target="_blank" rel="noopener noreferrer" aria-label="Website" class="text-primary-600 hover:text-primary-800">
-              {/* Website SVG omitted for brevity */}
-            </a>
-          )}
-        </div>
+        <h1 class="text-3xl font-bold text-accent-500">{authorData.title}</h1>
+        {authorData.jobTitle && <p class="text-white">{authorData.jobTitle}</p>}
+        {authorData.description && (
+          <p class="mt-2 max-w-2xl text-gray-200 leading-relaxed">
+            {authorData.description}
+          </p>
+        )}
+        {socials.length > 0 && (
+          <div class="flex flex-wrap gap-4 mt-4">
+            <SocialLinks socials={socials} size="w-6 h-6" />
+          </div>
+        )}
       </div>
     </section>
-
-    <section>
-      <InsightsList client:load posts={authorPosts} />
-    </section>
   </main>
+
+  <!-- Full-width Insights List -->
+  <section class="mt-16 w-full px-4 sm:px-8 md:px-12 lg:px-20 xl:px-28">
+    <h2 class="text-2xl font-semibold mb-6 text-accent-500 text-center">
+      All Posts by {authorData.title}
+    </h2>
+
+    {allInsights.length > 0 ? (
+      <InsightsList client:load posts={allInsights} />
+    ) : (
+      <p class="text-gray-300 italic text-center">No posts found for this author.</p>
+    )}
+  </section>
 
   <Footer />
 </Layout>

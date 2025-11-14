@@ -4,9 +4,9 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { getCollection } from 'astro:content';
 import { SDGs } from '../../data/sdgs';
-import authors from '../../data/authors.js';
 import crypto from 'crypto';
 import { slug as slugify } from 'github-slugger';
+import Icon from '../../components/Icon.astro';
 
 // --- Static paths ---
 export async function getStaticPaths() {
@@ -16,25 +16,24 @@ export async function getStaticPaths() {
   }));
 }
 
-// --- Find post entry ---
+// --- Get resources post ---
 const { slug: paramSlug } = Astro.params;
 const posts = await getCollection('resources');
 
 let postEntry = posts.find(p => p.slug === paramSlug || p.id === paramSlug);
-
 if (!postEntry) {
   postEntry = posts.find(p => slugify(p.data.title).toLowerCase() === paramSlug?.toLowerCase());
 }
-
 if (!postEntry) throw new Error(`No resources articles found for slug: "${paramSlug}"`);
 
 const slug = postEntry.slug || slugify(postEntry.data.title).toLowerCase();
 const { Content } = await postEntry.render();
 const data = postEntry.data;
 
-// --- Author info ---
+// --- Author info from team collection ---
+const team = await getCollection('team');
 const authorSlug = slugify(data.author || '').toLowerCase();
-const authorInfo = authors.find(a => a.slug === authorSlug) || null;
+const authorInfo = team.find(a => slugify(a.data.title || a.data.slug || '').toLowerCase() === authorSlug) || null;
 
 function getGravatarUrl(email, size = 80) {
   if (!email) return null;
@@ -42,9 +41,9 @@ function getGravatarUrl(email, size = 80) {
   return `https://www.gravatar.com/avatar/${hash}?s=${size}&d=identicon`;
 }
 
-const avatarUrl = authorInfo?.gravatar && authorInfo.email
-  ? getGravatarUrl(authorInfo.email)
-  : authorInfo?.avatar || '/images/default-author.png';
+const avatarUrl = authorInfo?.data?.contactEmail
+  ? getGravatarUrl(authorInfo.data.contactEmail)
+  : authorInfo?.data?.image || '/images/default-author.png';
 
 const formattedDate = data.pubdate
   ? new Date(data.pubdate).toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })
@@ -81,10 +80,16 @@ const relatedPosts = posts
       : typeof p.data.SDGs === 'number'
       ? [`SDG ${String(p.data.SDGs).padStart(2,'0')}`]
       : [];
+
     const tagOverlap = data.tags ? postTags.filter(t => data.tags.includes(t)).length : 0;
     const sdgOverlap = sdgCodes.filter(code => postSDGs.includes(code)).length;
+
+    const authorsArray = Array.isArray(p.data.author) ? p.data.author : [p.data.author];
+    const authorMatch = authorsArray.some(a => slugify(a || '').toLowerCase() === authorSlug) ? 5 : 0;
+
     const recencyScore = p.data.pubdate ? new Date(p.data.pubdate).getTime() : 0;
-    const score = tagOverlap * 3 + sdgOverlap * 2 + recencyScore * 0.000000001;
+    const score = tagOverlap * 3 + sdgOverlap * 2 + authorMatch + recencyScore * 0.000000001;
+
     return { ...p, score };
   })
   .filter(p => p.score > 0)
@@ -102,8 +107,8 @@ const jsonLd = {
   "dateModified": data.lastModified || data.pubdate || new Date().toISOString(),
   "author": authorInfo ? {
     "@type": "Person",
-    "name": authorInfo.name,
-    "url": `https://greenorbit.space/authors/${authorInfo.slug}`
+    "name": authorInfo.data.title,
+    "url": `/authors/${authorInfo.slug}`
   } : undefined,
   "publisher": {
     "@type": "Organization",
@@ -115,13 +120,6 @@ const jsonLd = {
   },
   "description": pageDescription,
 };
-
-// Related posts structured data
-const relatedJsonLd = relatedPosts.map(p => ({
-  "@type": "Article",
-  "headline": p.data.title,
-  "url": `https://greenorbit.space/resources/${p.slug}`,
-}));
 ---
 
 <Layout title={pageTitle} description={pageDescription} canonical={pageURL}>
@@ -139,8 +137,8 @@ const relatedJsonLd = relatedPosts.map(p => ({
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-4 flex-wrap">
         {authorInfo && (
           <a href={`/authors/${authorInfo.slug}`} class="inline-flex items-center gap-2 bg-gray-900/60 text-white px-4 py-2 rounded-full font-semibold shadow-lg hover:bg-gray-800 transition">
-            <img src={avatarUrl} alt={authorInfo.name} class="w-8 h-8 rounded-full" loading="lazy" />
-            <span>By {authorInfo.name}</span>
+            <img src={avatarUrl} alt={authorInfo.data.title} class="w-8 h-8 rounded-full" loading="lazy" />
+            <span>By {authorInfo.data.title}</span>
           </a>
         )}
         {formattedDate && (
@@ -176,82 +174,127 @@ const relatedJsonLd = relatedPosts.map(p => ({
     </div>
   </section>
 
-  <!-- resources Content -->
-  <main class="py-12 w-full">
-    <article class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-      <section class="prose prose-lg dark:prose-invert max-w-none">
-        <Content />
-      </section>
-
-      <!-- Inline CTA -->
-      <section class="mt-12 bg-accent-600 rounded-lg p-8 text-center text-white shadow-lg">
-        <h2 class="text-2xl sm:text-3xl font-bold mb-4">Enjoyed this insight?</h2>
-        <p class="mb-6">Subscribe to our resourcesletter for updates on sustainable space operations and research.</p>
-        <a href="/subscribe" class="inline-block bg-white text-accent-600 font-semibold px-6 py-3 rounded-md hover:bg-gray-100 transition">Subscribe Now</a>
-      </section>
+  <!-- Content -->
+  <main class="py-12 w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+    <article class="prose prose-lg dark:prose-invert max-w-none">
+      <Content />
     </article>
+
+    <!-- Inline CTA -->
+    <section class="mt-12 bg-accent-600 rounded-lg p-8 text-center text-white shadow-lg">
+      <h2 class="text-2xl sm:text-3xl font-bold mb-4">Enjoyed this insight?</h2>
+      <p class="mb-6">Subscribe to our newsletter for updates on sustainable space operations and research.</p>
+      <a href="/subscribe" class="inline-block bg-white text-accent-600 font-semibold px-6 py-3 rounded-md hover:bg-gray-100 transition">Subscribe Now</a>
+    </section>
   </main>
 
-  <!-- Related Articles -->
-  {relatedPosts.length > 0 && (
-    <section class="w-full bg-secondary-500 dark:bg-secondary-500 py-12">
-      <h2 class="text-2xl font-bold mb-6 text-center text-white">Related Resources</h2>
-      <ul class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full px-4 sm:px-6 lg:px-8">
-        {relatedPosts.map(post => {
-          const { title, excerpt, pubdate, tags = [], SDGs = [], featuredImage, organisations = [], contentType } = post.data;
-          const date = pubdate ? new Date(pubdate).toLocaleDateString("en-GB", { year:"numeric", month:"long", day:"numeric" }) : "";
-          return (
-            <li class="border border-accent-500 rounded-lg overflow-hidden hover:shadow-xl transition bg-white dark:bg-gray-800/40">
-              <a href={`/resources/${post.slug}`} class="block overflow-hidden rounded-t-lg">
-                <img src={featuredImage || '/images/placeholder.jpg'} alt={title} loading="lazy" class="w-full h-64 md:h-72 lg:h-80 object-cover object-center transition-transform duration-300 hover:scale-105" />
-              </a>
-              <div class="p-4 space-y-3">
-                <a href={`/resources/${post.slug}`} class="block w-full">
-                  <h3 class="text-lg font-semibold bg-accent-500 text-white w-full px-3 py-2 rounded-md">{title}</h3>
+<!-- Related posts -->
+{relatedPosts.length > 0 && (
+  <section class="w-full py-12">
+    <h2 class="text-2xl font-bold mb-6 text-center text-accent-500">Related Posts</h2>
+    <ul class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full px-4 sm:px-6 lg:px-8">
+      {relatedPosts.map(post => {
+        const {
+          title,
+          pubdate,
+          excerpt,
+          tags = [],
+          contentType,
+          organisations = [],
+          SDGs = [],
+          featuredImage,
+        } = post.data;
+
+        const date = pubdate
+          ? new Date(pubdate).toLocaleDateString("en-GB", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })
+          : "";
+
+        const sdgIcons = Array.isArray(SDGs)
+          ? SDGs.map(id => {
+              const code = `SDG ${String(id).padStart(2, "0")}`;
+              const sdg = sdgMap[code.toUpperCase()];
+              return (
+                <a key={code} href={`https://sdgs.greenorbit.space/${id}/`} target="_blank" rel="noopener noreferrer">
+                  <img
+                    src={sdg?.icon || '/images/fallback-sdg.png'}
+                    alt={sdg?.name || code}
+                    class="w-8 h-8 rounded-sm border border-gray-300/40 transition-transform hover:scale-110"
+                  />
                 </a>
-                {date && <p class="text-sm text-white">{date}</p>}
-                {excerpt && <p class="text-gray-700 dark:text-gray-300 text-sm">{excerpt}</p>}
+              );
+            })
+          : [];
 
-                {tags.length > 0 && (
-                  <div class="flex flex-wrap gap-2 mt-2">
-                    {tags.map(tag => <a key={tag} href={`/resources?tag=${encodeURIComponent(tag)}`} class="bg-accent-500 text-white text-xs px-2 py-1 rounded hover:bg-accent-600 transition">#{tag}</a>)}
-                  </div>
-                )}
+        return (
+          <li key={post.slug} class="border border-accent-500 rounded-lg overflow-hidden hover:shadow-xl transition bg-white dark:bg-gray-800/40">
+            {/* Featured Image */}
+            <a href={`/resources/${post.slug}`} class="block overflow-hidden rounded-t-lg">
+              <img
+                src={featuredImage || '/images/placeholder.jpg'}
+                alt={title}
+                loading="lazy"
+                class="w-full h-64 md:h-72 lg:h-80 object-cover object-center transition-transform duration-300 hover:scale-105"
+              />
+            </a>
 
-                {organisations.length > 0 && (
-                  <div class="mt-2 flex flex-wrap gap-2">
-                    {organisations.map(org => (
-                      <a key={org} href={`/organisations/${slugify(org.toLowerCase())}`} class="bg-gray-300 dark:bg-accent-500 text-white rounded-full px-3 py-1 text-xs font-medium capitalize">{org}</a>
-                    ))}
-                  </div>
-                )}
+            {/* Card Content */}
+            <div class="p-4 space-y-3">
+              <a href={`/resources/${post.slug}`} class="block w-full">
+                <h3 class="text-lg font-semibold bg-accent-500 text-white w-full px-3 py-2 rounded-md transition-colors">
+                  {title}
+                </h3>
+              </a>
 
-                {contentType && (
-                  <div class="mt-2">
-                    <span class="inline-block bg-primary-600 text-white text-xs px-2 py-1 rounded uppercase">{contentType}</span>
-                  </div>
-                )}
+              {date && <p class="text-sm text-gray-500 dark:text-gray-300">{date}</p>}
+              {excerpt && <p class="text-gray-700 dark:text-gray-300 text-sm">{excerpt}</p>}
 
-                {SDGs.length > 0 && (
-                  <div class="mt-2 flex flex-wrap gap-2">
-                    {SDGs.map(id => {
-                      const code = `SDG ${String(id).padStart(2,'0')}`;
-                      const sdg = sdgMap[code.toUpperCase()];
-                      return (
-                        <a key={id} href={`https://sdgs.greenorbit.space/${id}/`} target="_blank" rel="noopener noreferrer">
-                          <img src={sdg?.icon || '/sdgs/default.svg'} alt={sdg?.name || code} class="w-8 h-8 rounded-sm border border-gray-300/40 transition-transform hover:scale-110"/>
-                        </a>
-                      );
-                    })}
-                  </div>
-                )}
-              </div>
-            </li>
-          );
-        })}
-      </ul>
-    </section>
-  )}
+              {tags.length > 0 && (
+                <div class="flex flex-wrap gap-2 mt-2">
+                  {tags.map(tag => (
+                    <span key={tag} class="inline-block bg-accent-500 text-white text-xs px-2 py-1 rounded">
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+
+              {organisations?.length > 0 && (
+                <div class="mt-2 flex flex-wrap gap-2">
+                  {organisations.map(org => (
+                    <a
+                      key={org.slug}
+                      href={`/organisations/${org.slug}`}
+                      class="bg-gray-300 dark:bg-accent-500 text-white rounded-full px-3 py-1 text-xs font-medium capitalize"
+                    >
+                      {org.name}
+                    </a>
+                  ))}
+                </div>
+              )}
+
+              {contentType && (
+                <div class="mt-2">
+                  <a
+                    href={`/resources/`}
+                    class="inline-block bg-primary-600 text-white text-xs px-2 py-1 rounded uppercase hover:bg-primary-700"
+                  >
+                    {contentType}
+                  </a>
+                </div>
+              )}
+
+              {sdgIcons.length > 0 && <div class="mt-2 flex flex-wrap gap-2">{sdgIcons}</div>}
+            </div>
+          </li>
+        );
+      })}
+    </ul>
+  </section>
+)}
 
   <!-- Sticky Floating CTA -->
   <div id="sticky-cta" class="fixed bottom-6 right-6 z-50 bg-accent-600 text-white rounded-lg shadow-lg p-4 flex flex-col items-center space-y-2 opacity-0 translate-y-20 transition-all duration-500">
@@ -262,7 +305,7 @@ const relatedJsonLd = relatedPosts.map(p => ({
 
   <Footer />
 
-  <!-- Hero Parallax & CTA -->
+  <!-- Hero Parallax & CTA Script -->
   <script>
     const hero = document.getElementById('hero-bg');
     const cta = document.getElementById('sticky-cta');
@@ -286,9 +329,7 @@ const relatedJsonLd = relatedPosts.map(p => ({
   </script>
 
   <!-- Structured Data -->
-  <script type="application/ld+json">
-    {JSON.stringify({ ...jsonLd, mainEntityOfPage: pageURL, relatedLink: relatedJsonLd })}
-  </script>
+  <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
 
   <!-- Open Graph & Twitter Card -->
   <meta property="og:title" content={pageTitle} />

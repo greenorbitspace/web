@@ -3,7 +3,7 @@ title: "Space Applications"
 category: "from space"
 tags: ["earth observation", "satellite"]
 description: "Leveraging space data and technology for practical applications on Earth."
-#featuredImage: "/images/space-applications.jpg"
+featuredImage: "/images/space-applications.jpg"
 summary: "From agriculture to disaster management, space supports diverse sectors."
 organisations: ["ESA", "NASA", "Cnes"]
 SDGs: [2, 9, 13]

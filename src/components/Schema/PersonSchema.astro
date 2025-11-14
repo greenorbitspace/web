@@ -1,0 +1,64 @@
+---
+// PersonSchema.astro
+// Inject structured data for a team member/person using Schema.org JSON-LD
+
+interface WorksFor {
+  name: string;
+  url?: string;
+}
+
+interface Props {
+  name: string;
+  url?: string;
+  image?: string;
+  jobTitle?: string;
+  worksFor?: WorksFor;
+  sameAs?: string[];
+  description?: string;
+  knowsAbout?: string[];
+  hobbies?: string[];
+  motivations?: string;
+  award?: string[];
+  nationality?: string;
+  memberOf?: string[];
+}
+
+const {
+  name = '',
+  url = '',
+  image = '',
+  jobTitle = '',
+  worksFor = { name: '', url: '' },
+  sameAs = [],
+  description = '',
+  knowsAbout = [],
+  hobbies = [],
+  motivations = '',
+  award = [],
+  nationality = '',
+  memberOf = [],
+} = Astro.props;
+
+// Build the JSON-LD object
+const personJSONLD = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name,
+  url: url || undefined,
+  image: image || undefined,
+  jobTitle: jobTitle || undefined,
+  worksFor: worksFor.name ? { '@type': 'Organization', ...worksFor } : undefined,
+  sameAs: sameAs.length > 0 ? sameAs : undefined,
+  description: description || undefined,
+  knowsAbout: knowsAbout.length > 0 ? knowsAbout : undefined,
+  hobbies: hobbies.length > 0 ? hobbies : undefined,
+  motivations: motivations || undefined,
+  award: award.length > 0 ? award : undefined,
+  nationality: nationality || undefined,
+  memberOf: memberOf.length > 0 ? memberOf : undefined,
+};
+---
+
+<script type="application/ld+json">
+{JSON.stringify(personJSONLD, null, 2)}
+</script>

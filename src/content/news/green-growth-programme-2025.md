@@ -1,5 +1,5 @@
 ---
-title: 'How Green Orbit Digital Turned Sustainability Into Growth: Insights from the 2025 Green Growth Programme'
+title: 'How We Turned Sustainability Into Growth: Insights from the 2025 Green Growth Programme'
 slug: green-growth-programme-2025
 url: https://greenorbit.space/news/green-growth-programme-2025/
 featuredImage: https://greenorbit.space/images/events/Small-Business-Britain-Header-Green-Growth-Programme-2400-2004826651.webp

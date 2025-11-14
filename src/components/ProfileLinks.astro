@@ -1,0 +1,113 @@
+---
+import profilesData from '../data/schema/profiles.json';
+import Icon from './Icon.astro';
+
+export interface Props {
+  size?: string;
+  gap?: string;
+  category?: string; // optional – can render one or all categories
+}
+
+const { size = 'w-6 h-6', gap = 'gap-4', category } = Astro.props;
+
+// Map directory/platform names to icons in Icon.astro
+const ICON_NAME_MAP: Record<string, string> = {
+  // Business directories
+  "Google My Business": "Google",
+  "Yelp": "Yelp",
+  "Bing Places for Business": "Bing",
+  "LinkedIn Company Directory": "LinkedIn",
+  "AngelList": "AngelList",
+  "Yellow Pages (Yell)": "Yell",
+  "Clutch.co": "Clutch",
+  "UpCity": "UpCity",
+  "F6S": "F6S",
+  "Trustpilot": "Trustpilot",
+  "Ticket Tailor": "TicketTailor",
+  "Crunchbase": "Crunchbase",
+
+  // Recruitment
+  "LinkedIn Recruiter": "LinkedIn",
+  "Indeed": "Indeed",
+  "Glassdoor": "Glassdoor",
+  "PeoplePerHour": "PeoplePerHour",
+  "SpaceCareers.uk": "SpaceCareers",
+  "Jobrapido": "Jobrapido",
+
+  // Social / influencer
+  "Influence.co": "Influence",
+  "Heepsy": "Heepsy",
+  "Shoutcart": "Shoutcart",
+  "Social Blade": "SocialBlade",
+  "Facebook Business Directory": "Facebook",
+
+  // Industry-specific
+  "Space Industry Directory (IAF)": "IAF",
+  "SatSearch": "SatSearch",
+  "Ecosia Partners Directory": "Ecosia",
+  "Environmental Directory": "Environmental",
+  "Global Sustainable Development Directory": "GlobalSDG",
+  "UKspace Member Directory": "UKspace",
+  "Space Training Catalogue": "SpaceTraining",
+  "Sustainable Business Alliance": "SBA",
+
+  // Creative / marketing
+  "Behance": "Behance",
+  "Dribbble": "Dribbble",
+  "Canva Directory": "Canva",
+  "HubSpot Agency Directory": "HubSpot",
+  "99Designs": "Designs99",
+
+  // Local / community
+  "Chamber of Commerce Directories": "Chamber",
+  "Meetup.com": "Meetup",
+  "Nextdoor": "Nextdoor",
+
+  // Freelance / contract
+  "Fiverr": "Fiverr",
+  "Toptal": "Toptal",
+  "Upwork": "Upwork",
+  "We Work Remotely": "WWR",
+
+  // Official / professional
+  "Companies House": "CompaniesHouse",
+  "Chartered Institute of Marketing (CIM) Directory": "CIM",
+  "Event Speaker Profiles": "Speaker",
+  "Culture Declares Emergency": "CultureDeclares",
+  "Stripe Climate": "StripeClimate",
+  "Small99 Action Progress": "Small99",
+  "Good Firms": "GoodFirms",
+  "Sustainable Business Alliance": "SBA",
+  "Good Business Charter": "GoodBusinessCharter"
+};
+
+// Flatten or filter by category
+const profileCategories = profilesData.profiles;
+let activeProfiles = [];
+
+if (category && profileCategories[category]) {
+  activeProfiles = profileCategories[category].filter(
+    (p) => p.status === 'active' && ICON_NAME_MAP[p.name]
+  );
+} else {
+  // merge all categories
+  activeProfiles = Object.values(profileCategories).flat().filter(
+    (p) => p.status === 'active' && ICON_NAME_MAP[p.name]
+  );
+}
+---
+
+<div class={`flex flex-wrap items-center ${gap}`}>
+  {activeProfiles.map((p) => (
+    <a
+      key={p.name}
+      href={p.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      title={p.description || p.name}
+      class="flex items-center text-white dark:text-white hover:text-accent-500 transition-colors duration-200"
+    >
+      <Icon name={ICON_NAME_MAP[p.name]} class={size} ariaLabel={p.name} />
+    </a>
+  ))}
+</div>

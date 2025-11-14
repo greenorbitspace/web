@@ -6,6 +6,20 @@
     "status": "active",
     "last_verified": "2025-08-25"
   },
+    {
+    "name": "Facebook",
+    "url": "https://facebook.com/greenorbit.space",
+    "description": "Real-time updates and commentary from Green Orbit Digital on sustainability and space sector news.",
+    "status": "active",
+    "last_verified": "2025-08-25"
+  },
+    {
+    "name": "Threads",
+    "url": "https://www.threads.com/@greenorbit.space",
+    "description": "Real-time updates and commentary from Green Orbit Digital on sustainability and space sector news.",
+    "status": "active",
+    "last_verified": "2025-08-25"
+  },
   {
     "name": "X",
     "url": "https://x.com/greenorbitspace",
@@ -50,7 +64,7 @@
   },
   {
     "name": "LinkTree",
-    "url": "https://linktr.ee/greenorbitspace",
+    "url": "https://linktr.ee/greenorbit.space",
     "description": "A centralized hub linking all of Green Orbit Digital’s social platforms, campaigns, and content.",
     "status": "active",
     "last_verified": "2025-08-25"
@@ -83,10 +97,31 @@
     "status": "active",
     "last_verified": "2025-08-25"
   },
-  {
+    {
     "name": "WhatsApp",
-    "url": "https://chat.whatsapp.com/invite/greenorbitspace",
+    "url": "https://api.whatsapp.com/send?phone=441164830155",
     "description": "Direct community engagement and updates from Green Orbit Digital via WhatsApp.",
+    "status": "active",
+    "last_verified": "2025-08-25"
+  },
+  {
+    "name": "WAchannel",
+    "url": "https://www.whatsapp.com/channel/0029VapdPh4GehEP4GhTVq3R",
+    "description": "Direct community engagement and updates from Green Orbit Digital via WhatsApp.",
+    "status": "active",
+    "last_verified": "2025-08-25"
+  },
+  {
+    "name": "Discord",
+    "url": "https://discord.gg/cksFNr9E",
+    "description": "Direct community engagement and updates from Green Orbit Digital via WhatsApp.",
+    "status": "active",
+    "last_verified": "2025-08-25"
+  },
+  {
+    "name": "YouTube",
+  "url": "https://youtube.com/@greenorbitdigital",
+  "description": "Direct community engagement and updates from Green Orbit Digital via WhatsApp.",
     "status": "active",
     "last_verified": "2025-08-25"
   }

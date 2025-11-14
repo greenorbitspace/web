@@ -1,0 +1,72 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import { getCertificationsSchema } from '../../components/Schema/CertificationsSchema';
+import certifications from '../../data/schema/certifications.json' assert { type: 'json' };
+
+const schema = JSON.stringify(getCertificationsSchema());
+---
+
+<Layout title="Certifications & Accreditations">
+  <Header />
+
+  <main class="py-8">
+    <HeroSection 
+      title="Certifications & Accreditations" 
+      description="Our certifications reflect Green Orbit Digital’s commitment to professional excellence, ethical standards, and sustainable business practices across the digital and space sectors."
+    />
+
+    <section class="py-16 bg-white dark:bg-secondary-500">
+      <div class="container-custom">
+        <article class="prose prose-lg dark:prose-invert max-w-4xl mx-auto">
+          <p>
+            At Green Orbit Digital, we believe in continuous learning and credible recognition. 
+            Our team holds professional certifications from globally respected institutions 
+            in marketing, sustainability, and digital strategy.
+          </p>
+
+          <h2>Professional Certifications</h2>
+          <ul>
+            {certifications.map((cert) => (
+              <li>
+                <strong>{cert.name}</strong><br/>
+                <span>Issued by: {cert.issuer}</span><br/>
+                {cert.year_awarded && <span>Awarded: {cert.year_awarded}</span>}<br/>
+                {cert.awarded_to && <span>Recipient: {cert.awarded_to}</span>}<br/>
+                {cert.description && <p>{cert.description}</p>}
+                {cert.url && (
+                  <a href={cert.url} target="_blank" rel="noopener noreferrer">
+                    Learn more
+                  </a>
+                )}
+              </li>
+            ))}
+          </ul>
+
+          <h2>Commitment to Sustainability</h2>
+          <p>
+            Our certifications aren’t just symbols of expertise—they’re proof of our responsibility 
+            to lead the marketing and space industries toward more ethical, environmentally conscious practices. 
+            We continually align our professional development with the UN Sustainable Development Goals (SDGs), 
+            ensuring our work remains both innovative and responsible.
+          </p>
+
+          <h2>Verification</h2>
+          <p>
+            Credentials can be independently verified via their issuing bodies or professional registers. 
+            For confirmation or partnership documentation, please contact 
+            <a href="mailto:hello@greenorbit.space">hello@greenorbit.space</a>.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+
+  <script type="application/ld+json">
+    {schema}
+  </script>
+</Layout>

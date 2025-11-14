@@ -1,0 +1,68 @@
+---
+import { createAboutPageSchema } from './Schema/AboutPageSchema';
+
+const schema = createAboutPageSchema({
+  siteUrl: "https://greenorbit.space",
+  aboutPageUrl: "https://greenorbit.space/about",
+  name: "Green Orbit Digital",
+  description: "Sustainable marketing agency for the space industry",
+  lastReviewed: "2025-11-01",
+  mainContentSelector: ".about-section",
+  primaryImage: {
+    url: "https://greenorbit.space/images/team/green-orbit-team.jpg",
+    caption: "Green Orbit Digital team in Leicester"
+  },
+  founder: {
+    name: "Ryan Laird",
+    title: "Director & Founder",
+    url: "https://rjmlaird.cv",
+    socials: [
+      "https://www.linkedin.com/in/rjmlaird87",
+      "https://twitter.com/rjmlaird"
+    ]
+  },
+  contact: {
+    address: {
+      street: "DOCK - Space City, 75 Exploration Drive",
+      locality: "Leicester",
+      region: "Leicestershire",
+      postalCode: "LE4 5NU",
+      country: "GB"
+    },
+    email: "hello@greenorbit.space",
+    phone: "+44-116-483-0155"
+  },
+  socials: [
+    "https://www.linkedin.com/company/greenorbitdigital",
+    "https://www.instagram.com/greenorbitspace",
+    "https://x.com/greenorbitspace"
+  ],
+  specialties: [
+    "Sustainable Marketing",
+    "Space Industry Communications",
+    "Digital Strategy",
+    "Content Marketing"
+  ],
+  relatedLinks: [
+    "https://greenorbit.space/certifications",
+    "https://greenorbit.space/services",
+    "https://greenorbit.space/contact"
+  ],
+  significantLinks: [
+    "https://greenorbit.space/sustainability",
+    "https://greenorbit.space/insights"
+  ],
+  awards: [
+    "Chartered Institute of Marketing – Chartered Marketer Status"
+  ],
+  membership: {
+    name: "UKspace",
+    url: "https://www.ukspace.org"
+  },
+  missionStatement: "To empower businesses to drive global sustainability through innovative marketing and space-driven solutions."
+});
+---
+
+<script type="application/ld+json">
+{JSON.stringify(schema, null, 2)}
+</script>

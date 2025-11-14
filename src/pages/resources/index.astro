@@ -9,23 +9,21 @@ import { SDGs } from '../../data/sdgs';
 const collectionName = 'resources';
 let entries = await getCollection(collectionName);
 
-// --- Normalize tags: trim only (keep original casing for display) ---
+// --- Normalize tags ---
 entries.forEach(entry => {
-  if (entry.data.tags) {
-    entry.data.tags = entry.data.tags.map(tag => tag.trim());
-  }
+  if (entry.data.tags) entry.data.tags = entry.data.tags.map(tag => tag.trim());
 });
 
-// --- Filter out entries without pubdate and future-dated entries, sort by date descending ---
+// --- Filter out future-dated entries and sort descending ---
 const today = new Date();
 entries = entries
   .filter(entry => entry.data.pubdate && new Date(entry.data.pubdate) <= today)
   .sort((a, b) => new Date(b.data.pubdate) - new Date(a.data.pubdate));
 
-// --- Dynamic tag library ---
-const tagLibrary = [...new Set(entries.flatMap(entry => entry.data.tags ?? []))].sort((a, b) => a.localeCompare(b));
+// --- Tag library ---
+const tagLibrary = [...new Set(entries.flatMap(entry => entry.data.tags ?? []))].sort();
 
-// --- Active tag filtering (case-insensitive) ---
+// --- Active tag from URL ---
 const url = new URL(Astro.request.url);
 const activeTagParam = url.searchParams.get('tag')?.trim().toLowerCase();
 const filteredEntries = activeTagParam
@@ -34,21 +32,21 @@ const filteredEntries = activeTagParam
     )
   : entries;
 
-// --- SDG Map for badges ---
+// --- SDG Map ---
 const sdgMap = SDGs.reduce((acc, sdg) => {
-  const code = `SDG ${String(sdg.id).padStart(2, '0')}`;
-  acc[code.toUpperCase()] = sdg;
+  acc[`SDG ${String(sdg.id).padStart(2,'0')}`] = sdg;
   return acc;
 }, {});
 ---
 
-<Layout title="resources" description="Explore our latest resources articles on sustainable space operations.">
+<Layout title="Resources" description="Explore our latest resources on sustainable space operations.">
   <Header />
 
-  <main class="py-12 w-full">
+  <main class="w-full">
     <HeroSection 
-      title="resources" 
-      description="Explore our latest resources posts on sustainability, space, and innovation." 
+      title="Resources" 
+      description="Explore our latest resources on sustainability, space, and innovation." 
+      class="pt-20"
     />
 
     <!-- Tag Filter -->
@@ -57,30 +55,26 @@ const sdgMap = SDGs.reduce((acc, sdg) => {
         <a
           href="/resources"
           class={`px-3 py-1 rounded-full text-sm font-semibold ${!activeTagParam ? 'bg-accent-500 text-white' : 'bg-gray-700 text-white/80 hover:bg-accent-500'}`}
-        >
-          All
-        </a>
+        >All</a>
         {tagLibrary.map(tag => (
           <a
             key={tag}
             href={`/resources?tag=${encodeURIComponent(tag)}`}
             class={`px-3 py-1 rounded-full text-sm font-semibold ${activeTagParam === tag.toLowerCase() ? 'bg-accent-500 text-white' : 'bg-gray-700 text-white/80 hover:bg-accent-500'}`}
-          >
-            #{tag}
-          </a>
+          >#{tag}</a>
         ))}
       </div>
     )}
 
-    <!-- resources Grid -->
+    <!-- Resources Grid -->
     <ul id="resources-grid" class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full px-4 sm:px-6 lg:px-8">
-      {filteredEntries.slice(0, 6).map(entry => {
-        const { title, excerpt, pubdate, tags = [], SDGs = [], featuredImage } = entry.data;
-        const date = pubdate ? new Date(pubdate).toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' }) : '';
+      {filteredEntries.slice(0,6).map(entry => {
+        const { title, excerpt, pubdate, tags=[], SDGs=[], featuredImage } = entry.data;
+        const date = pubdate ? new Date(pubdate).toLocaleDateString('en-GB', { year:'numeric', month:'long', day:'numeric' }) : '';
         return (
           <li key={entry.slug} class="border border-accent-500 rounded-lg overflow-hidden hover:shadow-xl transition bg-white dark:bg-gray-800/40">
             <a href={`/resources/${entry.slug}`} class="block overflow-hidden rounded-t-lg">
-              <img src={featuredImage || '/images/placeholder.jpg'} alt={title} loading="lazy" class="w-full h-48 md:h-56 lg:h-64 object-cover object-center transition-transform duration-300 hover:scale-105" />
+              <img src={featuredImage || '/images/placeholder.jpg'} alt={title} loading="lazy" class="w-full h-48 md:h-56 lg:h-64 object-cover object-center transition-transform duration-300 hover:scale-105"/>
             </a>
             <div class="p-4 space-y-2">
               <a href={`/resources/${entry.slug}`} class="block w-full">
@@ -103,7 +97,7 @@ const sdgMap = SDGs.reduce((acc, sdg) => {
                 <div class="flex flex-wrap gap-2 mt-2">
                   {SDGs.map(id => {
                     const code = `SDG ${String(id).padStart(2,'0')}`;
-                    const sdg = sdgMap[code.toUpperCase()];
+                    const sdg = sdgMap[code];
                     return (
                       <a key={id} href={`https://sdgs.greenorbit.space/${id}/`} target="_blank" rel="noopener noreferrer">
                         <img src={sdg?.icon || '/sdgs/default.svg'} alt={sdg?.name || code} class="w-8 h-8 rounded-sm border border-gray-300/40 transition-transform hover:scale-110"/>
@@ -126,11 +120,11 @@ const sdgMap = SDGs.reduce((acc, sdg) => {
     )}
 
     <!-- CTA Section -->
-    <section class="mt-16 py-16 bg-gray-900 text-white text-center w-full">
+    <section class="mt-16 py-16 bg-secondary-500 text-white text-center w-full">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl sm:text-4xl font-bold mb-4">Stay Updated on Sustainable Space</h2>
-        <p class="mb-8 text-lg sm:text-xl text-gray-200">Subscribe to our resourcesletter for the latest insights on space, sustainability, and innovation.</p>
-        <a href="/subscribe" class="inline-block px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition text-lg sm:text-xl">Subscribe Now</a>
+        <p class="mb-8 text-lg sm:text-xl text-gray-200">Subscribe to our newsletter for the latest insights on space, sustainability, and innovation.</p>
+        <a href="/newsletter" class="inline-block px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition text-lg sm:text-xl">Subscribe Now</a>
       </div>
     </section>
   </main>
@@ -138,19 +132,20 @@ const sdgMap = SDGs.reduce((acc, sdg) => {
   <Footer />
 
   <!-- Load More Script -->
-  <script>
-    const entries = { filteredEntries: JSON.parse(JSON.stringify(filteredEntries)) };
+  <script type="module">
+    const filteredEntries = JSON.parse(`${JSON.stringify(filteredEntries)}`);
     let visibleCount = 6;
     const increment = 6;
     const loadMoreBtn = document.getElementById('load-more');
     const grid = document.getElementById('resources-grid');
 
-    if (loadMoreBtn) {
+    if (loadMoreBtn && grid) {
       loadMoreBtn.addEventListener('click', () => {
-        const nextEntries = entries.filteredEntries.slice(visibleCount, visibleCount + increment);
+        const nextEntries = filteredEntries.slice(visibleCount, visibleCount + increment);
         nextEntries.forEach(entry => {
           const li = document.createElement('li');
           li.className = "border border-accent-500 rounded-lg overflow-hidden hover:shadow-xl transition bg-white dark:bg-gray-800/40";
+          const dateStr = entry.data.pubdate ? new Date(entry.data.pubdate).toLocaleDateString('en-GB',{year:'numeric',month:'long',day:'numeric'}) : '';
           li.innerHTML = `
             <a href="/resources/${entry.slug}" class="block overflow-hidden rounded-t-lg">
               <img src="${entry.data.featuredImage || '/images/placeholder.jpg'}" alt="${entry.data.title}" loading="lazy" class="w-full h-48 md:h-56 lg:h-64 object-cover object-center transition-transform duration-300 hover:scale-105"/>
@@ -159,14 +154,14 @@ const sdgMap = SDGs.reduce((acc, sdg) => {
               <a href="/resources/${entry.slug}" class="block w-full">
                 <h3 class="text-lg font-semibold bg-accent-500 text-white w-full px-3 py-2 rounded-md">${entry.data.title}</h3>
               </a>
-              ${entry.data.pubdate ? `<p class="text-sm text-white">${new Date(entry.data.pubdate).toLocaleDateString('en-GB',{year:'numeric',month:'long',day:'numeric'})}</p>` : ''}
+              ${dateStr ? `<p class="text-sm text-white">${dateStr}</p>` : ''}
               ${entry.data.excerpt ? `<p class="text-gray-700 dark:text-gray-300 text-sm">${entry.data.excerpt}</p>` : ''}
             </div>
           `;
           grid.appendChild(li);
         });
         visibleCount += increment;
-        if (visibleCount >= entries.filteredEntries.length) loadMoreBtn.style.display = 'none';
+        if (visibleCount >= filteredEntries.length) loadMoreBtn.style.display = 'none';
       });
     }
   </script>

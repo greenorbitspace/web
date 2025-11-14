@@ -1,0 +1,154 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import InsightsList from '../../components/InsightsList.jsx';
+import PersonSchema from '../../components/Schema/PersonSchema.astro';
+import SocialLinks from '../../components/SocialLinks.astro';
+import { getCollection } from 'astro:content';
+import crypto from 'crypto';
+import slugify from 'slugify';
+
+// ✅ Static paths for team pages
+export async function getStaticPaths() {
+  const team = await getCollection('team');
+  return team.map(member => ({
+    params: { slug: member.data.slug || slugify(member.data.title, { lower: true }) },
+  }));
+}
+
+const { slug } = Astro.params;
+
+// ✅ Get team member data
+const teamMembers = await getCollection('team');
+const person = teamMembers.find(
+  m => slugify(m.data.slug || m.data.title, { lower: true }) === slug.toLowerCase()
+);
+if (!person) throw new Error(`Team member not found: ${slug}`);
+const data = person.data;
+
+// ✅ Profile image with Gravatar fallback
+const profileImage = data.contactEmail
+  ? `https://www.gravatar.com/avatar/${crypto
+      .createHash('md5')
+      .update(data.contactEmail.trim().toLowerCase())
+      .digest('hex')}?s=400&d=identicon`
+  : data.image || '/images/default-team.png';
+
+// ✅ Social links
+const socials = Object.entries(data.socialLinks || {})
+  .filter(([_, url]) => url)
+  .map(([name, url]) => ({ name, url }));
+
+// ✅ Collect and filter posts from all collections
+const collections = ['blog', 'news', 'resources'];
+const allPosts = (await Promise.all(collections.map(c => getCollection(c)))).flat();
+
+const authorPosts = allPosts.filter(post => {
+  if (!post.data.author) return false;
+  const authors = Array.isArray(post.data.author) ? post.data.author : [post.data.author];
+  return authors.some(a => slugify(a, { lower: true }) === slug.toLowerCase());
+});
+
+authorPosts.sort((a, b) => new Date(b.data.pubdate ?? 0) - new Date(a.data.pubdate ?? 0));
+const latestPosts = authorPosts.slice(0, 3);
+const hasMorePosts = authorPosts.length > 3;
+---
+
+<Layout title={data.seoTitle || data.title} description={data.seoDescription || data.description}>
+  <Header />
+
+  <PersonSchema {...data} worksFor={{ name: 'Green Orbit Digital', url: 'https://greenorbit.space' }} />
+
+  <main class="py-12 max-w-6xl mx-auto px-4">
+    <HeroSection title={data.title} description={data.jobTitle || 'Team Member'} />
+
+    <!-- Profile -->
+    <section class="flex flex-col items-center text-center space-y-4 my-8">
+      <img src={profileImage} alt={data.title} class="w-40 h-40 rounded-full object-cover shadow-md" />
+      {data.description && <p class="mt-2 max-w-2xl">{data.description}</p>}
+      {data.quote && (
+        <blockquote class="italic text-lg text-white max-w-xl mt-4 border-l-4 border-accent-500 pl-4">
+          “{data.quote}”
+        </blockquote>
+      )}
+    </section>
+
+    <!-- Expertise -->
+    {data.knowsAbout?.length > 0 && (
+      <section class="mt-10">
+        <h2 class="text-2xl font-semibold mb-3 text-accent-500">Expertise</h2>
+        <ul class="list-disc list-inside text-white">
+          {data.knowsAbout.map(item => <li>{item}</li>)}
+        </ul>
+      </section>
+    )}
+
+    <!-- Motivations -->
+    {data.motivations && (
+      <section class="mt-10">
+        <h2 class="text-2xl font-semibold mb-3 text-accent-500">What Drives Me</h2>
+        <p class="text-white leading-relaxed">{data.motivations}</p>
+      </section>
+    )}
+
+    <!-- Fun Fact -->
+    {data.funFact && (
+      <section class="mt-10">
+        <h2 class="text-2xl font-semibold mb-3 text-accent-500">Fun Fact</h2>
+        <p class="text-white">{data.funFact}</p>
+      </section>
+    )}
+
+    <!-- Hobbies & Interests -->
+    {(data.hobbies?.length > 0 || data.interests?.length > 0) && (
+      <section class="mt-10">
+        <h2 class="text-2xl font-semibold mb-3 text-accent-500">Hobbies & Interests</h2>
+        <ul class="list-disc list-inside text-white">
+          {data.hobbies?.map(item => <li>{item}</li>)}
+          {data.interests?.map(item => <li>{item}</li>)}
+        </ul>
+      </section>
+    )}
+
+    <!-- Location -->
+    {data.location && (
+      <section class="mt-10">
+        <h2 class="text-2xl font-semibold mb-3 text-accent-500">Location</h2>
+        <p class="text-white">{data.location}</p>
+      </section>
+    )}
+
+    <!-- Social Links -->
+    {socials.length > 0 && (
+      <section class="mt-10">
+        <h2 class="text-2xl font-semibold mb-3 text-accent-500">Connect</h2>
+        <SocialLinks socials={socials} size="w-6 h-6" gap="gap-4" />
+      </section>
+    )}
+
+    <!-- ✅ Latest Posts by Author -->
+    {latestPosts.length > 0 && (
+      <section class="mt-16">
+        <h2 class="text-2xl font-semibold mb-6 text-accent-500">
+          Latest Posts by {data.title}
+        </h2>
+        <InsightsList client:load posts={latestPosts} />
+
+        {hasMorePosts && (
+          <div class="mt-4 text-center">
+            <a
+              href={`/authors/${slug}`}
+              class="text-accent-500 hover:underline font-semibold"
+            >
+              View all posts
+            </a>
+          </div>
+        )}
+      </section>
+    )}
+  </main>
+
+  <Footer />
+</Layout>

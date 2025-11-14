@@ -8,7 +8,7 @@ featuredImage: https://greenorbit.space/images/resources/toolkit.webp
 featured: false
 author: Ryan Laird
 tags:
-- sustanable marketing strategy
+- sustainable marketing strategy
 pubdate: '2024-04-18T14:22:00.000+00:00'
 categories:
 - resources

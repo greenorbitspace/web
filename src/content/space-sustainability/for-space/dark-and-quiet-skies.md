@@ -3,7 +3,7 @@ title: "Dark and Quiet Skies"
 category: "for space"
 tags: ["earth observation", "satellite"]
 description: "Monitoring Earth's night skies for dark and quiet regions."
-#featuredImage: "/images/dark-and-quiet-skies.jpg"
+featuredImage: "/images/dark-and-quiet-skies.jpg"
 summary: "Preserving dark skies for astronomy and satellite observations."
 organisations: ["ESA", "NASA"]
 SDGs: [13, 15]

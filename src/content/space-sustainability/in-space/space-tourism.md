@@ -3,7 +3,7 @@ title: "Space Tourism"
 category: "in space"
 tags: ["commercial spaceflight", "tourism"]
 description: "Commercial space travel for private individuals and research."
-#featuredImage: "/images/space-tourism.jpg"
+featuredImage: "/images/space-tourism.jpg"
 summary: "Enabling human experiences and commercial activity in space."
 organisations: ["SpaceX", "Blue Origin", "Virgin Galactic"]
 SDGs: [8, 9]

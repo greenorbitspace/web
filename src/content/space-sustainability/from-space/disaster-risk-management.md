@@ -3,7 +3,7 @@ title: "Disaster Risk Management"
 category: "from space"
 tags: ["earth observation", "satellite"]
 description: "Using satellite data to assess and mitigate disaster risks."
-#featuredImage: "/images/disaster-risk-management.jpg"
+featuredImage: "/images/disaster-risk-management.jpg"
 summary: "Monitoring natural hazards and supporting emergency response."
 organisations: ["UNDRR", "ESA", "NASA"]
 SDGs: [11, 13]

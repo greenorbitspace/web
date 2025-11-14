@@ -1,0 +1,44 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Green Orbit Digital",
+  "image": [
+    "https://greenorbit.space/images/logo.png"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "92 Corporation Road",
+    "addressLocality": "Leicester",
+    "addressRegion": "Leicestershire",
+    "postalCode": "LE1 1AB",
+    "addressCountry": "GB"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.6369,
+    "longitude": -1.1398
+  },
+  "url": "https://greenorbit.space",
+  "telephone": "+44-116-1234567",
+  "email": "info@greenorbit.space",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "17:30"
+    }
+  ],
+  "priceRange": "££",
+  "sameAs": [
+    "https://www.linkedin.com/company/green-orbit-digital",
+    "https://twitter.com/greenorbitspace"
+  ],
+  "description": "Green Orbit Digital is a Leicester-based agency specialising in sustainable marketing for the space sector. We help businesses increase traffic, brand awareness, and leads through SEO, social media, email, and content marketing."
+}

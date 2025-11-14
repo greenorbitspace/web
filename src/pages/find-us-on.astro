@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.astro';
+import profilesData from '../data/schema/profiles.json';
+
+const { profiles } = profilesData;
+
+// Utility: transform keys like "business_directories" → "Business Directories"
+const formatHeading = (key: string) =>
+  key
+    .replace(/_/g, ' ')
+    .replace(/\b\w/g, (char) => char.toUpperCase());
+
+// Extract only non-empty active categories
+const categories = Object.entries(profiles).filter(([_, items]) =>
+  (items as any[]).some((item) => item.status === 'active')
+);
+---
+
+<Layout title="Find Us On" description="Explore Green Orbit Digital’s verified profiles across business, industry, and creative directories.">
+  <Header />
+
+    <HeroSection 
+      title="Find Us On"
+      description="Explore Green Orbit Digital’s verified profiles across business, industry, and creative directories."
+    />
+
+  <main class="mx-auto px-6 py-12 bg-secondary-500">
+
+    <div class="space-y-12">
+      {categories.map(([category, items]) => {
+        const activeItems = (items as any[]).filter((item) => item.status === 'active');
+        return (
+          <section>
+            <h2 class="text-2xl font-semibold mb-6 text-accent-500">
+              {formatHeading(category)}
+            </h2>
+
+            <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {activeItems.map((profile) => (
+                <li class="p-5 rounded-2xl bg-primary-500 border border-white hover:border-accent-500 hover:bg-primary-500 transition">
+                  <a
+                    href={profile.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="block"
+                  >
+                    <h3 class="text-lg font-semibold text-white hover:text-accent-400">
+                      {profile.name}
+                    </h3>
+                    <p class="text-sm text-white mt-2">{profile.description}</p>
+                    <p class="text-xs text-white mt-3">
+                      Last verified: {new Date(profile.last_verified).toLocaleDateString('en-GB')}
+                    </p>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        );
+      })}
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

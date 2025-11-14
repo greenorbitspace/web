@@ -3,7 +3,7 @@ title: "Space Environment"
 category: "in space"
 tags: ["space weather", "satellite"]
 description: "Understanding Earth's orbital environment and its impacts on satellites."
-#featuredImage: "/images/space-environment.jpg"
+featuredImage: "/images/space-environment.jpg"
 summary: "Monitoring radiation, debris, and geomagnetic activity for satellite safety."
 organisations: ["ESA", "NASA", "JAXA"]
 SDGs: [9, 12]
