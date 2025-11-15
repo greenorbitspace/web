@@ -12,13 +12,26 @@ const schema = JSON.stringify(getCertificationsSchema());
 <Layout title="Certifications & Accreditations">
   <Header />
 
-  <main class="py-8 space-y-24">
+  <main class="py-12 space-y-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <!-- Hero Section -->
     <HeroSection 
       title="Certifications & Accreditations" 
       description="Our certifications reflect Green Orbit Digital’s commitment to professional excellence, ethical standards, and sustainable business practices across the digital and space sectors."
     />
+
+    <!-- Overview -->
+    <section class="space-y-6 text-gray-700 dark:text-gray-300">
+      <p>
+        Green Orbit Digital’s team holds a wealth of professional certifications in digital marketing, analytics, sustainability, and space sector expertise. This includes advanced marketing qualifications from the Digital Marketing Institute, Google, and HubSpot, as well as Green Digital Skills from INCO Academy.
+      </p>
+      <p>
+        Our leadership also brings specialised knowledge in space studies from the International Space University, along with advanced degrees in Physics, Astrophysics, and Science Communication. These certifications underpin our commitment to delivering high-quality, sustainable digital marketing solutions.
+      </p>
+      <p>
+        Each certification demonstrates our dedication to professional excellence, innovation, and embedding sustainability into our work across the digital and space industries.
+      </p>
+    </section>
 
     <!-- Professional Certifications -->
     <section class="py-16 bg-white dark:bg-primary-500">
@@ -29,7 +42,7 @@ const schema = JSON.stringify(getCertificationsSchema());
           </span>
           <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Professional Certifications</h2>
           <p class="text-gray-600 dark:text-white mb-6">
-            At Green Orbit Digital, we value continuous learning and credible recognition. Our team holds professional certifications from globally respected institutions in marketing, sustainability, and digital strategy.
+            We value continuous learning and credible recognition. Our team’s certifications from globally respected institutions ensure expertise in marketing, sustainability, and digital strategy.
           </p>
         </div>
 
@@ -44,16 +57,16 @@ const schema = JSON.stringify(getCertificationsSchema());
                 {cert.awarded_to && <p class="text-gray-600 dark:text-white mb-2"><strong>Recipient:</strong> {cert.awarded_to}</p>}
                 {cert.description && <p class="text-gray-600 dark:text-white">{cert.description}</p>}
               </div>
-          {cert.url && (
-            <a 
-              href={cert.url} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              class="mt-auto inline-block px-6 py-3 bg-accent-500 text-white font-semibold rounded-lg hover:bg-accent-600 transition text-center"
-            >
-              Learn More
-            </a>
-          )}
+              {cert.url && (
+                <a 
+                  href={cert.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="mt-auto inline-block px-6 py-3 bg-accent-500 text-white font-semibold rounded-lg hover:bg-accent-600 transition text-center"
+                >
+                  Learn More
+                </a>
+              )}
             </div>
           ))}
         </div>
@@ -61,27 +74,23 @@ const schema = JSON.stringify(getCertificationsSchema());
     </section>
 
     <!-- Sustainability Commitment -->
-    <section class="py-16 bg-gray-50 dark:bg-secondary-500">
-      <div class="container-custom max-w-4xl mx-auto text-center space-y-6">
-        <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
-          Sustainability
-        </span>
-        <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Aligned With UN SDGs</h2>
-        <p class="text-gray-600 dark:text-white">
-          Our certifications demonstrate not just professional expertise, but also our commitment to leading the marketing and space industries toward ethical and environmentally conscious practices. We align our work with the UN Sustainable Development Goals (SDGs), ensuring every campaign is both innovative and responsible.
-        </p>
-      </div>
+    <section class="py-16 bg-gray-50 dark:bg-secondary-500 text-center space-y-6">
+      <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+        Sustainability
+      </span>
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Aligned With UN SDGs</h2>
+      <p class="text-gray-600 dark:text-white max-w-3xl mx-auto">
+        Our certifications demonstrate not just professional expertise but also our commitment to guiding the marketing and space industries toward ethical and environmentally conscious practices. All campaigns are designed to align with the UN Sustainable Development Goals (SDGs), ensuring innovation with responsibility.
+      </p>
     </section>
 
     <!-- Verification -->
-    <section class="py-16 bg-white dark:bg-secondary-500">
-      <div class="container-custom max-w-3xl mx-auto text-center space-y-6">
-        <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Verification & Credibility</h2>
-        <p class="text-gray-600 dark:text-white">
-          Credentials can be independently verified via their issuing bodies or professional registers. For confirmation or partnership documentation, please contact 
-          <a href="mailto:hello@greenorbit.space" class="text-accent-500 underline">hello@greenorbit.space</a>.
-        </p>
-      </div>
+    <section class="py-16 bg-white dark:bg-secondary-500 text-center space-y-6">
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Verification & Credibility</h2>
+      <p class="text-gray-600 dark:text-white max-w-3xl mx-auto">
+        Credentials can be independently verified via their issuing bodies or professional registers. For confirmation or partnership documentation, please contact 
+        <a href="mailto:hello@greenorbit.space" class="text-accent-500 underline">hello@greenorbit.space</a>.
+      </p>
     </section>
 
   </main>

@@ -1,0 +1,76 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import CTA from '../../components/CTA.jsx';
+---
+
+<Layout title="Our Story | Green Orbit Digital" description="Learn how Green Orbit Digital evolved into a leading sustainable marketing agency for the space and tech sectors.">
+  <Header />
+
+  <main class="py-12 space-y-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Hero Section -->
+    <HeroSection
+      title="Our Story"
+      description="From humble beginnings to a leader in sustainable space marketing, discover how our mission and values guide everything we do."
+    />
+
+    <!-- Origins -->
+    <section class="space-y-6">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Our Origins</h2>
+      <p class="text-gray-700 dark:text-gray-300 text-lg">
+        Green Orbit Digital was founded by Ryan Laird with a clear vision: to bring sustainability to the forefront of digital marketing for the space and tech sectors. With a background in physics and a decade of experience in science communication, Ryan set out to merge technical insight with responsible marketing practices.
+      </p>
+      <p class="text-gray-700 dark:text-gray-300 text-lg">
+        From early projects supporting European Space Agency initiatives to helping innovative startups tell their climate-focused stories, Green Orbit Digital has always been about creating meaningful impact while maintaining high professional standards.
+      </p>
+    </section>
+
+    <!-- Mission -->
+    <section class="space-y-6 bg-gray-50 dark:bg-primary-500 rounded-xl p-8">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Our Mission</h2>
+      <p class="text-gray-700 dark:text-gray-300 text-lg">
+        Our mission is to empower space and technology organisations to grow sustainably. We embed eco-conscious strategies into every campaign, helping our clients reduce environmental impact while achieving measurable business results.
+      </p>
+      <p class="text-gray-700 dark:text-gray-300 text-lg">
+        By integrating sustainability, data-driven insights, and creative storytelling, we ensure that every marketing effort aligns with long-term climate and social goals.
+      </p>
+    </section>
+
+    <!-- Values in Action -->
+    <section class="space-y-6">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Guided by Our Values</h2>
+      <p class="text-gray-700 dark:text-gray-300 text-lg">
+        Integrity, innovation, and excellence are the pillars of Green Orbit Digital. These principles shape how we work with clients, partners, and communities to foster lasting change.
+      </p>
+      <p class="text-gray-700 dark:text-gray-300 text-lg">
+        Whether it’s promoting sustainable space initiatives, helping tech startups communicate responsibly, or collaborating with NGOs and civil society, our values guide every decision and project.
+      </p>
+    </section>
+
+    <!-- Growth and Ecosystem -->
+    <section class="space-y-6 bg-gray-50 dark:bg-primary-500 rounded-xl p-8">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Our Growth & Ecosystem</h2>
+      <p class="text-gray-700 dark:text-gray-300 text-lg">
+        Green Orbit Digital has grown through partnerships with local innovation hubs, including DOCK, Space City Leicester, and the Midlands Space Cluster. We collaborate with initiatives such as Leicester Startups and Sustainable East Midlands to support sustainable growth in the space and tech sectors.
+      </p>
+      <p class="text-gray-700 dark:text-gray-300 text-lg">
+        By connecting with these ecosystems, we amplify our impact, helping organisations communicate their sustainability achievements and achieve tangible results.
+      </p>
+    </section>
+
+    <!-- CTA -->
+    <section class="text-center mt-12">
+      <h2 class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Join Us in Creating a Sustainable Future</h2>
+      <p class="mb-6 text-gray-700 dark:text-gray-300 text-lg">
+        We partner with organisations that share our vision for a greener, more responsible space and tech sector.
+      </p>
+      <CTA text="Get in Touch" link="/contact" client:load />
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>

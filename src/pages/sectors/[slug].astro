@@ -2,161 +2,68 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import HeroSection from '../../components/HeroSection.astro';
-import CareersBoilerplate from '../../components/CareersBoilerplate.astro';
-import { getCollection } from 'astro:content';
+import CTA from '../../components/CTA.jsx';
 
+// Generate static paths for all sectors
 export async function getStaticPaths() {
-  const posts = await getCollection('careers');
-  return posts.map(post => ({
-    params: { slug: post.slug ?? post.id },
+  const sectors = await Astro.glob('../../content/sectors/*.md');
+  return sectors.map((sector) => ({
+    params: { slug: sector.frontmatter.slug },
   }));
 }
 
+// Get current slug from URL
 const { slug } = Astro.params;
-const posts = await getCollection('careers');
-const postEntry = posts.find(p => p.slug === slug || p.id === slug);
 
-if (!postEntry) throw new Error(`No career post found for slug: "${slug}"`);
+// Load all sectors
+const sectors = await Astro.glob('../../content/sectors/*.md');
 
-const { Content } = await postEntry.render();
-const data = postEntry.data;
+// Find the current sector
+const sector = sectors.find((s) => s.frontmatter.slug === slug);
 
-const formattedDate = data.pubdate
-  ? new Date(data.pubdate).toLocaleDateString('en-GB', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    })
-  : null;
+if (!sector) {
+  throw new Error(`Sector not found for slug: ${slug}`);
+}
 
-// Meta info
-const pageTitle = data.seoTitle || data.title || 'Career Opportunity';
-const pageDescription = data.seoDescription || data.description || data.title || 'Career at Green Orbit Digital';
-const pageURL = `https://greenorbit.space/careers/${slug}`;
-const pageAuthor = data.author || 'Green Orbit Digital';
-const pageImage = data.featuredImage || '/default-og-image.jpg';
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "JobPosting",
-  headline: pageTitle,
-  description: pageDescription,
-  author: {
-    "@type": "Organization",
-    name: pageAuthor,
-  },
-  datePosted: data.pubdate,
-  url: pageURL,
-  hiringOrganization: {
-    "@type": "Organization",
-    name: "Green Orbit Digital",
-    logo: {
-      "@type": "ImageObject",
-      url: "https://greenorbit.space/logo.svg",
-    },
-  },
-  ...(pageImage && { image: pageImage }),
-};
+// Destructure frontmatter and access Markdown content
+const { name, description = '', featuredImage = '/images/default-featured.jpg' } = sector.frontmatter;
+const content = sector.compiledContent;
 ---
 
-<Layout title={pageTitle} description={pageDescription} url={pageURL} jsonLd={jsonLd}>
+<Layout title={name} description={description}>
   <Header />
 
-  <main class="py-12">
-    <HeroSection title={data.title} description={data.description || 'Join our team at Green Orbit Digital'} />
+  <!-- Hero Section -->
+  <section class="relative w-full h-[400px] sm:h-[500px] lg:h-[600px] flex items-center justify-center overflow-hidden mb-16">
+    <div class="absolute inset-0 bg-cover bg-center" style={`background-image: url(${featuredImage});`} aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-black/50" aria-hidden="true"></div>
+    <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl space-y-4">
+      <h1 class="text-5xl sm:text-6xl font-extrabold text-white drop-shadow-lg">{name}</h1>
+      {description && <p class="text-xl sm:text-2xl text-gray-200 drop-shadow">{description}</p>}
+    </div>
+  </section>
 
-    <article class="max-w-4xl mx-auto p-6 prose dark:prose-invert">
-      <header class="mb-8">
-        <h1 class="text-4xl font-bold text-accent-500">{data.title}</h1>
-        <p class="text-gray-600 dark:text-gray-300 mt-1">
-          <span><strong>Location:</strong> {data.location}</span> |{' '}
-          <span><strong>Type:</strong> {data.employment_type}</span> |{' '}
-          <span><strong>Department:</strong> {data.department}</span> |{' '}
-          <span><strong>Level:</strong> {data.seniority_level}</span>
-        </p>
-        {formattedDate && (
-          <p class="text-sm text-gray-400 mt-1" aria-label={`Date posted: ${formattedDate}`}>
-            Posted on {formattedDate}
-          </p>
-        )}
-      </header>
-
-      <section>
-        <h2 class="text-2xl font-semibold mb-2">About the Role</h2>
-        <p>{data.description}</p>
-      </section>
-
-      {data.responsibilities?.length > 0 && (
-        <section>
-          <h2 class="text-2xl font-semibold mt-8 mb-2">Responsibilities</h2>
-          <ul class="list-disc list-inside">
-            {data.responsibilities.map((item, idx) => (
-              <li key={idx}>{item}</li>
-            ))}
-          </ul>
-        </section>
-      )}
-
-      {data.requirements?.length > 0 && (
-        <section>
-          <h2 class="text-2xl font-semibold mt-8 mb-2">Requirements</h2>
-          <ul class="list-disc list-inside">
-            {data.requirements.map((item, idx) => (
-              <li key={idx}>{item}</li>
-            ))}
-          </ul>
-        </section>
-      )}
-
-      {data.benefits?.length > 0 && (
-        <section>
-          <h2 class="text-2xl font-semibold mt-8 mb-2">Benefits</h2>
-          <ul class="list-disc list-inside">
-            {data.benefits.map((item, idx) => (
-              <li key={idx}>{item}</li>
-            ))}
-          </ul>
-        </section>
-      )}
-
-      {data.skills?.length > 0 && (
-        <section>
-          <h2 class="text-2xl font-semibold mt-8 mb-2">Skills & Keywords</h2>
-          <div class="flex flex-wrap gap-2">
-            {data.skills.map((skill, idx) => (
-              <span
-                key={idx}
-                class="inline-block bg-secondary-500 text-gray-800 dark:bg-secondary-700 dark:text-white px-3 py-1 rounded text-sm font-medium"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-        </section>
-      )}
-
-      <section class="mt-10 text-center">
-        <a
-          href={data.apply_url}
-          target="_blank"
-          rel="noopener noreferrer"
-          role="button"
-          class="btn-primary inline-block px-6 py-3 rounded bg-accent-500 text-white font-semibold hover:bg-accent-700 transition"
-          aria-label={`Apply for the ${data.title} role`}
-        >
-          Apply Now
-        </a>
-        <p class="mt-4 text-sm text-gray-600 dark:text-white">
-          Or email your CV and portfolio to{' '}
-          <a href={`mailto:${data.contact_email}`} class="text-accent-500 underline">
-            {data.contact_email}
-          </a>
-        </p>
-      </section>
-        <CareersBoilerplate />
+  <!-- Markdown Content -->
+  <main class="container-custom max-w-4xl mx-auto space-y-8 bg-primary-500">
+    <article class="prose prose-lg dark:prose-invert max-w-full">
+      <div innerHTML={content} />
     </article>
+          <div class="mt-8">
+        <a href="/sectors" class="btn-accent">← Back to Sectors</a>
+      </div>
   </main>
+
+
+  <!-- CTA Section -->
+  <section class="w-full bg-secondary-500 py-16 text-white text-center mt-16">
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-accent-500 mb-4">Request Your Audit</h2>
+      <p class="text-gray-200 mb-6">
+        Take the next step in diagnosing and optimising your digital presence sustainably. Explore options and book an audit tailored to your business needs.
+      </p>
+      <CTA text="Explore Audit Options" link="/service-catalogue#audits" client:load />
+    </div>
+  </section>
 
   <Footer />
 </Layout>

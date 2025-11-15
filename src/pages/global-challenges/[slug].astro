@@ -1,0 +1,142 @@
+---
+// src/pages/global-challenges/[slug].astro
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+// Load all markdown files for static generation
+export async function getStaticPaths() {
+  const modules = import.meta.glob('../../content/global-challenges/*.md', { eager: true });
+
+  const paths = Object.values(modules).map((mod) => ({
+    params: { slug: mod.frontmatter.slug },
+  }));
+
+  return paths;
+}
+
+// Get current slug
+const { slug } = Astro.params;
+
+// Load all challenges
+const modules = import.meta.glob('../../content/global-challenges/*.md', { eager: true });
+const challenges = Object.values(modules);
+
+// Find current challenge
+const challenge = challenges.find((c) => c.frontmatter.slug === slug);
+
+if (!challenge) {
+  throw new Error(`Global challenge not found for slug: ${slug}`);
+}
+
+const {
+  title,
+  description,
+  featuredImage = '/images/default-featured.jpg',
+  SDGs = [],
+  organisations = [],
+  paris_agreement,
+  sendai_framework,
+  space2030,
+  seoTitle,
+  seoDescription,
+  Content,
+} = challenge.frontmatter;
+---
+
+<Layout title={seoTitle || title} description={seoDescription || description}>
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="relative w-full h-64 sm:h-96 flex items-center justify-center mb-12">
+    <img src={featuredImage} alt={title} class="absolute inset-0 w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl md:text-5xl font-bold">{title}</h1>
+      {description && <p class="mt-2 text-lg md:text-xl">{description}</p>}
+    </div>
+  </section>
+
+  <main class="container-custom max-w-5xl mx-auto space-y-12 pb-16">
+
+    <!-- Markdown Content -->
+    <article class="prose prose-lg dark:prose-invert max-w-full">
+      {Content && Astro.markdown(Content)}
+    </article>
+
+    <!-- Related SDGs -->
+    {SDGs.length > 0 && (
+      <section>
+        <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Related SDGs</h2>
+        <ul class="flex flex-wrap gap-2">
+          {SDGs.map((sdg) => (
+            <li class="px-2 py-1 bg-accent-500 text-white rounded font-medium" key={sdg}>
+              SDG {sdg}
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <!-- Key Organisations -->
+    {organisations.length > 0 && (
+      <section>
+        <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Key Organisations</h2>
+        <ul class="flex flex-wrap gap-2">
+          {organisations.map((org) => (
+            <li class="px-2 py-1 bg-secondary-500 text-white rounded font-medium" key={org}>
+              {org}
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <!-- Paris Agreement -->
+    {paris_agreement && (
+      <section>
+        <h2 class="text-2xl font-semibold mb-2 text-gray-900 dark:text-white">Paris Agreement</h2>
+        <p class="mb-2 text-gray-700 dark:text-gray-300">
+          <strong>Article:</strong> {paris_agreement.article}
+        </p>
+        <p class="mb-2 text-gray-700 dark:text-gray-300">{paris_agreement.summary}</p>
+        <a href={paris_agreement.link} target="_blank" class="text-accent-500 font-semibold underline">
+          Read full text
+        </a>
+      </section>
+    )}
+
+    <!-- Sendai Framework -->
+    {sendai_framework?.references?.length > 0 && (
+      <section>
+        <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Sendai Framework References</h2>
+        <ul class="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+          {sendai_framework.references.map((ref) => (
+            <li key={ref.code}>
+              <strong>{ref.code}:</strong> {ref.summary}{' '}
+              <a href={ref.link} target="_blank" class="text-accent-500 font-semibold underline">
+                Read more
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <!-- Space2030 Agenda -->
+    {space2030 && (
+      <section>
+        <h2 class="text-2xl font-semibold mb-2 text-gray-900 dark:text-white">Space2030 Agenda</h2>
+        <p class="mb-2 text-gray-700 dark:text-gray-300">
+          <strong>Section {space2030.section}:</strong> {space2030.summary}
+        </p>
+        <a href={space2030.link} target="_blank" class="text-accent-500 font-semibold underline">
+          Read full text
+        </a>
+      </section>
+    )}
+
+  </main>
+
+  <Footer />
+</Layout>

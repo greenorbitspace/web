@@ -1,0 +1,151 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTA from '../../components/CTA.jsx';
+import slugify from 'slugify';
+import { SDGs } from '../../data/sdgs';
+
+const fallbackIcon = '/sdgs/default.svg';
+
+// ---------------------------------
+// 1. Generate static paths
+// ---------------------------------
+export async function getStaticPaths() {
+  const modules = import.meta.glob('/src/content/space-applications/*.md', { eager: true });
+
+  const appsWithSlugs = Object.values(modules)
+    .map((mod: any) => {
+      const fm = mod.frontmatter ?? {};
+      const slug = fm.slug || (fm.title || fm.Name ? slugify(fm.title || fm.Name, { lower: true, strict: true }) : undefined);
+      if (!slug) return null;
+      return { slug };
+    })
+    .filter(Boolean) as { slug: string }[];
+
+  return appsWithSlugs.map((app) => ({
+    params: { slug: app.slug },
+  }));
+}
+
+// ---------------------------------
+// 2. Load content for the current slug
+// ---------------------------------
+const { slug } = Astro.params;
+const modules = import.meta.glob('/src/content/space-applications/*.md', { eager: true });
+
+const apps = Object.values(modules)
+  .map((mod: any) => {
+    const fm = mod.frontmatter ?? {};
+    const slugValue = fm.slug || (fm.title || fm.Name ? slugify(fm.title || fm.Name, { lower: true, strict: true }) : undefined);
+
+    return {
+      ...mod,
+      frontmatter: { ...fm, slug: slugValue },
+      content: mod.compiledContent,
+    };
+  })
+  .filter((app) => app.frontmatter.slug);
+
+const app = apps.find((a) => a.frontmatter.slug === slug);
+
+if (!app) {
+  throw new Error(`Space application not found for slug: ${slug}`);
+}
+
+// ---------------------------------
+// 3. Destructure frontmatter and content
+// ---------------------------------
+const {
+  title = app.frontmatter.Name,
+  Name,
+  Description = '',
+  markets = '',
+  domains = '',
+  copernicus = 'No',
+  EGNSS = 'No',
+  featuredImage = '/images/default-featured.jpg',
+  SDGs: appSDGs = [],
+} = app.frontmatter;
+
+const content = app.compiledContent;
+
+// Map SDG IDs to icons
+const sdgMap = SDGs.reduce((acc, sdg) => {
+  acc[sdg.id] = sdg;
+  return acc;
+}, {} as Record<number, typeof SDGs[0]>);
+---
+
+<Layout title={title} description={Description}>
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="relative w-full h-[400px] sm:h-[500px] lg:h-[600px] flex items-center justify-center overflow-hidden mb-16">
+    <div
+      class="absolute inset-0 bg-cover bg-center"
+      style={`background-image: url(${featuredImage});`}
+      aria-hidden="true"
+    />
+    <div class="absolute inset-0 bg-black/50" aria-hidden="true" />
+    <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl space-y-4">
+      <h1 class="text-5xl sm:text-6xl font-extrabold text-white drop-shadow-lg">{title}</h1>
+      {Description && <p class="text-xl sm:text-2xl text-white drop-shadow">{Description}</p>}
+    </div>
+  </section>
+
+  <!-- Markdown Content -->
+  <main class="container-custom max-w-4xl mx-auto space-y-8">
+    <article class="prose prose-lg dark:prose-invert max-w-full">
+      <div innerHTML={content} />
+    </article>
+
+    <!-- Metadata and SDG Icons -->
+    <div class="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+      {markets && <p><strong>Markets:</strong> {markets}</p>}
+      {domains && <p><strong>Domains:</strong> {domains}</p>}
+      <p><strong>Copernicus:</strong> {copernicus}</p>
+      <p><strong>EGNSS:</strong> {EGNSS}</p>
+
+      {appSDGs.length > 0 && (
+        <div class="flex flex-wrap gap-2 mt-2">
+          {appSDGs.map((id) => {
+            const sdg = sdgMap[id] || {};
+            return (
+              <a
+                key={id}
+                href={`https://sdgs.greenorbit.space/${sdg.name?.toLowerCase().replace(/\s+/g, '-')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={sdg.name || `SDG ${id}`}
+              >
+                <img
+                  src={sdg.icon || fallbackIcon}
+                  alt={sdg.name || `SDG ${id}`}
+                  class="w-8 h-8 rounded-sm border border-gray-300/40 hover:brightness-110 transition"
+                />
+              </a>
+            );
+          })}
+        </div>
+      )}
+    </div>
+
+    <div class="mt-8">
+      <a href="/space-applications" class="btn-accent">← Back to Space Applications</a>
+    </div>
+  </main>
+
+  <!-- CTA Section -->
+  <section class="w-full bg-secondary-500 py-16 text-white text-center mt-16">
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-accent-500 mb-4">Request Your Audit</h2>
+      <p class="text-gray-200 mb-6">
+        Take the next step in diagnosing and optimising your digital presence sustainably. Explore options and book an audit tailored to your business needs.
+      </p>
+      <CTA text="Explore Audit Options" link="/service-catalogue#audits" client:load />
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

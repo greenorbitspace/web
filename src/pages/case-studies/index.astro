@@ -3,6 +3,17 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import HeroSection from '../../components/HeroSection.astro';
+import CTA from '../../components/CTA.jsx';
+
+// Import all Markdown files from the case-studies folder
+const caseStudies = await Astro.glob('../../content/case-studies/*.md');
+
+// Sort by pubdate descending
+caseStudies.sort((a, b) => {
+  const dateA = a.frontmatter.pubdate ? new Date(a.frontmatter.pubdate) : new Date(0);
+  const dateB = b.frontmatter.pubdate ? new Date(b.frontmatter.pubdate) : new Date(0);
+  return dateB - dateA;
+});
 ---
 
 <Layout title="Case Studies">
@@ -14,143 +25,71 @@ import HeroSection from '../../components/HeroSection.astro';
       description="See how our customers are achieving success with Green Orbit Digital"
     />
 
-    <section class="py-16 bg-white dark:bg-secondary-500">
+    <section class="py-16 bg-white dark:bg-primary-500">
       <div class="container-custom">
-        <!-- Case Study 1 -->
-        <div class="mb-24">
-          <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
-            <div>
-              <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
-                E-commerce
-              </span>
-              <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                How ShopWave Increased Conversions by 45%
-              </h2>
-              <p class="text-gray-600 dark:text-gray-300 mb-6">
-                ShopWave, a leading e-commerce platform, was struggling with cart abandonment and low conversion rates. Learn how they used Sassify to transform their customer experience and achieve remarkable results.
-              </p>
-              <div class="flex flex-wrap gap-4 mb-6">
-                <div class="flex items-center">
-                  <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-gray-700 dark:text-gray-300">45% Conversion Increase</span>
-                </div>
-                <div class="flex items-center">
-                  <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-gray-700 dark:text-gray-300">30% Cart Abandonment Reduction</span>
-                </div>
-                <div class="flex items-center">
-                  <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-gray-700 dark:text-gray-300">2.5x ROI</span>
+        {caseStudies.length > 0 ? (
+          caseStudies.map((study, idx) => {
+            const {
+              title = 'Untitled Case Study',
+              summary = '',
+              category = '',
+              featuredImage = '/images/default-featured.jpg',
+              metrics = [],
+              slug
+            } = study.frontmatter;
+
+            const isEven = idx % 2 === 0;
+            const studyUrl = slug ? `/case-studies/${slug}` : '#';
+
+            return (
+              <div key={slug} class="mb-24 group">
+                {/* Use flex instead of grid for alternating layouts */}
+                <div class={`flex flex-col md:flex-row ${!isEven ? 'md:flex-row-reverse' : ''} gap-12 items-center mb-12`}>
+                  <div class="md:w-1/2">
+                    {category && (
+                      <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+                        {category}
+                      </span>
+                    )}
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">{title}</h2>
+                    {summary && <p class="text-gray-600 dark:text-gray-300 mb-6">{summary}</p>}
+
+                    {metrics.length > 0 && (
+                      <div class="flex flex-wrap gap-4 mb-6">
+                        {metrics.map((metric, mIdx) => (
+                          <div class="flex items-center" key={mIdx}>
+                            <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-700 dark:text-gray-300">{metric}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    <a href={studyUrl} class="btn-primary mt-2 inline-block">Read Full Case Study</a>
+                  </div>
+
+                  <div class="md:w-1/2 rounded-lg overflow-hidden shadow-xl">
+                    <img src={featuredImage} alt={title} class="w-full h-auto" />
+                  </div>
                 </div>
               </div>
-              <a href="#" class="btn-primary">Read Full Case Study</a>
-            </div>
-            <div class="rounded-lg overflow-hidden shadow-xl">
-              <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="ShopWave Dashboard" class="w-full h-auto" />
-            </div>
-          </div>
-        </div>
-
-        <!-- Case Study 2 -->
-        <div class="mb-24">
-          <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
-            <div class="order-2 md:order-1 rounded-lg overflow-hidden shadow-xl">
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="TechNova Team" class="w-full h-auto" />
-            </div>
-            <div class="order-1 md:order-2">
-              <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
-                SaaS
-              </span>
-              <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">TechNova's Journey to 10,000 Active Users</h2>
-              <p class="text-gray-600 dark:text-gray-300 mb-6">
-                TechNova, a startup offering AI-powered analytics, needed to scale their infrastructure while maintaining performance. Discover how Sassify helped them grow from 1,000 to 10,000 active users without increasing their engineering team.
-              </p>
-              <div class="flex flex-wrap gap-4 mb-6">
-                <div class="flex items-center">
-                  <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-gray-700 dark:text-gray-300">10x User Growth</span>
-                </div>
-                <div class="flex items-center">
-                  <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-gray-700 dark:text-gray-300">40% Cost Reduction</span>
-                </div>
-                <div class="flex items-center">
-                  <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-gray-700 dark:text-gray-300">99.9% Uptime</span>
-                </div>
-              </div>
-              <a href="#" class="btn-primary">Read Full Case Study</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Case Study 3 -->
-        <div>
-          <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
-            <div>
-              <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
-                Healthcare
-              </span>
-              <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">MediConnect's Digital Transformation</h2>
-              <p class="text-gray-600 dark:text-gray-300 mb-6">
-                MediConnect, a healthcare provider network, needed to modernize their patient management system. See how Sassify helped them transition from legacy systems to a modern, secure, and compliant digital platform.
-              </p>
-              <div class="flex flex-wrap gap-4 mb-6">
-                <div class="flex items-center">
-                  <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-gray-700 dark:text-gray-300">60% Efficiency Improvement</span>
-                </div>
-                <div class="flex items-center">
-                  <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-gray-700 dark:text-gray-300">HIPAA Compliant</span>
-                </div>
-                <div class="flex items-center">
-                  <svg class="w-5 h-5 text-primary-600 dark:text-accent-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-gray-700 dark:text-gray-300">3 Month Implementation</span>
-                </div>
-              </div>
-              <a href="#" class="btn-primary">Read Full Case Study</a>
-            </div>
-            <div class="rounded-lg overflow-hidden shadow-xl">
-              <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="MediConnect Platform" class="w-full h-auto" />
-            </div>
-          </div>
-        </div>
-
-        <!-- CTA -->
-        <div class="mt-16 text-center">
-          <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-            Ready to achieve similar results?
-          </h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join hundreds of companies that are transforming their businesses with Sassify. Our team is ready to help you succeed.
-          </p>
-          <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="/contact" class="btn-primary">Contact Sales</a>
-            <a href="/pricing" class="btn-secondary">View Pricing</a>
-          </div>
-        </div>
+            );
+          })
+        ) : (
+          <p class="text-white text-center py-12">No case studies are available at the moment.</p>
+        )}
       </div>
     </section>
   </main>
-
+    <!-- Request Audit CTA -->
+    <section class="w-full bg-secondary-500 py-16 text-white text-center">
+          <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-accent-500 mb-4">Request Your Audit</h2>
+      <p class="text-gray-700 dark:text-white mb-6">Take the next step in diagnosing and optimising your digital presence sustainably. Explore options and book an audit tailored to your business needs.</p>
+      <CTA text="Explore Audit Options" link="/service-catalogue#audits" client:load />
+      </div>
+    </section>
   <Footer />
 </Layout>

@@ -130,7 +130,7 @@ export default function InsightsList({ posts = [] }) {
 
       {/* Search Bar */}
       <div className="flex flex-col sm:flex-row justify-between items-center mb-4 w-full gap-4">
-        <h2 className="text-2xl font-bold">Insights</h2>
+        <h2 className="text-2xl font-bold text-white">Insights</h2>
         <input
           type="text"
           placeholder="Search articles, resources, news..."

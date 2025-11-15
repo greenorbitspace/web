@@ -3,185 +3,99 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import HeroSection from '../../components/HeroSection.astro';
+import CTA from '../../components/CTA.jsx';
+
+// Import all Markdown files from the sectors content folder
+const sectors = await Astro.glob('../../content/sectors/*.md');
+
+// Import all case studies for linking
+const caseStudies = await Astro.glob('../../content/case-studies/*.md');
+
+// Sort sectors alphabetically
+sectors.sort((a, b) => a.frontmatter.name.localeCompare(b.frontmatter.name));
 ---
 
-<Layout title="Careers">
+<Layout title="Sectors">
   <Header />
+
   <main class="py-8">
-    <HeroSection 
-      title="Join Our Team"
-      highlightText="Team"
-      description="We're looking for talented individuals to help us build the future of Green Orbit Digital."
+    <HeroSection
+      title="Sectors"
+      description="Explore how Green Orbit Digital helps organisations across different sectors achieve measurable results and sustainable growth."
     />
-    
-    <section class="py-16 bg-white dark:bg-secondary-500">
-      <div class="container-custom">
-        <div class="max-w-4xl mx-auto">
-          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8">Why Work With Us?</h2>
-          
-          <div class="grid md:grid-cols-2 gap-8 mb-16">
-            <div class="card p-6 border border-gray-200 dark:border-gray-700">
-              <div class="flex items-center mb-4">
-                <div class="rounded-full bg-primary-100 dark:bg-accent-500 p-3 mr-4">
-                  <svg class="w-6 h-6 text-primary-600 dark:text-primary-400" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
+
+    <section class="py-16 bg-white dark:bg-primary-500">
+      <div class="container-custom space-y-24">
+        {sectors.length > 0 ? (
+          sectors.map((sector, idx) => {
+            const {
+              name = 'Untitled Sector',
+              description = '',
+              featuredImage = '/images/default-featured.jpg',
+              slug,
+              relatedCaseStudies = [],
+            } = sector.frontmatter;
+
+            const isEven = idx % 2 === 0;
+            const sectorUrl = slug ? `/sectors/${slug}` : '#';
+
+            return (
+              <div key={name} class="group">
+                <div class={`flex flex-col md:flex-row ${!isEven ? 'md:flex-row-reverse' : ''} gap-12 items-center`}>
+                  {/* Text Content */}
+                  <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">{name}</h2>
+                    {description && <p class="text-gray-600 dark:text-white mb-6">{description}</p>}
+
+                    {relatedCaseStudies.length > 0 && (
+                      <div class="flex flex-col gap-3 mb-4">
+                        {relatedCaseStudies.map((slug) => {
+                          const study = caseStudies.find(c => c.frontmatter.slug === slug);
+                          if (!study) return null;
+                          return (
+                            <a
+                              href={`/case-studies/${study.frontmatter.slug}`}
+                              class="text-accent-500 font-semibold underline"
+                            >
+                              {study.frontmatter.title}
+                            </a>
+                          );
+                        })}
+                      </div>
+                    )}
+
+                    <a href={sectorUrl} class="btn-primary mt-2 inline-block">Learn More About Sector</a>
+                  </div>
+
+                  {/* Image */}
+                  <div class="md:w-1/2 rounded-lg overflow-hidden shadow-xl">
+                    <img
+                      src={featuredImage}
+                      alt={name}
+                      class="w-full h-64 sm:h-80 lg:h-96 object-cover"
+                    />
+                  </div>
                 </div>
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Flexible Work Environment</h3>
               </div>
-              <p class="text-gray-600 dark:text-white">
-                Work from anywhere in the world. We believe in results, not hours spent at a desk.
-              </p>
-            </div>
-            
-            <div class="card p-6 border border-gray-200 dark:border-gray-700">
-              <div class="flex items-center mb-4">
-                <div class="rounded-full bg-primary-100 dark:bg-accent-500 p-3 mr-4">
-                  <svg class="w-6 h-6 text-primary-600 dark:text-primary-400" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                  </svg>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Cutting-Edge Technology</h3>
-              </div>
-              <p class="text-gray-600 dark:text-white">
-                Work with the latest technologies and tools to solve challenging problems.
-              </p>
-            </div>
-            
-            <div class="card p-6 border border-gray-200 dark:border-gray-700">
-              <div class="flex items-center mb-4">
-                <div class="rounded-full bg-primary-100 dark:bg-accent-500 p-3 mr-4">
-                  <svg class="w-6 h-6 text-primary-600 dark:text-primary-400" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                  </svg>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Diverse & Inclusive Team</h3>
-              </div>
-              <p class="text-gray-600 dark:text-white">
-                Join a global team with diverse backgrounds, perspectives, and experiences.
-              </p>
-            </div>
-            
-            <div class="card p-6 border border-gray-200 dark:border-gray-700">
-              <div class="flex items-center mb-4">
-                <div class="rounded-full bg-primary-100 dark:bg-accent-500 p-3 mr-4">
-                  <svg class="w-6 h-6 text-primary-600 dark:text-primary-400" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                  </svg>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Competitive Benefits</h3>
-              </div>
-              <p class="text-gray-600 dark:text-white">
-                Enjoy competitive salary, health benefits, stock options, and professional development opportunities.
-              </p>
-            </div>
-          </div>
-          
-          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8">Open Positions</h2>
-          
-          <div class="space-y-6 mb-16">
-            <!-- Job Listing 1 -->
-            <div class="card p-6 border border-gray-200 dark:border-gray-700">
-              <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2 md:mb-0">Senior Frontend Developer</h3>
-                <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-accent-500 text-green-800 dark:bg-accent-500 dark:text-white">
-                  Remote
-                </span>
-              </div>
-              <p class="text-gray-600 dark:text-white mb-4">
-                We're looking for an experienced frontend developer to help us build beautiful, responsive, and accessible user interfaces for our SaaS platform.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-secondary-500 text-gray-800 dark:bg-secondary-500 dark:text-white">
-                  React
-                </span>
-                <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-secondary-500 text-gray-800 dark:bg-secondary-500 dark:text-white">
-                  TypeScript
-                </span>
-                <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-secondary-500 text-gray-800 dark:bg-secondary-500 dark:text-white">
-                  Tailwind CSS
-                </span>
-                <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-secondary-500 text-gray-800 dark:bg-secondary-500 dark:text-white">
-                  5+ Years Experience
-                </span>
-              </div>
-              <a href="#" class="btn-accent">Apply Now</a>
-            </div>
-            
-            <!-- Job Listing 2 -->
-            <div class="card p-6 border border-gray-200 dark:border-gray-700">
-              <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2 md:mb-0">Backend Engineer</h3>
-               <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-accent-500 text-green-800 dark:bg-accent-500 dark:text-white">
-                  Remote
-                </span>
-              </div>
-              <p class="text-gray-600 dark:text-white mb-4">
-                Join our backend team to build scalable, reliable, and secure APIs and services that power our SaaS platform.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-secondary-500 text-gray-800 dark:bg-secondary-500 dark:text-white">
-                  Node.js
-                </span>
-                <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-secondary-500 text-gray-800 dark:bg-secondary-500 dark:text-white">
-                  PostgreSQL
-                </span>
-                <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-secondary-500 text-gray-800 dark:bg-secondary-500 dark:text-white">
-                  AWS
-                </span>
-                <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-secondary-500 text-gray-800 dark:bg-secondary-500 dark:text-white">
-                  3+ Years Experience
-                </span>
-              </div>
-              <a href="#" class="btn-accent">Apply Now</a>
-            </div>
-            
-            <!-- Job Listing 3 -->
-            <div class="card p-6 border border-gray-200 dark:border-gray-700">
-              <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2 md:mb-0">Product Designer</h3>
-                <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-accent-500 text-green-800 dark:bg-accent-500 dark:text-white">
-                  Remote
-                </span>
-              </div>
-              <p class="text-gray-600 dark:text-white mb-4">
-                We're seeking a talented product designer to create intuitive and delightful user experiences for our customers.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-secondary-500 text-gray-800 dark:bg-secondary-500 dark:text-white">
-                  UI/UX
-                </span>
-                <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-secondary-500 text-gray-800 dark:bg-secondary-500 dark:text-white">
-                  Figma
-                </span>
-                <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-secondary-500 text-gray-800 dark:bg-secondary-500 dark:text-white">
-                  User Research
-                </span>
-                <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-secondary-500 text-gray-800 dark:bg-secondary-500 dark:text-white">
-                  4+ Years Experience
-                </span>
-              </div>
-              <a href="#" class="btn-accent">Apply Now</a>
-            </div>
-          </div>
-          
-          <div class="text-center">
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Don't see a position that fits your skills?</h3>
-            <p class="text-gray-600 dark:text-white mb-6">
-              We're always looking for talented individuals to join our team. Send us your resume and we'll keep it on file for future opportunities.
-            </p>
-            <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
-<script>
-  hbspt.forms.create({
-    portalId: "143471159",
-    formId: "b9e5ae8b-5a33-4e69-a0ec-d3e958169bb7",
-    region: "eu1"
-  });
-</script>
-          </div>
-        </div>
+            );
+          })
+        ) : (
+          <p class="text-white text-center py-12">No sectors are available at the moment.</p>
+        )}
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="w-full bg-secondary-500 py-16 text-white text-center">
+      <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-accent-500 mb-4">Request Your Audit</h2>
+        <p class="text-gray-700 dark:text-white mb-6">
+          Take the next step in diagnosing and optimising your digital presence sustainably. Explore options and book an audit tailored to your business needs.
+        </p>
+        <CTA text="Explore Audit Options" link="/service-catalogue#audits" client:load />
       </div>
     </section>
   </main>
+
   <Footer />
-</Layout> 
+</Layout>

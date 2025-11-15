@@ -8,24 +8,41 @@ import HeroSection from '../components/HeroSection.astro';
 <Layout title="Experience">
   <Header />
 
-  <main class="py-8">
+  <main class="py-12 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+    <!-- Hero Section -->
     <HeroSection 
       title="Experience" 
-      description="Your privacy matters. Here's how we handle your data at Green Orbit Digital."
+      description="Our team combines scientific expertise, space industry knowledge, and sustainable marketing skills to deliver impactful results for clients."
     />
 
-      <section class="py-12 bg-white dark:bg-secondary-500">
-            <div class="max-w-6xl mx-auto px-4">
-            <div/>
-      <section/>
-  </main>
-    <!-- Full-Width CTA -->
-    <section class="w-full bg-secondary-500 py-16 text-white text-center">
-      <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Overview -->
+    <section class="space-y-6 text-gray-700 dark:text-gray-300">
+      <p>
+        Our leadership team brings over a decade of experience in science and space marketing, combining technical insight with creative expertise to deliver sustainable solutions. We specialise in creative, digital, and sustainability-focused strategies that help clients reduce their environmental footprint while achieving business goals.
+      </p>
+      <p>
+        Team members have held roles at organisations such as the European Space Agency (ESA), European Southern Observatory (ESO), ECMWF, and Mercator Ocean, supporting projects enabled by the Copernicus EU programme. This experience underpins our ability to communicate complex space and environmental topics effectively.
+      </p>
+      <p>
+        Our team has also contributed to high-profile events like the ESA PhiWeek Bootcamp and the Copernicus Hackathon, translating scientific and technical expertise into engaging campaigns and impactful outreach initiatives.
+      </p>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="w-full bg-secondary-500 py-16 text-white text-center rounded-xl">
+      <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
         <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to collaborate?</h2>
-        <p class="mb-8 text-lg sm:text-xl text-gray-200">Let’s drive responsible growth for your organisation. Get in touch for a custom package or exploratory call.</p>
-        <a href="/contact" class="inline-block w-full sm:w-auto px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition text-lg sm:text-xl">Contact Us</a>
+        <p class="mb-8 text-lg sm:text-xl text-gray-200">
+          Let’s drive responsible growth for your organisation. Get in touch for a custom package or exploratory call.
+        </p>
+        <a href="/contact" class="inline-block w-full sm:w-auto px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition text-lg sm:text-xl">
+          Contact Us
+        </a>
       </div>
     </section>
+
+  </main>
+
   <Footer />
 </Layout>

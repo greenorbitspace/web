@@ -1,0 +1,40 @@
+---
+const { study } = Astro.props;
+
+// Fallbacks
+const title = study.data.title || "Untitled Case Study";
+const summary = study.data.summary || study.data.description || "";
+const image = study.data.featuredImage || "/images/default-featured.jpg";
+const slug = study.data.slug || study.slug;
+const url = `/case-studies/${slug}`;
+const pubdate = study.data.pubdate
+  ? new Date(study.data.pubdate).toLocaleDateString("en-GB", {
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+    })
+  : "";
+---
+
+<article class="group bg-primary-500 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+  <a href={url} class="block">
+    <img
+      src={image}
+      alt={title}
+      class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+    />
+  </a>
+  <div class="p-4">
+    {pubdate && <p class="text-sm text-white mb-1">{pubdate}</p>}
+    <h2 class="text-xl font-bold text-white mb-2">
+      <a href={url} class="hover:text-accent-500 transition-colors duration-200">{title}</a>
+    </h2>
+    {summary && <p class="text-white mb-4">{summary}</p>}
+    <a
+      href={url}
+      class="text-accent-500 font-semibold hover:underline"
+    >
+      Read more →
+    </a>
+  </div>
+</article>

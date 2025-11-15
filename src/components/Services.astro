@@ -1,81 +1,110 @@
 ---
-const features = [
+// Services.astro
+const services = [
   {
-    title: "Space Sector Expertise",
-    description: "Our Chartered Marketers understand the unique challenges of space—from Low Earth Orbit to lunar exploration—and craft strategies aligned with your mission.",
-    icon: "M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2",
-    color: "primary"
+    title: "Audits",
+    image: "/images/services/audit.png",
+    buttons: [
+      { text: "Request an Audit", href: "/services/audits" },
+      { text: "Learn More", href: "/services/audits#details" },
+    ],
   },
   {
-    title: "Data-Driven Insights",
-    description: "We leverage advanced analytics and automation to optimise campaigns efficiently, reduce waste, and maximise ROI with sustainability at the core.",
-    icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
-    color: "secondary"
+    title: "Training",
+    image: "/images/services/training.png",
+    buttons: [
+      { text: "Explore Training Options", href: "/services/training" },
+      { text: "Book a Session", href: "/services/training#book" },
+    ],
   },
   {
-    title: "Collaborative, Transparent Partnership",
-    description: "Seamlessly integrate with your tools—HubSpot, Notion, Stripe, Proton—and enjoy agile, transparent collaboration focused on your sustainability goals.",
-    icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
-    color: "accent"
+    title: "Content",
+    image: "/images/services/content.png",
+    buttons: [
+      { text: "Plan Your Content", href: "/services/content-marketing" },
+      { text: "Request a Quote", href: "/services/content-marketing#quote" },
+    ],
   },
   {
-    title: "Conversion-Centric, Impactful Design",
-    description: "Engage your audience with SEO-optimised content and websites designed to convert, all built on responsible marketing principles.",
-    icon: "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15",
-    color: "warning"
+    title: "Strategy",
+    image: "/images/services/strategy.png",
+    buttons: [
+      { text: "Book a Strategy Session", href: "/services/marketing-strategy" },
+      { text: "Learn More", href: "/services/marketing-strategy#details" },
+    ],
   },
   {
-    title: "Flexible, Modular Services Built for Impact",
-    description: "From sustainability audits to full-scale campaigns, our modular services scale to fit your mission—embedding eco-conscious strategies at every step.",
-    icon: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z",
-    color: "primary"
+    title: "Public Relations",
+    image: "/images/services/pr.png",
+    buttons: [
+      { text: "Book a Strategy Session", href: "/services/public-relations" },
+      { text: "Learn More", href: "/services/public-relations#details" },
+    ],
   },
   {
-    title: "Our Commitment to You and the Planet",
-    description: "We are dedicated to advancing sustainable marketing practices that support your growth and protect the environment. Every strategy we design is guided by measurable impact, transparency, and a long-term vision aligned with global sustainability goals.",
-    icon: "M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z",
-    color: "secondary"
-  }
+    title: "Reporting",
+    image: "/images/services/reporting.png",
+    buttons: [
+      { text: "Book a Strategy Session", href: "/services/reporting" },
+      { text: "Learn More", href: "/services/reporting#details" },
+    ],
+  },
+  {
+    title: "Materiality",
+    image: "/images/services/materiality.png",
+    buttons: [
+      { text: "Book a Strategy Session", href: "/services/materiality" },
+      { text: "Learn More", href: "/services/materiality#details" },
+    ],
+  },
 ];
 ---
 
 <section id="features" class="section bg-gray-50 dark:bg-secondary-500">
   <div class="container-custom">
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <span class="inline-block px-4 py-1 rounded-full bg-accent-500 dark:bg-accent-500 text-white dark:text-white font-medium text-sm mb-4">
-        Why Choose Green Orbit
+      <span class="inline-block px-4 py-1 rounded-full bg-accent-500 text-white font-medium text-sm mb-4">
+        Our Services
       </span>
       <h2 class="mb-6 text-gray-900 dark:text-white">Digital strategy, done responsibly.</h2>
-      <p class="text-gray-600 dark:text-gray-300">
+      <p class="text-gray-600 dark:text-white">
         We provide planet-positive marketing solutions designed specifically for the space sector, with built-in analytics, automation, and sustainable impact.
       </p>
     </div>
-    
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {features.map((feature, index) => (
-        <div 
-          class="card p-6 border border-gray-200 dark:border-gray-700 slide-up" 
-          style={`animation-delay: ${index * 100}ms`}
-        >
-          <div class={`w-12 h-12 rounded-lg bg-accent-500 dark:bg-accent-500 flex items-center justify-center mb-6`}>
-            <svg 
-              class={`w-6 h-6 text-white dark:text-white`} 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24" 
-              xmlns="http://www.w3.org/2000/svg"
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      {services.map((service) => (
+        <div key={service.title} class="relative rounded-2xl overflow-hidden shadow-xl group flex flex-col">
+          <img src={service.image} alt={service.title} class="w-full h-64 md:h-72 object-cover" />
+
+          <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center p-6 space-y-4 h-full">
+            {/* Service Title as Secondary Button */}
+            <a
+              href={service.buttons[0].href}
+              class="px-6 py-2 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-lg transition text-lg md:text-xl"
             >
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={feature.icon}></path>
-            </svg>
+              {service.title}
+            </a>
+
+            {/* Other buttons below title */}
+            <div class="flex flex-col sm:flex-row flex-wrap gap-4 justify-center mt-auto">
+              {service.buttons.slice(1).map((btn) => (
+                <a
+                  key={btn.text}
+                  href={btn.href}
+                  class="px-4 py-2 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition"
+                >
+                  {btn.text}
+                </a>
+              ))}
+            </div>
           </div>
-          <h3 class="text-xl font-semibold mb-3 text-accent-500 dark:text-white">{feature.title}</h3>
-          <p class="text-gray-600 dark:text-gray-300">{feature.description}</p>
         </div>
       ))}
     </div>
-    
+
     <div class="mt-16 text-center">
-      <a href="/service-catalogue" class="btn-primary">
+      <a href="/service-catalogue" class="btn-primary inline-flex items-center justify-center">
         Explore Our Full Service Catalogue
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="white">
           <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />

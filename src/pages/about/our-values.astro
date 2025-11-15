@@ -1,0 +1,55 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import Values from '../../components/Values.astro';
+---
+
+<Layout title="Our Values" description="Core principles driving innovation, sustainability, and excellence at Green Orbit Digital.">
+  <Header />
+
+  <main class="py-12 space-y-16">
+
+    <!-- Hero Section -->
+    <HeroSection 
+      title="Our Values" 
+      description="Guiding principles that fuel innovation, responsibility, and lasting impact in sustainable space marketing." 
+    />
+
+    <!-- Introduction -->
+    <section class="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
+      <p class="text-gray-700 dark:text-gray-300 text-lg sm:text-xl">
+        Integrity guides our actions, innovation fuels our solutions, and excellence drives our results. These core values shape everything we do at Green Orbit Digital, ensuring every project, partnership, and campaign contributes to a more sustainable and responsible future in the space and tech sectors.
+      </p>
+    </section>
+
+    <!-- Values Overview -->
+    <section class="py-16 bg-gray-50 dark:bg-primary-500 text-center">
+      <div class="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto space-y-4">
+        <p class="text-gray-700 dark:text-white text-lg sm:text-xl">
+          Our values are more than words—they guide our strategy, our decisions, and how we interact with clients, partners, and the wider ecosystem. Sustainability, innovation, and responsibility are at the heart of everything we do.
+        </p>
+
+        <!-- Values Component -->
+        <Values />
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Call to Action -->
+  <section class="w-full bg-secondary-500 py-16 text-white text-center">
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <h2 class="text-3xl sm:text-4xl font-bold">Ready to collaborate?</h2>
+      <p class="text-lg sm:text-xl text-gray-200">
+        Let’s drive responsible growth for your organisation. Get in touch for a custom package or exploratory call.
+      </p>
+      <a href="/contact" class="inline-block w-full sm:w-auto px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition text-lg sm:text-xl">
+        Contact Us
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.astro';
+
+const pageTitle = "Pro Bono Services | Green Orbit Digital";
+const pageDescription = "Green Orbit Digital provides pro-bono digital marketing and sustainability support to charities and not-for-profits, helping amplify impact and achieve UN SDGs.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Header />
+
+  <main class="py-12 w-full max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+    <!-- Hero Section -->
+    <HeroSection
+      title="Pro Bono Services"
+      description="Supporting charities and not-for-profits with sustainable digital marketing strategies that create lasting impact."
+    />
+
+    <!-- Introduction -->
+    <section class="space-y-6 text-gray-700 dark:text-gray-300">
+      <p>
+        At Green Orbit Digital, we are deeply committed to supporting charities and not-for-profits that align with our values of sustainability and positive change. Through our pro-bono services, we aim to contribute meaningfully to the missions of these organisations, helping them amplify their impact while ensuring that our expertise serves the greater good.
+      </p>
+      <p>
+        Our pro-bono strategy focuses on partnerships that drive progress towards the UN Sustainable Development Goals (SDGs), particularly <strong>SDG 17 – Partnership for the Goals</strong>. By working closely with charities and civil society organisations, we ensure that our contributions are both sustainable and impactful, offering tailored support that aligns with the unique needs of each charity.
+      </p>
+      <p>
+        We carefully select our pro-bono projects, engaging in transparent discussions with organisations to define the scope, capacity, and expectations from the outset. This collaborative approach ensures that we deliver effective, results-driven support, empowering our charity partners to further their missions and create lasting, positive change.
+      </p>
+    </section>
+
+    <!-- How We Help -->
+    <section class="space-y-6">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">How Green Orbit Supports Charities</h2>
+      <ul class="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+        <li>Strategic digital marketing guidance for campaigns and projects</li>
+        <li>SEO and content optimisation to amplify online presence</li>
+        <li>Sustainability and ESG communications aligned with organisational goals</li>
+        <li>Support in reporting impact and engagement metrics</li>
+        <li>Capacity building and knowledge transfer to internal teams</li>
+      </ul>
+    </section>
+
+    <!-- Partnership Approach -->
+    <section class="space-y-6">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Our Partnership Approach</h2>
+      <p class="text-gray-700 dark:text-gray-300">
+        We work collaboratively with charity partners to understand their unique challenges and objectives. Each project begins with a transparent discussion about scope, timelines, and resources. Our goal is to ensure that the support we provide is not only effective but sustainable, creating long-term value and measurable impact.
+      </p>
+      <p class="text-gray-700 dark:text-gray-300">
+        By embedding our expertise in digital strategy, sustainability communications, and analytics, we empower charities to reach wider audiences, improve engagement, and achieve their mission objectives more efficiently.
+      </p>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="w-full bg-secondary-500 py-16 text-white text-center rounded-xl">
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Interested in Pro Bono Support?</h2>
+        <p class="mb-8 text-lg sm:text-xl text-gray-200">
+          If your organisation aligns with our mission and sustainability values, get in touch to discuss a potential partnership and how Green Orbit Digital can support your initiatives.
+        </p>
+        <a href="/contact" class="inline-block w-full sm:w-auto px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition text-lg sm:text-xl">
+          Contact Us
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>

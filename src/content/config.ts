@@ -18,7 +18,7 @@ const baseSchema = z.object({
   slug: z.string().optional(),
   author: z.string().optional().default(''),
   tags: z.array(z.string()).optional().default([]),
-  category: z.enum(['for space', 'from space', 'in space']).optional(),
+  category: z.enum(['for space', 'from space', 'in space', 'e-commerce', 'SaaS', 'Healthcare']).optional(),
   url: z.string().url().optional().nullable(),
   notion_page_id: z.string().optional().default(''),
   exported_at: z.string().optional().default(''),
@@ -38,137 +38,109 @@ const baseSchema = z.object({
   SDGs: z.array(z.number()).optional().default([]),
 });
 
-/** Team / Person schema */
-const teamSchema = z
-  .object({
-    title: z.string().min(3),
-    slug: z.string().optional(),
-    author: z.string().optional().default(''),
-    pubdate: z.string().optional(),
-    featured: z.boolean().optional(),
-    image: z.string().optional().default(DEFAULT_FEATURED_IMAGE),
-    jobTitle: z.string().optional().default(''),
-    worksFor: z
-      .object({
-        name: z.string(),
-        url: z.string().url().optional().default(''),
-      })
-      .optional(),
-    sameAs: z.array(z.string().url()).optional().default([]),
-    description: z.string().optional().default(''),
-    quote: z.string().optional().default(''),
-    motivations: z.string().optional().default(''),
-    funFact: z.string().optional().default(''),
-    knowsAbout: z.array(z.string()).optional().default([]),
-    skills: z.array(z.string()).optional().default([]),
-    awards: z.array(z.string()).optional().default([]),
-    hobbies: z.array(z.string()).optional().default([]),
-    interests: z.array(z.string()).optional().default([]),
-    location: z.string().optional().default(''),
-    nationality: z.string().optional().default(''),
-    socialLinks: z.record(z.string().url()).optional().default({}),
-    contactEmail: z.string().email().optional().default(''),
-    seoTitle: z.string().max(70).optional().default(''),
-    seoDescription: z.string().max(160).optional().default(''),
-  })
-  .transform(data => ({
-    ...data,
-    slug: data.slug || slugify(data.title, { lower: true, strict: true }),
-  }));
-
-/** Organisation schema */
-const organisationSchema = z.object({
-  organisation: z.string().min(2),
-  slug: z.string().min(2),
-  description: z.string().optional().default(''),
-  url: z.string().url().optional().nullable(),
-  'hubspot-id': z.string().optional().default(''),
-  industry: z.string().optional().default(''),
-  category: z.string().optional().default(''),
-  type: z.enum(['partner', 'client', 'member', 'supplier']).optional(),
-  logo: z.string().optional().default(DEFAULT_FEATURED_IMAGE),
+/** Case Studies schema (extends baseSchema) */
+const caseStudySchema = baseSchema.extend({
+  metrics: z.array(z.string()).optional().default([]),
 });
 
-/** Pledge schema */
-const pledgeSchema = z.object({
-  name: z.string(),
+/** Sector schema */
+const sectorSchema = z.object({
+  name: z.string().min(3),
   slug: z.string().optional(),
   description: z.string().optional().default(''),
-  organisations: z.array(z.string()).optional().default([]),
-  values: z.array(z.string()).optional().default([]),
-  how: z.string().optional().default(''),
-  why: z.string().optional().default(''),
-  SDGs: z.array(z.number()).optional().default([]),
-  commitments: z.array(z.string()).optional().default([]),
-  CSR: z.string().optional().default(''),
-  logo: z
-    .string()
-    .regex(/^(https?:\/\/|\/)/, { message: 'Logo must be a full URL or start with /' })
-    .optional()
-    .default(DEFAULT_FEATURED_IMAGE),
-  url: z.string().url().optional().nullable(),
+  featuredImage: z.string().optional().default(DEFAULT_FEATURED_IMAGE),
+  relatedCaseStudies: z.array(z.string()).optional().default([]),
 });
 
-/** Career schema */
-const careerSchema = z.object({
+/** Global Challenge schema */
+const globalChallengeSchema = z.object({
   title: z.string().min(5),
   slug: z.string().optional(),
-  pubdate: z.string().optional(),
-  location: z.string().optional().default(''),
-  employment_type: z
-    .enum(['Full-time', 'Part-time', 'Contract', 'Internship', 'Temporary'])
+  description: z.string().optional().default(''),
+  featured: z.boolean().optional().default(false),
+  featuredImage: z.string().optional().default(DEFAULT_FEATURED_IMAGE),
+  SDGs: z.array(z.number()).optional().default([]),
+  organisations: z.array(z.string()).optional().default([]),
+
+  paris_agreement: z
+    .object({
+      article: z.string(),
+      summary: z.string(),
+      link: z.string().url(),
+    })
     .optional(),
-  department: z.string().optional().default(''),
-  seniority_level: z
-    .enum(['Junior', 'Mid', 'Senior', 'Lead', 'Director', 'Executive'])
+
+  sendai_framework: z
+    .object({
+      references: z.array(
+        z.object({
+          code: z.string(),
+          summary: z.string(),
+          link: z.string().url(),
+        })
+      ),
+    })
     .optional(),
-  description: z.string().min(20),
-  responsibilities: z.array(z.string()).optional().default([]),
-  requirements: z.array(z.string()).optional().default([]),
-  benefits: z.array(z.string()).optional().default([]),
-  skills: z.array(z.string()).optional().default([]),
-  apply_url: z.string().url().optional().nullable(),
-  contact_email: z.string().email().optional().default(''),
+
+  space2030: z
+    .object({
+      section: z.string(),
+      summary: z.string(),
+      link: z.string().url(),
+    })
+    .optional(),
+
   seoTitle: z.string().max(70).optional().default(''),
   seoDescription: z.string().max(160).optional().default(''),
-  featuredImage: z
-    .string()
-    .regex(/^(https?:\/\/|\/)/, { message: 'featuredImage must be a full URL or start with /' })
-    .optional()
-    .default(DEFAULT_FEATURED_IMAGE),
 });
 
-/** Campaign schema */
-const campaignSchema = baseSchema.extend({
-  name: z.string().optional().default(''),
-  month: z.string().optional().nullable(),
-  un_resolution: z.string().optional().nullable(),
-  'un-resolution': z.string().optional().nullable(),
-  featuredImage: z
-    .string()
-    .regex(/^(https?:\/\/|\/)/, { message: 'featuredImage must be a full URL or start with /' })
-    .optional()
-    .default(DEFAULT_FEATURED_IMAGE),
+/** Space Apps schema */
+const spaceAppSchema = z.object({
+  title: z.string().min(5),
+  markets: z.string().optional().default(''),
+  description: z.string().optional().default(''),
+  domains: z.string().optional().default(''),
+  copernicus: z.enum(['Yes', 'No']).optional().default('No'),
+  EGNSS: z.enum(['Yes', 'No']).optional().default('No'),
+  SDGs: z.array(z.number()).optional().default([]),
+  slug: z.string().optional(),
+  featuredImage: z.string().optional().default(DEFAULT_FEATURED_IMAGE),
 });
 
-/** Define all collections and make optional to suppress missing folder warnings */
+/** 🔥 Service Areas schema — for local SEO pages */
+const serviceAreaSchema = z.object({
+  name: z.string().min(2),
+  slug: z.string().optional(),
+  h1: z.string().min(5),
+  metaDescription: z.string().max(160),
+  keywords: z.array(z.string()).optional().default([]),
+  description: z.string().optional().default(''),
+  featuredImage: z.string().optional().default(DEFAULT_FEATURED_IMAGE),
+
+  // Future-proof fields
+  localChallenges: z.array(z.string()).optional().default([]),
+  howWeHelp: z.array(z.string()).optional().default([]),
+  SDGs: z.array(z.number()).optional().default([]),
+  organisations: z.array(z.string()).optional().default([]),
+});
+
+/** Define all collections */
 export const collections = {
-  blog: defineCollection({ schema: baseSchema, optional: true }),
-  news: defineCollection({ schema: baseSchema, optional: true }),
-  resources: defineCollection({ schema: baseSchema, optional: true }),
-  'press-releases': defineCollection({ schema: baseSchema, optional: true }),
-  tools: defineCollection({ schema: baseSchema, optional: true }),
-  insights: defineCollection({ schema: baseSchema, optional: true }),
-  'space-sustainability': defineCollection({ schema: baseSchema, optional: true }),
-  organisations: defineCollection({ schema: organisationSchema, optional: true }),
-  pledges: defineCollection({ schema: pledgeSchema, optional: true }),
-  careers: defineCollection({ schema: careerSchema, optional: true }),
-  campaigns: defineCollection({ schema: campaignSchema, optional: true }),
-  team: defineCollection({ schema: teamSchema, optional: true }),
+  blog: defineCollection({ schema: baseSchema }),
+  news: defineCollection({ schema: baseSchema }),
+  resources: defineCollection({ schema: baseSchema }),
+  'press-releases': defineCollection({ schema: baseSchema }),
+  tools: defineCollection({ schema: baseSchema }),
+  insights: defineCollection({ schema: baseSchema }),
+  'space-sustainability': defineCollection({ schema: baseSchema }),
+  caseStudies: defineCollection({ schema: caseStudySchema }),
+  sectors: defineCollection({ schema: sectorSchema }),
+  'global-challenges': defineCollection({ schema: globalChallengeSchema }),
+  'space-apps': defineCollection({ schema: spaceAppSchema }),
+  'service-areas': defineCollection({ schema: serviceAreaSchema }), // ✅ NEW
 };
 
-/** 
- * ⚠️ Important: Create the corresponding content folders even if empty:
- * mkdir -p src/content/{blog,news,resources,press-releases,tools,insights,space-sustainability,organisations,pledges,careers,campaigns,team}
- * Add _placeholder.md to each if needed to suppress glob-loader warnings.
+/**
+ * mkdir -p src/content/{...,service-areas}
+ * Add _placeholder.md if needed to silence warnings.
  */

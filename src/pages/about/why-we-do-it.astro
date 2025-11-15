@@ -3,32 +3,26 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import HeroSection from '../../components/HeroSection.astro';
-import Values from '../../components/Values.astro';
+import VisionStatement from '../../components/VisionStatement.astro';
+import VisionDescription from '../../components/VisionDescription.astro';
 ---
 
-<Layout title="Values">
+<Layout title="Vision">
   <Header />
 
   <main class="py-8">
     <!-- Hero Section -->
     <HeroSection 
-      title="Values" 
-      description="Guiding principles that fuel innovation, responsibility, and lasting impact in sustainable space marketing." 
+      title="Vision" 
+      description="Driving sustainable innovation through visionary digital marketing at the intersection of space, advanced technology, and global industries." 
     />
 
-    <section class="py-16 bg-gray-50 dark:bg-primary-500 text-center text-white">
-    <p>
-    At Green Orbit Digital, our core values are the guiding principles that shape our approach to every project, every partnership, and every campaign we lead. With a focus on sustainability, innovation, and responsibility, these values propel us toward our mission of transforming the space industry and beyond into a force for positive change.
-    </p>
-    </section> 
+<VisionStatement/>
 
-    <section class="py-16 bg-gray-50 dark:bg-primary-500 text-center text-white">
-        <!-- Values Component -->
-          <Values />
-    </section>
+<VisionDescription />
 
   </main>
-    <!-- Full-Width CTA -->
+      <!-- Full-Width CTA -->
     <section class="w-full bg-secondary-500 py-16 text-white text-center">
       <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to collaborate?</h2>

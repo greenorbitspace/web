@@ -1,0 +1,81 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import SpaceAppCard from '../../components/SpaceAppCard.jsx';
+import HeroSection from '../../components/HeroSection.astro';
+import slugify from 'slugify';
+
+// ---------------------------------
+// 1. Import all markdown files eagerly
+// ---------------------------------
+const modules = import.meta.glob('/src/content/space-applications/*.md', { eager: true });
+
+type SpaceApp = {
+  title: string;           // Use frontmatter title
+  slug: string;
+  featuredImage?: string;
+  SDGs?: number[];
+  organisations?: string[];
+};
+
+// ---------------------------------
+// 2. Convert modules into structured array
+// ---------------------------------
+const spaceApps: SpaceApp[] = Object.entries(modules).map(([filePath, mod]: [string, any]) => {
+  const fm = mod.frontmatter ?? {};
+
+  // Derive slug from frontmatter title or fallback to filename
+  const fallbackSlug =
+    filePath.split('/').pop()?.replace(/\.(md|mdx)$/, '') ?? `app-${Math.random()}`;
+  const slug = fm.slug || (fm.title ? slugify(fm.title, { lower: true, strict: true }) : fallbackSlug);
+
+  return {
+    title: fm.title || fm.Name || 'Untitled Space Application',
+    slug,
+    featuredImage: fm.featuredImage || '/images/default-featured.jpg',
+    SDGs: Array.isArray(fm.SDGs) ? fm.SDGs : [],
+    organisations: Array.isArray(fm.organisations || fm.Organisations) ? (fm.organisations || fm.Organisations) : [],
+  };
+});
+
+// ---------------------------------
+// 3. Sort alphabetically by title
+// ---------------------------------
+spaceApps.sort((a, b) => a.title.localeCompare(b.title));
+
+// Optional debug
+console.log('Loaded space applications:', spaceApps);
+---
+
+<Layout
+  title="Space Applications"
+  description="Explore our curated space applications, highlighting SDGs, organisations, and technological use cases."
+>
+  <Header />
+
+  <main class="py-16 w-full container-custom space-y-16">
+
+    <!-- Hero Section -->
+    <HeroSection
+      title="Space Applications"
+      description="Discover innovative applications of space technologies across industries, linked to sustainability goals and key organisations."
+    />
+
+    <!-- Space Applications Grid -->
+    {spaceApps.length > 0 ? (
+      <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {spaceApps.map((app) => (
+          <SpaceAppCard key={app.slug} app={app} />
+        ))}
+      </section>
+    ) : (
+      <p class="text-center text-gray-700 dark:text-white text-lg">
+        No space applications found. Ensure your markdown files exist in <code>/src/content/space-applications/</code>.
+      </p>
+    )}
+
+  </main>
+
+  <Footer />
+</Layout>

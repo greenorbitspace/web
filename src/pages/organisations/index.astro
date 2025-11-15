@@ -6,7 +6,7 @@ import HeroSection from '../../components/HeroSection.astro';
 import OrganisationsList from '../../components/OrganisationsList.jsx';
 import allOrganisations from '../../data/organisations.json';
 
-// Filter to organisations only (still server-side)
+// Use all organisations
 const organisations = allOrganisations;
 
 // Sort alphabetically by organisation name
@@ -18,18 +18,37 @@ const sortedOrganisations = organisations.slice().sort((a, b) =>
 <Layout title="Organisations" description="Explore our strategic and delivery organisations in the space sector.">
   <Header />
 
-  <main class="py-12 max-w-6xl mx-auto px-4">
+  <main class="py-12 max-w-6xl mx-auto px-4 space-y-12">
+
+    <!-- Hero Section -->
     <HeroSection 
       title="Organisations" 
-      description="Explore our strategic and delivery organisations in the space sector." 
+      description="Explore our strategic and delivery organisations in the space sector, collaborating to drive innovation, sustainability, and growth." 
     />
 
-    <!-- Hydrated client-side component -->
-    <section class="py-16 bg-white dark:bg-secondary-500">
+    <!-- Intro / Network Overview -->
+    <section class="prose max-w-4xl text-gray-700 dark:text-gray-300 mx-auto space-y-4">
+      <p>
+        Green Orbit Digital actively collaborates with a diverse network of organisations to advance sustainability and innovation across the space sector. Our partnerships span industry, research, and advocacy, helping amplify the impact of space-based solutions.
+      </p>
+      <p>
+        We engage with <strong>UK-EONS</strong> to work alongside leading Earth observation organisations, and the <strong>Space Enterprise Community</strong>, connecting with key UK space industry players. As members of <strong>UKspace</strong> and <em>Space for Climate</em>, we advocate for space-enabled climate solutions that deliver tangible environmental benefits.
+      </p>
+      <p>
+        On the European stage, we contribute to the <strong>European Association of Remote Sensing Companies (EARSC)</strong>, promoting the use of satellite data for sustainability. We also support the <strong>IAU Committee on the Protection of the Dark and Quiet Sky</strong>, ensuring responsible satellite operations to protect night skies.
+      </p>
+      <p>
+        Additionally, through the <strong>BSI Sustainable Space Community</strong>, we help define standards for environmentally responsible space practices. Together, these collaborations allow Green Orbit Digital to foster a sustainable and innovative space ecosystem.
+      </p>
+    </section>
+
+    <!-- Organisations List -->
+    <section class="py-16 bg-white dark:bg-secondary-500 rounded-xl">
       <div class="max-w-6xl mx-auto px-4">
         <OrganisationsList organisations={sortedOrganisations} client:load />
       </div>
     </section>
+
   </main>
 
   <Footer />

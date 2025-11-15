@@ -1,0 +1,74 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import HeroSection from "../../components/HeroSection.astro";
+
+import cities from "../../data/cities.json";
+
+// Convert JSON keys into an array of { slug, city, featuredImage }
+const locations = Object.entries(cities).map(([slug, data]) => ({
+  slug,
+  city: data.h1.replace(/.*in\s/, "").trim(),
+  featuredImage: data.featuredImage || "/images/default-featured.jpg"
+}));
+
+const pageTitle = "Service Areas | Sustainable Digital Marketing Across the UK";
+const pageDescription =
+  "Explore the UK cities where Green Orbit Digital provides local, sustainable digital marketing and SEO services. We support tech, space, energy, creative, and climate-focused organisations nationwide.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Header />
+
+  <main class="w-full bg-primary-500 py-16">
+  
+  <!-- Hero Section -->
+  <HeroSection
+    title="Service Areas"
+    description="Green Orbit Digital supports organisations across the UK with sustainable digital marketing, SEO, and climate-focused strategies rooted in science, technology, and the space sector."
+  />
+
+  <!-- Locations Grid Full Width -->
+
+    <div class="container-custom max-w-6xl mx-auto">
+      {locations.length > 0 ? (
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {locations.map((loc) => (
+            <a
+              key={loc.slug}
+              href={`/service-areas/${loc.slug}`}
+              class="relative block h-72 rounded-xl overflow-hidden shadow-lg group"
+            >
+              {/* Background Image */}
+              <img
+                src={loc.featuredImage}
+                alt={loc.city}
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+
+              {/* Overlay */}
+              <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-500"></div>
+
+              {/* Content */}
+              <div class="relative z-10 flex flex-col justify-between h-full text-white p-6">
+                <h2 class="text-2xl font-bold text-center">{loc.city}</h2>
+                <div class="flex justify-center mt-4">
+                  <span class="inline-block px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition text-center">
+                    Learn More →
+                  </span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      ) : (
+        <p class="text-center text-white py-12">
+          No service areas available yet.
+        </p>
+      )}
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

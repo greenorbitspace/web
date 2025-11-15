@@ -1,0 +1,72 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import ChallengeCard from '../../components/ChallengeCard.jsx';
+
+// Eagerly import all markdown/mdx files from the global-challenges content folder
+const modules = import.meta.glob('/src/content/global-challenges/*.md', { eager: true });
+
+type Challenge = {
+  title: string;
+  slug: string;
+  featuredImage: string;
+  SDGs: number[];
+  organisations: string[];
+};
+
+// Convert imported modules into a structured challenges array with safe defaults
+const challenges: Challenge[] = Object.entries(modules).map(([filePath, mod]: [string, any]) => {
+  const fm = mod.frontmatter ?? {};
+
+  // Fallback slug derived from filename if not provided in frontmatter
+  const slugFallback = filePath.split('/').pop()?.replace(/\.(md|mdx)$/, '') ?? `challenge-${Math.random()}`;
+
+  return {
+    title: fm.title ?? 'Untitled Challenge',
+    slug: fm.slug ?? slugFallback,
+    featuredImage: fm.featuredImage ?? '/images/default-featured.jpg',
+    SDGs: Array.isArray(fm.SDGs) ? fm.SDGs : [],
+    organisations: Array.isArray(fm.organisations) ? fm.organisations : [],
+  };
+});
+
+// Sort challenges alphabetically by title
+challenges.sort((a, b) => a.title.localeCompare(b.title));
+
+// Debug: verify challenges are loaded
+console.log('Loaded challenges:', challenges);
+---
+
+<Layout
+  title="Global Challenges"
+  description="Explore the major global challenges we focus on, from food security to climate resilience and sustainable space applications."
+>
+  <Header />
+
+  <main class="py-16 w-full container-custom space-y-16">
+
+    <!-- Hero Section -->
+    <HeroSection
+      title="Global Challenges"
+      description="Explore our work addressing pressing global challenges. Each challenge highlights relevant SDGs, organisations, and frameworks guiding action."
+    />
+
+    <!-- Challenges Grid -->
+    {challenges.length > 0 ? (
+      <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {challenges.map((challenge) => (
+          <ChallengeCard key={challenge.slug} challenge={challenge} />
+        ))}
+      </section>
+    ) : (
+      <p class="text-center text-gray-700 dark:text-white text-lg">
+        No challenges found. Please ensure your markdown files exist in <code>/src/content/global-challenges/</code>.
+      </p>
+    )}
+
+  </main>
+
+  <Footer />
+</Layout>

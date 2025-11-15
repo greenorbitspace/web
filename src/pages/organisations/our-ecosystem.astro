@@ -1,0 +1,114 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import CTA from '../../components/CTA.jsx';
+
+// Define key ecosystem partners
+const partners = [
+  {
+    name: "DOCK",
+    url: "https://dock-leicester.co.uk",
+    logo: "/logos/organisations/dockleicester.png",
+    description: "Leicester-based innovation hub supporting startups and SMEs."
+  },
+  {
+    name: "Space City Leicester",
+    url: "https://spacecity.leicester.gov.uk",
+    logo: "/logos/organisations/scl.png",
+    description: "Local space cluster promoting collaboration across the sector."
+  },
+  {
+    name: "Midlands Space Cluster",
+    url: "https://www.midlandsspacecluster.com",
+    logo: "/logos/organisations/midlands-space-cluster.png",
+    description: "Regional network connecting space and tech organisations."
+  },
+  {
+    name: "Leicester Startups",
+    url: "https://leicesterstartups.com",
+    logo: "/logos/organisations/leicester-startups.png",
+    description: "Supporting early-stage tech businesses and innovation in the city."
+  },
+  {
+    name: "Sustainable East Midlands",
+    url: "https://sustainableem.org",
+    logo: "/logos/organisations/sustainable-east-mids.png",
+    description: "Regional initiative promoting green practices and net-zero projects."
+  }
+];
+---
+
+<Layout
+  title="Our Ecosystem | Green Orbit Digital"
+  description="Discover how Green Orbit Digital collaborates with local and regional innovation networks to support sustainability, growth, and the space and tech sectors."
+>
+  <Header />
+
+  <main class="py-12 space-y-16 container-custom max-w-6xl mx-auto">
+
+    <!-- Hero Section -->
+    <HeroSection
+      title="Our Ecosystem"
+      description="Green Orbit Digital actively engages with local and regional innovation networks to foster sustainable growth, collaboration, and impact across the space and tech sectors."
+    />
+
+    <!-- Ecosystem Overview -->
+    <section class="space-y-6">
+      <p class="text-gray-700 dark:text-gray-300">
+        Green Orbit Digital is embedded in a vibrant ecosystem that drives innovation and sustainability. Through partnerships with organisations like <strong>DOCK</strong>, <strong>Space City Leicester</strong>, and the <strong>Midlands Space Cluster</strong>, we support businesses and communities to thrive while embedding sustainable practices.
+      </p>
+      <p class="text-gray-700 dark:text-gray-300">
+        Engagement with initiatives such as <strong>Leicester Startups</strong> and <strong>Sustainable East Midlands</strong> enables us to connect local talent, organisations, and entrepreneurs. By leveraging these networks, we foster collaboration, knowledge-sharing, and impactful projects across space, tech, and climate-focused sectors.
+      </p>
+    </section>
+
+    <!-- Ecosystem Map / Partner Logos -->
+    <section class="space-y-6">
+      <h2 class="text-2xl font-semibold text-gray-900 dark:text-white text-center">Our Partners & Collaborators</h2>
+      <p class="text-center text-gray-600 dark:text-gray-300 mb-8">
+        We work closely with these organisations to drive sustainable growth and innovation across the UK space and tech ecosystem.
+      </p>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-center justify-items-center">
+        {partners.map(partner => (
+          <a 
+            href={partner.url} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="group flex flex-col items-center text-center"
+            title={partner.description}
+          >
+            <img src={partner.logo} alt={partner.name} class="w-24 h-24 object-contain mb-2 transition-transform duration-300 group-hover:scale-105" />
+            <span class="text-sm font-semibold text-gray-800 dark:text-white group-hover:text-accent-500">{partner.name}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- How We Add Value -->
+    <section class="space-y-6">
+      <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">How We Add Value</h2>
+      <ul class="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+        <li>Connecting clients with innovation networks, accelerators, and startup initiatives.</li>
+        <li>Facilitating partnerships aligned with sustainability and net-zero goals.</li>
+        <li>Sharing expertise in digital marketing and eco-conscious strategies with ecosystem members.</li>
+        <li>Highlighting opportunities for businesses to grow responsibly within regional clusters.</li>
+        <li>Supporting cross-sector collaboration to drive innovation in space, tech, and climate-focused projects.</li>
+      </ul>
+    </section>
+  </main>
+    <!-- CTA Section -->
+    <section class="py-16 bg-secondary-500 text-white text-center">
+      <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+        <h2 class="text-3xl sm:text-4xl font-bold">Join the Green Orbit Ecosystem</h2>
+        <p class="text-lg sm:text-xl text-gray-200">
+          Whether you're a startup, established business, or organisation committed to sustainability, we welcome collaboration to foster innovation and impact.
+        </p>
+        <CTA text="Get Involved" link="/contact" client:load />
+      </div>
+    </section>
+
+  <Footer />
+</Layout>

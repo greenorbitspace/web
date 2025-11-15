@@ -5,234 +5,182 @@ import Footer from '../../components/Footer.astro';
 import HeroSection from '../../components/HeroSection.astro';
 ---
 
-<Layout title="Sustainability">
+<Layout title="Sustainability | Green Orbit Digital">
   <Header />
 
-  <main class="py-12 w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+  <main class="py-12 w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+    <!-- Hero -->
     <HeroSection 
       title="Sustainability"
       description="Explore how Green Orbit Digital helps clients achieve measurable sustainability outcomes while driving growth."
     />
 
+    <!-- Introduction -->
+    <section class="space-y-6 text-gray-700 dark:text-gray-300">
+      <p>
+        At Green Orbit Digital, sustainability is at the core of our mission. We’re accredited by the Good Business Charter, demonstrating our commitment to responsible and transparent business practices. As members of the SME Climate Hub and Race to Zero, we aim for net-zero targets and uphold high standards in sustainable operations.
+      </p>
+      <p>
+        We support impactful initiatives such as the Sustainable Creatives Charter, Creatives for Climate, Design Declares, Business Declares, Tech Zero, and The Ethical Move, reflecting our dedication to ethical and environmentally conscious practices in the creative, tech, and space sectors.
+      </p>
+      <p>
+        Through initiatives like Net Zero Carbon Events, The Plant Treaty, and Climate Perks, and our involvement with the SPACE 18th SDG Coalition, we advocate for regenerative approaches and promote the proposed new Sustainable Development Goal: “Space for All, on Earth and Beyond.”
+      </p>
+    </section>
+
     <!-- Commitment -->
-    <section class="mb-24">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
-            Commitment
-          </span>
-          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            Embedding Sustainability at the Core
-          </h2>
-          <p class="text-gray-600 dark:text-gray-300 mb-6">
-            Sustainability is central to everything we do. We help clients grow responsibly, reducing environmental impact and embedding climate-conscious strategies across digital marketing channels.
-          </p>
-          <a href="/about" class="btn-primary">Learn More About Us</a>
-        </div>
-        <div class="rounded-lg overflow-hidden shadow-xl">
-          <img src="/images/esg.png" alt="Sustainability Commitment" class="w-full h-auto" />
-        </div>
+    <section class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">Commitment</span>
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Embedding Sustainability at the Core</h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">
+          Sustainability underpins all we do. We help clients grow responsibly, reducing environmental impact and embedding climate-conscious strategies across digital marketing channels.
+        </p>
+        <a href="/about" class="btn-primary">Learn More About Us</a>
+      </div>
+      <div class="rounded-lg overflow-hidden shadow-xl">
+        <img src="/images/esg.png" alt="Sustainability Commitment" class="w-full h-auto" />
       </div>
     </section>
 
     <!-- Impact -->
-    <section class="mb-24">
-      <div class="grid md:grid-cols-2 gap-12 items-center md:flex-row-reverse">
-        <div class="rounded-lg overflow-hidden shadow-xl">
-          <img src="/images/carbon-footprint.png" alt="Our Impact" class="w-full h-auto" />
-        </div>
-        <div>
-          <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
-            Impact
-          </span>
-          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            Driving Real-World Results
-          </h2>
-          <p class="text-gray-600 dark:text-gray-300 mb-6">
-            We partner with organisations to transform sustainability goals into measurable marketing outcomes. Our campaigns reduce environmental impact, improve reporting, and strengthen stakeholder trust.
-          </p>
-          <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
-            <li>Cut digital campaign carbon footprints by up to 30% via carbon-aware SEO and content strategies</li>
-            <li>Support alignment with <a href="https://sdgs.greenorbit.space" class="underline text-accent-600">UN SDGs</a></li>
-            <li>Enable space sector organisations to communicate responsible satellite and debris mitigation</li>
-            <li>Deliver ESG reporting aligned with <a href="/reporting" class="underline text-accent-600">GRI</a> and <a href="/reporting" class="underline text-accent-600">SASB</a></li>
-            <li>Highlight Earth Observation technologies in climate resilience and disaster response campaigns</li>
-          </ul>
-          <a href="/case-studies" class="btn-primary">Explore Our Case Studies</a>
-        </div>
+    <section class="grid md:grid-cols-2 gap-12 items-center md:flex-row-reverse">
+      <div class="rounded-lg overflow-hidden shadow-xl">
+        <img src="/images/carbon-footprint.png" alt="Our Impact" class="w-full h-auto" />
+      </div>
+      <div>
+        <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">Impact</span>
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Driving Real-World Results</h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">
+          We transform sustainability goals into measurable marketing outcomes, reducing environmental impact, improving reporting, and strengthening stakeholder trust.
+        </p>
+        <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6 space-y-2">
+          <li>Reduce campaign carbon footprints up to 30% via carbon-aware SEO and content strategies</li>
+          <li>Align initiatives with <a href="https://sdgs.greenorbit.space" class="underline text-accent-600">UN SDGs</a></li>
+          <li>Communicate responsible satellite and space operations</li>
+          <li>Deliver ESG reporting aligned with <a href="/reporting" class="underline text-accent-600">GRI</a> and <a href="/reporting" class="underline text-accent-600">SASB</a></li>
+          <li>Highlight Earth Observation technologies in climate resilience campaigns</li>
+        </ul>
+        <a href="/case-studies" class="btn-primary">Explore Our Case Studies</a>
       </div>
     </section>
 
     <!-- UN SDGs & Climate Action -->
-    <section class="mb-24">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
-            UN SDGs & Climate Action
-          </span>
-          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            Aligning Marketing with Global Goals
-          </h2>
-          <p class="text-gray-600 dark:text-gray-300 mb-6">
-            We actively support the UN Sustainable Development Goals, focusing on <a href="https://sdgs.un.org/goals/goal13" target="_blank" class="underline text-accent-600">Climate Action (SDG 13)</a>. Initiatives like <a href="https://www.space4sdgs.org/" target="_blank" class="underline text-accent-600">Space4SDGs</a> showcase how space technologies underpin climate solutions.
-          </p>
-          <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
-            <li>Mapping marketing strategies to climate and sustainability SDGs</li>
-            <li>Highlighting Earth Observation contributions to climate monitoring</li>
-            <li>Reporting measurable impacts aligned with climate SDG indicators</li>
-          </ul>
-          <a href="https://sdgs.greenorbit.space" class="btn-primary">Explore Our SDG Work</a>
-        </div>
-        <div class="rounded-lg overflow-hidden shadow-xl">
-          <img src="/icons/sdg/sdgs.png" alt="UN SDGs and Climate Action" class="w-full h-auto" />
-        </div>
+    <section class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">UN SDGs & Climate Action</span>
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Aligning Marketing with Global Goals</h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">
+          We actively support UN Sustainable Development Goals, focusing on <a href="https://sdgs.un.org/goals/goal13" target="_blank" class="underline text-accent-600">Climate Action (SDG 13)</a> and initiatives like <a href="https://www.space4sdgs.org/" target="_blank" class="underline text-accent-600">Space4SDGs</a>.
+        </p>
+        <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6 space-y-2">
+          <li>Mapping marketing strategies to climate and sustainability SDGs</li>
+          <li>Highlighting Earth Observation contributions to climate monitoring</li>
+          <li>Reporting measurable impacts aligned with climate SDG indicators</li>
+        </ul>
+        <a href="https://sdgs.greenorbit.space" class="btn-primary">Explore Our SDG Work</a>
+      </div>
+      <div class="rounded-lg overflow-hidden shadow-xl">
+        <img src="/icons/sdg/sdgs.png" alt="UN SDGs and Climate Action" class="w-full h-auto" />
       </div>
     </section>
 
     <!-- Earth Observation -->
-    <section id="earth-observation" class="mb-24">
-      <div class="grid md:grid-cols-2 gap-12 items-center md:flex-row-reverse">
-        <div class="rounded-lg overflow-hidden shadow-xl">
-          <img src="/images/earth-observation.png" alt="Earth Observation Satellite" class="w-full h-auto" />
-        </div>
-        <div>
-          <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
-            Earth Observation
-          </span>
-          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            Leveraging Satellite Data for Sustainability
-          </h2>
-          <p class="text-gray-600 dark:text-gray-300 mb-6">
-            Earth Observation satellites provide critical insights for climate science, disaster response, and natural resource management. We help space organisations communicate the societal value of this data.
-          </p>
-          <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
-            <li>Monitoring deforestation, ice melt, and air quality</li>
-            <li>Promoting data-driven climate adaptation and mitigation solutions</li>
-            <li>Connecting Earth Observation benefits to SDGs and CSR goals</li>
-          </ul>
-          <a href="/earth-observation" class="btn-primary">Learn More About Earth Observation</a>
-        </div>
+    <section class="grid md:grid-cols-2 gap-12 items-center md:flex-row-reverse">
+      <div class="rounded-lg overflow-hidden shadow-xl">
+        <img src="/images/earth-observation.png" alt="Earth Observation Satellite" class="w-full h-auto" />
+      </div>
+      <div>
+        <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">Earth Observation</span>
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Leveraging Satellite Data for Sustainability</h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">
+          We help space organisations communicate the societal value of Earth Observation data for climate science, disaster response, and natural resource management.
+        </p>
+        <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6 space-y-2">
+          <li>Monitoring deforestation, ice melt, and air quality</li>
+          <li>Promoting data-driven climate adaptation and mitigation solutions</li>
+          <li>Connecting Earth Observation benefits to SDGs and CSR goals</li>
+        </ul>
+        <a href="/earth-observation" class="btn-primary">Learn More About Earth Observation</a>
       </div>
     </section>
 
     <!-- Governance & Reporting -->
-    <section class="mb-24">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
-            Governance & Reporting
-          </span>
-          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            CSR, Materiality & Reporting Frameworks
-          </h2>
-          <p class="text-gray-600 dark:text-gray-300 mb-6">
-            We guide organisations in transparent CSR communication, aligning with frameworks including:
-          </p>
-          <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
-            <li><strong>MSG:</strong> Prioritising stakeholder-relevant sustainability topics</li>
-            <li><strong>SASB:</strong> Industry-specific ESG disclosure standards</li>
-            <li><strong>GRI:</strong> Comprehensive environmental, social, and governance reporting</li>
-          </ul>
-          <p class="text-gray-600 dark:text-gray-300 mb-6">
-            Clear, credible sustainability reporting strengthens stakeholder trust and meets regulatory expectations.
-          </p>
-          <a href="/reporting" class="btn-primary">Learn About Our Reporting Services</a>
-        </div>
-        <div class="rounded-lg overflow-hidden shadow-xl">
-          <img src="/images/esg.png" alt="Sustainability Reporting" class="w-full h-auto" />
-        </div>
+    <section class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">Governance & Reporting</span>
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">CSR, Materiality & Reporting Frameworks</h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">
+          We guide organisations in transparent CSR communication, aligned with MSG, SASB, and GRI frameworks.
+        </p>
+        <a href="/reporting" class="btn-primary">Learn About Our Reporting Services</a>
+      </div>
+      <div class="rounded-lg overflow-hidden shadow-xl">
+        <img src="/images/esg.png" alt="Sustainability Reporting" class="w-full h-auto" />
       </div>
     </section>
 
     <!-- Space Sustainability -->
-    <section class="mb-24">
-      <div class="grid md:grid-cols-2 gap-12 items-center md:flex-row-reverse">
-        <div class="rounded-lg overflow-hidden shadow-xl">
-          <img src="/images/responsibility.png" alt="Space Sustainability" class="w-full h-auto" />
-        </div>
-        <div>
-          <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
-            Space Sustainability
-          </span>
-          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            Promoting Responsible Space Practices
-          </h2>
-          <p class="text-gray-600 dark:text-gray-300 mb-6">
-            We support organisations in communicating satellite sustainability, debris mitigation, and international collaboration, contributing to <a href="/sdgs" class="underline text-accent-600">global sustainability goals</a>.
-          </p>
-          <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
-            <li>Sustainable satellite design and end-of-life planning</li>
-            <li>Awareness campaigns on space debris mitigation</li>
-            <li>Facilitating industry-wide collaboration for orbital safety</li>
-          </ul>
-          <a href="/space-sustainability" class="btn-primary">Discover Our Space Sector Work</a>
-        </div>
+    <section class="grid md:grid-cols-2 gap-12 items-center md:flex-row-reverse">
+      <div class="rounded-lg overflow-hidden shadow-xl">
+        <img src="/images/responsibility.png" alt="Space Sustainability" class="w-full h-auto" />
+      </div>
+      <div>
+        <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">Space Sustainability</span>
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Promoting Responsible Space Practices</h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">
+          We support organisations in communicating satellite sustainability, debris mitigation, and international collaboration, contributing to <a href="/sdgs" class="underline text-accent-600">global sustainability goals</a>.
+        </p>
+        <a href="/space-sustainability" class="btn-primary">Discover Our Space Sector Work</a>
       </div>
     </section>
 
     <!-- Tools -->
-    <section class="mb-24">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
-            Tools
-          </span>
-          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            Tools and Technologies
-          </h2>
-          <p class="text-gray-600 dark:text-gray-300 mb-6">
-            We use tools that reduce environmental impact while maximising efficiency:
-          </p>
-          <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
-            <li>Carbon footprint auditing for digital campaigns</li>
-            <li>Renewable-energy powered green web hosting</li>
-            <li>Privacy-focused analytics and tag management</li>
-            <li>SEO platforms for maximising organic reach</li>
-            <li>Efficient, targeted email marketing</li>
-          </ul>
-          <a href="/tools" class="btn-primary">Learn About Our Tech Stack</a>
-        </div>
-        <div class="rounded-lg overflow-hidden shadow-xl">
-          <img src="/images/tools.png" alt="Marketing Tools" class="w-full h-auto" />
-        </div>
+    <section class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">Tools</span>
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Tools and Technologies</h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">
+          We use tools that reduce environmental impact while maximising efficiency, including green web hosting, carbon audits, and privacy-focused analytics.
+        </p>
+        <a href="/tools" class="btn-primary">Learn About Our Tech Stack</a>
+      </div>
+      <div class="rounded-lg overflow-hidden shadow-xl">
+        <img src="/images/tools.png" alt="Marketing Tools" class="w-full h-auto" />
       </div>
     </section>
 
     <!-- Get Involved -->
-    <section class="mb-24">
-      <div class="grid md:grid-cols-2 gap-12 items-center md:flex-row-reverse">
-        <div class="rounded-lg overflow-hidden shadow-xl">
-          <img src="/images/community.png" alt="Community Engagement" class="w-full h-auto" />
-        </div>
-        <div>
-          <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
-            Get Involved
-          </span>
-          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            Join the Movement
-          </h2>
-          <p class="text-gray-600 dark:text-gray-300 mb-6">
-            Participate in advancing sustainable marketing within the space sector:
-          </p>
-          <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6">
-            <li><a href="/podcast" class="text-accent-600 underline">Listen to The Sustainable Space Podcast</a></li>
-            <li><a href="/workshops" class="text-accent-600 underline">Attend our workshops</a> on sustainability-focused marketing</li>
-            <li><a href="/blog/tag/sustainability" class="text-accent-600 underline">Read our insights</a> on trends and best practices</li>
-          </ul>
-          <a href="/contact" class="btn-primary">Contact Us</a>
-        </div>
+    <section class="grid md:grid-cols-2 gap-12 items-center md:flex-row-reverse">
+      <div class="rounded-lg overflow-hidden shadow-xl">
+        <img src="/images/community.png" alt="Community Engagement" class="w-full h-auto" />
+      </div>
+      <div>
+        <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">Get Involved</span>
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Join the Movement</h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">
+          Participate in advancing sustainable marketing within the space sector.
+        </p>
+        <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6 space-y-2">
+          <li><a href="/podcast" class="text-accent-600 underline">Listen to The Sustainable Space Podcast</a></li>
+          <li><a href="/workshops" class="text-accent-600 underline">Attend our workshops</a> on sustainability-focused marketing</li>
+          <li><a href="/blog/tag/sustainability" class="text-accent-600 underline">Read our insights</a> on trends and best practices</li>
+        </ul>
+        <a href="/contact" class="btn-primary">Contact Us</a>
       </div>
     </section>
-  </main>
 
-    <!-- Full-Width CTA -->
+    <!-- CTA -->
     <section class="w-full bg-secondary-500 py-16 text-white text-center">
-      <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
         <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to collaborate?</h2>
-        <p class="mb-8 text-lg sm:text-xl text-gray-200">Let’s drive responsible growth for your organisation. Get in touch for a custom package or exploratory call.</p>
+        <p class="text-lg sm:text-xl text-gray-200 mb-8">Let’s drive responsible growth for your organisation. Get in touch for a custom package or exploratory call.</p>
         <a href="/contact" class="inline-block w-full sm:w-auto px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition text-lg sm:text-xl">Contact Us</a>
       </div>
     </section>
+
+  </main>
 
   <Footer />
 </Layout>

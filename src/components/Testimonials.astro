@@ -1,29 +1,9 @@
 ---
 import GetStarted from './GetStarted.astro';
+import reviews from '../data/reviews.json'; // Adjust path to your reviews.json file
 
-const testimonials = [
-  {
-    content: "What I appreciated most is having Ryan as a continuous sparring partner fir turning my ideas into reality. His ability to proactively research opportunities and collect information was a huge benefit for many projects",
-    author: "Sebastian D. Marcu",
-    position: "CEO",
-    company: "Design & Data GmbH",
-    avatar: "images/people/SebastianDMarcu.jpg"
-  },
-  {
-    content: "I've tried many SaaS solutions, but this one stands out for its ease of use and comprehensive feature set. The customer support is also exceptional.",
-    author: "Nil Angli",
-    position: "Business Applications Officer",
-    company: "European Space Agency",
-    avatar: "images/people/NilAngli.jpg"
-  },
-  {
-    content: "The analytics capabilities alone are worth the investment. We've gained valuable insights that have helped us optimize our operations and reduce costs.",
-    author: "Emily Rodriguez",
-    position: "Operations Director",
-    company: "Global Solutions",
-    avatar: "images/people/SebastianDMarcu.jpg"
-  }
-];
+// Optional: sort or limit reviews
+const testimonials = reviews; 
 ---
 
 <section id="testimonials" class="section">
@@ -33,7 +13,7 @@ const testimonials = [
         Customer Stories
       </span>
       <h2 class="mb-6 text-gray-900 dark:text-white">What Our Clients Say</h2>
-      <p class="text-gray-600 dark:text-gray-300">
+      <p class="text-gray-600 dark:text-white">
         Don't just take our word for it. Here's what our customers have to say about their experience with our platform.
       </p>
     </div>
@@ -41,18 +21,19 @@ const testimonials = [
     <div class="grid md:grid-cols-3 gap-8">
       {testimonials.map((testimonial, index) => (
         <div 
-          class="card p-6 border border-gray-200 dark:border-gray-700 slide-up" 
+          class="card p-6 border border-gray-200 dark:border-accent-500 slide-up" 
           style={`animation-delay: ${index * 150}ms`}
+          key={index}
         >
           <div class="mb-6">
-            {[...Array(5)].map(() => (
-              <svg class="w-5 h-5 inline-block text-warning-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            {[...Array(5)].map((_, starIdx) => (
+              <svg key={starIdx} class="w-5 h-5 inline-block text-warning-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
               </svg>
             ))}
           </div>
           
-          <blockquote class="mb-6 text-gray-700 dark:text-gray-300 italic">"{testimonial.content}"</blockquote>
+          <blockquote class="mb-6 text-gray-700 dark:text-white italic">"{testimonial.content}"</blockquote>
           
           <div class="flex items-center">
             <img 
@@ -63,7 +44,7 @@ const testimonials = [
             />
             <div>
               <p class="font-semibold text-gray-900 dark:text-white">{testimonial.author}</p>
-              <p class="text-sm text-gray-500 dark:text-gray-400">{testimonial.position}, {testimonial.company}</p>
+              <p class="text-sm text-gray-500 dark:text-white">{testimonial.position}, {testimonial.company}</p>
             </div>
           </div>
         </div>
