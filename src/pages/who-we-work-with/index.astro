@@ -1,0 +1,138 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import HeroSection from "../../components/HeroSection.astro";
+---
+
+<Layout 
+  title="Who We Work With | Green Orbit Digital"
+  description="Discover the organisations we support across the space, tech, sustainability, and public sectors—from startups to corporates, academia, and investors."
+>
+  <Header />
+
+  <main class="py-8">
+
+    <!-- HERO -->
+    <HeroSection
+      title="Who We Work With"
+      description="We partner with organisations across the space, technology, sustainability, and public sectors—helping them grow responsibly through trusted strategy, storytelling, and sustainable digital marketing."
+    />
+
+    <!-- INTRO -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-gray-700 dark:text-white space-y-6">
+      <p>
+        Our work spans the full ecosystem—from emerging startups to established industry leaders. 
+        Whether you’re building breakthrough technology, shaping policy, funding innovation, or driving research, 
+        we help you communicate your impact with clarity, credibility, and purpose.
+      </p>
+      <p>
+        With deep experience across the space sector, sustainability, climate innovation, and digital strategy, 
+        we support organisations that are pushing boundaries and accelerating positive change.
+      </p>
+    </section>
+
+    <!-- GRID -->
+    <section class="py-16 bg-gray-50 dark:bg-primary-500">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+
+        <!-- Startups & Scaleups -->
+        <div class="p-8 rounded-xl bg-white dark:bg-secondary-500 shadow flex flex-col">
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Startups & Scaleups</h2>
+          <p class="text-gray-700 dark:text-white mb-6">
+            We help early-stage teams build credibility, sharpen their value proposition, 
+            and accelerate growth through strategic marketing and sustainability-led storytelling. 
+            Ideal for space-tech founders, climate innovators, and deep-tech ventures seeking traction.
+          </p>
+          <a 
+            href="/who-we-work-with/startups-scaleups"
+            class="mt-auto inline-block px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white rounded-lg font-semibold transition"
+          >
+            Learn More →
+          </a>
+        </div>
+
+        <!-- Government & Public Sector -->
+        <div class="p-8 rounded-xl bg-white dark:bg-secondary-500 shadow flex flex-col">
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Government & Public Sector</h2>
+          <p class="text-gray-700 dark:text-white mb-6">
+            From national programmes to regional initiatives, we translate complex policy, climate data, 
+            and space-enabled capabilities into accessible, public-facing communication aligned with 
+            transparency, stakeholder engagement, and the UN SDGs.
+          </p>
+          <a 
+            href="/who-we-work-with/government-public-sector"
+            class="mt-auto inline-block px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white rounded-lg font-semibold transition"
+          >
+            Learn More →
+          </a>
+        </div>
+
+        <!-- Corporates & Industry -->
+        <div class="p-8 rounded-xl bg-white dark:bg-secondary-500 shadow flex flex-col">
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Corporates & Industry</h2>
+          <p class="text-gray-700 dark:text-white mb-6">
+            We support established organisations seeking sustainable growth, improved ESG alignment, 
+            and effective communication of responsible innovation. Perfect for satellite operators, 
+            engineering firms, consultancies, and climate-tech leaders.
+          </p>
+          <a 
+            href="/who-we-work-with/corporates-industry"
+            class="mt-auto inline-block px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white rounded-lg font-semibold transition"
+          >
+            Learn More →
+          </a>
+        </div>
+
+        <!-- Academia -->
+        <div class="p-8 rounded-xl bg-white dark:bg-secondary-500 shadow flex flex-col">
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Academia</h2>
+          <p class="text-gray-700 dark:text-white mb-6">
+            We collaborate with universities, research groups, and scientific institutions to communicate 
+            breakthroughs, Earth observation insights, and space research with accuracy and impact—bridging 
+            the gap between science and public understanding.
+          </p>
+          <a 
+            href="/who-we-work-with/academia"
+            class="mt-auto inline-block px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white rounded-lg font-semibold transition"
+          >
+            Learn More →
+          </a>
+        </div>
+
+        <!-- Investors -->
+        <div class="p-8 rounded-xl bg-white dark:bg-secondary-500 shadow flex flex-col">
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Investors</h2>
+          <p class="text-gray-700 dark:text-white mb-6">
+            Investors shaping the future of climate-tech, deep tech, and the space economy count on us 
+            to support due diligence, portfolio visibility, and sustainability reporting—ensuring that 
+            innovation and impact are communicated effectively.
+          </p>
+          <a 
+            href="/who-we-work-with/investors"
+            class="mt-auto inline-block px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white rounded-lg font-semibold transition"
+          >
+            Learn More →
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+  
+    <!-- CTA -->
+    <section class="text-center py-16 bg-secondary-500">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Ready to work together?</h2>
+      <p class="text-gray-700 dark:text-white mb-8">
+        Whether you're launching something new or scaling impact, we’re here to help.
+      </p>
+      <a 
+        href="/contact"
+        class="inline-block px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white text-lg rounded-lg transition font-semibold"
+      >
+        Start a Conversation
+      </a>
+    </section>
+
+  <Footer />
+</Layout>

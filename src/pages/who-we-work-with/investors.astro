@@ -1,0 +1,48 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import HeroSection from "../../components/HeroSection.astro";
+---
+
+<Layout
+  title="Investors"
+  description="Helping investors communicate value, ESG alignment, and the impact of their climate-tech and space-sector portfolios."
+>
+  <Header />
+
+  <main class="py-12 max-w-4xl mx-auto space-y-16 px-6">
+    <HeroSection
+      title="Investors"
+      description="Clear, impact-driven communication for climate-tech, deep tech, and space investors."
+    />
+
+    <section class="space-y-6 text-white">
+      <p>
+        Investors in climate-tech, deep tech, and the space economy need clear, credible narratives that support due diligence, 
+        strengthen deal flow, and elevate portfolio companies. Green Orbit Digital provides communication and marketing strategies 
+        that highlight innovation, impact, and measurable ESG value.
+      </p>
+
+      <p>
+        We help investors articulate their climate and sustainability commitments, while equipping portfolio teams with scalable 
+        marketing support—from brand positioning to go-to-market strategy. Our approach blends industry insight, sustainability expertise, 
+        and digital execution to help you lead the transition to a greener economy.
+      </p>
+    </section>
+  </main>
+    <!-- CTA -->
+    <section class="text-center py-16 bg-secondary-500">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Ready to work together?</h2>
+      <p class="text-gray-700 dark:text-white mb-8">
+        Whether you're launching something new or scaling impact, we’re here to help.
+      </p>
+      <a 
+        href="/contact"
+        class="inline-block px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white text-lg rounded-lg transition font-semibold"
+      >
+        Start a Conversation
+      </a>
+    </section>
+  <Footer />
+</Layout>
