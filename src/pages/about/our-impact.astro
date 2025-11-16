@@ -1,0 +1,123 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+---
+
+<Layout 
+  title="Our Impact | Green Orbit Digital"
+  description="Measurable environmental, social, and economic impact through sustainable digital marketing and responsible innovation."
+>
+  <Header />
+
+  <main class="py-16 w-full container-custom bg-primary-500 space-y-16">
+
+    <!-- HERO -->
+    <HeroSection 
+      title="Our Impact"
+      highlightText="Impact"
+      description="Driving measurable outcomes across people, planet, and profit through sustainable strategies and responsible innovation."
+    />
+
+    <!-- Overview -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-gray-700 dark:text-white space-y-6">
+      <p>
+        At Green Orbit Digital, sustainability is at the core of everything we do. We measure impact across three pillars—<strong>People, Planet, and Profit</strong>—to ensure that our work not only delivers business value but also contributes positively to society and the environment.
+      </p>
+    </section>
+
+    <!-- People Impact -->
+    <section class="mb-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+            People
+          </span>
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            Positive Social Outcomes
+          </h2>
+          <p class="text-gray-700 dark:text-white mb-6">
+            Our initiatives focus on supporting employees, clients, and communities to thrive. By fostering inclusive, equitable, and empowering environments, we help people develop skills, access opportunities, and achieve meaningful outcomes.
+          </p>
+          <ul class="list-disc pl-6 text-gray-700 dark:text-white mb-6 space-y-2">
+            <li>Inclusive hiring and workforce development programmes.</li>
+            <li>Community engagement through mentoring, workshops, and outreach.</li>
+            <li>Supporting mental health, well-being, and work-life balance.</li>
+          </ul>
+          <a href="/contact" class="btn-primary">Partner on Social Initiatives</a>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-xl">
+          <img src="/images/impact/people.jpg" alt="People Impact" class="w-full h-auto" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Planet Impact -->
+    <section class="mb-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1 rounded-lg overflow-hidden shadow-xl">
+          <img src="/images/impact/planet.jpg" alt="Planet Impact" class="w-full h-auto" />
+        </div>
+        <div class="order-1 md:order-2">
+          <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+            Planet
+          </span>
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            Environmental Stewardship
+          </h2>
+          <p class="text-gray-700 dark:text-white mb-6">
+            We take deliberate steps to reduce the environmental footprint of our operations and client projects. From digital carbon reduction to promoting sustainable practices, we aim to protect natural resources and contribute to a greener future.
+          </p>
+          <ul class="list-disc pl-6 text-gray-700 dark:text-white mb-6 space-y-2">
+            <li>Low-carbon website design and hosting solutions.</li>
+            <li>Carbon-aware campaigns and marketing content optimisation.</li>
+            <li>Supporting clients in aligning digital practices with net-zero goals.</li>
+          </ul>
+          <a href="/contact" class="btn-primary">Collaborate on Environmental Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profit / Economic Impact -->
+    <section class="mb-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+            Profit
+          </span>
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            Sustainable Business Value
+          </h2>
+          <p class="text-gray-700 dark:text-white mb-6">
+            Impactful sustainability also drives business growth. Our strategies enhance brand reputation, strengthen stakeholder trust, and deliver measurable results while maintaining ethical and responsible operations.
+          </p>
+          <ul class="list-disc pl-6 text-gray-700 dark:text-white mb-6 space-y-2">
+            <li>Data-driven campaigns with measurable ROI and reduced carbon impact.</li>
+            <li>Strengthening client credibility and sustainability positioning.</li>
+            <li>Building resilience through responsible, future-ready business practices.</li>
+          </ul>
+          <a href="/contact" class="btn-primary">Explore Sustainable Growth</a>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-xl">
+          <img src="/images/impact/profit.jpg" alt="Profit Impact" class="w-full h-auto" />
+        </div>
+      </div>
+    </section>
+  </main>
+  
+    <!-- Full-Width CTA -->
+    <section class="w-full bg-secondary-500 py-16 text-white text-center">
+      <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Make a Measurable Impact</h2>
+        <p class="mb-8 text-lg sm:text-xl text-gray-200">
+          Partner with Green Orbit Digital to embed sustainability into your operations, creating lasting social, environmental, and economic outcomes.
+        </p>
+        <a href="/contact" class="inline-block w-full sm:w-auto px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition text-lg sm:text-xl">
+          Start a Collaboration
+        </a>
+      </div>
+    </section>
+
+  <Footer />
+</Layout>

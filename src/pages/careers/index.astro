@@ -3,185 +3,210 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import HeroSection from '../../components/HeroSection.astro';
+import jobs from '../../data/jobs.json';
 ---
 
-<Layout title="Careers">
+<Layout 
+  title="Careers | Green Orbit Digital"
+  description="Explore career opportunities, benefits, and pathways to join the Green Orbit Digital team."
+>
   <Header />
-  <main class="py-8">
+
+  <main class="py-16 w-full container-custom space-y-16 bg-primary-500">
+
+    <!-- HERO -->
     <HeroSection 
-      title="Join Our Team"
-      highlightText="Team"
-      description="We're looking for talented individuals to help us build the future of Green Orbit Digital."
+      title="Careers at Green Orbit Digital"
+      highlightText="Careers"
+      description="Join our team of innovators driving sustainable digital transformation for the space and climate sectors."
     />
-    
-    <section class="py-16 bg-white dark:bg-secondary-500">
-      <div class="container-custom">
-        <div class="max-w-4xl mx-auto">
-          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8">Why Work With Us?</h2>
-          
-          <div class="grid md:grid-cols-2 gap-8 mb-16">
-            <div class="card p-6 border border-gray-200 dark:border-gray-700">
-              <div class="flex items-center mb-4">
-                <div class="rounded-full bg-primary-100 dark:bg-accent-500 p-3 mr-4">
-                  <svg class="w-6 h-6 text-primary-600 dark:text-primary-400" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Flexible Work Environment</h3>
-              </div>
-              <p class="text-gray-600 dark:text-white">
-                Work from anywhere in the world. We believe in results, not hours spent at a desk.
-              </p>
-            </div>
-            
-            <div class="card p-6 border border-gray-200 dark:border-gray-700">
-              <div class="flex items-center mb-4">
-                <div class="rounded-full bg-primary-100 dark:bg-accent-500 p-3 mr-4">
-                  <svg class="w-6 h-6 text-primary-600 dark:text-primary-400" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                  </svg>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Cutting-Edge Technology</h3>
-              </div>
-              <p class="text-gray-600 dark:text-white">
-                Work with the latest technologies and tools to solve challenging problems.
-              </p>
-            </div>
-            
-            <div class="card p-6 border border-gray-200 dark:border-gray-700">
-              <div class="flex items-center mb-4">
-                <div class="rounded-full bg-primary-100 dark:bg-accent-500 p-3 mr-4">
-                  <svg class="w-6 h-6 text-primary-600 dark:text-primary-400" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                  </svg>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Diverse & Inclusive Team</h3>
-              </div>
-              <p class="text-gray-600 dark:text-white">
-                Join a global team with diverse backgrounds, perspectives, and experiences.
-              </p>
-            </div>
-            
-            <div class="card p-6 border border-gray-200 dark:border-gray-700">
-              <div class="flex items-center mb-4">
-                <div class="rounded-full bg-primary-100 dark:bg-accent-500 p-3 mr-4">
-                  <svg class="w-6 h-6 text-primary-600 dark:text-primary-400" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                  </svg>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Competitive Benefits</h3>
-              </div>
-              <p class="text-gray-600 dark:text-white">
-                Enjoy competitive salary, health benefits, stock options, and professional development opportunities.
-              </p>
-            </div>
-          </div>
-          
-          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8">Open Positions</h2>
-          
-          <div class="space-y-6 mb-16">
-            <!-- Job Listing 1 -->
-            <div class="card p-6 border border-gray-200 dark:border-gray-700">
-              <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2 md:mb-0">Senior Frontend Developer</h3>
-                <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-accent-500 text-green-800 dark:bg-accent-500 dark:text-white">
-                  Remote
-                </span>
-              </div>
-              <p class="text-gray-600 dark:text-white mb-4">
-                We're looking for an experienced frontend developer to help us build beautiful, responsive, and accessible user interfaces for our SaaS platform.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-secondary-500 text-gray-800 dark:bg-secondary-500 dark:text-white">
-                  React
-                </span>
-                <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-secondary-500 text-gray-800 dark:bg-secondary-500 dark:text-white">
-                  TypeScript
-                </span>
-                <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-secondary-500 text-gray-800 dark:bg-secondary-500 dark:text-white">
-                  Tailwind CSS
-                </span>
-                <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-secondary-500 text-gray-800 dark:bg-secondary-500 dark:text-white">
-                  5+ Years Experience
-                </span>
-              </div>
-              <a href="#" class="btn-accent">Apply Now</a>
-            </div>
-            
-            <!-- Job Listing 2 -->
-            <div class="card p-6 border border-gray-200 dark:border-gray-700">
-              <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2 md:mb-0">Backend Engineer</h3>
-               <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-accent-500 text-green-800 dark:bg-accent-500 dark:text-white">
-                  Remote
-                </span>
-              </div>
-              <p class="text-gray-600 dark:text-white mb-4">
-                Join our backend team to build scalable, reliable, and secure APIs and services that power our SaaS platform.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-secondary-500 text-gray-800 dark:bg-secondary-500 dark:text-white">
-                  Node.js
-                </span>
-                <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-secondary-500 text-gray-800 dark:bg-secondary-500 dark:text-white">
-                  PostgreSQL
-                </span>
-                <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-secondary-500 text-gray-800 dark:bg-secondary-500 dark:text-white">
-                  AWS
-                </span>
-                <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-secondary-500 text-gray-800 dark:bg-secondary-500 dark:text-white">
-                  3+ Years Experience
-                </span>
-              </div>
-              <a href="#" class="btn-accent">Apply Now</a>
-            </div>
-            
-            <!-- Job Listing 3 -->
-            <div class="card p-6 border border-gray-200 dark:border-gray-700">
-              <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2 md:mb-0">Product Designer</h3>
-                <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-accent-500 text-green-800 dark:bg-accent-500 dark:text-white">
-                  Remote
-                </span>
-              </div>
-              <p class="text-gray-600 dark:text-white mb-4">
-                We're seeking a talented product designer to create intuitive and delightful user experiences for our customers.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-secondary-500 text-gray-800 dark:bg-secondary-500 dark:text-white">
-                  UI/UX
-                </span>
-                <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-secondary-500 text-gray-800 dark:bg-secondary-500 dark:text-white">
-                  Figma
-                </span>
-                <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-secondary-500 text-gray-800 dark:bg-secondary-500 dark:text-white">
-                  User Research
-                </span>
-                <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-secondary-500 text-gray-800 dark:bg-secondary-500 dark:text-white">
-                  4+ Years Experience
-                </span>
-              </div>
-              <a href="#" class="btn-accent">Apply Now</a>
-            </div>
-          </div>
-          
-          <div class="text-center">
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Don't see a position that fits your skills?</h3>
-            <p class="text-gray-600 dark:text-white mb-6">
-              We're always looking for talented individuals to join our team. Send us your resume and we'll keep it on file for future opportunities.
-            </p>
-            <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
-<script>
-  hbspt.forms.create({
-    portalId: "143471159",
-    formId: "b9e5ae8b-5a33-4e69-a0ec-d3e958169bb7",
-    region: "eu1"
-  });
-</script>
-          </div>
+
+    <!-- Overview -->
+    <section class="mb-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Overview</h2>
+          <p class="text-gray-700 dark:text-white mb-4">
+            At Green Orbit Digital we are always looking for talented people to join our expert team. 
+            We create products, services, and strategies that help organisations adopt advanced digital technologies responsibly, with measurable impact.
+          </p>
+          <p class="text-gray-700 dark:text-white mb-6">
+            You will contribute to sustainable innovation in sectors such as space, climate-tech, and data-driven technologies, helping clients achieve their full potential while supporting the UK economy.
+          </p>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-xl">
+          <img src="/images/careers/overview.png" alt="Team collaborating" class="w-full h-auto"/>
         </div>
       </div>
     </section>
-  </main>
+
+    <!-- Great Place to Work -->
+    <section class="mb-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1 rounded-lg overflow-hidden shadow-xl">
+          <img src="/images/careers/gptw.png" alt="Great Place to Work Logos" class="w-full h-auto"/>
+        </div>
+        <div class="order-1 md:order-2">
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Great Place to Work</h2>
+          <p class="text-gray-700 dark:text-white mb-4">
+            We are proud to be recognised in the UK’s Top 100 Best Workplaces and in the UK’s Best Workplaces in Tech.
+          </p>
+          <p class="text-gray-700 dark:text-white mb-6">
+            This distinction reflects our commitment to trust, respect, fairness, and pride. 80% of our employees report that Green Orbit Digital is a great place to work.
+          </p>
+          <a href="/about" class="btn-primary">Learn More About Our Culture</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equality, Diversity & Inclusion -->
+    <section class="mb-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Equality, Diversity & Inclusion</h2>
+          <p class="text-gray-700 dark:text-white mb-4">
+            We recognise and value the advantages of people from diverse backgrounds. An inclusive and open culture leads to greater innovation and agility, accelerating positive impact for clients and the broader society.
+          </p>
+          <p class="text-gray-700 dark:text-white mb-6">
+            Our ambition is to build a team reflective of UK society, where all employees feel they belong and can contribute their best work.
+          </p>
+          <a href="/edi" class="btn-primary">Learn More About EDI</a>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-xl">
+          <img src="/images/careers/edi.png" alt="Diverse Team" class="w-full h-auto"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rewards & Benefits -->
+    <section class="mb-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1 rounded-lg overflow-hidden shadow-xl">
+          <img src="/images/careers/benefits.png" alt="Benefits" class="w-full h-auto"/>
+        </div>
+        <div class="order-1 md:order-2">
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Rewards & Benefits</h2>
+          <p class="text-gray-700 dark:text-white mb-4">
+            In addition to competitive salary, we offer pension, life insurance, and flexible benefits tailored to individual needs, including medical cover, gym discounts, and professional development opportunities.
+          </p>
+          <a href="/benefits" class="btn-primary">Explore Benefits</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hybrid Working -->
+    <section class="mb-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Hybrid Working</h2>
+          <p class="text-gray-700 dark:text-white mb-4">
+            We follow flexible and agile principles, allowing work remotely or collaboratively in our offices. Employees are trusted to deliver work with pride and maintain high standards.
+          </p>
+          <p class="text-gray-700 dark:text-white mb-6">
+            Most roles are expected to be onsite two days per week, with some requiring more frequent office attendance to ensure project success.
+          </p>
+          <a href="/contact" class="btn-primary">Learn More About Our Ways of Working</a>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-xl">
+          <img src="/images/careers/hybrid.png" alt="Hybrid Working" class="w-full h-auto"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interview Process -->
+    <section class="mb-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1 rounded-lg overflow-hidden shadow-xl">
+          <img src="/images/careers/interview.png" alt="Interview Process" class="w-full h-auto"/>
+        </div>
+        <div class="order-1 md:order-2">
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Interview Process</h2>
+          <p class="text-gray-700 dark:text-white mb-4">
+            We ensure an inclusive process. Job descriptions are gender-neutral, and interviews are competency and task-based. Panels are diverse, with reasonable adjustments available as required.
+          </p>
+          <a href="/contact" class="btn-primary">Learn More About Applying</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Early Careers Programmes -->
+    <section class="mb-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Early Careers Programmes</h2>
+          <p class="text-gray-700 dark:text-white mb-4">
+            We support pupils, apprentices, and graduates through summer placements, apprenticeships, and secondments with partner organisations. Our early careers programmes provide practical experience in digital innovation and technology adoption.
+          </p>
+          <p class="text-gray-700 dark:text-white mb-6">
+            Email your interest to join our talent community for future opportunities.
+          </p>
+          <a href="/contact" class="btn-primary">Join the Talent Community</a>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-xl">
+          <img src="/images/careers/early-careers.png" alt="Early Careers" class="w-full h-auto"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Current Vacancies -->
+    <section class="py-16 bg-white dark:bg-primary-500">
+      <div class="container-custom max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">Current Vacancies</h2>
+
+        <div class="space-y-8">
+          {jobs.map((job) => (
+            <div class="grid md:grid-cols-2 gap-12 items-center border border-gray-200 dark:border-accent-500 p-6 rounded-xl shadow">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">{job.title}</h3>
+                <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-accent-500 text-green-800 dark:text-white mb-4">{job.location}</span>
+                <p class="text-gray-700 dark:text-white mb-4">{job.description}</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  {job.skills.map((skill) => (
+                    <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-secondary-500 text-gray-800 dark:text-white">{skill}</span>
+                  ))}
+                  <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-secondary-500 text-gray-800 dark:text-white">{job.experience}</span>
+                </div>
+                <a href={job.applyLink} class="btn-primary">Apply Now</a>
+              </div>
+              <div class="rounded-lg overflow-hidden shadow-xl">
+                <img src={job.image} alt={job.title} class="w-full h-auto"/>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+        <div class="text-center mt-12">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Can't find a role that fits?</h3>
+          <p class="text-gray-700 dark:text-white mb-6">
+            Send us your CV and we’ll keep you in mind for future opportunities.
+          </p>
+          <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
+          <script>
+            hbspt.forms.create({
+              portalId: "143471159",
+              formId: "b9e5ae8b-5a33-4e69-a0ec-d3e958169bb7",
+              region: "eu1"
+            });
+          </script>
+        </div>
+      </div>
+    </section>
+    </main>
+
+    <!-- CTA -->
+    <section class="text-center py-16 bg-secondary-500">
+      <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-white">Join Us Today</h2>
+        <p class="mb-8 text-lg sm:text-xl text-gray-200">
+          Help Green Orbit Digital deliver sustainable innovation across the space and climate sectors.
+        </p>
+        <a href="/contact" class="inline-block px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition text-lg sm:text-xl">
+          Get in Touch
+        </a>
+      </div>
+    </section>
+
   <Footer />
-</Layout> 
+</Layout>

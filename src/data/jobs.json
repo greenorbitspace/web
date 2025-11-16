@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Freelance Consultant",
+    "location": "Flexible / Remote",
+    "description": "We are seeking an experienced Freelance Consultant to provide expert support on digital marketing, sustainability, and space sector initiatives. You will work on high-impact projects, advising on strategy, optimising campaigns, and delivering results on a flexible schedule that suits your availability.",
+    "skills": ["Project Management", "SEO", "Sustainability Strategy"],
+    "experience": "2+ Years Experience",
+    "applyLink": "/careers/freelance-consultant",
+    "image": "/images/careers/freelance.png"
+  },
+  {
+    "title": "Personal Assistant",
+    "location": "Remote / Leicester, UK",
+    "description": "Join us as a Personal Assistant to support the leadership team in managing schedules, coordinating projects, and ensuring smooth daily operations. You will be pivotal in keeping workflows efficient, facilitating communication, and supporting strategic priorities.",
+    "skills": ["Organisation", "Communication", "Task Management"],
+    "experience": "1+ Years Experience",
+    "applyLink": "/careers/personal-assistant",
+    "image": "/images/careers/personal-assistant.png"
+  },
+  {
+    "title": "Intern",
+    "location": "Remote / Leicester, UK",
+    "description": "We are looking for a motivated Intern to gain hands-on experience in digital marketing, sustainability, and content creation. You will contribute to client initiatives, support campaigns, and learn industry best practices while developing practical skills for your future career.",
+    "skills": ["Research", "Social Media", "Content Creation"],
+    "experience": "Student / Entry Level",
+    "applyLink": "/careers/intern",
+    "image": "/images/careers/intern.png"
+  }
+]

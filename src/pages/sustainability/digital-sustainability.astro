@@ -5,60 +5,133 @@ import Footer from '../../components/Footer.astro';
 import HeroSection from '../../components/HeroSection.astro';
 ---
 
-<Layout title="Digital Sustainability - Green Orbit Digital">
+<Layout 
+  title="Digital Sustainability | Green Orbit Digital"
+  description="Embedding sustainability across digital operations, campaigns, and infrastructure to reduce carbon impact while driving performance."
+>
   <Header />
-  <main>
+
+  <main class="py-16 w-full container-custom bg-primary-500 space-y-16">
+
+    <!-- HERO -->
     <HeroSection 
-      title="Digital Sustainability" 
+      title="Digital Sustainability"
       highlightText="Sustainability"
       description="Building a digital future that balances innovation, efficiency, and environmental responsibility."
     />
 
-    <section title="Why Digital Sustainability Matters">
-      <ul class="list-disc ml-6 space-y-2">
-        <li><strong>Energy Demand:</strong> Data centres already account for ~1–2% of global electricity consumption, with demand rising sharply.</li>
-        <li><strong>Carbon Footprint:</strong> Websites, apps, and digital services generate emissions through hosting, content delivery, and user devices.</li>
-        <li><strong>Resource Use:</strong> Hardware production requires rare earth minerals and intensive supply chains.</li>
-        <li><strong>Reputation & Compliance:</strong> Organisations face increasing pressure to adopt responsible digital practices.</li>
-      </ul>
+    <!-- Why Digital Sustainability Matters -->
+    <section class="mb-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+            Importance
+          </span>
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            Why Digital Sustainability Matters
+          </h2>
+          <ul class="list-disc pl-6 text-gray-700 dark:text-white mb-6 space-y-2">
+            <li><strong>Energy Demand:</strong> Data centres already account for ~1–2% of global electricity consumption, with demand rising sharply.</li>
+            <li><strong>Carbon Footprint:</strong> Websites, apps, and digital services generate emissions through hosting, content delivery, and user devices.</li>
+            <li><strong>Resource Use:</strong> Hardware production requires rare earth minerals and intensive supply chains.</li>
+            <li><strong>Reputation & Compliance:</strong> Organisations face increasing pressure to adopt responsible digital practices.</li>
+          </ul>
+          <a href="/services/digital-sustainability#importance" class="btn-primary">Learn More</a>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-xl">
+          <img src="/images/services/digital-sustainability-importance.png" alt="Digital Sustainability Importance" class="w-full h-auto" />
+        </div>
+      </div>
     </section>
 
-    <section title="Principles of Digital Sustainability">
-      <ol class="list-decimal ml-6 space-y-2">
-        <li>Efficiency First – lighter, faster websites and applications.</li>
-        <li>Green Hosting & Cloud – powered by renewable energy.</li>
-        <li>Sustainable Marketing – minimising wasted impressions and digital noise.</li>
-        <li>Data Responsibility – reducing storage bloat and applying minimisation.</li>
-        <li>Lifecycle Thinking – sustainable design from hardware to software.</li>
-        <li>Measurement & Transparency – tracking and reporting with tools like Website Carbon Calculator, Ecoping, and CO2.js.</li>
-      </ol>
+    <!-- Principles of Digital Sustainability -->
+    <section class="mb-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1 rounded-lg overflow-hidden shadow-xl">
+          <img src="/images/services/digital-sustainability-principles.png" alt="Principles of Digital Sustainability" class="w-full h-auto" />
+        </div>
+        <div class="order-1 md:order-2">
+          <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+            Principles
+          </span>
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            Principles of Digital Sustainability
+          </h2>
+          <ol class="list-decimal pl-6 text-gray-700 dark:text-white mb-6 space-y-2">
+            <li>Efficiency First – lighter, faster websites and applications.</li>
+            <li>Green Hosting & Cloud – powered by renewable energy.</li>
+            <li>Sustainable Marketing – minimising wasted impressions and digital noise.</li>
+            <li>Data Responsibility – reducing storage bloat and applying minimisation.</li>
+            <li>Lifecycle Thinking – sustainable design from hardware to software.</li>
+            <li>Measurement & Transparency – tracking and reporting with tools like Website Carbon Calculator, Ecoping, and CO2.js.</li>
+          </ol>
+          <a href="/services/digital-sustainability#principles" class="btn-primary">Explore Principles</a>
+        </div>
+      </div>
     </section>
 
-    <section title="Our Approach">
-      <p>At Green Orbit Digital, we integrate sustainability into every stage of your digital strategy:</p>
-      <ul class="list-disc ml-6 space-y-2">
-        <li>Audit & Baseline – measuring digital carbon footprints.</li>
-        <li>Optimisation – reducing file sizes, streamlining code, applying green design.</li>
-        <li>Hosting & Infrastructure – moving to renewable-powered hosting and CDNs.</li>
-        <li>Responsible Marketing – aligning SEO, email, and paid media with sustainable practices.</li>
-        <li>Reporting – mapping actions against the UN SDGs.</li>
-      </ul>
+    <!-- Our Approach -->
+    <section class="mb-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+            Approach
+          </span>
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            Our Approach
+          </h2>
+          <ul class="list-disc pl-6 text-gray-700 dark:text-white mb-6 space-y-2">
+            <li>Audit & Baseline – measuring digital carbon footprints.</li>
+            <li>Optimisation – reducing file sizes, streamlining code, applying green design.</li>
+            <li>Hosting & Infrastructure – moving to renewable-powered hosting and CDNs.</li>
+            <li>Responsible Marketing – aligning SEO, email, and paid media with sustainable practices.</li>
+            <li>Reporting – mapping actions against the UN SDGs.</li>
+          </ul>
+          <a href="/services/digital-sustainability#approach" class="btn-primary">Learn About Our Approach</a>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-xl">
+          <img src="/images/services/digital-sustainability-approach.png" alt="Our Approach" class="w-full h-auto" />
+        </div>
+      </div>
     </section>
 
-    <section title="Benefits">
-      <ul class="list-disc ml-6 space-y-2">
-        <li>Lower Carbon Footprint – measurable reductions in energy use and emissions.</li>
-        <li>Cost Savings – efficiency in hosting, storage, and campaigns.</li>
-        <li>Faster Performance – better UX and SEO rankings.</li>
-        <li>Enhanced Brand Reputation – showcasing environmental commitment.</li>
-        <li>Future-Proofing – staying ahead of regulatory and market expectations.</li>
-      </ul>
-    </section>
-
-    <section title="Get Started">
-      <p>We partner with organisations across the space sector and beyond to embed digital sustainability into their operations.</p>
-      <p><a href="/contact" class="text-green-600 font-semibold hover:underline">Contact us</a> to start your journey towards a sustainable digital future.</p>
+    <!-- Benefits -->
+    <section class="mb-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1 rounded-lg overflow-hidden shadow-xl">
+          <img src="/images/services/digital-sustainability-benefits.png" alt="Benefits of Digital Sustainability" class="w-full h-auto" />
+        </div>
+        <div class="order-1 md:order-2">
+          <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+            Benefits
+          </span>
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            Benefits
+          </h2>
+          <ul class="list-disc pl-6 text-gray-700 dark:text-white mb-6 space-y-2">
+            <li>Lower Carbon Footprint – measurable reductions in energy use and emissions.</li>
+            <li>Cost Savings – efficiency in hosting, storage, and campaigns.</li>
+            <li>Faster Performance – better UX and SEO rankings.</li>
+            <li>Enhanced Brand Reputation – showcasing environmental commitment.</li>
+            <li>Future-Proofing – staying ahead of regulatory and market expectations.</li>
+          </ul>
+          <a href="/services/digital-sustainability#benefits" class="btn-primary">Discover the Benefits</a>
+        </div>
+      </div>
     </section>
   </main>
+    <!-- Get Started -->
+  <section class="w-full bg-secondary-500 py-16 text-white text-center">
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Get Started with Digital Sustainability</h2>
+      <p class="mb-8 text-lg sm:text-xl text-gray-200">
+        Green Orbit Digital partners with organisations across the space sector and beyond to embed sustainable practices into digital operations, campaigns, and infrastructure.
+      </p>
+      <a href="/contact" class="inline-block w-full sm:w-auto px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition text-lg sm:text-xl">
+        Start Your Sustainable Journey
+      </a>
+    </div>
+  </section>
+
   <Footer />
 </Layout>

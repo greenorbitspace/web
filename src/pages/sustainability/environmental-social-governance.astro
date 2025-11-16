@@ -1,0 +1,117 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+---
+
+<Layout 
+  title="ESG: Environmental, Social, Governance | Green Orbit Digital"
+  description="Green Orbit Digital integrates ESG principles into operations and client strategies to drive sustainability, transparency, and long-term value."
+>
+  <Header />
+
+  <main class="py-16 w-full container-custom bg-primary-500 space-y-16">
+
+    <!-- HERO -->
+    <HeroSection 
+      title="ESG: Environmental, Social, Governance"
+      highlightText="ESG"
+      description="Integrating ESG principles into business strategy to deliver sustainable, transparent, and responsible growth."
+    />
+
+    <!-- Environmental -->
+    <section class="mb-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+            Environmental
+          </span>
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            Minimising Impact, Maximising Sustainability
+          </h2>
+          <p class="text-gray-700 dark:text-white mb-6">
+            We help organisations reduce their environmental footprint and embed sustainability across all operations and campaigns.
+          </p>
+          <ul class="list-disc pl-6 text-gray-700 dark:text-white mb-6 space-y-2">
+            <li>Digital carbon audits and low-carbon content strategies.</li>
+            <li>Green hosting, renewable energy, and energy-efficient workflows.</li>
+            <li>Campaigns and communications aligned with climate and sustainability goals.</li>
+          </ul>
+          <a href="/services/environmental" class="btn-primary">Explore Environmental ESG</a>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-xl">
+          <img src="/images/esg/environmental.png" alt="Environmental Responsibility" class="w-full h-auto" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Social -->
+    <section class="mb-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1 rounded-lg overflow-hidden shadow-xl">
+          <img src="/images/esg/social.png" alt="Social Responsibility" class="w-full h-auto" />
+        </div>
+        <div class="order-1 md:order-2">
+          <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+            Social
+          </span>
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            Inclusion, Equity & Community Impact
+          </h2>
+          <p class="text-gray-700 dark:text-white mb-6">
+            Social responsibility ensures we foster inclusive workplaces, strengthen communities, and promote wellbeing across all stakeholders.
+          </p>
+          <ul class="list-disc pl-6 text-gray-700 dark:text-white mb-6 space-y-2">
+            <li>Inclusive and diverse work culture promoting equality and belonging.</li>
+            <li>Community engagement, mentoring, and educational initiatives.</li>
+            <li>Accessible digital solutions and support for social impact programmes.</li>
+          </ul>
+          <a href="/services/social" class="btn-primary">Explore Social ESG</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Governance -->
+    <section class="mb-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+            Governance
+          </span>
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            Transparency, Ethics & Compliance
+          </h2>
+          <p class="text-gray-700 dark:text-white mb-6">
+            Strong governance structures underpin trust, accountability, and ethical decision-making across our operations and client engagements.
+          </p>
+          <ul class="list-disc pl-6 text-gray-700 dark:text-white mb-6 space-y-2">
+            <li>Transparent processes and ethical business practices.</li>
+            <li>Data protection, risk management, and compliance with regulations.</li>
+            <li>Clear reporting and responsible leadership at all levels.</li>
+          </ul>
+          <a href="/services/governance" class="btn-primary">Explore Governance ESG</a>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-xl">
+          <img src="/images/esg/governance.png" alt="Governance Responsibility" class="w-full h-auto" />
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Full-Width CTA Section -->
+  <section class="w-full bg-secondary-500 py-16 text-white text-center">
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Integrate ESG Into Your Organisation</h2>
+      <p class="mb-8 text-lg sm:text-xl text-gray-200">
+        Green Orbit Digital can help embed Environmental, Social, and Governance principles into your strategy for sustainable and measurable impact.
+      </p>
+      <a href="/contact" class="inline-block w-full sm:w-auto px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition text-lg sm:text-xl">
+        Get in Touch
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
