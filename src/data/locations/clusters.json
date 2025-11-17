@@ -1,0 +1,348 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.1883, 55.9533] },
+      "properties": {
+        "id": "space-scotland",
+        "name": "Space Scotland",
+        "logo": "https://d11avd6t8zdcx0.cloudfront.net/uploads/2023/04/SPA-01-Logo-CMYK_Stacked-White-removebg-preview.png",
+        "description": "Scotland accounts for nearly 13% of all UK space sector employment and is the largest producer of small satellites in Europe. With several spaceports under development, Scotland is poised to offer an end-to-end solution for satellite design, manufacture, launch and downstream data exploitation. Scotland produced the UK’s first Space Sustainability Roadmap in 2022, demonstrating leadership in responsible and environmentally conscious sector growth.",
+        "focusAreas": [
+          "Satellite manufacturing and integration",
+          "Launch capability",
+          "Earth observation and environmental intelligence",
+          "Sustainability",
+          "Ground stations",
+          "Advanced testing infrastructure"
+        ],
+        "url": "https://sa.catapult.org.uk/cluster/space-scotland/",
+        "keyCities": [
+          {
+            "id": "edinburgh",
+            "name": "Edinburgh",
+            "coordinates": [55.9533, -3.1883]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-4.4476, 58.3633] },
+      "properties": {
+        "id": "north-coast-space-cluster",
+        "name": "North Coast Space Cluster",
+        "logo": "https://d11avd6t8zdcx0.cloudfront.net/uploads/2023/04/north-coast-space-cluster-white.png",
+        "description": "Strengths in aerospace, hydrogen energy systems and precision engineering, with proximity to protected airspace and expansive maritime zones. The region is building a sovereign launch and tracking ecosystem with strategic spaceport positions supporting polar and sun-synchronous orbits and subsea fibre-optic landings.",
+        "focusAreas": [
+          "Satellite manufacturing and integration",
+          "Launch capability",
+          "Earth observation and environmental intelligence",
+          "Access to international data infrastructure",
+          "Sustainable practices",
+          "Environmental monitoring and research",
+          "Astro-tourism"
+        ],
+        "url": "https://sa.catapult.org.uk/cluster/north-coast-space-cluster-2/",
+        "keyCities": [
+          {
+            "id": "inverness",
+            "name": "Inverness",
+            "coordinates": [57.4778, -4.2247]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-5.9301, 54.5973] },
+      "properties": {
+        "id": "ni-space",
+        "name": "NI Space",
+        "logo": "https://d11avd6t8zdcx0.cloudfront.net/uploads/2023/04/NI-SPACE_Digital_Logo_White_Horizontal.png",
+        "description": "Northern Ireland offers world-class capability in advanced sensors, predictive analytics and cyber security. With aerospace heritage and advanced materials expertise, the region supports upstream systems, satellite components and resilient communications, enabling cross-sector innovation in propulsion, surveillance, telecommunications, AI and quantum.",
+        "focusAreas": [
+          "Aerospace heritage",
+          "Data analysis",
+          "Space communications and RF technologies",
+          "Quantum and photonics innovation",
+          "Dual-use technologies",
+          "Propulsion and lightweight structures",
+          "Space data for agriculture and infrastructure"
+        ],
+        "url": "https://sa.catapult.org.uk/cluster/northern-ireland-space/",
+        "keyCities": [
+          {
+            "id": "belfast",
+            "name": "Belfast",
+            "coordinates": [54.5973, -5.9301]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-1.6178, 54.9783] },
+      "properties": {
+        "id": "space-north-east-england",
+        "name": "Space North East England",
+        "logo": "https://d11avd6t8zdcx0.cloudfront.net/uploads/2023/04/Partners-SS-logo-SNEE_White.png",
+        "description": "More than 50 experienced companies and nearly 1,400 workforce supported by a large STEM graduate pool. The region has a heritage in manufacturing and maritime industries and is a pioneer in optical communications and crucial contributors to flagship space missions.",
+        "focusAreas": [
+          "Resilient communications",
+          "Advanced computing",
+          "Optics",
+          "Defence & security",
+          "Space data applications",
+          "Extensive manufacturing potential"
+        ],
+        "url": "https://sa.catapult.org.uk/cluster/space-north-east/",
+        "keyCities": [
+          {
+            "id": "newcastle",
+            "name": "Newcastle upon Tyne",
+            "coordinates": [54.9783, -1.6178]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-1.5492, 53.7997] },
+      "properties": {
+        "id": "space-hub-yorkshire",
+        "name": "Space Hub Yorkshire",
+        "logo": "https://d11avd6t8zdcx0.cloudfront.net/uploads/2023/04/SHY-Graphical-Device-Final-RGB-Transparent-BG-02.webp",
+        "description": "Hosted at the University of Leeds, Space Hub Yorkshire connects over 140 companies and 50+ research institutions, with strengths across satellite data, secure telecoms and advanced manufacturing.",
+        "focusAreas": [
+          "Geospatial intelligence and Earth information",
+          "Ubiquitous connectivity and communications",
+          "Data infrastructure, data security and space surveillance",
+          "Green finance and sustainability initiatives",
+          "Integrated satellite and terrestrial communications"
+        ],
+        "url": "https://sa.catapult.org.uk/cluster/space-hub-yorkshire/",
+        "keyCities": [
+          {
+            "id": "leeds",
+            "name": "Leeds",
+            "coordinates": [53.7997, -1.5492]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-2.2426, 53.4808] },
+      "properties": {
+        "id": "north-west-space-cluster",
+        "name": "North West Space Cluster",
+        "logo": "https://d11avd6t8zdcx0.cloudfront.net/uploads/2023/04/north-west-space-cluster-white.png",
+        "description": "Host to the UK’s largest defence manufacturing ecosystem, major cyber and supercomputing assets, and world-leading advanced materials expertise including radiation-hardened materials critical to deep space missions.",
+        "focusAreas": [
+          "Advanced manufacturing",
+          "Advanced materials",
+          "Cyber & defence",
+          "Digital and quantum technologies"
+        ],
+        "url": "https://sa.catapult.org.uk/cluster/north-west-space-cluster/",
+        "keyCities": [
+          {
+            "id": "manchester",
+            "name": "Manchester",
+            "coordinates": [53.4808, -2.2426]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-1.6178, 52.636] },
+      "properties": {
+        "id": "midlands-space-cluster",
+        "name": "Midlands Space Cluster",
+        "logo": "https://d11avd6t8zdcx0.cloudfront.net/uploads/2023/04/Midlands-Square-Cluster-Square-Logo-DARK-BACKGROUND-002-1.png",
+        "description": "A national leader in space data, Earth observation and advanced engineering with historical contributions to UK space hardware; the Midlands is strong in manufacturing, ISAM opportunities and secure communications.",
+        "focusAreas": [
+          "Automotive",
+          "Aerospace",
+          "Nuclear",
+          "Materials",
+          "Small satellite supply chain",
+          "Production clean rooms",
+          "Sustainable technologies",
+          "Clean energy"
+        ],
+        "url": "https://sa.catapult.org.uk/cluster/midlands-space-cluster/",
+        "keyCities": [
+          {
+            "id": "coventry",
+            "name": "Coventry",
+            "coordinates": [52.4068, -1.5136]
+          },
+          {
+            "id": "leicester",
+            "name": "Leicester",
+            "coordinates": [52.636, -1.133]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [0.1218, 52.2053] },
+      "properties": {
+        "id": "space-east",
+        "name": "Space East",
+        "logo": "https://d11avd6t8zdcx0.cloudfront.net/uploads/2023/04/Space-East-White-Logo.png",
+        "description": "The newest UK cluster anchored in telecommunications, radar, Earth observation and marine systems, with strong links to defence, energy and agri-tech sectors and assets such as Adastral Park and Norwich Research Park.",
+        "focusAreas": [
+          "Communications & IT",
+          "Radar, remote sensing and EO",
+          "Advanced manufacturing",
+          "Internet of things",
+          "EO applications",
+          "Autonomous platforms and UAV integration"
+        ],
+        "url": "https://sa.catapult.org.uk/cluster/space-east/",
+        "keyCities": [
+          {
+            "id": "cambridge",
+            "name": "Cambridge",
+            "coordinates": [52.2053, 0.1218]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-5.0733, 50.4155] },
+      "properties": {
+        "id": "cornwall-space-cluster",
+        "name": "Cornwall Space Cluster",
+        "logo": "https://d11avd6t8zdcx0.cloudfront.net/uploads/2023/04/Cornwall-Space.png",
+        "description": "Hosting nearly 500 businesses across space data and aerospace, and Europe’s first licenced horizontal launch site together with world-class ground station infrastructure, Cornwall is an emerging global technology destination.",
+        "focusAreas": [
+          "Satellite operations and communications",
+          "Space transport",
+          "Aerospace and space flight systems",
+          "Data analytics",
+          "Human spaceflight and exploration"
+        ],
+        "url": "https://sa.catapult.org.uk/cluster/cornwall-space-cluster/",
+        "keyCities": [
+          {
+            "id": "truro",
+            "name": "Truro",
+            "coordinates": [50.4155, -5.0733]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-1.3255, 51.5745] },
+      "properties": {
+        "id": "harwell-space",
+        "name": "Harwell Space",
+        "logo": "https://d11avd6t8zdcx0.cloudfront.net/uploads/2023/04/harwell-logo-white.png",
+        "description": "A dynamic science and technology campus hosting 100+ space organisations, national facilities and world-class testing infrastructure including RAL Space and the National Satellite Test Facility.",
+        "focusAreas": [
+          "Satellite operations and communications",
+          "Space transport",
+          "Aerospace and space flight systems",
+          "Data analytics",
+          "Human spaceflight and exploration"
+        ],
+        "url": "https://sa.catapult.org.uk/cluster/harwell-space-cluster/",
+        "keyCities": [
+          {
+            "id": "oxford",
+            "name": "Oxford",
+            "coordinates": [51.5745, -1.3255]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-3.1791, 51.4816] },
+      "properties": {
+        "id": "space-wales",
+        "name": "Space Wales",
+        "logo": "https://d11avd6t8zdcx0.cloudfront.net/uploads/2023/04/space-wales-light.png",
+        "description": "Space Wales’ membership spans advanced materials, defence, Earth observation, optics, propulsion and secure communications. The ecosystem supports spaceplane-enabled operations, advanced optical tracking and large areas of segregated airspace.",
+        "focusAreas": [
+          "Advanced Materials & Manufacturing",
+          "Defence",
+          "Earth Observation",
+          "Launch & Propulsion",
+          "Optics & Photonics",
+          "Secure & Resilient Communications"
+        ],
+        "url": "https://sa.catapult.org.uk/cluster/space-wales/",
+        "keyCities": [
+          {
+            "id": "cardiff",
+            "name": "Cardiff",
+            "coordinates": [51.4816, -3.1791]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-0.8133, 51.8154] },
+      "properties": {
+        "id": "westcott-space-cluster",
+        "name": "Westcott Space Cluster",
+        "logo": "https://d11avd6t8zdcx0.cloudfront.net/uploads/2023/04/Westcott_SC_Logo_B_RGB.png",
+        "description": "Building on a legacy of propulsion research, Westcott hosts the UK’s national rocket test facility and has developed into a hub for advanced propulsion, in-orbit servicing, autonomous operations and evaluation.",
+        "focusAreas": [
+          "Aerospace and advanced engineering",
+          "Earth observation and environmental intelligence",
+          "Advanced materials and in-space manufacturing",
+          "Autonomous systems and suborbital testing",
+          "Ubiquitous connectivity",
+          "Testing and evaluation"
+        ],
+        "url": "https://sa.catapult.org.uk/cluster/westcott-space-cluster/",
+        "keyCities": [
+          {
+            "id": "aylesbury",
+            "name": "Aylesbury",
+            "coordinates": [51.8154, -0.8133]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-2.5879, 51.4545] },
+      "properties": {
+        "id": "space-west",
+        "name": "Space West",
+        "logo": "https://d11avd6t8zdcx0.cloudfront.net/uploads/2023/04/space-west-white.png",
+        "description": "A long-standing centre of innovation and a large cluster of space-related organisations, with strong advanced-manufacturing and aerospace capabilities supporting global space supply chains.",
+        "focusAreas": [
+          "Secure and resilient communications",
+          "Intelligent systems and robotics",
+          "Materials for extreme environments",
+          "Space domain awareness",
+          "Data analytics and applications",
+          "Space infrastructure, safety and sustainability",
+          "Space for smarter local government"
+        ],
+        "url": "https://sa.catapult.org.uk/cluster/space-west/",
+        "keyCities": [
+          {
+            "id": "bristol",
+            "name": "Bristol",
+            "coordinates": [51.4545, -2.5879]
+          }
+        ]
+      }
+    }
+  ]
+}

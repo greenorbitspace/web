@@ -1,0 +1,76 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import HeroSection from "../../../components/HeroSection.astro";
+import CityCard from "../../../components/CityCard.astro";
+import CityMap from "../../../components/CityMap.jsx"; // React map
+
+import citiesGeo from "../../../data/locations/cities.json";
+
+// Map GeoJSON features into usable city objects and sort alphabetically by name
+const cities = (citiesGeo.features || [])
+  .filter(Boolean)
+  .map((feature) => {
+    const { properties, geometry } = feature;
+    const [lng, lat] = geometry?.coordinates || [0, 0];
+
+    return {
+      id: properties.id,
+      name: properties.city,
+      clusterId: properties.cluster_id,
+      coordinates: [lat, lng], // Leaflet requires [lat, lng]
+      featuredImage: properties.featuredImage || "/images/default-featured.jpg",
+      description: properties.space_role || "",
+    };
+  })
+  .sort((a, b) => a.name.localeCompare(b.name));
+
+const pageTitle = "Service Areas | Sustainable Digital Marketing Across the UK";
+const pageDescription =
+  "Explore the UK cities where Green Orbit Digital provides local, sustainable digital marketing and SEO services. We support tech, space, energy, creative, and climate-focused organisations nationwide.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Header />
+
+  <HeroSection
+    title="Service Areas"
+    description="Green Orbit Digital supports organisations across the UK with sustainable digital marketing, SEO, and climate-focused strategies rooted in science, technology, and the space sector."
+  />
+
+  <!-- Cities Grid -->
+  <main class="w-full bg-primary-500 py-16">
+    <div class="container-custom max-w-6xl mx-auto space-y-16">
+      {cities.length > 0 ? (
+        <>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cities.map((city) => (
+              <CityCard key={city.id} city={city} />
+            ))}
+          </div>
+
+          <!-- Full-width City Map -->
+          <section class="w-full h-[600px] rounded-lg overflow-hidden shadow-lg">
+            <CityMap client:load cities={cities} />
+          </section>
+        </>
+      ) : (
+        <p class="text-center text-white py-12">
+          No service areas available yet.
+        </p>
+      )}
+    </div>
+  </main>
+
+  <!-- Full-Width CTA -->
+  <section class="w-full bg-secondary-500 py-16 text-white text-center">
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to collaborate?</h2>
+      <p class="mb-8 text-lg sm:text-xl text-gray-200">Let’s drive responsible growth for your organisation. Get in touch for a custom package or exploratory call.</p>
+      <a href="/contact" class="inline-block w-full sm:w-auto px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition text-lg sm:text-xl">Contact Us</a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

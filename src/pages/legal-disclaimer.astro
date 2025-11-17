@@ -1,0 +1,73 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.astro';
+---
+
+<Layout title="Legal Disclaimer – Green Orbit Digital">
+  <Header />
+
+  <main class="py-12">
+    <HeroSection 
+      title="Legal Disclaimer" 
+      description="Important information regarding the accuracy, interpretation, and intended use of the material provided by Green Orbit Digital." 
+    />
+
+    <section class="py-16 bg-white dark:bg-primary-500">
+      <div class="max-w-6xl mx-auto px-4 space-y-10 text-gray-800 dark:text-white">
+
+        <div class="space-y-4">
+          <h2 class="text-2xl font-bold">IMPORTANT</h2>
+          <p>
+            The information presented on this site has been gathered from publicly available sources and is intended to provide a general understanding of the space sector and related topics. This is not a comprehensive or exhaustive list of organisations, services, or technologies.
+          </p>
+          <p>
+            Inclusion of any organisation or initiative on this site does not constitute endorsement or recommendation by Green Orbit Digital.
+          </p>
+          <p>
+            While every effort is made to provide accurate and up-to-date information, Green Orbit Digital disclaims all warranties regarding the completeness, reliability, or adequacy of the material presented. Users are encouraged to verify details independently, as changes or inaccuracies may occur over time.
+          </p>
+          <p>
+            To suggest the inclusion of an organisation or to request corrections, please <a class="text-accent-500 underline" href="/contact">contact us</a> at with full details and your contact information.
+          </p>
+        </div>
+
+        <hr class="border-gray-300 dark:border-accent-500" />
+
+        <div class="space-y-4">
+          <h2 class="text-2xl font-bold">NOTICE</h2>
+          <p>
+            The material provided represents research, opinions, or viewpoints and should not be interpreted as fact. Green Orbit Digital disclaims all warranties—express or implied, statutory or otherwise—including but not limited to implied warranties of merchantability or fitness for a particular purpose.
+          </p>
+          <p>
+            Content reflects the state of knowledge at the time of publication and may change without notice. Green Orbit Digital shall not be held liable for any errors, omissions, or misinterpretations of this information.
+          </p>
+          <p>
+            Nothing contained on this site constitutes legal, financial, or investment advice. Users should consult appropriately qualified professionals where needed. All trademarks, logos, or proprietary materials referenced remain the property of their respective owners.
+          </p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Full-Width CTA -->
+  <section class="w-full bg-secondary-500 py-16 text-white text-center">
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Questions or Corrections?</h2>
+      <p class="mb-8 text-lg sm:text-xl text-gray-200">
+        If you’ve identified information that needs updating or would like to suggest additional organisations, please reach out.  
+        We value accuracy, transparency, and responsible communication across the space ecosystem.
+      </p>
+      <a 
+        href="/contact" 
+        class="inline-block w-full sm:w-auto px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition text-lg sm:text-xl"
+      >
+        Contact Our Team
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,87 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import HeroSection from "../../../components/HeroSection.astro";
+import ClusterCard from "../../../components/ClusterCard.astro";
+import ClusterMap from "../../../components/ClusterMap.jsx";
+
+import clustersGeo from "../../../data/locations/clusters.json";
+
+const clusters = Array.isArray(clustersGeo.features)
+  ? clustersGeo.features
+      .filter(f => f && f.properties && f.properties.id)
+      .map((feature) => ({
+        id: feature.properties.id,
+        name: feature.properties.name || "Unnamed Cluster",
+        logo: feature.properties.logo || "/images/default-featured.jpg",
+        description: feature.properties.description || "",
+        focusAreas: feature.properties.focusAreas || [],
+        link: `/clusters/${feature.properties.id}`, // <-- link to cluster page
+        coordinates: feature.geometry?.coordinates || [0, 0]
+      }))
+  : [];
+
+const pageTitle = "UK Space Clusters | Sustainable Space Ecosystem";
+const pageDescription =
+  "Explore the UK's leading space clusters, showcasing innovation hubs, manufacturing capabilities, and strategic locations driving the commercial space sector.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Header />
+
+  <main class="w-full bg-primary-500 py-16">
+
+    <!-- Hero Section -->
+    <HeroSection
+      title="UK Space Clusters"
+      description="Discover the UK’s regional space clusters, their focus areas, and strategic contributions to the sustainable and innovative space sector."
+    />
+
+    <!-- Clusters Grid -->
+    <div class="container-custom max-w-6xl mx-auto my-16">
+      {clusters.length > 0 ? (
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {clusters.map((cluster) => (
+            <ClusterCard key={cluster.id} cluster={cluster} />
+          ))}
+        </div>
+      ) : (
+        <p class="text-center text-white py-12">
+          No clusters available yet.
+        </p>
+      )}
+    </div>
+
+    <!-- Map Section -->
+    {clusters.length > 0 && (
+      <section class="container-custom max-w-6xl mx-auto h-[600px] mb-16">
+        <ClusterMap
+          client:load
+          clusters={clusters.map(c => ({
+            name: c.name,
+            logo: c.logo,
+            description: c.description,
+            coordinates: c.coordinates
+          }))}
+        />
+      </section>
+    )}
+
+  </main>
+
+  <!-- Full-Width CTA -->
+  <section class="w-full bg-secondary-500 py-16 text-white text-center">
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to collaborate?</h2>
+      <p class="mb-8 text-lg sm:text-xl text-gray-200">
+        Let’s drive responsible growth for your organisation. Get in touch for a custom package or exploratory call.
+      </p>
+      <a href="/contact" class="inline-block w-full sm:w-auto px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition text-lg sm:text-xl">
+        Contact Us
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

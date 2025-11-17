@@ -1,0 +1,183 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import CTA from "../../../components/CTA.jsx";
+import CityMap from "../../../components/CityMap.jsx";
+
+import citiesGeo from "../../../data/locations/cities.json";
+import clustersGeo from "../../../data/locations/clusters.json";
+
+// ---------------------------------
+// 1. Generate static paths for all cities
+// ---------------------------------
+export async function getStaticPaths() {
+  return citiesGeo.features.map((feature) => ({
+    params: { id: feature.properties.id },
+  }));
+}
+
+// ---------------------------------
+// 2. Get city data for current id
+// ---------------------------------
+const { id } = Astro.params;
+const cityFeature = citiesGeo.features.find((f) => f.properties.id === id);
+
+if (!cityFeature) {
+  throw new Error(`No service area found for id: ${id}`);
+}
+
+// Destructure city properties
+const {
+  city: name,
+  description = "",
+  region = "",
+  country = "",
+  population = "",
+  space_role = "",
+  key_assets = [],
+  tier = "",
+  cluster_id,
+  geometry,
+  featuredImage = "/images/default-featured.jpg",
+  whyLocalMatters = "",
+  howWeHelp = [],
+  localOpportunities = [],
+  recommendedSections = []
+} = cityFeature.properties;
+
+// Get cluster info if available
+const clusterFeature = cluster_id
+  ? clustersGeo.features.find((f) => f.properties.id === cluster_id)
+  : null;
+
+const pageTitle = `${name} | Sustainable Digital Marketing`;
+const metaDescription = description.slice(0, 160);
+
+// Extract coordinates
+const [lng, lat] = geometry?.coordinates || [0, 0];
+---
+
+<Layout title={pageTitle} description={metaDescription}>
+  <Header />
+
+  <!-- Hero Section with featured image -->
+  <section
+    class="relative w-full h-[400px] sm:h-[500px] lg:h-[600px] flex items-center justify-center overflow-hidden text-white mb-16"
+  >
+    <div
+      class="absolute inset-0 bg-cover bg-center"
+      style={`background-image: url(${featuredImage});`}
+      aria-hidden="true"
+    />
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl space-y-4">
+      <h1 class="text-5xl sm:text-6xl font-extrabold drop-shadow-lg">{name}</h1>
+      <p class="text-xl sm:text-2xl drop-shadow">{metaDescription}</p>
+      {clusterFeature && (
+        <p class="text-lg mt-2 drop-shadow">
+          Part of the <a href={`/locations/clusters/${clusterFeature.properties.id}`} class="underline hover:text-accent-500">{clusterFeature.properties.name}</a> cluster.
+        </p>
+      )}
+    </div>
+  </section>
+
+  <main class="container-custom max-w-4xl mx-auto space-y-12">
+
+    <!-- City Facts -->
+    <section class="space-y-4 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
+      <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">City Facts</h2>
+      <ul class="text-gray-700 dark:text-gray-300 space-y-2">
+        {region && <li><strong>Region:</strong> {region}</li>}
+        {country && <li><strong>Country:</strong> {country}</li>}
+        {population && <li><strong>Population:</strong> {population.toLocaleString()}</li>}
+        {tier && <li><strong>Tier:</strong> {tier}</li>}
+        {space_role && <li><strong>Space Role:</strong> {space_role}</li>}
+        {key_assets.length > 0 && (
+          <li>
+            <strong>Key Assets:</strong>
+            <ul class="list-disc pl-6 space-y-1 mt-1">
+              {key_assets.map((asset) => (
+                <li>{asset}</li>
+              ))}
+            </ul>
+          </li>
+        )}
+      </ul>
+    </section>
+
+    <!-- Overview -->
+    {description && (
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">Overview</h2>
+        <p class="text-gray-700 dark:text-gray-300">{description}</p>
+      </section>
+    )}
+
+    <!-- Why Local Matters -->
+    {whyLocalMatters && (
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">Why Local Matters</h2>
+        <p class="text-gray-700 dark:text-gray-300">{whyLocalMatters}</p>
+      </section>
+    )}
+
+    <!-- How We Help -->
+    {howWeHelp.length > 0 && (
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">How Green Orbit Helps</h2>
+        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+          {howWeHelp.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <!-- Local Opportunities -->
+    {localOpportunities.length > 0 && (
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">Local Opportunities</h2>
+        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+          {localOpportunities.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+  </main>
+
+  <!-- Full-width City Map -->
+  {geometry && (
+    <section class="w-full h-[600px] mb-16">
+      <CityMap client:load lat={lat} lng={lng} name={name} />
+    </section>
+  )}
+
+  <!-- Recommended Actions / CTA -->
+  {recommendedSections.length > 0 && (
+    <section class="container-custom max-w-4xl mx-auto space-y-4 mb-16">
+      <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">Recommended Actions</h2>
+      <ul class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+        {recommendedSections.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+      <div class="mt-6">
+        <CTA text={`Book a ${name} audit`} link="/service-catalogue#audits" client:load />
+      </div>
+    </section>
+  )}
+
+  <!-- Full-Width CTA -->
+  <section class="w-full bg-secondary-500 py-16 text-white text-center">
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to collaborate?</h2>
+      <p class="mb-8 text-lg sm:text-xl text-gray-200">Let’s drive responsible growth for your organisation. Get in touch for a custom package or exploratory call.</p>
+      <a href="/contact" class="inline-block w-full sm:w-auto px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition text-lg sm:text-xl">Contact Us</a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

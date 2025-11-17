@@ -1,0 +1,485 @@
+{
+  "type": "FeatureCollection",
+  "name": "uk_space_cities",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "edinburgh",
+        "city": "Edinburgh",
+        "region": "Scotland",
+        "country": "United Kingdom",
+        "population": 540000,
+        "space_role": "Satellite design and launch innovation",
+        "key_assets": [
+          "Heriot-Watt University — Space Research",
+          "Edinburgh Science Triangle",
+          "Proximity to planned spaceports"
+        ],
+        "cluster_id": "scotland",
+        "tier": "Primary"
+      },
+      "geometry": { "type": "Point", "coordinates": [-3.1883, 55.9533] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "inverness",
+        "city": "Inverness",
+        "region": "Scotland",
+        "country": "United Kingdom",
+        "population": 67000,
+        "space_role": "Launch & polar orbit operations",
+        "key_assets": [
+          "Planned North Coast Space Cluster infrastructure",
+          "Access to polar launch trajectories"
+        ],
+        "cluster_id": "north-coast-space-cluster",
+        "tier": "Secondary"
+      },
+      "geometry": { "type": "Point", "coordinates": [-4.2247, 57.4778] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "belfast",
+        "city": "Belfast",
+        "region": "Northern Ireland",
+        "country": "United Kingdom",
+        "population": 343500,
+        "space_role": "Advanced sensors, satellite components, cyber security",
+        "key_assets": [
+          "Queen’s University Belfast — Space & Engineering",
+          "Thales UK",
+          "Satellite communications research centres"
+        ],
+        "cluster_id": "ni-space",
+        "tier": "Primary"
+      },
+      "geometry": { "type": "Point", "coordinates": [-5.9301, 54.5973] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "newcastle",
+        "city": "Newcastle upon Tyne",
+        "region": "North East England",
+        "country": "United Kingdom",
+        "population": 300000,
+        "space_role": "Optical communications, manufacturing, space R&D",
+        "key_assets": [
+          "North East Space Cluster companies",
+          "Newcastle University — Space Research",
+          "Advanced manufacturing facilities"
+        ],
+        "cluster_id": "space-north-east-england",
+        "tier": "Primary"
+      },
+      "geometry": { "type": "Point", "coordinates": [-1.6178, 54.9783] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "leeds",
+        "city": "Leeds",
+        "region": "Yorkshire",
+        "country": "United Kingdom",
+        "population": 789000,
+        "space_role": "Geospatial intelligence, communications, satellite data",
+        "key_assets": [
+          "University of Leeds — Space Hub",
+          "Space Hub Yorkshire",
+          "Data infrastructure and advanced manufacturing"
+        ],
+        "cluster_id": "space-hub-yorkshire",
+        "tier": "Primary"
+      },
+      "geometry": { "type": "Point", "coordinates": [-1.5492, 53.7997] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "manchester",
+        "city": "Manchester",
+        "region": "North West England",
+        "country": "United Kingdom",
+        "population": 553000,
+        "space_role": "Advanced manufacturing, cyber & quantum, defence",
+        "key_assets": [
+          "Hartree Centre supercomputing",
+          "National Cyber Force",
+          "North West Space Cluster companies"
+        ],
+        "cluster_id": "north-west-space-cluster",
+        "tier": "Primary"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.2426, 53.4808] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "coventry",
+        "city": "Coventry",
+        "region": "West Midlands",
+        "country": "United Kingdom",
+        "population": 370000,
+        "space_role": "Aerospace, nuclear, small satellites",
+        "key_assets": [
+          "Midlands Space Cluster companies",
+          "Coventry University — Space engineering research"
+        ],
+        "cluster_id": "midlands-space-cluster",
+        "tier": "Secondary"
+      },
+      "geometry": { "type": "Point", "coordinates": [-1.5136, 52.4068] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "leicester",
+        "city": "Leicester",
+        "region": "East Midlands",
+        "country": "United Kingdom",
+        "population": 368600,
+        "space_role": "Space science and instrumentation hub",
+        "key_assets": [
+          "National Space Centre",
+          "Space Park Leicester",
+          "University of Leicester — Space Research Centre"
+        ],
+        "cluster_id": "midlands-space-cluster",
+        "tier": "Primary"
+      },
+      "geometry": { "type": "Point", "coordinates": [-1.133, 52.636] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cambridge",
+        "city": "Cambridge",
+        "region": "East of England",
+        "country": "United Kingdom",
+        "population": 130000,
+        "space_role": "Telecoms, radar, EO, IoT, autonomous platforms",
+        "key_assets": [
+          "Adastral Park",
+          "Cambridge University — AI & satellite research",
+          "Space East cluster companies"
+        ],
+        "cluster_id": "space-east",
+        "tier": "Primary"
+      },
+      "geometry": { "type": "Point", "coordinates": [0.1218, 52.2053] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "truro",
+        "city": "Truro",
+        "region": "Cornwall",
+        "country": "United Kingdom",
+        "population": 20000,
+        "space_role": "Satellite operations, horizontal launch, ground stations",
+        "key_assets": [
+          "Cornwall Space Cluster",
+          "Europe’s first licenced horizontal launch site",
+          "Satellite ground station infrastructure"
+        ],
+        "cluster_id": "cornwall-space-cluster",
+        "tier": "Secondary"
+      },
+      "geometry": { "type": "Point", "coordinates": [-5.0733, 50.4155] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "oxford",
+        "city": "Oxford",
+        "region": "South East England",
+        "country": "United Kingdom",
+        "population": 155000,
+        "space_role": "Research & innovation, satellite testing",
+        "key_assets": [
+          "Harwell Space Cluster",
+          "RAL Space national facilities",
+          "Oxford University — Advanced space tech research"
+        ],
+        "cluster_id": "harwell-space",
+        "tier": "Primary"
+      },
+      "geometry": { "type": "Point", "coordinates": [-1.3255, 51.5745] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cardiff",
+        "city": "Cardiff",
+        "region": "Wales",
+        "country": "United Kingdom",
+        "population": 364000,
+        "space_role": "Advanced materials, EO, secure communications",
+        "key_assets": [
+          "Space Wales ecosystem",
+          "Segregated airspace for testing",
+          "Aerospace & propulsion research"
+        ],
+        "cluster_id": "space-wales",
+        "tier": "Primary"
+      },
+      "geometry": { "type": "Point", "coordinates": [-3.1791, 51.4816] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "aylesbury",
+        "city": "Aylesbury",
+        "region": "South East England",
+        "country": "United Kingdom",
+        "population": 74000,
+        "space_role": "Rocket propulsion, in-orbit servicing, autonomous ops",
+        "key_assets": [
+          "Westcott Space Cluster",
+          "UK National Rocket Test Facility"
+        ],
+        "cluster_id": "westcott-space-cluster",
+        "tier": "Secondary"
+      },
+      "geometry": { "type": "Point", "coordinates": [-0.8133, 51.8154] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bristol",
+        "city": "Bristol",
+        "region": "South West England",
+        "country": "United Kingdom",
+        "population": 467000,
+        "space_role": "Aerospace, robotics, intelligent systems",
+        "key_assets": [
+          "Space West cluster",
+          "Advanced manufacturing companies",
+          "Robotics and intelligent systems R&D"
+        ],
+        "cluster_id": "space-west",
+        "tier": "Primary"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.5879, 51.4545] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sheffield",
+        "city": "Sheffield",
+        "region": "South Yorkshire",
+        "country": "United Kingdom",
+        "population": 584000,
+        "space_role": "Advanced manufacturing and materials",
+        "key_assets": [
+          "University of Sheffield — Materials & Space Research",
+          "South Yorkshire Space Cluster"
+        ],
+        "cluster_id": "space-hub-yorkshire",
+        "tier": "Secondary"
+      },
+      "geometry": { "type": "Point", "coordinates": [-1.4706, 53.3811] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "glasgow",
+        "city": "Glasgow",
+        "region": "Scotland",
+        "country": "United Kingdom",
+        "population": 635000,
+        "space_role": "Satellite technology and space data analytics",
+        "key_assets": [
+          "Glasgow University — Space Research",
+          "West of Scotland Space Hub"
+        ],
+        "cluster_id": "scotland",
+        "tier": "Primary"
+      },
+      "geometry": { "type": "Point", "coordinates": [-4.2518, 55.8642] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "birmingham",
+        "city": "Birmingham",
+        "region": "West Midlands",
+        "country": "United Kingdom",
+        "population": 1140000,
+        "space_role": "Aerospace, satellites, and propulsion",
+        "key_assets": [
+          "Midlands Space Cluster companies",
+          "University of Birmingham — Space Engineering"
+        ],
+        "cluster_id": "midlands-space-cluster",
+        "tier": "Primary"
+      },
+      "geometry": { "type": "Point", "coordinates": [-1.8986, 52.4895] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "nottingham",
+        "city": "Nottingham",
+        "region": "East Midlands",
+        "country": "United Kingdom",
+        "population": 330000,
+        "space_role": "Data analytics and satellite applications",
+        "key_assets": [
+          "Nottingham University — Space Research",
+          "East Midlands Space Cluster"
+        ],
+        "cluster_id": "midlands-space-cluster",
+        "tier": "Secondary"
+      },
+      "geometry": { "type": "Point", "coordinates": [-1.145, 52.9548] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milton-keynes",
+        "city": "Milton Keynes",
+        "region": "South East England",
+        "country": "United Kingdom",
+        "population": 268000,
+        "space_role": "Satellite communications and robotics",
+        "key_assets": [
+          "Westcott Space Cluster",
+          "UK National Rocket Test Facility"
+        ],
+        "cluster_id": "westcott-space-cluster",
+        "tier": "Secondary"
+      },
+      "geometry": { "type": "Point", "coordinates": [-0.7372, 52.0406] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "derby",
+        "city": "Derby",
+        "region": "East Midlands",
+        "country": "United Kingdom",
+        "population": 260000,
+        "space_role": "Aerospace and propulsion",
+        "key_assets": [
+          "Rolls-Royce — Aerospace Division",
+          "East Midlands Space Cluster companies"
+        ],
+        "cluster_id": "midlands-space-cluster",
+        "tier": "Secondary"
+      },
+      "geometry": { "type": "Point", "coordinates": [-1.4817, 52.9225] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "peterborough",
+        "city": "Peterborough",
+        "region": "East of England",
+        "country": "United Kingdom",
+        "population": 203000,
+        "space_role": "Satellite data processing",
+        "key_assets": [
+          "Space East cluster companies",
+          "Local EO & satellite operations"
+        ],
+        "cluster_id": "space-east",
+        "tier": "Secondary"
+      },
+      "geometry": { "type": "Point", "coordinates": [-0.252, 52.5733] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "lincoln",
+        "city": "Lincoln",
+        "region": "East Midlands",
+        "country": "United Kingdom",
+        "population": 100000,
+        "space_role": "Satellite testing and small satellite manufacturing",
+        "key_assets": [
+          "Lincoln University — Aerospace Research",
+          "East Midlands Space Cluster companies"
+        ],
+        "cluster_id": "midlands-space-cluster",
+        "tier": "Secondary"
+      },
+      "geometry": { "type": "Point", "coordinates": [-0.541, 53.2307] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "york",
+        "city": "York",
+        "region": "Yorkshire",
+        "country": "United Kingdom",
+        "population": 210000,
+        "space_role": "Geospatial intelligence and satellite data",
+        "key_assets": [
+          "York University — Space Data Hub",
+          "Space Hub Yorkshire"
+        ],
+        "cluster_id": "space-hub-yorkshire",
+        "tier": "Secondary"
+      },
+      "geometry": { "type": "Point", "coordinates": [-1.0827, 53.959] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "southampton",
+        "city": "Southampton",
+        "region": "South East England",
+        "country": "United Kingdom",
+        "population": 253000,
+        "space_role": "Satellite communications & propulsion",
+        "key_assets": [
+          "University of Southampton — Space Engineering",
+          "South East Space Cluster companies"
+        ],
+        "cluster_id": "harwell-space",
+        "tier": "Secondary"
+      },
+      "geometry": { "type": "Point", "coordinates": [-1.4043, 50.9097] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "portsmouth",
+        "city": "Portsmouth",
+        "region": "South East England",
+        "country": "United Kingdom",
+        "population": 214000,
+        "space_role": "Aerospace and space technology",
+        "key_assets": [
+          "Portsmouth University — Space Research",
+          "South East Space Cluster companies"
+        ],
+        "cluster_id": "harwell-space",
+        "tier": "Secondary"
+      },
+      "geometry": { "type": "Point", "coordinates": [-1.0906, 50.8198] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "plymouth",
+        "city": "Plymouth",
+        "region": "South West England",
+        "country": "United Kingdom",
+        "population": 262000,
+        "space_role": "Satellite operations & marine space applications",
+        "key_assets": [
+          "Plymouth University — Space Technology",
+          "Space West cluster companies"
+        ],
+        "cluster_id": "space-west",
+        "tier": "Secondary"
+      },
+      "geometry": { "type": "Point", "coordinates": [-4.1427, 50.3755] }
+    } 
+  ]
+}

@@ -1,0 +1,166 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import CTA from "../../../components/CTA.jsx";
+import ClusterMap from "../../../components/ClusterMap.jsx";
+
+import clustersGeo from "../../../data/locations/clusters.json";
+
+// Generate static paths for all clusters
+export async function getStaticPaths() {
+  return clustersGeo.features.map((feature) => ({
+    params: { id: feature.properties.id },
+  }));
+}
+
+// Get cluster data for current id
+const { id } = Astro.params;
+const clusterFeature = clustersGeo.features.find((f) => f.properties.id === id);
+
+if (!clusterFeature) {
+  throw new Error(`No cluster found for id: ${id}`);
+}
+
+// Destructure cluster properties
+const {
+  name,
+  description = "",
+  focusAreas = [],
+  url,
+  recommendedSections = [],
+  featuredImage = "/images/default-featured.jpg",
+  logo,
+  geometry,
+  keyCities = []
+} = clusterFeature.properties;
+
+// Prepare cluster data for map and key cities
+const clusterData = geometry
+  ? [{
+      coordinates: geometry.coordinates,
+      name,
+      logo,
+      description,
+      keyCities: keyCities.map(city => ({
+        name: city.name,
+        link: `/cities/${city.id}`,
+        coordinates: [city.coordinates[1], city.coordinates[0]] // lat, lng
+      }))
+    }]
+  : [];
+
+const pageTitle = `${name} | UK Space Cluster`;
+const metaDescription = description.slice(0, 160);
+---
+
+<Layout title={pageTitle} description={metaDescription}>
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="relative w-full h-[400px] sm:h-[500px] lg:h-[600px] flex items-center justify-center overflow-hidden text-white mb-16">
+    <div
+      class="absolute inset-0 bg-cover bg-center"
+      style={`background-image: url(${featuredImage});`}
+      aria-hidden="true"
+    />
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl space-y-4">
+      {logo && (
+        <img src={logo} alt={`${name} logo`} class="mx-auto h-20 mb-4 object-contain" />
+      )}
+      <h1 class="text-5xl sm:text-6xl font-extrabold drop-shadow-lg">{name}</h1>
+      <p class="text-xl sm:text-2xl drop-shadow">{metaDescription}</p>
+    </div>
+  </section>
+
+  <main class="container-custom max-w-4xl mx-auto space-y-12">
+
+    <!-- Overview -->
+    {description && (
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">Overview</h2>
+        <p class="text-gray-700 dark:text-gray-300">{description}</p>
+      </section>
+    )}
+
+    <!-- Focus Areas -->
+    {focusAreas.length > 0 && (
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">Focus Areas</h2>
+        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+          {focusAreas.map((item) => <li>{item}</li>)}
+        </ul>
+      </section>
+    )}
+
+    <!-- Key Cities -->
+    {clusterData[0]?.keyCities?.length > 0 && (
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">Key Cities</h2>
+        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+          {clusterData[0].keyCities.map(city => (
+            <li>
+              <a href={city.link} class="text-accent-500 hover:underline">{city.name}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <!-- Map Section -->
+    {clusterData.length > 0 && (
+      <section class="container-custom max-w-6xl mx-auto h-[600px] mb-16">
+        <ClusterMap
+          client:load
+          clusters={clusterData.map(c => ({
+            name: c.name,
+            logo: c.logo,
+            description: c.description,
+            coordinates: [c.coordinates[1], c.coordinates[0]], // lat, lng
+            cities: c.keyCities
+          }))}
+        />
+      </section>
+    )}
+
+    <!-- Recommended Actions -->
+    {recommendedSections.length > 0 && (
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">Recommended Actions</h2>
+        <ul class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+          {recommendedSections.map((item) => <li>{item}</li>)}
+        </ul>
+        <div class="mt-6">
+          <CTA text={`Engage with ${name}`} link="/service-catalogue#clusters" client:load />
+        </div>
+      </section>
+    )}
+
+    <!-- Official Site Button -->
+    {url && (
+      <section class="py-12 text-center">
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition text-lg sm:text-xl"
+        >
+          Visit Cluster Website
+        </a>
+      </section>
+    )}
+
+  </main>
+
+  <!-- Full-Width CTA -->
+  <section class="w-full bg-secondary-500 py-16 text-white text-center">
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to collaborate?</h2>
+      <p class="mb-8 text-lg sm:text-xl text-gray-200">Let’s drive responsible growth for your organisation. Get in touch for a custom package or exploratory call.</p>
+      <a href="/contact" class="inline-block w-full sm:w-auto px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition text-lg sm:text-xl">Contact Us</a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
