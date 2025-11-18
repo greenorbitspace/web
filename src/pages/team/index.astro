@@ -4,7 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import HeroSection from '../../components/HeroSection.astro';
 import TeamsList from '../../components/TeamsList.jsx';
-import Values from '../../components/Values.astro';
+import ValueIcons from '../../components/ValueIcons.jsx';
 import { getCollection } from 'astro:content';
 
 // Fetch all team members
@@ -44,10 +44,24 @@ teamMembers.sort((a, b) => (a.data.title || '').localeCompare(b.data.title || ''
           Our Values
         </span>
         <h2 class="text-3xl font-bold text-gray-900 dark:text-white">What Drives Us</h2>
-        <Values />
+        <ValueIcons />
+              <a href="/about/our-values" class="btn-primary">Learn More</a>
       </div>
     </section>
   </main>
+
+  <!-- Call to Action -->
+  <section class="w-full bg-secondary-500 py-16 text-white text-center">
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <h2 class="text-3xl sm:text-4xl font-bold">Ready to collaborate?</h2>
+      <p class="text-lg sm:text-xl text-white">
+        Let’s drive responsible growth for your organisation. Get in touch for a custom package or exploratory call.
+      </p>
+      <a href="/contact" class="inline-block w-full sm:w-auto px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition text-lg sm:text-xl">
+        Contact Us
+      </a>
+    </div>
+  </section>
 
   <Footer />
 </Layout>

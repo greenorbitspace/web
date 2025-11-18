@@ -1,76 +1,88 @@
-#!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
-import { glob } from 'glob';
-import matter from 'gray-matter';
+import { fileURLToPath } from 'url';
 
-const siteUrl = 'https://greenorbit.space';
-const pagesGlob = './src/pages/**/*.{astro,md,mdx}';
-const distDir = './dist';
+// Fix __dirname for ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-// Fetch all page files, excluding 404
-const files = (await glob(pagesGlob)).filter(f => !f.includes('404'));
+const BASE_URL = 'https://www.yoursite.com'; // Update this
+const PUBLIC_DIR = path.join(__dirname, '../../public'); 
+const CONTENT_DIR = path.join(__dirname, '../../src/content');
 
-// Helper: generate route from file
-function getRoute(file) {
-  return file
-    .replace(/^\.?\/?src\/pages/, '')    // remove ./src/pages or /src/pages at start
-    .replace(/\.(astro|md|mdx)$/, '')    // remove file extension
-    .replace(/\/index$/, '/');           // convert /index to /
-}
+const DEFAULT_CHANGEFREQ = 'weekly';
+const DEFAULT_PRIORITY = 0.5;
 
-// Helper: construct full URL
-function getFullUrl(route) {
-  return `${siteUrl.replace(/\/$/, '')}${route.startsWith('/') ? route : '/' + route}`;
-}
+const folderConfig = {
+  'blog': { changefreq: 'daily', priority: 0.8 },
+  'projects': { changefreq: 'weekly', priority: 0.7 },
+  'projects/space-tech': { changefreq: 'monthly', priority: 0.6 },
+};
 
-// Collect sitemap entries
-const sitemapEntries = [];
+if (!fs.existsSync(PUBLIC_DIR)) fs.mkdirSync(PUBLIC_DIR, { recursive: true });
 
-for (const file of files) {
-  let lastmod = null;
+function collectPages(folderPath, urlPath = '') {
+  const entries = fs.readdirSync(folderPath, { withFileTypes: true });
+  let pages = [];
+  let subfolders = [];
 
-  // Only try reading frontmatter from Markdown/MDX files
-  if (file.endsWith('.md') || file.endsWith('.mdx')) {
-    const content = fs.readFileSync(file, 'utf-8');
-    const { data: frontmatter } = matter(content);
-    lastmod = frontmatter.date || null;
+  for (const entry of entries) {
+    const fullPath = path.join(folderPath, entry.name);
+    const relativeUrl = path.join(urlPath, entry.name.replace(/\.(md|html)$/, ''));
+
+    if (entry.isDirectory()) {
+      subfolders.push({ path: fullPath, urlPath: path.join(urlPath, entry.name) });
+    } else if (entry.isFile() && (entry.name.endsWith('.md') || entry.name.endsWith('.html'))) {
+      const folderKey = urlPath.replace(/\\/g, '/');
+      const config = folderConfig[folderKey] || {};
+
+      const stats = fs.statSync(fullPath);
+      const lastmod = stats.mtime.toISOString();
+
+      pages.push({
+        loc: `${BASE_URL}/${relativeUrl}`,
+        lastmod,
+        changefreq: config.changefreq || DEFAULT_CHANGEFREQ,
+        priority: config.priority ?? DEFAULT_PRIORITY
+      });
+    }
   }
 
-  const route = getRoute(file);
-  const url = getFullUrl(route);
-
-  // Priority & changefreq logic
-  let priority = '0.5';
-  let changefreq = 'monthly';
-
-  if (route.startsWith('/services')) { 
-    priority = '0.9'; 
-    changefreq = 'weekly'; 
-  } else if (route.startsWith('/blog')) { 
-    priority = '0.7'; 
-    changefreq = 'daily'; 
-  } else if (route === '/') { 
-    priority = '1.0'; 
-    changefreq = 'daily'; 
-  }
-
-  sitemapEntries.push({ url, lastmod, changefreq, priority });
+  return { pages, subfolders };
 }
 
-// Build sitemap.xml content
-const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapEntries.map(e => `  <url>
-    <loc>${e.url}</loc>
-    ${e.lastmod ? `<lastmod>${e.lastmod}</lastmod>` : ''}
-    <changefreq>${e.changefreq}</changefreq>
-    <priority>${e.priority}</priority>
-  </url>`).join('\n')}
-</urlset>`;
+function generateSitemap(fileName, urls) {
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
+    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+    urls.map(url => `  <url>\n    <loc>${url.loc}</loc>\n    <lastmod>${url.lastmod}</lastmod>\n    <changefreq>${url.changefreq}</changefreq>\n    <priority>${url.priority}</priority>\n  </url>`).join('\n') +
+    `\n</urlset>`;
 
-// Write sitemap.xml
-fs.mkdirSync(distDir, { recursive: true });
-fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemapXml);
+  fs.writeFileSync(path.join(PUBLIC_DIR, fileName), xml, 'utf8');
+  console.log(`✅ Generated sitemap: ${fileName}`);
+  return fileName;
+}
 
-console.log(`✅ Sitemap generated at ${distDir}/sitemap.xml`);
+function processFolder(folderPath, urlPath = '') {
+  const { pages, subfolders } = collectPages(folderPath, urlPath);
+  const sitemapFiles = [];
+
+  if (pages.length > 0) {
+    const fileName = `sitemap-${urlPath ? urlPath.replace(/[\/\\]/g, '-') : 'root'}.xml`;
+    sitemapFiles.push(generateSitemap(fileName, pages));
+  }
+
+  for (const sub of subfolders) {
+    sitemapFiles.push(...processFolder(sub.path, sub.urlPath));
+  }
+
+  return sitemapFiles;
+}
+
+const sitemapFiles = processFolder(CONTENT_DIR);
+
+const sitemapIndexXML = `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+  sitemapFiles.map(sm => `  <sitemap>\n    <loc>${BASE_URL}/${sm}</loc>\n    <lastmod>${new Date().toISOString()}</lastmod>\n  </sitemap>`).join('\n') +
+  `\n</sitemapindex>`;
+
+fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap.xml'), sitemapIndexXML, 'utf8');
+console.log('✅ Generated sitemap index: sitemap.xml');

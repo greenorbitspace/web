@@ -4,7 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import HeroSection from '../../components/HeroSection.astro';
 import VisionStatement from '../../components/VisionStatement.astro';
-import Values from '../../components/Values.astro';
+import ValueIcons from '../../components/ValueIcons.jsx';
 ---
 
 <Layout title="Manifesto">
@@ -32,7 +32,7 @@ import Values from '../../components/Values.astro';
             At Green Orbit Digital, we believe in the extraordinary potential of space to create a greener, more resilient world. Every campaign we craft, every strategy we deliver, is an opportunity to transform ambition into impact—for organisations, communities, and the planet.
           </p>
           <VisionStatement />
-          <a href="/about/vision" class="btn-primary mt-4 inline-block">Explore Our Vision</a>
+          <a href="/about/our-vision" class="btn-primary mt-4 inline-block">Explore Our Vision</a>
         </div>
         <div class="rounded-lg overflow-hidden shadow-xl">
           <img src="/images/mission.png" alt="Our Purpose" class="w-full h-auto" />
@@ -63,7 +63,8 @@ import Values from '../../components/Values.astro';
       </div>
     </div>
             <div>
-          <Values />
+          <ValueIcons />
+                <a href="/about/our-values" class="btn-primary">Learn More</a>
               </div>
 
     <!-- IMPACT -->
@@ -79,7 +80,7 @@ import Values from '../../components/Values.astro';
           <p class="text-gray-600 dark:text-white mb-6">
             Our work is measured not just in metrics, but in the lasting, tangible impact it achieves. By reducing environmental footprints, enhancing strategic success, and inspiring leadership across industries, we transform potential into meaningful, measurable outcomes.
           </p>
-          <a href="/impact" class="btn-primary mt-4 inline-block">See Our Impact</a>
+          <a href="/about/our-impact" class="btn-primary mt-4 inline-block">See Our Impact</a>
         </div>
         <div class="rounded-lg overflow-hidden shadow-xl">
           <img src="/images/impact.png" alt="Our Impact" class="w-full h-auto" />

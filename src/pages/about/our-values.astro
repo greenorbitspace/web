@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import HeroSection from '../../components/HeroSection.astro';
-import Values from '../../components/Values.astro';
+import ValuesList from '../../components/ValuesList.jsx';
 ---
 
 <Layout title="Our Values" description="Core principles driving innovation, sustainability, and excellence at Green Orbit Digital.">
@@ -18,21 +18,18 @@ import Values from '../../components/Values.astro';
     />
 
     <!-- Introduction -->
-    <section class="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
-      <p class="text-gray-700 dark:text-gray-300 text-lg sm:text-xl">
-        Integrity guides our actions, innovation fuels our solutions, and excellence drives our results. These core values shape everything we do at Green Orbit Digital, ensuring every project, partnership, and campaign contributes to a more sustainable and responsible future in the space and tech sectors.
+    <section class="py-16 bg-gray-50 dark:bg-primary-500 text-center w-full">
+      <p class="text-gray-700 dark:text-white text-lg sm:text-xl max-w-6xl mx-auto">
+        At Green Orbit Digital, our core values are the guiding principles that shape our approach to every project, every partnership, and every campaign we lead. With a focus on sustainability, innovation, and responsibility, these values propel us toward our mission of transforming the space industry and beyond into a force for positive change.
       </p>
-    </section>
 
-    <!-- Values Overview -->
-    <section class="py-16 bg-gray-50 dark:bg-primary-500 text-center">
-      <div class="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto space-y-4">
-        <p class="text-gray-700 dark:text-white text-lg sm:text-xl">
-          Our values are more than words—they guide our strategy, our decisions, and how we interact with clients, partners, and the wider ecosystem. Sustainability, innovation, and responsibility are at the heart of everything we do.
+    <!-- Values Overview (Full Width) -->
+      <div class="px-4 sm:px-6 lg:px-8 space-y-4">
+        <!-- Full-width Values Component -->
+        <ValuesList class="w-full" />
+                <p class="text-gray-700 dark:text-white text-lg sm:text-xl max-w-6xl mx-auto">
+          These values are more than just ideals—they are the essence of who we are and how we work. Guided by a vision for a sustainable future, Green Orbit Digital leads the way in shaping an eco-conscious, innovative, and responsible marketing landscape.
         </p>
-
-        <!-- Values Component -->
-        <Values />
       </div>
     </section>
 
@@ -42,7 +39,7 @@ import Values from '../../components/Values.astro';
   <section class="w-full bg-secondary-500 py-16 text-white text-center">
     <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
       <h2 class="text-3xl sm:text-4xl font-bold">Ready to collaborate?</h2>
-      <p class="text-lg sm:text-xl text-gray-200">
+      <p class="text-lg sm:text-xl text-white">
         Let’s drive responsible growth for your organisation. Get in touch for a custom package or exploratory call.
       </p>
       <a href="/contact" class="inline-block w-full sm:w-auto px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition text-lg sm:text-xl">

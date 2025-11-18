@@ -1,0 +1,64 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+---
+
+<Layout title="Value Proposition" description="How Green Orbit Digital helps organisations leverage space-enabled solutions to drive sustainability, resilience, and impact.">
+  <Header />
+
+  <main class="py-8">
+
+    <!-- Hero Section -->
+      <HeroSection 
+        title="Our Value Proposition"
+        description="Helping visionary organisations communicate the power of space-enabled solutions to address sustainability challenges and drive meaningful impact." 
+      />
+
+    <!-- Core Value Proposition -->
+    <section class="bg-gray-50 dark:bg-primary-500 py-12">
+      <div class="max-w-4xl mx-auto text-center space-y-6">
+        <p class="text-gray-700 dark:text-white text-lg sm:text-xl">
+          At Green Orbit Digital, we collaborate with visionary organisations to harness space technologies and their synergies to address sustainability challenges, build resilience, and drive climate action.
+        </p>
+        <p class="text-gray-700 dark:text-white text-lg sm:text-xl">
+          Our clients need effective marketing and communication strategies to engage stakeholders, clarify complex space-enabled solutions, and overcome misconceptions about environmental responsibility.
+        </p>
+        <p class="text-gray-700 dark:text-white text-lg sm:text-xl">
+          We empower organisations to communicate their sustainability commitment clearly, inspire trust, and promote adoption of innovative, long-term solutions that create measurable impact.
+        </p>
+        <p class="text-gray-700 dark:text-white text-lg sm:text-xl">
+          By combining space insights with strategic storytelling, we help our clients create meaningful change within their industries and beyond—unlocking the full potential of space exploration to advance sustainability, raise awareness, and foster a more equitable future.
+        </p>
+      </div>
+    </section>
+
+    <!-- Why Work With Us -->
+    <section class="bg-white dark:bg-accent-500 py-12">
+      <div class="max-w-4xl mx-auto text-center space-y-6">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Why Choose Green Orbit Digital?</h2>
+        <ul class="text-gray-700 dark:text-white text-lg sm:text-xl list-disc list-inside space-y-2">
+          <li>Deep expertise in space technologies, sustainable marketing, and strategic communications.</li>
+          <li>Proven ability to translate complex technical concepts into clear, compelling narratives.</li>
+          <li>Commitment to measurable sustainability impact in every campaign and collaboration.</li>
+          <li>Trusted partner for organisations seeking to lead responsibly and inspire change.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="w-full bg-secondary-500 py-16 text-white text-center">
+      <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to amplify your impact?</h2>
+        <p class="mb-8 text-lg sm:text-xl text-gray-200">Partner with us to communicate your vision, inspire trust, and drive sustainable innovation in your industry.</p>
+        <a href="/contact" class="inline-block w-full sm:w-auto px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition text-lg sm:text-xl">
+          Contact Us
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>

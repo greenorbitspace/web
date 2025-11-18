@@ -1,5 +1,6 @@
 ---
-import Logo from '../assets/greenorbit-long.svg'; // Ensure this path matches your project structure
+import { useState } from 'preact/hooks';
+import Logo from '../assets/greenorbit-long.svg';
 import SocialLinks from '../components/SocialLinks.astro';
 import socials from '../data/schema/socials.json';
 
@@ -40,37 +41,46 @@ const footerLinks = [
 <footer class="bg-primary-500 text-white pt-8 pb-8">
   <div class="container-custom">
     <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+      
+      <!-- Logo & Socials -->
       <div class="md:col-span-2 lg:col-span-2">
-    <a href="/" class="flex items-center" aria-label="Go to homepage">
-    <Logo class="h-50 md:h-30 w-auto max-w-[200px] sm:max-w-[250px] lg:max-w-[300px]" />
-  </a>
+        <a href="/" class="flex items-center mb-4" aria-label="Go to homepage">
+          <Logo class="h-50 md:h-30 w-auto max-w-[200px] sm:max-w-[250px] lg:max-w-[300px]" />
+        </a>
         <div class="flex space-x-4">
-              <SocialLinks socials={socials} size="w-6 h-6" gap="gap-4" />
+          <SocialLinks socials={socials} size="w-6 h-6" gap="gap-4" />
         </div>
       </div>
-      
+
+      <!-- Footer Links with collapsible accordions on mobile -->
       {footerLinks.map(column => (
         <div>
-          <h3 class="text-lg font-semibold mb-4">{column.title}</h3>
-          <ul class="space-y-2">
-            {column.links.map(link => (
-              <li>
-                <a href={link.url} class="text-text-white hover:text-accent-500 transition-colors">{link.text}</a>
-              </li>
-            ))}
-          </ul>
+          <details class="group md:!block" open>
+            <summary class="text-lg font-semibold mb-4 cursor-pointer list-none group-open:mb-2">
+              {column.title}
+              <span class="ml-2 inline-block md:hidden transition-transform duration-200 group-open:rotate-180">▼</span>
+            </summary>
+            <ul class="space-y-2 pl-4 md:pl-0">
+              {column.links.map(link => (
+                <li>
+                  <a href={link.url} class="text-white hover:text-accent-500 transition-colors">{link.text}</a>
+                </li>
+              ))}
+            </ul>
+          </details>
         </div>
       ))}
     </div>
-    
+
+    <!-- Footer Bottom -->
     <div class="border-t border-accent-500 pt-8 mt-8">
       <div class="flex flex-col md:flex-row justify-between items-center">
         <p class="text-white text-sm mb-4 md:mb-0">
           &copy; {currentYear} Green Orbit Digital Ltd. All rights reserved.
         </p>
-<div id="wcb" class="carbonbadge wcb-d"></div>
-<script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
-        <div class="flex space-x-6">
+        <div id="wcb" class="carbonbadge wcb-d"></div>
+        <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+        <div class="flex flex-wrap space-x-6 mt-4 md:mt-0">
           <a href="/privacy-policy" class="text-white hover:text-accent-500 text-sm transition-colors">Privacy Policy</a>
           <a href="/terms-of-use" class="text-white hover:text-accent-500 text-sm transition-colors">Terms of Use</a>
           <a href="/cookie-policy" class="text-white hover:text-accent-500 text-sm transition-colors">Cookie Policy</a>

@@ -22,6 +22,7 @@ export default function ValuesList() {
 
   return (
     <section className="w-full py-12" aria-label="Company Values">
+
       {/* Guiding Star - Full Width (aligned with core values section) */}
       {guidingStar && (
         <div className="px-4 sm:px-6 md:px-8 max-w-7xl mx-auto mb-12">
@@ -46,11 +47,6 @@ export default function ValuesList() {
                 <span className="inline-block bg-accent-500 text-white px-3 py-1 rounded-full mb-4 text-sm font-medium">
                   {guidingStar.tagline}
                 </span>
-              )}
-              {guidingStar.description && (
-                <p className="text-white text-base md:text-lg leading-relaxed">
-                  {guidingStar.description}
-                </p>
               )}
             </div>
           </div>
@@ -105,12 +101,6 @@ export default function ValuesList() {
                   <span className="inline-block bg-accent-500 text-white px-3 py-1 rounded-full mb-4 text-sm font-medium">
                     {tagline}
                   </span>
-                )}
-
-                {description && (
-                  <p className="text-gray-700 dark:text-white text-base leading-relaxed">
-                    {description}
-                  </p>
                 )}
               </article>
             </li>

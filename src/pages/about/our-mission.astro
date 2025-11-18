@@ -11,36 +11,28 @@ import MissionPillars from '../../components/MissionPillars.astro';
 <Layout title="Mission">
   <Header />
 
-  <main class="space-y-16">
-
+  <main class="py-8">
     <!-- Hero Section -->
-    <section class="bg-white dark:bg-secondary-500">
-      <HeroSection 
+     <HeroSection 
         title="Mission" 
         description="Empowering businesses to pioneer sustainable innovation through strategic marketing and space-enabled solutions." 
       />
-    </section>
 
     <!-- Mission Statement -->
-    <section class="bg-gray-50 dark:bg-primary-500 py-12">
-      <div class="container-custom">
+    <section class="bg-gray-50 dark:bg-primary-500 text-white py-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <!-- Mission Statement Component -->
         <MissionStatement />
-      </div>
-    </section>
 
-    <!-- Mission Description -->
-    <section class="bg-white dark:bg-secondary-500 text-white py-12">
-      <div class="container-custom">
+        <!-- Mission Description Component -->
         <MissionDescription />
       </div>
     </section>
 
     <!-- Mission Pillars -->
-    <section class="bg-gray-50 dark:bg-primary-500 py-12">
-      <div class="container-custom">
+    <section class="bg-gray-50 dark:bg-primary-500">
         <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Our Mission Pillars</h2>
         <MissionPillars />
-      </div>
     </section>
 
     <!-- Optional Supporting Story -->

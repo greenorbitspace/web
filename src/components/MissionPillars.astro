@@ -5,7 +5,7 @@ import missionPillars from '../data/mission-pillars.json' assert { type: 'json' 
 <section class="max-w-6xl mx-auto px-4 py-12">
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
     {missionPillars.map((pillar) => (
-      <article class="border rounded-lg p-6 shadow-sm hover:shadow-md transition bg-white dark:bg-secondary-500" key={pillar.Name}>
+      <article class="border border-accent-500 rounded-lg p-6 shadow-sm hover:shadow-md transition bg-white dark:bg-secondary-500" key={pillar.Name}>
         <h3 class="text-xl font-semibold text-accent-500 mb-3">{pillar.Name}</h3>
         {pillar.CSR && pillar.CSR.trim() !== '' && (
           <p class="text-sm font-semibold text-white mb-2">{pillar.CSR}</p>

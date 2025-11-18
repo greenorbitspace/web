@@ -3,25 +3,18 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import HeroSection from '../../components/HeroSection.astro';
-import Values from '../../components/Values.astro';
 import AboutSchema from '../../components/AboutSchema.astro';
+import TeamsList from '../../components/TeamsList.jsx';
 import Mission from '../../components/MissionStatement.astro';
 import Vision from '../../components/VisionStatement.astro';
 
-// Dynamic team members
-const teamMembers = [
-  {
-    name: "Ryan Laird",
-    title: "Director & Founder, Green Orbit Digital",
-    bio: "With over a decade of experience in the space industry, Ryan leads Green Orbit Digital with a vision for sustainability, strategic digital innovation, and impactful storytelling. As Chair of the UKspace Startup Working Group and host of The Sustainable Space Podcast, he champions environmentally responsible growth across the sector.",
-    image: "https://www.gravatar.com/avatar/a2c75a0a732f6ea38a8ba1c7a80ffad5",
-    socials: {
-      linkedin: "https://www.linkedin.com/in/rjmlaird",
-      github: "https://github.com/rjmlaird",
-      twitter: "https://twitter.com/rjmlaird"
-    }
-  }
-];
+import { getCollection } from 'astro:content';
+
+// Fetch all team members
+let teamMembers = await getCollection('team');
+
+// Sort alphabetically by title
+teamMembers.sort((a, b) => (a.data.title || '').localeCompare(b.data.title || ''));
 ---
 
 <Layout title="About Us | Green Orbit Digital">
@@ -104,6 +97,8 @@ const teamMembers = [
       <p class="text-gray-600 dark:text-white">
         Our mission is to equip forward-thinking businesses with the insights, tools, and strategies they need to thrive—without compromising the future of our planet.
       </p>
+
+            <a href="/about/our-story" class="btn-primary">Learn more about our story</a>
     </div>
 
     <!-- Image (Right) -->
@@ -121,7 +116,7 @@ const teamMembers = [
     <!-- Image (Left) -->
     <div class="rounded-lg overflow-hidden shadow-xl order-1 md:order-1 mt-8 md:mt-0">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.123456789!2d-1.130000!3d52.636879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48799b1babcdef01%3A0x123456789abcdef!2sLeicester%2C%20UK!5e0!3m2!1sen!2sus!4v1700000000000"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2420.4009800499057!2d-1.136293223239753!3d52.6527345720962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48776100f7baaaab%3A0x39f5a0d59d38632b!2sDock%2075%20Exploration%20Dr%2C%20Leicester%20LE4%205NU!5e0!3m2!1sen!2suk!4v1763463316184!5m2!1sen!2suk"
         width="100%"
         height="400"
         style="border:0;"
@@ -156,6 +151,20 @@ const teamMembers = [
 
   </div>
 </section>
+
+    <!-- Leadership Spotlight -->
+    <section class="py-16 bg-white dark:bg-primary-500">
+      <div class="text-center max-w-5xl mx-auto">
+        <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
+          Leadership Spotlight
+        </span>
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Meet Our Team</h2>
+        <p class="text-gray-600 dark:text-white max-w-3xl mx-auto mb-8">
+          Driving sustainable innovation in the space and tech sectors through leadership, expertise, and advocacy.
+        </p>
+      <TeamsList teamMembers={teamMembers} showLinks={true} />
+      </div>
+    </section>
 
 <!-- Discover More About Us & Key Sections -->
 <section class="py-16 bg-gray-50 dark:bg-secondary-500 text-center space-y-16">
@@ -206,32 +215,6 @@ const teamMembers = [
   </div>
 </section>
 
-    <!-- Leadership Spotlight -->
-    <section class="py-16 bg-white dark:bg-primary-500">
-      <div class="text-center max-w-5xl mx-auto">
-        <span class="inline-block px-4 py-1 rounded-full bg-secondary-100 dark:bg-accent-500 text-secondary-600 dark:text-white font-medium text-sm mb-4">
-          Leadership Spotlight
-        </span>
-        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Meet Our Team</h2>
-        <p class="text-gray-600 dark:text-white max-w-3xl mx-auto mb-8">
-          Driving sustainable innovation in the space and tech sectors through leadership, expertise, and advocacy.
-        </p>
-        <div class="flex flex-col md:flex-row items-center gap-10 mt-10">
-          {teamMembers.map(member => (
-            <div class="flex flex-col md:flex-row items-center gap-6">
-              <div class="w-48 rounded-full overflow-hidden shadow-lg">
-                <img src={member.image} alt={member.name} class="w-full h-full object-cover" loading="lazy" decoding="async"/>
-              </div>
-              <div class="text-center md:text-left">
-                <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-2">{member.name}</h3>
-                <p class="text-primary-600 dark:text-white font-medium mb-3">{member.title}</p>
-                <p class="text-gray-600 dark:text-white leading-relaxed mb-4">{member.bio}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
   </main>
     <!-- Full-Width CTA -->
     <section class="w-full bg-secondary-500 py-16 text-white text-center">
