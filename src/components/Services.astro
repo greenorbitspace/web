@@ -1,66 +1,39 @@
 ---
-// Services.astro
 const services = [
   {
-    title: "Audits",
-    image: "/images/services/audit.png",
-    buttons: [
-      { text: "Request an Audit", href: "/services/audits" },
-      { text: "Learn More", href: "/services/audits#details" },
-    ],
-  },
-  {
-    title: "Training",
-    image: "/images/services/training.png",
-    buttons: [
-      { text: "Explore Training Options", href: "/services/training" },
-      { text: "Book a Session", href: "/services/training#book" },
-    ],
-  },
-  {
-    title: "Content",
-    image: "/images/services/content.png",
-    buttons: [
-      { text: "Plan Your Content", href: "/services/content-marketing" },
-      { text: "Request a Quote", href: "/services/content-marketing#quote" },
-    ],
-  },
-  {
-    title: "Strategy",
+    title: "Strategy & Insight",
     image: "/images/services/strategy.png",
+    description: "Planet-positive marketing strategies grounded in ESG, CSR, and GRI frameworks.",
+    credentials: ["ESG-aligned", "CSR-compliant", "GRI-informed"],
     buttons: [
       { text: "Book a Strategy Session", href: "/services/marketing-strategy" },
       { text: "Learn More", href: "/services/marketing-strategy#details" },
     ],
   },
   {
-    title: "Public Relations",
-    image: "/images/services/pr.png",
+    title: "Creative & Content",
+    image: "/images/services/content.png",
+    description: "Sustainable content marketing, designed for maximum engagement with minimal environmental impact.",
+    credentials: ["Carbon-conscious", "Inclusive messaging", "Responsible sourcing"],
     buttons: [
-      { text: "Book a Strategy Session", href: "/services/public-relations" },
-      { text: "Learn More", href: "/services/public-relations#details" },
+      { text: "Plan Your Content", href: "/services/content-marketing" },
+      { text: "Request a Quote", href: "/services/content-marketing#quote" },
     ],
   },
   {
-    title: "Reporting",
-    image: "/images/services/reporting.png",
+    title: "Engagement & Learning",
+    image: "/images/services/training.png",
+    description: "Workshops, masterclasses, and training programmes that embed sustainability principles across your teams.",
+    credentials: ["Employee education", "Sustainable practices", "Impact reporting"],
     buttons: [
-      { text: "Book a Strategy Session", href: "/services/reporting" },
-      { text: "Learn More", href: "/services/reporting#details" },
-    ],
-  },
-  {
-    title: "Materiality",
-    image: "/images/services/materiality.png",
-    buttons: [
-      { text: "Book a Strategy Session", href: "/services/materiality" },
-      { text: "Learn More", href: "/services/materiality#details" },
+      { text: "Explore Training Options", href: "/services/training" },
+      { text: "Book a Session", href: "/services/training#book" },
     ],
   },
 ];
 ---
 
-<section id="features" class="section bg-gray-50 dark:bg-secondary-500">
+<section id="services" class="section bg-gray-50 dark:bg-secondary-500">
   <div class="container-custom">
     <div class="text-center max-w-3xl mx-auto mb-16">
       <span class="inline-block px-4 py-1 rounded-full bg-accent-500 text-white font-medium text-sm mb-4">
@@ -68,31 +41,37 @@ const services = [
       </span>
       <h2 class="mb-6 text-gray-900 dark:text-white">Digital strategy, done responsibly.</h2>
       <p class="text-gray-600 dark:text-white">
-        We provide planet-positive marketing solutions designed specifically for the space sector, with built-in analytics, automation, and sustainable impact.
+        Planet-positive marketing solutions for the space sector. Analytics, automation, and sustainable impact built-in.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <!-- Responsive grid instead of horizontal scroll -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {services.map((service) => (
-        <div key={service.title} class="relative rounded-2xl overflow-hidden shadow-xl group flex flex-col">
-          <img src={service.image} alt={service.title} class="w-full h-64 md:h-72 object-cover" />
+        <div
+          key={service.title}
+          class="rounded-2xl overflow-hidden shadow-xl group flex flex-col"
+        >
+          <img src={service.image} alt={service.title} class="w-full h-64 object-cover" />
 
-          <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center p-6 space-y-4 h-full">
-            {/* Service Title as Secondary Button */}
-            <a
-              href={service.buttons[0].href}
-              class="px-6 py-2 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-lg transition text-lg md:text-xl"
-            >
-              {service.title}
-            </a>
+          <div class="flex flex-col items-center text-center p-6 space-y-4">
+            <h3 class="text-xl md:text-2xl font-semibold text-gray-900 dark:text-white">{service.title}</h3>
+            <p class="text-gray-700 dark:text-white text-sm md:text-base">{service.description}</p>
 
-            {/* Other buttons below title */}
-            <div class="flex flex-col sm:flex-row flex-wrap gap-4 justify-center mt-auto">
-              {service.buttons.slice(1).map((btn) => (
+            <div class="flex flex-wrap justify-center gap-2 mt-2">
+              {service.credentials.map((cred) => (
+                <span key={cred} class="px-3 py-1 bg-accent-500 text-white text-xs rounded-full">
+                  {cred}
+                </span>
+              ))}
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mt-auto">
+              {service.buttons.map((btn) => (
                 <a
                   key={btn.text}
                   href={btn.href}
-                  class="px-4 py-2 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition"
+                  class="px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-lg transition"
                 >
                   {btn.text}
                 </a>

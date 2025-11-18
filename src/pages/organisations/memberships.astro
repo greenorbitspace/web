@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import OrganisationsList from '../../components/OrganisationsList.jsx';
+import allOrganisations from '../../data/organisations.json';
+
+// Filter for members only
+const memberOrganisations = allOrganisations.filter(org => org.type === 'member');
+
+// Sort alphabetically
+const sortedOrganisations = memberOrganisations.slice().sort((a, b) =>
+  (a.organisation ?? '').localeCompare(b.organisation ?? '')
+);
+---
+
+<Layout title="Members" description="Explore our strategic member organisations in the space sector.">
+  <Header />
+
+  <main class="py-12 max-w-6xl mx-auto px-4 space-y-12">
+
+    <!-- Hero Section -->
+    <HeroSection 
+      title="Members" 
+      description="Discover the organisations we member with to drive sustainability, innovation, and growth across the space sector." 
+    />
+
+    <!-- Intro / Network Overview -->
+    <section class="prose max-w-4xl text-gray-700 dark:text-gray-300 mx-auto space-y-4">
+      <p>
+        Green Orbit Digital collaborates with a wide range of strategic member organisations to promote sustainable practices and innovation in the space sector. These memberships enable knowledge exchange, joint initiatives, and industry-wide impact.
+      </p>
+      <p>
+        Through our members, we engage with leading research institutions, technology providers, advocacy groups, and international associations. Together, we advance solutions for environmental monitoring, space-enabled climate action, and responsible satellite operations.
+      </p>
+      <p>
+        These collaborations form the backbone of our ecosystem approach, ensuring that our projects are informed by expertise across multiple disciplines and regions.
+      </p>
+    </section>
+
+    <!-- members List -->
+    <section class="py-16 bg-white dark:bg-secondary-500 rounded-xl">
+      <div class="max-w-6xl mx-auto px-4">
+        <OrganisationsList organisations={sortedOrganisations} client:load />
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>

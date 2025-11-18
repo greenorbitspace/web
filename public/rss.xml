@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Green Orbit Digital Updates]]></title>
+        <description><![CDATA[Latest blog posts, news, and press releases from Green Orbit Digital]]></description>
+        <link>https://greenorbit.space</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Tue, 18 Nov 2025 18:59:23 GMT</lastBuildDate>
+        <atom:link href="https://greenorbit.space/rss.xml" rel="self" type="application/rss+xml"/>
+        <language><![CDATA[en]]></language>
+        <ttl>60</ttl>
+    </channel>
+</rss>

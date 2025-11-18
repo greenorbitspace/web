@@ -1,7 +1,7 @@
 ---
 name: "Biodiversity"
 slug: "biodiversity"
-description: "Our team highlights Green Orbit’s work with conservation projects, showcasing satellite monitoring programmes and ecosystem protection initiatives using data-driven digital storytelling."
+description: "Our team highlights conservation projects, showcasing satellite monitoring programmes and ecosystem protection initiatives using data-driven digital storytelling."
 featuredImage: "https://images.unsplash.com/photo-1559597083-917ff50e4b20?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400"
 relatedCaseStudies:
   - shopwave-increase-conversions

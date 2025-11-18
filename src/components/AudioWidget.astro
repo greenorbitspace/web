@@ -1,0 +1,14 @@
+---
+const { src, type = 'audio/mpeg' } = Astro.props;
+---
+
+<div class="external-widget my-8">
+  <div class="media-element">
+    <div class="inner">
+      <audio preload="metadata" controls>
+        <source src={src} type={type} />
+        Your browser does not support this audio element.
+      </audio>
+    </div>
+  </div>
+</div>

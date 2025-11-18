@@ -2,9 +2,12 @@
 import SatelliteEarth from './SatelliteEarth.astro';
 import allOrganisations from '../data/organisations.json';
 
-const partners = allOrganisations.filter(org => org.Type === 'partner');
+// Filter for partners (property names must match JSON keys)
+const partners = allOrganisations.filter(org => org.type === 'partner');
+
+// Sort alphabetically by organisation name
 const sortedPartners = partners.slice().sort((a, b) =>
-  (a.Organisation ?? '').localeCompare(b.Organisation ?? '')
+  (a.organisation ?? '').localeCompare(b.organisation ?? '')
 );
 ---
 
@@ -50,13 +53,13 @@ const sortedPartners = partners.slice().sort((a, b) =>
           <div class="flex flex-col items-center flex-shrink-0 relative group">
             <img
               src={partner.logo}
-              alt={`${partner.Organisation} logo`}
+              alt={`${partner.organisation} logo`}
               class="h-12 md:h-16 object-contain"
               onError={(e) => { e.currentTarget.src = '/logos/default-placeholder.svg'; }}
             />
             <!-- Hover text below logo -->
             <span class="text-sm md:text-m font-bold text-secondary-900 dark:text-primary-500 opacity-0 group-hover:opacity-100 transition-opacity z-50">
-              {partner.Organisation}
+              {partner.organisation}
             </span>
           </div>
         ))}

@@ -1,0 +1,33 @@
+---
+const messages = [
+  { text: 'Sign up to our newsletter', href: 'https://fenti.co.uk/newsletter-signup/' },
+  { text: 'Ready to accelerate your marketing? Get in touch today!', href: '/contact' },
+  { text: 'Explore our sustainable space marketing insights', href: '/insights' },
+];
+
+const background = 'bg-accent-500';
+const textColor = 'text-white';
+---
+
+<section class={`${background} py-4`}>
+  <div
+    class="flex overflow-x-auto gap-4 snap-x snap-mandatory px-4 scrollbar-hide"
+  >
+    {messages.map((msg, i) => (
+      <a
+        key={i}
+        href={msg.href}
+        class={`
+          snap-start flex-shrink-0 w-[90%] sm:w-[70%] md:w-[50%] lg:w-[40%] 
+          px-6 py-4 ${textColor} font-medium whitespace-nowrap
+          border border-white/20 rounded-lg hover:opacity-90 transition-opacity
+          text-center
+        `}
+        target={msg.href.startsWith('http') ? '_blank' : '_self'}
+        rel={msg.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+      >
+        {msg.text}
+      </a>
+    ))}
+  </div>
+</section>

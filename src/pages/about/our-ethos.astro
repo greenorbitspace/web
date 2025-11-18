@@ -1,0 +1,140 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeroSection from '../../components/HeroSection.astro';
+
+const ethosItems = [
+  {
+    id: "we-declare-a-climate-emergency",
+    title: "We declare a climate emergency",
+    content: `We have declared a Climate Emergency and act accordingly.`,
+    link: { url: "/climate-emergency", text: "Declaration of a climate emergency" }
+  },
+  {
+    id: "living-wage-employer",
+    title: "Living Wage Employer",
+    content: `Certified living wage employer with maximum wage ratio of 3.`,
+    link: { url: "/living-wage", text: "Why we support the Living Wage Campaign" }
+  },
+  {
+    id: "reuse-reduce-recycle",
+    title: "Reuse, Reduce, Recycle",
+    content: `Minimised printing, recycled/FSC materials, and vegetable-based inks.`
+  },
+  {
+    id: "regenerative-business",
+    title: "A Truly Regenerative Business",
+    content: `Transitioned to carbon synching; planted 2,224 trees by FY2019/20.`,
+    link: { url: "/regenerative-business", text: "Guide to being a regenerative business" }
+  },
+  {
+    id: "free-city-cycles",
+    title: "Free City Cycles",
+    content: `Staff access to Santander Cycles.`,
+    link: { url: "/best-for-the-world-2019", text: "Best for the World 2019" }
+  },
+  // add remaining items in the same structure...
+];
+---
+
+<Layout title="Our Ethos">
+  <Header />
+
+  <main class="py-12 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+    <!-- Hero Section -->
+    <HeroSection 
+      title="Our Ethos" 
+      description="Sustainable, innovative, and impact-driven marketing for the space sector."
+    />
+
+    <!-- Overview -->
+    <section class="space-y-6 text-gray-700 dark:text-white">
+      <p>
+        At Green Orbit Digital, our work is guided by sustainability, integrity, and creativity. We help space sector organisations communicate effectively while minimising environmental impact, ensuring that every campaign reflects our commitment to responsible growth.
+      </p>
+      <p>
+        We combine deep sector knowledge, technical insight, and creative expertise to deliver solutions that are both impactful and environmentally conscious. From strategy to execution, every project embodies our ethos of sustainability and innovation.
+      </p>
+      <p>
+        Our approach is informed by a decade of experience supporting clients across scientific, space, and environmental sectors, enabling us to translate complex topics into compelling narratives while championing ethical and sustainable practices.
+      </p>
+    </section>
+
+    <!-- Accordion Section -->
+    <section class="space-y-6">
+      <p class="italic font-semibold text-gray-700 dark:text-white">
+        Ethos (appeal to authority) underpins all our decisions—credibility, expertise, and ethical leadership guide our work.
+      </p>
+
+      <div class="accordion space-y-4">
+        {ethosItems.map(item => (
+          <div class="accordion__item border border-gray-300 dark:border-secondary-500 y-8 rounded-lg overflow-hidden">
+            <h3 class="accordion__item__heading">
+              <button 
+                class="w-full text-left text-white px-4 py-3 bg-gray-100 dark:bg-accent-500 hover:bg-secondary-200 dark:hover:bg-secondary-500 flex justify-between items-center font-semibold"
+                aria-expanded="false"
+                aria-controls={item.id}
+              >
+                {item.title}
+                <span class="ml-2 transition-transform duration-200">▼</span>
+              </button>
+            </h3>
+            <div 
+              class="accordion__item__content px-4 py-3 max-h-0 overflow-hidden transition-all duration-300 text-gray-700 dark:text-white"
+              id={item.id}
+              role="region"
+            >
+              <p>{item.content}</p>
+              {item.link && (
+                <p class="mt-2">
+                  <a class="inline-block px-4 py-2 bg-accent-500 text-white rounded hover:bg-accent-600 transition" href={item.link.url}>
+                    {item.link.text}
+                  </a>
+                </p>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  </main>
+  
+    <!-- CTA Section -->
+    <section class="w-full bg-secondary-500 py-16 text-white text-center rounded-xl">
+      <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to work with us?</h2>
+        <p class="mb-8 text-lg sm:text-xl text-gray-200">
+          Partner with Green Orbit Digital to create impactful, sustainable marketing solutions for the space sector.
+        </p>
+        <a href="/contact" class="inline-block w-full sm:w-auto px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition text-lg sm:text-xl">
+          Contact Us
+        </a>
+      </div>
+    </section>
+
+  <Footer />
+
+  <script>
+    const accordionItems = document.querySelectorAll('.accordion__item');
+
+    accordionItems.forEach(item => {
+      const btn = item.querySelector('button');
+      const panel = item.querySelector('.accordion__item__content');
+
+      // start all closed
+      btn.setAttribute('aria-expanded', 'false');
+      panel.style.maxHeight = null;
+      item.classList.remove('active');
+
+      // toggle on click
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        panel.style.maxHeight = !expanded ? panel.scrollHeight + 'px' : null;
+        item.classList.toggle('active', !expanded);
+      });
+    });
+  </script>
+</Layout>
