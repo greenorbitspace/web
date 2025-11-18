@@ -1,5 +1,4 @@
 ---
-import { useState } from 'preact/hooks';
 import Logo from '../assets/greenorbit-long.svg';
 import SocialLinks from '../components/SocialLinks.astro';
 import socials from '../data/schema/socials.json';
@@ -40,23 +39,27 @@ const footerLinks = [
 
 <footer class="bg-primary-500 text-white pt-8 pb-8">
   <div class="container-custom">
-    <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
-      
-      <!-- Logo & Socials -->
-      <div class="md:col-span-2 lg:col-span-2">
-        <a href="/" class="flex items-center mb-4" aria-label="Go to homepage">
-          <Logo class="h-50 md:h-30 w-auto max-w-[200px] sm:max-w-[250px] lg:max-w-[300px]" />
-        </a>
-        <div class="flex space-x-4">
-          <SocialLinks socials={socials} size="w-6 h-6" gap="gap-4" />
-        </div>
-      </div>
 
-      <!-- Footer Links with collapsible accordions on mobile -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-5 mb-8">
+
+    <!-- Logo & Socials -->
+    <div class="md:col-span-2 lg:col-span-2 flex flex-col"> 
+      <!-- Logo -->
+      <a href="/" class="flex items-center" aria-label="Go to homepage">
+        <Logo class="h-50 md:h-30 w-auto max-w-[200px] sm:max-w-[250px] lg:max-w-[300px]" />
+      </a>
+
+      <!-- Social Links -->
+      <div class="flex space-x-4">
+        <SocialLinks socials={socials} size="w-6 h-6" gap="gap-4" />
+      </div>
+    </div>
+
+      <!-- Footer Links -->
       {footerLinks.map(column => (
         <div>
-          <details class="group md:!block" open>
-            <summary class="text-lg font-semibold mb-4 cursor-pointer list-none group-open:mb-2">
+          <details class="group" open>
+            <summary class="text-lg font-semibold mb-4 cursor-pointer list-none flex justify-between items-center">
               {column.title}
               <span class="ml-2 inline-block md:hidden transition-transform duration-200 group-open:rotate-180">▼</span>
             </summary>
@@ -78,9 +81,26 @@ const footerLinks = [
         <p class="text-white text-sm mb-4 md:mb-0">
           &copy; {currentYear} Green Orbit Digital Ltd. All rights reserved.
         </p>
-        <div id="wcb" class="carbonbadge wcb-d"></div>
+        <div id="wcb" class="carbonbadge wcb-d mb-4 md:mb-0"></div>
         <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
-        <div class="flex flex-wrap space-x-6 mt-4 md:mt-0">
+        <!-- Green Web Foundation Badge -->
+        <div class="pt-1"> <!-- reduced pt-2 to pt-1 -->
+          <a 
+            href="https://www.thegreenwebfoundation.org/green-web-check/?url=greenorbit.space" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="Check this site on the Green Web Foundation"
+          >
+            <img 
+              src="https://app.greenweb.org/api/v3/greencheckimage/greenorbit.space?nocache=true" 
+              alt="This website runs on green hosting - verified by thegreenwebfoundation.org"
+              width="200"
+              height="95"
+              class="opacity-90 hover:opacity-100 transition"
+            />
+          </a>
+        </div>
+        <div class="flex flex-wrap gap-4 md:gap-6">
           <a href="/privacy-policy" class="text-white hover:text-accent-500 text-sm transition-colors">Privacy Policy</a>
           <a href="/terms-of-use" class="text-white hover:text-accent-500 text-sm transition-colors">Terms of Use</a>
           <a href="/cookie-policy" class="text-white hover:text-accent-500 text-sm transition-colors">Cookie Policy</a>
@@ -88,5 +108,18 @@ const footerLinks = [
         </div>
       </div>
     </div>
+
   </div>
+
+  <!-- Script to auto-expand details on desktop -->
+  <script>
+    const detailsList = document.querySelectorAll('footer details');
+    const updateDetails = () => {
+      const isDesktop = window.innerWidth >= 768;
+      detailsList.forEach(d => d.open = isDesktop);
+    };
+    window.addEventListener('load', updateDetails);
+    window.addEventListener('resize', updateDetails);
+  </script>
+
 </footer>
